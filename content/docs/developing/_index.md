@@ -1,4 +1,4 @@
 ---
-title: Developing Scratch Addons
+title: Developing
 ---
 Check out this section for our 

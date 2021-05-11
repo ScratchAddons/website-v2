@@ -129,7 +129,7 @@ Returns a promise that resolves to the requested messages, or `null` if somethin
 Allows addon userscripts to get information about the tab they're currently running on.
 
 ### Sub-APIs
-#### [addon.tab.traps](addon.tab.traps)
+#### [addon.tab.traps](/docs/developing/addon.tab.traps)
 Allows addons to get direct references to objects, which are particularly useful for enhancing the editor, like the Scratch VM, Thread objects, or Redux state on scratch-www pages.
 
 ### Getters

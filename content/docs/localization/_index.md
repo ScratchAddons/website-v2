@@ -1,5 +1,5 @@
 ---
-title: Localizing Scratch Addons
+title: Localization
 ---
 
 Here are some pages about Scratch Addons' localization (l10n).

@@ -8,9 +8,9 @@ If you're looking into creating an addon, [start here](developing/getting-starte
 
 If you want to help localize the extension, [learn how here](localization/how-to-join-the-localization-team).
 
-If you need help installing the extension, [look here](development/installing-Scratch-Addons).
+If you need help installing the extension, [look here](developing/installing-Scratch-Addons).
 
-If you are interested in the design of the project, [look here](development/design).
+If you are interested in the design of the project, [look here](developing/design).
 
 Have questions about ScratchAddons? [Ask here](https://github.com/ScratchAddons/ScratchAddons/discussions)!
 

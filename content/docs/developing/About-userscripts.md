@@ -62,7 +62,7 @@ function sayHello() {
 }
 ```
 
-## [`addon.*` APIs](addon.*-APIs-reference)
+## [`addon.*` APIs](/docs/developing/addon-apis-reference)
 You can access some `addon.*` APIs from userscripts. For more information, check the documentation.
 
 ## Technical aspects of userscripts
@@ -70,7 +70,7 @@ Userscripts run after the Scratch page has fully loaded - in other words, they r
 Technically speaking, each userscript is a JavaScript module that exports a function. JavaScript modules always run on "strict mode".  
 This means that userscripts of the same addon DO NOT share variables and functions! If you want to do that, you should use the `global` object (more info below).
 Scratch Addons then calls that function modules exported, giving it access to the `addon.*` APIs, as well as special wrappers:  
-- `addon`: gives userscripts access to the [`addon.*` APIs](addon.*-APIs-reference).
+- `addon`: gives userscripts access to the [`addon.*` APIs](/docs/developing/addon-apis-reference).
 - `global`: this is a shared object between all userscripts of the same addon. **Example usage:**
 ```js
 // userscript-1.js
