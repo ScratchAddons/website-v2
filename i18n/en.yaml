@@ -35,13 +35,3 @@ Footer:
 DarkTheme:
   Title: Click to toggle the dark theme.
   Label: Dark theme switch button
-
-P404:
-  PageTitle: "404"
-  PageDescription: Sorry! That page doesn't exist!
-  Header1: "404"
-  Header2: Sorry! That page doesn't exist!
-  Paragraph: "Here are some things you can do:"
-  LinkIssue: Create a new issue suggesting it
-  LinkIndex: Return to the home page
-  LinkCow: Find the invisible cow

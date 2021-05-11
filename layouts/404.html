@@ -1,20 +1,20 @@
 {{ define "main" }}
 
-<h1>{{ T "P404.Header1" }}</h1>
+<h1>404</h1>
 
 <div class="container">
-	<h2>{{ T "P404.Header2" }}</h2>
-	<p>{{ T "P404.Paragraph" }}</p>
+	<h2>Sorry! That page doesn't exist!</h2>
+	<p>Here are some things you can do:</p>
 	<ul>
-		<li><a href="https://github.com/ScratchAddons/website/issues">{{ T "P404.LinkIssue" }}</a></li>
-		<li><a href='{{ "/" | absLangURL }}'>{{ T "P404.LinkIndex" }}</a></li>
-		<li><a href="https://findtheinvisiblecow.com/">{{ T "P404.LinkCow" }}</a></li>
+		<li><a href="https://github.com/ScratchAddons/website-v2/issues">Create a new issue suggesting it</a></li>
+		<li><a href='{{ "/" | absLangURL }}'>Return to the home page</a></li>
+		<li><a href="https://findtheinvisiblecow.com/">Find the invisible cow</a></li>
 	</ul>
 </div>
 
 <script>
-	let pageTitle = '{{ T "P404.PageTitle" }}'
-	let pageDescription = '{{ T "P404.PageDescription" }}'
+	let pageTitle = '404'
+	let pageDescription = "Sorry! That page doesn't exist!"
 
 	document.querySelectorAll("title").forEach(element => {
 		element.textContent = element.textContent.replace("404 Page not found", pageTitle)
@@ -29,10 +29,5 @@
 		element.content = pageDescription
 	})
 </script>
-
-<!-- ---
-title: 404
-description: Sorry! That page doesn't exist!
---- -->
 
 {{ end }}
