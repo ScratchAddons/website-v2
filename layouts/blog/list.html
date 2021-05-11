@@ -1,0 +1,15 @@
+{{ define "main" }}
+<h1>Blog</h1>
+<div class="container">
+  <ul>
+    {{ range .Pages }}
+    <li class="card mt-2">
+      <div class="card-body">
+        <h2 class="card-title"><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <div>{{ .Summary }}</div>
+      </div>
+    </li>
+    {{ end }}
+  </ul>
+</div>
+{{ end }}

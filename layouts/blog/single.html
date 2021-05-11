@@ -1,0 +1,27 @@
+{{ define "main" }}
+<h1>{{ .Title }}</h1>
+<div class="container">
+  <div class="lead">
+    <a href="/blog"
+      ><span
+        class="iconify mr-1"
+        data-icon="bi:arrow-left"
+        data-inline="false"
+      ></span
+      >Back to List</a
+    >
+
+    <p>
+      <img src="{{ .Params.authorimage }}" height="30" /> By: {{ .Params.author
+      }}
+    </p>
+    <p>
+      <time>{{ .PublishDate.Format "January 2, 2006" }}</time> | {{ .ReadingTime
+      }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }} reading
+      time
+    </p>
+  </div>
+
+  {{ .Content }}
+</div>
+{{ end }}

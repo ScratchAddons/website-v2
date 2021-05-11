@@ -1,16 +1,16 @@
 <header>
 
 	<nav class="navbar navbar-expand-md navbar-dark">
-		
+
 		<a href='{{ "/" | relLangURL }}' class="navbar-brand">
 			<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddons" }}'></img>
 			<span>{{ T "Global.ScratchAddons" }}</span>
 		</a>
-	
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsible" aria-controls="collapsible" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 	  	</button>
-	
+
 		<div class="collapse navbar-collapse" id="collapsible">
 			<ul class="navbar-nav ml-md-auto">
 				{{ if .IsTranslated -}}
@@ -25,6 +25,7 @@
 				{{- end }}
 				<li class="nav-item"><a class="nav-link" href='{{ "/contributors" | relLangURL }}'>{{ T "Nav.Contributors" }}</a></li>
 				<li class="nav-item"><a class="nav-link" href='{{ "/feedback" | relLangURL }}'>{{ T "Nav.Feedback" }}</a></li>
+				<li class="nav-item"><a class="nav-link" href='{{ "/blog" | relLangURL }}'>{{ T "Nav.Blog" }}</a></li>
 				<li class="nav-item"><a class="nav-link" href="https://github.com/ScratchAddons/ScratchAddons" aria-label="Repository on GitHub" rel="noopener">{{ T "Nav.Repository" }} <span class="iconify" data-icon="simple-icons:github"></span></a></li>
 				<li class="nav-item" id="install-nav"><a class="nav-link install-btn ml-md-2" href='{{ "/#install" | relLangURL }}'>{{ T "Nav.Install" }}</a></li>
 			</ul>
