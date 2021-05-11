@@ -30,7 +30,7 @@ jobs:
           extended: true
 
       - name: Build site
-        run: hugo -gcc
+        run: hugo --gc
 
       - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
