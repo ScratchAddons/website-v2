@@ -31,14 +31,6 @@ jobs:
       - name: Build site
         run: hugo --gc
 
-      - name: Deploy site
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          force_orphan: true
-          cname: scratchaddons.com
-
       - name: Upload build
         uses: actions/upload-artifact@v2
         with:
