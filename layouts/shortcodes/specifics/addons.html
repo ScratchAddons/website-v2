@@ -1,0 +1,19 @@
+<div class="card-columns">
+	{{ range $.Site.Data.addons }}
+		<div class="card {{ range .tags }} tag-{{ . }}{{ end }}">
+			<!-- <img src="{{ substr .image 1 }}" class="card-img-top" alt="{{ .name }}"> -->
+			{{ if (fileExists (delimit (slice "static" .image) "")) -}}
+				<img src="{{ .image }}" class="card-img-top" alt="{{ .name }}">
+			{{- end }}
+			<div class="card-body">
+				<h5 class="card-title">
+					{{ .name }}
+					{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title="This is an easter egg addon.">🥚</span>{{ end -}}
+					{{ if in .tags "recommended" }}<span data-toggle="tooltip" title="This is a recommended addon.">⭐</span>{{ end -}}
+				</h5>
+				<h6 class="card-subtitle mb-2 text-muted">{{ .id }}</h6>
+				<p class="card-text">{{ .description }}</p>
+			</div>
+		</div>
+	{{ end }}
+</div>

@@ -1,0 +1,61 @@
+on: 
+  workflow_dispatch:
+    inputs:
+      ref:
+        description: Reference on ScratchAddons/ScratchAddons
+        required: false
+        default: master
+
+name: Addons Data Update
+
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ScratchAddons/Website
+        uses: actions/checkout@v2
+      - name: Checkout ScratchAddons/addons-data-updater
+        uses: actions/checkout@v2
+        with:
+          repository: ScratchAddons/addons-data-updater
+          path: ../script
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x 
+
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Install dependencies
+        run: npm install --prefix ../script
+
+      - name: Update addons data
+        run: node ../script/index.js ${{ github.event.inputs.ref }}
+
+      - name: Generate token 
+        uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.BOT_APP_ID }}
+          private_key: ${{ secrets.BOT_PRIVATE_KEY }}
+
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          commit-message: Update addons data
+          branch: create-pull-request/addon-data
+          committer: scratchaddons-bot[bot] <73682299+scratchaddons-bot[bot]@users.noreply.github.com>
+          delete-branch: true
+          title: Update addons data
+          body: |
+            This updates the addons data based on the main repo.
+
+            It is recommended to do a rebase merge than other methods. Also, make sure to not merge something that isn't released yet!

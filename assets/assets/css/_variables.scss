@@ -1,0 +1,69 @@
+$scratch-orange: #ff7b26;
+
+$bs-default-black: #212529;
+$bs-blue: var(--blue);
+$bs-indigo: var(--indigo);
+$bs-purple: var(--purple);
+$bs-pink: var(--pink);
+$bs-red: var(--red);
+$bs-orange: var(--orange);
+$bs-yellow: var(--yellow);
+$bs-green: var(--green);
+$bs-teal: var(--teal);
+$bs-cyan: var(--cyan);
+$bs-white: var(--white);
+$bs-gray: var(--gray);
+$bs-gray-dark: var(--gray-dark);
+$bs-primary: var(--primary);
+$bs-secondary: var(--secondary);
+$bs-success: var(--success);
+$bs-info: var(--info);
+$bs-warning: var(--warning);
+$bs-danger: var(--danger);
+$bs-light: var(--light);
+$bs-dark: var(--dark);
+$bs-breakpoint-xs: 0;
+$bs-breakpoint-sm: 576px;
+$bs-breakpoint-md: 768px;
+$bs-breakpoint-lg: 992px;
+$bs-breakpoint-xl: 1200px;
+$bs-font-family-sans-serif: var(--font-family-sans-serif);
+$bs-font-family-monospace: var(--font-family-monospace);
+
+$bs-gray-100: #f8f9fa !default;
+$bs-gray-200: #e9ecef !default;
+$bs-gray-300: #dee2e6 !default;
+$bs-gray-400: #ced4da !default;
+$bs-gray-500: #adb5bd !default;
+$bs-gray-600: #6c757d !default;
+$bs-gray-700: #495057 !default;
+$bs-gray-800: #343a40 !default;
+$bs-gray-900: #212529 !default;
+
+// Based on Material Design
+
+$dark-neutral: #121212;
+
+$dark-dp-1: lighten($dark-neutral, 5);
+$dark-dp-2: lighten($dark-neutral, 7);
+$dark-dp-3: lighten($dark-neutral, 8);
+$dark-dp-4: lighten($dark-neutral, 9);
+$dark-dp-6: lighten($dark-neutral, 11);
+$dark-dp-8: lighten($dark-neutral, 12);
+$dark-dp-12: lighten($dark-neutral, 14);
+$dark-dp-16: lighten($dark-neutral, 15);
+$dark-dp-24: lighten($dark-neutral, 16);
+
+$dark-disabled: rgba(255, 255, 255, 0.38);
+$dark-low-emphasis: rgba(255, 255, 255, 0.6);
+$dark-high-emphasis: rgba(255, 255, 255, 0.87);
+
+// Extension-styled
+
+$dark-ext-level-1: #222;
+$dark-ext-level-2: #2a2a2a;
+$dark-ext-level-3: #333;
+
+$light-ext-level-1: white;
+$light-ext-level-2: #fcfcfc;
+$light-ext-level-3: #ebebeb

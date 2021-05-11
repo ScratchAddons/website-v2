@@ -1,0 +1,62 @@
+baseURL: "/"
+languageCode: "en"
+title: "Scratch Addons"
+
+markup:
+  defaultMarkdownHandler: goldmark
+  goldmark:
+    extensions:
+      definitionList: true
+      footnote: true
+      linkify: true
+      strikethrough: true
+      table: true
+      taskList: true
+      typographer: true
+    parser:
+      attribute: true
+      autoHeadingID: true
+      autoHeadingIDType: github
+    renderer:
+      hardWraps: false
+      unsafe: true
+      xhtml: false
+  highlight:
+    anchorLineNos: false
+    codeFences: true
+    guessSyntax: false
+    hl_Lines: ""
+    lineAnchors: ""
+    lineNoStart: 1
+    lineNos: false
+    lineNumbersInTable: true
+    noClasses: false
+    tabWidth: 4
+  tableOfContents:
+    endLevel: 6
+    ordered: false
+    startLevel: 2
+
+minify:
+  tdewolff:
+    html:
+      keepWhitespace: true
+
+defaultContentLanguage: en
+# enableMissingTranslationPlaceholders: true
+languages:
+  en:
+    languageName: English
+    weight: 1
+    contentDir: content
+  id:
+    languageName: Bahasa Indonesia
+    weight: 2
+    contentDir: content-i18n/id
+
+# TEMPORARY
+
+params:
+  sa_version: 1.12.0 # Not currently used
+  contributors_issue: 71
+  copyright_year: 2021

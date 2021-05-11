@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+{{- partial "head" . -}}
+
+</head>
+
+<body>
+
+{{- partial "nav" . -}}
+
+{{ $style := resources.Get "assets/css/docs/base.scss" | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+<div class="content container-fluid">
+
+  {{ block "main" . }}{{ end }}
+    
+</div>
+
+{{- partial "footer" . -}}
+
+</body>
+
+</html>

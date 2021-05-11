@@ -1,0 +1,44 @@
+<nav class="docs-nav" aria-label="Docs navigation">
+
+	<ul class="docs-nav-list text-muted">
+		{{- $navRoot := cond (and (ne .Params.toc_root true) (eq .Site.Home.Type "docs")) .Site.Home .FirstSection -}}
+		{{- template "section-tree-nav" (dict "page" . "section" $navRoot "level" 1) -}}
+	</ul>
+
+</nav>
+
+{{- define "section-tree-nav" }}
+	{{- $s := .section }}
+	{{- $p := .page }}
+	{{- $l := .level }}
+	{{- $active := eq $p.CurrentSection $s }}
+	{{- $show := $p.IsDescendant $s }}
+	{{- $sid := delimit (slice "docs-nav-section-pages" ($s.RelPermalink | anchorize)) "-" -}}
+	<li class="docs-nav-section">
+		<span>
+			{{- if (not (eq $l 1)) -}}
+				<a class="collapse-button{{ if not $show }} collapsed{{ end }}" data-toggle="collapse" href="#{{ $sid }}" role="button" aria-expanded="true">{{- template "svg" -}}</a> 
+			{{ end -}}
+				<a href="{{ $s.RelPermalink }}" class="docs-nav-page pl-0 pr-2{{ if not $show }} collapsed{{ end }}{{ if ( or $active $show ) }} active{{ end }}">{{ $s.LinkTitle }}</a>
+		</span>
+		<ul class="docs-nav-section-pages collapse {{ if $show }}show{{ end }}" id="{{ $sid }}">
+			{{- $pages := where (union $s.Pages $s.Sections).ByWeight ".Params.toc_hide" "!=" true }}
+			{{- $pages := $pages | first 50 }}
+			{{- range $pages }}
+			{{- if (not (and (eq $s $p.Site.Home) (eq .Params.toc_root true))) }}
+				{{- if .IsPage }}
+					{{- $mid := delimit (slice "docs-nav-page" (.RelPermalink | anchorize)) "-" }}
+					{{- $active := eq . $p }}
+					<li>
+						<a class="docs-nav-page{{ if $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+					</li>
+				{{- else }}
+					{{- template "section-tree-nav" (dict "page" $p "section" . "level" (add $l 1)) }}
+				{{- end }}
+			{{- end }}
+			{{- end }}
+		</ul>
+	</li>
+{{- end -}}
+
+{{- define "svg" -}}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8L4.646 2.354a.5.5 0 0 1 0-.708z"/></g></svg>{{- end -}}

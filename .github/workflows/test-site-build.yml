@@ -1,0 +1,46 @@
+on: 
+  pull_request:
+    branches:
+      - master
+    paths:
+      - .github/workflows/*
+      - _config.yml
+      - assets/**
+      - content/**
+      - data/**
+      - i18n/**
+      - layouts/**
+      - static/**
+
+name: Site Build Testing
+
+jobs:
+  test:
+    name: Testing
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+          extended: true
+
+      - name: Build site
+        run: hugo -gcc
+
+      - name: Deploy site
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          force_orphan: true
+          cname: scratchaddons.com
+
+      - name: Upload build
+        uses: actions/upload-artifact@v2
+        with:
+          name: public
+          path: ./public

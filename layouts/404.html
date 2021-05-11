@@ -1,0 +1,38 @@
+{{ define "main" }}
+
+<h1>{{ T "P404.Header1" }}</h1>
+
+<div class="container">
+	<h2>{{ T "P404.Header2" }}</h2>
+	<p>{{ T "P404.Paragraph" }}</p>
+	<ul>
+		<li><a href="https://github.com/ScratchAddons/website/issues">{{ T "P404.LinkIssue" }}</a></li>
+		<li><a href='{{ "/" | absLangURL }}'>{{ T "P404.LinkIndex" }}</a></li>
+		<li><a href="https://findtheinvisiblecow.com/">{{ T "P404.LinkCow" }}</a></li>
+	</ul>
+</div>
+
+<script>
+	let pageTitle = '{{ T "P404.PageTitle" }}'
+	let pageDescription = '{{ T "P404.PageDescription" }}'
+
+	document.querySelectorAll("title").forEach(element => {
+		element.textContent = element.textContent.replace("404 Page not found", pageTitle)
+	})
+	document.querySelectorAll("meta[content^='404 Page not found']").forEach(element => {
+		element.content = element.content.replace("404 Page not found", pageTitle)
+	})
+	document.querySelectorAll("meta[name$='description']").forEach(element => {
+		element.content = pageDescription
+	})
+	document.querySelectorAll("meta[property$='description']").forEach(element => {
+		element.content = pageDescription
+	})
+</script>
+
+<!-- ---
+title: 404
+description: Sorry! That page doesn't exist!
+--- -->
+
+{{ end }}

@@ -1,0 +1,81 @@
+on: 
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/update-changelog.yml
+
+name: Changelog Update
+
+jobs:
+  update:
+    name: Update
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Update changelog
+        run: |
+          SAVEIFS=$IFS
+          IFS=$'\n'
+
+          DO_PRINT_1=true
+          DESTINATION_FILE="content/changelog.md"
+
+          print_line() {
+            echo $1 >> "$DESTINATION_FILE.tmp"
+          }
+
+          while read -r line1; do
+              if [[ $line1 == "<!-- sa-changelog-end -->" ]]; then
+              DO_PRINT_1=true
+            fi
+            if [[ $DO_PRINT_1 = true ]]; then 
+              print_line "$line1"
+            fi
+            if [[ $line1 == "<!-- sa-changelog-start -->" ]]; then
+              DO_PRINT_1=false
+              DO_PRINT_2=false
+              while read -r line2; do
+                if [[ $line2 == "<!-- sa-changelog-end -->" ]]; then
+                  DO_PRINT_2=false
+                fi
+                if [[ $DO_PRINT_2 = true ]]; then 
+                  print_line "$line2"
+                fi
+                if [[ $line2 == "<!-- sa-changelog-start -->" ]]; then
+                  DO_PRINT_2=true
+                fi
+              done <<< "$(curl https://raw.githubusercontent.com/ScratchAddons/ScratchAddons/changelog/CHANGELOG.md)"
+            fi
+
+          done <<< "$(tr -d '\r' < $DESTINATION_FILE)"
+
+          IFS=$SAVEIFS
+
+          perl -pi -e 's/\n/\r\n/g' "$DESTINATION_FILE.tmp"
+          rm -rf "$DESTINATION_FILE"
+          mv "$DESTINATION_FILE.tmp" "$DESTINATION_FILE"
+          
+      - name: Generate token 
+        uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.BOT_APP_ID }}
+          private_key: ${{ secrets.BOT_PRIVATE_KEY }}
+          
+      - name: Create pull request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ steps.generate-token.outputs.token }}
+          commit-message: Update changelog
+          branch: create-pull-request/changelog
+          committer: scratchaddons-bot[bot] <73682299+scratchaddons-bot[bot]@users.noreply.github.com>
+          delete-branch: true
+          title: Update changelog
+          body: |
+            This updates the changelog with the main repository's version.
+
+            It is recommended to do a rebase merge than other methods.

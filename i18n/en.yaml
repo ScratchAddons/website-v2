@@ -1,0 +1,47 @@
+Global:
+  ScratchAddons: Scratch Addons
+  LogoAlt: Scratch Addons logo
+
+Nav:
+  Contributors: Contributors
+  Feedback: Send Feedback
+  Repository: Repository
+  Install: Install
+
+Footer:
+  Pages:
+    Header: Header
+    FAQ: FAQ
+    Feedback: Send Feedback
+    Contributors: Contributors
+    Changelog: Changelog
+    Addons: Addons
+  Discuss:
+    Header: Discuss
+    Discussion Forum: Discussion Forum
+    Issues: Issues
+    DiscordCom: Community Discord
+    DiscordDev: Development Discord
+  Resources:
+    Header: Resources
+    Organization: Organization
+    Repository: Repository
+    Documentation: Documentation
+  Legal:
+    Copyright: © {{.Count}} Scratch Addons contributors
+    NoAffiliation: Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.
+    License: Scratch Addons is licensed under the terms of GNU General Public License v3.0.
+
+DarkTheme:
+  Title: Click to toggle the dark theme.
+  Label: Dark theme switch button
+
+P404:
+  PageTitle: "404"
+  PageDescription: Sorry! That page doesn't exist!
+  Header1: "404"
+  Header2: Sorry! That page doesn't exist!
+  Paragraph: "Here are some things you can do:"
+  LinkIssue: Create a new issue suggesting it
+  LinkIndex: Return to the home page
+  LinkCow: Find the invisible cow
