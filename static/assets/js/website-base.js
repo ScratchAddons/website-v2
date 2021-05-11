@@ -208,8 +208,8 @@ $(() => {
 
 $(() => {
 	console.log(
-`Repository: https://github.com/ScratchAddons/website
-Report issues: https://github.com/ScratchAddons/website/issues or https://scratchaddons.com/feedback
+`Repository: https://github.com/ScratchAddons/website-v2
+Report issues: https://github.com/ScratchAddons/website-v2/issues or https://scratchaddons.com/feedback
 
 %cA little secret: You can toggle the similar style to the extension if you click the dark theme switch button while holding SHIFT.`,
 	"font-style: italic; font-size: 0.75rem")
