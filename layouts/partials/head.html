@@ -46,8 +46,7 @@
 <script async src="/assets/js/website-base.js"></script>
 
 {{ if eq .Params.noAnalytics false }}
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144464383-2"></script>
-<script>window.dataLayer = window.dataLayer || []; function gtag() {dataLayer.push(arguments)}; gtag("js", new Date); gtag("config", "UA-144464383-2")</script>
+<script async defer data-domain="scratchaddons.com" src="https://analytics.scratchaddons.com/js/plausible.js"></script>
 {{ end }}
 
 <!-- <script data-pace-options='{ "eventLag": false, "restartOnRequestAfter": false }' src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script> -->
