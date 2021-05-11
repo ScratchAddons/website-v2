@@ -1,4 +1,6 @@
 {{ define "main" }}
+{{ $style := resources.Get "assets/css/blog.scss" | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
 <h1>Blog</h1>
 <div class="container">
   <ul>

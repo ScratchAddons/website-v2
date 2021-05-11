@@ -1,25 +1,26 @@
 {{ define "main" }}
+{{ $style := resources.Get "assets/css/blog.scss" | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
 <h1>{{ .Title }}</h1>
 <div class="container">
-  <div class="lead">
-    <a href="/blog"
-      ><span
-        class="iconify mr-1"
-        data-icon="bi:arrow-left"
-        data-inline="false"
-      ></span
-      >Back to List</a
-    >
+  <a href="/blog"
+  ><span
+    class="iconify mr-1"
+    data-icon="bi:arrow-left"
+    data-inline="false"
+  ></span
+  >Back to List</a
+>
+
+  <div class="metadata-container">
 
     <p>
-      <img src="{{ .Params.authorimage }}" height="30" /> By: {{ .Params.author
-      }}
+      Posted <time>{{ .PublishDate.Format "January 2, 2006" }}</time> by {{ .Params.author
+      }}.
     </p>
-    <p>
-      <time>{{ .PublishDate.Format "January 2, 2006" }}</time> | {{ .ReadingTime
-      }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }} reading
-      time
-    </p>
+    <p> {{ .ReadingTime
+    }} {{ if eq .ReadingTime 1 }} minute {{ else }} minutes {{ end }} reading
+    time</p>
   </div>
 
   {{ .Content }}
