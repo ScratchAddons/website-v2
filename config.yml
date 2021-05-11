@@ -49,10 +49,6 @@ languages:
     languageName: English
     weight: 1
     contentDir: content
-  id:
-    languageName: Bahasa Indonesia
-    weight: 2
-    contentDir: content-i18n/id
 
 # TEMPORARY
 
