@@ -20,22 +20,58 @@ jobs:
     name: Deployment
     runs-on: ubuntu-18.04
     steps:
-      - name: Checkout code
+      - name: Checkout ScratchAddons/Website
         uses: actions/checkout@v2
+        with:
+          path: repo
+      - name: Checkout ScratchAddons/website-i18n-script
+        uses: actions/checkout@v2
+        with:
+          repository: ScratchAddons/website-i18n-script
+          path: script
+      - name: Checkout ScratchAddons/website-i18n
+        uses: actions/checkout@v2
+        with:
+          repository: ScratchAddons/website-i18n
+          path: i18n
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14.x 
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Execute localization script
+        run: | 
+          cd repo
+          npm install --prefix ../script
+          node ../script/src/ci/hugo-add-i18n.js
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: latest
           extended: true
-
       - name: Build site
-        run: hugo --gc
+        run: |
+          cd repo
+          hugo --gc
 
+      - name: Generate token 
+        uses: tibdex/github-app-token@v1
+        id: generate-token
+        with:
+          app_id: ${{ secrets.BOT_APP_ID }}
+          private_key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Deploy site
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          github_token: ${{ steps.generate-token.outputs.token }}
+          publish_dir: ./repo/public
           force_orphan: true
           cname: scratchaddons.com
