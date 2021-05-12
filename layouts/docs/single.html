@@ -11,19 +11,14 @@
 
 			<h1>{{ .Title }}</h1>
 			{{ .Content }}	
-			<a class="btn btn-sm btn-bd-light mb-2 mb-md-0" href="{{ .Site.Params.repo }}/edit/docs/content/{{ .Page.File.Path | replaceRE `\\` "/" }}" title="View and edit this file on GitHub" target="_blank" rel="noopener">Edit on GitHub</a>
-			<span class="last-edited"></span>
+
 		</article>
 
 		<aside class="docs-toc text-muted d-none d-xl-flex col-xl-2"> 
 			<!-- px-2 py-4 -->
 			{{ .TableOfContents }}
 		</aside>
-<script>
-(asnyc = () => {
-	let t = await (await fetch(`https://api.github.com/repos/scratchaddons/website-v2/commits?path=docs/content/${encodeURIComponent('{{ .Page.File.Path | replaceRE `\\` "/" }}')}&page=1&per_page=1`)).json();
-	console.log(t)
-})();
-</script>
+
 	</main>
+
 {{ end }}	
