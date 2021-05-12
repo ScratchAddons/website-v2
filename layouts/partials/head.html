@@ -45,9 +45,9 @@
 <script src="https://cdn.jsdelivr.net/npm/bowser@2.11.0/es5.min.js" crossorigin></script> -->
 <script async src="/assets/js/website-base.js"></script>
 
-{{ if eq .Params.noAnalytics false }}
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144464383-2"></script>
-<script>window.dataLayer = window.dataLayer || []; function gtag() {dataLayer.push(arguments)}; gtag("js", new Date); gtag("config", "UA-144464383-2")</script>
+{{ if eq .Site.Params.noAnalytics false }}
+<script async defer data-domain="scratchaddons.com" src="/assets/js/plausible.outbound-links.js"></script>
+<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 {{ end }}
 
 <!-- <script data-pace-options='{ "eventLag": false, "restartOnRequestAfter": false }' src="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/pace.min.js"></script> -->
