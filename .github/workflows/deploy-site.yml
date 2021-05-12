@@ -75,3 +75,9 @@ jobs:
           publish_dir: ./repo/public
           force_orphan: true
           cname: scratchaddons.com
+
+      - name: Upload whole repo (to check i18n)
+        uses: actions/upload-artifact@v2
+        with:
+          name: public
+          path: ./repo
