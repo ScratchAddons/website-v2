@@ -12,6 +12,6 @@ If you need help installing the extension, [look here](developing/installing-Scr
 
 If you are interested in the design of the project, [look here](developing/design).
 
-Have questions about ScratchAddons? [Ask here](https://github.com/ScratchAddons/ScratchAddons/discussions)!
+Have questions about Scratch Addons? [Ask here](https://github.com/ScratchAddons/ScratchAddons/discussions)!
 
 Ideas for new addons can go in the [issues tab](https://github.com/ScratchAddons/ScratchAddons/issues).
