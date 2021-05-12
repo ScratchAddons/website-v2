@@ -1,6 +1,6 @@
 # Scratch Addons website
 
-![Site Deployment workflow status](https://img.shields.io/github/workflow/status/ScratchAddons/website/Site%20Deployment?label=deploy&style=flat-square) [![Website: scratchaddons.com](https://img.shields.io/badge/website-scratchaddons.com-ff7b26.svg?style=flat-square)](https://scratchaddons.com) [![License](https://img.shields.io/github/license/ScratchAddons/website?style=flat-square)](https://github.com/ScratchAddons/website/blob/master/LICENSE)
+![Site Deployment workflow status](https://img.shields.io/github/workflow/status/ScratchAddons/website-v2/Site%20Deployment?label=deploy&style=flat-square) [![Website: scratchaddons.com](https://img.shields.io/badge/website-scratchaddons.com-ff7b26.svg?style=flat-square)](https://scratchaddons.com) [![License](https://img.shields.io/github/license/ScratchAddons/website-v2?style=flat-square)](https://github.com/ScratchAddons/website/blob/master/LICENSE)
 
 These are the files behind the Scratch Addons website. It is build with Hugo as the static site generator, Bootstrap 4 as the CSS framework, and GitHub Pages as the hosting provider. The website is built simple with accessibility and readability in mind, and is mobile-compatible.
 
