@@ -1,24 +1,20 @@
-{{ define "main" }}
+{{ define "article" }}
 
-	<main class="row">
+	<h1>{{ .Title }}</h1>
+	{{ .Content }}
 
-		<aside class="docs-sidebar d-none d-lg-flex col-lg-3 col-xl-2">
-			<!-- px-2 py-4 -->
-			{{- partial "docs/sidebar" . -}}
-		</aside>
+	<hr />
+
+	<h2>Section Pages</h2>
+
+	<ul>
+		{{ range .Pages }}
+			<li>
+				<a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
+				<br />
+				{{ .Description }}
+			</li>
+		{{ end }}
+	</ul>
 	
-		<article class="docs-main col col-lg-9 col-xl-8">
-
-			<h1>{{ .Title }}</h1>
-			{{ .Content }}	
-
-		</article>
-
-		<aside class="docs-toc text-muted d-none d-xl-flex col-xl-2"> 
-			<!-- px-2 py-4 -->
-			{{ .TableOfContents }}
-		</aside>
-
-	</main>
-
 {{ end }}	

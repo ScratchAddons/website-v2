@@ -42,6 +42,8 @@ minify:
     html:
       keepWhitespace: true
 
+enableGitInfo: true
+
 defaultContentLanguage: en
 # enableMissingTranslationPlaceholders: true
 languages:
