@@ -120,7 +120,7 @@ Read more about how to create an addon on Scratch Addons [here](https://github.c
 
 ### How can I put my name on the [contributors page](/contributors)?
 
-Please read and follow the instruction of [this issue](https://github.com/ScratchAddons/contributors/issues/{{ site.contributors_issue }}) in order to have your name on said page.
+Please read and follow the instruction of [this issue](https://github.com/ScratchAddons/contributors/issues/{{< specifics/contributors-issue >}}) in order to have your name on said page.
 
 ### How can I remove my name from the [contributors page](/contributors)?
 
