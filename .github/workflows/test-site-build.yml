@@ -59,7 +59,7 @@ jobs:
       - name: Build site
         run: |
           cd repo
-          hugo --gc
+          hugo --gc --minify
           
       - name: Upload build
         uses: actions/upload-artifact@v2
