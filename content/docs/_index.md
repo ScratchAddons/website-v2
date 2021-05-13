@@ -1,8 +1,7 @@
 ---
 title: Home
 ---
-# Welcome to Scratch Addons' wiki!
-
+**Welcome to Scratch Addons' wiki!**
 
 If you're looking into creating an addon, [start here](developing/getting-started/creating-an-addon).
 

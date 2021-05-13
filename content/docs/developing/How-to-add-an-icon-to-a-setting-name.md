@@ -1,5 +1,5 @@
 ---
-title: How to add an icon to a setting name
+title: How to Add an Icon to a Setting Name
 ---
 To add an icon to a setting name without [causing](https://github.com/ScratchAddons/ScratchAddons/pull/1529) [crashes](https://github.com/ScratchAddons/ScratchAddons/commit/ead64b9da1434e7ed593c141cba7b02addd70a54),
 

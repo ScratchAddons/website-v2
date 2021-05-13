@@ -1,5 +1,6 @@
 ---
 title: About Userscripts
+description: Userscripts allow you to run code along Scratch pages - you can do stuff like add buttons, enhance the Scratch editor, or anything you can imagine.
 ---
 ## What are they?
 Userscripts allow you to run code along Scratch pages - you can do stuff like add buttons, enhance the Scratch editor, or anything you can imagine.

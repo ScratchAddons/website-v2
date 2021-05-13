@@ -1,22 +1,23 @@
 ---
 title: addon.tab.traps
+description: addon.tab.traps is a public API for userscripts that can be used to obtain objects that are not otherwise available.
 ---
 
-# This page is out of date and is in need of a rewrite. If you know anything about traps, please contribute!
+**This page is out of date and is in need of a rewrite. If you know anything about traps, please contribute!**
+
 `addon.tab.traps` is a public API for userscripts that can be used to obtain objects that are not otherwise available. The actual traps are coded at [prototype-handler](https://github.com/ScratchAddons/ScratchAddons/blob/master/content-scripts/prototype-handler.js).
 
 They share some APIs with "Once" traps, but is very different and is documented at [Fake redux state](Fake-redux-state) separately.  
 
-
-# Examples
+## Examples
 [editor-stepping](https://github.com/ScratchAddons/ScratchAddons/blob/master/addons/editor-stepping/userscript.js) addon shows how to manipulate `Thread` object trapped.
 
-# Trap terminology
+## Trap terminology
 There are two types of traps, named after how many times they get trapped. Singleton instance like VM or ScratchBlocks get trapped only once per trap, so they are called "Once". Objects like Thread can get trapped multiple times, so they are called "Many".
 
 Difference between Once and Many is simple: the addon only stores reference for Once.
 
-# Trappable Object
+## Trappable Object
 | Trap name        | Description                                    | Once/Many |
 |------------------|------------------------------------------------|-----------|
 | vm               | Scratch VM, trapped by Function.prototype.bind | Once      |
@@ -26,14 +27,14 @@ Difference between Once and Many is simple: the addon only stores reference for 
 | ScratchBlocks    | ScratchBlocks object                           | Once      |
 | workspace        | ScratchBlocks workspace                        | Once      |
 
-# addon.tab.traps.onceValues
+## addon.tab.traps.onceValues
 `onceValues` attribute of `addon.tab.traps` stores references for "Once" traps. It is an prototypeless object - e.g. you cannot call `onceValues.hasOwnProperty()`.
 
 Keys are the "trap name" listed above, and values are the trapped values.
 
 Example: to get VM object, use `addon.tab.traps.onceValues.vm`
 
-# Events
+## Events
 `addon.tab.traps` itself is not an `EventTarget`. However, it's possible to add or remove listeners, by using some public APIs. `traps.addOnceListener`/`removeOnceListener` is for "Once" traps, and `addManyListener`/`removeManyListener` is for "Many" traps. Note that listeners for "Once" objects can fire multiple times under some conditions, and may never fire if the object is trapped before loading the userscript.
 
 These methods work like `addEventListener`/`removeEventListener`, but third argument is not supported at all. The first argument is for trap name; for example, if it needs to be fired when `thread` is trapped, do `addManyListener("thread", callback)`. The second argument is callback function that can take one argument for CustomEvent object, which contains the trapped value.

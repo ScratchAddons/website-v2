@@ -1,10 +1,10 @@
 ---
-title: Creating an addon
+title: Creating an Addon
 ---
 Required software: text editor, Chrome.  
 If possible, disable the Scratch Addons extension you downloaded from the store before proceeding to avoid issues.
 
-## Step 1: Read about [addon basics](/docs/developing/getting-started/addon-basics)
+## Step 1: Read about [addon basics](addon-basics)
 Make sure to read that article to be familiar with the terminology.
 
 ## Step 2: Fork/clone the repo

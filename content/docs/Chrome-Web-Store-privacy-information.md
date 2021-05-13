@@ -1,6 +1,6 @@
 ---
 title: Chrome Web Store Privacy Information
-weight: 0
+weight: 2
 ---
 ## Single purpose
 Allows users to customize their experience on the Scratch website (scratch.mit.edu) by providing previously unavailable features - including many related to reading and replying of Scratch messages/notifications. This extension makes use of the "Scratch API" (api.scratch.mit.edu).

@@ -1,5 +1,6 @@
 ---
 title: Redux
+description: Scratch Addons supports getting and modifying Redux state!
 ---
 Scratch Addons supports getting and modifying Redux state!
 

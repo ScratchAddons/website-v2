@@ -1,31 +1,8 @@
 ---
 title: Addon APIs Reference
+description: This API can be used within your addons, which can provide useful things such as access to the real blockly, Scratch's vm, etc.
 ---
 This API can be used within your addons, which can provide useful things such as access to the real blockly, Scratch's vm, etc.
-
-## Table of contents
-- [`addon.self`](#addonself)
-    - [`Getters`](#getters)
-    - [`Events`](#events)
-- [`addon.settings`](#addonsettings)
-    - [`Functions`](#functions)
-    - [`Events`](#events-1)
-- [`addon.auth`](#addonauth)
-    - [`Getters`](#getters-1)
-    - [`Events`](#events-2)
-- [`addon.account`](#addonaccount)
-    - [`Functions`](#functions-1)
-- [`addon.tab`](#addontab)
-    - [`Sub-APIs`](#sub-apis)
-    - [`Getters`](#getters-2)
-    - [`Functions`](#functions-2)
-    - [`Events`](#events-3)
-- [`addon.notifications`](#addonnotifications)
-    - [`Functions`](#functions-3)
-    - [`Events`](#events-4)
-- [`addon.badge`](#addonbadge)
-    - [`Getters & setters`](#getters--setters)
-
 
 ## addon.self
 **Available in persistent scripts.**  

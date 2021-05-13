@@ -1,32 +1,9 @@
 ---
-title: The addon manifest (addon.json)
+title: The Addon Manifest (addon.json)
+description: In order to tell the addon loader how the addon plans to work, addons use a standard addon.json file located at the root of the addon's folder. 
 ---
 Addons are located inside the `addons` folder. Each addon is inside its own folder as well.
 In order to tell the addon loader how the addon plans to work, addons use a standard `addon.json` file located at the root of the addon's folder.  
-
-### Table of contents
-- [`name` (string, required)](#name-string-required)
-- [`description` (string, required)](#description-string-required)
-- [`tags` (array, required)](#tags-array-required)
-- [`permissions` (array)](#permissions-array)
-- [`persistentScripts` (array)](#persistentscripts-array)
-- [`userscripts` and `userstyles` (array)](#userscripts-and-userstyles-array)
-	- [`settingMatch` (object)](#settingmatch-object)
-	- [`runAtComplete` (boolean, userscripts only)](#runatcomplete-boolean-userscripts-only)
-- [`settings` (object)](#settings-object)
-- [`credits` (object)](#credits-object)
-- [`enabledByDefault` (boolean)](#enabledbydefault-boolean)
-- [`info` (array)](#info-array)
-- [`traps` (boolean)](#traps-boolean)
-- [`presets` (object)](#presets-object)
-- [`l10n` (boolean)](#l10n-boolean)
-- [`libraries` (array)](#libraries-array)
-- [`popup` (object)](#popup-object)
-- [`dynamicDisable` (boolean)](#dynamicDisable-boolean)
-- [`dynamicEnable` (boolean)](#dynamicEnable-boolean)
-- [`injectAsStyleElt` (boolean)](#injectAsStyleElt-boolean)
-- [`updateUserstylesOnSettingsChange` (boolean)](#updateUserstylesOnSettingsChange-boolean)
-
 
 ## `name` (string, required)
 The name of the addon. Don't make it too long.  
