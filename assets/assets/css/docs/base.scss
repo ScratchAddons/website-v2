@@ -13,6 +13,8 @@
 	nav {
 		font-size: .875rem;
 		// @include font-size(.875rem);
+		width: 100%;
+		word-wrap: break-word;
 
 		ul {
 			padding-left: 0;
@@ -45,6 +47,8 @@
 .docs-nav {
 	font-size: .875rem;
 	// @include font-size(.875rem);
+	width: 100%;
+	word-wrap: break-word;
 
 	ul {
 		padding-left: 0;
@@ -156,7 +160,7 @@ article {
 		width: 100%;
 		overflow: auto;
 	
-		th, 	td {
+		th, td {
 			padding: 6px 13px;
 			border: 1px solid $bs-gray-300;
 		}
@@ -251,6 +255,11 @@ article {
 		.il { color: #005cc5 } /* Literal.Number.Integer.Long */
 
 	}
+
+	img {
+		max-width: 100%
+	}
+
 }
 
 body.dark {
