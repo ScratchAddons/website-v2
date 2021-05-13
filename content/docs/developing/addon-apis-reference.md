@@ -181,7 +181,8 @@ Registering this event on Firefox won't throw.
 
 
 ## addon.badge
-#### Keep in mind: as of August 31st, only one addon can use the badge API, currently `msg-count-badge`
+**Keep in mind: as of August 31st, only one addon can use the badge API, currently `msg-count-badge`**
+
 **Available in persistent scripts.**  
 **NOT available in userscripts.**  
 **Required permissions: `badge`**  

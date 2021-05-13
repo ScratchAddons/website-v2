@@ -7,7 +7,7 @@ If you're looking into creating an addon, [start here](developing/getting-starte
 
 If you want to help localize the extension, [learn how here](localization/how-to-join-the-localization-team).
 
-If you need help installing the extension, [look here](developing/installing-Scratch-Addons).
+If you need help installing the extension, [look here](developing/installing-scratch-addons).
 
 If you are interested in the design of the project, [look here](developing/design).
 
