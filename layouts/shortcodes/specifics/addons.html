@@ -1,5 +1,5 @@
 <div class="card-columns">
-	{{ range $.Site.Data.addons }}
+	{{ range ( index $.Site.Data.addons $.Page.Language.Lang ) }}
 		<div class="card {{ range .tags }} tag-{{ . }}{{ end }}">
 			<!-- <img src="{{ substr .image 1 }}" class="card-img-top" alt="{{ .name }}"> -->
 			{{ if (fileExists (delimit (slice "static" .image) "")) -}}

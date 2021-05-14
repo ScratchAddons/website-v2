@@ -13,15 +13,20 @@ jobs:
     name: Update
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout ScratchAddons/Website
+      - name: Checkout ScratchAddons/website-v2
         uses: actions/checkout@v2
         with:
           path: repo
-      - name: Checkout ScratchAddons/addons-data-updater
+      - name: Checkout ScratchAddons/website-v2-script
         uses: actions/checkout@v2
         with:
-          repository: ScratchAddons/addons-data-updater
+          repository: ScratchAddons/website-v2-script
           path: script
+      - name: Checkout ScratchAddons/ScratchAddons
+        uses: actions/checkout@v2
+        with:
+          repository: ScratchAddons/ScratchAddons
+          path: sa
 
       - name: Set up Node.js
         uses: actions/setup-node@v1
@@ -38,7 +43,7 @@ jobs:
         run: | 
           cd repo
           npm install --prefix ../script
-          node ../script/index.js ${{ github.event.inputs.ref }}
+          node ../script/node/ci/hugo-update-addons-data.js ${{ github.event.inputs.ref }}
 
       - name: Generate token 
         uses: tibdex/github-app-token@v1
@@ -54,6 +59,7 @@ jobs:
           branch: create-pull-request/addon-data
           committer: scratchaddons-bot[bot] <73682299+scratchaddons-bot[bot]@users.noreply.github.com>
           delete-branch: true
+          path: ./repo
           title: Update addons data
           body: |
             This updates the addons data based on the main repo.

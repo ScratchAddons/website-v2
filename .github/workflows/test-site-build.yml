@@ -19,15 +19,14 @@ jobs:
     name: Testing
     runs-on: ubuntu-18.04
     steps:
-      - name: Checkout ScratchAddons/Website
+      - name: Checkout ScratchAddons/website-v2
         uses: actions/checkout@v2
         with:
           path: repo
-          fetch-depth: 0
-      - name: Checkout ScratchAddons/website-i18n-script
+      - name: Checkout ScratchAddons/website-v2-script
         uses: actions/checkout@v2
         with:
-          repository: ScratchAddons/website-i18n-script
+          repository: ScratchAddons/website-v2-script
           path: script
       - name: Checkout ScratchAddons/website-i18n
         uses: actions/checkout@v2
@@ -46,11 +45,11 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: ${{ runner.os }}-node-
 
-      - name: Execute localization script
+      - name: Execute preparation script
         run: | 
           cd repo
           npm install --prefix ../script
-          node ../script/src/ci/hugo-add-i18n.js
+          node ../script/node/ci/hugo-add-i18n.js
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
