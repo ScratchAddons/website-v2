@@ -24,6 +24,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           path: repo
+          fetch-depth: 0
       - name: Checkout ScratchAddons/website-i18n-script
         uses: actions/checkout@v2
         with:
