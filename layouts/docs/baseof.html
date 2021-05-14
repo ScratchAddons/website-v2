@@ -15,11 +15,11 @@
 {{ $style := resources.Get "assets/css/docs/base.scss" | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
-<div class="content container-fluid">
+<main class="content container-fluid">
 
 	{{ block "main" . }}{{ end }}
 		
-</div>
+</main>
 
 {{- partial "footer" . -}}
 
@@ -29,7 +29,7 @@
 
 {{ define "main" }}
 
-	<main class="row">
+	<div class="row">
 
 		<aside class="docs-sidebar d-none d-lg-flex col-lg-3 col-xl-2">
 			<!-- px-2 py-4 -->
@@ -55,7 +55,7 @@
 			{{ .TableOfContents }}
 		</aside>
 
-	</main>
+	</div>
 
 {{ end }}
 
