@@ -15,6 +15,8 @@
 {{ $style := resources.Get "assets/css/docs/base.scss" | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
+{{ partial "docs/sidebar-toggle" . }}
+
 <main class="content container-fluid">
 
 	{{ block "main" . }}{{ end }}
@@ -31,12 +33,13 @@
 
 	<div class="row">
 
-		<aside class="docs-sidebar d-none d-lg-flex col-lg-3 col-xl-2">
+		<aside class="docs-pages col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id="docs-pages">
+			<!-- d-none  -->
 			<!-- px-2 py-4 -->
 			{{- partial "docs/sidebar" . -}}
 		</aside>
 	
-		<article class="docs-main col col-lg-9 col-xl-8">
+		<article class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
 
 			{{ block "article" . }}{{ end }}
 
@@ -50,7 +53,8 @@
 
 		</article>
 
-		<aside class="docs-toc text-muted d-none d-xl-flex col-xl-2"> 
+		<aside class="docs-toc text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id="docs-toc"> 
+			<!-- d-none  -->
 			<!-- px-2 py-4 -->
 			{{ .TableOfContents }}
 		</aside>
