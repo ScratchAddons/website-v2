@@ -6,7 +6,7 @@ These are the files behind the Scratch Addons website. It is build with Hugo as 
 
 ## Building
 
-1. You will need [Hugo]. Read [Install Hugo](https://gohugo.io/getting-started/installing/) if you haven't got Hugo installed.
+1. You will need [Hugo](https://gohugo.io). Read [Install Hugo](https://gohugo.io/getting-started/installing/) if you haven't got Hugo installed.
 
 2. Serve the website for development (`localhost:1313` by default):
 
