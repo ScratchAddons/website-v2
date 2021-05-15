@@ -389,7 +389,7 @@ article {
         margin-bottom: 1rem
     }
 
-    blockquote, details, dl, ol, p, pre, table, ul {
+    blockquote, details, dl, ol, p, pre, table, ul, .highlight {
         margin-bottom: 1rem
     }
 
@@ -397,8 +397,14 @@ article {
 		margin-top: 0;
 	}
 
-    :last-child {
+    > :last-child {
         margin-bottom: 0
     }
+
+	li {
+		* {
+			margin-bottom: 0.5rem;
+		}
+	}
 
 }
