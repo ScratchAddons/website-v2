@@ -397,6 +397,10 @@ body.extension-styled {
 	font-family: "Sora", $bs-font-family-sans-serif;
 	font-size-adjust: 0.47;
 
+	code, kbd, pre, samp {
+		font-size-adjust: 0.5
+	}
+
 	header {
 		padding-top: 1.4px;
 		padding-bottom: 1.4px;
