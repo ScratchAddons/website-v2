@@ -118,7 +118,7 @@ const updateDarkToggle = (active) => {
 }
 
 if (localStorage.getItem("extensionStyledTheme") !== null) {
-    updateDarkTheme(stringToBoolean(localStorage.getItem("extensionStyledTheme")))
+    updateExtensionStyledTheme(stringToBoolean(localStorage.getItem("extensionStyledTheme")))
     isUserSelected = true
 }
 
