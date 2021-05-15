@@ -46,7 +46,7 @@
 			<hr />
 
 			<p class="text-muted">
-				{{ if eq .Language.Lang "en" }}
+				{{ if ( and (eq .Language.Lang "en") ( not .Site.IsServer ) ) }}
 					Last updated at {{ .Lastmod.Format "02 January 2006"  }} by {{ .GitInfo.AuthorName }} on commit <a href="https://github.com/ScratchAddons/website-v2/commit/{{ .GitInfo.Hash }}"><code>{{ .GitInfo.AbbreviatedHash }}</code></a>.
 				{{ end }}
 				<a href="https://github.com/ScratchAddons/website-v2/edit/master/content/{{ .File.Path }}">Improve this page.</a></p>
