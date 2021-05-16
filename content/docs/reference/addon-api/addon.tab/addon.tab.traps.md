@@ -1,6 +1,9 @@
 ---
-title: addon.tab.traps
+title: addon.tab.traps (Traps)
 description: addon.tab.traps is a public API for userscripts that can be used to obtain objects that are not otherwise available.
+weight: 1
+aliases: 
+  - /docs/developing/addon.tab.traps
 ---
 
 **This page is out of date and is in need of a rewrite. If you know anything about traps, please contribute!**

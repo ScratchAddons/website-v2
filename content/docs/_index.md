@@ -1,5 +1,6 @@
 ---
 title: Home
+toc_root: true
 ---
 **Welcome to Scratch Addons' wiki!**
 

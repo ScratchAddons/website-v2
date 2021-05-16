@@ -1,6 +1,9 @@
 ---
-title: Redux
+title: addon.tab.redux (Redux)
 description: Scratch Addons supports getting and modifying Redux state!
+weight: 2
+aliases:
+  - /docs/developing/redux
 ---
 Scratch Addons supports getting and modifying Redux state!
 

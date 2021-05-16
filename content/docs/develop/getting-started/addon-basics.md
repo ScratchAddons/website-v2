@@ -1,5 +1,8 @@
 ---
 title: Addon Basics
+weight: 1
+aliases:
+  - /docs/developing/getting-started/addon-basics
 ---
 
 ## What's an addon, really?

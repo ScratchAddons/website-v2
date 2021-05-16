@@ -1,30 +1,14 @@
 ---
-layout: markdown
 title: Frequently Asked Questions
 description: This page lists frequently asked questions related to the Scratch Addons extension and project.
+weight: 51
+aliases:
+  - /faq
 ---
 
-<script defer src="/assets/js/faq.js"></script>
+<!-- <script defer src="/assets/js/faq.js"></script> -->
 
 This page lists frequently asked questions related to the Scratch Addons extension and project.
-
-- [What is Scratch Addons?](#what-is-scratch-addons)
-- [What is an "addon", exactly?](#what-is-an-addon-exactly)
-- [If everything is an addon, then what does Scratch Addons do?](#if-everything-is-an-addon-then-what-does-scratch-addons-do)
-- [Is Scratch Addons safe? How can I report a security vulnerability?](#is-scratch-addons-safe-how-can-i-report-a-security-vulnerability)
-- [Will my account be safe when using Scratch Addons?](#will-my-account-be-safe-when-using-scratch-addons)
-- [Can I tell people about Scratch Addons on Scratch?](#can-i-tell-people-about-scratch-addons-on-scratch)
-- [How can I contribute to Scratch Addons?](#how-can-i-contribute-to-scratch-addons)
-- [How can I create my own addon?](#how-can-i-create-my-own-addon)
-- [How can I put my name on the contributors page?](#how-can-i-put-my-name-on-the-contributors-page)
-- [How can I remove my name from the contributors page?](#how-can-i-remove-my-name-from-the-contributors-page)
-- [What can I do if I find a problem?](#what-can-i-do-if-i-find-a-problem)
-- [I think you missed a feature. What can I do?](#i-think-you-missed-a-feature-what-can-i-do)
-- [Where can I discuss about Scratch Addons?](#where-can-i-discuss-about-scratch-addons)
-- [I think Scratch Addons slows down Scratch. What can I do?](#i-think-scratch-addons-slows-down-scratch-what-can-i-do)
-- [Are there any consequences for enabling everything?](#are-there-any-consequences-for-enabling-everything)
-- [How can you activate the easter egg addons?](#how-can-you-activate-the-easter-egg-addons)
-- [I have more questions!](#i-have-more-questions)
 
 ### What is Scratch Addons?
 
