@@ -28,12 +28,6 @@ To download the repository, simply clone `https://github.com/ScratchAddons/Scrat
 $ git clone https://github.com/ScratchAddons/ScratchAddons.git
 ```
 
-If you have GitHub, you can fork the repository in GitHub beforehand, and then clone the fork instead.
-
-```sh
-$ git clone https://github.com/[your-name]/ScratchAddons.git
-```
-
 ### Downloading the zipball
 
 If you don't have Git installed, you can try this method instead.
