@@ -1,5 +1,3 @@
 public/
 resources/_gen/
-hugo_stats.json
-# Local Netlify folder
-.netlify
+hugo_stats.jsongit push 
