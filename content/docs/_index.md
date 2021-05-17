@@ -2,7 +2,7 @@
 title: Home
 toc_root: true
 ---
-**Welcome to Scratch Addons' wiki!**
+**Welcome to Scratch Addons Docs!**
 
 If you're looking into creating an addon, [start here](developing/getting-started/creating-an-addon).
 
