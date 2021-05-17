@@ -60,7 +60,7 @@ If you don't have Git installed, you can try this method instead.
 
 ![image](https://user-images.githubusercontent.com/61319150/92291792-d3fe5680-eedf-11ea-9d62-8e02b262f575.png)
 
-4. Select the folder 
+4. Select the folder.
 5. The extension should now be loaded. 
 
 ### Installing on Mozilla Firefox

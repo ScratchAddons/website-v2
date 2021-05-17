@@ -11,7 +11,7 @@ Allows addon userscripts to get information about the tab they're currently runn
 
 ## Sub-APIs
 ### [addon.tab.traps](addon.tab.traps)
-Allows addons to get direct references to objects, which are particularly useful for enhancing the editor, like the Scratch VM, Thread objects, or Redux state on scratch-www pages.
+Allows addons to get direct references to objects, which are particularly useful for enhancing the editor, like the Scratch VM or the Blockly instance.
 ### [addon.tab.redux](addon.tab.redux)
 TODO
 
@@ -20,7 +20,7 @@ TODO
 Currently, the Scratch community website has 2 working clients used throughout the site, one React based and another jQuery based. This getter allows addons to change your behavior depending on the version of the current page.  
 Returns either `"scratch-www"` (React based), `"scratchr2"` (jQuery based) or `null`.
 ### addon.tab.editorMode
-If the tab is a project, it returns the viewing mode of the project: `"editor"`, `"fullscreen"` or `"embed"`.  
+If the tab is a project, it returns the viewing mode of the project: `"projectpage"`, `"editor"`, `"fullscreen"` or `"embed"`.  
 If not in a project, it will return `null`.
 
 ## Functions

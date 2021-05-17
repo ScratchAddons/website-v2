@@ -4,7 +4,7 @@ description: Allows addons to display a badge, a bit of text that is layered ove
 weight: 7
 ---
 
-**Keep in mind: as of August 31st, only one addon can use the badge API, currently `msg-count-badge`**
+**Keep in mind: only one addon (currently `msg-count-badge`) can use the badge API.**
 
 **Available in persistent scripts.**  
 **NOT available in userscripts.**  

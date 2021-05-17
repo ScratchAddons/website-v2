@@ -14,5 +14,5 @@ Here are some pages about Scratch Addons' localization (l10n).
 - [Localizing Background](localizing-background) _Needs writing_
 - [Technical specs of addons-l10n translation](https://github.com/ScratchAddons/ScratchAddons/blob/master/addons-l10n/README.md)
 
-## For Crowdin admins
+## For Transifex admins
 - [Pushing and Pulling Messages](pushing-and-pulling-messages) _Needs writing_

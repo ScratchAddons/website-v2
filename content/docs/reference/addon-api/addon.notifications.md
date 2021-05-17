@@ -15,7 +15,7 @@ Allows addons to create browser notifications. This API slightly differs from th
 Returns a promise that resolves to the ID (string) of the created notification.  
 Shows a notification to the user according to the options object.  
 [Options object reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions).  
-Note: for your convenience, neither specifying `buttons` and `requireInteraction` throws on Firefox.
+Note: for your convenience, specifying `buttons` or `requireInteraction` throws on Firefox.
 ### addon.notifications.update(stringNotificationId, optionsObject)
 Returns a promise that resolves to `true` if succeeded, `false` if not.  
 Updates a notification, given its ID.
