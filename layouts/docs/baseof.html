@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="{{ .Site.Language.Lang }}">
 
 <head>
 
-{{- partial "head" . -}}
+{{ partial "head" . }}
+{{ $style := resources.Get "assets/css/docs/base.scss" | resources.ToCSS -}}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 </head>
 
 <body>
 
-{{- partial "nav" . -}}
+{{ partial "nav" . }}
 
-{{ $style := resources.Get "assets/css/docs/base.scss" | resources.ToCSS }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ block "main-start" . }}{{ end }}
 
-{{ partial "docs/sidebar-toggle" . }}
+{{- partial "docs/sidebar-toggle" . -}}
 
-<main class="content container-fluid">
-
+<main>
 	{{ block "main" . }}{{ end }}
-		
 </main>
 
-{{- partial "footer" . -}}
+{{ partial "footer" . }}
 
 </body>
 
@@ -31,7 +30,7 @@
 
 {{ define "main" }}
 
-	<div class="row">
+	<div class="row px-3">
 
 		<aside class="docs-pages col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id="docs-pages">
 			<!-- d-none  -->
@@ -45,11 +44,7 @@
 
 			<hr />
 
-			<p class="text-muted">
-				{{ if ( and (eq .Language.Lang "en") ( not .Site.IsServer ) ) }}
-					Last updated at {{ .Lastmod.Format "02 January 2006"  }} by {{ .GitInfo.AuthorName }} on commit <a href="https://github.com/ScratchAddons/website-v2/commit/{{ .GitInfo.Hash }}"><code>{{ .GitInfo.AbbreviatedHash }}</code></a>.
-				{{ end }}
-				<a href="https://github.com/ScratchAddons/website-v2/edit/master/content/{{ .File.Path }}">Improve this page.</a></p>
+			{{- partial "docs/footnote" . -}}
 
 		</article>
 

@@ -35,4 +35,13 @@ Footer:
 
 DarkTheme:
   Title: Click to toggle the dark theme.
-  Label: Dark theme switch button
+  Label: Dark theme switch
+
+Docs:
+  SectionSiteName: Scratch Addons Docs
+  DocsNav: Docs navigation
+  DocsNavToggleLabel: Toggle docs navigation sidebar
+  TOC: Table of contents
+  TOCToggleLabel: Toggle table of contents sidebar
+  LastUpdated: Last updated at {{.Date}} by {{.Name}} on commit {{.Commit}}.
+  Improve: Improve this page.

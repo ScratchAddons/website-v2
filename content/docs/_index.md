@@ -1,6 +1,8 @@
 ---
 title: Home
 toc_root: true
+cascade:
+  section_site_name: Docs.SectionSiteName
 ---
 **Welcome to Scratch Addons Docs!**
 

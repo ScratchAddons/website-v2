@@ -4,22 +4,22 @@
 
 <head>
 
-{{- partial "head" . -}}
+{{ partial "head" . }}
 
 </head>
 
 <body>
 
-{{- partial "nav" . -}}
+{{ partial "nav" . }}
 
-  <main>
-    {{ block "main" . }}
-      {{- .Content -}}
-    {{ end }}
-  </main>
+<main>
+	{{ block "main" . }}{{ end }}
+</main>
 
-{{- partial "footer" . -}}
-  
+{{ partial "footer" . }}
+
 </body>
 
 </html>
+
+{{ define "main" }}{{ .Content }}{{ end }}	
