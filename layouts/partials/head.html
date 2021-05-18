@@ -6,6 +6,7 @@
 <meta name="description" content="{{ .Description }}" />
 <meta name="author" content="" />
 <link rel="icon" href="/assets/img/icon.png">
+{{ if .Params.robots_tag }}<meta name="robots" content='{{ .Params.robots_tag }}' />{{ end }}
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scratchaddons.com{{ with .File }}{{ .Dir }}{{ end }}">
@@ -45,7 +46,7 @@
 <script src="https://cdn.jsdelivr.net/npm/bowser@2.11.0/es5.min.js" crossorigin></script> -->
 <script async src="/assets/js/website-base.js"></script>
 
-{{ if eq .Site.Params.noAnalytics false }}
+{{ if not ( and ( isset .Params "no_analytics" ) ( eq .Params.no_analytics true ) ) }}
 <script async defer data-domain="scratchaddons.com" src="/assets/js/plausible.outbound-links.js"></script>
 <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 {{ end }}
