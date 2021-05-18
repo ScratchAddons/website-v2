@@ -1,0 +1,26 @@
+{
+  "name": "@scratchaddons/website-v2",
+  "version": "1.0.0",
+  "description": "Website of Scratch Addons, version 2",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScratchAddons/website-v2.git"
+  },
+  "author": "Scratch Addons contributors",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/ScratchAddons/website-v2/issues"
+  },
+  "homepage": "https://github.com/ScratchAddons/website-v2#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.2.5",
+    "bootstrap": "^5.0.1",
+    "postcss": "^8.2.15",
+    "postcss-cli": "^8.3.1",
+    "purgecss": "^4.0.3"
+  }
+}
