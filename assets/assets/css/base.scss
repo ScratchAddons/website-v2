@@ -29,7 +29,7 @@ p {
 	margin-bottom: 0.5rem
 }
 
-header {
+body > header {
 	background-color: var(--header-bg);
 	color: var(--header-cnt);
 	
@@ -75,7 +75,7 @@ header {
 		
 }
 
-footer {
+body > footer {
 	width: 100%;
 	background-color: var(--footer-bg);
 	color: var(--footer-cnt);
