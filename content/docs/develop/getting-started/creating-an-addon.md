@@ -1,5 +1,8 @@
 ---
 title: Creating an Addon
+weight: 3
+aliases:
+  - /docs/developing/getting-started/creating-an-addon
 ---
 Required software: text editor, Chrome.  
 If possible, disable the Scratch Addons extension you downloaded from the store before proceeding to avoid issues.
@@ -39,7 +42,7 @@ This is a base you can use to start coding, make sure to change it in the future
   "enabledByDefault": false
 }
 ```
-For more information on what you can declare in the manifest, check [this article](The-addon-manifest-(addon.json)).
+For more information on what you can declare in the manifest, check [this article](/docs/developing/the-addon-manifest-(addon.json)).
 
 
 ## Step 7: Tell Scratch Addons what your addon's ID is
@@ -59,19 +62,19 @@ Here comes the fun part: create your own JS or CSS files!
 Protip: after making any change to your addon, make sure to refresh the Scratch Addons extension like you did in step 8.  
   
 Depending on what you want your addon to do, you should now check these wiki pages:
-- [Persistent scripts](About-persistent-scripts)
-- [Userscripts](About-userscripts)
-- [Userstyles](About-userstyles)
+- [Persistent scripts](docs/develop/addon-types/persistent-scripts)
+- [Userscripts](docs/develop/addon-types/userscripts)
+- [Userstyles](docs/develop/addon-types/userstyles)
 
 ## Step 10: Make your addon customizable
 If you want, you can make your addon customizable!  
-Users of your addon will be able to toggle options, enter numbers, and more!  
-To get started, see [how to declare options in the addon manifest](The-addon-manifest-(addon.json)#declare-optionssettings-optional).  
-Then, head to the [addon.settings documentation](addon.*-APIs-reference#addonsettings) to learn how to access user choices from userscripts and persistent scripts.
+Users of your addon will be able to toggle settings, enter numbers, and more!  
+To get started, see [how to declare settings in the addon manifest](docs/reference/addon-manifest/#settings-object).  
+Then, head to the [addon.settings documentation](docs/reference/addon-api/addon.settings) to learn how to access user choices from userscripts and persistent scripts.
 
 ## Step 11: Before publishing your addon
 Now that your addon works, let's make sure we can add it to the addon library.  
-Make sure your addon's manifest is suitable, [more info here](The-addon-manifest-(addon.json)). Keep close attention to the name, description and tags of your addon. Make sure to set `"enabledByDefault"` to `false` or remove it.  
+Make sure your addon's manifest is suitable, [more info here](docs/reference/addon-manifest). Keep close attention to the name, description and tags of your addon. Make sure to set `"enabledByDefault"` to `false` or remove it.  
 Make sure your addon doesn't break other addons.  
 Make sure your code is understandable; having unnecessary comments is better than no comments.
 

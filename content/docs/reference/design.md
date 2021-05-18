@@ -1,5 +1,7 @@
 ---
 title: Design
+aliases: 
+  - /docs/developing/design
 ---
 ## Icons
 We use iconify UIL (Unicons) icons. See them at https://iconify.design/icon-sets/uil/. Please only use icons from this set unless you have explicit permission to use another set. When adding an icon, download it to ``/images/icons/iconname.svg``. 

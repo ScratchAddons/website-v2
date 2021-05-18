@@ -1,5 +1,7 @@
 ---
 title: Developing
-weight: 1
+weight: 2
+aliases:
+  - /docs/developing
 ---
 Check out this section for our docs for developers!

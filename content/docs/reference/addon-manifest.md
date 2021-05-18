@@ -1,6 +1,8 @@
 ---
-title: The Addon Manifest (addon.json)
+title: Addon Manifest
 description: In order to tell the addon loader how the addon plans to work, addons use a standard addon.json file located at the root of the addon's folder. 
+aliases: 
+  - /docs/developing/the-addon-manifest-(addon.json)
 ---
 Addons are located inside the `addons` folder. Each addon is inside its own folder as well.
 In order to tell the addon loader how the addon plans to work, addons use a standard `addon.json` file located at the root of the addon's folder.  

@@ -1,5 +1,5 @@
 ---
 title: Getting Started
-weight: 5
+weight: 1
 ---
 Get started with making an addon for Scratch Addons!
