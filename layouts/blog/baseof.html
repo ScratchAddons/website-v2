@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+{{- partial "head" . -}}
+
+</head>
+
+<body>
+
+{{- partial "nav" . -}}
+
+{{ $style := resources.Get "assets/css/docs/base.scss" | resources.ToCSS }}
+<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+
+<main>
+
+
+
+</main>
+
+{{- partial "footer" . -}}
+
+</body>
+
+</html>
+
+{{ define "main" }}
+
+	<article class="content">
+
+		{{- .Content -}}
+				
+	</article>	
+
+{{ end }}
+
+{{ define "article" }}
+
+	<header id="intro" class="intro-heading">
+		<h1>{{ .Title }}</h1>
+		<p>{{ .Lastmod.Format "02 January 2006" }}</p>
+	</header>
+
+	<div class="container">
+		{{ .Content }}
+	</div>
+
+{{ end }}
