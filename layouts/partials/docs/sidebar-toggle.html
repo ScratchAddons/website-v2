@@ -1,20 +1,16 @@
-<nav class="navbar navbar-light d-xl-none row border-bottom">
+<div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
 
-	<div class="col d-inline-flex align-items-middle d-lg-none">
-		<button class="navbar-toggler align-left" type="button" data-toggle="collapse" data-target="#docs-pages" aria-controls="docs-pages" aria-expanded="false" aria-label='{{ T "Docs.DocsNavToggleLabel" }}'>
+		<button class="navbar-toggler d-block align-left d-lg-none" type="button" data-toggle="collapse" data-target="#docs-pages" aria-controls="docs-pages" aria-expanded="false" aria-label='{{ T "Docs.DocsNavToggleLabel" }}'>
 			<span class="navbar-toggler-icon"></span>
 		</button>
-		<div class="d-flex align-items-center mx-2">
+		<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
 			<span>{{ T "Docs.DocsNav" }}</span>
 		</div>
-	</div>
-	<div class="col d-inline-flex flex-row-reverse d-xl-none">
-		<button class="navbar-toggler d-xl-none align-right" type="button" data-toggle="collapse" data-target="#docs-toc" aria-controls="docs-toc" aria-expanded="false" aria-label='{{ T "Docs.TOCToggleLabel" }}'>
-			<span class="navbar-toggler-icon"></span>
-		</button>
-		<div class="d-flex align-items-center mx-2 text-right">
+		<div class="flex-grow-1 align-items-center mx-2 text-right">
 			<span>{{ T "Docs.TOC" }}</span>
 		</div>
-	</div>
+		<button class="navbar-toggler d-block d-xl-none align-right" type="button" data-toggle="collapse" data-target="#docs-toc" aria-controls="docs-toc" aria-expanded="false" aria-label='{{ T "Docs.TOCToggleLabel" }}'>
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
-</nav>
+</nav></div>
