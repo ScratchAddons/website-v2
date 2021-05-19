@@ -1,6 +1,6 @@
 <!-- Title and Meta -->
 
-<title>{{ if ne .Title "Index" }}{{ .Title }} - {{ end }}{{ T .Params.section_site_name }}</title>
+<title>{{ if ne .Title "Index" }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="description" content="{{ .Description }}" />
@@ -10,9 +10,9 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scratchaddons.com{{ with .File }}{{ .Dir }}{{ end }}">
-<meta property="og:title" content='{{ if ne .Title "Index" }}{{ .Title }}{{ else }}{{ T .Params.section_site_name }}{{ end }}' />
+<meta property="og:title" content='{{ if ne .Title "Index" }}{{ .Title }}{{ else }}{{ T ( $.Param "section_site_name" ) }}{{ end }}' />
 <meta property="og:description" content="{{ .Description }}">
-<meta property="og:site_name" content='{{ T .Params.section_site_name }}' />
+<meta property="og:site_name" content='{{ T ( $.Param "section_site_name" ) }}' />
 <meta property="og:locale" content="{{ .Site.Language.Lang }}" />
 <meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
 <meta property="og:image:type" content="image/png" />
@@ -24,7 +24,7 @@
 <!-- <meta name="twitter:site" content="@ScratchAddons" />
 <meta name="twitter:creator" content="@ScratchAddons" /> -->
 <meta name="twitter:url" content="https://scratchaddons.github.io{{ with .File }}{{ .Dir }}{{ end }}" />
-<meta name="twitter:title" content='{{ if ne .Title "Index" }}{{ .Title }} - {{ end }}{{ T .Params.section_site_name }}' />
+<meta name="twitter:title" content='{{ if ne .Title "Index" }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}' />
 <meta name="twitter:description" content="{{ .Description }}" />
 <meta name="twitter:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
 <meta name="twitter:image:alt" content='{{ T "Global.LogoAlt" }}' />

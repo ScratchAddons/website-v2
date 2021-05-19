@@ -4,7 +4,7 @@
 		
 		<a href='{{ "/" | relLangURL }}' class="navbar-brand">
 			<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddonsAlt" }}'></img>
-			<span>{{ T .Params.section_site_name }}</span>
+			<span>{{ T ( $.Param "section_site_name" ) }}</span>
 		</a>
 	
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
