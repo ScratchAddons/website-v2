@@ -10,7 +10,7 @@ If you're looking into creating an addon, [start here](develop/getting-started/c
 
 If you want to help localize the extension, [learn how here](localization/joining-the-localization-team).
 
-If you need help starting with Scratch Adoons, [look here](getting-started/quick-start).
+If you need help starting with Scratch Addons, [look here](getting-started/quick-start).
 
 If you are interested in the design of the project, [look here](reference/design).
 
