@@ -32,54 +32,75 @@ const stringToBoolean = (string) => string === 'false' ? false : !!string
 
 $(() => {
 
-    let browser; // "chrome", "firefox", null
-    const bowserResult = bowser.getParser(navigator.userAgent).parsedResult;
-    switch (bowserResult.engine.name) {
-        case "Blink":
-            browser = "chrome"
-            break
-        case "Gecko":
-            browser = "firefox"
-            break
-        default:
-            browser = "unsupported"
-            break
+    window.installButtonGo = engine => {
+
+        console.log(engine)
+
+        delete window.installButtonGo
+
+        switch (engine) {
+            case "Blink":
+                browser = "chrome"
+                break
+            case "Gecko":
+                browser = "firefox"
+                break
+            default:
+                browser = "unsupported"
+                break
+        }
+    
+        const storeLinks = {
+            "chrome": "https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco",
+            "firefox": "https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/",
+            "unsupported": "/#install"
+        }
+    
+        const url = storeLinks[browser]
+    
+        if (document.querySelector("#install-intro")) {
+            switch (browser) {
+                case "chrome":
+                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:googlechrome"></span>'
+                    document.querySelector("#install-browser").innerText = window.i18nStrings.installChrome
+                    break
+                case "firefox":
+                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:firefoxbrowser"></span>'
+                    document.querySelector("#install-browser").innerText = window.i18nStrings.installFirefox
+                    break
+                default:
+                    document.querySelector("#install-browser-icon").innerHTML = ""
+                    document.querySelector("#install-browser").innerText = window.i18nStrings.installUnsupported
+                    break;
+            }
+            document.querySelector("#install-intro").classList.toggle("disabled")
+        }
+    
+        for (const element of document.querySelectorAll(".install-btn")) {
+            element.href = url
+            element.classList.add(`install-${browser}`)
+            if (location.pathname !== "/" && browser !== "unsupported") {
+                element.target = "_blank"
+                element.rel = "noopener"
+            }
+        }
+
     }
 
-    const storeLinks = {
-        "chrome": "https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco",
-        "firefox": "https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/",
-        "unsupported": "/#install"
+    if (localStorage.getItem("browserEngine")) installButtonGo(localStorage.getItem("browserEngine"))
+    else {
+        const detectEngineElement = document.createElement("script")
+    
+        detectEngineElement.type = "module"
+        detectEngineElement.innerHTML = `
+        import bowser from 'https://cdn.skypack.dev/bowser'
+    
+        localStorage.setItem("browserEngine", bowser.getParser(navigator.userAgent).parsedResult.engine.name)
+    
+        window.installButtonGo(localStorage.getItem("browserEngine"))
+        `
+        document.head.appendChild(detectEngineElement)
     }
-
-    const url = storeLinks[browser]
-
-	if (document.querySelector("#install-intro")) {
-		switch (browser) {
-			case "chrome":
-				document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:googlechrome"></span>'
-				document.querySelector("#install-browser").innerHTML = "Install for Chrome"
-				break
-			case "firefox":
-				document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:firefoxbrowser"></span>'
-				document.querySelector("#install-browser").innerHTML = "Install for Firefox"
-				break
-			default:
-				document.querySelector("#install-browser-icon").innerHTML = ""
-				document.querySelector("#install-browser").innerHTML = "Install"
-				break;
-        }
-        document.querySelector("#install-intro").classList.toggle("disabled")
-	}
-
-	for (const element of document.querySelectorAll(".install-btn")) {
-		element.href = url
-		element.classList.add(`install-${browser}`)
-		if (location.pathname !== "/" && browser !== "unsupported") {
-            element.target = "_blank"
-            element.rel = "noopener"
-        }
-	}
 
 })
 
@@ -165,7 +186,7 @@ $(() => {
 let lastTooltipsAmount = 0
 
 const tooltipsObserver = new MutationObserver(mutations => {
-    currentTooltipsAmount = document.querySelectorAll('[data-toggle="tooltip"]').length
+    const currentTooltipsAmount = document.querySelectorAll('[data-toggle="tooltip"]').length
     if (lastTooltipsAmount !== currentTooltipsAmount) {
         lastTooltipsAmount = currentTooltipsAmount
         $(document.querySelectorAll('[data-toggle="tooltip"]')).tooltip()

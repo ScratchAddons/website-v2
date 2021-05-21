@@ -8,8 +8,8 @@
 			<div class="card-body">
 				<h5 class="card-title">
 					{{ .name }}
-					{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title="This is an easter egg addon.">🥚</span>{{ end -}}
-					{{ if in .tags "recommended" }}<span data-toggle="tooltip" title="This is a recommended addon.">⭐</span>{{ end -}}
+					{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.EasterEggAddon" }}'>🥚</span>{{ end -}}
+					{{ if in .tags "recommended" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.RecommendedAddon" }}'>⭐</span>{{ end -}}
 				</h5>
 				<h6 class="card-subtitle mb-2 text-muted">{{ .id }}</h6>
 				<p class="card-text">{{ .description }}</p>

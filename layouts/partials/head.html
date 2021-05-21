@@ -1,6 +1,6 @@
 <!-- Title and Meta -->
 
-<title>{{ if ne .Title "Index" }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}</title>
+<title>{{ if ne .IsHome true }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="description" content="{{ .Description }}" />
@@ -10,7 +10,7 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://scratchaddons.com{{ with .File }}{{ .Dir }}{{ end }}">
-<meta property="og:title" content='{{ if ne .Title "Index" }}{{ .Title }}{{ else }}{{ T ( $.Param "section_site_name" ) }}{{ end }}' />
+<meta property="og:title" content='{{ if ne .IsHome "true" }}{{ .Title }}{{ else }}{{ T ( $.Param "section_site_name" ) }}{{ end }}' />
 <meta property="og:description" content="{{ .Description }}">
 <meta property="og:site_name" content='{{ T ( $.Param "section_site_name" ) }}' />
 <meta property="og:locale" content="{{ .Site.Language.Lang }}" />
@@ -24,7 +24,7 @@
 <!-- <meta name="twitter:site" content="@ScratchAddons" />
 <meta name="twitter:creator" content="@ScratchAddons" /> -->
 <meta name="twitter:url" content="https://scratchaddons.github.io{{ with .File }}{{ .Dir }}{{ end }}" />
-<meta name="twitter:title" content='{{ if ne .Title "Index" }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}' />
+<meta name="twitter:title" content='{{ if ne .IsHome "true" }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}' />
 <meta name="twitter:description" content="{{ .Description }}" />
 <meta name="twitter:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
 <meta name="twitter:image:alt" content='{{ T "Global.LogoAlt" }}' />
@@ -39,7 +39,7 @@
 <link rel="stylesheet" href="{{ $stylebase.Permalink }}" />
 <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/pace/1.0.2/themes/black/pace-theme-loading-bar.min.css" /> -->
 
-<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7,npm/bowser@2.11.0" crossorigin></script>
+<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7" crossorigin></script>
 <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" crossorigin></script>
 <script async src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" crossorigin></script>
 <script async src="https://code.iconify.design/1/1.0.7/iconify.min.js" crossorigin></script>
