@@ -167,7 +167,7 @@ window.i18nStrings = {
 	<h2 class="text-center">{{ T "IndexPage.Highlights.Heading" }}</h2>
 	<p class="text-center mb-3">
 		{{- .Scratch.Add "open_tag_1" "<a href='" }}
-		{{- .Scratch.Add "open_tag_1" ( "/addons" | absLangURL ) }}
+		{{- .Scratch.Add "open_tag_1" ( "/addons" | relLangURL ) }}
 		{{- .Scratch.Add "open_tag_1" "' class='white-underline'>" }}
 		{{- T "IndexPage.Highlights.Paragraph" ( dict "OpenTag1" ( .Scratch.Get "open_tag_1" ) "CloseTag1" "</a>" )  | safeHTML -}}
 	</p>
