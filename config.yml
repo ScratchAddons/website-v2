@@ -44,6 +44,8 @@ minify:
 
 enableGitInfo: true
 
+refLinksErrorLevel: WARNING
+
 defaultContentLanguage: en
 # enableMissingTranslationPlaceholders: true
 languages:
@@ -51,8 +53,6 @@ languages:
     languageName: English
     weight: 1
     contentDir: content
-
-# TEMPORARY
 
 params:
   sa_version: 1.12.0 # Not currently used
