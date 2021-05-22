@@ -6,7 +6,7 @@ Global:
   ChromeShort: Chrome
   FirefoxShort: Firefox
   Install: Install
-  InstallFor: Install for {{ .Browser }}
+  InstallFor: Install for {{.Browser}}
 
 Nav:
   Contributors: Contributors
@@ -73,7 +73,7 @@ IndexPage:
         ImgAlt: Settings page
       Demo:
         Caption: Demonstration of the extension. ({{.Count}})
-        ImgAlt: Demonstration ({{ .Count }})
+        ImgAlt: Demonstration ({{.Count}})
       Previous: Previous
       Next: Next
   Features:
@@ -88,18 +88,18 @@ IndexPage:
     OSParagraph: Scratch Addons is free, open source, and built by a community of Scratchers.
   Highlights:
     Heading: Highlights
-    Paragraph: Remember, these are just the highlights. {{ .OpenTag1 }}There's more!{{ .CloseTag1 }}
+    Paragraph: Remember, these are just the highlights. {{.OpenTag1}}There's more!{{.CloseTag1}}
     ScratchMessagingHeading: Scratch Messaging
     ScratchMessagingParagraph: 'The "grandfather" of Scratch Addons. It is available when clicking the Scratch Addons icon, and provides easy reading and replying to your Scratch messages: groups messages by project, shows full comment text and context, allows direct comment replying.'
     ScratchNotifierHeading: Scratch Notifier
     ScratchNotifierParagraph: It adds browser notifications on new Scratch messages. You can click the notification to go straight to the message (comment, project, etc.)
     DeveloperToolsHeading: Developer tools
-    DeveloperToolsParagraph: '{{ .OpenTag1 }}From the original extension.{{ .CloseTag1 }} It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
+    DeveloperToolsParagraph: '{{.OpenTag1}}From the original extension.{{.CloseTag1}} It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
   Install:
     Heading: Install    
     Paragraph: Satisfied? Don't hesitate to install it now!
     InstallButton:
-      Other: ...or {{ .OpenTag1 }}download it from GitHub{{ .CloseTag1 }} or {{ .OpenTag2 }}install it from the source{{ .CloseTag2 }}.
+      Other: ...or {{.OpenTag1}}download it from GitHub{{.CloseTag1}} or {{.OpenTag2}}install it from the source{{.CloseTag2}}.
 
 AddonsPage:
   EasterEggAddon: This is an easter egg addon.
