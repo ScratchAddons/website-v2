@@ -22,9 +22,15 @@ Allows addons to execute actions in the currently logged in Scratch user.
   </tr>
 </table>
 
-Returns a promise that resolves to an integer (the unread message count for the currently logged in user), or `null`.
+Gets the unread message count of the currently logged in user.  
+The promise will resolve to `null` if `addon.auth.isLoggedIn` is `false`.
 
 ### getMessages
+
+| | |
+|-|-|
+| Available in userscripts | ❌ |
+
 <table>
   <tr>
     <th>Parameter</th>
@@ -64,7 +70,21 @@ Returns a promise that resolves to an integer (the unread message count for the 
   </tr>
 </table>
 
-**NOT available in userscripts!! Not recommended for general use. This method exists to avoid duplicated work between Scratch Notifier and Scratch Messaging.**  
+Gets recent Scratch messages of the currently logged in user.  
+The promise will resolve to `null` if `addon.auth.isLoggedIn` is `false`.  
+Can only return up to 40 messages at a time.
 
-`opts`: object with an `offset` property, default is 0. Messages limit is always 40.  
-Returns a promise that resolves to the requested messages, or `null` if something failed.
+### clearMessages
+
+| | |
+|-|-|
+| Available in userscripts | ❌ |
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;void></code></td>
+  </tr>
+</table>
+
+Clears the unread message count of the currently logged in user.  

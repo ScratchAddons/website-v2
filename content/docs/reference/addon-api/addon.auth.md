@@ -34,8 +34,9 @@ addon.auth.addEventListener("change", function() {
   </tr>
 </table>
 
-Returns the language code for the language choice the user has made in Scratch, for example. `"en"`.  
-Keep in mind that this property is unrelated from all the others - this getter is inside `addon.auth` because it involves reading Scratch cookies. The change of this value **will not** trigger a "change" event.
+Language of the Scratch website.  
+This language option can be changed by the user in the footer of Scratch's website.  
+This property changing does not fire a `change` event.
 
 ### addon.auth.isLoggedIn
 <table>
@@ -49,7 +50,7 @@ Keep in mind that this property is unrelated from all the others - this getter i
   </tr>
 </table>
 
-Returns whether the user is logged in or not. If `false`, all below return `null`.
+Whether the user is logged in or not.
 
 ### addon.auth.username
 <table>
@@ -63,7 +64,8 @@ Returns whether the user is logged in or not. If `false`, all below return `null
   </tr>
 </table>
 
-Returns the username of the currently logged in user.
+Username of the currently logged in user.  
+Will be `null` if `addon.auth.isLoggedIn` is `false`.
 
 ### addon.auth.userId
 <table>
@@ -77,7 +79,8 @@ Returns the username of the currently logged in user.
   </tr>
 </table>
 
-Returns the user ID of the currently logged in user.
+User ID of the currently logged in user.  
+Will be `null` if `addon.auth.isLoggedIn` is `false`.
 
 ### addon.auth.xToken
 <table>
@@ -91,7 +94,8 @@ Returns the user ID of the currently logged in user.
   </tr>
 </table>
 
-Returns the value of the `X-Token` header used in the Scratch REST API.
+Value of the `X-Token` header used in the Scratch REST API.  
+Will be `null` if `addon.auth.isLoggedIn` is `false`.
 
 ### addon.auth.csrfToken
 <table>
@@ -105,8 +109,9 @@ Returns the value of the `X-Token` header used in the Scratch REST API.
   </tr>
 </table>
 
-Returns the value of the `scratchcsrftoken` cookie.
+Value of the `scratchcsrftoken` cookie.  
+Will be `null` if `addon.auth.isLoggedIn` is `false`.
 
 ## Events
 ### change
-Fires when any of the properties change (except scratchLang).
+Fires when any of `isLoggedIn`, `username`, `userId`, `xToken` or `csrfToken` change.
