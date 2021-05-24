@@ -14,18 +14,98 @@ weight: 6
 Allows addons to create browser notifications. This API slightly differs from the `browser.notifications` API extensions can use.
 
 ## Methods
-### addon.notifications.create(optionsObject)
+### addon.notifications.create
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions" target="_blank">NotificationOptions</a></code></td>
+    <td>Yes</td>
+    <td>Unlike the <code>browser.notifications</code> API, specifying <code>buttons</code> or <code>requireInteraction</code> does not throw in Firefox. Instead, the values are ignored.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;String | null></code></td>
+  </tr>
+</table>
+
 Returns a promise that resolves to the ID (string) of the created notification.  
 Shows a notification to the user according to the options object.  
 [Options object reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions).  
 Note: for your convenience, specifying `buttons` or `requireInteraction` throws on Firefox.
-### addon.notifications.update(stringNotificationId, optionsObject)
+
+### addon.notifications.update
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>notificationId</td>
+    <td><code>String<code></td>
+    <td>Yes</td>
+    <td>The ID of the notification to update</td>
+  <tr>
+    <td>options</td>
+    <td><code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions" target="_blank">NotificationOptions</a></code></td>
+    <td>Yes</td>
+    <td>Unlike the <code>browser.notifications</code> API, specifying <code>buttons</code> or <code>requireInteraction</code> does not throw in Firefox. Instead, the values are ignored.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Boolean</code></td>
+  </tr>
+</table>
+
 Returns a promise that resolves to `true` if succeeded, `false` if not.  
 Updates a notification, given its ID.
-### addon.notifications.clear(stringNotificationId)
+
+### addon.notifications.clear
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>notificationId</td>
+    <td><code>String<code></td>
+    <td>Yes</td>
+    <td>The ID of the notification to clear</td>
+  <tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Boolean</code></td>
+  </tr>
+</table>
+
 Returns a promise that resolves to `true` if succeeded, `false` if not.  
 Clears a notification, given its ID.
-### addon.notifications.getAll()
+
+### addon.notifications.getAll
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Object[]</code></td>
+  </tr>
+</table>
 Returns a promise that resolves to all currently active notifications created by the addon.
 
 ## Events

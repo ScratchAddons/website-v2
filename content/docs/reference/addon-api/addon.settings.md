@@ -15,7 +15,37 @@ Allows addons to change their behavior according to user-specified addon setting
 This API is available even if an addon doesn't specify `settings` in its manifest, however all calls to `get()` will fail.
 
 ## Methods
-### addon.settings.get(optionIdString)
+### addon.settings.get
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>settingId</td>
+    <td><code>String</code></td>
+    <td>Yes</td>
+    <td>Setting ID to retrieve</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>String | Number | Boolean</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>No</td>
+  </tr>
+  <tr>
+    <td>Throws if</td>
+    <td>The given setting ID wasn't declared in the addon manifest</td> 
+  </tr>
+</table>
+
 Returns the user-specified value for that setting, or the default specified in the addon manifest if the user didn't specify a value by themselves.
 Throws if the specified setting ID wasn't declared inside `addon.json`.
 
