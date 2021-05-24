@@ -110,6 +110,19 @@ Returns a promise that resolves to all currently active notifications created by
 
 ## Events
 ### click
+<table>
+  <tr>
+    <th>Event detail property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td><code>String</code></td>
+    <td>The ID of the notification that was clicked</td>
+  </tr>
+</table>
+
 Fires when any notification by the addon is clicked.  
 `event.detail.id` is provided, which specifies which notification has been clicked.
 #### Example:
@@ -118,10 +131,43 @@ addon.notifications.addEventListener("click", function(event) {
   console.log("User clicked notification with ID " + event.detail.id);
 });
 ```
+
 ### close
+<table>
+  <tr>
+    <th>Event detail property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td><code>String</code></td>
+    <td>The ID of the notification that was closed</td>
+  </tr>
+</table>
+
 Fires when any notification by the addon is clicked.  
 `event.detail.id` is provided, which specifies which notification has been closed.
+
 ### buttonclick
+<table>
+  <tr>
+    <th>Event detail property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>id</td>
+    <td><code>String</code></td>
+    <td>The ID of the notification where a button was clicked</td>
+  </tr>
+  <tr>
+    <td>buttonIndex</td>
+    <td><code>Number</code></td>
+    <td>Index of the button that was clicked (first button being index 0)</td>
+  </tr>
+</table>
+
 Fires when a button inside a notification by the addon is clicked.  
 `event.detail.id` is provided, which specifies which notification received a button click.  
 `event.details.buttonIndex` returns the index of the button that was clicked (first button has index of 0).  

@@ -166,6 +166,24 @@ Hides the given element with `display: none` when the addon is disabled. If the 
 
 ## Events
 ### urlChange
+<table>
+  <tr>
+    <th>Event detail property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>oldUrl</td>
+    <td><code>String</code></td>
+    <td>The URL before it was dynamically changed</td>
+  </tr>
+  <tr>
+    <td>newUrl</td>
+    <td><code>String</code></td>
+    <td>The new current URL value</td>
+  </tr>
+</table>
+
 Fires when Scratch dynamically changes the URL of the page. This usually happens when going inside/outside the editor, or into/outside full screen mode. This event does not trigger if the hash of the URL changes.  
 You can access `event.detail.oldUrl` and `event.detail.newUrl`
 #### Example:
