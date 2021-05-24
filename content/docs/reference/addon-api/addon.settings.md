@@ -37,7 +37,7 @@ addon.settings.addEventListener("change", function() {
     <td>settingId</td>
     <td><code>String</code></td>
     <td>Yes</td>
-    <td>Setting ID to retrieve</td>
+    <td>Setting ID to retrieve.</td>
   </tr>
 </table>
 
@@ -52,7 +52,7 @@ addon.settings.addEventListener("change", function() {
   </tr>
   <tr>
     <td>Throws if</td>
-    <td>The given setting ID wasn't declared in the addon manifest</td> 
+    <td>The given setting ID wasn't declared in the addon manifest.</td> 
   </tr>
 </table>
 
