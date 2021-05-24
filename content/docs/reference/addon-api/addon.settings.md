@@ -12,7 +12,6 @@ weight: 2
 
 ## Description
 Allows addons to change their behavior according to user-specified addon settings.  
-This API is available even if an addon doesn't specify `settings` in its manifest, however all calls to `get()` will fail.
 
 ## Examples
 ### Reacting to settings change
@@ -52,9 +51,49 @@ addon.settings.addEventListener("change", function() {
   </tr>
 </table>
 
-Returns the user-specified value for that setting, or the default specified in the addon manifest if the user didn't specify a value by themselves.
-Throws if the specified setting ID wasn't declared inside `addon.json`.
+Returns the user-specified value for a provided setting ID.  
+The return value will depend on the setting type:
+
+<table>
+  <tr>
+    <th>Setting type</th>
+    <th>Return type</th>
+    <th>Example value</th>
+  </tr>
+  <tr>
+    <td><code>boolean</code></td>
+    <td><code>Boolean</code></td>
+    <th><code>true</code></th>
+  </tr>
+  <tr>
+    <td><code>positive_integer</code></td>
+    <td><code>Number</code></td>
+    <th><code>0</code></th>
+  </tr>
+  <tr>
+    <td><code>integer</code></td>
+    <td><code>Number</code></td>
+    <th><code>-2</code></th>
+  </tr>
+  <tr>
+    <td><code>string</code></td>
+    <td><code>String</code></td>
+    <th><code>"abc"</code></th>
+  </tr>
+  <tr>
+    <td><code>color</code></td>
+    <td><code>String</code></td>
+    <th><code>"#aabbcc"</code></th>
+  </tr>
+  <tr>
+    <td><code>select</code></td>
+    <td><code>String</code></td>
+    <th><code>"potentialValueId"</code></th>
+  </tr>
+</table>
+
+This method is guaranteed to return the valid type. `null` is never returned.
 
 ## Events
 ### change
-Fires when any of the addon's settings have changed. This is a good time to restart your addon, refresh the page, recalculate settings, etc.
+Fires when any of the addon's settings have changed.
