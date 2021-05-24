@@ -4,15 +4,16 @@ description: Allows addons to display a badge, a bit of text that is layered ove
 weight: 7
 ---
 
-**Keep in mind: only one addon (currently `msg-count-badge`) can use the badge API.**
-
 | | |
 |-|-|
 | Available in userscripts | ❌ |
 | Available in persistent scripts | ✔️ |
 | Required manifest permissions | `badge` |
 
+## Description
 Allows addons to display a badge, a bit of text that is layered over the extension icon, frequently a number.
+
+**Keep in mind: only one addon (currently `msg-count-badge`) can use the badge API.**
 
 ## Getters & setters
 ### addon.badge.text

@@ -10,6 +10,7 @@ weight: 6
 | Available in persistent scripts | ✔️ |
 | Required manifest permissions | `notifications` |
 
+## Description
 Allows addons to create browser notifications. This API slightly differs from the `browser.notifications` API extensions can use.
 
 ## Functions

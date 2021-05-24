@@ -10,6 +10,7 @@ weight: 3
 | Available in persistent scripts | ✔️ |
 | Required manifest permissions | None |
 
+## Description
 Allows addons to get information about the current Scratch account session.
 
 ## Getters

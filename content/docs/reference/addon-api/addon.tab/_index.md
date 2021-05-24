@@ -10,6 +10,7 @@ weight: 5
 | Available in persistent scripts | ❌ |
 | Required manifest permissions | None |
 
+## Description
 Allows addon userscripts to get information about the tab they're currently running on.
 
 ## Sub-APIs

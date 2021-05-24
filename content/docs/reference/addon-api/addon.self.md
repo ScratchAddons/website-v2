@@ -10,6 +10,7 @@ weight: 1
 | Available in persistent scripts | ✔️ |
 | Required manifest permissions | None |
 
+## Description
 Allows addons to get information about themselves or the browser.
 
 ## Getters

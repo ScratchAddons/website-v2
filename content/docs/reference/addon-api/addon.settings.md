@@ -10,6 +10,7 @@ weight: 2
 | Available in persistent scripts | ✔️ |
 | Required manifest permissions | None |
 
+## Description
 Allows addons to change their behavior according to user-specified addon settings.  
 This API is available even if an addon doesn't specify `settings` in its manifest, however all calls to `get()` will fail.
 
