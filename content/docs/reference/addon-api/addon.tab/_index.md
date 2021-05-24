@@ -54,6 +54,7 @@ Returns either `"scratch-www"` (React based), `"scratchr2"` (jQuery based) or `n
     <td>Yes</td> 
   </tr>
 </table>
+
 If the tab is a project, it returns the viewing mode of the project: `"projectpage"`, `"editor"`, `"fullscreen"` or `"embed"`.  
 If not in a project, it will return `null`.
 
@@ -172,6 +173,115 @@ If the options object includes `{markAsSeen: true}`, the returned element will b
 
 Hides the given element with `display: none` when the addon is disabled. If the addon is enabled, it will set the display of the element to options.display which defaults as "".
 
+### addon.tab.copyImage
+<table>
+  <tr>
+    <td>Required manifest permissions</td>
+    <td><code>clipboardWrite</code></td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>dataURL</td>
+    <td><code>String</code></td>
+    <td>Yes</td>
+    <td>Data URL of a PNG image.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;void></code></td>
+  </tr>
+    <td>Promise rejects if</td>
+    <td>Image could not be copied.</td>
+</table>
+
+Copies a PNG image to the clipboard.  
+Only run this in response of the user explicitly pressing Ctrl+C.  
+Internally uses `browser.clipboard.setImageData` in Firefox and `navigator.clipboard.write` in Chrome.
+
+### addon.tab.scratchClass
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>unhashedClassName</td>
+    <td><code>String</code></td>
+    <td>Min 1</td>
+    <td>One or many unhashed Scratch stylesheet class names, as one argument each.</td>
+  </tr>
+  <tr>
+    <td>opts</td>
+    <td><code>Object</code></td>
+    <td>No</td>
+    <td>
+      <table>
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>others</td>
+          <td><code>String | String[]</code></td>
+          <td>Yes</td>
+          <td>Non-Scratch class(es) to merge</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>String</code></td>
+  </tr>
+</table>
+
+Gets the hashed class name for a Scratch stylesheet class name.
+
+### addon.tab.scratchMessage
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>key</td>
+    <td><code>String</code></td>
+    <td>Yes</td>
+    <td>The Scratch translation key.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>String | ""</code></td>
+  </tr>
+</table>
+
+Gets translation keys from the current Scratch tab.  
+If the message isn't found, `""` is returned and a warning is logged in the console.  
+Internally uses `window.django.gettext` or `window._messages`.  
+
 ## Events
 ### urlChange
 <table>
@@ -193,4 +303,4 @@ Hides the given element with `display: none` when the addon is disabled. If the 
 </table>
 
 Fires when Scratch dynamically changes the URL of the page. This usually happens when going inside/outside the editor, or into/outside full screen mode. This event does not trigger if the hash of the URL changes.  
-You can access `event.detail.oldUrl` and `event.detail.newUrl`
+You can access `event.detail.oldUrl` and `event.detail.newUrl`.
