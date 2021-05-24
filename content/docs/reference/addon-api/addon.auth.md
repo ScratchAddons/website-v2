@@ -4,8 +4,11 @@ description: Allows addons to get information about the current Scratch account 
 weight: 3
 ---
 
-**Available in persistent scripts.**  
-**Available in userscripts.**
+| | |
+|-|-|
+| Available in userscripts | ✔️ |
+| Available in persistent scripts | ✔️ |
+| Required manifest permissions | None |
 
 Allows addons to get information about the current Scratch account session.
 

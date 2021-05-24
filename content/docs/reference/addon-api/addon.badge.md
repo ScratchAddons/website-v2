@@ -6,9 +6,11 @@ weight: 7
 
 **Keep in mind: only one addon (currently `msg-count-badge`) can use the badge API.**
 
-**Available in persistent scripts.**  
-**NOT available in userscripts.**  
-**Required permissions: `badge`**  
+| | |
+|-|-|
+| Available in userscripts | ❌ |
+| Available in persistent scripts | ✔️ |
+| Required manifest permissions | `badge` |
 
 Allows addons to display a badge, a bit of text that is layered over the extension icon, frequently a number.
 

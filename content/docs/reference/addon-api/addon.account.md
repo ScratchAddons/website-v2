@@ -4,8 +4,11 @@ description: Allows addons to execute actions in the currently logged in Scratch
 weight: 4
 ---
 
-**Available in persistent scripts.**  
-**Available in userscripts.**
+| | |
+|-|-|
+| Available in userscripts | ✔️ |
+| Available in persistent scripts | ✔️ |
+| Required manifest permissions | None |
 
 Allows addons to execute actions in the currently logged in Scratch user.
 

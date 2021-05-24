@@ -4,8 +4,11 @@ description: Allows addon userscripts to get information about the tab they're c
 weight: 5
 ---
 
-**NOT available in persistent scripts.**  
-**Available in userscripts.**  
+| | |
+|-|-|
+| Available in userscripts | ✔️ |
+| Available in persistent scripts | ❌ |
+| Required manifest permissions | None |
 
 Allows addon userscripts to get information about the tab they're currently running on.
 

@@ -4,8 +4,11 @@ description: Allows addons to change their behavior according to user-specified 
 weight: 2
 ---
 
-**Available in persistent scripts.**  
-**Available in userscripts.**
+| | |
+|-|-|
+| Available in userscripts | ✔️ |
+| Available in persistent scripts | ✔️ |
+| Required manifest permissions | None |
 
 Allows addons to change their behavior according to user-specified addon settings.  
 This API is available even if an addon doesn't specify `settings` in its manifest, however all calls to `get()` will fail.
