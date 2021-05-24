@@ -19,7 +19,7 @@ Allows addons to get direct references to objects, which are particularly useful
 ### [addon.tab.redux](addon.tab.redux)
 TODO
 
-## Getters
+## Properties
 ### addon.tab.clientVersion
 Currently, the Scratch community website has 2 working clients used throughout the site, one React based and another jQuery based. This getter allows addons to change your behavior depending on the version of the current page.  
 Returns either `"scratch-www"` (React based), `"scratchr2"` (jQuery based) or `null`.

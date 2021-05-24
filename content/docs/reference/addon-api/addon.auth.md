@@ -13,7 +13,7 @@ weight: 3
 ## Description
 Allows addons to get information about the current Scratch account session.
 
-## Getters
+## Properties
 ### addon.auth.scratchLang (string)
 Returns the language code for the language choice the user has made in Scratch, for example. `"en"`.  
 Keep in mind that this property is unrelated from all the others - this getter is inside `addon.auth` because it involves reading Scratch cookies. The change of this value **will not** trigger a "change" event.
@@ -30,7 +30,7 @@ Returns the value of the `scratchcsrftoken` cookie.
 
 ## Events
 ### change
-Fires when any of the getters change (except scratchLang).  
+Fires when any of the properties change (except scratchLang).  
 #### Example:
 ```js
 addon.auth.addEventListener("change", function() {

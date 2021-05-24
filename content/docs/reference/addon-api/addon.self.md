@@ -13,7 +13,7 @@ weight: 1
 ## Description
 Allows addons to get information about themselves or the browser.
 
-## Getters
+## Properties
 ### addon.self.id (string)
 The ID of the addon, in other words, the name of the folder.
 ### addon.self.dir (string)
