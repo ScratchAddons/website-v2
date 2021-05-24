@@ -21,9 +21,31 @@ TODO
 
 ## Properties
 ### addon.tab.clientVersion
+<table>
+  <tr>
+    <td>Value</td>
+    <td><code>"scratch-www" | "scratchr2"</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>Yes</td> 
+  </tr>
+</table>
+
 Currently, the Scratch community website has 2 working clients used throughout the site, one React based and another jQuery based. This getter allows addons to change your behavior depending on the version of the current page.  
 Returns either `"scratch-www"` (React based), `"scratchr2"` (jQuery based) or `null`.
+
 ### addon.tab.editorMode
+<table>
+  <tr>
+    <td>Value</td>
+    <td><code>"projectpage" | "editor" | "fullscreen" | "embed"</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>Yes</td> 
+  </tr>
+</table>
 If the tab is a project, it returns the viewing mode of the project: `"projectpage"`, `"editor"`, `"fullscreen"` or `"embed"`.  
 If not in a project, it will return `null`.
 

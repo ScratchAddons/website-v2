@@ -14,13 +14,60 @@ weight: 1
 Allows addons to get information about themselves or the browser.
 
 ## Properties
-### addon.self.id (string)
+### addon.self.id
+<table>
+  <tr>
+    <td>Type</td>
+    <td><code>String</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>No</td> 
+  </tr>
+</table>
+
 The ID of the addon, in other words, the name of the folder.
-### addon.self.dir (string)
+
+### addon.self.dir
+<table>
+  <tr>
+    <td>Type</td>
+    <td><code>String</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>No</td> 
+  </tr>
+</table>
+
 The directory where the addon resides.
-### addon.self.browser (string)
+
+### addon.self.browser
+<table>
+  <tr>
+    <td>Value</td>
+    <td><code>"chrome" | "firefox"</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>No</td> 
+  </tr>
+</table>
+
 Returns either `chrome` or `firefox`, depending on the browser Scratch Addons is running at.
-### addon.self.enabledLate (boolean)
+
+### addon.self.enabledLate
+<table>
+  <tr>
+    <td>Type</td>
+    <td><code>Boolean</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>No</td> 
+  </tr>
+</table>
+
 Returns true if the addon was dynamically enabled. Otherwise, false.
 
 ## Events
