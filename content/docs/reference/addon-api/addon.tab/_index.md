@@ -13,6 +13,14 @@ weight: 5
 ## Description
 Allows addon userscripts to get information about the tab they're currently running on.
 
+## Examples
+### Reacting to URL dynamically changed
+```js
+addon.tab.addEventListener("urlChange", function(event) {
+  console.log(`URL changed! It was previously ${event.detail.oldUrl}, it's now ${event.detail.newUrl}`);
+});
+```
+
 ## Sub-APIs
 ### [addon.tab.traps](addon.tab.traps)
 Allows addons to get direct references to objects, which are particularly useful for enhancing the editor, like the Scratch VM or the Blockly instance.
@@ -186,9 +194,3 @@ Hides the given element with `display: none` when the addon is disabled. If the 
 
 Fires when Scratch dynamically changes the URL of the page. This usually happens when going inside/outside the editor, or into/outside full screen mode. This event does not trigger if the hash of the URL changes.  
 You can access `event.detail.oldUrl` and `event.detail.newUrl`
-#### Example:
-```js
-addon.tab.addEventListener("urlChange", function(event) {
-  console.log(`URL changed! It was previously ${event.detail.oldUrl}, it's now ${event.detail.newUrl}`);
-});
-```

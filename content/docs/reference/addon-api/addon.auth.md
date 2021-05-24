@@ -13,6 +13,14 @@ weight: 3
 ## Description
 Allows addons to get information about the current Scratch account session.
 
+## Examples
+### Reacting to auth info change
+```js
+addon.auth.addEventListener("change", function() {
+  console.log(addon.auth.isLoggedIn);
+});
+```
+
 ## Properties
 ### addon.auth.scratchLang
 <table>
@@ -101,10 +109,4 @@ Returns the value of the `scratchcsrftoken` cookie.
 
 ## Events
 ### change
-Fires when any of the properties change (except scratchLang).  
-#### Example:
-```js
-addon.auth.addEventListener("change", function() {
-  console.log(addon.auth.isLoggedIn);
-});
-```
+Fires when any of the properties change (except scratchLang).
