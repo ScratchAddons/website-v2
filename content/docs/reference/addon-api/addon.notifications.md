@@ -13,6 +13,37 @@ weight: 6
 ## Description
 Allows addons to create browser notifications. This API slightly differs from the `browser.notifications` API extensions can use.
 
+## Example
+### General example
+```js
+addon.notifications.create({
+  type: "basic",
+  title: "Hello from notification!",
+  iconUrl: "/images/icon.png",
+  message: "Hi!",
+  buttons: [
+    {
+      title: "Button 1",
+    },
+    {
+      title: "Button 2",
+    },
+  ],
+});
+
+addon.notifications.addEventListener("click", function(event) {
+  console.log("User clicked notification with ID " + event.detail.id);
+});
+addon.notifications.addEventListener("closed", function(event) {
+  console.log("User closed notification with ID " + event.detail.id);
+});
+addon.notifications.addEventListener("buttonclick", function(event) {
+  console.log(`User clicked button ${event.detail.buttonIndex} of notification ${event.detail.id}`);
+});
+
+```
+
+
 ## Properties
 ### addon.notifications.muted
 
@@ -53,10 +84,8 @@ Whether Scratch Addons is currently muted or not.
   </tr>
 </table>
 
-Returns a promise that resolves to the ID (string) of the created notification.  
-Shows a notification to the user according to the options object.  
-[Options object reference](https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/NotificationOptions).  
-Note: for your convenience, specifying `buttons` or `requireInteraction` throws on Firefox.
+Creates a notification.  
+The notification will not be created if Scratch Addons is muted.
 
 ### addon.notifications.update
 <table>
@@ -86,8 +115,8 @@ Note: for your convenience, specifying `buttons` or `requireInteraction` throws 
   </tr>
 </table>
 
-Returns a promise that resolves to `true` if succeeded, `false` if not.  
-Updates a notification, given its ID.
+Updates an existing notification, given its ID.  
+The returned promise resolves to a boolean that indicates whether the update succeeded.  
 
 ### addon.notifications.clear
 <table>
@@ -112,8 +141,8 @@ Updates a notification, given its ID.
   </tr>
 </table>
 
-Returns a promise that resolves to `true` if succeeded, `false` if not.  
-Clears a notification, given its ID.
+Clears an existing notification, given its ID.  
+The returned promise resolves to a boolean that indicates whether the clearing succeeded.
 
 ### addon.notifications.getAll
 <table>
@@ -122,7 +151,9 @@ Clears a notification, given its ID.
     <td><code>Object[]</code></td>
   </tr>
 </table>
-Returns a promise that resolves to all currently active notifications created by the addon.
+
+Gets all existing notifications for the addon.  
+Based on <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/getAll" target="_blank">browser.notifications.getAll()</a></code>.
 
 ## Events
 ### click
@@ -139,14 +170,7 @@ Returns a promise that resolves to all currently active notifications created by
   </tr>
 </table>
 
-Fires when any notification by the addon is clicked.  
-`event.detail.id` is provided, which specifies which notification has been clicked.
-#### Example:
-```js
-addon.notifications.addEventListener("click", function(event) {
-  console.log("User clicked notification with ID " + event.detail.id);
-});
-```
+Fires when any existing notification is clicked.
 
 ### close
 <table>
@@ -162,8 +186,7 @@ addon.notifications.addEventListener("click", function(event) {
   </tr>
 </table>
 
-Fires when any notification by the addon is clicked.  
-`event.detail.id` is provided, which specifies which notification has been closed.
+Fires when any existing notification is closed.
 
 ### buttonclick
 <table>
@@ -184,7 +207,5 @@ Fires when any notification by the addon is clicked.
   </tr>
 </table>
 
-Fires when a button inside a notification by the addon is clicked.  
-`event.detail.id` is provided, which specifies which notification received a button click.  
-`event.details.buttonIndex` returns the index of the button that was clicked (first button has index of 0).  
-Registering this event on Firefox won't throw.
+Fires when a notification button is clicked.  
+This will never fire in Firefox.
