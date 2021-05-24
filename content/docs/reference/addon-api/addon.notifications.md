@@ -13,6 +13,22 @@ weight: 6
 ## Description
 Allows addons to create browser notifications. This API slightly differs from the `browser.notifications` API extensions can use.
 
+## Properties
+### addon.notifications.muted
+
+<table>
+  <tr>
+    <td>Type</td>
+    <td><code>Boolean</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>No</td> 
+  </tr>
+</table>
+
+Whether Scratch Addons is currently muted or not.
+
 ## Methods
 ### addon.notifications.create
 <table>
