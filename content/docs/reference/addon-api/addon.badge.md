@@ -10,17 +10,17 @@ weight: 7
 | Available in persistent scripts | ✔️ |
 | Required manifest permissions | `badge` |
 
+> _**Note: currently only one addon (`msg-count-badge`) can use this API. Do not use it in your addon without discussing on GitHub first.**_
+
 ## Description
 Allows addons to display a badge, a bit of text that is layered over the extension icon, frequently a number.
 
-**Keep in mind: only one addon (currently `msg-count-badge`) can use the badge API.**
-
 ## Getters & setters
 ### addon.badge.text
-Allows addons to set the text on the badge.  
-Accepts numbers, which are automatically converted to strings.  
-`null` and `0` are considered as empty strings.  
-If the badge is set to an empty string, it won't be displayed.
+Text shown on the badge.  
+Numbers are automatically converted to strings.  
+If this is set to `""`, `null` or `0`, the badge will be hidden.
+
 ### addon.badge.color
-Allows addons to set the color of the badge.
+Color of the badge.  
 Accepts any CSS supported color.
