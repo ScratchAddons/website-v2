@@ -1,5 +1,5 @@
 ---
-title: addon.self
+title: addon.auth
 description: Allows addons to get information about the current Scratch account session.
 weight: 3
 ---
