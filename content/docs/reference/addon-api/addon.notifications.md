@@ -13,7 +13,7 @@ weight: 6
 ## Description
 Allows addons to create browser notifications. This API slightly differs from the `browser.notifications` API extensions can use.
 
-## Functions
+## Methods
 ### addon.notifications.create(optionsObject)
 Returns a promise that resolves to the ID (string) of the created notification.  
 Shows a notification to the user according to the options object.  

@@ -27,7 +27,7 @@ Returns either `"scratch-www"` (React based), `"scratchr2"` (jQuery based) or `n
 If the tab is a project, it returns the viewing mode of the project: `"projectpage"`, `"editor"`, `"fullscreen"` or `"embed"`.  
 If not in a project, it will return `null`.
 
-## Functions
+## Methods
 ### addon.tab.waitForElement(selector, optionalOptionsObject)
 **Since v1.4.0, this function does not react to attribute changes in the DOM. Please do not use this to react to attribute changes. You can still, however, match static attributes that stay the same since the element is created, until it is destroyed.**  
 Returns a promise that resolves to the found element when an element matching that selector is found.  

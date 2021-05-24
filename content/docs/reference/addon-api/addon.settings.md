@@ -14,7 +14,7 @@ weight: 2
 Allows addons to change their behavior according to user-specified addon settings.  
 This API is available even if an addon doesn't specify `settings` in its manifest, however all calls to `get()` will fail.
 
-## Functions
+## Methods
 ### addon.settings.get(optionIdString)
 Returns the user-specified value for that setting, or the default specified in the addon manifest if the user didn't specify a value by themselves.
 Throws if the specified setting ID wasn't declared inside `addon.json`.

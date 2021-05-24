@@ -13,7 +13,7 @@ weight: 4
 ## Description
 Allows addons to execute actions in the currently logged in Scratch user.
 
-## Functions
+## Methods
 ### getMsgCount()
 Returns a promise that resolves to an integer (the unread message count for the currently logged in user), or `null`.
 ### getMessages(opts)
