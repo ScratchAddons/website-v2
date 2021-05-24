@@ -47,10 +47,6 @@ addon.settings.addEventListener("change", function() {
     <td><code>String | Number | Boolean</code></td>
   </tr>
   <tr>
-    <td>Nullable</td>
-    <td>No</td>
-  </tr>
-  <tr>
     <td>Throws if</td>
     <td>The given setting ID wasn't declared in the addon manifest.</td> 
   </tr>
