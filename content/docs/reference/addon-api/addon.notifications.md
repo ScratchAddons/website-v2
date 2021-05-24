@@ -1,5 +1,5 @@
 ---
-title: addon.account
+title: addon.notifications
 description: Allows addons to create browser notifications. This API slightly differs from the browser.notifications API extensions can use.
 weight: 6
 ---
