@@ -171,6 +171,10 @@ article {
 			padding: 6px 13px;
 			border: 1px solid $bs-gray-300;
 		}
+
+		tr > th:empty {
+			display: none;
+		}
 	
 		tr {
 			border-top: 1px solid darken($bs-gray-300, 4%);
