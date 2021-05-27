@@ -59,7 +59,7 @@ Some extension features that are disabled by default might require other externa
 The Scratch website, as well as other software, might be able to know you are using Scratch Addons. They might also be able to read or deduce some of your addon settings.
 
 #### Websites other than Scratch
-Any websites you visit might be able to know whether Scratch Addons is installed in your browser. In the future, with the launch of new extension platform updates that let us limit what origins can access extension files, we expect this to change.
+If you use a Chromium-based browser such as Chrome, any websites you visit might be able to know whether Scratch Addons is installed in your browser. In the future, with the launch of new extension platform updates that let us limit what origins can access extension files, we expect this to change. This does not affect Firefox.
 
 ## Website
 "Website" refers to to the Scratch Addons website (<https://scratchaddons.com>). This is the website you're on right now.
