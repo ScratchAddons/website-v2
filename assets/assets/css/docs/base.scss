@@ -173,7 +173,9 @@ article {
 		}
 
 		tr > th:empty {
-			display: none;
+			border-color: transparent;
+			border-bottom-color: #dee2e6;
+			padding: 0;
 		}
 	
 		tr {
