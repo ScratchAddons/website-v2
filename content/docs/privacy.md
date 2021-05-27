@@ -56,7 +56,7 @@ By default, Scratch Addons only reaches 2 services automatically:
 Some extension features that are disabled by default might require other external services to function. In those cases, the description of the addon will mention the name and/or URL of the service. 
 
 #### Scratch website
-The Scratch website, as well as other software, might be able to know your are using Scratch Addons. They might also be able to read or deduce some of your addon settings.
+The Scratch website, as well as other software, might be able to know you are using Scratch Addons. They might also be able to read or deduce some of your addon settings.
 
 #### Websites other than Scratch
 Any websites you visit might be able to know whether Scratch Addons is installed in your browser. In the future, with the launch of new extension platform updates that let us limit what origins can access extension files, we expect this to change.
