@@ -21,11 +21,10 @@ How the Scratch Addons extension and website handle your data.
 ## Extension
 "Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) or [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/).  
 "The Scratch website" refers to <https://scratch.mit.edu> and all of its subdomains, such as <https://api.scratch.mit.edu> and <https://clouddata.scratch.mit.edu>.  
-"Other software" refers to software, such as browser extensions other than Scratch Addons, that are able to access information from the Scratch website on your device in a similar way Scratch Addons does it.
 
 #### Information stored temporarily
 We store some data on your device temporarily. This information is generated while the extension is running and cannot be recovered after your browser is restarted.  
-This data can only be accessed by the Scratch Addons extension on your device, and potentially other software.
+This data can only be accessed by the Scratch Addons extension on your device.
 
 Information stored temporarily might include:
 
@@ -36,7 +35,7 @@ Information stored temporarily might include:
 
 #### Information stored permanently
 We store some data locally on your device permanently. This information is still available even if your browser is restarted.  
-This data can only be accessed by the Scratch Addons extension on your device. However, the Scratch website and other software might be able to read or deduce some of it (for example, the Scratch website could potentially deduce you've enabled "website dark mode" if it detects the background color is black).
+This data can only be accessed by the Scratch Addons extension on your device.
 
 Information stored permanently might include:
 
@@ -56,10 +55,15 @@ By default, Scratch Addons only reaches 2 services automatically:
 Some extension features that are disabled by default might require other external services to function. In those cases, the description of the addon will mention the name and/or URL of the service. 
 
 #### Scratch website
-The Scratch website, as well as other software, might be able to know you are using Scratch Addons. They might also be able to read or deduce some of your addon settings.
+The Scratch website might be able to know you are using Scratch Addons. It might also be able to read or deduce some of your addon settings (for example, the Scratch website could know you've enabled "website dark mode" if it detects the background color is black).
 
 #### Websites other than Scratch
 If you use a Chromium-based browser such as Chrome, any websites you visit might be able to know whether Scratch Addons is installed in your browser. In the future, with the launch of new extension platform updates that let us limit what origins can access extension files, we expect this to change. This does not affect Firefox.
+
+#### Other software
+
+In case you use other extensions in your browser that can interact with the Scratch website, similarly to Scratch Addons, these extensions might be able to know everything the Scratch website itself could potentially know.  
+Malware running in your device could also potentially read any data stored by the Scratch Addons extension.
 
 ## Website
 "Website" refers to to the Scratch Addons website (<https://scratchaddons.com>). This is the website you're on right now.
