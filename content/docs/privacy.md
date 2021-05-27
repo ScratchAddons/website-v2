@@ -90,6 +90,10 @@ When using our website, third party services might be reached, such as:
 - [YouTube.com and fonts.googleapis.com](https://policies.google.com/privacy) (by Google)
 - [Glitch.com](https://glitch.com/legal/privacy) (when sending feedback)
 
+## Edit changelog
+
+- **May 27th 2021:** page created
+
 ## How to contact us
 
 If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback>. Make sure to fill out the "identifiers" field so that we can reply to your message.
