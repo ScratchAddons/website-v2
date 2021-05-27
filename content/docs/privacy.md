@@ -62,7 +62,7 @@ If you use a Chromium-based browser such as Chrome, any websites you visit might
 
 #### Other software
 
-In case you use other extensions in your browser that can interact with the Scratch website, similarly to Scratch Addons, these extensions might be able to know everything the Scratch website itself could potentially know.  
+In case you use other extensions in your browser that can interact with the Scratch website, similarly to Scratch Addons, these extensions might be able to know everything that the Scratch website itself could potentially know.  
 Malware running in your device could also potentially read any data stored by the Scratch Addons extension.
 
 ## Website
