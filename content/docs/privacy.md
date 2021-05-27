@@ -35,7 +35,7 @@ Information stored temporarily might include:
 
 #### Information stored permanently
 We store some data locally on your device permanently. This information is still available even if your browser is restarted.  
-This data can only be accessed by the Scratch Addons extension on your device.
+This data can only be accessed by the Scratch Addons extension on your browser.
 
 Information stored permanently might include:
 
