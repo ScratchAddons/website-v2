@@ -1,7 +1,7 @@
 ---
 title: Privacy Policies
-description: These pages includes our privacy policies, which includes how Scratch Addons handles your data.
+description: Our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and website.
 weight: 1
 ---
 
-These pages includes our privacy policies, which includes how Scratch Addons handles your data.
+Our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and website.
