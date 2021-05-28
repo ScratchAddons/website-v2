@@ -26,7 +26,7 @@ We use your data to provide and improve the website. By using the website, you a
   
   Your IP address isn't stored when sending feedback.
 
-## Cookies and local storage
+## Cookies and Local Storage
 
 We do not store cookies on your device.  
 We might, however, use local storage capabilities to store basic preferences such as whether dark mode is enabled on this website.
@@ -46,7 +46,7 @@ When sending feedback through <https://scratchaddons.com/feedback>, some data mi
 
 Feedback is sent to a public open source [Glitch.com Node.js server instance](https://glitch.com/edit/#!/scratchaddons-feedback) which then redirects the information to a [Discord](https://discord.com) server. We do not log the IP addresses of the users that send feedback, and you can verify that by looking at the Glitch server source code linked above.
 
-## Third parties
+## Third Parties
 
 When using our website, third party services might be reached, such as:
 - [Cloudflare](https://www.cloudflare.com/privacypolicy/) for website hosting
@@ -56,9 +56,13 @@ When using our website, third party services might be reached, such as:
 - [Google services](https://policies.google.com/privacy) such as YouTube and Google Fonts
 - [Glitch](https://glitch.com/legal/privacy) for sending feedback
 
-## Links to other websites
+## Links to Other Websites
 
 As part of the website, we may provide links to or compatibility with other websites or apps. We aren't responsible for the content on those sites or how they might use your data. This Privacy Policy is only about our website.
+
+## Changes to Our Privacy Policy
+
+We might change this policy at any time, but if we do, we will tell you. If we make substantial changes, they will take effect 30 days after we tell you. Small changes or clarifications will take effect immediately. You should periodically check the website and this page for updates.
 
 ## Contact
 

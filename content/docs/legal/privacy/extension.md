@@ -8,7 +8,7 @@ description: This page informs you of our policies regarding the collection, use
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 
-We use your data to provide and improve the extension. By using the extension, you agree to the collection and use of information in accordance with this policy.
+We use your data to provide and improve the service.By using the Service, you agree to the collection and use of information in accordance with this policy.
 
 "Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) or [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/).
 
@@ -26,7 +26,7 @@ We use your data to provide and improve the extension. By using the extension, y
 
   You need to opt-in to features if they require external services.
 
-## Temporarily-stored information 
+## Temporarily-Stored Information 
 
 We store some data on your device temporarily. This information is generated while the extension is running and cannot be recovered after your browser is restarted. 
 
@@ -39,7 +39,7 @@ Temporarily-stored information might include:
 - Value of your Scratch authentication token "X-Token".
 - Your most recent Scratch messages.
 
-## Permanently-stored information
+## Permanently-Stored Information
 
 We store some data locally on your device permanently. This information is still available even if your browser is restarted. 
 
@@ -56,7 +56,7 @@ The extension by itself does not send any of this information outside of your de
 
 However, if you enable Chrome Sync, Firefox Sync or any other compatible browser data synchronization feature, this information might be sent to that service by your browser.
 
-## Third parties
+## Third Parties
 
 By default, Scratch Addons only reaches 2 services automatically:
 1. The Scratch website (for example, to get your unread message count).
@@ -64,15 +64,15 @@ By default, Scratch Addons only reaches 2 services automatically:
 
 Some extension features that are disabled by default might require other external services to function. In those cases, the description of the addon will mention the name and/or URL of the service. 
 
-## Scratch website
+## Scratch Website
 
 The Scratch website might be able to know you are using Scratch Addons. It might also be able to read or deduce some of your addon settings (for example, the Scratch website could know you've enabled "website dark mode" if it detects the background color is black).
 
-## Websites other than Scratch
+## Websites Other than Scratch
 
 If you use a Chromium-based browser such as Chrome, any websites you visit might be able to know whether Scratch Addons is installed in your browser. In the future, with the launch of new extension platform updates that let us limit what origins can access extension files, we expect this to change. This does not affect Firefox.
 
-## Other software
+## Other Software
 
 In case you use other extensions in your browser that can interact with the Scratch website, similarly to Scratch Addons, these extensions might be able to know everything that the Scratch website itself could potentially know.
 
@@ -80,4 +80,4 @@ Any malware running in your device could also potentially read any data stored b
 
 ## Contact
 
-If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback> (make sure to fill out the "identifiers" field so that we can reply to your message) or emailing `worldxlanguages (at) gmail.com`.
+If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback>. Make sure to fill out the "identifiers" field so that we can reply to your message.
