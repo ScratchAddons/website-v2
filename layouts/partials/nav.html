@@ -14,7 +14,7 @@
 		<div class="collapse navbar-collapse" id="navbar-collapsible">
 			<ul class="navbar-nav ml-md-auto">
 				{{ if .IsTranslated -}}
-					<li class="nav-item dropdown"><div data-nosnippet></div>
+					<li class="nav-item dropdown"><div data-nosnippet>
 						<a class="nav-link dropdown-toggle" href="#" id="navbar-languages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Site.Language.LanguageName }}</a>
 						<div class="dropdown-menu" aria-labelledby="navbar-languages">
 							{{- range .Translations -}}
