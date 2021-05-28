@@ -1,10 +1,14 @@
 ---
 title: Chrome Web Store Privacy Information
+description: This is how we fill the "privacy practices" form on the Chrome Web Store Developer Dashboard.
 weight: 100
 aliases:
   - /docs/chrome-web-store-privacy-information
   - /docs/privacy/chrome-web-store-privacy-information
 ---
+
+This is how we fill the "privacy practices" form on the Chrome Web Store Developer Dashboard.
+
 ## Single purpose
 Allows users to customize their experience on the Scratch website (scratch.mit.edu) by providing previously unavailable features - including many related to reading and replying of Scratch messages/notifications. This extension makes use of the "Scratch API" (api.scratch.mit.edu).
 
