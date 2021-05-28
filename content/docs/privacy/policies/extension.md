@@ -82,7 +82,7 @@ Any malware running in your device could also potentially read any data stored b
 
 ## Contact
 
-If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback> (make sure to fill out the "identifiers" field so that we can reply to your message) or emailing `worldxlanguages (at) gmail.com`.
+If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback> (make sure to fill out the "identifiers" field so that we can reply to your message) or email `worldxlanguages (at) gmail.com`.
 
 ## Extension Privacy Policy Changelog
 

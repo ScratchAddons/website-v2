@@ -62,7 +62,7 @@ As part of the website, we may provide links to or compatibility with other webs
 
 ## Contact
 
-If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback> (make sure to fill out the "identifiers" field so that we can reply to your message) or emailing `worldxlanguages (at) gmail.com`.
+If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback> (make sure to fill out the "identifiers" field so that we can reply to your message) or email `worldxlanguages (at) gmail.com`.
 
 ## Website Privacy Policy Changelog
 
