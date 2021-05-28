@@ -3,8 +3,6 @@ title: Send Feedback
 description: Send feedback to Scratch Addons developers.
 ---
 
-<script defer src="/assets/js/feedback.js"></script>
-
 <h1>Send Feedback</h1>
 
 <div class="container">
@@ -12,18 +10,8 @@ description: Send feedback to Scratch Addons developers.
 		<div class="col-12 col-xl-9 mb-4 mb-xl-0">
 			<p>Have something to say about Scratch Addons? Let us know through this feedback form.</p>
 			<hr />
-			<div id="feedback-status" class="alert" role="alert" hidden></div>
-			<form id="feedback-form">
-				<div class="form-group mb-3">
-					<label for="feedback-username">Scratch username, or other identifiers (optional)</label>
-					<input type="text" class="form-control" id="feedback-username" placeholder="ScratchCat" maxlength="150">
-				</div>
-				<div class="form-group">
-					<label for="feedback-content">Feedback</label>
-					<textarea type="text" class="form-control" id="feedback-content" placeholder="Please provide as much detail as you can." maxlength="1500" minlength="2" autofocus required></textarea>
-				</div>
-				<button class="btn btn-primary" id="feedback-submit">Send</a>
-			</form>	
+			{{< specifics/feedback-form >}}
+
 		</div>
 		<div class="col-12 col-xl-3">
 			<h2>Alternatives</h2>

@@ -1,0 +1,21 @@
+<script>
+	window.i18nStrings = {
+		statusSending: '{{ T "FeedbackPage.Status.Sending" }}',
+		statusSuccess: '{{ T "FeedbackPage.Status.Success" }}',
+		statusFailed: '{{ T "FeedbackPage.Status.Failed" }}'
+	}
+</script>
+<script defer src="/assets/js/feedback.js"></script>
+
+<div id="feedback-status" class="alert" role="alert" hidden></div>
+<form id="feedback-form">
+	<div class="form-group mb-3">
+		<label for="feedback-username">{{ T "FeedbackPage.UsernameLabel" }}</label>
+		<input type="text" class="form-control" id="feedback-username" placeholder="ScratchCat" maxlength="150">
+	</div>
+	<div class="form-group">
+		<label for="feedback-content">{{ T "FeedbackPage.ContentLabel" }}</label>
+		<textarea type="text" class="form-control" id="feedback-content" placeholder='{{ T "FeedbackPage.ContentPlaceholder" }}' maxlength="1500" minlength="2" autofocus required></textarea>
+	</div>
+	<button class="btn btn-primary" id="feedback-submit">{{ T "FeedbackPage.SubmitButton" }}</a>
+</form>	
