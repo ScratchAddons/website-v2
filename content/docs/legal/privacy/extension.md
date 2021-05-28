@@ -4,7 +4,7 @@ toc_title: Extension
 description: This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 ---
 
-> Effective date: 1 June 2021
+> Effective date: 28 May 2021
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 
@@ -81,3 +81,7 @@ Any malware running in your device could also potentially read any data stored b
 ## Contact
 
 If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback> (make sure to fill out the "identifiers" field so that we can reply to your message) or emailing `worldxlanguages (at) gmail.com`.
+
+## Privacy Policy Changelog
+
+- **28 May 2021:** created

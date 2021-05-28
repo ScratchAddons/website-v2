@@ -4,7 +4,7 @@ toc_title: Website
 description: This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons website and the choices you have associated with that data.
 ---
 
-> Effective date: 1 June 2021
+> Effective date: 28 May 2021
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons website (<https://scratchaddons.com>) and the choices you have associated with that data.
 
@@ -60,10 +60,10 @@ When using our website, third party services might be reached, such as:
 
 As part of the website, we may provide links to or compatibility with other websites or apps. We aren't responsible for the content on those sites or how they might use your data. This Privacy Policy is only about our website.
 
-## Changes to Our Privacy Policy
-
-We might change this policy at any time, but if we do, we will tell you. If we make substantial changes, they will take effect 30 days after we tell you. Small changes or clarifications will take effect immediately. You should periodically check the website and this page for updates.
-
 ## Contact
 
 If you have any questions, please contact us through our feedback page at <https://scratchaddons.com/feedback> (make sure to fill out the "identifiers" field so that we can reply to your message) or emailing `worldxlanguages (at) gmail.com`.
+
+## Privacy Policy Changelog
+
+- **28 May 2021:** created
