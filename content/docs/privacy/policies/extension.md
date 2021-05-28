@@ -4,7 +4,7 @@ toc_title: Extension
 description: This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 ---
 
-> Effective date: 28 May 2021
+> Last updated: 28 May 2021
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 
