@@ -93,7 +93,7 @@ $(() => {
     
         detectEngineElement.type = "module"
         detectEngineElement.innerHTML = `
-        import bowser from 'https://cdn.skypack.dev/bowser'
+        import bowser from 'https://cdn.jsdelivr.net/npm/bowser/+esm'
     
         localStorage.setItem("browserEngine", bowser.getParser(navigator.userAgent).parsedResult.engine.name)
     
