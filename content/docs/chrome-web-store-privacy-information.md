@@ -1,8 +1,5 @@
 ---
 title: Chrome Web Store Privacy Information
-aliases:
-  - /docs/chrome-web-store-privacy-information
-  - /docs/privacy/chrome-web-store-privacy-information
 weight: 100
 ---
 ## Single purpose
