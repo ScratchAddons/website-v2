@@ -1,5 +1,5 @@
 ---
-title: Privacy Policy
+title: Privacy Policies
 description: These pages includes our privacy policies, which includes how Scratch Addons handles your data.
 weight: 1
 ---

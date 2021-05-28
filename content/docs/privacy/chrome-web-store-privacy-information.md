@@ -4,7 +4,6 @@ description: This is how we fill the "privacy practices" form on the Chrome Web 
 weight: 100
 aliases:
   - /docs/chrome-web-store-privacy-information
-  - /docs/privacy/chrome-web-store-privacy-information
 ---
 
 This is how we fill the "privacy practices" form on the Chrome Web Store Developer Dashboard.
