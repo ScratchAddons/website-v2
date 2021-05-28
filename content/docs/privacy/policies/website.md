@@ -16,7 +16,7 @@ We use your data to provide and improve the website. By using the website, you a
 
 - **We do not use cookies.**
   
-  Local storage is used to store basic preferences such as whether dark mode is enabled.
+  Local storage is used to store basic preferences, such as whether dark mode is enabled.
 
 - **We track trends in website traffic, without tracking individual visitors.**
   
@@ -29,7 +29,7 @@ We use your data to provide and improve the website. By using the website, you a
 ## Cookies and Local Storage
 
 We do not store cookies on your device.  
-We might, however, use local storage capabilities to store basic preferences such as whether dark mode is enabled on this website.
+We might, however, use local storage capabilities to store basic preferences, such as whether dark mode is enabled on this website.
 
 ## Analytics
 
