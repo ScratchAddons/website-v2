@@ -37,7 +37,7 @@ We use a self-hosted Plausible Analytics instance routed through our analytics s
 
 ## Feedback
 
-When sending feedback through <https://scratchaddons.com/feedback>, some data might be included in the request, such as:
+When sending feedback through <https://scratchaddons.com/feedback>, some data included in the request is:
 
 - Text written in the "identifiers" field, if any.
 - Text written in "feedback" field.
