@@ -8,7 +8,7 @@ description: This page informs you of our policies regarding the collection, use
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 
-We use your data to provide and improve the service.By using the Service, you agree to the collection and use of information in accordance with this policy.
+We use your data to provide and improve the service. By using the Service, you agree to the collection and use of information in accordance with this policy.
 
 "Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) or [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/).
 
