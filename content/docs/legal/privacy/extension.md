@@ -1,26 +1,18 @@
 ---
-title: Privacy
-description: How the Scratch Addons extension and website handle your data.
+title: Extension Privacy Policy
+toc_title: Extension
+description: This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 ---
 
 > _**Last update: May 27th 2021**_
 
-How the Scratch Addons extension and website handle your data.
+"Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) or [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/).  
+"The Scratch website" refers to <https://scratch.mit.edu> and all of its subdomains, such as <https://api.scratch.mit.edu> and <https://clouddata.scratch.mit.edu>.  
 
 ## Summary
-#### Extension
 - **We do not track extension usage at all.** We don't know how many users have enabled the pause button or turned on light mode.  
 - **We never send Scratch account information or extension settings outside of your browser.**
 - **By default, the extension only interacts with the Scratch website and this website.** You need to opt-in to features if they require external services.
-
-#### Website
-- **We do not use cookies.** Local storage is used to store basic preferences such as whether dark mode is enabled.
-- **We track trends in website traffic, without tracking individual visitors.** We do not collect any personally identifiable information. You can see the same data we can see on the [public analytics dashboard](https://analytics.scratchaddons.com).  
-- **You can send feedback anonymously.** Your IP address isn't stored when sending feedback.
-
-## Extension
-"Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) or [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/).  
-"The Scratch website" refers to <https://scratch.mit.edu> and all of its subdomains, such as <https://api.scratch.mit.edu> and <https://clouddata.scratch.mit.edu>.  
 
 #### Information stored temporarily
 We store some data on your device temporarily. This information is generated while the extension is running and cannot be recovered after your browser is restarted.  
