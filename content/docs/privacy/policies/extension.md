@@ -22,7 +22,7 @@ We use your data to provide and improve the service. By using the Service, you a
 
 - **We never send Scratch account information or extension settings outside of your browser.**
 
-  Extension settings only leave your device if you enabled Chrome/Firefox Sync.
+  Extension settings only leave your device if you've enabled Chrome/Firefox Sync.
 
 - **By default, the extension only interacts with the Scratch website and this website.**
 
