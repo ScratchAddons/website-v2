@@ -1,0 +1,48 @@
+{{ range sort $.Site.Data.changelog "Index" "desc" }}
+<section id="{{ .Version }}" class="mt-3">
+	<h2>{{ .Name }} <small class="text-muted"><time>{{ .Date }}</time></small></h2>
+	{{ if isset . "Highlights" }}
+		<div class="card mb-3 changelog-entry">
+			{{ if isset .Highlights "ImagePath" }}
+			<div class="row no-gutters align-items-center">
+				<div class="col-md-3 align-middle d-flex align-items-center">
+					<img src="{{ .Highlights.ImagePath }}" class="card-img" />
+				</div>
+				<div class="col-md-9">
+					<div class="card-body">
+						<div class="changelog-highlights-title">
+							<h4 class="card-title">Highlights</h4>
+						</div>
+						<div class="changelog-highlights-description">
+							{{ .Highlights.Description | markdownify }}
+						</div>
+					</div>
+				</div>
+			</div>
+			{{ else }}
+			<div class="card-body">
+				<div class="changelog-highlights-title">
+					<h4 class="card-title">Highlights</h4>
+				</div>
+				<div class="changelog-highlights-description">
+					{{ .Highlights.Description | markdownify }}
+				</div>
+			</div>
+			{{ end }}
+		</div>
+	{{ end }}
+	<div class="changelog-entry mb-3">
+		{{ .Entry | markdownify }}
+	</div>
+	<div class="changelog-links">
+		<h3>Links</h3>
+		<ul>
+			<li><a href='https://github.com/ScratchAddons/ScratchAddons/releases/tag/{{ .Tag }}'>Release page on GitHub</a></li>
+			<li><a href='https://github.com/ScratchAddons/ScratchAddons/tree/{{ .Tag }}'>Repository state on release</a></li>
+			{{ if gt .Index 1 }}
+			<li><a href='https://github.com/ScratchAddons/ScratchAddons/compare/{{ index ( index $.Site.Data.changelog ( sub .Index 2 ) ) "Tag" }}...{{ .Tag }}'>Commits made on the version</a></li>
+			{{ end }}
+		</ul>	
+	</div>
+</section>
+{{ end }}
