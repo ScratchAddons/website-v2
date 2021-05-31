@@ -171,26 +171,34 @@ window.i18nStrings = {
 		{{- .Scratch.Add "open_tag_1" "' class='white-underline'>" }}
 		{{- T "IndexPage.Highlights.Paragraph" ( dict "OpenTag1" ( .Scratch.Get "open_tag_1" ) "CloseTag1" "</a>" )  | safeHTML -}}
 	</p>
-	<div class="container card-columns">
-		<div class="card">
-			<img src="/assets/img/addons/scratch-messaging.png" class="card-img-top" alt="Scratch Messaging">
-			<div class="card-body">
-				<h5 class="card-title">{{ T "IndexPage.Highlights.ScratchMessagingHeading" }}</h5>
-				<p class="card-text">{{ T "IndexPage.Highlights.ScratchMessagingParagraph" }}</p>
+	<div class="container">
+		<div class="row row-cols-1 row-cols-lg-3 mx-0">
+			<div class="col mb-2 px-0 px-lg-1">
+				<div class="card">
+					<img src="/assets/img/addons/scratch-messaging.png" class="card-img-top" alt="Scratch Messaging">
+					<div class="card-body">
+						<h5 class="card-title">{{ T "IndexPage.Highlights.ScratchMessagingHeading" }}</h5>
+						<p class="card-text">{{ T "IndexPage.Highlights.ScratchMessagingParagraph" }}</p>
+					</div>
+				</div>	
 			</div>
-		</div>
-		<div class="card">
-			<img src="/assets/img/addons/scratch-notifier.png" class="card-img-top" alt="Scratch Notifier">
-			<div class="card-body">
-				<h5 class="card-title">{{ T "IndexPage.Highlights.ScratchNotifierHeading" }}</h5>
-				<p class="card-text">{{ T "IndexPage.Highlights.ScratchNotifierParagraph" }}</p>
+			<div class="col mb-2 px-0 px-lg-1">
+				<div class="card">
+					<img src="/assets/img/addons/scratch-notifier.png" class="card-img-top" alt="Scratch Notifier">
+					<div class="card-body">
+						<h5 class="card-title">{{ T "IndexPage.Highlights.ScratchNotifierHeading" }}</h5>
+						<p class="card-text">{{ T "IndexPage.Highlights.ScratchNotifierParagraph" }}</p>
+					</div>
+				</div>	
 			</div>
-		</div>
-		<div class="card mb-0">
-			<img src="/assets/img/addons/editor-devtools.png" class="card-img-top" alt="Developer tools">
-			<div class="card-body">
-				<h5 class="card-title">{{ T "IndexPage.Highlights.DeveloperToolsHeading" }}</h5>
-				<p class="card-text">{{- T "IndexPage.Highlights.DeveloperToolsParagraph" ( dict "OpenTag1" "<a href='https://sites.google.com/griffpatch.co.uk/griffpatch/home#h.p_szAG86nTECU_' rel='noopener'>" "CloseTag1" "</a>" )  | safeHTML -}}</p>
+			<div class="col px-0 px-lg-1">
+				<div class="card mb-0">
+					<img src="/assets/img/addons/editor-devtools.png" class="card-img-top" alt="Developer tools">
+					<div class="card-body">
+						<h5 class="card-title">{{ T "IndexPage.Highlights.DeveloperToolsHeading" }}</h5>
+						<p class="card-text">{{- T "IndexPage.Highlights.DeveloperToolsParagraph" ( dict "OpenTag1" "<a href='https://sites.google.com/griffpatch.co.uk/griffpatch/home#h.p_szAG86nTECU_' rel='noopener'>" "CloseTag1" "</a>" )  | safeHTML -}}</p>
+					</div>
+				</div>	
 			</div>
 		</div>
 	</div>
