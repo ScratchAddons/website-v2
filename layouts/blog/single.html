@@ -1,6 +1,33 @@
-{{ define "article" }}
+{{ define "main" }}
 
-	<h1>{{ .Title }}</h1>
-	{{ .Content }}	
+<article class="content" itemscope itemtype="http://schema.org/BlogPosting">
+
+	<header id="intro" class="intro-heading post-header">
+		<h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
+		<p>
+			<span class="mx-1">
+				<span class="iconify" data-icon="bi:calendar-fill"></span>
+				<time class="post-date-published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}' itemprop="datePublished">
+					{{ .Date.Format "02 January 2006" }}
+				</time>
+			</span>
+			•
+			<span class="mx-1">
+				<span class="iconify" data-icon="bi:person-circle"></span>
+				{{ .Params.author }}
+			</span>
+			•
+			<span class="mx-1">
+				<span class="iconify" data-icon="bi:clock-fill"></span>
+				{{ .ReadingTime }} minutes
+			</span>
+		</p>
+	</header>
+
+	<div class="container" itemprop="articleBody">
+		{{ .Content }}
+	</div>
+
+</article>
 
 {{ end }}	
