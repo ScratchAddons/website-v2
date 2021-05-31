@@ -401,7 +401,7 @@ body.extension-styled {
 		font-size-adjust: 0.5
 	}
 
-	header {
+	> header {
 		padding-top: 1.4px;
 		padding-bottom: 1.4px;
 	}
@@ -434,7 +434,7 @@ body.extension-styled {
 
 body.dark.extension-styled {
 
-	header {
+	> header {
 		img {
 			transform: scale(1.75);
 		}
