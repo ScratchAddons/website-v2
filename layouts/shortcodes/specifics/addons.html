@@ -20,7 +20,9 @@
 	{{ range ( index $.Site.Data.addons $.Page.Language.Lang ) }}
 		<div class="card {{ range .tags }} tag-{{ . }}{{ end }}" id="addon-{{ .id }}">
 			{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
-				<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+				<div class="card-img-wrapper">
+					<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+				</div>
 			{{- end }}
 			<div class="card-body">
 				<h5 class="card-title">

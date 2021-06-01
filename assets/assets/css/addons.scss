@@ -7,30 +7,58 @@
     .card {
         display: flex;
         flex-direction: row-reverse;
-
-        .card-img-top {
-            height: 150px;
-            width: 200px;
-            border-top-left-radius: 0;
-            border-bottom-right-radius: calc(.25rem - 1px);
-            margin-top: auto inherit;
-
-            @media (max-width: $bs-breakpoint-md - 0.02px) {
-                display: none
-            }
-        }
     }
+
+	.card-img-top {
+		border-top-left-radius: 0;
+		border-bottom-right-radius: calc(.25rem - 1px);
+		margin-top: auto inherit;
+
+		@media (max-width: $bs-breakpoint-md - 0.02px) {
+			display: none
+		}
+
+	}
 
     .card-body {
         display: flex;
         flex-direction: column;
         justify-content: center;
+		flex-shrink: 1000;
     }
+
+	.card-img-wrapper, .card-img-top {
+		width: 200px;
+		height: 150px;
+	}
+
+	// .card-img-wrapper {
+	// 	position: static;
+	// }
 
 }
 
 .card-columns:not([data-show-easter-egg="true"]) .card.tag-easterEgg {
 	display: none;
+}
+
+.card-img-wrapper {
+	position: relative;
+
+	&:before {
+		display: block;
+		content: "";
+		width: 100%;
+		padding-top: (3 / 4) * 100%;
+	}
+
+	> .card-img-top {
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+	}
 }
 
 .lds-ellipsis {
