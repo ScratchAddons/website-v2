@@ -33,9 +33,11 @@ By itself, Scratch Addons is just an addon loader. Its main tasks are:
 - Avoid addons from interfering with each other.
 - Avoid duplicate work from different addons.
 
-### Is Scratch Addons safe? How can I report a security vulnerability?
+### Is Scratch Addons safe? 
 
-Scratch Addons should not have any security issues/vulnerability in its most recent version, found in the Chrome Web Store and addons.mozilla.org. They have been verified by reviewers on contributors of Scratch Addons and by the extension stores.
+Yes. Scratch Addons should not have any security issues/vulnerability in its most recent version, found in the Chrome Web Store and addons.mozilla.org. They have been verified by reviewers on contributors of Scratch Addons and by the extension stores.
+
+### How can I report a security vulnerability?
 
 If you happen to find a security vulnerability please contact World_Languages privately by emailing `worldxlanguages (at) gmail.com`. If you don't get a response within 48 hours, please create an issue [here](https://github.com/ScratchAddons/ScratchAddons/issues/).
 
