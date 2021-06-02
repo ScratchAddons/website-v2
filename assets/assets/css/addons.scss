@@ -13,11 +13,6 @@
 		border-top-left-radius: 0;
 		border-bottom-right-radius: calc(.25rem - 1px);
 		margin-top: auto inherit;
-
-		@media (max-width: $bs-breakpoint-md - 0.02px) {
-			display: none
-		}
-
 	}
 
     .card-body {
@@ -30,11 +25,14 @@
 	.card-img-wrapper, .card-img-top {
 		width: 200px;
 		height: 150px;
+
 	}
 
-	// .card-img-wrapper {
-	// 	position: static;
-	// }
+	.card-img-wrapper {
+		@media (max-width: $bs-breakpoint-md - 0.02px) {
+			display: none
+		}
+	}
 
 }
 
