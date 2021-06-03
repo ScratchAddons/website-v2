@@ -48,8 +48,7 @@ jobs:
       - name: Execute preparation script
         run: | 
           cd repo
-          npm install --prefix ../script
-          node ../script/node/ci/hugo-add-i18n.js
+          bash ../script/sh/hugo-deploy-site.sh
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
