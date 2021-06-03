@@ -6,7 +6,7 @@
 			{{ if isset .Highlights "ImagePath" }}
 			<div class="row no-gutters align-items-center">
 				<div class="col-md-3 align-middle d-flex align-items-center">
-					<img src="{{ .Highlights.ImagePath }}" class="card-img" />
+					<img src="{{ .Highlights.ImagePath }}" {{ if isset .Highlights "ImageAlt" }}alt='{{ .Highlights.ImageAlt }}'{{ end }} class="card-img" />
 				</div>
 				<div class="col-md-9">
 					<div class="card-body">
