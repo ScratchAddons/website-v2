@@ -9,15 +9,15 @@ const types = {
 	},
 	blog: {
 		symbol: '📝',
-		description: 'Blogposts',
+		description: 'Blog Posts',
 	},
 	bug: {
 		symbol: '🐛',
-		description: 'Bug reports',
+		description: 'Bug Reports',
 	},
 	business: {
 		symbol: '💼',
-		description: 'Business development',
+		description: 'Business Development',
 	},
 	code: {
 		symbol: '💻',
@@ -57,11 +57,11 @@ const types = {
 	},
 	ideas: {
 		symbol: '🤔',
-		description: 'Ideas, Planning, & Feedback',
+		description: 'Ideas, Planning, and Feedback',
 	},
 	infra: {
 		symbol: '🚇',
-		description: 'Infrastructure (Hosting, Build-Tools, etc)',
+		description: 'Infrastructure',
 	},
 	maintenance: {
 		symbol: '🚧',
@@ -73,11 +73,11 @@ const types = {
 	},
 	platform: {
 		symbol: '📦',
-		description: 'Packaging/porting to new platform',
+		description: 'Packaging',
 	},
 	plugin: {
 		symbol: '🔌',
-		description: 'Plugin/utility libraries',
+		description: 'Plugin/Utility Libraries',
 	},
 	projectManagement: {
 		symbol: '📆',
@@ -85,11 +85,11 @@ const types = {
 	},
 	question: {
 		symbol: '💬',
-		description: 'Answering Questions',
+		description: 'Questions Answerer',
 	},
 	review: {
 		symbol: '👀',
-		description: 'Reviewed Pull Requests',
+		description: 'Pull Request Reviewer',
 	},
 	security: {
 		symbol: '🛡️',
