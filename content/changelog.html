@@ -12,3 +12,11 @@ description: All notable changes to this project will be documented in this page
 
 	{{< specifics/changelog >}}
 </div>
+
+<script>
+	let params = new URLSearchParams(location.search)
+	if (params.has("versionname")) {
+		let ver = params.get("versionname").replace("-notif", "")
+		if (document.getElementById(ver)) document.getElementById(ver).scrollIntoView()
+	}
+</script>
