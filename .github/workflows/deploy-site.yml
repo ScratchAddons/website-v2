@@ -61,7 +61,7 @@ jobs:
       - name: Build site
         run: |
           cd repo
-          hugo --gc --minify
+          hugo --gc --minify --config config.yml,config-prod.yml
 
       - name: Generate token 
         uses: tibdex/github-app-token@v1

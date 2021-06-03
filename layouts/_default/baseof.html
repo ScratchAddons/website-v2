@@ -5,18 +5,19 @@
 <head>
 
 {{ partial "head" . }}
+{{ block "head-extra" . }}{{ end }}
 
 </head>
 
 <body>
 
-{{ partial "nav" . }}
+{{ partialCached "nav" . .Site.Language.Lang }}
 
 <main>
 	{{ block "main" . }}{{ end }}
 </main>
 
-{{ partial "footer" . }}
+{{ partialCached "footer" . .Site.Language.Lang }}
 
 </body>
 

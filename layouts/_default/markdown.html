@@ -1,7 +1,11 @@
-{{ define "main" }}
+{{ define "head-extra" -}}
 
-	{{ $style := resources.Get "assets/css/markdown.scss" | resources.ToCSS }}
+	{{ $style := resources.Get "assets/css/markdown.scss" | resources.ToCSS -}}
 	<link rel="stylesheet" href="{{ $style.Permalink }}" />
+
+{{- end }}
+
+{{ define "main" }}
 
 	<h1>{{ .Title }}</h1>
 	<div class="container">{{ .Content }}</div>

@@ -12,15 +12,15 @@
 
 <body>
 
-{{ partial "nav" . }}
+{{ partialCached "nav" . .Site.Language.Lang }}
 
-{{- partial "docs/sidebar-toggle" . -}}
+{{ partialCached "docs/sidebar-toggle" . .Site.Language.Lang }}
 
 <main>
 	{{ block "main" . }}{{ end }}
 </main>
 
-{{ partial "footer" . }}
+{{ partialCached "footer" . .Site.Language.Lang }}
 
 </body>
 
@@ -35,7 +35,7 @@
 		<aside class="docs-pages col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id="docs-pages">
 			<!-- d-none  -->
 			<!-- px-2 py-4 -->
-			{{- partial "docs/sidebar" . -}}
+			{{ partial "docs/sidebar" . }}
 		</aside>
 	
 		<article class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
@@ -44,7 +44,7 @@
 
 			<hr />
 
-			{{- partial "docs/footnote" . -}}
+			{{ partial "docs/footnote" . }}
 
 		</article>
 

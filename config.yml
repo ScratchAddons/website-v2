@@ -44,8 +44,6 @@ minify:
 
 enableGitInfo: true
 
-refLinksErrorLevel: WARNING
-
 defaultContentLanguage: en
 # enableMissingTranslationPlaceholders: true
 languages:

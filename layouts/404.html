@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+
+{{ partialCached "head-404" . .Site.Language.Lang }}
+
+</head>
+
+<body>
+
+{{ partialCached "nav" . .Site.Language.Lang }}
+
+<main>
+	{{ block "main" . }}{{ end }}
+</main>
+
+{{ partialCached "footer" . .Site.Language.Lang }}
+
+</body>
+
+</html>
+
 {{ define "main" }}
 
 <h1>404</h1>
@@ -13,22 +37,6 @@
 </div>
 
 <script>
-	let pageTitle = '404'
-	let pageDescription = "Sorry! That page doesn't exist!"
-
-	document.querySelectorAll("title").forEach(element => {
-		element.textContent = element.textContent.replace("404 Page not found", pageTitle)
-	})
-	document.querySelectorAll("meta[content^='404 Page not found']").forEach(element => {
-		element.content = element.content.replace("404 Page not found", pageTitle)
-	})
-	document.querySelectorAll("meta[name$='description']").forEach(element => {
-		element.content = pageDescription
-	})
-	document.querySelectorAll("meta[property$='description']").forEach(element => {
-		element.content = pageDescription
-	})
-
 	plausible("404",{ props: { path: document.location.pathname } });
 </script>
 
