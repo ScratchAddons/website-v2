@@ -7,7 +7,7 @@ aliases:
   - /docs/frequently-asked-questions
 ---
 
-<!-- <script defer src="/assets/js/faq.js"></script> -->
+<script defer src="/assets/js/faq.js"></script>
 
 This page lists frequently asked questions related to the Scratch Addons extension and project.
 
