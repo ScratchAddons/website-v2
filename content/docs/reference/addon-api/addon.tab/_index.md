@@ -103,6 +103,20 @@ The Scratch community website has 2 working clients used throughout the site.
 The current viewing mode for the project (`projectpage`, `editor`, `fullscreen` or `embed`).  
 Will be `null` if the current tab is not a project.
 
+### addon.tab.direction
+<table>
+  <tr>
+    <td>Value</td>
+    <td><code>"ltr" | "rtl"</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>No</td> 
+  </tr>
+</table>
+
+The writing direction for the language of the Scratch website.
+
 ## Methods
 ### addon.tab.waitForElement
 <table>
