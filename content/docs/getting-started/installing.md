@@ -5,9 +5,9 @@ weight: 2
 
 ## From extension stores
 
-Scratch Addons is available in both Chrome Web Store and Firefox Add-ons.
+Scratch Addons is available in both Chrome Web Store and Add-ons for Firefox.
 
-- Chrome Web Store (for Google Chrome, Opera, Brave, Vivaldi, Microsoft Edge Chromium (>79), and other Chromium-based browsers)  
+- Chrome Web Store (for Google Chrome, Opera, Brave, Vivaldi, Microsoft Edge (>79), and other Chromium-based browsers)  
   https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco  
 - Add-ons for Firefox (for Mozilla Firefox)  
   https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/  
@@ -15,22 +15,23 @@ Scratch Addons is available in both Chrome Web Store and Firefox Add-ons.
 
 ## From source
 
+### About GitHub releases
+
+[The releases page](https://github.com/ScratchAddons/ScratchAddons/releases) contains the code and installation files for all development builds of Scratch Addons, as well as the mirror of the store builds.
+
 ### Cloning the repository
 
 This is the recommended way to install Scratch Addons for development purposes. This assumes you have Git installed.
 
-To download the repository, simply clone `https://github.com/ScratchAddons/ScratchAddons.git`:
+To download the repository, simply clone `https://github.com/ScratchAddons/ScratchAddons.git`.
 
 ```sh
 $ git clone https://github.com/ScratchAddons/ScratchAddons.git
 ```
-To update Scratch Addons if you cloned it using Git, first `cd` into its folder, and then run the following commands:
+To update Scratch Addons, first `cd` into its folder, and then run the following commands.
 
 ```sh
 $ git fetch
-```
-
-```sh
 $ git pull
 ```
 
@@ -45,7 +46,7 @@ If you don't have Git installed, you can try this method instead. Note that you 
 
    ![Download code button screenshot](https://user-images.githubusercontent.com/61319150/92291572-f17ef080-eede-11ea-85e8-fda961a56074.png)
 
-2. Click it and select "Download ZIP."
+2. Click it and select "Download ZIP".
 
    ![Download ZIP button screenshot](https://user-images.githubusercontent.com/61319150/92291570-f0e65a00-eede-11ea-80ee-f32e340327d9.png)
 
@@ -53,7 +54,7 @@ If you don't have Git installed, you can try this method instead. Note that you 
 
 ### Installing on Google Chrome
 
-1. Open `chrome://extensions` to open the extension management page by typing it into your address bar.
+1. Type `chrome://extensions` into your address bar to open the extension management page.
 
 2. Click the toggle next to `Developer mode` to turn on the Developer Mode. This allows you to install extensions from a folder or file.
 
@@ -66,19 +67,20 @@ If you don't have Git installed, you can try this method instead. Note that you 
 4. Select the extracted folder.
 5. The extension should now be loaded.
 
-To  finish updating *(assuming you followed the updating steps [here](https://scratchaddons.com/docs/getting-started/installing/#cloning-the-repository))*, click the `Update` button:
+To finish updating (assuming you followed the updating steps [here](https://scratchaddons.com/docs/getting-started/installing/#cloning-the-repository)), click the `Update` button:
 
 ![Update button screenshot](https://user-images.githubusercontent.com/76265544/120306266-97725680-c2c9-11eb-9583-d4ae7bdd2064.png)
 
 
 ### Installing on Mozilla Firefox
 
-1. Open `about:debugging` to open the add-ons page by typing it into your address bar. You should see something like this:
-2. Click `This Firefox` on the left-hand menu:
+1. Type `about:debugging` into your address bar to open the debugging page.
+
+2. Click `This Firefox` on the left-hand menu.
    
    ![Left-hand menu screenshot](https://user-images.githubusercontent.com/76265544/120303509-cfc46580-c2c6-11eb-9dcc-69dbd0ad8d18.png)
 
-4. Click `Load Temporary Add-on...`:
+4. Click `Load Temporary Add-on...`.
    
    ![Load Temporary Add-on button screenshot](https://user-images.githubusercontent.com/76265544/120303764-1023e380-c2c7-11eb-81b6-6d0805d80980.png)
    
