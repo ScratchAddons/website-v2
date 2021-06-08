@@ -44,11 +44,11 @@ If you don't have Git installed, you can try this method instead. Note that you 
 
 1. Go to the [repository](https://github.com/ScratchAddons/ScratchAddons) and find the download code button.
 
-   ![Download code button screenshot](https://user-images.githubusercontent.com/61319150/92291572-f17ef080-eede-11ea-85e8-fda961a56074.png)
+   ![Download code button screenshot](/static/assets/img/docs/download-code-button.png)
 
 2. Click it and select "Download ZIP".
 
-   ![Download ZIP button screenshot](https://user-images.githubusercontent.com/61319150/92291570-f0e65a00-eede-11ea-80ee-f32e340327d9.png)
+   ![Download ZIP button screenshot](/static/assets/img/docs/download-zipball-button.png)
 
 3. Extract the archive into a folder.
 
@@ -58,18 +58,18 @@ If you don't have Git installed, you can try this method instead. Note that you 
 
 2. Click the toggle next to `Developer mode` to turn on the Developer Mode. This allows you to install extensions from a folder or file.
 
-   ![image](https://user-images.githubusercontent.com/61319150/92291715-8550bc80-eedf-11ea-9ec1-6628c5b3fbc2.png)
+   ![Extension Managment top bar screenshot](/static/assets/img/docs/developer-mode-toggle.png)
 
 3. You should see the `Load unpacked` button appear. Clicking it will allow you to select a folder to upload.
 
-   ![image](https://user-images.githubusercontent.com/61319150/92291792-d3fe5680-eedf-11ea-9d62-8e02b262f575.png)
+   ![image](/static/assets/img/docs/load-unpacked-button.png)
 
 4. Select the extracted folder.
 5. The extension should now be loaded.
 
 To finish updating (assuming you followed the updating steps [here](#cloning-the-repository)), click the `Update` button:
 
-![Update button screenshot](https://user-images.githubusercontent.com/76265544/120306266-97725680-c2c9-11eb-9583-d4ae7bdd2064.png)
+![Update button screenshot](/static/assets/img/docs/update-button.png)
 
 
 ### Installing on Mozilla Firefox
@@ -78,11 +78,11 @@ To finish updating (assuming you followed the updating steps [here](#cloning-the
 
 2. Click `This Firefox` on the left-hand menu.
    
-   ![Left-hand menu screenshot](https://user-images.githubusercontent.com/76265544/120303509-cfc46580-c2c6-11eb-9dcc-69dbd0ad8d18.png)
+   ![Left-hand menu screenshot](/static/assets/img/docs/left-hand-menu.png)
 
 4. Click `Load Temporary Add-on...`.
    
-   ![Load Temporary Add-on button screenshot](https://user-images.githubusercontent.com/76265544/120303764-1023e380-c2c7-11eb-81b6-6d0805d80980.png)
+   ![Load Temporary Add-on button screenshot](/static/assets/img/docs/load-addon.png)
    
 6. Select the manifest.json file inside the extracted folder.
 7. The extension should now be loaded.
