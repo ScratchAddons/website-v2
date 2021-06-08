@@ -35,7 +35,7 @@ $ git fetch
 $ git pull
 ```
 
-This will update Scratch Addons and get it ready for code editing. Note that you will need to see the finish updating section [here](https://scratchaddons.com/docs/getting-started/installing/#install-on-google-chrome) if you are using Google Chrome.
+This will update Scratch Addons and get it ready for code editing. Note that you will need to see the finish updating section [here](#install-on-google-chrome) if you are using Google Chrome.
 
 
 ### Downloading the zipball
@@ -54,7 +54,7 @@ If you don't have Git installed, you can try this method instead. Note that you 
 
 ### Installing on Google Chrome
 
-1. Type `chrome://extensions` into your address bar to open the extension management page.
+1. Type `chrome://extensions` into your address bar to open the Extension Management page.
 
 2. Click the toggle next to `Developer mode` to turn on the Developer Mode. This allows you to install extensions from a folder or file.
 
@@ -67,7 +67,7 @@ If you don't have Git installed, you can try this method instead. Note that you 
 4. Select the extracted folder.
 5. The extension should now be loaded.
 
-To finish updating (assuming you followed the updating steps [here](https://scratchaddons.com/docs/getting-started/installing/#cloning-the-repository)), click the `Update` button:
+To finish updating (assuming you followed the updating steps [here](#cloning-the-repository)), click the `Update` button:
 
 ![Update button screenshot](https://user-images.githubusercontent.com/76265544/120306266-97725680-c2c9-11eb-9583-d4ae7bdd2064.png)
 
