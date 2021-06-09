@@ -141,7 +141,7 @@ const run = async () => {
 
 		// Fetch contributors data from ScratchAddons/contributors, with all-contributors spec
 		(() => new Promise(async callback => {
-			setTimeout(async () => {
+			// setTimeout(async () => {
 				let response = await (await fetch("https://raw.githubusercontent.com/ScratchAddons/contributors/master/.all-contributorsrc")).json()
 				// console.log(contributors)
 				// console.log(response)
@@ -156,29 +156,30 @@ const run = async () => {
 				// console.log(contributors)
 				// console.log(response)
 				callback()
-			}, 3000);
+			// }, 3000);
 		}))(),
 
-		// Fetch commit count data from all repositories
-		(() => new Promise(async callback => {
-			let response = await (await fetch("https://sa-contributors.hans5958.workers.dev")).json()
-			// console.log(contributors)
-			// console.log(response)
-			while (contributors.length === 0) await new Promise(resolve => setTimeout(resolve, 250))
-			response.forEach(responseItem => {
-				let index = contributors.findIndex(contributorsItem => contributorsItem.login === responseItem.login)
-				if (index === -1) {
-					contributors.push({})
-					index = contributors.length - 1
-				}
-				responseItem.commits = responseItem.contributions
-				delete responseItem.contributions 
-				Object.assign(contributors[index], responseItem)
-			})
-			// console.log(contributors)
-			// console.log(response)
-			callback()
-		}))()
+
+	// 	// Fetch commit count data from all repositories
+	// 	(() => new Promise(async callback => {
+	// 		let response = await (await fetch("https://sa-contributors.hans5958.workers.dev")).json()
+	// 		// console.log(contributors)
+	// 		// console.log(response)
+	// 		while (contributors.length === 0) await new Promise(resolve => setTimeout(resolve, 250))
+	// 		response.forEach(responseItem => {
+	// 			let index = contributors.findIndex(contributorsItem => contributorsItem.login === responseItem.login)
+	// 			if (index === -1) {
+	// 				contributors.push({})
+	// 				index = contributors.length - 1
+	// 			}
+	// 			responseItem.commits = responseItem.contributions
+	// 			delete responseItem.contributions 
+	// 			Object.assign(contributors[index], responseItem)
+	// 		})
+	// 		// console.log(contributors)
+	// 		// console.log(response)
+	// 		callback()
+	// 	}))()
 	])
 
 	document.querySelector(".lds-ellipsis").hidden = true
