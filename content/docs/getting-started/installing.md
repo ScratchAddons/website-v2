@@ -62,7 +62,7 @@ If you don't have Git installed, you can try this method instead. Note that you 
 
 3. You should see the `Load unpacked` button appear. Clicking it will allow you to select a folder to upload.
 
-   ![image](/static/assets/img/docs/load-unpacked-button.png)
+   ![Load unpacked button screenshot](/static/assets/img/docs/load-unpacked-button.png)
 
 4. Select the extracted folder.
 5. The extension should now be loaded.
