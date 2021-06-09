@@ -7,6 +7,8 @@ Global:
   FirefoxShort: Firefox
   Install: Install
   InstallFor: Install for {{.Browser}}
+  Website: Website
+  Extension: Extension
 
 Nav:
   Contributors: Contributors
@@ -119,3 +121,7 @@ FeedbackPage:
   ContentLabel: Feedback
   ContentPlaceholder: Please provide as much detail as you can.
   SubmitButton: Send
+
+CreditsPage:
+  Dependencies:
+    Webs

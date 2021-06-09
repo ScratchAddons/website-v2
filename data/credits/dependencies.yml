@@ -1,0 +1,87 @@
+- ID: Extension
+  I18nKey: Global.Extension
+  Entries:
+    - ID: js-md5
+      Type: npm
+      License: MIT
+      Link: https://www.npmjs.com/package/js-md5
+    - ID: scratchblocks
+      Type: npm
+      License: Apache-2.0
+      Link: https://www.npmjs.com/package/scratchblocks
+    - ID: vue
+      Type: npm
+      Name: Vue
+      License: BSD-3-Clause
+      Link: https://www.npmjs.com/package/vue
+    - ID: "@ultraq/icu-message-formatter"
+      Type: npm
+      Name: ICU Message Formatter
+      License: Apache-2.0
+      Link: https://www.npmjs.com/package/@ultraq/icu-message-formatter
+    - ID: tinycolor2
+      Type: npm
+      Name: TinyColor
+      License: MIT
+      Link: https://www.npmjs.com/package/tinycolor2
+    - ID: text-field-edit
+      Type: npm
+      License: MIT
+      Link: https://www.npmjs.com/package/text-field-edit
+    - ID: chart.js
+      Type: npm
+      Name: Chart.js
+      License: MIT
+      Link: https://www.npmjs.com/package/chart.js
+    - ID: color-picker-web-component
+      Type: npm
+      License: MIT
+      Link: https://www.npmjs.com/package/color-picker-web-component
+    - ID: comlink
+      Type: npm
+      Name: Comlink
+      License: Apache-2.0
+      Link: https://www.npmjs.com/package/comlink
+    - ID: sora
+      Type: npm
+      Name: Sora
+      License: OFL
+      Link: https://fonts.google.com/specimen/Sora
+
+- ID: Website
+  I18nKey: Global.Website
+  Entries:
+    - ID: hugo
+      Name: Hugo
+      Type: other
+      License: Apache-2.0
+      Link: https://gohugo.io
+    - ID: bootstrap
+      Name: Bootstrap
+      Type: npm
+      License: MIT
+      Link: https://www.npmjs.com/package/bootstrap
+    - ID: "@popperjs/core"
+      Name: Popper
+      Type: npm
+      License: MIT
+      Link: https://www.npmjs.com/package/@popperjs/core
+    - ID: jquery
+      Name: jQuery
+      Type: npm
+      License: MIT
+      Link: https://www.npmjs.com/package/jquery
+    - ID: "@iconify/iconify"
+      Name: Iconify
+      Type: npm
+      License: Apache 2.0
+      Link: https://www.npmjs.com/package/@iconify/iconify
+    - ID: bowser
+      Name: Bowser
+      Type: npm
+      License: MIT
+      Link: https://www.npmjs.com/package/bowser
+
+# - ID: CI/CD
+#   I18nKey: 
+#   Entries:
