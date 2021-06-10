@@ -37,3 +37,11 @@
 
 <script async defer data-domain="scratchaddons.com" data-exclude='/404, /404.html, /*, /*/*, /*/**, /**' src="/assets/js/plausible.js"></script>
 <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+
+<script>
+	window.pagePaths = {
+		sitemap: '{{ "/en/sitemap.xml" | relURL }}',
+		baseUrl: '{{ .Site.BaseURL }}'
+	}
+</script>
+<script async defer type="module" src="/assets/js/404.js"></script>
