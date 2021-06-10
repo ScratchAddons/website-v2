@@ -4,7 +4,7 @@ plausible("404",{ props: { path: document.location.pathname } })
 
 ;(async () => {
 	
-	const sitemap = await (await fetch(window.pagePaths.sitemap).text())
+	const sitemap = await (await fetch(window.pagePaths.sitemap)).text()
 	const pages = [...sitemap.matchAll(/<loc>(.+?)<\/loc>/g)].map(item => item[1].replaceAll(window.pagePaths.baseUrl, "/"))
 	const pagesi18n = [...sitemap.matchAll(/hreflang=\"(?!en).+?\" href=\"(.+?)\"/g)].map(item => item[1].replaceAll(window.pagePaths.baseUrl, "/"))
 
