@@ -26,6 +26,6 @@ plausible("404",{ props: { path: document.location.pathname } })
 	}
 	
 	let { bestMatch } = stringSimilarity.findBestMatch(pathName, [...pages, ...pagesi18n]).bestMatch
-	document.querySelector("#smart-404 p").innerHTML = `Did you mean <a href="${bestMatch}">${bestMatch}</a>?`
+	document.querySelector("#smart-404 p").innerHTML = `Did you mean <a href="${bestMatch.target}">${bestMatch.target}</a>?`
 	
 })()
