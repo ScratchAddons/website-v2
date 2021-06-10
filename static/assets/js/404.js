@@ -22,6 +22,7 @@ plausible("404",{ props: { path: document.location.pathname } })
 		if (pages.indexOf(toCheck) + 1) {
 			document.querySelector("#smart-404 p").innerHTML = `English page found. Redirecting to <a href="${pages[pages.indexOf(toCheck)]}">${pages[pages.indexOf(toCheck)]}</a>...`
 			document.location.replace(pages[pages.indexOf(toCheck)])
+			return
 		}
 	}
 	
