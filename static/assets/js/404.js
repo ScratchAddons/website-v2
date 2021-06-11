@@ -1,6 +1,9 @@
-import stringSimilarity from 'https://cdn.skypack.dev/pin/string-similarity@v4.0.4-qujqwzoYiszNdgSvQMRr/mode=imports,min/optimized/string-similarity.js';
-
-plausible("404",{ props: { path: document.location.pathname } })
+let smart404Status = html => {
+	if (document.querySelector("#smart-404 p")) document.querySelector("#smart-404 p").innerHTML = html
+	else $(() => {
+		document.querySelector("#smart-404 p").innerHTML = html
+	})
+}
 
 ;(async () => {
 	
@@ -11,22 +14,22 @@ plausible("404",{ props: { path: document.location.pathname } })
 	let pathName = document.location.pathname
 
 	if (pathName === "/404" || pathName === "/404.html") {
-		document.querySelector("#smart-404 p").innerHTML = "No suggestions since you are looking for the 404 page."
+		smart404Status("No suggestions since you are looking for the 404 page.")
 		return
 	}
 
-	if (/^\/[a-z-]{2,4}/.test(pathName)) {
+	if (/^\/[a-z]{2}(-[a-z]{2})?(?!\w)/.test(pathName)) {
 		let toCheck = pathName
 		toCheck = toCheck.replace(/^\/[a-z-]{2,4}/, "")
 		if (!toCheck.endsWith("/")) toCheck += "/"
 		if (pages.indexOf(toCheck) + 1) {
-			document.querySelector("#smart-404 p").innerHTML = `English page found. Redirecting to <a href="${pages[pages.indexOf(toCheck)]}">${pages[pages.indexOf(toCheck)]}</a>...`
+			smart404Status(`English page found. Redirecting to <a href="${pages[pages.indexOf(toCheck)]}">${pages[pages.indexOf(toCheck)]}</a>...`)
 			document.location.replace(pages[pages.indexOf(toCheck)])
 			return
 		}
 	}
 	
 	let { bestMatch } = stringSimilarity.findBestMatch(pathName, [...pages, ...pagesi18n]).bestMatch
-	document.querySelector("#smart-404 p").innerHTML = `Did you mean <a href="${bestMatch.target}">${bestMatch.target}</a>?`
+	smart404Status(document.querySelector("#smart-404 p").innerHTML = `Did you mean <a href="${bestMatch.target}">${bestMatch.target}</a>?`)
 	
 })()
