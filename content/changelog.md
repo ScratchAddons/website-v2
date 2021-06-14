@@ -23,6 +23,10 @@ Updates on the file mentioned will create a PR on the website to synchronize the
 
 <!-- sa-changelog-start -->
 
+## [v1.16.1] - 2021-06-15
+
+- Fix bugs in "debugger" addon
+
 ## [v1.16.0] - 2021-06-14
 
 - New addon: debugger [beta]
@@ -416,6 +420,7 @@ Not released due to a permissions issue. See [v1.1.1].
 
 Initial release.
 
+[v1.16.1]: https://github.com/ScratchAddons/ScratchAddons/releases/tag/v1.16.1
 [v1.16.0]: https://github.com/ScratchAddons/ScratchAddons/releases/tag/v1.16.0
 [v1.15.0]: https://github.com/ScratchAddons/ScratchAddons/releases/tag/v1.15.0
 [v1.14.3]: https://github.com/ScratchAddons/ScratchAddons/releases/tag/v1.14.3
