@@ -21,7 +21,9 @@
 		<div class="card {{ range .tags }} tag-{{ . }}{{ end }}" id="addon-{{ .id }}">
 			{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
 				<div class="card-img-wrapper">
-					<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+					<a href="https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}">
+						<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+					</a>
 				</div>
 			{{- end }}
 			<div class="card-body">
