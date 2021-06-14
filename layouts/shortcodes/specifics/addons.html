@@ -21,9 +21,7 @@
 		<div class="card {{ range .tags }} tag-{{ . }}{{ end }}" id="addon-{{ .id }}">
 			{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
 				<div class="card-img-wrapper">
-					<a href="https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}">
-						<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
-					</a>
+					<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
 				</div>
 			{{- end }}
 			<div class="card-body">
@@ -32,7 +30,7 @@
 					{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.EasterEggAddon" }}'>🥚</span>{{ end -}}
 					{{ if in .tags "recommended" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.RecommendedAddon" }}'>⭐</span>{{ end -}}
 				</h5>
-				<h6 class="card-subtitle mb-2 text-muted">{{ .id }}</h6>
+				<h6 class="card-subtitle mb-2 text-muted"><a href="https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}">{{ .id }}</a></h6>
 				<p class="card-text">{{ .description }}</p>
 			</div>
 		</div>
