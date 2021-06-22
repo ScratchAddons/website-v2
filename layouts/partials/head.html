@@ -29,7 +29,7 @@
 <meta name="twitter:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
 <meta name="twitter:image:alt" content='{{ T "Global.LogoAlt" }}' />
 
-{{ if .IsTranslated }}{{ range .Translations }}{{ if or ( .IsHome ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
+{{ if .IsTranslated }}{{ range .Translations }}{{ if or ( eq .IsHome false ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
 {{- end }}{{ end }}{{ end }}
 

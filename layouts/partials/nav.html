@@ -17,7 +17,7 @@
 					<li class="nav-item dropdown hide-from-spiders">
 						<a class="nav-link dropdown-toggle" href="#" id="navbar-languages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Site.Language.LanguageName }}</a>
 						<div class="dropdown-menu" aria-labelledby="navbar-languages">
-							{{ if .IsTranslated }}{{ range .Translations -}}{{ if or ( .IsHome ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
+							{{ if .IsTranslated }}{{ range .Translations -}}{{ if or ( eq .IsHome false ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
 								<a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
 							{{- end }}{{ end }}{{ end }}
 						</div>
