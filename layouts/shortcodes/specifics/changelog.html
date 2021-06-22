@@ -1,6 +1,14 @@
-{{ range sort $.Site.Data.changelog "Index" "desc" }}
+{{ range sort $.Site.Data.changelog "Index" "desc" }}{{ $latest := index (sort $.Site.Data.changelog "Index" "desc") 0 }}
 <section id="{{ .Version }}" class="mt-3">
-	<h2>{{ .Name }} <small class="text-muted"><time datetime="{{ .Date }}">{{ .Date }}</time></small></h2>
+	<h2>
+		{{ .Name }}
+		<small class="text-muted">
+			<time datetime="{{ .Date }}">{{ .Date }}</time>
+			{{ if eq .Status "Yanked" }}<span class="badge badge-danger">Yanked</span>{{ end }}
+			{{ if eq $latest.Index .Index }}<span class="badge badge-success">Latest</span>{{ end }}
+		</small>
+		<a href="#{{ .Version }}" class="anchor" aria-label="Anchor"></a>
+	</h2>
 	{{ if isset . "Highlights" }}
 		<div class="card mb-3 changelog-entry">
 			{{ if isset .Highlights "ImagePath" }}

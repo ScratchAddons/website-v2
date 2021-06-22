@@ -14,7 +14,7 @@
   Date: 2020-10-10
   Status: Yanked
   Entry: |
-    Not released due to a permissions issue. See [v1.1.1].
+    Not released due to a permissions issue. See [v1.1.1](#v1.1.1).
 
 - Version: v1.1.1
   Index: 3
@@ -54,7 +54,7 @@
   Date: 2020-10-27
   Status: Yanked
   Entry: |
-    Only released on Firefox due to an issue with perfomance warnings not showing. See [v1.2.1].
+    Only released on Firefox due to an issue with perfomance warnings not showing. See [v1.2.1](#v1.2.1).
 
 - Version: v1.2.1
   Index: 5
@@ -216,7 +216,7 @@
   Date: 2020-12-27
   Status: Yanked
   Entry: |
-    Only released on Firefox due to a special requirement by the Chrome Web Store related to localization. See [v1.6.1].
+    Only released on Firefox due to a special requirement by the Chrome Web Store related to localization. See [v1.6.1](#v1.6.1).
 
 - Version: v1.6.1
   Index: 15

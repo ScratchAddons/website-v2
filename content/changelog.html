@@ -20,3 +20,29 @@ description: All notable changes to this project will be documented in this page
 		if (document.getElementById(ver)) document.getElementById(ver).scrollIntoView()
 	}
 </script>
+
+<style>
+	h2 {
+		position: relative;
+	}
+
+	h2 .anchor::after {
+		content: "¶";
+		margin-right: 0.67rem;
+	}
+
+	h2 .anchor {
+		position: absolute;
+		left: -1.5rem;
+		visibility: hidden
+	}
+
+	h2:hover .anchor {
+		visibility: unset 
+	}
+
+	h2 .anchor:hover {
+		visibility: unset;
+		text-decoration: none;
+	}
+</style>
