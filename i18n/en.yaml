@@ -132,6 +132,7 @@ FeedbackPage:
 SMTPage:
   ScratchMessagingLogoAlt: Scratch Messaging Extension logo
 
+# Strings used for /changelog
 ChangelogPage:
   Highlights:
     Title: Highlights

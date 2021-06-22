@@ -11,7 +11,7 @@
 				<div class="col-md-9">
 					<div class="card-body">
 						<div class="changelog-highlights-title">
-							<h4 class="card-title">Highlights</h4>
+							<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
 						</div>
 						<div class="changelog-highlights-description">
 							{{ .Highlights.Description | markdownify }}
@@ -22,7 +22,7 @@
 			{{ else }}
 			<div class="card-body">
 				<div class="changelog-highlights-title">
-					<h4 class="card-title">Highlights</h4>
+					<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
 				</div>
 				<div class="changelog-highlights-description">
 					{{ .Highlights.Description | markdownify }}
@@ -35,12 +35,12 @@
 		{{ .Entry | markdownify }}
 	</div>
 	<div class="changelog-links">
-		<h3>Links</h3>
+		<h3>{{ T "ChangelogPage.Links.Title" }}</h3>
 		<ul>
-			<li><a href='https://github.com/ScratchAddons/ScratchAddons/releases/tag/{{ .Tag }}'>Release page on GitHub</a></li>
-			<li><a href='https://github.com/ScratchAddons/ScratchAddons/tree/{{ .Tag }}'>Repository state on release</a></li>
+			<li><a href='https://github.com/ScratchAddons/ScratchAddons/releases/tag/{{ .Tag }}'>{{ T "ChangelogPage.Links.ReleaseGitHub" }}</a></li>
+			<li><a href='https://github.com/ScratchAddons/ScratchAddons/tree/{{ .Tag }}'>{{ T "ChangelogPage.Links.RepoState" }}</a></li>
 			{{ if gt .Index 1 }}
-			<li><a href='https://github.com/ScratchAddons/ScratchAddons/compare/{{ index ( index $.Site.Data.changelog ( sub .Index 2 ) ) "Tag" }}...{{ .Tag }}'>Commits made on the version</a></li>
+			<li><a href='https://github.com/ScratchAddons/ScratchAddons/compare/{{ index ( index $.Site.Data.changelog ( sub .Index 2 ) ) "Tag" }}...{{ .Tag }}'>{{ T "ChangelogPage.Links.CommitsMade" }}</a></li>
 			{{ end }}
 		</ul>	
 	</div>
