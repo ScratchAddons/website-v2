@@ -596,3 +596,62 @@
       New addons of this update are "block transparency", "Ctrl+Click to run scripts", "do not automatically run duplicated blocks" and "filter messages on Scratch's messages page". Go to Scratch Addons settings to enable them.
 
       This update also changed the default color of the Scratch Addons extension badge which displays your unread messages count. Go to Scratch Addons settings to go back to the old green or customize the color yourself.
+
+- Version: v1.16.0
+  Index: 36
+  Tag: v1.16.0
+  Name: v1.16.0
+  Date: 2021-06-14
+  Status: Released
+  Entry: |
+    - New addon: debugger [beta]
+    - New addon: expandable search bar
+    - Faster extension settings page, enhanced addon searching algorithm
+    - "Feature unshared projects" addon: now more reliable, no longer beta
+    - "Gamepad support" addon: new smart mapping generator, project creators can override mappings, individual axis support, allow binding to Enter key
+    - "Editor dark mode and customizable colors" addon: new settings "change the colors of variables, lists, and answer inputs on the stage" and "text and icon highlight color"
+    - "Scratch Messaging" addon: URLs and username mentions inside comments are now clickable
+    - "Show ocular.jeffalo.net statuses and post reactions" addon: better forum post reaction UI
+    - Adapt addons to the upcoming Scratch 3.0 studio pages update on Scratch website
+    - Bug fix: "filter messages on Scratch's messages page" hiding unread messages
+    - Bug fix: "mouse position" and "clone count" not working properly in small stage mode 
+  Highlights:
+    YouTubeID: hQVAamRCaAU
+    Description: |
+      New addon: "debugger", which brings console logs and breakpoints to Scratch. Go to Scratch Addons settings to enable it.
+      
+      Another new addon added in this update is "expandable search bar", which makes the search bar on the navbar wider when it's focused.
+
+- Version: v1.16.1
+  Index: 37
+  Tag: v1.16.1
+  Name: v1.16.1
+  Date: 2021-06-15
+  Status: Released
+  Entry: |
+    - Fix bugs in "debugger" addon
+
+- Version: v1.16.2
+  Index: 38
+  Tag: v1.16.2
+  Name: v1.16.2
+  Date: 2021-06-19
+  Status: Released
+  Entry: |
+    - Fix bugs in "debugger" addon
+    - Adapt addons to the upcoming Scratch 3.0 studio pages update on Scratch website
+    - Scratch Messaging & Scratch Notifier: now support newly added Scratch emojis
+    - Bug fix: "Scratch Messaging" asking to log in if a parent comment was deleted
+    - Bug fix: "Scratch Messaging" not properly turning username mentions into links
+    - Bug fix: "better forums post editor buttons" hiding some posted images
+    - Bug fix: "copy link to comment button" breaking after loading more comments in profiles
+    - Bug fix: "website dark mode" not properly styling remix tree page
+
+- Version: v1.16.3
+  Index: 39
+  Tag: v1.16.3
+  Name: v1.16.3
+  Date: 2021-06-20
+  Status: Released
+  Entry: |
+    - Bug fix: unreadable text on Scratch Messaging when light mode enabled (caused by changes in v1.16.2)

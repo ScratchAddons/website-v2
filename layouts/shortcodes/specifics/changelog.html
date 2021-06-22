@@ -1,33 +1,51 @@
 {{ range sort $.Site.Data.changelog "Index" "desc" }}
 <section id="{{ .Version }}" class="mt-3">
-	<h2>{{ .Name }} <small class="text-muted"><time>{{ .Date }}</time></small></h2>
+	<h2>{{ .Name }} <small class="text-muted"><time datetime="{{ .Date }}">{{ .Date }}</time></small></h2>
 	{{ if isset . "Highlights" }}
 		<div class="card mb-3 changelog-entry">
 			{{ if isset .Highlights "ImagePath" }}
-			<div class="row no-gutters align-items-center">
-				<div class="col-md-3 align-middle d-flex align-items-center">
-					<img src="{{ .Highlights.ImagePath }}" {{ if isset .Highlights "ImageAlt" }}alt='{{ .Highlights.ImageAlt }}'{{ end }} class="card-img" />
-				</div>
-				<div class="col-md-9">
-					<div class="card-body">
-						<div class="changelog-highlights-title">
-							<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
-						</div>
-						<div class="changelog-highlights-description">
-							{{ .Highlights.Description | markdownify }}
+				<div class="row no-gutters align-items-center">
+					<div class="col-md-3 align-middle d-flex align-items-center">
+						<img src="{{ .Highlights.ImagePath }}" {{ if isset .Highlights "ImageAlt" }}alt='{{ .Highlights.ImageAlt }}'{{ end }} class="card-img" />
+					</div>
+					<div class="col-md-9">
+						<div class="card-body">
+							<div class="changelog-highlights-title">
+								<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
+							</div>
+							<div class="changelog-highlights-description">
+								{{ .Highlights.Description | markdownify }}
+							</div>
 						</div>
 					</div>
 				</div>
-			</div>
+			{{ else if isset .Highlights "YouTubeID" }}
+				<div class="row no-gutters align-items-center">
+					<div class="col-md-3 align-middle d-flex align-items-center">
+						<div class="card-img">
+							{{ partial "youtube" (dict "id" .Highlights.YouTubeID ) }}
+						</div>
+					</div>
+					<div class="col-md-9">
+						<div class="card-body">
+							<div class="changelog-highlights-title">
+								<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
+							</div>
+							<div class="changelog-highlights-description">
+								{{ .Highlights.Description | markdownify }}
+							</div>
+						</div>
+					</div>
+				</div>
 			{{ else }}
-			<div class="card-body">
-				<div class="changelog-highlights-title">
-					<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
+				<div class="card-body">
+					<div class="changelog-highlights-title">
+						<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
+					</div>
+					<div class="changelog-highlights-description">
+						{{ .Highlights.Description | markdownify }}
+					</div>
 				</div>
-				<div class="changelog-highlights-description">
-					{{ .Highlights.Description | markdownify }}
-				</div>
-			</div>
 			{{ end }}
 		</div>
 	{{ end }}

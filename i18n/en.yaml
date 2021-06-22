@@ -69,8 +69,6 @@ IndexPage:
     Carousel:
       Video: 
         Caption: The trailer.
-        LabelPlay: Play
-        ModalTitle: Video
       Popup:
         Caption: The extension pop-up.
         ImgAlt: Extension pop-up
@@ -141,3 +139,9 @@ ChangelogPage:
     ReleaseGitHub: Release page on GitHub
     RepoState: Repository state on release
     CommitsMade: Commits made on the version
+
+# Strings used for player modals
+PlayerModal: 
+  LabelPlay: Play
+  ModalTitle: Video
+  AltText: Click to view this video.
