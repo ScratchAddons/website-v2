@@ -224,6 +224,20 @@ $(() => {
 })
 
 /* =============================================================
+                   HIDE ELEMENTS FROM SPIDERS
+============================================================= */
+
+const removeFromSpiders = () => {
+    document.querySelectorAll(".hide-from-spiders").forEach(element => {
+        if (/google|baidu|bing|msn|yandex/i.test(navigator.userAgent)) element.remove()
+        else element.classList.remove("hide-from-spiders")
+    })    
+}
+
+removeFromSpiders()
+$(removeFromSpiders)
+
+/* =============================================================
                        CONSOLE EASTER EGG
 ============================================================= */
 

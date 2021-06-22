@@ -11,7 +11,7 @@
 
 <body>
 
-{{ partialCached "nav" . .Site.Language.Lang }}
+{{ partial "nav" . }}
 
 <main>
 	{{ block "main" . }}{{ end }}

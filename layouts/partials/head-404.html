@@ -35,5 +35,17 @@
 <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7" crossorigin></script>
 <script async src="/assets/js/website-base.js"></script>
 
-<script async defer data-domain="scratchaddons.com" data-exclude='/**' src="/assets/js/plausible.js"></script>
-<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+<script async defer data-domain="scratchaddons.com" data-exclude='/404, /404.html, /*, /*/*, /*/**, /**' src="/assets/js/plausible.js"></script>
+<script>
+	window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+	plausible("404",{ props: { path: document.location.pathname } })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/string-similarity@4.0.4/umd/string-similarity.min.js"></script>
+<script>
+	window.pagePaths = {
+		sitemap: '{{ "/en/sitemap.xml" | relURL }}',
+		baseUrl: '{{ .Site.BaseURL }}'
+	}
+</script>
+<script async src="/assets/js/404.js"></script>
