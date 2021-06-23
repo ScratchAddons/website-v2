@@ -239,7 +239,7 @@
   Index: 16
   Tag: v1.7.0
   Name: v1.7.0
-  Date: 2020-01-10
+  Date: 2021-01-10
   Status: Released
   Entry: |
     - New "addons" tab in extension popup: easily see what addons are running in the current page, enable addons, and change their settings, directly after clicking the Scratch Addons icon in the top right of your browser!
@@ -470,7 +470,7 @@
   Index: 29
   Tag: v1.12.1
   Name: v1.12.1
-  Date: 2020-04-01
+  Date: 2021-04-01
   Status: Released
   Entry: |
     - Bug fix: follow button unclickable with "profile page banner" enabled
@@ -483,7 +483,7 @@
   Index: 30
   Tag: v1.13.0
   Name: v1.13.0
-  Date: 2020-04-20
+  Date: 2021-04-20
   Status: Released
   Entry: |
     - New addon: custom scripts area zoom settings
