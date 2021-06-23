@@ -63,6 +63,9 @@
 	<div class="changelog-links">
 		<h3>{{ T "ChangelogPage.Links.Title" }}</h3>
 		<ul>
+			{{ if isset . "Links" }}{{ range .Links }}
+				<li><a href='{{ .Link }}'>{{ T .StringKey }}</a></li>
+			{{ end }}{{ end }}
 			<li><a href='https://github.com/ScratchAddons/ScratchAddons/releases/tag/{{ .Tag }}'>{{ T "ChangelogPage.Links.ReleaseGitHub" }}</a></li>
 			<li><a href='https://github.com/ScratchAddons/ScratchAddons/tree/{{ .Tag }}'>{{ T "ChangelogPage.Links.RepoState" }}</a></li>
 			{{ if gt .Index 1 }}
