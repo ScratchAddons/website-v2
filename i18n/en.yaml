@@ -137,8 +137,11 @@ ChangelogPage:
   Links:
     Title: Links
     ReleaseGitHub: Release page on GitHub
-    RepoState: Repository state on release
-    CommitsMade: Commits made on the version
+    RepoState: Repository state at release
+    CommitsMade: Commits made on this version
+  Status:
+    Latest: Latest
+    Yanked: Yanked
 
 # Strings used for player modals
 PlayerModal: 
