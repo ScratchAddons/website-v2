@@ -1,4 +1,4 @@
-<div class="yt-thumb plyrmdl-thumb" data-layer="4" data-toggle="modal" data-target="#plyrmdl-modal-{{ .id }}" data-youtube-id="{{ .id }}">
+<div class="plyrmdl-thumb plyrmdl-yt yt-thumb" data-layer="4" data-toggle="modal" data-target="#plyrmdl-modal-{{ .id }}" data-youtube-id="{{ .id }}">
 	<img class="yt-thumb-image w-100" src="https://i.ytimg.com/vi_webp/{{ .id }}/maxresdefault.webp">
 	<button class="yt-thumb-button" aria-label='{{ T "PlayerModal.LabelPlay" }}'>
 		<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
@@ -8,7 +8,7 @@
 	</button>
 </div>	
 
-<div class="modal fade plyrmdl-modal" id="plyrmdl-modal-{{ .id }}" query tabindex="-1" role="dialog" aria-labelledby="plyrmdl-modal-label-{{ .id }}" aria-hidden="true" data-youtube-id="{{ .id }}">
+<div class="modal fade plyrmdl-modal plyrmdl-yt" id="plyrmdl-modal-{{ .id }}" query tabindex="-1" role="dialog" aria-labelledby="plyrmdl-modal-label-{{ .id }}" aria-hidden="true" data-youtube-id="{{ .id }}">
 	<div class="modal-dialog" role="document">
 		<div class="modal-content">
 			<div class="modal-header">
