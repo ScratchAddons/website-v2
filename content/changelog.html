@@ -17,7 +17,10 @@ description: All notable changes to this project will be documented in this page
 	let params = new URLSearchParams(location.search)
 	if (params.has("versionname")) {
 		let ver = params.get("versionname").replace("-notif", "")
-		if (document.getElementById(ver)) document.getElementById(ver).scrollIntoView()
+		if (!ver.startsWith("v")) ver = "v" + ver
+		if (document.getElementById(ver)) $(() => {
+			document.getElementById(ver).scrollIntoView()
+		})
 	}
 </script>
 
