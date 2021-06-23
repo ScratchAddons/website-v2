@@ -9,7 +9,6 @@ window.i18nStrings = {
 	installUnsupported: '{{ T "Global.Install" }}'
 }
 </script>
-<script defer src="/assets/js/landing.js" type="module"></script>
 
 <section id="intro" class="row px-4 py-5 mb-0 intro-heading text-left">
 	<div class="col-12 col-md-6 py-4 px-3 px-md-4 d-flex flex-column justify-content-center" id="intro-info">
@@ -36,15 +35,7 @@ window.i18nStrings = {
 			<div class="carousel-inner h-100">
 				<div class="carousel-item h-100">
 					<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-						<div class="yt-thumb" data-layer="4" data-toggle="modal" data-target="#modal-presentation">
-							<img class="yt-thumb-image w-100" src="https://i.ytimg.com/vi_webp/nQ4N9zlzj0M/maxresdefault.webp">
-							<button class="yt-thumb-button" aria-label='{{ T "IndexPage.Intro.Carousel.Video.LabelPlay" }}'>
-								<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
-									<path class="yt-thumb-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
-									<path d="M 45,24 27,14 27,34" fill="#fff"></path>
-								</svg>
-							</button>
-						</div>
+						{{ partial "youtube" (dict "id" "nQ4N9zlzj0M") }}
 					</div>
 					<div class="carousel-caption d-none d-md-block m-auto p-2">
 						<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Video.Caption" }}</h5>
@@ -226,24 +217,6 @@ window.i18nStrings = {
 		{{- T "IndexPage.Install.InstallButton.Other" ( dict "OpenTag1" "<a href='https://github.com/ScratchAddons/ScratchAddons/releases' target='_blank' rel='noopener'>" "CloseTag1" "</a>" "OpenTag2" ( .Scratch.Get "open_tag_2" ) "CloseTag2" "</a>" ) | safeHTML }}
 	</p>
 </section>
-
-<div class="modal fade" id="modal-presentation" tabindex="-1" role="dialog" aria-labelledby="modal-presentation-label" aria-hidden="true">
-	<div class="modal-dialog" role="document">
-		<div class="modal-content">
-			<div class="modal-header">
-				<h5 class="modal-title" id="modal-presentation-label">{{ T "IndexPage.Intro.Carousel.Video.ModalTitle" }}</h5>
-				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
-					<span aria-hidden="true">&times;</span>
-				</button>
-			</div>
-			<div class="modal-body">
-				<div class="yt-wrapper">
-					<div class="yt-iframe"></div>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
 
 <script type="application/ld+json">
 {
