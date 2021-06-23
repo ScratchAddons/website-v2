@@ -2,7 +2,7 @@ import YTPlayer from 'https://cdn.skypack.dev/pin/yt-player@v3.5.0-XrrFLAqWZVLSo
 
 window.plyrmdl = window.plyrmdl || {}
 
-$('.plyrmdl-thumb .plyrmdl-yt').mousedown(event => {
+$('.plyrmdl-thumb.plyrmdl-yt').mousedown(event => {
 
 	const youtubeId = event.target.closest("[data-youtube-id]").dataset.youtubeId
 	// console.log("click: " + youtubeId)
@@ -21,13 +21,13 @@ $('.plyrmdl-thumb .plyrmdl-yt').mousedown(event => {
 	}
 })
 
-$('.plyrmdl-modal .plyrmdl-yt').on('shown.bs.modal', event => {
+$('.plyrmdl-modal.plyrmdl-yt').on('shown.bs.modal', event => {
 	const youtubeId = event.target.closest("[data-youtube-id]").dataset.youtubeId
 	// console.log("show: " + youtubeId)
 	window.plyrmdl[youtubeId].player.play()
 })
 
-$('.plyrmdl-modal .plyrmdl-yt').on('hide.bs.modal', event => {
+$('.plyrmdl-modal.plyrmdl-yt').on('hide.bs.modal', event => {
 	const youtubeId = event.target.closest("[data-youtube-id]").dataset.youtubeId
 	// console.log("hide: " + youtubeId)
 	window.plyrmdl[youtubeId].player.stop()
