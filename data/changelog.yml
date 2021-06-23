@@ -616,11 +616,11 @@
     - Bug fix: "filter messages on Scratch's messages page" hiding unread messages
     - Bug fix: "mouse position" and "clone count" not working properly in small stage mode 
   Highlights:
-    YouTubeID: hQVAamRCaAU
     Description: |
       New addon: "debugger", which brings console logs and breakpoints to Scratch. Go to Scratch Addons settings to enable it.
       
       Another new addon added in this update is "expandable search bar", which makes the search bar on the navbar wider when it's focused.
+    YouTubeID: hQVAamRCaAU
 
 - Version: v1.16.1
   Index: 37
