@@ -7,7 +7,7 @@
 			{{ if eq .Status "Yanked" }}<span class="badge badge-danger">{{ T "ChangelogPage.Status.Yanked" }}</span>{{ end }}
 			{{ if eq $latest.Index .Index }}<span class="badge badge-success">{{ T "ChangelogPage.Status.Latest" }}</span>{{ end }}
 		</small>
-		<a href="#{{ .Version }}" class="anchor" aria-label="Anchor"></a>
+		<a href="#{{ .Version }}" class="anchor" aria-label="Anchor">¶</a>
 	</h2>
 	{{ if isset . "Highlights" }}
 		<div class="card mb-3 changelog-entry">
