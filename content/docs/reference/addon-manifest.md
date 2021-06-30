@@ -127,9 +127,6 @@ Example:
 ]
 ```
 
-## `traps` (boolean)
-If set to `true`, userscripts for the addon will be able to use `addon.tab.traps`. The default value is `false`.
-
 ## `presets` (array)
 An array of presets for the addon. Each item in the `presets` array should be an object consisting of `name` (string), `id`(string), `description` (string) and `values` (object). The keys in the `values` object should the addon settings ids, and the values should be the values to set the setting with the id of the key to.
 
@@ -149,8 +146,6 @@ Example:
   }	
 ]	
 ```
-## `l10n` (boolean)
-Indicates whether localization files for the addon should be loaded. Defaults to `false`.
 
 ## `libraries` (array)
 An array of libraries that the addon uses.
