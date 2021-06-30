@@ -56,6 +56,7 @@ Docs:
   TOCToggleLabel: Toggle table of contents sidebar
   LastUpdated: Last updated at {{.Date}} by {{.Name}} on commit {{.Commit}}.
   Improve: Improve this page.
+  SectionPages: Section Pages
 
 # Strings used for / (index)
 IndexPage:

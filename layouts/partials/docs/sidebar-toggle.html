@@ -6,7 +6,7 @@
 	<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
 		<span>{{ T "Docs.DocsNav" }}</span>
 	</div>
-	{{ if ( and (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") (ne .TableOfContents "") ) }}
+	{{ if ( or (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") (ne .TableOfContents "") ) }}
 	<div class="flex-grow-1 align-items-center mx-2 text-right">
 		<span>{{ T "Docs.TOC" }}</span>
 	</div>
