@@ -655,3 +655,12 @@
   Status: Released
   Entry: |
     - Bug fix: unreadable text on Scratch Messaging when light mode enabled (caused by changes in v1.16.2)
+
+- Version: v1.16.4
+  Index: 40
+  Tag: v1.16.4
+  Name: v1.16.4
+  Date: 2021-07-02
+  Status: Released
+  Entry: |
+    - Adapt addons to the upcoming Scratch 3.0 studio pages update on Scratch website
