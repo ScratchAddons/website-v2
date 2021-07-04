@@ -8,6 +8,7 @@ weight: 4
 |-|-|
 | Available in userscripts | ✔️ |
 | Available in persistent scripts | ✔️ |
+| Available in popup scripts | ✔️ |
 | Required manifest permissions | None |
 
 ## Description
@@ -30,6 +31,7 @@ The promise will resolve to `null` if `addon.auth.isLoggedIn` is `false`.
 | | |
 |-|-|
 | Available in userscripts | ❌ |
+| Available in popup scripts | ❌ |
 
 <table>
   <tr>
@@ -79,6 +81,7 @@ Can only return up to 40 messages at a time.
 | | |
 |-|-|
 | Available in userscripts | ❌ |
+| Available in popup scripts | ❌ |
 
 <table>
   <tr>

@@ -8,6 +8,7 @@ weight: 7
 |-|-|
 | Available in userscripts | ❌ |
 | Available in persistent scripts | ✔️ |
+| Available in popup scripts | ❌ |
 | Required manifest permissions | `badge` |
 
 > _**Note: currently only one addon (`msg-count-badge`) can use this API. Do not use it in your addon without discussing on GitHub first.**_
