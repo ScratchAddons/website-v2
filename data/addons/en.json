@@ -298,6 +298,19 @@
 		]
 	},
 	{
+		"id": "disable-stage-drag-select",
+		"name": "Non-draggable sprites in editor",
+		"description": "Removes the ability to drag sprites around in the stage, except those explicitly set as draggable.",
+		"tags": ["editor"],
+		"credits": [
+			{
+				"name": "Chrome_Cat",
+				"link": "https://scratch.mit.edu/users/Chrome_Cat"
+			},
+			{ "name": "GarboMuffin" }
+		]
+	},
+	{
 		"id": "discuss-button",
 		"name": "Discuss button",
 		"description": "Adds the discuss button to the navbar.",
@@ -515,7 +528,7 @@
 		"name": "Infinite scrolling",
 		"description": "Allow for scrolling on different parts of the site without having to click to \"load more\".",
 		"tags": ["community"],
-		"credits": [{ "name": "DatOneLefty" }]
+		"credits": [{ "name": "DatOneLefty" }, { "name": "Hans5958" }]
 	},
 	{
 		"id": "initialise-sprite-position",
@@ -801,7 +814,7 @@
 		"id": "studio-tools",
 		"name": "Studio manager tools",
 		"description": "Lets you easily promote or remove anyone from your studios, as well as leaving any studio, through the \"curators\" tab.",
-		"tags": ["community", "studios", "beta"],
+		"tags": ["community", "studios", "recommended"],
 		"credits": [
 			{ "name": "World_Languages" },
 			{
