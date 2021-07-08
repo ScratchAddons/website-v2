@@ -298,19 +298,6 @@
 		]
 	},
 	{
-		"id": "disable-stage-drag-select",
-		"name": "Non-draggable sprites in editor",
-		"description": "Removes the ability to drag sprites around in the stage, except those explicitly set as draggable.",
-		"tags": ["editor"],
-		"credits": [
-			{
-				"name": "Chrome_Cat",
-				"link": "https://scratch.mit.edu/users/Chrome_Cat"
-			},
-			{ "name": "GarboMuffin" }
-		]
-	},
-	{
 		"id": "discuss-button",
 		"name": "Discuss button",
 		"description": "Adds the discuss button to the navbar.",
