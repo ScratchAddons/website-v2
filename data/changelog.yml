@@ -664,3 +664,13 @@
   Status: Released
   Entry: |
     - Adapt addons to the upcoming Scratch 3.0 studio pages update on Scratch website
+
+- Version: v1.16.5
+  Index: 41
+  Tag: v1.16.5
+  Name: v1.16.5
+  Date: 2021-07-08
+  Status: Released
+  Entry: |
+    - Adapt addons to the new Scratch 3.0 studio pages on Scratch website
+    - Bug fix: "auto-show editor extensions" sometimes breaking music blocks
