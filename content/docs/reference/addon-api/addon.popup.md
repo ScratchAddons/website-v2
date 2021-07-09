@@ -42,3 +42,14 @@ Whether the current popup is displayed in fullscreen.
 </table>
 
 Whether the user has enabled light mode on Scratch Addons settings.
+
+## Methods
+### addon.popup.getSelectedTabUrl
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;String | null></code></td>
+  </tr>
+</table>
+
+Gets the URL of the Scratch tab that is selected.
