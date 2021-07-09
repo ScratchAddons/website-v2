@@ -100,13 +100,13 @@ The standard CSS margin for the buttons added in this space is `margin-right: 0.
     <th>Order number</th>
   </tr>
   <tr>
-    <td><code>gamepad</code></td>
-    <td>Gamepad button</td>
+    <td><code>debugger</code></td>
+    <td>Debugger button</td>
     <td>0</td>
   </tr>
   <tr>
-    <td><code>debugger</code></td>
-    <td>Debugger button</td>
+    <td><code>gamepad</code></td>
+    <td>Gamepad button</td>
     <td>1</td>
   </tr>
 </table>
