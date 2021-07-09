@@ -137,4 +137,4 @@ Requires the `dynamicDisable` manifest property.
 
 ### reenabled
 Fires when the addon gets reenabled, after being disabled.  
-<!-- Requires the `dynamicDisable` manifest property. -->
+Requires the `dynamicDisable` manifest property.
