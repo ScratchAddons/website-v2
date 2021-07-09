@@ -58,6 +58,12 @@ Docs:
   Improve: Improve this page.
   SectionPages: Section Pages
 
+# Strings used for player modals
+PlayerModal: 
+  LabelPlay: Play
+  ModalTitle: Video
+  AltText: Click to view this video.
+
 # Strings used for / (index)
 IndexPage:
   Intro:
@@ -144,8 +150,7 @@ ChangelogPage:
     Latest: Latest
     Yanked: Yanked
 
-# Strings used for player modals
-PlayerModal: 
-  LabelPlay: Play
-  ModalTitle: Video
-  AltText: Click to view this video.
+# Strings used for /unsupported-browser
+UnsupportedBrowserPage:
+  Download: Download
+  HowToUpdate: How to update

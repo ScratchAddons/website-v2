@@ -17,32 +17,34 @@ robots_tag: noindex
   <h4>
     <span class="iconify" data-icon="simple-icons:googlechrome"></span> Chromium 80+
   </h4>
-  <ul class="browserlist">
-    <li>
-      <span><span class="iconify" data-icon="simple-icons:googlechrome"></span> Chrome 80+</span>
-      <a href="https://google.com/chrome/" target="_blank">Download</a>
-      <a href="https://support.google.com/chrome/answer/95414" target="_blank">How to update</a>
-    </li>
-    <li>
-      <span><span class="iconify" data-icon="simple-icons:microsoftedge"></span> Microsoft Edge 80+</span>
-      <a href="https://microsoft.com/edge/" target="_blank">Download</a>
-      <a href="https://support.microsoft.com/topic/microsoft-edge-update-settings-af8aaca2-1b69-4870-94fe-18822dbb7ef1" target="_blank">How to update</a>
-    </li>
-    <li>
-      <span><span class="iconify" data-icon="simple-icons:opera"></span> Opera 67+</span>
-      <a href="https://opera.com/download/" target="_blank">Download</a>
-      <a href="https://help.opera.com/latest/crashes-and-issues/#updateBrowser" target="_blank">How to update</a>
-    </li>
-    <li>
-      <span><span class="iconify" data-icon="simple-icons:brave"></span> Brave 1.3+</span>
-      <a href="https://brave.com/download/" target="_blank">Download</a>
-    </li>
-    <li>
-      <span><span class="iconify" data-icon="simple-icons:vivaldi"></span> Vivaldi 2.11+</span> 
-      <a href="https://vivaldi.com/download/" target="_blank">Download</a>
-      <a href="https://help.vivaldi.com/desktop/install-update/update-vivaldi/" target="_blank">How to update</a>
-    </li>
-  </ul>
+  <table class="browserlist">
+    <tbody>
+      <tr>
+        <td><span class="iconify" data-icon="simple-icons:googlechrome"></span> Chrome 80+</td>
+        <td><a href="https://google.com/chrome/" target="_blank">{{< T "UnsupportedBrowserPage.Download" >}}</a></td>
+        <td><a href="https://support.google.com/chrome/answer/95414" target="_blank">{{< T "UnsupportedBrowserPage.HowToUpdate" >}}</a></td>
+      </tr>
+      <tr>
+        <td><span class="iconify" data-icon="simple-icons:microsoftedge"></span> Microsoft Edge 80+</td>
+        <td><a href="https://microsoft.com/edge/" target="_blank">{{< T "UnsupportedBrowserPage.Download" >}}</a></td>
+        <td><a href="https://support.microsoft.com/topic/microsoft-edge-update-settings-af8aaca2-1b69-4870-94fe-18822dbb7ef1" target="_blank">{{< T "UnsupportedBrowserPage.HowToUpdate" >}}</a></td>
+      </tr>
+      <tr>
+        <td><span class="iconify" data-icon="simple-icons:opera"></span> Opera 67+</td>
+        <td><a href="https://opera.com/download/" target="_blank">{{< T "UnsupportedBrowserPage.Download" >}}</a></td>
+        <td><a href="https://help.opera.com/latest/crashes-and-issues/#updateBrowser" target="_blank">{{< T "UnsupportedBrowserPage.HowToUpdate" >}}</a></td>
+      </tr>
+      <tr>
+        <td><span class="iconify" data-icon="simple-icons:brave"></span> Brave 1.3+</td>
+        <td><a href="https://brave.com/download/" target="_blank">{{< T "UnsupportedBrowserPage.Download" >}}</a></td>
+      </tr>
+      <tr>
+        <td><span class="iconify" data-icon="simple-icons:vivaldi"></span> Vivaldi 2.11+</td>
+        <td><a href="https://vivaldi.com/download/" target="_blank">{{< T "UnsupportedBrowserPage.Download" >}}</a></td>
+        <td><a href="https://help.vivaldi.com/desktop/install-update/update-vivaldi/" target="_blank">{{< T "UnsupportedBrowserPage.HowToUpdate" >}}</a></td>
+      </tr>
+    </tbody>
+  </table>
   <p class="systemrequirements">
     System requirements:
     <span class="iconify" data-icon="simple-icons:windows"></span> Windows 7+
@@ -53,10 +55,15 @@ robots_tag: noindex
   <h4>
     <span class="iconify" data-icon="simple-icons:firefoxbrowser"></span> Firefox 74+
   </h4>
-  <p>
-    <a href="https://mozilla.org/firefox/" target="_blank">Download</a>
-    <a href="https://support.mozilla.org/kb/update-firefox-latest-release" target="_blank" style="margin-left: 6px;">How to update</a>
-  </p>
+  <table class="browserlist">
+    <tbody>
+      <tr>
+        <td><span class="iconify" data-icon="simple-icons:firefoxbrowser"></span> Firefox 74+</td>
+        <td><a href="https://mozilla.org/firefox/" target="_blank">{{< T "UnsupportedBrowserPage.Download" >}}</a></td>
+        <td><a href="https://support.mozilla.org/kb/update-firefox-latest-release" target="_blank" style="margin-left: 6px;">{{< T "UnsupportedBrowserPage.HowToUpdate" >}}</a></td>
+      </tr>
+    </tbody>
+  </table>
   <p class="systemrequirements">
     System requirements:
     <span class="iconify" data-icon="simple-icons:windows"></span> Windows 7+
@@ -65,14 +72,27 @@ robots_tag: noindex
 </section>
 
 <style>
-.browserlist > li > a, .systemrequirements .iconify {
-  margin-left: 6px; 
-}
-.browserlist > li > a:first-of-type, .systemrequirements .iconify:first-of-type {
-  margin-left: 16px; 
-}
-.browserlist > li > span:first-of-type {
-  display: inline-block;
-  width: 200px;
-}
+  table.browserlist td:nth-child(1) {
+    width: 12.5rem
+  }
+
+  table.browserlist td:nth-child(2) {
+    width: 5rem
+  }
+
+  table.browserlist td:nth-child(3) {
+    width: 10rem
+  }
+
+  table.browserlist {
+    margin-bottom: 1rem;
+  }
+
+  .systemrequirements .iconify {
+    margin-left: 6px;
+  }
+
+  .systemrequirements .iconify:first-of-type {
+    margin-left: 16px;
+  }
 </style>
