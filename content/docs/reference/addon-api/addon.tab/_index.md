@@ -342,7 +342,11 @@ Gets the hashed class name for a Scratch stylesheet class name.
 Gets Scratch translation from the current Scratch tab.  
 Note that these are Scratch locales, not Scratch Addons locales.  
 If the message isn't found, `""` is returned and a warning is logged in the console.  
-Internally uses `window.django.gettext` or `window._messages`.  
+Internally uses `window.django.gettext` or `window._messages`.
+
+### addon.tab.appendToSharedSpace
+
+See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
 
 ## Events
 ### urlChange
