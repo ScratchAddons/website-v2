@@ -98,16 +98,19 @@ The standard CSS margin for the buttons added in this space is `margin-right: 0.
     <th>Addon ID</th>
     <th>Element</th>
     <th>Order number</th>
+    <th>Visibility in small stage mode</th>
   </tr>
   <tr>
     <td><code>debugger</code></td>
     <td>Debugger button</td>
     <td>0</td>
+    <td>Hidden</td>
   </tr>
   <tr>
     <td><code>gamepad</code></td>
     <td>Gamepad button</td>
     <td>1</td>
+    <td>Hidden</td>
   </tr>
 </table>
 
@@ -174,11 +177,13 @@ Buttons that go between the green flag and the stop button.
     <th>Addon ID</th>
     <th>Element</th>
     <th>Order number</th>
+    <th>Visibility in small stage mode</th>
   </tr>
   <tr>
     <td><code>pause</code></td>
     <td>Pause button</td>
     <td>0</td>
+    <td>Visible</td>
   </tr>
 </table>
 
@@ -210,21 +215,25 @@ The standard CSS for the buttons added in this space is `padding: 0.25rem`.
     <th>Addon ID</th>
     <th>Element</th>
     <th>Order number</th>
+    <th>Visibility in small stage mode</th>
   </tr>
   <tr>
     <td><code>mute-project</code></td>
     <td>Muted project indicator</td>
     <td>0</td>
+    <td>Visible</td>
   </tr>
   <tr>
     <td><code>mouse-pos</code></td>
     <td>Mouse coordinates</td>
     <td>1</td>
+    <td>Hidden</td>
   </tr>
   <tr>
     <td><code>clone-count</code></td>
     <td>Clone count</td>
     <td>2</td>
+    <td>Hidden</td>
   </tr>
 </table>
 
