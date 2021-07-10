@@ -17,8 +17,8 @@ For consistency, descriptions **must** end with a dot.
 
 ## `tags` (array, required)
 Tags are used for filtering and badges on the Scratch Addons settings page.  
-One of these is **required**:  `community`, `editor`, `easterEgg`.  
-Other options are: `theme`, `beta`, `recommended`, `forums`.  
+One of these is **required**:  `community`, `editor`, `popup`, `easterEgg`.  
+Other options are: `theme`, `beta`, `recommended`, `forums`, `danger`, `codeEditor`, `costumeEditor`, `projectPlayer`, `editorMenuBar` `projectPage`, `profiles`, `studios`, `comments`.
 
 ## `permissions` (array)
 You can specify permissions by providing a `permissions` array.  
@@ -31,6 +31,9 @@ You can add persistent scripts by providing a `persistentScripts` array conforme
 Declaring userscripts and userstyles is very similar.
 Unlike persistent scripts, this is an array of objects, not strings.  
 Each object must specify the url to the userscript/userstyle through the `"url"` property, and provide an array of URL matches. If any of these patterns match, the userscript/userstyle is injected.
+
+### `matches` (array)
+Matches that allow the userscript/userstyle to run on. Values can be a URL match pattern, or `projects`, `projectEmbeds`, `studios`, `profiles`, `topics`, `newPostScreens`, `editingScreens`, `forums`, `scratchWWWNoProject`.
 ```json
 "userscripts": [
   {
@@ -172,3 +175,6 @@ Indicates whether the addon's userstyles should be injected as style elements ra
 
 ## `updateUserstylesOnSettingsChange` (boolean)
 Indicates whether the addon's userstyles should be removed and rematched to the new settings. Defaults to `false`.
+
+## `versionAdded` (string)
+The version the addon was added. If the value is the same as the current version of the extension, the addon will get the new tag.
