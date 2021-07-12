@@ -5,8 +5,7 @@
 <head>
 
 {{ partial "head" . }}
-{{ $style := resources.Get "assets/css/docs.scss" | resources.ToCSS -}}
-<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ partial "scss" "assets/css/docs.scss" }}
 
 </head>
 

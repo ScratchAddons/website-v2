@@ -29,8 +29,7 @@
 
 <!-- Require Script and Loading Page -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin />
-{{ $stylebase := resources.Get "assets/css/base.scss" | resources.ToCSS }}
-<link rel="stylesheet" href="{{ $stylebase.Permalink }}" />
+{{ partial "scss" "assets/css/base.scss" }}
 
 <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7" crossorigin></script>
 <script async src="/assets/js/website-base.js"></script>
