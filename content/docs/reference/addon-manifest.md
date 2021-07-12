@@ -4,6 +4,10 @@ description: In order to tell the addon loader how the addon plans to work, addo
 aliases: 
   - /docs/developing/the-addon-manifest-(addon.json)
 ---
+
+> Some parts of this documentation may be missing or outdated. [You can help improving this page](https://github.com/ScratchAddons/website-v2/edit/master/content/docs/reference/addon-manifest.md).  
+> Do not hesitate to ask questions regarding this by using the provided channels.
+
 Addons are located inside the `addons` folder. Each addon is inside its own folder as well.
 In order to tell the addon loader how the addon plans to work, addons use a standard `addon.json` file located at the root of the addon's folder.  
 
@@ -70,7 +74,7 @@ Specifies whether the userscript should run after the page has loaded (after the
 If set to `false`, the userscript is only guaranteed to run after the \<head> element of the document has loaded.
 
 ## `settings` (object)
-Options allow the addon's users to specify settings in Scratch Addons' settings panel. Inside your persistent scripts and userscripts, you can then access those settings with the `addon.settings` API.  
+Settings allow the addon's users to specify settings in Scratch Addons' settings panel. Inside your persistent scripts and userscripts, you can then access those settings with the `addon.settings` API.  
 Specify a `settings` property and provide an array of option objects.
 
 The properties of the object are as follows. All properties are required.
@@ -117,7 +121,7 @@ Example:
 ```
 
 ## `enabledByDefault` (boolean)
-You can provide the `enabledByDfault` property and set it to `true` to specify if the addon should be enabled by default. Its default value is `false`.  
+You can provide the `enabledByDefault` property and set it to `true` to specify if the addon should be enabled by default. Its default value is `false`.  
 Keep in mind, few addons will be enabled by default. If you want your addon to be enabled by default, please open a discussion issue.
 
 ## `info` (array)
