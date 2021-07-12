@@ -35,31 +35,35 @@ Each object must specify the url to the userscript/userstyle through the `"url"`
 ### `matches` (array)
 Matches that allow the userscript/userstyle to run on. Values can be a URL match pattern, or `projects`, `projectEmbeds`, `studios`, `profiles`, `topics`, `newPostScreens`, `editingScreens`, `forums`, `scratchWWWNoProject`.
 ```json
-"userscripts": [
-  {
-    "url": "userscript.js",
-    "matches": ["https://scratch.mit.edu/*"]
-  },
-  {
-    "url": "second_userscript.js",
-    "matches": ["https://scratch.mit.edu/", "https://scratch.mit.edu/users/*"]
-  }
-]
+{
+  "userscripts": [
+    {
+      "url": "userscript.js",
+      "matches": ["https://scratch.mit.edu/*"]
+    },
+    {
+      "url": "second_userscript.js",
+      "matches": ["https://scratch.mit.edu/", "https://scratch.mit.edu/users/*"]
+    }
+  ]
+}
 ```
 
 ### `settingMatch` (object)
 You can provide a `settingMatch` object that will result in your userscript/userstyle only running if the specified option is set to the specified value.
 ```json
-"userstyles": [
-  {
-    "url": "signature.css",
-    "matches": ["https://scratch.mit.edu/discuss/topic/*"],
-    "settingMatch": {
-      "id": "signature",
-      "value": true
+{
+  "userstyles": [
+    {
+      "url": "signature.css",
+      "matches": ["https://scratch.mit.edu/discuss/topic/*"],
+      "settingMatch": {
+        "id": "signature",
+        "value": true
+      }
     }
-  }
-]
+  ]
+}
 ```
 ### `runAtComplete` (boolean, userscripts only)
 Specifies whether the userscript should run after the page has loaded (after the window load event). If unspecified, `true` is assumed.  
@@ -78,20 +82,22 @@ The properties of the object are as follows. All properties are required.
 - `"allowTransparency"`: for `"color"` type only. Boolean.
 
 ```json
-"settings": [
-  {
-    "name": "Send notifications",
-    "id": "send_notifications",
-    "type": "boolean",
-    "default": false
-  },
-  {
-    "name": "Notification close delay in seconds",
-    "id": "close_delay",
-    "type": "positive_integer",
-    "default": 5
-  }
-]
+{
+  "settings": [
+    {
+      "name": "Send notifications",
+      "id": "send_notifications",
+      "type": "boolean",
+      "default": false
+    },
+    {
+      "name": "Notification close delay in seconds",
+      "id": "close_delay",
+      "type": "positive_integer",
+      "default": 5
+    }
+  ]
+}
 ```
 
 ## `credits` (array)
@@ -100,12 +106,14 @@ You can provide a `credits` array of objects. This attribution is shown in the e
 These objects must have a `"name"` attribute set to a string, and they can have a `"link"` attribute with a URL value.  
 Example:  
 ```json
-"credits": [
-  {
-    "name": "Maximouse",
-    "link": "https://github.com/mxmou/customize-scratch#watch-youtube-videos-on-scratch-in-full-screen"
-  }
-]
+{
+  "credits": [
+    {
+      "name": "Maximouse",
+      "link": "https://github.com/mxmou/customize-scratch#watch-youtube-videos-on-scratch-in-full-screen"
+    }
+  ]
+}
 ```
 
 ## `enabledByDefault` (boolean)
@@ -116,18 +124,20 @@ Keep in mind, few addons will be enabled by default. If you want your addon to b
 An array of additional information (e.g. warnings, notices) about the addon. Each item of the array is an object consisting of `type` (string) -either `warning` or `notice` - `text` (string) - the text to be displayed - and `id` (string) - the id of the information.
 Example:
 ```json
-"info": [
-  {
-    "type": "notice",
-    "text": "Example notice.",
-    "id": "exmapleID"
-  },
-  {
-    "type": "warning",
-    "text": "Example warning.",
-    "id": "exmapleID"
-  }
-]
+{
+  "info": [
+    {
+      "type": "notice",
+      "text": "Example notice.",
+      "id": "exmapleID"
+    },
+    {
+      "type": "warning",
+      "text": "Example warning.",
+      "id": "exmapleID"
+    }
+  ]
+}
 ```
 
 ## `presets` (array)
@@ -136,18 +146,20 @@ An array of presets for the addon. Each item in the `presets` array should be an
  
 Example:	
 ```json	
-"presets": [	
-  {	
-    "name": "preset 1",	
-    "id": "preset1",	
-    "desctiption": "the first preset",	
-    "values": {	
-      "boolean_setting": true,	
-      "string_setting": "This is a string setting",	
-      "integer_setting": 180	
+{
+  "presets": [	
+    {	
+      "name": "preset 1",	
+      "id": "preset1",	
+      "desctiption": "the first preset",	
+      "values": {	
+        "boolean_setting": true,	
+        "string_setting": "This is a string setting",	
+        "integer_setting": 180	
+      }	
     }	
-  }	
-]	
+  ]	
+}
 ```
 
 ## `libraries` (array)
@@ -156,12 +168,14 @@ An array of libraries that the addon uses.
 ## `popup` (object)
 When added, creates a new popup tab in the browser popup.
 Example:
-```
+```json
+{
   "popup": {
     "icon": "../../images/icons/envelope.svg",
     "name": "Messaging",
     "fullscreen": true
-  },
+  }
+}
 ```
 
 ## `dynamicDisable` (boolean)
