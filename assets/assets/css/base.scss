@@ -289,6 +289,9 @@ body.dark .dark-btn-white {
 	color: black;
 	.yt-wrapper {
 		position: relative;
+		margin-left: auto;
+		margin-right: auto;
+		max-width: 50vw !important;
 		&:before {
 			display: block;
 			content: "";
