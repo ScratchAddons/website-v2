@@ -172,17 +172,17 @@ article {
 			border: 1px solid $bs-gray-300;
 		}
 
-		tr > th:empty {
-			border-color: transparent;
-			border-bottom-color: #dee2e6;
-			padding: 0;
-		}
-	
 		tr {
 			border-top: 1px solid darken($bs-gray-300, 4%);
 		
 			&:nth-child(2n) {
 				background-color: lighten($bs-gray-200, 4%);
+			}
+
+			> th:empty {
+				border-color: transparent;
+				border-bottom-color: #dee2e6;
+				padding: 0;
 			}
 		}
 	
@@ -379,6 +379,12 @@ body.dark {
 			&:nth-child(2n) {
 				background-color: darken($bs-gray-900, 4%);
 			}
+
+			> th:empty {
+				border-color: transparent;
+				border-bottom-color: $bs-gray-800;
+				padding: 0;
+			}
 		}
 	}
 
@@ -416,6 +422,12 @@ body.dark.extension-styled {
 		
 			&:nth-child(2n) {
 				background-color: darken($bs-gray-800, 4%);
+			}
+
+			> th:empty {
+				border-color: transparent;
+				border-bottom-color: $bs-gray-700;
+				padding: 0;
 			}
 		}
 	}
