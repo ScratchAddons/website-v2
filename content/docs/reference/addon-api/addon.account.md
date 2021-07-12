@@ -1,5 +1,6 @@
 ---
 title: addon.account
+h1_title: "`addon.account`"
 description: Allows addons to execute actions in the currently logged in Scratch user.
 weight: 4
 ---
@@ -15,7 +16,7 @@ weight: 4
 Allows addons to execute actions in the currently logged in Scratch user.
 
 ## Methods
-### getMsgCount
+### `getMsgCount`
 <table>
   <tr>
     <td>Return value</td>
@@ -26,7 +27,7 @@ Allows addons to execute actions in the currently logged in Scratch user.
 Gets the unread message count of the currently logged in user.  
 The promise will resolve to `null` if `addon.auth.isLoggedIn` is `false`.
 
-### getMessages
+### `getMessages`
 
 | | |
 |-|-|
@@ -76,7 +77,7 @@ Gets recent Scratch messages of the currently logged in user.
 The promise will resolve to `null` if `addon.auth.isLoggedIn` is `false`.  
 Can only return up to 40 messages at a time.
 
-### clearMessages
+### `clearMessages`
 
 | | |
 |-|-|

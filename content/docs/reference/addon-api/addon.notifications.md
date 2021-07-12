@@ -1,5 +1,6 @@
 ---
 title: addon.notifications
+h1_title: "`addon.notifications`"
 description: Allows addons to create browser notifications. This API slightly differs from the browser.notifications API extensions can use.
 weight: 6
 ---
@@ -46,7 +47,7 @@ addon.notifications.addEventListener("buttonclick", function(event) {
 
 
 ## Properties
-### addon.notifications.muted
+### `addon.notifications.muted`
 
 <table>
   <tr>
@@ -62,7 +63,7 @@ addon.notifications.addEventListener("buttonclick", function(event) {
 Whether Scratch Addons is currently muted or not.
 
 ## Methods
-### addon.notifications.create
+### `addon.notifications.create`
 <table>
   <tr>
     <th>Parameter</th>
@@ -88,7 +89,7 @@ Whether Scratch Addons is currently muted or not.
 Creates a notification.  
 The notification will not be created if Scratch Addons is muted.
 
-### addon.notifications.update
+### `addon.notifications.update`
 <table>
   <tr>
     <th>Parameter</th>
@@ -119,7 +120,7 @@ The notification will not be created if Scratch Addons is muted.
 Updates an existing notification, given its ID.  
 The returned promise resolves to a boolean that indicates whether the update succeeded.  
 
-### addon.notifications.clear
+### `addon.notifications.clear`
 <table>
   <tr>
     <th>Parameter</th>
@@ -145,7 +146,7 @@ The returned promise resolves to a boolean that indicates whether the update suc
 Clears an existing notification, given its ID.  
 The returned promise resolves to a boolean that indicates whether the clearing succeeded.
 
-### addon.notifications.getAll
+### `addon.notifications.getAll`
 <table>
   <tr>
     <td>Return value</td>
@@ -157,7 +158,7 @@ Gets all existing notifications for the addon.
 Based on <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons/WebExtensions/API/notifications/getAll" target="_blank">browser.notifications.getAll()</a></code>.
 
 ## Events
-### click
+### `click`
 <table>
   <tr>
     <th>Event detail property</th>
@@ -173,7 +174,7 @@ Based on <code><a href="https://developer.mozilla.org/en-US/docs/Mozilla/Add-ons
 
 Fires when any existing notification is clicked.
 
-### close
+### `close`
 <table>
   <tr>
     <th>Event detail property</th>
@@ -189,7 +190,7 @@ Fires when any existing notification is clicked.
 
 Fires when any existing notification is closed.
 
-### buttonclick
+### `buttonclick`
 <table>
   <tr>
     <th>Event detail property</th>

@@ -1,5 +1,6 @@
 ---
 title: addon.tab.appendToSharedSpace
+h1_title: "`addon.tab.appendToSharedSpace`"
 description: Allows multiple addons to add their own UI elements to the same area inside Scratch.
 weight: 3
 ---
@@ -8,7 +9,7 @@ weight: 3
 Allows multiple addons to add their own UI elements to the same area inside Scratch.  
 The important part of this API is the order number, which prevents the appending new UI elements from being a racy operation and the order of the buttons varying impredictively, specially in the cases where the addons support dynamicEnable.
 
-## Method (addon.tab.appendToSharedSpace)
+## Method
 
 <table>
   <tr>
@@ -70,7 +71,7 @@ The important part of this API is the order number, which prevents the appending
 </table>
 
 ## Scratch editor spaces
-### stageHeader
+### `stageHeader`
 Right side of the stage header in editor, embed and projectplayer modes.  
 The standard CSS margin for the buttons added in this space is `margin-right: 0.2rem`.
 
@@ -114,7 +115,7 @@ The standard CSS margin for the buttons added in this space is `margin-right: 0.
   </tr>
 </table>
 
-### fullscreenStageHeader
+### `fullscreenStageHeader`
 Right side of the stage header in fullscreen mode.  
 The standard CSS margin for the buttons added in this space is `margin-right: 0.2rem`.
 
@@ -150,7 +151,7 @@ The standard CSS margin for the buttons added in this space is `margin-right: 0.
   </tr>
 </table>
 
-### afterGreenFlag
+### `afterGreenFlag`
 Buttons that go between the green flag and the stop button.
 
 <table>
@@ -187,7 +188,7 @@ Buttons that go between the green flag and the stop button.
   </tr>
 </table>
 
-### afterStopButton
+### `afterStopButton`
 Elements that go after the project control buttons.  
 The standard CSS for the buttons added in this space is `padding: 0.25rem`.
 
@@ -237,7 +238,7 @@ The standard CSS for the buttons added in this space is `padding: 0.25rem`.
   </tr>
 </table>
 
-### afterSoundTab
+### `afterSoundTab`
 Added editor tabs that go after the sound tab.  
 The order number should match the used `activeTabIndex` by the new tab.
 
@@ -274,7 +275,7 @@ The order number should match the used `activeTabIndex` by the new tab.
 </table>
 
 ## Scratch website spaces
-### afterCopyLinkButton
+### `afterCopyLinkButton`
 Buttons that go after the "copy link" button in project pages.
 
 <table>
@@ -309,7 +310,7 @@ Buttons that go after the "copy link" button in project pages.
   </tr>
 </table>
 
-### forumsBeforePostReport
+### `forumsBeforePostReport`
 Links placed before the "report" button in a specific post.  
 If the "report" button does not exist, a visible placeholder dot will be added to the page automatically to act as a separator between the `forumsBeforePostReport` and `forumsAfterPostReport` spaces.  
 Addition of the `|` separator is handled by the space.
@@ -356,7 +357,7 @@ Addition of the `|` separator is handled by the space.
   </tr>
 </table>
 
-### forumsAfterPostReport
+### `forumsAfterPostReport`
 Links placed after the "report" button in a specific post.  
 If the "report" button does not exist, a visible placeholder dot will be added to the page automatically to act as a separator between the `forumsBeforePostReport` and `forumsAfterPostReport` spaces.  
 Addition of the `|` separator is handled by the space.
@@ -393,7 +394,7 @@ Addition of the `|` separator is handled by the space.
   </tr>
 </table>
 
-### beforeRemixButton
+### `beforeRemixButton`
 Links placed after the "report" button in a specific post.  
 If the "report" button does not exist, a visible placeholder dot will be added to the page automatically to act as a separator between the `forumsBeforePostReport` and `forumsAfterPostReport` spaces.  
 Addition of the `|` separator is handled by the space.

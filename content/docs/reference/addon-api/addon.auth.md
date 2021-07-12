@@ -1,5 +1,6 @@
 ---
 title: addon.auth
+h1_title: "`addon.auth`"
 description: Allows addons to get information about the current Scratch account session.
 weight: 3
 ---
@@ -23,7 +24,7 @@ addon.auth.addEventListener("change", function() {
 ```
 
 ## Properties
-### addon.auth.scratchLang
+### `addon.auth.scratchLang`
 <table>
   <tr>
     <td>Type</td>
@@ -39,7 +40,7 @@ Language of the Scratch website.
 This language option can be changed by the user in the footer of Scratch's website.  
 This property changing does not fire a `change` event.
 
-### addon.auth.isLoggedIn
+### `addon.auth.isLoggedIn`
 <table>
   <tr>
     <td>Type</td>
@@ -53,7 +54,7 @@ This property changing does not fire a `change` event.
 
 Whether the user is logged in or not.
 
-### addon.auth.username
+### `addon.auth.username`
 <table>
   <tr>
     <td>Type</td>
@@ -68,7 +69,7 @@ Whether the user is logged in or not.
 Username of the currently logged in user.  
 Will be `null` if `addon.auth.isLoggedIn` is `false`.
 
-### addon.auth.userId
+### `addon.auth.userId`
 <table>
   <tr>
     <td>Type</td>
@@ -83,7 +84,7 @@ Will be `null` if `addon.auth.isLoggedIn` is `false`.
 User ID of the currently logged in user.  
 Will be `null` if `addon.auth.isLoggedIn` is `false`.
 
-### addon.auth.xToken
+### `addon.auth.xToken`
 <table>
   <tr>
     <td>Type</td>
@@ -98,7 +99,7 @@ Will be `null` if `addon.auth.isLoggedIn` is `false`.
 Value of the `X-Token` header used in the Scratch REST API.  
 Will be `null` if `addon.auth.isLoggedIn` is `false`.
 
-### addon.auth.csrfToken
+### `addon.auth.csrfToken`
 <table>
   <tr>
     <td>Type</td>
@@ -114,5 +115,5 @@ Value of the `scratchcsrftoken` cookie.
 Will be `null` if `addon.auth.isLoggedIn` is `false`.
 
 ## Events
-### change
+### `change`
 Fires when any of `isLoggedIn`, `username`, `userId`, `xToken` or `csrfToken` change.

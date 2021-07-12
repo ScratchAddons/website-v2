@@ -1,5 +1,6 @@
 ---
 title: addon.popup
+h1_title: "`addon.popup`"
 description: Allows addon popup scripts to get information about the popup context.
 weight: 8
 ---
@@ -15,7 +16,7 @@ weight: 8
 Allows addon popup scripts to get information about the popup context.
 
 ## Properties
-### addon.popup.isFullscreen
+### `addon.popup.isFullscreen`
 <table>
   <tr>
     <td>Type</td>
@@ -29,7 +30,7 @@ Allows addon popup scripts to get information about the popup context.
 
 Whether the current popup is displayed in fullscreen.
 
-### addon.popup.isLightMode
+### `addon.popup.isLightMode`
 <table>
   <tr>
     <td>Type</td>
@@ -44,7 +45,7 @@ Whether the current popup is displayed in fullscreen.
 Whether the user has enabled light mode on Scratch Addons settings.
 
 ## Methods
-### addon.popup.getSelectedTabUrl
+### `addon.popup.getSelectedTabUrl`
 <table>
   <tr>
     <td>Return value</td>

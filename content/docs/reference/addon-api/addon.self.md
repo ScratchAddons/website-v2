@@ -1,5 +1,6 @@
 ---
 title: addon.self
+h1_title: "`addon.self`"
 description: Allows addons to get information about themselves or the browser.
 weight: 1
 ---
@@ -15,7 +16,7 @@ weight: 1
 Allows addons to get information about themselves or the browser.
 
 ## Examples
-### Using addon.self.dir
+### Using `addon.self.dir`
 With `addon.self.dir`, we can get the URL to an image inside the addon's directory.
 ```js
   const img = document.createElement("img");
@@ -24,7 +25,7 @@ With `addon.self.dir`, we can get the URL to an image inside the addon's directo
   document.body.appendChild(img);
 ```
 
-### Using addon.self.disabled and events (dynamicDisable)
+### Using `addon.self.disabled` and events (`dynamicDisable`)
 We use the `disabled` and `reenabled` events to hide the image when the addon is disabled, without
 requiring the user to refresh the page.  
 We also use `addon.self.disabled` inside an event listener to avoid running code while the addon is disabled.  
@@ -40,7 +41,7 @@ This example requires `{"dynamicDisable": true}` in the manifest.
 ```
 
 ## Properties
-### addon.self.id
+### `addon.self.id`
 <table>
   <tr>
     <td>Type</td>
@@ -55,7 +56,7 @@ This example requires `{"dynamicDisable": true}` in the manifest.
 The addon ID for this addon.  
 The addon ID is the name of the directory inside `/addons` that identifies the addon.
 
-### addon.self.dir
+### `addon.self.dir`
 <table>
   <tr>
     <td>Type</td>
@@ -70,7 +71,7 @@ The addon ID is the name of the directory inside `/addons` that identifies the a
 Path to the addon's directory, without trailing slash.  
 Should be used instead of hardcoding URLs. Locally, using a hardcoded URL like `chrome-extension://aeepldbjfoihffgcaejikpoeppffnlbd/addons/full-signature/happen.js` might appear to work properly, but the extension ID can change and it will not work in Firefox.
 
-### addon.self.lib
+### `addon.self.lib`
 <table>
   <tr>
     <td>Type</td>
@@ -84,7 +85,7 @@ Should be used instead of hardcoding URLs. Locally, using a hardcoded URL like `
 
 Path to the `/libraries` directory, without trailing slash.
 
-### addon.self.browser
+### `addon.self.browser`
 <table>
   <tr>
     <td>Value</td>
@@ -98,7 +99,7 @@ Path to the `/libraries` directory, without trailing slash.
 
 The browser Scratch Addons is running on.
 
-### addon.self.disabled
+### `addon.self.disabled`
 <table>
   <tr>
     <td>Type</td>
@@ -111,9 +112,9 @@ The browser Scratch Addons is running on.
 </table>
 
 Whether the addon is currently disabled or not.  
-Useful for returning early in event listeners for addons that support dynamicDisable.
+Useful for returning early in event listeners for addons that support `dynamicDisable`.
 
-### addon.self.enabledLate
+### `addon.self.enabledLate`
 <table>
   <tr>
     <td>Type</td>
@@ -131,10 +132,10 @@ If the addon was enabled when the page loaded, then was disabled and reenabled, 
 In that case, the `reenabled` event will fire.
 
 ## Events
-### disabled
+### `disabled`
 Fires when the addon gets disabled.  
 Requires the `dynamicDisable` manifest property.
 
-### reenabled
+### `reenabled`
 Fires when the addon gets reenabled, after being disabled.  
 <!-- Requires the `dynamicDisable` manifest property. -->

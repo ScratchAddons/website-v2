@@ -1,5 +1,6 @@
 ---
 title: addon.badge
+h1_title: "`addon.badge`"
 description: Allows addons to display a badge, a bit of text that is layered over the extension icon, frequently a number.
 weight: 7
 ---
@@ -17,11 +18,11 @@ weight: 7
 Allows addons to display a badge, a bit of text that is layered over the extension icon, frequently a number.
 
 ## Getters & setters
-### addon.badge.text
+### `addon.badge.text`
 Text shown on the badge.  
 Numbers are automatically converted to strings.  
 If this is set to `""`, `null` or `0`, the badge will be hidden.
 
-### addon.badge.color
+### `addon.badge.color`
 Color of the badge.  
 Accepts any CSS supported color.
