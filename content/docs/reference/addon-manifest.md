@@ -5,7 +5,7 @@ aliases:
   - /docs/developing/the-addon-manifest-(addon.json)
 ---
 
-> Some parts of this documentation may be missing or outdated. [You can help improving this page](https://github.com/ScratchAddons/website-v2/edit/master/content/docs/reference/addon-manifest.md).  
+> Some parts of this documentation may be missing or outdated. [You can help improving this page](https://github.com/ScratchAddons/website-v2/issues/75).  
 > Do not hesitate to ask questions regarding this by using the provided channels.
 
 Addons are located inside the `addons` folder. Each addon is inside its own folder as well.
