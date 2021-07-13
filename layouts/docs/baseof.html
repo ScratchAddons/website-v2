@@ -6,6 +6,12 @@
 
 {{ partial "head" . }}
 {{ partial "scss" "assets/css/docs.scss" }}
+{{ if isset $.Params "embed_js" }}{{ range $.Params.embed_js }}
+<script defer src="{{ . }}"></script>
+{{ end }}{{ end }}
+{{ if isset $.Params "embed_css" }}{{ range $.Params.embed_css }}
+<link rel="stylesheet" href="{{ . }}" crossorigin />
+{{ end }}{{ end }}
 
 </head>
 

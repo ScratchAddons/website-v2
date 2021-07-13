@@ -5,9 +5,9 @@ weight: 51
 aliases:
   - /faq
   - /docs/frequently-asked-questions
+embed_js: 
+  - /assets/js/faq.js
 ---
-
-<script defer src="/assets/js/faq.js"></script>
 
 This page lists frequently asked questions related to the Scratch Addons extension and project.
 
