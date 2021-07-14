@@ -58,6 +58,24 @@
 		"credits": [{ "name": "Ezlambry", "link": "https://ezlambry.github.io/" }]
 	},
 	{
+		"id": "better-img-uploads",
+		"name": "HD image uploads",
+		"description": "Adds a new button above the \"upload costume\" button that automatically converts uploaded bitmap images into SVG (vector) images to avoid losing quality.",
+		"tags": ["editor", "beta", "costumeEditor"],
+		"credits": [
+			{
+				"name": "ErrorGamer2000",
+				"link": "https://scratch.mit.edu/users/ErrorGamer2000/"
+			},
+			{ "name": "GarboMuffin" },
+			{ "name": "World_Languages" },
+			{
+				"name": "SheepTester",
+				"link": "https://scratch.mit.edu/users/Sheep_maker/"
+			}
+		]
+	},
+	{
 		"id": "better-quoter",
 		"name": "Better forum quoter",
 		"description": "Select text in a forum post and click quote in the bottom right corner to only quote the select text.",
@@ -298,6 +316,19 @@
 		]
 	},
 	{
+		"id": "disable-stage-drag-select",
+		"name": "Non-draggable sprites in editor",
+		"description": "Removes the ability to drag sprites around in the stage, except those explicitly set as draggable.",
+		"tags": ["editor"],
+		"credits": [
+			{
+				"name": "Chrome_Cat",
+				"link": "https://scratch.mit.edu/users/Chrome_Cat"
+			},
+			{ "name": "GarboMuffin" }
+		]
+	},
+	{
 		"id": "discuss-button",
 		"name": "Discuss button",
 		"description": "Adds the discuss button to the navbar.",
@@ -373,7 +404,7 @@
 	{
 		"id": "editor-stepping",
 		"name": "Highlight currently executing blocks",
-		"description": "Adds a blue border to the blocks that are currently running in a project.",
+		"description": "Adds a colored border to the blocks that are currently running in a project.",
 		"tags": ["editor", "codeEditor"]
 	},
 	{
@@ -515,7 +546,7 @@
 		"name": "Infinite scrolling",
 		"description": "Allow for scrolling on different parts of the site without having to click to \"load more\".",
 		"tags": ["community"],
-		"credits": [{ "name": "DatOneLefty" }]
+		"credits": [{ "name": "DatOneLefty" }, { "name": "Hans5958" }]
 	},
 	{
 		"id": "initialise-sprite-position",
@@ -642,6 +673,18 @@
 		"description": "Shows ocular statuses and reactions. Uses jeffalo.net to obtain data.",
 		"tags": ["forums", "profiles", "community"],
 		"credits": [{ "name": "Jeffalo" }]
+	},
+	{
+		"id": "old-studio-layout",
+		"name": "Old studio layout",
+		"description": "Reverts the layout of the studio page back to the one used before the studio update or the one previously available as part of the Scratch 2.0 → 3.0 addon.",
+		"tags": ["community", "theme", "studios"],
+		"credits": [
+			{
+				"name": "Maximouse",
+				"link": "https://scratch.mit.edu/users/Maximouse/"
+			}
+		]
 	},
 	{
 		"id": "onion-skinning",
@@ -795,6 +838,16 @@
 				"name": "Maximouse",
 				"link": "https://scratch.mit.edu/users/Maximouse/"
 			}
+		]
+	},
+	{
+		"id": "studio-followers",
+		"name": "Browse followers button in studios",
+		"description": "Adds a button at the top of the \"curators\" tab in studios you manage, that lists your followers/following and lets you invite a shown user with a single click.",
+		"tags": ["community", "studios"],
+		"credits": [
+			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" },
+			{ "name": "World_Languages" }
 		]
 	},
 	{
