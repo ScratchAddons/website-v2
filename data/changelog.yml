@@ -674,3 +674,22 @@
   Entry: |
     - Adapt addons to the new Scratch 3.0 studio pages on Scratch website
     - Bug fix: "auto-show editor extensions" sometimes breaking music blocks
+
+- Version: v1.17.0
+  Index: 42
+  Tag: v1.17.0
+  Name: v1.17.0
+  Date: 2021-07-14
+  Status: Released
+  Entry: |
+    - New addon: old studio layout
+    - New addon: browse followers button in studios
+    - New addon: HD image uploads [beta]
+    - New addon: non-draggable sprites in editor
+    - "Searchable dropdowns" addon: ability to create variables/lists/messages by searching for the name
+    - "Mouse position" addon: coordinates text is now centered and does not move the clone counter
+    - "Highlight currently executing blocks" addon: new "highlight color" setting
+    - "Developer tools" addon: support searching for blocks added by "debugger" addon
+    - "Infinite scrolling": new page separator on forums
+    - Bug fix: "infinite scrolling" lists duplicate items on studios
+    - Bug fix: "studio manager tools" sometimes not working
