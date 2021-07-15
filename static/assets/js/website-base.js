@@ -244,7 +244,7 @@ $(removeFromSpiders)
 let languageId = document.documentElement.lang
 const languageVariations = navigator.languages.filter(lang => lang.startsWith(languageId))
 if (languageVariations.length) languageId = languageVariations[0]
-const options = { year: 'numeric', month: 'long', day: 'numeric' }
+const options = { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }
 
 $(() => {
     document.querySelectorAll("time").forEach(element => element.textContent = new Date(element.textContent).toLocaleDateString(languageId, options))
