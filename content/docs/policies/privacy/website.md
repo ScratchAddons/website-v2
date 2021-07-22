@@ -2,6 +2,9 @@
 title: Website Privacy Policy
 toc_title: Website
 description: This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons website and the choices you have associated with that data.
+aliases:
+  - /docs/privacy/policies/extension
+  - /privacy/website
 ---
 
 > Last updated: 28 May 2021
