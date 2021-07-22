@@ -693,6 +693,12 @@
     - "Infinite scrolling": new page separator on forums
     - Bug fix: "infinite scrolling" lists duplicate items on studios
     - Bug fix: "studio manager tools" sometimes not working
+  Highlights:
+    Description: |
+      New addon: "old studio layout", which reverts the layout of the studio page back to the one used before the studio update. Go to Scratch Addons settings to enable it.
+      
+      The new "browse followers button in studios" addon brings back one click invites. Other new addons added this update are "HD image uploads" and "non-draggable sprites in editor".
+    YouTubeID: 4OluKLESoVU
 
 
 - Version: v1.17.1
