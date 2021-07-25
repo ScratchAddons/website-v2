@@ -8,7 +8,7 @@ $('.plyrmdl-thumb.plyrmdl-yt').mousedown(event => {
 	// console.log("click: " + youtubeId)
 	window.plyrmdl[youtubeId] = window.plyrmdl[youtubeId] || {}
 
-	if (!window.plyrmdl[youtubeId].player) window.plyrmdl[youtubeId].player = new YTPlayer(`.plyrmdl-modal[data-youtube-id=${youtubeId}] .yt-iframe`, {
+	if (!window.plyrmdl[youtubeId].player) window.plyrmdl[youtubeId].player = new YTPlayer(`.plyrmdl-modal[data-youtube-id="${youtubeId}"] .yt-iframe`, {
 		width: "1280",
 		height: "720",
 		related: 0,
