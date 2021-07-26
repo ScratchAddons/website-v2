@@ -700,7 +700,6 @@
       The new "browse followers button in studios" addon brings back one click invites. Other new addons added this update are "HD image uploads" and "non-draggable sprites in editor".
     YouTubeID: 4OluKLESoVU
 
-
 - Version: v1.17.1
   Index: 43
   Tag: v1.17.1
@@ -712,3 +711,14 @@
     - Bug fix: "debugger" addon blocks not working properly in Japanese
     - Bug fix: "developer tools" addon incompatibility with new "searchable dropdowns" feature
     - Bug fix: "HD image uploads" should not accept GIF files
+
+- Version: v1.17.2
+  Index: 44
+  Tag: v1.17.2
+  Name: v1.17.2
+  Date: 2021-07-26
+  Status: Released
+  Entry: |
+    - Bug fix: "searchable dropdowns" causing blocks to get stuck to cursor
+    - Bug fix: "forum search" breaking scratchblocks already on the page
+    - "Display stage on left side" addon now works more reliably 
