@@ -4,6 +4,9 @@ description: Persistent scripts allow you to run JavaScript in the background! T
 aliases: 
   - /docs/developing/about-persistent-scripts
 ---
+
+> **It's recommended to avoid persistent scripts when possible. A future migration to [Manifest V3](https://developer.chrome.com/docs/extensions/mv3/intro/mv3-migration/#background-service-workers) will require us to use service workers instead of background pages, making persistent scripts a challenge. The fewer persistent scripts there are when we migrate, the better.**
+
 ## What are they?
 Persistent scripts allow you to run JavaScript in the background! They're awesome to notify the user about stuff, or preload data so it's ready when the user needs it.
 
