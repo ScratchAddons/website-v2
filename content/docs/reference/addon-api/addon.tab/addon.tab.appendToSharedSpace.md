@@ -310,6 +310,47 @@ Buttons that go after the "copy link" button in project pages.
   </tr>
 </table>
 
+### `beforeRemixButton`
+Elements that go to the left of the "remix" or "see inside" buttons in project pages.
+
+<table>
+  <tr>
+    <td>Space parent element</td>
+    <td><code>div.project-buttons</code></td>
+  </tr>
+  <tr>
+    <td>Space starting bound</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td>Space ending bound</td>
+    <td>Remix button or see inside button</td>
+  </tr>
+  <tr>
+    <td><code>scope</code> option used</td>
+    <td>❌</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Addon ID</th>
+    <th>Element</th>
+    <th>Order number</th>
+  </tr>
+  <tr>
+    <td><code>project-info</code></td>
+    <td>Sprite and script count</td>
+    <td>0</td>
+  </tr>
+  <tr>
+    <td><code>turbowarp-player</code></td>
+    <td>TurboWarp button</td>
+    <td>1</td>
+  </tr>
+</table>
+
+## Scratch forums spaces
 ### `forumsBeforePostReport`
 Links placed before the "report" button in a specific post.  
 If the "report" button does not exist, a visible placeholder dot will be added to the page automatically to act as a separator between the `forumsBeforePostReport` and `forumsAfterPostReport` spaces.  
@@ -391,45 +432,5 @@ Addition of the `|` separator is handled by the space.
     <td><code>show-bbcode</code></td>
     <td>Show BBCode button</td>
     <td>0</td>
-  </tr>
-</table>
-
-### `beforeRemixButton`
-Elements that go to the left of the "remix" or "see inside" buttons in project pages.
-
-<table>
-  <tr>
-    <td>Space parent element</td>
-    <td><code>div.project-buttons</code></td>
-  </tr>
-  <tr>
-    <td>Space starting bound</td>
-    <td>None</td>
-  </tr>
-  <tr>
-    <td>Space ending bound</td>
-    <td>Remix button or see inside button</td>
-  </tr>
-  <tr>
-    <td><code>scope</code> option used</td>
-    <td>❌</td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <th>Addon ID</th>
-    <th>Element</th>
-    <th>Order number</th>
-  </tr>
-  <tr>
-    <td><code>project-info</code></td>
-    <td>Sprite and script count</td>
-    <td>0</td>
-  </tr>
-  <tr>
-    <td><code>turbowarp-player</code></td>
-    <td>TurboWarp button</td>
-    <td>1</td>
   </tr>
 </table>
