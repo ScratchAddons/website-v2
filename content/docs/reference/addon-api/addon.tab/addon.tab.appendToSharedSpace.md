@@ -395,9 +395,7 @@ Addition of the `|` separator is handled by the space.
 </table>
 
 ### `beforeRemixButton`
-Links placed after the "report" button in a specific post.  
-If the "report" button does not exist, a visible placeholder dot will be added to the page automatically to act as a separator between the `forumsBeforePostReport` and `forumsAfterPostReport` spaces.  
-Addition of the `|` separator is handled by the space.
+Elements that go to the left of the "remix" or "see inside" buttons in project pages.
 
 <table>
   <tr>
@@ -428,5 +426,10 @@ Addition of the `|` separator is handled by the space.
     <td><code>project-info</code></td>
     <td>Sprite and script count</td>
     <td>0</td>
+  </tr>
+  <tr>
+    <td><code>turbowarp-player</code></td>
+    <td>TurboWarp button</td>
+    <td>1</td>
   </tr>
 </table>
