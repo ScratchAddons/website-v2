@@ -21,7 +21,7 @@ The description of the addons. Must end with a dot.
    
 Use standard grammar for referring to parts of the Scratch website or editor:  
 
-**Pages on the website**
+**Pages on the website:**
 * project page
 * editor
 * (user) profile
@@ -31,7 +31,7 @@ Use standard grammar for referring to parts of the Scratch website or editor:
 * (forum) post
 * (Scratch) 2.0/3.0-styled page *(a page which looks like Scratch 2.0/3.0, is a part of scratchr2/scratch-www)*
 
-**Scratch UI elements**
+**Scratch UI elements:**
 * (website) navigation bar *(only use when talking about the website)*
 * (editor) menu bar *(only use when talking about the editor)*
 * sprite pane *(the list of sprites below the stage)*
