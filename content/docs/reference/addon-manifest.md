@@ -61,8 +61,125 @@ Use standard grammar for referring to parts of the Scratch website or editor:
 
 ## `tags` (array, required)
 Tags are used for filtering and badges on the Scratch Addons settings page.  
-One of these is **required**:  `community`, `editor`, `popup`, `easterEgg`.  
-Other options are: `theme`, `beta`, `recommended`, `forums`, `danger`, `codeEditor`, `costumeEditor`, `projectPlayer`, `editorMenuBar` `projectPage`, `profiles`, `studios`, `comments`.
+
+### Required factual tags
+Addons must have one of these tags. No less than one, no more than one.
+
+<table>
+  <tr>
+    <th>Tag name</th>
+    <th>Used by settings page</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>community</code></td>
+    <td>✔️</td>
+    <td>Scratch website features</td>
+  </tr>
+  <tr>
+    <td><code>editor</code></td>
+    <td>✔️</td>
+    <td>Scratch editor features</td>
+  </tr>
+  <tr>
+    <td><code>popup</code></td>
+    <td>✔️</td>
+    <td>Extension popup features</td>
+  </tr>
+</table>
+
+## Optional factual tags
+Addon authors can usually determine these tags themselves.
+
+<table>
+  <tr>
+    <th>Tag name</th>
+    <th>Used by settings page</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>theme</code></td>
+    <td>✔️</td>
+    <td>Addons that should be listed in the "themes" category. Tags <code>community</code> or <code>editor</code> are still required.</td>
+  </tr>
+  <tr>
+    <td><code>easterEgg</code></td>
+    <td>✔️</td>
+    <td>Addons with this tag are visible in the settings page while disabled only after typing the Konami code.</td>
+  </tr>
+  <tr>
+    <td><code>codeEditor</code></td>
+    <td>✔️</td>
+    <td>Addons that mainly affect the Code tab of the editor.</td>
+  </tr>
+  <tr>
+    <td><code>costumeEditor</code></td>
+    <td>✔️</td>
+    <td>Addons that mainly affect the Backdrops/Costumes tab of the editor.</td>
+  </tr>
+  <tr>
+    <td><code>projectPlayer</code></td>
+    <td>✔️</td>
+    <td>Addons that affect the project player in both the website and editor, or that add UI elements above the stage.</td>
+  </tr>
+  <tr>
+    <td><code>editorMenuBar</code></td>
+    <td>❌</td>
+    <td>Addons that add UI elements to the editor's menu bar.</td>
+  </tr>
+  <tr>
+    <td><code>projectPage</code></td>
+    <td>✔️</td>
+    <td>Addons that affect project pages on the website.</td>
+  </tr>
+  <tr>
+    <td><code>profiles</code></td>
+    <td>✔️</td>
+    <td>Addons that affect profile pages on the website.</td>
+  </tr>
+  <tr>
+    <td><code>forums</code></td>
+    <td>✔️</td>
+    <td>Addons that affect the Scratch Forums.</td>
+  </tr>
+  <tr>
+    <td><code>studios</code></td>
+    <td>❌</td>
+    <td>Addons that affect studio pages on the website.</td>
+  </tr>
+  <tr>
+    <td><code>comments</code></td>
+    <td>❌</td>
+    <td>Addons that affect comments on the website, inside project pages, profiles and studios.</td>
+  </tr>
+</table>
+
+### Optional subjective tags
+Addon authors shouldn't add these tags themselves.  
+Whether to add any of these tags will be discussed before merging the addon to the repository.
+
+<table>
+  <tr>
+    <th>Tag name</th>
+    <th>Used by settings page</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td><code>recommended</code></td>
+    <td>✔️</td>
+    <td>Addons that add highly requested, removed, or obvious missing features.</td>
+  </tr>
+  <tr>
+    <td><code>beta</code></td>
+    <td>✔️</td>
+    <td>Addons that haven't been deeply tested, may break in the future or are known to not work properly.</td>
+  </tr>
+  <tr>
+    <td><code>danger</code></td>
+    <td>✔️</td>
+    <td>Addons that users shouldn't enable without paying close attention.</td>
+  </tr>
+</table>
 
 ## `permissions` (array)
 You can specify permissions by providing a `permissions` array.  
