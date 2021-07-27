@@ -12,12 +12,52 @@ Addons are located inside the `addons` folder. Each addon is inside its own fold
 In order to tell the addon loader how the addon plans to work, addons use a standard `addon.json` file located at the root of the addon's folder.  
 
 ## `name` (string, required)
-The name of the addon. Don't make it too long.  
-Try to make a descriptive name, avoid words like "Scratch", "tool", "feature".
+The name of the addon. Must be `Sentence case`.  
+It needs to be relatively short and consistent with other addon's names.  
+Use nouns instead of verbs (for example, `Customizable new sprite position` instead of `Change new sprite position`).
 
 ## `description` (string, required)
-The description of the addons.
-For consistency, descriptions **must** end with a dot.
+The description of the addons. Must end with a dot.  
+   
+Use standard grammar for referring to parts of the Scratch website or editor:  
+
+**Pages on the website**
+* project page
+* editor
+* (user) profile
+* studio page
+* forums
+* (forum) topic
+* (forum) post
+* (Scratch) 2.0/3.0-styled page *(a page which looks like Scratch 2.0/3.0, is a part of scratchr2/scratch-www)*
+
+**Scratch UI elements**
+* (website) navigation bar *(only use when talking about the website)*
+* (editor) menu bar *(only use when talking about the editor)*
+* sprite pane *(the list of sprites below the stage)*
+* costume editor *(not paint editor)*, list of costumes
+* list of sounds, costume/sound list *(for features that work with both costumes and sounds)*
+* costume/sound *(not asset)*
+* block category
+* block category menu
+* block palette
+* code area *(not workspace - Code tab excluding the block palette)*
+* block dropdown *(a dropdown menu opened by clicking a block input)*
+* block context menu *(a menu opened by right clicking a block)*
+* script *(not stack of blocks)*
+* extension
+* comment (on the website/in the code area)
+
+**Locations of added UI elements:**
+* in *(not on)* the navigation bar
+* on *(not in)* the forums
+* on *(not in)* the stage
+* above the stage (in the editor/on the project page)
+* next to the green flag
+* next to the Remix button
+
+**Common words:**
+* customizable
 
 ## `tags` (array, required)
 Tags are used for filtering and badges on the Scratch Addons settings page.  
