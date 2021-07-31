@@ -5,29 +5,72 @@ let smart404Status = html => {
 	})
 }
 
+const regex = {
+	langFromPath: /^\/([a-z0-9]{2}(?:-[a-z0-9]{2,})*)(?=\/)/
+}
+
+const getLanguageDisplayName = languageCode => {
+	try {
+		let intlObjEn = new Intl.DisplayNames(["en"], {type: 'language'})
+		return intlObjEn.of(languageCode)
+	} catch (e) {
+		if (e instanceof RangeError) return languageCode
+		else throw e
+	}
+}
+
+const redirectLanguages = {
+	"pt": "pt-br",
+	"zh": "zh-tw"
+}
+
 ;(async () => {
 
+	let pathName = "/pt/"
+
+	if (pathName === "/404" || pathName === "/404.html") {
+		smart404Status("No suggestions since you are looking for the 404 page.")
+		return
+	}
+
 	try {
-	
+
 		const sitemap = await (await fetch(window.pagePaths.sitemap)).text()
-		const pages = [...sitemap.matchAll(/<loc>(.+?)<\/loc>/g)].map(item => item[1].replaceAll(window.pagePaths.baseUrl, "/"))
-		const pagesi18n = [...sitemap.matchAll(/hreflang=\"(?!en).+?\" href=\"(.+?)\"/g)].map(item => item[1].replaceAll(window.pagePaths.baseUrl, "/"))
+		const pages = {}
+		pages.en = [...sitemap.matchAll(/<loc>(.+?)<\/loc>/g)].map(item => item[1].replaceAll(window.pagePaths.baseUrl, "/"))
+		;[...sitemap.matchAll(/hreflang=\"(?!en).+?\"\s+href=\"(.+?)\"/g)].forEach(item => {
+			let path = item[1].replaceAll(window.pagePaths.baseUrl, "/")
+			const langCode = regex.langFromPath.exec(path)[1]
+			if (!pages[langCode]) pages[langCode] = []
+ 			pages[langCode].push(path)
+		})
 
-		let pathName = document.location.pathname
-
-		if (pathName === "/404" || pathName === "/404.html") {
-			smart404Status("No suggestions since you are looking for the 404 page.")
-			return
+		const interLanguageRedirect = langCode => {
+			let toCheck = pathName
+			toCheck = toCheck.replace(regex.langFromPath, "/")
+			if (!toCheck.endsWith("/")) toCheck += "/"
+			if (!pages[langCode]) return [false, false]
+			let index = pages[langCode].map(path => path.replace(regex.langFromPath, "/")).indexOf(toCheck)
+			if (index + 1) {
+				return [pages[langCode][index], getLanguageDisplayName(langCode)]
+			}
+			return [false, false]
 		}
 
-		if (/^\/[a-z]{2}(-[a-z]{2})?(?!\w)/.test(pathName)) {
-			let toCheck = pathName
-			toCheck = toCheck.replace(/^\/[a-z-]{2,4}/, "")
-			if (!toCheck.endsWith("/")) toCheck += "/"
-			if (pages.indexOf(toCheck) + 1) {
-				smart404Status(`English page found. Redirecting to <a href="${pages[pages.indexOf(toCheck)]}">${pages[pages.indexOf(toCheck)]}</a>...`)
-				document.location.replace(pages[pages.indexOf(toCheck)])
-				return
+		if (regex.langFromPath.test(pathName)) {
+			const langCode = regex.langFromPath.exec(pathName)[1]
+			let [ redirect, languageDisplayName ] = interLanguageRedirect("en")
+			if (redirectLanguages[langCode]) {
+				[ redirect, languageDisplayName ] = interLanguageRedirect(redirectLanguages[langCode])
+			} else if (langCode.split("-").length !== 1) {
+				[ redirect, languageDisplayName ] = interLanguageRedirect(langCode.split("-")[0])
+			}
+			if (redirect) {
+				smart404Status(`${languageDisplayName} page found. Redirecting to <a href="${redirect}">${redirect}</a>...`)
+				const redirectUrlObj = new URL(document.location)
+				redirectUrlObj.pathname = pages[langCode][index]
+				document.location.replace(redirectUrlObj)
+				return	
 			}
 		}
 		
@@ -36,6 +79,7 @@ let smart404Status = html => {
 
 	} catch (e) {
 		
+		console.error(e)
 		smart404Status(`Something went wrong. Please create an issue about this. ${e}`)
 		
 	}
