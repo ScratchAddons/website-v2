@@ -26,7 +26,7 @@ const redirectLanguages = {
 
 ;(async () => {
 
-	let pathName = "/es-419/welcome/"
+	let pathName = document.location.pathname
 
 	if (pathName === "/404" || pathName === "/404.html") {
 		smart404Status("No suggestions since you are looking for the 404 page.")
