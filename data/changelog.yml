@@ -722,3 +722,28 @@
     - Bug fix: "searchable dropdowns" causing blocks to get stuck to cursor
     - Bug fix: "forum search" breaking scratchblocks already on the page
     - "Display stage on left side" addon now works more reliably 
+
+- Version: v1.18.0
+  Index: 45
+  Tag: v1.18.0
+  Name: v1.18.0
+  Date: 2021-08-03
+  Status: Released
+  Entry: |
+    - New addon: TurboWarp button
+    - New addon: more items per row
+    - New addon: Ctrl+Enter to post
+    - New addon: customizable profile picture border
+    - New addon: compact messages
+    - New addon: customizable default project
+    - "Editor dark mode and customizable colors" addon: make costume editor dark, support dark speech bubbles, add "TurboWarp dark" preset
+    - "Developer tools" addon: ability to clean up unused local lists in addition to variables, new Alt+Click hotkey as equivalent to middle click
+    - Support for Firefox Containers
+    - Fix bugs in "display stage on left side" addon
+    - Fix bugs in "customizable block colors" addon
+  Highlights:
+    Description: |
+      New addon: "TurboWarp button", which adds a button on project pages to play the project in TurboWarp.org. Go to Scratch Addons settings to enable it.
+      
+      The new "more items per row" addon lets you see more than 3 projects per row in studios and other parts of the website. Other new addons added this update are "Ctrl+Enter to post" and "customizable default project".
+    YouTubeID: GrKHdKQq_hc
