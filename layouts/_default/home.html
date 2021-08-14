@@ -9,6 +9,8 @@ window.i18nStrings = {
 	installUnsupported: '{{ T "Global.Install" }}'
 }
 </script>
+<script src="/assets/js/odometer.js"></script>
+<link rel="stylesheet" href="/assets/odometer.css">
 
 <section id="intro" class="row px-4 py-5 mb-0 intro-heading text-left">
 	<div class="col-12 col-md-6 py-4 px-3 px-md-4 d-flex flex-column justify-content-center" id="intro-info">
@@ -21,7 +23,10 @@ window.i18nStrings = {
 			</a>
 			<a href="#features" class="btn" id="read-more">{{ T "IndexPage.Intro.ReadMore" }}</a>
 		</div>
-	</div>
+		<div>
+			Users:&nbsp;<p id="total-users" class="odometer"></p>
+		</div>
+</div>
 	<div class="col-12 col-md-6" id="intro-img">
 		<div id="carousel-intro" class="carousel slide h-100" data-interval="false">
 			<ol class="carousel-indicators mb-0">
