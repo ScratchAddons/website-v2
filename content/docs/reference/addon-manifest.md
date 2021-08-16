@@ -239,7 +239,7 @@ The properties of the object are as follows. All properties are required.
 - `"id"`: an identifier to get the user-specified value from your code.  
 - `"type"`: either `"boolean"` (a checkbox), `"positive_integer"` (an input box that only allows 0 and above), `"string"` (up to 100 chars),`"color"` (a browser color input that returns a hex code)  or `"select"` (see `"potential_values"`).  
 - `"default"`: the default value for the option. A boolean, string, or number, depending on the specified type.  
-- `"potentialValues"`: for `"select"` type only. Array of objects, with properties `"id"`, the value received from `addon.tab.traps.getSetting()`, and `"name"`, the user-visible option text.
+- `"potentialValues"`: for `"select"` type only. Array of objects, with properties `"id"`, the value received from `addon.settings.get()`, and `"name"`, the user-visible option text.
 - `"allowTransparency"`: for `"color"` type only. Boolean.
 
 ```json
