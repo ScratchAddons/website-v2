@@ -131,6 +131,7 @@ FeedbackPage:
   UsernameLabel: Scratch username, or other identifiers (optional)
   ContentLabel: Feedback
   ContentPlaceholder: Please provide as much detail as you can.
+  SendEnabled: Send list of my currently enabled addons (recommended)
   SubmitButton: Send
 
 # Strings used for /scratch-messaging-transition
