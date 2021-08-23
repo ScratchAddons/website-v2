@@ -1,5 +1,5 @@
 fetch("https://scratchaddons-feedback.glitch.me/", {mode:'no-cors'})
-const version = new URL(location.href).searchParams.get("ext_version")
+const version = new URL(location.href).searchParams.get("ext_version") || new URL(location.href).searchParams.get("version")
 let enabledAddons = null
 if (location.hash.length && /[0-9A-Fa-f]/g.test(location.hash.substring(2))) {
     enabledAddons = location.hash.substring(2)
