@@ -54,8 +54,8 @@
 		"id": "better-featured-project",
 		"name": "Profile page banner",
 		"description": "Turns the featured project on any user's profile into a nice-looking banner.",
-		"tags": ["community", "recommended", "profiles"],
-		"credits": [{ "name": "Ezlambry", "link": "https://ezlambry.github.io/" }]
+		"tags": ["community", "featured", "profiles"],
+		"credits": [{ "name": "Wicycool", "link": "https://wicy.cool/" }]
 	},
 	{
 		"id": "better-img-uploads",
@@ -101,7 +101,7 @@
 		"id": "block-palette-icons",
 		"name": "Block palette category icons",
 		"description": "Adds icons inside the colored circles that identify block categories.",
-		"tags": ["editor", "codeEditor", "theme"],
+		"tags": ["editor", "codeEditor", "theme", "featured"],
 		"credits": [
 			{
 				"name": "--Explosion--",
@@ -115,7 +115,13 @@
 		"name": "Block switching",
 		"description": "Right click on a block to switch it to a related block.",
 		"tags": ["editor", "codeEditor", "recommended"],
-		"credits": [{ "name": "GarboMuffin" }]
+		"credits": [
+			{ "name": "GarboMuffin" },
+			{
+				"name": "pufferfish101007",
+				"link": "https://scratch.mit.edu/users/pufferfish101007"
+			}
+		]
 	},
 	{
 		"id": "blocks2image",
@@ -130,7 +136,7 @@
 		"id": "cat-blocks",
 		"name": "Cat blocks",
 		"description": "Brings back editor cat hat blocks from April Fools 2020.",
-		"tags": ["editor", "codeEditor"],
+		"tags": ["editor", "codeEditor", "featured"],
 		"credits": [
 			{
 				"name": "TheColaber",
@@ -143,7 +149,7 @@
 		"id": "clones",
 		"name": "Clone counter",
 		"description": "Adds a counter above the stage in the editor which shows the total amount of clones.",
-		"tags": ["editor", "projectPlayer"],
+		"tags": ["editor", "projectPlayer", "recommended"],
 		"credits": [{ "name": "Jeffalo" }]
 	},
 	{
@@ -241,7 +247,7 @@
 		"id": "custom-block-shape",
 		"name": "Customizable block shape",
 		"description": "Adjust the padding, corner radius, and notch height of blocks.",
-		"tags": ["editor", "codeEditor", "theme", "recommended"],
+		"tags": ["editor", "codeEditor", "theme", "featured"],
 		"credits": [
 			{
 				"name": "SheepTester",
@@ -261,7 +267,7 @@
 		"id": "custom-zoom",
 		"name": "Customizable code area zoom",
 		"description": "Choose custom settings for the minimum, maximum, speed, and start size of the zoom of scripts in the code area, and autohide the controls.",
-		"tags": ["editor", "codeEditor"],
+		"tags": ["editor", "codeEditor", "featured"],
 		"credits": [
 			{
 				"name": "ErrorGamer2000",
@@ -300,7 +306,7 @@
 		"id": "dark-www",
 		"name": "Website dark mode",
 		"description": "Dark theme for the Scratch website.",
-		"tags": ["community", "theme", "recommended"],
+		"tags": ["community", "theme", "featured"],
 		"credits": [
 			{
 				"name": "Maximouse",
@@ -319,7 +325,7 @@
 		"id": "debugger",
 		"name": "Debugger",
 		"description": "Adds a new \"debugger\" block category and a \"logs\" window to the editor. The \"log\", \"warn\" and \"error\" blocks will print the specified message into the logs window. The \"breakpoint\" block will pause the project when executed.",
-		"tags": ["editor"],
+		"tags": ["editor", "featured"],
 		"credits": [
 			{ "name": "GrahamSH" },
 			{ "name": "TheColaber" },
@@ -349,7 +355,7 @@
 		"id": "disable-stage-drag-select",
 		"name": "Non-draggable sprites in editor",
 		"description": "Removes the ability to drag sprites around on the stage in the editor, except those explicitly set as draggable.",
-		"tags": ["editor"],
+		"tags": ["editor", "featured"],
 		"credits": [
 			{
 				"name": "Chrome_Cat",
@@ -376,14 +382,14 @@
 		"id": "editor-colored-context-menus",
 		"name": "Colored context menus",
 		"description": "Makes block right click context menus colorful.",
-		"tags": ["editor", "codeEditor", "theme"],
+		"tags": ["editor", "codeEditor", "theme", "featured"],
 		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
 		"id": "editor-dark-mode",
 		"name": "Editor dark mode and customizable colors",
 		"description": "Customize colors used by the project editor. Multiple dark themes by different authors available. If you don't need dark mode but want to change the default colors you can select the \"Scratch's default colors\" preset and tweak it.",
-		"tags": ["editor", "theme", "recommended"],
+		"tags": ["editor", "theme", "featured"],
 		"credits": [
 			{
 				"name": "Maximouse (addon, \"Experimental\" Dark)",
@@ -432,20 +438,20 @@
 		"id": "editor-stage-left",
 		"name": "Display stage on left side",
 		"description": "Moves the stage to the left side of the editor.",
-		"tags": ["editor", "theme", "recommended"],
+		"tags": ["editor", "theme", "featured"],
 		"credits": [{ "name": "NitroCipher/ZenithRogue" }]
 	},
 	{
 		"id": "editor-stepping",
 		"name": "Running block border",
 		"description": "Adds a colored highlight to the blocks that are currently being executed in a project.",
-		"tags": ["editor", "codeEditor"]
+		"tags": ["editor", "codeEditor", "featured"]
 	},
 	{
 		"id": "editor-theme3",
 		"name": "Customizable block colors",
 		"description": "Edit block colors for each category in the editor.",
-		"tags": ["editor", "theme", "codeEditor", "recommended"],
+		"tags": ["editor", "theme", "codeEditor", "featured"],
 		"credits": [
 			{ "name": "NitroCipher/ZenithRogue" },
 			{
@@ -472,14 +478,14 @@
 		"id": "expanding-search-bar",
 		"name": "Expandable search bar",
 		"description": "Makes the search bar in the navigation bar wider when it's focused.",
-		"tags": ["community"],
+		"tags": ["community", "featured"],
 		"credits": [{ "name": "CST1229", "link": "https://github.com/cst1229" }]
 	},
 	{
 		"id": "feature-unshared",
 		"name": "Feature unshared projects",
 		"description": "Allows you to choose unshared projects after clicking \"change featured project\" in your profile.",
-		"tags": ["community", "profiles"],
+		"tags": ["community", "profiles", "featured"],
 		"credits": [
 			{
 				"name": "TheColaber",
@@ -512,6 +518,13 @@
 		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
+		"id": "forum-copy-code",
+		"name": "Copy code button on forums",
+		"description": "Adds a \"copy code\" button above code boxes in forum posts that copies the contents into the clipboard.",
+		"tags": ["community", "forums"],
+		"credits": [{ "name": "CST1229", "link": "https://github.com/CST1229/" }]
+	},
+	{
 		"id": "forum-quote-code-beautifier",
 		"name": "Customizable quotes and code blocks on forums",
 		"description": "Shows nicer code and quote blocks on the forums.",
@@ -535,6 +548,12 @@
 		"tags": ["forums", "community"]
 	},
 	{
+		"id": "forum-toolbar",
+		"name": "More forum toolbar buttons",
+		"description": "Adds buttons in the forum editing toolbar to insert BBCode tags, such as [center] or [color].",
+		"tags": ["community", "forums"]
+	},
+	{
 		"id": "full-signature",
 		"name": "Full areas",
 		"description": "Shows the full content of areas with limited height, such as user signatures on the forums and What I've been doing on profiles, by making them resizable or scrollable.",
@@ -553,8 +572,14 @@
 		"id": "gamepad",
 		"name": "Gamepad support",
 		"description": "Interact with projects using a USB or Bluetooth controller/gamepad.",
-		"tags": ["editor", "projectPlayer", "recommended"],
+		"tags": ["editor", "projectPlayer", "featured"],
 		"credits": [{ "name": "GarboMuffin" }]
+	},
+	{
+		"id": "hide-delete-button",
+		"name": "Hide delete button",
+		"description": "Hides delete button (trash can icon) from sprites, costumes and sounds. They can still be deleted using the right click context menu.",
+		"tags": ["editor", "featured"]
 	},
 	{
 		"id": "hide-flyout",
@@ -569,6 +594,13 @@
 		]
 	},
 	{
+		"id": "hide-project-stats",
+		"name": "Hide project stats",
+		"description": "Lets you hide love, favorite, remix and view counts in the front page and project pages.",
+		"tags": ["community", "projectPage"],
+		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+	},
+	{
 		"id": "image-uploader",
 		"name": "Forums image uploader",
 		"description": "Adds a button to directly upload and insert images into forum posts.",
@@ -579,14 +611,14 @@
 		"id": "infinite-scroll",
 		"name": "Infinite scrolling",
 		"description": "Allow for scrolling on different parts of the site without having to click to \"load more\".",
-		"tags": ["community"],
+		"tags": ["community", "featured"],
 		"credits": [{ "name": "DatOneLefty" }, { "name": "Hans5958" }]
 	},
 	{
 		"id": "initialise-sprite-position",
 		"name": "Customizable new sprite position",
 		"description": "Change the default x/y position of new sprites.",
-		"tags": ["editor"],
+		"tags": ["editor", "featured"],
 		"credits": [
 			{
 				"name": "pufferfish101007",
@@ -598,7 +630,7 @@
 		"id": "items-per-row",
 		"name": "More items per row",
 		"description": "Lets you change the number of items displayed in a single row in a grid of projects, studios, or users.",
-		"tags": ["community"],
+		"tags": ["community", "featured"],
 		"credits": [
 			{
 				"name": "Maximouse",
@@ -623,7 +655,7 @@
 		"id": "live-featured-project",
 		"name": "Live featured project",
 		"description": "Shows an interactive featured project, directly from the user's profile. Based on the implementation in Mega Scratch Userscript.",
-		"tags": ["community", "profiles"],
+		"tags": ["community", "profiles", "featured"],
 		"credits": [
 			{
 				"name": "GRA0007 (original)",
@@ -636,13 +668,13 @@
 		"id": "load-extensions",
 		"name": "Automatically add extensions",
 		"description": "Auto-shows music, pen, and other extensions in the block category menu in the editor.",
-		"tags": ["editor", "codeEditor"]
+		"tags": ["editor", "codeEditor", "featured"]
 	},
 	{
 		"id": "longer-wiwo",
 		"name": "Higher character limit in \"What I'm Working On\"",
 		"description": "Allows you to type 55 more characters in your profile's \"What I'm Working On\". Everyone on Scratch will see the extra characters.",
-		"tags": ["community", "profiles"],
+		"tags": ["community", "profiles", "featured"],
 		"credits": [
 			{ "name": "RedGuy7", "link": "https://paul-s-reid.com/web-dev/other.php" }
 		]
@@ -685,7 +717,7 @@
 		"id": "more-links",
 		"name": "More links",
 		"description": "Adds links for URLs pointing outside scratch.mit.edu.",
-		"tags": ["community"],
+		"tags": ["community", "featured"],
 		"credits": [{ "name": "Hans5958" }]
 	},
 	{
@@ -715,16 +747,30 @@
 	},
 	{
 		"id": "my-ocular",
-		"name": "ocular.jeffalo.net integration",
+		"name": "ocular integration",
 		"description": "Shows ocular statuses and forum post reactions. Uses my-ocular.jeffalo.net to obtain data.",
 		"tags": ["forums", "profiles", "community"],
 		"credits": [{ "name": "Jeffalo" }]
 	},
 	{
+		"id": "name-backpack-items",
+		"name": "Name scripts before placing in backpack",
+		"description": "Asks you to name scripts after you drag them into the backpack, instead of using the default name \"code\".",
+		"tags": ["editor", "codeEditor", "featured"],
+		"credits": [{ "name": "TheColaber" }]
+	},
+	{
+		"id": "no-script-bumping",
+		"name": "Do not automatically space overlapping scripts",
+		"description": "Allows scripts to be moved and modified without causing overlapping scripts to move around.",
+		"tags": ["editor", "codeEditor"],
+		"credits": [{ "name": "GarboMuffin" }]
+	},
+	{
 		"id": "old-studio-layout",
 		"name": "Old studio layout",
 		"description": "Reverts the layout of the studio page back to the one used before the studio update or the one previously available as part of the Scratch 2.0 → 3.0 addon.",
-		"tags": ["community", "theme", "studios"],
+		"tags": ["community", "theme", "studios", "featured"],
 		"credits": [
 			{
 				"name": "Maximouse",
@@ -737,6 +783,13 @@
 		"name": "Onion skinning",
 		"description": "Shows transparent overlays of previous or next costumes when editing a costume. Controlled by buttons under the costume editor by the zoom buttons.",
 		"tags": ["editor", "costumeEditor", "recommended"],
+		"credits": [{ "name": "GarboMuffin" }]
+	},
+	{
+		"id": "paint-by-default",
+		"name": "Paint costume by default",
+		"description": "Changes the default action of \"Choose a Sprite/Costume/Backdrop/Sound\" buttons, which open the library by default.",
+		"tags": ["editor", "recommended"],
 		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
@@ -757,7 +810,7 @@
 		"id": "project-info",
 		"name": "Sprite and script count",
 		"description": "Shows the number of sprites and scripts a project has next to the Remix button.",
-		"tags": ["community", "projectPage"],
+		"tags": ["community", "projectPage", "featured"],
 		"credits": [
 			{
 				"name": "TheColaber",
@@ -781,7 +834,7 @@
 		"id": "redirect-mobile-forums",
 		"name": "Redirect to standard forums",
 		"description": "Redirects you to the standard (\"main\") forums when you click a link to the mobile forums.",
-		"tags": ["community", "forums", "easterEgg"],
+		"tags": ["community", "forums"],
 		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" }]
 	},
 	{
@@ -834,6 +887,17 @@
 			{ "name": "World_Languages" },
 			{ "name": "NitroCipher/ZenithRogue" },
 			{ "name": "notificationsounds.com (Scratch Addons ping)" }
+		]
+	},
+	{
+		"id": "scratchblocks",
+		"name": "3.0 Scratchblocks on forums",
+		"description": "Enables the new version of scratchblocks on the forums.",
+		"tags": ["community", "forums", "beta"],
+		"credits": [
+			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" },
+			{ "name": "CubeyTheCube", "link": "https://github.com/CubeyTheCube" },
+			{ "name": "apple502j", "link": "https://github.com/apple502j" }
 		]
 	},
 	{
@@ -890,7 +954,7 @@
 		"id": "studio-followers",
 		"name": "Browse followers button in studios",
 		"description": "Adds a button at the top of the \"curators\" tab in studios you manage, that lists your followers and followed users and lets you invite a shown user with a single click.",
-		"tags": ["community", "studios"],
+		"tags": ["community", "studios", "featured"],
 		"credits": [
 			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" },
 			{ "name": "World_Languages" }
@@ -933,7 +997,7 @@
 		"id": "turbowarp-player",
 		"name": "TurboWarp button",
 		"description": "Adds a button on project pages to play the project in TurboWarp.org, next to the Remix button.",
-		"tags": ["community", "projectPage"],
+		"tags": ["community", "projectPage", "featured"],
 		"credits": [
 			{
 				"name": "TheColaber",
@@ -942,10 +1006,19 @@
 		]
 	},
 	{
+		"id": "user-id",
+		"name": "Show user IDs",
+		"description": "Adds the user ID next to the username at the top of profile pages.",
+		"tags": ["community", "profiles"],
+		"credits": [
+			{ "name": "LankyBox01", "link": "https://lankybox01.leahcimto.com/" }
+		]
+	},
+	{
 		"id": "variable-manager",
 		"name": "Variable manager",
 		"description": "Adds a tab next to \"sounds\" in the editor for easily updating variables and lists.",
-		"tags": ["editor", "recommended"],
+		"tags": ["editor", "featured"],
 		"credits": [{ "name": "Jeffalo" }, { "name": "GarboMuffin" }]
 	},
 	{
