@@ -747,3 +747,48 @@
       
       The new "more items per row" addon lets you see more than 3 projects per row in studios and other parts of the website. Other new addons added this update are "Ctrl+Enter to post" and "customizable default project".
     YouTubeID: GrKHdKQq_hc
+
+- Version: v1.19.0
+  Index: 46
+  Tag: v1.19.0
+  Name: v1.19.0
+  Date: 2021-08-23
+  Status: Yanked
+  Entry: |
+    - New addon: hide delete button
+    - New addon: name scripts before placing in backpack
+    - New addon: paint costume by default [recommended]
+    - New addon: 3.0 Scratchblocks on forums
+    - New addon: do not automatically space overlapping scripts
+    - New addon: copy code button on forums
+    - New addon: hide project stats
+    - New addon: more forum toolbar buttons
+    - New addon: show user IDs
+    - "Editor dark mode and customizable colors" addon: new "change the costume editor background and selection border" setting
+    - "TurboWarp button" addon: support running addons in player mode (also applies to "live featured project" addon when using TurboWarp)
+    - "Block switching" addon: add custom block arguments switching
+    - "Message count on extension icon" addon: new "indicate when not signed in" setting
+    - "Customizable block colors" addon: support blocks added by Scratch Addons
+    - "Drag and drop files" addon: new "use HD uploads" setting if "HD image uploads" addon is enabled
+    - "Scratch Messaging" addon: support multiline comments if "line breaks in comments" addon is enabled
+    - "Featured" addons are now displayed separately in settings page
+    - Ability to send list of enabled addons when sending feedback to Scratch Addons developers
+    - Bug fix: "customizable default project" working inconsistently
+    - Bug fix: "display stage on left side" breaking trashing of blocks by dragging them to pallete in RTL languages
+    - Bug fix: addons sometimes not loading in the page randomly
+  Highlights:
+    Description: |
+      New addon: "paint costume by default", which lets you change the default action of "Choose a Sprite/Costume/Backdrop/Sound" buttons. Go to Scratch Addons settings to enable it.
+
+      The new "name scripts before placing in backpack" addon asks you to name scripts after you drag them into the backpack. Other new addons added this update are "hide delete button" and "hide project stats".
+    YouTubeID: I8zZPzVlD_I
+
+- Version: v1.19.1
+  Index: 47
+  Tag: v1.19.1
+  Name: v1.19.1
+  Date: 2021-08-26
+  Status: Released
+  Entry: |
+    - Bug fix: "Scratch Messaging" not handling spaces correctly
+    - Bug fix: "paint costume by default" not considering sprites with no sounds
