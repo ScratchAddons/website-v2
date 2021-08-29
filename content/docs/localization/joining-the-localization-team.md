@@ -27,7 +27,7 @@ _Note: choose any option for "department" and "job title", we recommend "localiz
 - On then next step, select "join an existing project".
 - Choose the language you want to help with.
 
-You'll soon be accepted into the Transifex team and you'll get email notifications when there's new strings to translate.
+You'll soon be accepted into the Transifex team and you'll get email notifications when there are new strings to translate.
 
 ### Notes:
 
