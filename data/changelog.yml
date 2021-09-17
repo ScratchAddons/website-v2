@@ -792,3 +792,23 @@
   Entry: |
     - Bug fix: "Scratch Messaging" not handling spaces correctly
     - Bug fix: "paint costume by default" not considering sprites with no sounds
+
+- Version: v1.20.0
+  Index: 48
+  Tag: v1.20.0
+  Name: v1.20.0
+  Date: 2021-09-17
+  Status: Released
+  Entry: |
+    - New addon: grab single block with Ctrl key
+    - New addon: hide new variables
+    - New addon: move costume to top or bottom (previously part of "developer tools")
+    - New addon: extra key support
+    - New addon: unshare button in editor
+    - New addon: remix button in own projects
+    - "Editor dark mode and customizable colors" addon: new "Scratch 2.0" preset
+    - "Block switching" addon: support switching blocks added by "debugger" addon
+    - "Scratch Messaging", "Scratch Notifier" and "Message filters" addons: support studio host transfer messages
+    - Bug fix: "studio tools" crashing studio pages
+    - Bug fix: "customizable default project" overwriting uploaded projects
+    - Bug fix: addons not loading in Explore page
