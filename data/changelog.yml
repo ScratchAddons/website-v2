@@ -812,3 +812,21 @@
     - Bug fix: "studio tools" crashing studio pages
     - Bug fix: "customizable default project" overwriting uploaded projects
     - Bug fix: addons not loading in Explore page
+  Highlights:
+    Description: |
+      New addon: "grab single block with Ctrl key", which adds the ability to drag a single block out of the middle of a script (instead of the entire stack attached below it) while holding the Ctrl key. Go to Scratch Addons settings to enable it.
+
+      The "editor dark mode and customizable colors" addon has a new "Scratch 2.0" color preset. Other new addons added this update are "hide new variables" and "move costume to top or bottom".
+    ImagePath: /assets/img/release-highlights/single-block-grab.gif
+
+- Version: v1.20.1
+  Index: 49
+  Tag: v1.20.1
+  Name: v1.20.1
+  Date: 2021-09-20
+  Status: Released
+  Entry: |
+    - Bug fix: "developer tools" paste block feature conflicting with "grab single block with Ctrl key"
+    - Bug fix: "website dark mode" not making some parts of Explore dark
+    - Bug fix: "extra key support" sometimes not working
+    - Bug fix: "line breaks in comments" sometimes making comments big
