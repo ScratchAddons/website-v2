@@ -830,3 +830,13 @@
     - Bug fix: "website dark mode" not making some parts of Explore dark
     - Bug fix: "extra key support" sometimes not working
     - Bug fix: "line breaks in comments" sometimes making comments big
+
+- Version: v1.20.2
+  Index: 50
+  Tag: v1.20.2
+  Name: v1.20.2
+  Date: 2021-09-22
+  Status: Released
+  Entry: |
+    - Adapt addons to the new Scratch "studio host" feature
+    - Improve loading speed of editor when "debugger" addon is enabled
