@@ -44,7 +44,7 @@ Additionally, Scratch Addons (for obvious reasons) requires Internet connection.
 
 ### Can I use Scratch Addons on a mobile device?
 
-For Android users: Yes, but it is not recommended. Major browsers do not allow Scratch Addons (or any other extensions) to be installed, so you need to use browsers such as [Kiwi](https://kiwibrowser.com/) to do so. Scratch Addons' UI is not well-tested on touchscreens or environments with small viewport size, so some of the features might not work as expected.
+For Android users: Yes, but it is not recommended. Major browsers do not allow Scratch Addons (or any other extensions) to be installed, so you need to use browsers such as [Kiwi](https://kiwibrowser.com/) to do so. Scratch Addons' UI is not well-tested on touchscreens or environments with small screen size, so some of the features might not work as expected.
 
 For iOS and iPadOS users: Sadly, it is not. App Store policy does not allow browser implementations to be uploaded, which means all browsers available on that platform are just re-skinned Safari. This causes some problems (see below).
 
@@ -66,7 +66,7 @@ Some browser extensions and userscripts may interfere with Scratch Addons. If yo
 
 - Scratch 3 Developer Tools: This browser extension is a copy of the Developer tools addon. You should uninstall the Developer Tools browser extension and turn on the addon instead.
 - Better3.0: This browser extension can interfere with some addons. Luckily, most of its features are also available as addons.
-- Redux DevTools: This can interfere with the internal workings of Scratch Addons. Disable it if you are not using.
+- Redux DevTools: This can interfere with the internal workings of Scratch Addons. You should disable Redux DevTools extension if you are not using it.
 
 ## Security and Privacy
 
@@ -115,7 +115,12 @@ Some specific advices:
 
 First, disable and re-enable the "Scratch notifier" addon. This can fix some issues.
 
-If the problem continues, then check the operating system's notification settings. You have to allow the browser - such as Google Chrome - to send notifications. For example, on Windows, you can configure it on the "Notifications & actions" settings' "Change notification settings for individual senders" section. For more information, you should check [the help article](https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-8942c744-6198-fe56-4639-34320cf9444e).
+If the problem continues, then check the operating system's notification settings. You have to allow the browser - such as Google Chrome - to send notifications. 
+
+- Windows: You can configure it on the "Notifications & actions" settings' "Change notification settings for individual senders" section. See [the help article](https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-8942c744-6198-fe56-4639-34320cf9444e).
+- macOS: You can configure it on the System Preferences's "Notifications" section. After opening the page, select the browser (e.g. Google Chrome) on the left and enable the notification. See [the help article](https://support.apple.com/en-us/HT204079).
+
+You should also make sure that "focus assist" (on Windows) or "Do Not Disturb" (on macOS) is disabled.
 
 ### How do I watch the recorded project?
 
