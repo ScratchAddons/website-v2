@@ -840,3 +840,28 @@
   Entry: |
     - Adapt addons to the new Scratch "studio host" feature
     - Improve loading speed of editor when "debugger" addon is enabled
+
+- Version: v1.21.0
+  Index: 51
+  Tag: v1.21.0
+  Name: v1.21.0
+  Date: 2021-10-13
+  Status: Released
+  Entry: |
+    - New addon: duplicate script with Alt key
+    - New addon: enhanced full screen
+    - New addon: emoji picker for comments
+    - New addon: do not shift pasted items
+    - New addon: echo effect button
+    - Scratch Addons can now be used in incognito mode if enabled on browser settings
+    - “Editor dark mode and customizable colors” addon: added preview on settings page
+    - "Editor dark mode and customizable colors” addon: new "Scratch 1.x" preset
+    - "Extra key support" addon: support experimental keys and shift keys
+    - "Confirmations" addon: new "confirm project unsharing" settings
+    - "Project video recorder" addon: new "start delay" option
+  Highlights:
+    Description: |
+      New addon: "duplicate script with Alt key", which adds the ability to quickly duplicate a script by dragging it while holding the Alt key. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "enhanced full screen" and "emoji picker for comments".
+    YouTubeID: QnvgB5ILZCg
