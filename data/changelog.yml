@@ -865,3 +865,16 @@
 
       Other new addons added this update are "enhanced full screen" and "emoji picker for comments".
     YouTubeID: QnvgB5ILZCg
+
+
+- Version: v1.21.1
+  Index: 51
+  Tag: v1.21.1
+  Name: v1.21.1
+  Date: 2021-10-17
+  Status: Released
+  Entry: |
+    - Support updated Scratch FAQ and upcoming "2020 Annual Report" pages
+    - "Enhanced full screen" addon: fix bugs
+    - "Developer tools" addon: fix find bar not working in some languages
+    
