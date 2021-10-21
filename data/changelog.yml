@@ -876,3 +876,13 @@
     - Support updated Scratch FAQ and upcoming "2020 Annual Report" pages
     - "Enhanced full screen" addon: fix bugs
     - "Developer tools" addon: fix find bar not working in some languages
+
+- Version: v1.21.2
+  Index: 52
+  Tag: v1.21.2
+  Name: v1.21.2
+  Date: 2021-10-21
+  Status: Released
+  Entry: |
+    - "Enhanced full screen" addon: fix bugs
+    - "Studio tools" addon: fix bugs
