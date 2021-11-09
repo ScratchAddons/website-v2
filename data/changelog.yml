@@ -886,3 +886,28 @@
   Entry: |
     - "Enhanced full screen" addon: fix bugs
     - "Studio tools" addon: fix bugs
+
+- Version: v1.22.0
+  Index: 53
+  Tag: v1.22.0
+  Name: v1.22.0
+  Date: 2021-11-10
+  Status: Released
+  Entry: |
+    - "Enhanced full screen" addon: fix bugs
+    - "Studio tools" addon: fix bugs
+    - New addon: switch variables between "For all sprites" and "For this sprite only" [beta]
+    - New addon: better editor comments
+    - New addon: two-column category menu
+    - New addon: search bar on My Stuff
+    - New addon: editor comment previews
+    - New addon: hide Tutorials button
+    - New addon: quote post number
+    - "Better emojis" addon: support meow, gobo and waffle emojis
+    - "Block switching" addon: fix bug when switching custom block arguments
+  Highlights:
+    Description: |
+      New addon: "switch variables between 'For all sprites' and 'For this sprite only'", which allows changing the scope of variables and lists and whether variables are stored in the cloud. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "better editor comments", "two-column category menu" and "search bar on My Stuff".
+    YouTubeID: QnvgB5ILZCg
