@@ -106,8 +106,16 @@
 			{
 				"name": "lisa_wolfgang",
 				"link": "https://scratch.mit.edu/users/lisa_wolfgang"
-			}
+			},
+			{ "name": "GarboMuffin" }
 		]
+	},
+	{
+		"id": "block-duplicate",
+		"name": "Duplicate script with Alt key",
+		"description": "Quickly duplicate a script by dragging it while holding the Alt key. Hold Ctrl as well to only duplicate a single block instead of the entire stack attached below it.",
+		"tags": ["editor", "codeEditor", "featured"],
+		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
 		"id": "block-palette-icons",
@@ -241,7 +249,9 @@
 		"name": "Ctrl+Enter to post",
 		"description": "Automatically posts the comment or forum post on Ctrl+Enter.",
 		"tags": ["community"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
+		]
 	},
 	{
 		"id": "curator-link",
@@ -349,7 +359,9 @@
 		"name": "Customizable default project",
 		"description": "Change the default project from the Scratch Cat to any existing project.",
 		"tags": ["editor", "beta"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
 	},
 	{
 		"id": "disable-auto-save",
@@ -362,6 +374,13 @@
 				"link": "https://scratch.mit.edu/users/RustingRobot"
 			}
 		]
+	},
+	{
+		"id": "disable-paste-offset",
+		"name": "Do not shift pasted items",
+		"description": "Paste copied items at their original position instead of shifted slightly in the costume editor.",
+		"tags": ["editor", "costumeEditor"],
+		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
 		"id": "disable-stage-drag-select",
@@ -389,6 +408,12 @@
 		"description": "Lets you drag images and sounds from your file manager into the sprite pane or costume/sound list. You can also drag text files into lists or \"ask and wait\" question inputs.",
 		"tags": ["editor", "recommended"],
 		"credits": [{ "name": "Sheep_maker" }]
+	},
+	{
+		"id": "echo-effect",
+		"name": "Echo effect button",
+		"description": "Brings back the Echo button in the sound editor.",
+		"tags": ["editor"]
 	},
 	{
 		"id": "editor-colored-context-menus",
@@ -428,7 +453,7 @@
 	{
 		"id": "editor-extra-keys",
 		"name": "Extra key support",
-		"description": "Adds more keys to the \"key () pressed?\" block dropdown, such as enter, dot, comma, and more.",
+		"description": "Adds more keys to the \"key () pressed?\" and \"when () key pressed\" block dropdowns, such as enter, dot, comma, and more.",
 		"tags": ["editor", "codeEditor", "beta"],
 		"credits": [
 			{ "name": "Tacodude7729", "link": "https://github.com/Tacodude7729" }
@@ -486,7 +511,16 @@
 		"name": "Unshare button in editor",
 		"description": "Replaces the \"Shared\" button next to the project title box with a button to unshare the project.",
 		"tags": ["editor", "editorMenuBar"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
+	},
+	{
+		"id": "emoji-picker",
+		"name": "Emoji picker for comments",
+		"description": "Adds a button to insert emojis to comments on the website.",
+		"tags": ["community", "comments", "featured"],
+		"credits": [{ "name": "CST1229", "link": "https://github.com/CST1229" }]
 	},
 	{
 		"id": "exact-count",
@@ -597,6 +631,15 @@
 		]
 	},
 	{
+		"id": "fullscreen",
+		"name": "Enhanced full screen",
+		"description": "Fixes some undesired effects in the project player's full screen mode, opens it in your browser's full screen mode, and hides the green flag toolbar.",
+		"tags": ["editor", "projectPlayer", "featured"],
+		"credits": [
+			{ "name": "lisa_wolfgang", "link": "https://github.com/lisa-wolfgang" }
+		]
+	},
+	{
 		"id": "gamepad",
 		"name": "Gamepad support",
 		"description": "Interact with projects using a USB or Bluetooth controller/gamepad.",
@@ -633,7 +676,9 @@
 		"name": "Hide project stats",
 		"description": "Lets you hide love, favorite, remix and view counts in the front page and project pages.",
 		"tags": ["community", "projectPage"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
 	},
 	{
 		"id": "image-uploader",
@@ -683,7 +728,7 @@
 				"name": "TheColaber",
 				"link": "https://scratch.mit.edu/users/TheColaber"
 			},
-			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" }
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
 		]
 	},
 	{
@@ -876,14 +921,18 @@
 		"name": "Redirect to standard forums",
 		"description": "Redirects you to the standard (\"main\") forums when you click a link to the mobile forums.",
 		"tags": ["community", "forums"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
+		]
 	},
 	{
 		"id": "remix-button",
 		"name": "Remix button in own projects",
 		"description": "Adds the Remix button to your own projects.",
 		"tags": ["community", "projectPage"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
 	},
 	{
 		"id": "remix-tree-button",
@@ -943,7 +992,7 @@
 		"description": "Enables the new version of scratchblocks on the forums.",
 		"tags": ["community", "forums", "beta"],
 		"credits": [
-			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" },
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" },
 			{ "name": "CubeyTheCube", "link": "https://github.com/CubeyTheCube" },
 			{ "name": "apple502j", "link": "https://github.com/apple502j" }
 		]
@@ -1004,7 +1053,7 @@
 		"description": "Adds a button at the top of the \"curators\" tab in studios you manage, that lists your followers and followed users and lets you invite a shown user with a single click.",
 		"tags": ["community", "studios", "featured"],
 		"credits": [
-			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" },
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" },
 			{ "name": "World_Languages" }
 		]
 	},
