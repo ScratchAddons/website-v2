@@ -906,7 +906,6 @@
     - "Thumbnail setter" addon: move Set Thumbnail button to project page instead of editor menu bar
     - "Developer tools" addon: support holding Shift while dragging blocks to avoid closing the Ctrl+Space floating box
     - "Better emojis" addon: support meow, gobo and waffle emojis
-    - "Better emojis" addon: support meow, gobo and waffle emojis
     - "Block switching" addon: fix bug when switching custom block arguments
   Highlights:
     Description: |
