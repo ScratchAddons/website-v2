@@ -184,7 +184,14 @@ const run = async () => {
 	document.querySelector(".lds-ellipsis").hidden = true
 
 	// Create elements based on the object
-	contributors.forEach(contributor => {
+	contributors
+		.sort((a,b) => {
+			const lowerA = a.login.toLowerCase(),
+				lowerB = b.login.toLowerCase();
+
+			return lowerA > lowerB ? 1 : lowerA==lowerB ? 0 : -1
+		})
+		.forEach(contributor => {
 		
 		// Contributor name text (top part)
 		let nameEl = document.createElement("p")
