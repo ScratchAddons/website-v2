@@ -903,6 +903,9 @@
     - New addon: editor comment previews
     - New addon: hide Tutorials button
     - New addon: quote post number
+    - "Thumbnail setter" addon: move Set Thumbnail button to project page instead of editor menu bar
+    - "Developer tools" addon: support holding Shift while dragging blocks to avoid closing the Ctrl+Space floating box
+    - "Better emojis" addon: support meow, gobo and waffle emojis
     - "Better emojis" addon: support meow, gobo and waffle emojis
     - "Block switching" addon: fix bug when switching custom block arguments
   Highlights:
@@ -910,4 +913,4 @@
       New addon: "switch variables between 'For all sprites' and 'For this sprite only'", which allows changing the scope of variables and lists and whether variables are stored in the cloud. Go to Scratch Addons settings to enable it.
 
       Other new addons added this update are "better editor comments", "two-column category menu" and "search bar on My Stuff".
-    YouTubeID: QnvgB5ILZCg
+    YouTubeID: 9y4IsQLz3rk
