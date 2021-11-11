@@ -894,8 +894,6 @@
   Date: 2021-11-10
   Status: Released
   Entry: |
-    - "Enhanced full screen" addon: fix bugs
-    - "Studio tools" addon: fix bugs
     - New addon: switch variables between "For all sprites" and "For this sprite only" [beta]
     - New addon: better editor comments
     - New addon: two-column category menu
