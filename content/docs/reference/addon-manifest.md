@@ -353,3 +353,23 @@ Indicates whether the addon's userstyles should be removed and rematched to the 
 
 ## `versionAdded` (string)
 The version the addon was added. If the value is the same as the current version of the extension, the addon will get the new tag.
+
+## `customCssVariables` (array)
+An array of CSS variables that will be set if the addon is enabled. Each item is an object with two properties, both required:
+- `"name"` (string): the name of the variable. To avoid conflicts between variables with the same name in different addons, the actual name will be `--{addonId}-{name}`, where `{addonId}` is the addon ID converted to camel case and `{name}` is the value of this property.
+- `"value"`: a *value provider* - a string, number, or an object with a `type` property that defines what the CSS variable will be set to. The possible types are:
+  - `"settingValue"`: the value of an addon setting. Value providers of this type have an additional required property named `settingId` (string).
+  - `"ternary"`: returns one of two possible values depending on the result of a Boolean value provider. The following additional properties are required:
+    - `"source"`: a value provider that returns a Boolean.
+    - `"true"`: the result that will be used if `source` returns true.
+    - `"false"`: the result that will be used if `source` returns false.
+  - `"textColor"`: chooses one of two possible text colors based on a background color. The following additional properties can be set:
+    - `"source"` (required): a value provider that returns a background color.
+    - `"black"`: a value provider that returns the text color that will be used on bright background colors. Defaults to `#575e75`.
+    - `"white"`: a value provider that returns the text color that will be used on dark background colors. Defaults to `#ffffff`.
+    - `"threshold"`: white text will be used on colors at least as dark as the threshold, which must be a number between 0 and 255. Defaults to 170, which is equivalent to the color `#aaaaaa`.
+  - `"multiply"`: multiplies components of the result of the `source` color value provider (required) with specified coefficients `r`, `g`, `b`, and `a`, which must be numbers between 0 and 1. 1 is the default value if a coefficient is not specified.
+  - `"brighten"`: same as `multiply`, but increases the components of the source color instead.
+  - `"alphaBlend"`: has two additional properties, `opaqueSource` and `transparentSource`. Both are required and must be value providers that return colors. `opaqueSource` does not need to be fully opaque, but its opacity will be ignored.
+  - `"makeHsv"`: converts a HSV color to RGB. The additional properties are `h`, `s`, and `v`. Each must be a value provider that returns either a number or a color. Colors will be converted to HSV and the value of the relevant component will be used. This allows making a color that uses the hue of one color chosen by the user and the brightness of another.
+  - `"recolorFilter"`: a CSS filter that replaces every color with the result of the `source` color value provider (required).
