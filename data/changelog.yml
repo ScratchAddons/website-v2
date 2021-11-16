@@ -911,3 +911,15 @@
 
       Other new addons added this update are "better editor comments", "two-column category menu" and "search bar on My Stuff".
     YouTubeID: 9y4IsQLz3rk
+
+- Version: v1.22.1
+  Index: 54
+  Tag: v1.22.1
+  Name: v1.22.1
+  Date: 2021-11-16
+  Status: Released
+  Entry: |
+    - Bug fix: "editor comment previews" not working after leaving and entering editor, improve readability on Firefox, and more
+    - Bug fix: "enhanced full screen" not resizing "ask and wait" prompts
+    - Bug fix: "auto-hiding block palette" showing palette when dragging workspace
+    - Bug fix: "search bar on My Stuff" breaking other inputs on Firefox
