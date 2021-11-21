@@ -28,26 +28,17 @@
 	{
 		"id": "animated-thumb",
 		"name": "Thumbnails setter",
-		"description": "Adds a button to the editor menu bar to set the thumbnail of your project to any image (including gifs).",
-		"tags": ["editor", "editorMenuBar", "recommended"],
-		"credits": [
-			{
-				"name": "World_Languages",
-				"link": "https://github.com/WorldLanguages/animatedThumbnailsBookmarklet/blob/master/code.js"
-			},
-			{
-				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
-			}
-		]
+		"description": "Adds a button to the bottom-right of the project page to set the thumbnail of your project to any image (including gifs).",
+		"tags": ["community", "projectPage", "recommended"]
 	},
 	{
 		"id": "better-emojis",
 		"name": "Better emojis",
-		"description": "Replaces the cat emojis in comments on the website with improved vector designs.",
+		"description": "Replaces the emojis in comments on the website with improved vector designs.",
 		"tags": ["community", "comments"],
 		"credits": [
-			{ "name": "getbent", "link": "https://scratch.mit.edu/users/getbent/" }
+			{ "name": "getbent", "link": "https://scratch.mit.edu/users/getbent/" },
+			{ "name": "kccuber", "link": "https://scratch.mit.edu/users/kccuber/" }
 		]
 	},
 	{
@@ -106,8 +97,16 @@
 			{
 				"name": "lisa_wolfgang",
 				"link": "https://scratch.mit.edu/users/lisa_wolfgang"
-			}
+			},
+			{ "name": "GarboMuffin" }
 		]
+	},
+	{
+		"id": "block-duplicate",
+		"name": "Duplicate script with Alt key",
+		"description": "Quickly duplicate a script by dragging it while holding the Alt key. Hold Ctrl as well to only duplicate a single block instead of the entire stack attached below it.",
+		"tags": ["editor", "codeEditor", "featured"],
+		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
 		"id": "block-palette-icons",
@@ -185,6 +184,15 @@
 		]
 	},
 	{
+		"id": "columns",
+		"name": "Two-column category menu",
+		"description": "Splits the block category menu into two columns and moves it to the top of the block palette, like in Scratch 2.0.",
+		"tags": ["editor", "codeEditor", "featured"],
+		"credits": [
+			{ "name": "TheColaber", "link": "https://scratch.mit.edu/TheColaber" }
+		]
+	},
+	{
 		"id": "comments-linebreaks",
 		"name": "Line breaks in comments",
 		"description": "Makes line breaks (pressing Enter) in comments on the website visible instead of converting them to spaces.",
@@ -241,7 +249,9 @@
 		"name": "Ctrl+Enter to post",
 		"description": "Automatically posts the comment or forum post on Ctrl+Enter.",
 		"tags": ["community"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
+		]
 	},
 	{
 		"id": "curator-link",
@@ -349,7 +359,9 @@
 		"name": "Customizable default project",
 		"description": "Change the default project from the Scratch Cat to any existing project.",
 		"tags": ["editor", "beta"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
 	},
 	{
 		"id": "disable-auto-save",
@@ -362,6 +374,13 @@
 				"link": "https://scratch.mit.edu/users/RustingRobot"
 			}
 		]
+	},
+	{
+		"id": "disable-paste-offset",
+		"name": "Do not shift pasted items",
+		"description": "Paste copied items at their original position instead of shifted slightly in the costume editor.",
+		"tags": ["editor", "costumeEditor"],
+		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
 		"id": "disable-stage-drag-select",
@@ -391,11 +410,30 @@
 		"credits": [{ "name": "Sheep_maker" }]
 	},
 	{
+		"id": "echo-effect",
+		"name": "Echo effect button",
+		"description": "Brings back the Echo button in the sound editor.",
+		"tags": ["editor"]
+	},
+	{
 		"id": "editor-colored-context-menus",
 		"name": "Colored context menus",
 		"description": "Makes block right click context menus colorful.",
 		"tags": ["editor", "codeEditor", "theme", "featured"],
 		"credits": [{ "name": "GarboMuffin" }]
+	},
+	{
+		"id": "editor-comment-previews",
+		"name": "Editor comment previews",
+		"description": "Allows you to preview the contents of comments by hovering over collapsed comments and blocks. You can use this to view comments that are off-screen, identify a loop block from the bottom by its preview, fit many long comments in a small space, and more.",
+		"tags": ["editor", "codeEditor"],
+		"credits": [
+			{
+				"name": "lisa_wolfgang",
+				"link": "https://scratch.mit.edu/users/lisa_wolfgang"
+			},
+			{ "name": "GarboMuffin" }
+		]
 	},
 	{
 		"id": "editor-dark-mode",
@@ -428,7 +466,7 @@
 	{
 		"id": "editor-extra-keys",
 		"name": "Extra key support",
-		"description": "Adds more keys to the \"key () pressed?\" block dropdown, such as enter, dot, comma, and more.",
+		"description": "Adds more keys to the \"key () pressed?\" and \"when () key pressed\" block dropdowns, such as enter, dot, comma, and more.",
 		"tags": ["editor", "codeEditor", "beta"],
 		"credits": [
 			{ "name": "Tacodude7729", "link": "https://github.com/Tacodude7729" }
@@ -486,7 +524,16 @@
 		"name": "Unshare button in editor",
 		"description": "Replaces the \"Shared\" button next to the project title box with a button to unshare the project.",
 		"tags": ["editor", "editorMenuBar"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
+	},
+	{
+		"id": "emoji-picker",
+		"name": "Emoji picker for comments",
+		"description": "Adds a button to insert emojis to comments on the website.",
+		"tags": ["community", "comments", "featured"],
+		"credits": [{ "name": "CST1229", "link": "https://github.com/CST1229" }]
 	},
 	{
 		"id": "exact-count",
@@ -522,6 +569,16 @@
 		]
 	},
 	{
+		"id": "fix-editor-comments",
+		"name": "Better editor comments",
+		"description": "Makes numerous changes to comments in the Scratch editor: fixes a bug where comments attached to blocks don't save their positions correctly after dragging, adds a scroll bar on comments where text is clipped, and allows you to edit standalone comments by clicking directly where you want to start typing.",
+		"tags": ["editor", "codeEditor", "recommended"],
+		"credits": [
+			{ "name": "GarboMuffin", "link": "https://github.com/GarboMuffin" },
+			{ "name": "lisa_wolfgang", "link": "https://github.com/lisa-wolfgang" }
+		]
+	},
+	{
 		"id": "fix-pasted-scripts",
 		"name": "Do not automatically run duplicated blocks",
 		"description": "Fixes a bug in the Scratch editor, where duplicating a block and attaching it to a script causes the script to run.",
@@ -551,6 +608,13 @@
 		"description": "Adds a \"copy code\" button above code boxes in forum posts that copies the contents into the clipboard.",
 		"tags": ["community", "forums"],
 		"credits": [{ "name": "CST1229", "link": "https://github.com/CST1229/" }]
+	},
+	{
+		"id": "forum-id",
+		"name": "Quote post number",
+		"description": "Click the \"quote post number\" button to include a link to the post in your reply.",
+		"tags": ["community", "forums"],
+		"credits": [{ "name": "itta611", "link": "https://github.com/itta611/" }]
 	},
 	{
 		"id": "forum-quote-code-beautifier",
@@ -597,6 +661,15 @@
 		]
 	},
 	{
+		"id": "fullscreen",
+		"name": "Enhanced full screen",
+		"description": "Fixes some undesired effects in the project player's full screen mode, opens it in your browser's full screen mode, and hides the green flag toolbar.",
+		"tags": ["editor", "projectPlayer", "featured"],
+		"credits": [
+			{ "name": "lisa_wolfgang", "link": "https://github.com/lisa-wolfgang" }
+		]
+	},
+	{
 		"id": "gamepad",
 		"name": "Gamepad support",
 		"description": "Interact with projects using a USB or Bluetooth controller/gamepad.",
@@ -633,7 +706,9 @@
 		"name": "Hide project stats",
 		"description": "Lets you hide love, favorite, remix and view counts in the front page and project pages.",
 		"tags": ["community", "projectPage"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
 	},
 	{
 		"id": "image-uploader",
@@ -683,7 +758,7 @@
 				"name": "TheColaber",
 				"link": "https://scratch.mit.edu/users/TheColaber"
 			},
-			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" }
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
 		]
 	},
 	{
@@ -876,14 +951,18 @@
 		"name": "Redirect to standard forums",
 		"description": "Redirects you to the standard (\"main\") forums when you click a link to the mobile forums.",
 		"tags": ["community", "forums"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
+		]
 	},
 	{
 		"id": "remix-button",
 		"name": "Remix button in own projects",
 		"description": "Adds the Remix button to your own projects.",
 		"tags": ["community", "projectPage"],
-		"credits": [{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" }]
+		"credits": [
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
 	},
 	{
 		"id": "remix-tree-button",
@@ -943,7 +1022,7 @@
 		"description": "Enables the new version of scratchblocks on the forums.",
 		"tags": ["community", "forums", "beta"],
 		"credits": [
-			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr/" },
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" },
 			{ "name": "CubeyTheCube", "link": "https://github.com/CubeyTheCube" },
 			{ "name": "apple502j", "link": "https://github.com/apple502j" }
 		]
@@ -969,6 +1048,18 @@
 			{
 				"name": "Maximouse",
 				"link": "https://scratch.mit.edu/users/Maximouse/"
+			}
+		]
+	},
+	{
+		"id": "search-my-stuff",
+		"name": "Search bar on My Stuff",
+		"description": "Allows you to search your projects, studios, and trash on the My Stuff page. Simply start typing anywhere on the page to start a search. You can also use Ctrl+Enter after searching to quickly open the top search result.",
+		"tags": ["community", "featured"],
+		"credits": [
+			{
+				"name": "lisa_wolfgang",
+				"link": "https://scratch.mit.edu/users/lisa_wolfgang/"
 			}
 		]
 	},
@@ -1004,7 +1095,7 @@
 		"description": "Adds a button at the top of the \"curators\" tab in studios you manage, that lists your followers and followed users and lets you invite a shown user with a single click.",
 		"tags": ["community", "studios", "featured"],
 		"credits": [
-			{ "name": "9gr", "link": "https://scratch.mit.edu/users/9gr" },
+			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" },
 			{ "name": "World_Languages" }
 		]
 	},
@@ -1020,6 +1111,13 @@
 				"link": "https://scratch.mit.edu/users/TheColaber"
 			}
 		]
+	},
+	{
+		"id": "swap-local-global",
+		"name": "Switch variables between \"For all sprites\" and \"For this sprite only\"",
+		"description": "Adds more options when renaming an existing variable or list: allows changing between \"For all sprites\" and \"For this sprite only\" and whether variables are stored in the cloud. Also adds a new option when right clicking a variable/list to quickly change its scope.",
+		"tags": ["editor", "codeEditor", "featured", "beta"],
+		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
 		"id": "transparent-orphans",
@@ -1050,6 +1148,18 @@
 			{
 				"name": "TheColaber",
 				"link": "https://scratch.mit.edu/users/TheColaber"
+			}
+		]
+	},
+	{
+		"id": "tutorials-button",
+		"name": "Hide Tutorials button",
+		"description": "Hides the Tutorials button in the editor menu bar.",
+		"tags": ["editor"],
+		"credits": [
+			{
+				"name": "lisa_wolfgang",
+				"link": "https://scratch.mit.edu/users/lisa_wolfgang/"
 			}
 		]
 	},
