@@ -365,10 +365,12 @@ Sub-properties:
 
 Example:
 ```json
-"latestUpdate": {
-  "version": "3.0.0",
-  "isMajor": true,
-  "temporaryNotice": "Aaaaaaaaaa my update.",
-  "newSettings": ["setting-2", "setting-3"]
-},
+{
+  "latestUpdate": {
+    "version": "3.0.0",
+    "isMajor": true,
+    "temporaryNotice": "Aaaaaaaaaa my update.",
+    "newSettings": ["setting-2", "setting-3"]
+  }
+}
 ```
