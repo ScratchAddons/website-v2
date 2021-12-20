@@ -946,3 +946,12 @@
       New addon: "website dark mode and customizable colors". Go to Scratch Addons settings to change specific colors, toggle dark scrollbars, and more!
 
       Other new addons added this update are "snap scripts to grid", "block count" and "high resolution thumbnails".
+
+- Version: v1.23.1
+  Index: 56
+  Tag: v1.23.1
+  Name: v1.23.1
+  Date: 2021-12-20
+  Status: Released
+  Entry: |
+    - "Website dark mode and customizable colors" addon: fix bugs
