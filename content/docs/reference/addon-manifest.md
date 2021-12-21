@@ -353,3 +353,24 @@ Indicates whether the addon's userstyles should be removed and rematched to the 
 
 ## `versionAdded` (string)
 The version the addon was added. If the value is the same as the current version of the extension, the addon will get the new tag.
+
+## `latestUpdate` (object, optional)
+Provides information to the settings page about the latest update to this addon. Responsible for the "New options" tag and the New tag on individual addon settings. If not specified, no update-specific tags will be added.
+
+Sub-properties:
+- `"version"` (string, required) The version that this update applies to. If the value is the same as the current version of the extension, the addon will get the "New options" tag and display the indicators (if any) specified in `temporaryNotice` and `newSettings`.
+- `"isMajor"` (boolean, optional) Indicates if the addon should be included in the "Featured new addons and updates" category. Defaults to `false` if not specified. This will be discussed before merging the addon to the repository using the same discretion as the Featured or Recommended tags on regular new addons.
+- `"temporaryNotice"` (string, optional) A text description of the new features or changes. This will appear as a notice-style banner at the top of the info section (above any warnings or notices) when the addon has the "New options" tag. If not specified, no banner will be displayed.
+- `"newSettings"` (array of strings, optional) The IDs of any settings that should be designated as new in this update. These settings will display the New tag when the addon has the "New options" tag. If not specified, no settings will display the New tag.
+
+Example:
+```json
+{
+  "latestUpdate": {
+    "version": "3.0.0",
+    "isMajor": true,
+    "temporaryNotice": "Aaaaaaaaaa my update.",
+    "newSettings": ["setting-2", "setting-3"]
+  }
+}
+```
