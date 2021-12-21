@@ -955,3 +955,13 @@
   Status: Released
   Entry: |
     - "Website dark mode and customizable colors" addon: fix bugs
+
+- Version: v1.23.2
+  Index: 57
+  Tag: v1.23.2
+  Name: v1.23.2
+  Date: 2021-12-22
+  Status: Released
+  Entry: |
+    - "Website dark mode and customizable colors" addon: fix bugs
+    - "Customizable quotes and code blocks on forums": fix bugs
