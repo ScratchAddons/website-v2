@@ -130,6 +130,32 @@ Can only be `true` if the addon supports dynamicEnable.
 If the addon was enabled when the page loaded, then was disabled and reenabled, this will still be `false`.
 In that case, the `reenabled` event will fire.
 
+## Methods
+### `getEnabledAddons`
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>tag</td>
+    <td><code>String</code></td>
+    <td>No</td>
+    <td>The tag for filtering.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;string[]></code></td>
+  </tr>
+</table>
+
+Gets a list of addon IDs enabled, optionally filtered using tags.
+
 ## Events
 ### `disabled`
 Fires when the addon gets disabled.  
