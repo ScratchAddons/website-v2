@@ -365,43 +365,36 @@ See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
         <tr>
           <th>Parameter</th>
           <th>Type</th>
-          <th>Required</th>
           <th>Description</th>
         </tr>
         <tr>
           <td>items</td>
           <td>Object[]</td>
-          <td>Yes</td>
           <td>The items added by vanilla code or other addons.
             <table>
               <tr>
                 <th>Property</th>
                 <th>Type</th>
-                <th>Required</th>
                 <th>Description</th>
               </tr>
               <tr>
                 <td>enabled</td>
                 <td>Boolean</td>
-                <td>Yes</td>
                 <td>Whether the item is enabled or not.</td>
               </tr>
               <tr>
                 <td>text</td>
                 <td>String</td>
-                <td>Yes</td>
                 <td>The context menu item label.</td>
               </tr>
               <tr>
                 <td>callback</td>
                 <td>Function</td>
-                <td>Yes</td>
                 <td>The function that is called when the item is clicked.</td>
               </tr>
               <tr>
                 <td>separator</td>
                 <td>Boolean</td>
-                <td>Yes</td>
                 <td>Whether to add a separator above the item or not.</td>
               </tr>
             </table>
@@ -410,7 +403,6 @@ See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
         <tr>
           <td>block</td>
           <td><code>Object</code></td>
-          <td>No</td>
           <td>The targeted block, if any.</td>
         </tr>
       </table>
