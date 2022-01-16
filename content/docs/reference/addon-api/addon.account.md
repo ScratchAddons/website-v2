@@ -8,7 +8,7 @@ weight: 4
 | | |
 |-|-|
 | Available in userscripts | ✔️ |
-| Available in popup scripts | ✔️ |
+| Available in popup scripts | ❌ |
 | Required manifest permissions | None |
 
 ## Description
