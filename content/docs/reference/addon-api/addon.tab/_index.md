@@ -119,154 +119,6 @@ Will be `null` if the current tab is not a project.
 The writing direction for the language of the Scratch website.
 
 ## Methods
-### `addon.tab.addBlock`
-**Do not use this unless you are adding blocks to the debugger addon.**
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>proccode</td>
-    <td><code>String</code></td>
-    <td>Yes</td>
-    <td>The name that will be used to refer to the block internally. Must specify inputs on the block (if any) using %s (string), %n (number-only), and %b (boolean).</td>
-  </tr>
-  <tr>
-    <td>blockData</td>
-    <td><code>Object</code></td>
-    <td>Yes</td>
-    <td>
-      <table>
-        <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>args</td>
-          <td><code>String[]</code></td>
-          <td>Yes</td>
-          <td></td>
-          <td>A list of names that will be used to refer to the block's inputs in the callback. If there are no inputs, use an empty array.</td>
-        </tr>
-        <tr>
-          <td>displayName</td>
-          <td><code>String</code></td>
-          <td>no</td>
-          <td>The value of `proccode`</td>
-          <td>The name that will be displayed on the block to the user. Must also include block input syntax.</td>
-        </tr>
-        <tr>
-          <td>callback</td>
-          <td><code>Function</code></td>
-          <td>Yes</td>
-          <td></td>
-          <td>The function that will execute when the block runs.
-            <table>
-              <tr>
-                <th>Parameter</th>
-                <th>Description</th>
-              </tr>
-              <tr>
-                <td>args</td>
-                <td>An object containing the values that are entered into the block inputs. The keys correpond to the `args` property specified earlier.</dt>
-              </tr>
-              <tr>
-                <td>thread</td>
-                <td>A reference to the thread that this block is running in.</td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        <tr>
-          <td>hidden</td>
-          <td><code>Boolean</code></td>
-          <td>No</td>
-          <td>false</td>
-          <td>Whether the block should appear in the flyout or not. This does not affect the workspace.</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
-</table>
-
-Adds a new block to the Debugger category in the block palette.
-
-### `addon.tab.removeBlock`
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>proccode</td>
-    <td><code>String</code></td>
-    <td>Yes</td>
-    <td>The `proccode` value of the block to remove</td>
-  </tr>
-</table>
-
-Removes a block that was previously added to the Debugger category in the block palette.
-
-### `addon.tab.loadScript`
-**In most cases, you should use the [`userscripts` property of the addon manifest](https://scratchaddons.com/docs/reference/addon-manifest/#userscripts-and-userstyles-array) instead.**
-
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>path</td>
-    <td><code>String</code></td>
-    <td>Yes</td>
-    <td>The path pointing to the script.</td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>Return value</td>
-    <td><code>Promise</code></td>
-  </tr>
-</table>
-
-Runs the specified script file.
-
-### `addon.tab.loadWorker`
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>path</td>
-    <td><code>String</code></td>
-    <td>Yes</td>
-    <td>The path pointing to the worker.</td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>Return value</td>
-    <td><code>Promise&lt;Worker></code></td>
-  </tr>
-</table>
-
-Loads the specified Web Worker.
-
 ### `addon.tab.waitForElement`
 <table>
   <tr>
@@ -784,6 +636,154 @@ Adds a context menu item for any of the context menus in the code editor.
 </table>
 
 Adds a context menu item for any of the non-Blockly context menus, such as the context menu for the sprites list.
+
+### `addon.tab.addBlock`
+**Do not use this unless you are adding blocks to the debugger addon.**
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>proccode</td>
+    <td><code>String</code></td>
+    <td>Yes</td>
+    <td>The name that will be used to refer to the block internally. Must specify inputs on the block (if any) using %s (string), %n (number-only), and %b (boolean).</td>
+  </tr>
+  <tr>
+    <td>blockData</td>
+    <td><code>Object</code></td>
+    <td>Yes</td>
+    <td>
+      <table>
+        <tr>
+          <th>Property</th>
+          <th>Type</th>
+          <th>Required</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>args</td>
+          <td><code>String[]</code></td>
+          <td>Yes</td>
+          <td></td>
+          <td>A list of names that will be used to refer to the block's inputs in the callback. If there are no inputs, use an empty array.</td>
+        </tr>
+        <tr>
+          <td>displayName</td>
+          <td><code>String</code></td>
+          <td>no</td>
+          <td>The value of `proccode`</td>
+          <td>The name that will be displayed on the block to the user. Must also include block input syntax.</td>
+        </tr>
+        <tr>
+          <td>callback</td>
+          <td><code>Function</code></td>
+          <td>Yes</td>
+          <td></td>
+          <td>The function that will execute when the block runs.
+            <table>
+              <tr>
+                <th>Parameter</th>
+                <th>Description</th>
+              </tr>
+              <tr>
+                <td>args</td>
+                <td>An object containing the values that are entered into the block inputs. The keys correpond to the `args` property specified earlier.</dt>
+              </tr>
+              <tr>
+                <td>thread</td>
+                <td>A reference to the thread that this block is running in.</td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr>
+          <td>hidden</td>
+          <td><code>Boolean</code></td>
+          <td>No</td>
+          <td>false</td>
+          <td>Whether the block should appear in the flyout or not. This does not affect the workspace.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+Adds a new block to the Debugger category in the block palette.
+
+### `addon.tab.removeBlock`
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>proccode</td>
+    <td><code>String</code></td>
+    <td>Yes</td>
+    <td>The `proccode` value of the block to remove</td>
+  </tr>
+</table>
+
+Removes a block that was previously added to the Debugger category in the block palette.
+
+### `addon.tab.loadScript`
+**In most cases, you should use the [`userscripts` property of the addon manifest](https://scratchaddons.com/docs/reference/addon-manifest/#userscripts-and-userstyles-array) instead.**
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>path</td>
+    <td><code>String</code></td>
+    <td>Yes</td>
+    <td>The path pointing to the script.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise</code></td>
+  </tr>
+</table>
+
+Runs the specified script file.
+
+### `addon.tab.loadWorker`
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>path</td>
+    <td><code>String</code></td>
+    <td>Yes</td>
+    <td>The path pointing to the worker.</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;Worker></code></td>
+  </tr>
+</table>
+
+Loads the specified Web Worker.
 
 ## Events
 ### `urlChange`
