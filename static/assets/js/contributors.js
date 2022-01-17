@@ -1,6 +1,14 @@
+const twemojiScript=Object.assign(document.createElement("script"), {
+	src: "https://twemoji.maxcdn.com/v/13.1.0/twemoji.min.js",
+	integrity: "sha384-gPMUf7aEYa6qc3MgqTrigJqf4gzeO6v11iPCKv+AP2S4iWRWCoWyiR+Z7rWHM/hU",
+	crossOrigin: "anonymous"
+})
+document.body.append(twemojiScript)
+
+
 const types = {
 	a11y: {
-		symbol: '️️️️♿️',
+		symbol: '♿️',
 		description: 'Accessibility',
 	},
 	audio: {
@@ -134,7 +142,7 @@ const joinAnd = ((data, separator = "and") => {
 
 
 const run = async () => {
-	
+
 	let contributors = []
 
 	await Promise.all([
@@ -172,7 +180,7 @@ const run = async () => {
 					index = contributors.length - 1
 				}
 				responseItem.commits = responseItem.contributions
-				delete responseItem.contributions 
+				delete responseItem.contributions
 				Object.assign(contributors[index], responseItem)
 			})
 			// console.log(contributors)
@@ -185,7 +193,7 @@ const run = async () => {
 
 	// Create elements based on the object
 	contributors.forEach(contributor => {
-		
+
 		// Contributor name text (top part)
 		let nameEl = document.createElement("p")
 		nameEl.className = "contributor-name"
@@ -211,7 +219,7 @@ const run = async () => {
 		}
 
 		// Contributor icon
-		let iconEl		
+		let iconEl
 		iconEl = document.createElement("img")
 		iconEl.className = "contributor-icon"
 		iconEl.src = contributor.avatar_url
@@ -236,7 +244,7 @@ const run = async () => {
 		if (contributor.contributions) contributorLabel += `contributes on ${joinAnd(contributor.contributions)}`
 		if (contributor.contributions && contributor.commits) contributorLabel += " and "
 		if (contributor.commits) contributorLabel += `created ${contributor.commits} commit${contributor.commits === 1 ? "" : "s"}`
-		
+
 		// Contributor wrapper (wraps link wrapper)
 		let wrapEl = document.createElement("div")
 		wrapEl.className = "contributor col-12 col-sm-6 col-md-4 col-xl-3"
@@ -251,6 +259,14 @@ const run = async () => {
 
 		// Appends the contributor wrapper to the row element
 		document.querySelector("#contributors .row").appendChild(wrapEl)
+
+		if (typeof twemoji === "undefined") {
+			twemojiScript.addEventListener("load", () => {
+				twemoji.parse(wrapEl)
+			});
+		} else {
+			twemoji.parse(wrapEl);
+		}
 
 	});
 }

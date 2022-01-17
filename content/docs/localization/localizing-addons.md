@@ -50,4 +50,4 @@ hungry2 = msg("eat", {food: msg("salmon")}) // shows "I want to eat salmon!"
 ```
 
 ### Safety
-If you are writing raw HTML, `msg` should be replaced with safer version of `safeMsg`. Please note that `safeMsg` is not available in persistent scripts.
+If you are writing raw HTML, `msg` should be replaced with safer version of `safeMsg`.

@@ -39,6 +39,56 @@ Keys are the "trap name" listed above, and values are the trapped values.
 
 Example: to get VM object, use `addon.tab.traps.onceValues.vm`
 
+## `addon.tab.traps.getBlockly`
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;object></code></td>
+  </tr>
+    <td>Promise rejects if</td>
+    <td>The addon isn't running on a project</td>
+</table>
+
+Gets the instance of Blockly being used by Scratch.
+This is different from `window.Blockly`.
+
+## `addon.tab.traps.getPaper`
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;object></code></td>
+  </tr>
+    <td>Promise rejects if</td>
+    <td>The addon isn't running on a project, or if Paper couldn't be found</td>
+</table>
+
+Gets the instance of Paper being used by Scratch. (@scratch/paper)
+
+## `addon.tab.traps.getInternalKey`
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>element</td>
+    <td><code>HTMLElement</code></td>
+    <td>Yes</td>
+    <td>The reference element</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>String</code></td>
+  </tr>
+</table>
+
+Gets the internal key for React.
+
 ## Events
 `addon.tab.traps` itself is not an `EventTarget`. However, it's possible to add or remove listeners, by using some public APIs. `traps.addOnceListener`/`removeOnceListener` is for "Once" traps, and `addManyListener`/`removeManyListener` is for "Many" traps. Note that listeners for "Once" objects can fire multiple times under some conditions, and may never fire if the object is trapped before loading the userscript.
 
