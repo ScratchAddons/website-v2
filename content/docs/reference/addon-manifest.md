@@ -14,10 +14,10 @@ In order to tell the addon loader how the addon plans to work, addons use a stan
 ## `name` (string, required)
 The name of the addon. Must be `Sentence case`.  
 It needs to be relatively short and consistent with other addon's names.  
-Use nouns instead of verbs (for example, `Customizable new sprite position` instead of `Change new sprite position`).
+Use nouns instead of verbs (for example, `Customizable new sprite position` instead of `Change new sprite position`) unless doing so would result in the addon name being overly complicated.
 
 ## `description` (string, required)
-The description of the addons. Must end with a dot.  
+The description of the addons. Must end with a period.  
    
 Use standard grammar for referring to parts of the Scratch website or editor:  
 
@@ -56,8 +56,12 @@ Use standard grammar for referring to parts of the Scratch website or editor:
 * next to the green flag
 * next to the Remix button
 
-**Common words:**
+**Common words and phrases:**
 * customizable
+* more
+* fix
+* better
+* with ... key
 
 ## `tags` (array, required)
 Tags are used for filtering and badges on the Scratch Addons settings page.  
@@ -167,7 +171,12 @@ Whether to add any of these tags will be discussed before merging the addon to t
   <tr>
     <td><code>recommended</code></td>
     <td>✔️</td>
-    <td>Addons that add highly requested, removed, or obvious missing features.</td>
+    <td>High-quality addons that add highly requested or obvious missing features.</td>
+  </tr>
+  <tr>
+    <td><code>featured</code></td>
+    <td>✔️</td>
+    <td>Quality addons that add useful features or nice aesthetic changes.</td>
   </tr>
   <tr>
     <td><code>beta</code></td>
@@ -183,7 +192,7 @@ Whether to add any of these tags will be discussed before merging the addon to t
 
 ## `permissions` (array)
 You can specify permissions by providing a `permissions` array.  
-Possible items: `"notifications"`, `"badge"`, `"clipboardWrite"`.  
+Possible items: `"notifications"`, `"clipboardWrite"`.  
 
 ## `userscripts` and `userstyles` (array)
 Declaring userscripts and userstyles is very similar.
@@ -207,22 +216,35 @@ Matches that allow the userscript/userstyle to run on. Values can be a URL match
 }
 ```
 
-### `settingMatch` (object)
-You can provide a `settingMatch` object that will result in your userscript/userstyle only running if the specified option is set to the specified value.
-```json
-{
-  "userstyles": [
-    {
-      "url": "signature.css",
-      "matches": ["https://scratch.mit.edu/discuss/topic/*"],
-      "settingMatch": {
-        "id": "signature",
-        "value": true
-      }
-    }
-  ]
-}
-```
+### `if` (object, userstyles only)
+Optionally, you can provide an `if` object that will only apply your userstyle if any of the specified sub-properties evaluates to `true`. More advanced behavior can be achieved in userscripts using [`addon.settings.get`](https://scratchaddons.com/docs/reference/addon-api/addon.settings/#addonsettingsget) and [`addon.self.getEnabledAddons`](https://scratchaddons.com/docs/reference/addon-api/addon.self/#getenabledaddons).
+
+Sub-properties:
+- `"settings"` (object, optional) The settings within this addon that must be of specific values. The key(s) are the IDs of the settings, and the value(s) are the corresponding expected values. All key(s) must evaluate to `true` for the sub-property to evaluate to `true`. 
+
+  In the following example, the `signature` setting must equal `true` and the `mode` setting must equal `"forums"` in order for the userstyle to be applied. If either of these settings are set to values that do not match the expected values, the userstyle will not be applied.
+  ```json
+  "if": {
+    "settings": { "signature": true, "mode": "forums" }
+  }
+  ```
+  An array can also be provided for the value of a key: the key will evaluate to `true` if the setting is set to *any* of the provided values.
+
+  In the following example, the `mode` setting may equal either `"forums"` or `"new"` for the userstyle to be applied. If the setting is not set to either of these, the userstyle will not be applied.
+  ```json
+  "if": {
+    "settings": { "mode": ["forums", "new"] }
+  }
+  ```
+- `"addonEnabled"` (string / array of strings, optional) The addon(s) that must be enabled. If multiple addons are listed, only one has to be enabled for the sub-property to evaluate to `true`. The string(s) are the IDs of the addons.
+
+  In the following example, either the `debugger` or `clones` addon must be enabled for the userstyle to be applied. If neither of these addons are enabled, the userstyle will not be applied.
+  ```json
+  "if": {
+    "addonEnabled": ["debugger", "clones"]
+  }
+  ```
+
 ### `runAtComplete` (boolean, userscripts only)
 Specifies whether the userscript should run after the page has loaded (after the window load event). If unspecified, `true` is assumed.  
 If set to `false`, the userscript is only guaranteed to run after the \<head> element of the document has loaded.
@@ -231,14 +253,42 @@ If set to `false`, the userscript is only guaranteed to run after the \<head> el
 Settings allow the addon's users to specify settings in Scratch Addons' settings panel. Inside your userscripts, you can then access those settings with the `addon.settings` API.  
 Specify a `settings` property and provide an array of option objects.
 
-The properties of the object are as follows. All properties are required.
-- `"name"`: the user-visible text for the option.   
-- `"id"`: an identifier to get the user-specified value from your code.  
-- `"type"`: either `"boolean"` (a checkbox), `"positive_integer"` (an input box that only allows 0 and above), `"string"` (up to 100 chars),`"color"` (a browser color input that returns a hex code)  or `"select"` (see `"potential_values"`).  
-- `"default"`: the default value for the option. A boolean, string, or number, depending on the specified type.  
-- `"potentialValues"`: for `"select"` type only. Array of objects, with properties `"id"`, the value received from `addon.settings.get()`, and `"name"`, the user-visible option text.
-- `"allowTransparency"`: for `"color"` type only. Boolean.
+Sub-properties:
+- `"name"` (string, required) The user-visible text for the option.   
+- `"id"` (string, required) An identifier to get the user-specified value from your code.  
+- `"type"` (string, required) Either `"boolean"` (a checkbox), `"positive_integer"` (an input box that only allows 0 and above), `"string"` (up to 100 chars),`"color"` (a browser color input that returns a hex code)  or `"select"` (see `"potential_values"`).  
+- `"default"` (string, required) The default value for the option. A boolean, string, or number, depending on the specified type.  
+- `"potentialValues"` (array of objects, required for `"select"` type only) Array of objects, with properties `"id"`, the value received from `addon.settings.get()`, and `"name"`, the user-visible option text.
+- `"allowTransparency"` (boolean, required for `"color"` type only) Whether the user should be allowed to enter transparent colors or not.
+- `"if"` (object, optional) Only make this setting visible if any of the specified sub-properties evaluates to `true`.
+  
+  **Be careful -- hiding a setting does not revert its value or nullify it. This only affects the settings page UI. If you want to handle a case where this setting is hidden, you must replicate the condition check that results in this setting being hidden.**
+   - `"settings"` (object, optional) The settings within this addon that must be of specific values. The key(s) are the IDs of the settings, and the value(s) are the corresponding expected values. All key(s) must evaluate to `true` for the sub-property to evaluate to `true`. 
 
+      In the following example, the `signature` setting must equal `true` and the `mode` setting must equal `"forums"` in order for this setting to be visible. If either of these settings are set to values that do not match the expected values, this setting will not be visible.
+      ```json
+      "if": {
+        "settings": { "signature": true, "mode": "forums" }
+      }
+      ```
+      An array can also be provided for the value of a key: the key will evaluate to `true` if the setting is set to *any* of the provided values.
+
+      In the following example, the `mode` setting may equal either `"forums"` or `"new"` for this setting to be visible. If the setting is not set to either of these, this setting will not be visible.
+      ```json
+      "if": {
+        "settings": { "mode": ["forums", "new"] }
+      }
+      ```
+   - `"addonEnabled"` (string / array of strings, optional) The addon(s) that must be enabled. If multiple addons are listed, only one has to be enabled for the sub-property to evaluate to `true`. The string(s) are the IDs of the addons.
+
+      In the following example, either the `debugger` or `clones` addon must be enabled for this setting to be visible. If neither of these addons are enabled, this setting will not be visible.
+      ```json
+      "if": {
+        "addonEnabled": ["debugger", "clones"]
+      }
+      ```
+
+Example:
 ```json
 {
   "settings": [
@@ -246,15 +296,51 @@ The properties of the object are as follows. All properties are required.
       "name": "Send notifications",
       "id": "send_notifications",
       "type": "boolean",
-      "default": false
+      "default": false,
     },
     {
       "name": "Notification close delay in seconds",
       "id": "close_delay",
       "type": "positive_integer",
-      "default": 5
+      "default": 5,
+      "if": {
+        "settings": { "send_notifications": true }
+      }
     }
   ]
+}
+```
+
+## `addonPreview` (object, optional)
+Specifies the type of preview to show above the addon's settings.
+
+Sub-properties:
+- `"type"` (string, required) Only `editor-dark-mode` is currently supported. To add more, use the `editor-dark-mode` files in the `/webpages/settings/components/previews` folder as an example, then add the components to [/webpages/settings/index.html](https://github.com/ScratchAddons/ScratchAddons/blob/d6f41737c8162e6feeb98f6a9f5b479378e8b813/webpages/settings/index.html#L88) and [/webpages/settings/index.js](https://github.com/ScratchAddons/ScratchAddons/blob/d6f41737c8162e6feeb98f6a9f5b479378e8b813/webpages/settings/index.js#L52).
+
+Example:
+```json
+{
+  "addonPreview": {
+    "type": "editor-dark-mode"
+  }
+}
+```
+
+## `presetPreview` (object, optional)
+Specifies the type of preview to show inside the preset buttons.
+
+Sub-properties:
+- `"type"` (string, required) Possible values:
+  - `palette` Shows a ribbon of colors.
+- `"colors"` (array of strings, required for `palette` type only) The hex colors to show in the ribbon. By convention, the array should contain 6 colors, but more or less can be shown if needed.
+
+Example:
+```json
+{
+  "presetPreview": {
+    "type": "palette",
+    "colors": ["#000000", "#222222", "#444444", "#666666", "#aaaaaa", "#ffffff"]
+  }
 }
 ```
 
@@ -325,22 +411,32 @@ An array of libraries that the addon uses.
 
 ## `popup` (object)
 When added, creates a new popup tab in the browser popup.
+
+Sub-properties:
+- `"icon"` (string, required) The path to the icon that shows in the popup's tab. The root of a relative path is `/popups/<addonId>/`.
+- `"name"` (string, required) The name that will display in the popup's tab.
+- `"fullscreen"` (boolean, optional) Whether or not the popup tab should provide the option to open in full screen mode. Defaults to `false`.
+- `"html"` (string, required) The path to the popup's HTML file. The root of a relative path is `/popups/<addonId>/`.
+- `"script"` (string, required) The path to the popup's JS file. The root of a relative path is `/popups/<addonId>/`.
+
 Example:
 ```json
 {
   "popup": {
     "icon": "../../images/icons/envelope.svg",
     "name": "Messaging",
-    "fullscreen": true
+    "fullscreen": true,
+    "html": "popup.html",
+    "script": "popup.js"
   }
 }
 ```
 
 ## `dynamicDisable` (boolean)
-Indicates whether the addon's scripts should be considered disabled when disabled as the page is running. Defaults to `false`.
+Indicates whether the addon's scripts should be considered disabled when the addon is disabled while the page is running. Defaults to `false`.
 
 ## `dynamicEnable` (boolean)
-Indicates whether the addon's scripts should be considered enabled when enabled as the page is running. Defaults to `false`.
+Indicates whether the addon's scripts should be considered enabled when the addon is enabled while the page is running. Defaults to `false`.
 
 ## `injectAsStyleElt` (boolean)
 Indicates whether the addon's userstyles should be injected as style elements rather than link elements. Defaults to `false`.
