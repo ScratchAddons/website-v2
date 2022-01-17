@@ -190,7 +190,7 @@ Whether to add any of these tags will be discussed before merging the addon to t
   </tr>
 </table>
 
-## `versionAdded` (string)
+## `versionAdded` (string, required)
 The version the addon was added. If the value is the same as the current version of the extension, the addon will get the new tag.
 
 ## `permissions` (array)
@@ -371,7 +371,7 @@ Example:
 }
 ```
 
-## `addonPreview` (object, optional)
+## `addonPreview` (object)
 Specifies the type of preview to show above the addon's settings.
 
 Sub-properties:
@@ -386,7 +386,7 @@ Example:
 }
 ```
 
-## `presetPreview` (object, optional)
+## `presetPreview` (object)
 Specifies the type of preview to show inside the preset buttons.
 
 Sub-properties:
@@ -524,7 +524,7 @@ An array of CSS variables that will be set if the addon is enabled. Each item is
   - `"makeHsv"`: converts a HSV color to RGB. The additional properties are `h`, `s`, and `v`. Each must be a value provider that returns either a number or a color. Colors will be converted to HSV and the value of the relevant component will be used. This allows making a color that uses the hue of one color chosen by the user and the brightness of another.
   - `"recolorFilter"`: a CSS filter that replaces every color with the result of the `source` color value provider (required).
 
-## `latestUpdate` (object, optional)
+## `latestUpdate` (object)
 Provides information to the settings page about the latest update to this addon. Responsible for the "New options" tag and the New tag on individual addon settings. If not specified, no update-specific tags will be added.
 
 Sub-properties:
