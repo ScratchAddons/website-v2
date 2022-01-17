@@ -92,7 +92,7 @@ Addons must have one of these tags. No less than one, no more than one.
   </tr>
 </table>
 
-## Optional factual tags
+### Optional factual tags
 Addon authors can usually determine these tags themselves.
 
 <table>
@@ -190,6 +190,9 @@ Whether to add any of these tags will be discussed before merging the addon to t
   </tr>
 </table>
 
+## `versionAdded` (string)
+The version the addon was added. If the value is the same as the current version of the extension, the addon will get the new tag.
+
 ## `permissions` (array)
 You can specify permissions by providing a `permissions` array.  
 Possible items: `"notifications"`, `"clipboardWrite"`.  
@@ -216,6 +219,10 @@ Matches that allow the userscript/userstyle to run on. Values can be a URL match
 }
 ```
 
+### `runAtComplete` (boolean, userscripts only)
+Specifies whether the userscript should run after the page has loaded (after the window load event). If unspecified, `true` is assumed.  
+If set to `false`, the userscript is only guaranteed to run after the \<head> element of the document has loaded.
+
 ### `if` (object, userstyles only)
 Optionally, you can provide an `if` object that will only apply your userstyle if any of the specified sub-properties evaluates to `true`. More advanced behavior can be achieved in userscripts using [`addon.settings.get`](https://scratchaddons.com/docs/reference/addon-api/addon.settings/#addonsettingsget) and [`addon.self.getEnabledAddons`](https://scratchaddons.com/docs/reference/addon-api/addon.self/#getenabledaddons).
 
@@ -224,30 +231,50 @@ Sub-properties:
 
   In the following example, the `signature` setting must equal `true` and the `mode` setting must equal `"forums"` in order for the userstyle to be applied. If either of these settings are set to values that do not match the expected values, the userstyle will not be applied.
   ```json
-  "if": {
-    "settings": { "signature": true, "mode": "forums" }
+  {
+    "userstyles": [
+      {
+        "url": "userstyle.css",
+        "matches": ["https://scratch.mit.edu/*"],
+        "if": {
+          "settings": { "signature": true, "mode": "forums" }
+        }
+      }
+    ]
   }
   ```
   An array can also be provided for the value of a key: the key will evaluate to `true` if the setting is set to *any* of the provided values.
 
   In the following example, the `mode` setting may equal either `"forums"` or `"new"` for the userstyle to be applied. If the setting is not set to either of these, the userstyle will not be applied.
   ```json
-  "if": {
-    "settings": { "mode": ["forums", "new"] }
+  {
+    "userstyles": [
+      {
+        "url": "userstyle.css",
+        "matches": ["https://scratch.mit.edu/*"],
+        "if": {
+          "settings": { "mode": ["forums", "new"] }
+        }
+      }
+    ]
   }
   ```
 - `"addonEnabled"` (string / array of strings, optional) The addon(s) that must be enabled. If multiple addons are listed, only one has to be enabled for the sub-property to evaluate to `true`. The string(s) are the IDs of the addons.
 
   In the following example, either the `debugger` or `clones` addon must be enabled for the userstyle to be applied. If neither of these addons are enabled, the userstyle will not be applied.
   ```json
-  "if": {
-    "addonEnabled": ["debugger", "clones"]
+  {
+    "userstyles": [
+      {
+        "url": "userstyle.css",
+        "matches": ["https://scratch.mit.edu/*"],
+        "if": {
+          "addonEnabled": ["debugger", "clones"]
+        }
+      }
+    ]
   }
   ```
-
-### `runAtComplete` (boolean, userscripts only)
-Specifies whether the userscript should run after the page has loaded (after the window load event). If unspecified, `true` is assumed.  
-If set to `false`, the userscript is only guaranteed to run after the \<head> element of the document has loaded.
 
 ## `settings` (object)
 Settings allow the addon's users to specify settings in Scratch Addons' settings panel. Inside your userscripts, you can then access those settings with the `addon.settings` API.  
@@ -256,8 +283,9 @@ Specify a `settings` property and provide an array of option objects.
 Sub-properties:
 - `"name"` (string, required) The user-visible text for the option.   
 - `"id"` (string, required) An identifier to get the user-specified value from your code.  
-- `"type"` (string, required) Either `"boolean"` (a checkbox), `"positive_integer"` (an input box that only allows 0 and above), `"string"` (up to 100 chars),`"color"` (a browser color input that returns a hex code)  or `"select"` (see `"potential_values"`).  
+- `"type"` (string, required) Either `"boolean"` (an on/off toggle), `"positive_integer"` (an input box that only allows 0 and above), `"integer"` (an input box that allows any integer) `"string"` (up to 100 chars),`"color"` (a browser color input that returns a hex code)  or `"select"` (see `"potential_values"`).  
 - `"default"` (string, required) The default value for the option. A boolean, string, or number, depending on the specified type.  
+- `"min"`/`"max"` (number, optional for `positive_integer`, `integer`, and `string` types only) For integers, the minimum/maximum value allowed, and for strings, the minimum/maximum allowed length of the value.
 - `"potentialValues"` (array of objects, required for `"select"` type only) Array of objects, with properties `"id"`, the value received from `addon.settings.get()`, and `"name"`, the user-visible option text.
 - `"allowTransparency"` (boolean, required for `"color"` type only) Whether the user should be allowed to enter transparent colors or not.
 - `"if"` (object, optional) Only make this setting visible if any of the specified sub-properties evaluates to `true`.
@@ -267,24 +295,56 @@ Sub-properties:
 
       In the following example, the `signature` setting must equal `true` and the `mode` setting must equal `"forums"` in order for this setting to be visible. If either of these settings are set to values that do not match the expected values, this setting will not be visible.
       ```json
-      "if": {
-        "settings": { "signature": true, "mode": "forums" }
+      {
+        "settings": [
+          // ...
+          {
+            "name": "Option",
+            "id": "option",
+            "type": "boolean",
+            "default": false,
+            "if": {
+              "settings": { "signature": true, "mode": "forums" }
+            }
+          }
+        ]
       }
       ```
       An array can also be provided for the value of a key: the key will evaluate to `true` if the setting is set to *any* of the provided values.
 
       In the following example, the `mode` setting may equal either `"forums"` or `"new"` for this setting to be visible. If the setting is not set to either of these, this setting will not be visible.
       ```json
-      "if": {
-        "settings": { "mode": ["forums", "new"] }
+      {
+        "settings": [
+          // ...
+          {
+            "name": "Option",
+            "id": "option",
+            "type": "boolean",
+            "default": false,
+            "if": {
+              "settings": { "mode": ["forums", "new"] }
+            }
+          }
+        ]
       }
       ```
    - `"addonEnabled"` (string / array of strings, optional) The addon(s) that must be enabled. If multiple addons are listed, only one has to be enabled for the sub-property to evaluate to `true`. The string(s) are the IDs of the addons.
 
       In the following example, either the `debugger` or `clones` addon must be enabled for this setting to be visible. If neither of these addons are enabled, this setting will not be visible.
       ```json
-      "if": {
-        "addonEnabled": ["debugger", "clones"]
+      {
+        "settings": [
+          {
+            "name": "Option",
+            "id": "option",
+            "type": "boolean",
+            "default": false,
+            "if": {
+              "addonEnabled": ["debugger", "clones"]
+            }
+          }
+        ]
       }
       ```
 
@@ -443,9 +503,6 @@ Indicates whether the addon's userstyles should be injected as style elements ra
 
 ## `updateUserstylesOnSettingsChange` (boolean)
 Indicates whether the addon's userstyles should be removed and rematched to the new settings. Defaults to `false`.
-
-## `versionAdded` (string)
-The version the addon was added. If the value is the same as the current version of the extension, the addon will get the new tag.
 
 ## `latestUpdate` (object, optional)
 Provides information to the settings page about the latest update to this addon. Responsible for the "New options" tag and the New tag on individual addon settings. If not specified, no update-specific tags will be added.
