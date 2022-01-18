@@ -407,13 +407,25 @@ Example:
 ## `credits` (array)
 
 You can provide a `credits` array of objects. This attribution is shown in the extension settings.  
-These objects must have a `"name"` attribute set to a string, and they can have a `"link"` attribute with a URL value.  
+
+Sub-properties:
+- `"name"` (string, required) The name of the person, site, or other resource to credit.
+- `"note"` (string, optional) A brief note about how the credited person/site contributed to the addon. The note will be displayed in parentheses. By convention, notes are lowercase except for proper nouns, and commas are used as separators if a single person contributed in multiple ways. Try to use the following terminology -- don't limit yourself to these terms, but try to stay consistent if possible:
+  - addon (not necessary if only one person made the addon or if there are no settings/presets)
+  - addon version (for addons ported from userscripts/userstyles)
+  - original userscript (for addons ported from userscripts)
+  - original userstyle (for addons ported from userstyles)
+  - If someone created a setting or preset, note its name in the credit
+- `"id"` (string, required if `note` is specified) An identifier for this credit object. Used internally for localization of the `note` property.
+- `"link"` (string, optional) A URL that links to the original content or the main page of the person/site credited.  
 Example:  
 ```json
 {
   "credits": [
     {
       "name": "Maximouse",
+      "note": "addon, \"Experimental\" Dark",
+      "id": "addon",
       "link": "https://github.com/mxmou/customize-scratch#watch-youtube-videos-on-scratch-in-full-screen"
     }
   ]
