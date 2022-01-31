@@ -965,3 +965,28 @@
   Entry: |
     - "Website dark mode and customizable colors" addon: fix bugs
     - "Customizable quotes and code blocks on forums": fix bugs
+
+- Version: v1.24.0
+  Index: 58
+  Tag: v1.24.0
+  Name: v1.24.0
+  Date: 2022-01-31
+  Status: Released
+  Entry: |
+    - New addon: customizable block text style
+    - New addon: customizable navigation bar
+    - New addon: disable sprite wobble in sprite pane
+    - New addon: hide signatures on forums
+    - New addon: search sprites by name
+    - "Scratch 2.0→3.0" addon: updated to match Scratch 3.0 more closely
+    - "Scratch Messaging" and "Scratch Notifier" addons: updated and fixed bugs
+    - "Debugger" addon: new "Threads" and "Performance" tabs, new settings
+    - "Customizable block colors": new "change the colors of blocks in the forums" setting
+    - Bug fix: "searchable dropdowns" offering to create local variables in the stage
+    - Bug fix: "developer tools" creating the "stop other scripts in sprite" block incorrectly
+  Highlights:
+    Description: |
+      New addon: "customizable navigation bar", which lets you choose a list of links to be displayed in the navigation bar. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "customizable block text style", "disable sprite wobble in sprite pane" and "search sprites by name". In addition, the "Scratch 2.0 → 3.0" addon has been updated to match Scratch 3.0 more closely.
+    YouTubeID: cQboWcsjR40
