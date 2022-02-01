@@ -23,9 +23,6 @@ window.i18nStrings = {
 			</a>
 			<a href="#features" class="btn" id="read-more">{{ T "IndexPage.Intro.ReadMore" }}</a>
 		</div>
-		<div>
-			Users:&nbsp;<p id="total-users" class="odometer"></p>
-		</div>
 </div>
 	<div class="col-12 col-md-6" id="intro-img">
 		<div id="carousel-intro" class="carousel slide h-100" data-interval="false">
@@ -220,6 +217,10 @@ window.i18nStrings = {
 		{{- .Scratch.Add "open_tag_2" ( "/docs/getting-started/installing" | relLangURL ) }}
 		{{- .Scratch.Add "open_tag_2" "' target='_blank' rel='noopener'>" }}
 		{{- T "IndexPage.Install.InstallButton.Other" ( dict "OpenTag1" "<a href='https://github.com/ScratchAddons/ScratchAddons/releases' target='_blank' rel='noopener'>" "CloseTag1" "</a>" "OpenTag2" ( .Scratch.Get "open_tag_2" ) "CloseTag2" "</a>" ) | safeHTML }}
+	</p>
+	<p>
+		<div id="total-users" style="font-size: 32px; font-weight: 500; line-height: 22px;" class="odometer"></div>
+		<div  style="font-size: 24px; font-weight: 500;">Users</div>
 	</p>
 </section>
 
