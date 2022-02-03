@@ -990,3 +990,12 @@
 
       Other new addons added this update are "customizable block text style", "disable sprite wobble in sprite pane" and "search sprites by name". In addition, the "Scratch 2.0 → 3.0" addon has been updated to match Scratch 3.0 more closely.
     YouTubeID: cQboWcsjR40
+
+- Version: v1.24.1
+  Index: 59
+  Tag: v1.24.1
+  Name: v1.24.1
+  Date: 2022-02-03
+  Status: Released
+  Entry: |
+    - "Scratch 2.0 → 3.0" addon: fix bugs
