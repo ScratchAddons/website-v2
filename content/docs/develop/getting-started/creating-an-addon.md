@@ -36,13 +36,13 @@ Inside the folder you just created, create an `addon.json` file.
 This is a base you can use to start coding, make sure to change it in the future:
 ```json
 {
-  "name": "Aaaaaaaaaa my addon",
-  "description": "Hello world!",
+  "name": "Epic placeholder text in place of addon name",
+  "description": "Hello World! It would be really smart to replace this placeholder text with a description.",
   "tags": ["community"],
   "enabledByDefault": false
 }
 ```
-For more information on what you can declare in the manifest, check [this article](/docs/developing/the-addon-manifest-(addon.json)).
+For more information on what you can declare in the manifest, check [this article](/docs/reference/addon-manifest/).
 
 
 ## Step 7: Tell Scratch Addons what your addon's ID is
