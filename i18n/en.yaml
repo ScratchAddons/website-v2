@@ -111,6 +111,7 @@ IndexPage:
     Paragraph: Satisfied? Don't hesitate to install it now!
     InstallButton:
       Other: ...or {{.OpenTag1}}download it from GitHub{{.CloseTag1}} or {{.OpenTag2}}install it from the source{{.CloseTag2}}.
+  Users: Users
 
 # Strings used for /addons
 AddonsPage:
