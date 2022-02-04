@@ -102,10 +102,6 @@ $(() => {
         document.head.appendChild(detectEngineElement)
     }
 
-    fetch("https://scratchaddons.com/usercount.json").then(res => res.json()).then(({count}) => {
-        document.querySelector("#total-users").innerText = count;
-    })
-
 })
 
 /* =============================================================
