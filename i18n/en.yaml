@@ -59,7 +59,7 @@ Docs:
   SectionPages: Section Pages
 
 # Strings used for player modals
-PlayerModal:
+PlayerModal: 
   LabelPlay: Play
   ModalTitle: Video
   AltText: Click to view this video.
@@ -69,12 +69,12 @@ IndexPage:
   Intro:
     Tagline: All in one browser extension for Scratch
     Description: Scratch Addons is a browser extension that provides new features and themes for the Scratch website and project editor. It has a mission to collect, archive, and put into use userstyles and userscripts, developed by several members of the Scratch community.
-    Loading: Loading...
     InstallButton:
+      Loading: Loading...
       Description: free, open source
     ReadMore: or read more
     Carousel:
-      Video:
+      Video: 
         Caption: The trailer.
       Popup:
         Caption: The extension pop-up.
@@ -105,9 +105,9 @@ IndexPage:
     ScratchNotifierHeading: Scratch Notifier
     ScratchNotifierParagraph: It adds browser notifications on new Scratch messages. You can click the notification to go straight to the message (comment, project, etc.)
     DeveloperToolsHeading: Developer tools
-    DeveloperToolsParagraph: "{{.OpenTag1}}From the original extension.{{.CloseTag1}} It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!"
+    DeveloperToolsParagraph: '{{.OpenTag1}}From the original extension.{{.CloseTag1}} It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
   Install:
-    Heading: Install
+    Heading: Install    
     Paragraph: Satisfied? Don't hesitate to install it now!
     InstallButton:
       Other: ...or {{.OpenTag1}}download it from GitHub{{.CloseTag1}} or {{.OpenTag2}}install it from the source{{.CloseTag2}}.
