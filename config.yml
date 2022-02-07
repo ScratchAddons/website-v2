@@ -53,6 +53,6 @@ languages:
     contentDir: content
 
 params:
-  contributors_issue: 136
+  contributors_issue: 183
   copyright_year: 2021
   section_site_name: Global.ScratchAddons
