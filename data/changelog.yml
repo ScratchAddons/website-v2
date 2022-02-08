@@ -867,7 +867,7 @@
     YouTubeID: QnvgB5ILZCg
 
 - Version: v1.21.1
-  Index: 51
+  Index: 52
   Tag: v1.21.1
   Name: v1.21.1
   Date: 2021-10-16
@@ -878,7 +878,7 @@
     - "Developer tools" addon: fix find bar not working in some languages
 
 - Version: v1.21.2
-  Index: 52
+  Index: 53
   Tag: v1.21.2
   Name: v1.21.2
   Date: 2021-10-21
@@ -888,7 +888,7 @@
     - "Studio tools" addon: fix bugs
 
 - Version: v1.22.0
-  Index: 53
+  Index: 54
   Tag: v1.22.0
   Name: v1.22.0
   Date: 2021-11-10
@@ -913,7 +913,7 @@
     YouTubeID: 9y4IsQLz3rk
 
 - Version: v1.22.1
-  Index: 54
+  Index: 55
   Tag: v1.22.1
   Name: v1.22.1
   Date: 2021-11-16
@@ -925,7 +925,7 @@
     - Bug fix: "search bar on My Stuff" breaking other inputs on Firefox
 
 - Version: v1.23.0
-  Index: 55
+  Index: 56
   Tag: v1.23.0
   Name: v1.23.0
   Date: 2021-12-17
@@ -948,7 +948,7 @@
       Other new addons added this update are "snap scripts to grid", "block count" and "high resolution thumbnails".
 
 - Version: v1.23.1
-  Index: 56
+  Index: 57
   Tag: v1.23.1
   Name: v1.23.1
   Date: 2021-12-20
@@ -957,7 +957,7 @@
     - "Website dark mode and customizable colors" addon: fix bugs
 
 - Version: v1.23.2
-  Index: 57
+  Index: 58
   Tag: v1.23.2
   Name: v1.23.2
   Date: 2021-12-22
@@ -967,7 +967,7 @@
     - "Customizable quotes and code blocks on forums": fix bugs
 
 - Version: v1.24.0
-  Index: 58
+  Index: 59
   Tag: v1.24.0
   Name: v1.24.0
   Date: 2022-01-31
@@ -992,7 +992,7 @@
     YouTubeID: cQboWcsjR40
 
 - Version: v1.24.1
-  Index: 59
+  Index: 60
   Tag: v1.24.1
   Name: v1.24.1
   Date: 2022-02-03
@@ -1001,7 +1001,7 @@
     - "Scratch 2.0 → 3.0" addon: fix bugs
 
 - Version: v1.24.2
-  Index: 60
+  Index: 61
   Tag: v1.24.2
   Name: v1.24.2
   Date: 2022-02-07
