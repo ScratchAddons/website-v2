@@ -1011,3 +1011,13 @@
     - Bug fix: "debugger" feature to highlight the block that triggered a log not working
     - Bug fix: "Scratch Notifier" playing sound when receiving disabled notification types
     - Bug fix: "website dark mode and customizable colors" incompatibility with "customizable quotes and code blocks on forums"
+
+- Version: v1.24.3
+  Index: 62
+  Tag: v1.24.3
+  Name: v1.24.3
+  Date: 2022-02-09
+  Status: Released
+  Entry: |
+    - Bug fix: addons not working on forum topics if "more forum toolbar buttons" addon enabled
+    - Bug fix: editor addons sometimes not loaded
