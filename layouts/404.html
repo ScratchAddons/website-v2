@@ -34,10 +34,11 @@
 		<li><a href='{{ "/" | absLangURL }}'>Return to the home page</a></li>
 		<li><a href="https://findtheinvisiblecow.com/">Find the invisible cow</a></li>
 	</ul>
-</div>
 
-<script>
-	plausible("404",{ props: { path: document.location.pathname } });
-</script>
+	<div class="alert alert-primary" role="alert" id="smart-404">
+		<h5>Smart 404</h5>
+		<p class="mb-0">Loading...</p>
+	</div>
+</div>
 
 {{ end }}

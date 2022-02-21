@@ -1,5 +1,7 @@
 ---
 title: addon.tab.redux (Redux)
+toc_title: addon.tab.redux
+h1_title: "`addon.tab.redux` (Redux)"
 description: Scratch Addons supports getting and modifying Redux state!
 weight: 2
 aliases:

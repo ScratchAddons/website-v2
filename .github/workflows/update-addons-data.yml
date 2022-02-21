@@ -63,6 +63,8 @@ jobs:
           path: ./repo
           title: Update addons data
           body: |
-            This updates the addons data based on the main repo.
+            This updates the addons data based on the main repo. (ref: ```${{ github.event.inputs.ref }}```)
 
-            It is recommended to do a rebase merge than other methods. Also, make sure to not merge something that isn't released yet!
+              - It is recommended to do a rebase merge than other methods.
+              - Make sure to not merge something that isn't released yet! Check it first!
+              - If this gets merged, please trigger [the same update workflow on the website-i18n repo](https://github.com/ScratchAddons/website-i18n/actions/workflows/update-addons-data.yml). (use ref. ```${{ github.event.inputs.ref }}```)

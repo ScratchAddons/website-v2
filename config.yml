@@ -54,6 +54,6 @@ languages:
 
 params:
   sa_version: 1.12.0 # Not currently used
-  contributors_issue: 71
+  contributors_issue: 136
   copyright_year: 2021
   section_site_name: Global.ScratchAddons

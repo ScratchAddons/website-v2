@@ -14,14 +14,14 @@
 		<div class="collapse navbar-collapse" id="navbar-collapsible">
 			<ul class="navbar-nav ml-md-auto">
 				{{ if .IsTranslated -}}
-					<li class="nav-item dropdown"><div data-nosnippet>
+					<li class="nav-item dropdown hide-from-spiders">
 						<a class="nav-link dropdown-toggle" href="#" id="navbar-languages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Site.Language.LanguageName }}</a>
 						<div class="dropdown-menu" aria-labelledby="navbar-languages">
-							{{- range .Translations -}}
+							{{ if .IsTranslated }}{{ range .Translations -}}{{ if or ( eq .IsHome false ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
 								<a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-							{{- end -}}
+							{{- end }}{{ end }}{{ end }}
 						</div>
-					</div></li>
+					</li>
 				{{- end }}
 				<li class="nav-item"><a class="nav-link" href='{{ "/contributors" | relLangURL }}'>{{ T "Nav.Contributors" }}</a></li>
 				<li class="nav-item"><a class="nav-link" href='{{ "/feedback" | relLangURL }}'>{{ T "Nav.Feedback" }}</a></li>

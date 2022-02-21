@@ -1,5 +1,6 @@
 ---
 title: addon.settings
+h1_title: "`addon.settings`"
 description: Allows addons to change their behavior according to user-specified addon settings.  
 weight: 2
 ---
@@ -8,6 +9,7 @@ weight: 2
 |-|-|
 | Available in userscripts | ✔️ |
 | Available in persistent scripts | ✔️ |
+| Available in popup scripts | ✔️ |
 | Required manifest permissions | None |
 
 ## Description
@@ -24,7 +26,7 @@ addon.settings.addEventListener("change", function() {
 ```
 
 ## Methods
-### addon.settings.get
+### `addon.settings.get`
 <table>
   <tr>
     <th>Parameter</th>
@@ -95,5 +97,5 @@ The return value will depend on the setting type:
 This method is guaranteed to return the valid type. `null` is never returned.
 
 ## Events
-### change
+### `change`
 Fires when any of the addon's settings have changed.

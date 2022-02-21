@@ -1,5 +1,6 @@
 ---
 title: addon.tab
+h1_title: "`addon.tab`"
 description: Allows addon userscripts to get information about the tab they're currently running on.
 weight: 5
 ---
@@ -8,13 +9,14 @@ weight: 5
 |-|-|
 | Available in userscripts | ✔️ |
 | Available in persistent scripts | ❌ |
+| Available in popup scripts | ❌ |
 | Required manifest permissions | None |
 
 ## Description
 Allows addon userscripts to get information about the tab they're currently running on.
 
 ## Examples
-### Using addon.tab.waitForElement
+### Using `addon.tab.waitForElement`
 We can use `addon.tab.waitForElement` with `{"markAsSeen": true}` inside a `while(true)` loop to store the IDs of all comments in the page.  
 Using `addon.tab.waitForElement`, we don't need to have code that waits until comments have loaded. This way, we also store the IDs of newly posted comments and new loaded comments when the user clicks "load more comments".
 ```js
@@ -27,7 +29,7 @@ while (true) {
 }
 ```
 
-### Using addon.tab.displayNoneWhileDisabled (dynamicDisable)
+### Using `addon.tab.displayNoneWhileDisabled` (`dynamicDisable`)
 We use `addon.tab.displayNoneWhileDisabled` to hide an image when the addon gets disabled.  
 We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.  
 We also set the `display` CSS property of the image to `flex` when visible, even tho that is not the default value for images.
@@ -71,7 +73,7 @@ Allows addons to get direct references to objects, which are particularly useful
 TODO
 
 ## Properties
-### addon.tab.clientVersion
+### `addon.tab.clientVersion`
 <table>
   <tr>
     <td>Value</td>
@@ -88,7 +90,7 @@ The Scratch community website has 2 working clients used throughout the site.
 `scratch-www` is React/Redux based and client side rendered. This client is the one used in the homepage.  
 `scratchr2` is Django/jQuery/Backbone.js based and mostly server side rendered. This client is the one used in profile pages.
 
-### addon.tab.editorMode
+### `addon.tab.editorMode`
 <table>
   <tr>
     <td>Value</td>
@@ -103,8 +105,22 @@ The Scratch community website has 2 working clients used throughout the site.
 The current viewing mode for the project (`projectpage`, `editor`, `fullscreen` or `embed`).  
 Will be `null` if the current tab is not a project.
 
+### `addon.tab.direction`
+<table>
+  <tr>
+    <td>Value</td>
+    <td><code>"ltr" | "rtl"</code></td>
+  </tr>
+  <tr>
+    <td>Nullable</td>
+    <td>No</td> 
+  </tr>
+</table>
+
+The writing direction for the language of the Scratch website.
+
 ## Methods
-### addon.tab.waitForElement
+### `addon.tab.waitForElement`
 <table>
   <tr>
     <th>Parameter</th>
@@ -176,7 +192,7 @@ Internally, a `MutationObserver` that reacts to any DOM tree change is used. Thi
 Option `markAsSeen` should be set to true if you're using this method inside a `while(true)` loop.  
 Options `condition`, `reduxCondition` and `reduxEvents` should be used as optimizations, in order to avoid multiple calls to `document.querySelector` when it's guaranteed the element will not exist yet.
 
-### addon.tab.displayNoneWhileDisabled
+### `addon.tab.displayNoneWhileDisabled`
 <table>
   <tr>
     <th>Parameter</th>
@@ -219,7 +235,7 @@ Hides the given element with `display: none` when the addon is disabled, until i
 If the intended `display` CSS property value for the provided element when visible is not the default value for the type of provided element (for example, `block` for `div`s and `inline` for `span`s), you should provide that value inside the options parameter.  
 If you want to manually hide the element in situations where the addon is enabled, you should use a dedicated class name for that, instead of manually setting `el.style.display = "none";`. Use a class name selector in a userstyle to set `display: none !important;` on the element.
 
-### addon.tab.copyImage
+### `addon.tab.copyImage`
 <table>
   <tr>
     <td>Required manifest permissions</td>
@@ -255,7 +271,7 @@ Copies a PNG image to the clipboard.
 Only run this in response of the user explicitly pressing Ctrl+C.  
 Internally uses `browser.clipboard.setImageData` in Firefox and `navigator.clipboard.write` in Chrome.
 
-### addon.tab.scratchClass
+### `addon.tab.scratchClass`
 <table>
   <tr>
     <th>Parameter</th>
@@ -301,7 +317,7 @@ Internally uses `browser.clipboard.setImageData` in Firefox and `navigator.clipb
 
 Gets the hashed class name for a Scratch stylesheet class name.
 
-### addon.tab.scratchMessage
+### `addon.tab.scratchMessage`
 <table>
   <tr>
     <th>Parameter</th>
@@ -327,10 +343,14 @@ Gets the hashed class name for a Scratch stylesheet class name.
 Gets Scratch translation from the current Scratch tab.  
 Note that these are Scratch locales, not Scratch Addons locales.  
 If the message isn't found, `""` is returned and a warning is logged in the console.  
-Internally uses `window.django.gettext` or `window._messages`.  
+Internally uses `window.django.gettext` or `window._messages`.
+
+### [`addon.tab.appendToSharedSpace`](addon.tab.appendtosharedspace)
+
+See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
 
 ## Events
-### urlChange
+### `urlChange`
 <table>
   <tr>
     <th>Event detail property</th>

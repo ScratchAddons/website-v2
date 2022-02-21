@@ -1,5 +1,7 @@
 ---
 title: addon.tab.traps (Traps)
+toc_title: addon.tab.traps
+h1_title: "`addon.tab.traps` (Traps)"
 description: addon.tab.traps is a public API for userscripts that can be used to obtain objects that are not otherwise available.
 weight: 1
 aliases: 
@@ -30,7 +32,7 @@ Difference between Once and Many is simple: the addon only stores reference for 
 | ScratchBlocks    | ScratchBlocks object                           | Once      |
 | workspace        | ScratchBlocks workspace                        | Once      |
 
-## addon.tab.traps.onceValues
+## `addon.tab.traps.onceValues`
 `onceValues` attribute of `addon.tab.traps` stores references for "Once" traps. It is an prototypeless object - e.g. you cannot call `onceValues.hasOwnProperty()`.
 
 Keys are the "trap name" listed above, and values are the trapped values.

@@ -2,6 +2,9 @@
 title: Extension Privacy Policy
 toc_title: Extension
 description: This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
+aliases:
+  - /docs/privacy/policies/extension
+  - /privacy/extension
 ---
 
 > Last updated: 28 May 2021
