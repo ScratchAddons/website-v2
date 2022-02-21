@@ -206,7 +206,7 @@ const run = async () => {
 		// }
 
 		// Appends the contributor wrapper to the row element
-		document.querySelector("#contributors-showcase .row").appendChild(wrapEl)
+		document.querySelector("#contributors-showcase").appendChild(wrapEl)
 
 	});
 

@@ -1,6 +1,6 @@
 {{ if isset $.Site.Data.credits "contributors"  }}
 
-<div id="contributors-showcase"><div class="row no-gutters">
+<div id="contributors-showcase" class="row no-gutters">
 
 {{ range $.Site.Data.credits.contributors }}
 
@@ -27,7 +27,7 @@
 
 {{ end }}
 
-</div></div>
+</div>
 
 {{ else }}
 
@@ -35,9 +35,7 @@
 
 <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
 
-<div id="contributors-showcase">
-	<div class="row no-gutters"></div>
-</div>
+<div id="contributors-showcase" class="row no-gutters"></div>
 
 {{ end }}
 
