@@ -135,7 +135,7 @@ const joinAnd = ((data, separator = "and") => {
 
 const run = async () => {
 	
-	let contributors = await (await fetch("https://raw.githubusercontent.com/Hans5958/SA-contributor-commits/master/contributors.json")).json()
+	let contributors = await (await fetch("https://raw.githubusercontent.com/ScratchAddons/contributors/with-commits/contributors.json")).json()
 
 	document.querySelector(".lds-ellipsis").hidden = true
 
