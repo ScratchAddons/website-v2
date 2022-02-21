@@ -135,52 +135,7 @@ const joinAnd = ((data, separator = "and") => {
 
 const run = async () => {
 	
-	let contributors = []
-
-	await Promise.all([
-
-		// Fetch contributors data from ScratchAddons/contributors, with all-contributors spec
-		(() => new Promise(async callback => {
-			// setTimeout(async () => {
-				let response = await (await fetch("https://raw.githubusercontent.com/ScratchAddons/contributors/master/.all-contributorsrc")).json()
-				// console.log(contributors)
-				// console.log(response)
-				response.contributors.forEach(responseItem => {
-					let index = contributors.findIndex(contributorsItem => contributorsItem.login === responseItem.login)
-					if (index === -1) {
-						contributors.push({})
-						index = contributors.length - 1
-					}
-					Object.assign(contributors[index], responseItem)
-				})
-				// console.log(contributors)
-				// console.log(response)
-				callback()
-			// }, 3000);
-		}))(),
-
-
-	// 	// Fetch commit count data from all repositories
-	// 	(() => new Promise(async callback => {
-	// 		let response = await (await fetch("https://sa-contributors.hans5958.workers.dev")).json()
-	// 		// console.log(contributors)
-	// 		// console.log(response)
-	// 		while (contributors.length === 0) await new Promise(resolve => setTimeout(resolve, 250))
-	// 		response.forEach(responseItem => {
-	// 			let index = contributors.findIndex(contributorsItem => contributorsItem.login === responseItem.login)
-	// 			if (index === -1) {
-	// 				contributors.push({})
-	// 				index = contributors.length - 1
-	// 			}
-	// 			responseItem.commits = responseItem.contributions
-	// 			delete responseItem.contributions 
-	// 			Object.assign(contributors[index], responseItem)
-	// 		})
-	// 		// console.log(contributors)
-	// 		// console.log(response)
-	// 		callback()
-	// 	}))()
-	])
+	let contributors = await (await fetch("https://raw.githubusercontent.com/Hans5958/SA-contributor-commits/master/contributors.json")).json()
 
 	document.querySelector(".lds-ellipsis").hidden = true
 
@@ -254,6 +209,8 @@ const run = async () => {
 		document.querySelector("#contributors-showcase .row").appendChild(wrapEl)
 
 	});
+
+	if (window.twemojiReparse) window.twemojiReparse()
 }
 
 run()

@@ -47,10 +47,10 @@
 	if (typeof twemoji === "undefined") {
 		document.querySelector('script[src$="twemoji.min.js"]').addEventListener("load", () => {
 			twemoji.parse(showcaseEl)
-			window.twemojiReparse(() => twemoji.parse(showcaseEl))
+			window.twemojiReparse = () => twemoji.parse(showcaseEl)
 		});
 	} else {
 		twemoji.parse(showcaseEl)
-		window.twemojiReparse(() => twemoji.parse(showcaseEl))
+		window.twemojiReparse = () => twemoji.parse(showcaseEl)
 	}
 </script>
