@@ -34,7 +34,7 @@ Example manifest:
 }
 ```
 
-## Debugging userscripts
+## Debugging userstyles
 **Make sure to refresh Scratch Addons from `chrome://extensions` after doing any changes to your addon.**  
 If you don't see your userstyle working, make sure your addon is enabled.  
 If you're still having trouble, please create an issue in this repo.

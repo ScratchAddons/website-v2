@@ -113,6 +113,7 @@ IndexPage:
     Paragraph: Satisfied? Don't hesitate to install it now!
     InstallButton:
       Other: ...or {{.OpenTag1}}download it from GitHub{{.CloseTag1}} or {{.OpenTag2}}install it from the source{{.CloseTag2}}.
+  Users: Users
 
 # Strings used for /addons
 AddonsPage:
@@ -133,6 +134,7 @@ FeedbackPage:
   UsernameLabel: Scratch username, or other identifiers (optional)
   ContentLabel: Feedback
   ContentPlaceholder: Please provide as much detail as you can.
+  SendEnabled: Send list of my currently enabled addons (recommended)
   SubmitButton: Send
 
 # Strings used for /scratch-messaging-transition

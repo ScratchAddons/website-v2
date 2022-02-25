@@ -6,13 +6,10 @@ aliases:
 ---
 
 ## What's an addon, really?
-Actually, an addon isn't much more than a combination of at least one of these: persistent scripts, userscripts and userstyles. If any of these are related, then we make them part of the same addon, under a single name. For example, the "Scratch 3 Developer Tools" addon has a userscript in charge of adding a find box to the editor, and a userstyle that adds CSS to that box.
-
-## What's a persistent script?
-A persistent script is a piece of JavaScript code that is always running in the background, even if the user has no Scratch tabs open. They're useful to, for example, notify the user if there has been an update on Scratch. Persistent scripts are similar to background scripts on browser extensions.
+Actually, an addon isn't much more than a userscript, a userstyle, or a combination of the two. If any of these are related, then we make them part of the same addon, under a single name. For example, the "Scratch 3 Developer Tools" addon has a userscript in charge of adding a find box to the editor, and a userstyle that adds CSS to that box.
 
 ## What's a userscript?
-A userscript is a piece of JavaScript code that runs together with a Scratch tab. Unlike persistent scripts, you can specify when that userscript will run, for example, only project pages. Userscripts are similar to content scripts on browser extensions, and if you've ever used a userscript manager, you'll notice these are basically the same.  
+A userscript is a piece of JavaScript code that runs together with a Scratch tab. You can specify where that userscript will run, for example, only project pages. Userscripts are similar to content scripts on browser extensions, and if you've ever used a userscript manager, you'll notice these are basically the same.  
 Userscripts are useful to change the behavior of the Scratch website, for example, adding or removing buttons to the navbar.
 
 ## What's a userstyle?
