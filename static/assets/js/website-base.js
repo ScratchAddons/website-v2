@@ -34,7 +34,7 @@ $(() => {
 
     window.installButtonGo = (name, engine) => {
 
-        console.log(name)
+        // console.log(name)
 
         delete window.installButtonGo
 
