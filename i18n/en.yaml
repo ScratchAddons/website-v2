@@ -4,8 +4,10 @@ Global:
   LogoAlt: Scratch Addons logo
   ChromeLong: Google Chrome
   FirefoxLong: Mozilla Firefox
+  EdgeLong: Microsoft Edge
   ChromeShort: Chrome
   FirefoxShort: Firefox
+  EdgeShort: Edge
   Install: Install
   InstallFor: Install for {{.Browser}}
 
