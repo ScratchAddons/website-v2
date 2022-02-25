@@ -1,10 +1,6 @@
 - ID: Extension
   I18nKey: Global.Extension
   Entries:
-    - ID: js-md5
-      Type: npm
-      License: MIT
-      Link: https://www.npmjs.com/package/js-md5
     - ID: scratchblocks
       Type: npm
       License: Apache-2.0
@@ -43,10 +39,28 @@
       License: Apache-2.0
       Link: https://www.npmjs.com/package/comlink
     - ID: sora
-      Type: npm
+      Type: gfonts
       Name: Sora
       License: OFL
       Link: https://fonts.google.com/specimen/Sora
+    - ID: fuse.js
+      Type: npm
+      Name: Fuse.js
+      License: Apache-2.0
+      Link: https://www.npmjs.com/package/fuse.js
+    - ID: idb
+      Type: npm
+      License: ISC
+      Link: https://www.npmjs.com/package/idb
+    - ID: sortablejs
+      Type: npm
+      Name: Sortable.js
+      License: MIT
+      Link: https://www.npmjs.com/package/sortablejs
+    - ID: spark-md5
+      Type: npm
+      License: MIT
+      Link: https://www.npmjs.com/package/spark-md5
 
 - ID: Website
   I18nKey: Global.Website
@@ -81,3 +95,13 @@
       Type: npm
       License: MIT
       Link: https://www.npmjs.com/package/bowser
+    - ID: sora
+      Type: gfonts
+      Name: Sora
+      License: OFL
+      Link: https://fonts.google.com/specimen/Sora
+    - ID: twemoji
+      Type: npm
+      Name: Twemoji
+      License: MIT
+      Link: https://www.npmjs.com/package/twemoji
