@@ -9,6 +9,9 @@ window.i18nStrings = {
 	installUnsupported: '{{ T "Global.Install" }}'
 }
 </script>
+<script src="/assets/js/odometer.js"></script>
+<link rel="stylesheet" href="/assets/odometer.css">
+<script defer src="/assets/js/index.js"></script>
 
 <section id="intro" class="row px-4 py-5 mb-0 intro-heading text-left">
 	<div class="col-12 col-md-6 py-4 px-3 px-md-4 d-flex flex-column justify-content-center" id="intro-info">
@@ -215,6 +218,11 @@ window.i18nStrings = {
 		{{- .Scratch.Add "open_tag_2" ( "/docs/getting-started/installing" | relLangURL ) }}
 		{{- .Scratch.Add "open_tag_2" "' target='_blank' rel='noopener'>" }}
 		{{- T "IndexPage.Install.InstallButton.Other" ( dict "OpenTag1" "<a href='https://github.com/ScratchAddons/ScratchAddons/releases' target='_blank' rel='noopener'>" "CloseTag1" "</a>" "OpenTag2" ( .Scratch.Get "open_tag_2" ) "CloseTag2" "</a>" ) | safeHTML }}
+	</p>
+	<br>
+	<p>
+		<div id="total-users" style="font-size: 3rem; font-weight: 500; line-height: 3rem;" class="odometer"></div>
+		<div  style="font-size: 1.75rem; font-weight: 500;">{{ T "IndexPage.Users" }}</div>
 	</p>
 </section>
 

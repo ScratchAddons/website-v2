@@ -19,7 +19,7 @@
 	&:hover {
 		background: darken(white, 5%);
 	}
-	
+
 	a {
 		padding: 0.375rem 15px;
 		color: inherit;
@@ -37,9 +37,9 @@
 	margin-right: 0.75rem;
 	margin-top: auto;
 	height: 64px;
-	width: 64px;	
+	width: 64px;
 	object-fit: initial;
-}	
+}
 
 .contributor-info {
 	display: flex;
@@ -47,8 +47,8 @@
 	max-width: 100%;
 	flex-direction: column;
 	justify-content: center;
-	
-}	
+
+}
 
 .contributor-name {
 	font-size: 1.25rem;
@@ -74,8 +74,15 @@
 	}
 }
 
+img.emoji {
+	height: 1em;
+	width: 1em;
+	margin: 0 .05em 0 .1em;
+	vertical-align: -0.1em;
+}
+
 body.dark {
-	
+
 	#contributors {
 		.contributor {
 			&:hover {
