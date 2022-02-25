@@ -105,7 +105,7 @@ IndexPage:
     ScratchNotifierHeading: Scratch Notifier
     ScratchNotifierParagraph: It adds browser notifications on new Scratch messages. You can click the notification to go straight to the message (comment, project, etc.)
     DeveloperToolsHeading: Developer tools
-    DeveloperToolsParagraph: '{{.OpenTag1}}From the original extension.{{.CloseTag1}} It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
+    DeveloperToolsParagraph: 'From the original extension. It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
   Install:
     Heading: Install    
     Paragraph: Satisfied? Don't hesitate to install it now!
