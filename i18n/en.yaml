@@ -158,7 +158,3 @@ ChangelogPage:
 UnsupportedBrowserPage:
   Download: Download
   HowToUpdate: How to update
-
-CreditsPage:
-  Dependencies:
-    Webs
