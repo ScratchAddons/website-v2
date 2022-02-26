@@ -156,3 +156,9 @@ ChangelogPage:
 UnsupportedBrowserPage:
   Download: Download
   HowToUpdate: How to update
+
+# Strings used for blog
+Blog:
+  ReadTime:
+    one: "{{.Count}} minute"
+    other: "{{.Count}} minutes"

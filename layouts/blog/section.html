@@ -6,7 +6,7 @@
 </header>
 			
 <div class="container">
-	<div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 m-0">
+	<div class="row row-cols-1 row-cols-lg-2 m-0">
 		{{ range .Pages.ByPublishDate.Reverse }}
 			<div class="col mb-4 px-0 px-md-1">
 				<article class="card">
@@ -15,7 +15,7 @@
 						<p class="card-text">{{ .Description }}</p>
 					</div>
 					<div class="card-footer text-muted">
-						{{ .Date.Format "02 January 2006" }}
+						{{ .Date | time.Format ":date_long" }}
 					</div>
 				</article>	
 			</div>
