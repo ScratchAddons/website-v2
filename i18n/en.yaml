@@ -159,6 +159,9 @@ UnsupportedBrowserPage:
 
 # Strings used for blog
 Blog:
+  SectionHeading:
+    Title: Blog
+    Tagline: Get the latest news about Scratch Addons, in text!
   SectionSiteName: Scratch Addons Blog
   BackToBlog: back to blog index
   ReadTime:
