@@ -139,6 +139,8 @@ const run = async () => {
 
 	document.querySelector(".lds-ellipsis").hidden = true
 
+	document.querySelector('#contributors-count').textContent = window.i18nStrings.nContributors.replace('-1', contributors.length)
+
 	// Create elements based on the object
 	contributors.forEach(contributor => {
 		
@@ -162,7 +164,7 @@ const run = async () => {
 			let contributionEl = document.createElement("span")
 			contributionEl.classList.add("contribution-commits")
 			contributionEl.insertAdjacentHTML("beforeend", `<span class="iconify" data-icon="octicon:git-commit-16"></span> ${contributor.commits}`)
-			contributionEl.setAttribute("aria-label", `${contributor.commits} commits`)
+			contributionEl.setAttribute("aria-label", window.i18nStrings.nCommits.replace("-1", contributor.commits))
 			detailsEl.appendChild(contributionEl)
 		}
 
@@ -171,7 +173,7 @@ const run = async () => {
 		iconEl = document.createElement("img")
 		iconEl.className = "contributor-icon"
 		iconEl.src = contributor.avatar_url
-		iconEl.alt = `${contributor.login} profile picture`
+		iconEl.alt = window.i18nStrings.nProfilePicture.replace("PLACEHOLDER", contributor.login)
 
 		// Contributor info wrapper
 		let infoWrap = document.createElement("div")
@@ -188,10 +190,11 @@ const run = async () => {
 		linkEl.appendChild(infoWrap)
 
 		// Label that explains the contributor (accessibility)
-		let contributorLabel = `${contributor.login} `
-		if (contributor.contributions) contributorLabel += `contributes on ${joinAnd(contributor.contributions)}`
-		if (contributor.contributions && contributor.commits) contributorLabel += " and "
-		if (contributor.commits) contributorLabel += `created ${contributor.commits} commit${contributor.commits === 1 ? "" : "s"}`
+		let contributorLabel = contributor.login
+		// let contributorLabel = `${contributor.login} `
+		// if (contributor.contributions) contributorLabel += `contributes on ${joinAnd(contributor.contributions)}`
+		// if (contributor.contributions && contributor.commits) contributorLabel += " and "
+		// if (contributor.commits) contributorLabel += `created ${contributor.commits} commit${contributor.commits === 1 ? "" : "s"}`
 		
 		// Contributor wrapper (wraps link wrapper)
 		let wrapEl = document.createElement("div")

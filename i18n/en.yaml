@@ -158,3 +158,9 @@ ChangelogPage:
 UnsupportedBrowserPage:
   Download: Download
   HowToUpdate: How to update
+
+# Strings used for /contributors
+ContributorsPage:
+  NContributors: '{{.Count}} contributors'
+  NProfilePicture: '{{.Name}} profile picture'
+  NCommits: '{{.Count}} commits'
