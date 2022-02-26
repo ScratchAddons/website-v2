@@ -1,0 +1,11 @@
+<p class="text-muted">
+	{{ if ( and (eq .Language.Lang "en") ( not .Site.IsServer ) ) }}
+		{{- .Scratch.Add "commit_text" "<a href='https://github.com/ScratchAddons/website-v2/commit/"}}
+		{{- .Scratch.Add "commit_text" .GitInfo.Hash}}
+		{{- .Scratch.Add "commit_text" "'><code>"}}
+		{{- .Scratch.Add "commit_text" .GitInfo.AbbreviatedHash}}
+		{{- .Scratch.Add "commit_text" "</code></a>"}}
+		{{- T "Docs.LastUpdated" (dict "Date" ( .Lastmod.Format "02 January 2006" ) "Name" .GitInfo.AuthorName "Commit" ( .Scratch.Get "commit_text" ) ) | safeHTML }}
+	{{ end }}
+	<a href="https://github.com/ScratchAddons/website-v2/edit/master/content/{{ .File.Path }}">{{ T "Docs.Improve" }}</a>
+</p>

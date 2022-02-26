@@ -3,8 +3,8 @@
 	<nav class="navbar navbar-expand-md navbar-dark">
 		
 		<a href='{{ "/" | relLangURL }}' class="navbar-brand">
-			<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddons" }}'></img>
-			<span>{{ T "Global.ScratchAddons" }}</span>
+			<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddonsAlt" }}'></img>
+			<span>{{ T ( $.Param "section_site_name" ) }}</span>
 		</a>
 	
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,19 +14,19 @@
 		<div class="collapse navbar-collapse" id="navbar-collapsible">
 			<ul class="navbar-nav ml-md-auto">
 				{{ if .IsTranslated -}}
-					<li class="nav-item dropdown">
+					<li class="nav-item dropdown hide-from-spiders">
 						<a class="nav-link dropdown-toggle" href="#" id="navbar-languages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Site.Language.LanguageName }}</a>
 						<div class="dropdown-menu" aria-labelledby="navbar-languages">
-							{{- range .Translations -}}
+							{{ if .IsTranslated }}{{ range .Translations -}}{{ if or ( eq .IsHome false ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
 								<a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
-							{{- end -}}
+							{{- end }}{{ end }}{{ end }}
 						</div>
 					</li>
 				{{- end }}
 				<li class="nav-item"><a class="nav-link" href='{{ "/contributors" | relLangURL }}'>{{ T "Nav.Contributors" }}</a></li>
 				<li class="nav-item"><a class="nav-link" href='{{ "/feedback" | relLangURL }}'>{{ T "Nav.Feedback" }}</a></li>
 				<li class="nav-item"><a class="nav-link" href="https://github.com/ScratchAddons/ScratchAddons" aria-label="Repository on GitHub" rel="noopener">{{ T "Nav.Repository" }} <span class="iconify" data-icon="simple-icons:github"></span></a></li>
-				<li class="nav-item" id="install-nav"><a class="nav-link install-btn ml-md-2" href='{{ "/#install" | relLangURL }}'>{{ T "Nav.Install" }}</a></li>
+				<li class="nav-item" id="install-nav"><a class="nav-link install-btn ml-md-2" href='{{ "/#install" | relLangURL }}'>{{ T "Global.Install" }}</a></li>
 			</ul>
 		</div>
 	

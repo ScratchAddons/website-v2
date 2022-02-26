@@ -1,5 +1,11 @@
 fetch("https://scratchaddons-feedback.glitch.me/", {mode:'no-cors'})
-const version = new URL(location.href).searchParams.get("version")
+const version = new URL(location.href).searchParams.get("ext_version") || new URL(location.href).searchParams.get("version")
+let enabledAddons = null
+if (location.hash.length && /[0-9A-Fa-f]/g.test(location.hash.substring(2))) {
+    enabledAddons = location.hash.substring(2)
+} else {
+    document.querySelector("#feedback-send-enabled").style.display = 'none'
+}
 
 const setStatus = (statusText, status) => {
     const element = document.querySelector('#feedback-status')
@@ -12,7 +18,7 @@ const setStatus = (statusText, status) => {
 document.querySelector("#feedback-form").onsubmit = async event => {
 
     event.preventDefault()
-    setStatus("Sending...", "primary")
+    setStatus(window.i18nStrings.statusSending, "primary")
 
     document.querySelector('#feedback-username').readOnly = true
     document.querySelector("#feedback-content").readOnly = true
@@ -25,16 +31,17 @@ document.querySelector("#feedback-form").onsubmit = async event => {
         userAgent: navigator.userAgent, 
         language: navigator.language, 
         content: document.querySelector('#feedback-content').value, 
-        username: document.querySelector('#feedback-username').value 
+        username: document.querySelector('#feedback-username').value ,
+        enabledAddons: document.querySelector("#feedback-send-enabled > input").checked ? enabledAddons : null
     }
 
     try {
         const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {method:"POST", body: JSON.stringify(body)})
         if (!res.ok) throw "";
         setTimeout(() => document.querySelector("#feedback-submit").disabled = false, 10000)
-        setStatus("Sent! Thanks for the feedback.", "success")
+        setStatus(window.i18nStrings.statusSuccess, "success")
     } catch(err) {
-        setStatus("Error sending feedback! Try again?", "danger")
+        setStatus(window.i18nStrings.statusFailed, "danger")
         document.querySelector("#feedback-submit").disabled = false
     }
 

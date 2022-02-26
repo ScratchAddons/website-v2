@@ -1,0 +1,50 @@
+<!-- Title and Meta -->
+
+<title>404 - {{ T ( $.Param "section_site_name" ) }}</title>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+<meta name="description" content="Sorry! That page doesn't exist!" />
+<meta name="author" content="" />
+<link rel="icon" href="/assets/img/icon.png">
+<meta name="robots" content='noindex' />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content="{{ .Permalink }}">
+<meta property="og:title" content="404" />
+<meta property="og:description" content="Sorry! That page doesn't exist!">
+<meta property="og:site_name" content='{{ T ( $.Param "section_site_name" ) }}' />
+<meta property="og:locale" content="{{ .Site.Language.Lang }}" />
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="384" />
+<meta property="og:image:height" content="384" />
+<meta property="og:image:alt" content='{{ T "Global.LogoAlt" }}' />
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:url" content="{{ .Permalink }}" />
+<meta name="twitter:title" content='404 - {{ T ( $.Param "section_site_name" ) }}' />
+<meta name="twitter:description" content="Sorry! That page doesn't exist!" />
+<meta name="twitter:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
+<meta name="twitter:image:alt" content='{{ T "Global.LogoAlt" }}' />
+
+<!-- Require Script and Loading Page -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" crossorigin />
+{{ partial "scss" "assets/css/base.scss" }}
+
+<script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7" crossorigin></script>
+<script async src="/assets/js/website-base.js"></script>
+
+<script async defer data-domain="scratchaddons.com" data-exclude='/404, /404.html, /*, /*/*, /*/**, /**' src="/assets/js/plausible.js"></script>
+<script>
+	window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }
+	plausible("404",{ props: { path: document.location.pathname } })
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/string-similarity@4.0.4/umd/string-similarity.min.js"></script>
+<script>
+	window.pagePaths = {
+		sitemap: '{{ "/en/sitemap.xml" | relURL }}',
+		baseUrl: '{{ .Site.BaseURL }}'
+	}
+</script>
+<script async src="/assets/js/404.js"></script>

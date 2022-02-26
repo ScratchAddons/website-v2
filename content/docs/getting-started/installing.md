@@ -12,57 +12,80 @@ Scratch Addons is available in both Chrome Web Store and Add-ons for Firefox.
 - Add-ons for Firefox (for Mozilla Firefox)  
   https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/  
 
-## From GitHub
-
-[The releases tab](https://github.com/ScratchAddons/ScratchAddons/releases) contains all builds of Scratch Addons, as well as the mirror of the store builds hosted on both servers.
 
 ## From source
 
+### About GitHub releases
+
+[The releases page](https://github.com/ScratchAddons/ScratchAddons/releases) contains the code and installation files for all development builds of Scratch Addons, as well as the mirror of the store builds.
+
 ### Cloning the repository
 
-This is the recommended way to install for development purposes. This assumes you have Git installed.
+This is the recommended way to install Scratch Addons for development purposes. This assumes you have Git installed.
 
-To download the repository, simply clone `https://github.com/ScratchAddons/ScratchAddons.git`. Here's an example.
+To download the repository, simply clone `https://github.com/ScratchAddons/ScratchAddons.git`.
 
 ```sh
 $ git clone https://github.com/ScratchAddons/ScratchAddons.git
 ```
+To update Scratch Addons, first `cd` into its folder, and then run the following commands.
+
+```sh
+$ git fetch
+$ git pull
+```
+
+This will update Scratch Addons and get it ready for code editing. Note that you will need to see the finish updating section [here](#install-on-google-chrome) if you are using Google Chrome.
+
 
 ### Downloading the zipball
 
-If you don't have Git installed, you can try this method instead.
+If you don't have Git installed, you can try this method instead. Note that you will need to manually repeat this process every time you want to update Scratch Addons.
 
 1. Go to the [repository](https://github.com/ScratchAddons/ScratchAddons) and find the download code button.
 
-![Screenshot 2020-09-04 at 6 41 12 PM](https://user-images.githubusercontent.com/61319150/92291572-f17ef080-eede-11ea-85e8-fda961a56074.png)
+   ![Download code button screenshot](/assets/img/docs/download-code-button.png)
 
-2. Click it and select "Download ZIP."
+2. Click it and select "Download ZIP".
 
-![Screenshot 2020-09-04 at 6 43 57 PM](https://user-images.githubusercontent.com/61319150/92291570-f0e65a00-eede-11ea-80ee-f32e340327d9.png)
+   ![Download ZIP button screenshot](/assets/img/docs/download-zipball-button.png)
 
 3. Extract the archive into a folder.
 
 ### Installing on Google Chrome
 
-1. Open `chrome://extensions` to open the Extension Management page by typing it into your address bar.
+1. Type `chrome://extensions` into your address bar to open the Extension Management page.
 
-2. Click the toggle next to `Developer mode` to turn on the Developer Mode. This allows you to install the addon from a file.
+2. Click the toggle next to `Developer mode` to turn on the Developer Mode. This allows you to install extensions from a folder or file.
 
-![image](https://user-images.githubusercontent.com/61319150/92291715-8550bc80-eedf-11ea-9ec1-6628c5b3fbc2.png)
+   ![Extension Managment top bar screenshot](/assets/img/docs/developer-mode-toggle.png)
 
 3. You should see the `Load unpacked` button appear. Clicking it will allow you to select a folder to upload.
 
-![image](https://user-images.githubusercontent.com/61319150/92291792-d3fe5680-eedf-11ea-9d62-8e02b262f575.png)
+   ![Load unpacked button screenshot](/assets/img/docs/load-unpacked-button.png)
 
-4. Select the folder.
-5. The extension should now be loaded. 
+4. Select the extracted folder.
+5. The extension should now be loaded.
+
+To finish updating (assuming you followed the updating steps [here](#cloning-the-repository)), click the `Update` button:
+
+![Update button screenshot](/assets/img/docs/update-button.png)
+
 
 ### Installing on Mozilla Firefox
 
-<!-- TODO: Add pictures -->
+1. Type `about:debugging` into your address bar to open the debugging page.
 
-1. Open `about:debugging` to open the add-ons page by typing it into your address bar.
 2. Click `This Firefox` on the left-hand menu.
-3. Click `Load Temporary Add-on...`.
-4. Select the manifest.json file inside the folder.
-5. The extension should now be loaded.
+   
+   ![Left-hand menu screenshot](/assets/img/docs/left-hand-menu.png)
+
+4. Click `Load Temporary Add-on...`.
+   
+   ![Load Temporary Add-on button screenshot](/assets/img/docs/load-addon.png)
+   
+6. Select the manifest.json file inside the extracted folder.
+7. The extension should now be loaded.
+
+Note: Firefox temporary add-ons are actually temporary. Restarting Firefox will remove them, so if you want to use the development version of Scratch Addons all the time, it is recommended that you use a Chromium-based browser like Google Chrome.
+

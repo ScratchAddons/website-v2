@@ -1,0 +1,11 @@
+.highlight {
+
+	@import "highlight-light";
+
+}
+
+body.dark .highlight{
+	
+	@import "highlight-dark";
+
+}

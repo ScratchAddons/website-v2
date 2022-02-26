@@ -1,29 +1,31 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="{{ .Site.Language.Lang }}">
 
 <head>
 
-{{- partial "head" . -}}
+{{ partial "head" . }}
+{{ partial "scss" "assets/css/docs.scss" }}
+{{ if isset $.Params "embed_js" }}{{ range $.Params.embed_js }}
+<script defer src="{{ . }}"></script>
+{{ end }}{{ end }}
+{{ if isset $.Params "embed_css" }}{{ range $.Params.embed_css }}
+<link rel="stylesheet" href="{{ . }}" crossorigin />
+{{ end }}{{ end }}
 
 </head>
 
 <body>
 
-{{- partial "nav" . -}}
+{{ partial "nav" . }}
 
-{{ $style := resources.Get "assets/css/docs/base.scss" | resources.ToCSS }}
-<link rel="stylesheet" href="{{ $style.Permalink }}" />
+{{ partialCached "docs/sidebar-toggle" . .Site.Language.Lang }}
 
-{{ partial "docs/sidebar-toggle" . }}
-
-<main class="content container-fluid">
-
+<main>
 	{{ block "main" . }}{{ end }}
-		
 </main>
 
-{{- partial "footer" . -}}
+{{ partialCached "footer" . .Site.Language.Lang }}
 
 </body>
 
@@ -31,12 +33,14 @@
 
 {{ define "main" }}
 
+<div class="container-fluid">
+
 	<div class="row">
 
 		<aside class="docs-pages col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id="docs-pages">
 			<!-- d-none  -->
 			<!-- px-2 py-4 -->
-			{{- partial "docs/sidebar" . -}}
+			{{ partial "docs/sidebar" . }}
 		</aside>
 	
 		<article class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
@@ -45,11 +49,7 @@
 
 			<hr />
 
-			<p class="text-muted">
-				{{ if ( and (eq .Language.Lang "en") ( not .Site.IsServer ) ) }}
-					Last updated at {{ .Lastmod.Format "02 January 2006"  }} by {{ .GitInfo.AuthorName }} on commit <a href="https://github.com/ScratchAddons/website-v2/commit/{{ .GitInfo.Hash }}"><code>{{ .GitInfo.AbbreviatedHash }}</code></a>.
-				{{ end }}
-				<a href="https://github.com/ScratchAddons/website-v2/edit/master/content/{{ .File.Path }}">Improve this page.</a></p>
+			{{ partial "docs/footnote" . }}
 
 		</article>
 
@@ -60,6 +60,8 @@
 		</aside>
 
 	</div>
+
+</div>
 
 {{ end }}
 

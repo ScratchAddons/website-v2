@@ -4,22 +4,23 @@
 
 <head>
 
-{{- partial "head" . -}}
+{{ partial "head" . }}
+{{ block "head-extra" . }}{{ end }}
 
 </head>
 
 <body>
 
-{{- partial "nav" . -}}
+{{ partial "nav" . }}
 
-  <main>
-    {{ block "main" . }}
-      {{- .Content -}}
-    {{ end }}
-  </main>
+<main>
+	{{ block "main" . }}{{ end }}
+</main>
 
-{{- partial "footer" . -}}
-  
+{{ partialCached "footer" . .Site.Language.Lang }}
+
 </body>
 
 </html>
+
+{{ define "main" }}{{ .Content }}{{ end }}	

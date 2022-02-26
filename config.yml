@@ -52,10 +52,7 @@ languages:
     weight: 1
     contentDir: content
 
-# TEMPORARY
-
 params:
-  sa_version: 1.12.0 # Not currently used
-  contributors_issue: 71
-  copyright_year: 2021
-  noAnalytics: false
+  contributors_issue: 183
+  copyright_year: 2022
+  section_site_name: Global.ScratchAddons

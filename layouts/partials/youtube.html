@@ -1,0 +1,37 @@
+<div class="plyrmdl-thumb plyrmdl-yt yt-thumb" data-layer="4" data-toggle="modal" data-target="#plyrmdl-modal-{{ .id }}" data-youtube-id="{{ .id }}">
+	<img class="yt-thumb-image w-100" src="https://i.ytimg.com/vi_webp/{{ .id }}/maxresdefault.webp">
+	<button class="yt-thumb-button" aria-label='{{ T "PlayerModal.LabelPlay" }}'>
+		<svg height="100%" version="1.1" viewBox="0 0 68 48" width="100%">
+			<path class="yt-thumb-button-bg" d="M66.52,7.74c-0.78-2.93-2.49-5.41-5.42-6.19C55.79,.13,34,0,34,0S12.21,.13,6.9,1.55 C3.97,2.33,2.27,4.81,1.48,7.74C0.06,13.05,0,24,0,24s0.06,10.95,1.48,16.26c0.78,2.93,2.49,5.41,5.42,6.19 C12.21,47.87,34,48,34,48s21.79-0.13,27.1-1.55c2.93-0.78,4.64-3.26,5.42-6.19C67.94,34.95,68,24,68,24S67.94,13.05,66.52,7.74z" fill="#f00"></path>
+			<path d="M 45,24 27,14 27,34" fill="#fff"></path>
+		</svg>
+	</button>
+</div>	
+
+<div class="modal fade plyrmdl-modal plyrmdl-yt" id="plyrmdl-modal-{{ .id }}" query tabindex="-1" role="dialog" aria-labelledby="plyrmdl-modal-label-{{ .id }}" aria-hidden="true" data-youtube-id="{{ .id }}">
+	<div class="modal-dialog modal-xl" role="document">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h5 class="modal-title" id="plyrmdl-modal-label-{{ .id }}">{{ T "PlayerModal.ModalTitle" }}</h5>
+				<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+					<span aria-hidden="true">&times;</span>
+				</button>
+			</div>
+			<div class="modal-body">
+				<div class="yt-wrapper">
+					<div class="yt-iframe"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<script>
+if (!document.querySelector("script[src='/assets/js/player-modal.js']")) {
+	const script = document.createElement("script")
+	script.type = "module"
+	script.defer = ""
+	script.src = "/assets/js/player-modal.js"
+	document.head.appendChild(script)
+}
+</script>

@@ -1,19 +1,50 @@
-<div class="card-columns">
-	{{ range ( index $.Site.Data.addons $.Page.Language.Lang ) }}
-		<div class="card {{ range .tags }} tag-{{ . }}{{ end }}">
-			<!-- <img src="{{ substr .image 1 }}" class="card-img-top" alt="{{ .name }}"> -->
-			{{ if (fileExists (delimit (slice "static" .image) "")) -}}
-				<img src="{{ .image }}" class="card-img-top" alt="{{ .name }}">
-			{{- end }}
-			<div class="card-body">
-				<h5 class="card-title">
-					{{ .name }}
-					{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title="This is an easter egg addon.">🥚</span>{{ end -}}
-					{{ if in .tags "recommended" }}<span data-toggle="tooltip" title="This is a recommended addon.">⭐</span>{{ end -}}
-				</h5>
-				<h6 class="card-subtitle mb-2 text-muted">{{ .id }}</h6>
-				<p class="card-text">{{ .description }}</p>
-			</div>
+<div class="d-flex align-items-center" hidden>
+	<div class="flex-grow-1">
+		<hr />
+	</div>
+	<div class="pl-2">
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="checkbox-list-view" onchange="changeView(event)">
+			<label class="form-check-label" for="checkbox-list-view">{{ T "AddonsPage.ListViewLabel" }}</label>
 		</div>
-	{{ end }}
+	</div>
+	<div class="pl-2">
+		<div class="form-check">
+			<input class="form-check-input" type="checkbox" id="checkbox-easter-egg" onchange="changeEgg(event)">
+			<label class="form-check-label" for="checkbox-easter-egg" title='{{ T "AddonsPage.EasterEggTooltip.L1" }}<br class="mb-1"/>{{ T "AddonsPage.EasterEggTooltip.L2" }}' data-toggle="tooltip" data-placement="left" data-html="true">{{ T "AddonsPage.EasterEggLabel" }}</label>
+		</div>
+	</div>
 </div>
+
+<div class="card-columns">
+	{{- if ( index $.Site.Data.addons $.Page.Language.Lang ) }}
+		{{- template "addon-card" ( index $.Site.Data.addons $.Page.Language.Lang ) -}}
+	{{ else }}
+		{{- template "addon-card" $.Site.Data.addons.en -}}
+	{{ end -}}
+</div>
+
+{{- define "addon-card" }}
+
+{{ range . }}
+
+<div class="card {{ range .tags }} tag-{{ . }}{{ end }}" id="addon-{{ .id }}">
+	{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
+		<div class="card-img-wrapper">
+			<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+		</div>
+	{{- end }}
+	<div class="card-body">
+		<h5 class="card-title">
+			{{ .name }}
+			{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.EasterEggAddon" }}'>🥚</span>{{ end -}}
+			{{ if in .tags "recommended" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.RecommendedAddon" }}'>⭐</span>{{ end -}}
+		</h5>
+		<h6 class="card-subtitle mb-2 text-muted">{{ .id }}</h6>
+		<p class="card-text">{{ .description }}</p>
+	</div>
+</div>
+
+{{ end }}
+
+{{ end }}

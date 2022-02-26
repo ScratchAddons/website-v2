@@ -1,13 +1,22 @@
+# Strings used across the website
 Global:
   ScratchAddons: Scratch Addons
   LogoAlt: Scratch Addons logo
+  ChromeLong: Google Chrome
+  FirefoxLong: Mozilla Firefox
+  ChromeShort: Chrome
+  FirefoxShort: Firefox
+  Install: Install
+  InstallFor: Install for {{.Browser}}
 
+# Strings used for the site navigation bar
 Nav:
   Contributors: Contributors
   Feedback: Send Feedback
   Repository: Repository
   Install: Install
 
+# Strings used for the site footer
 Footer:
   Pages:
     Header: Pages
@@ -18,7 +27,7 @@ Footer:
     Addons: Addons
   Discuss:
     Header: Discuss
-    Discussion Forum: Discussion Forum
+    Discussion: Discussion Forum
     Issues: Issues
     DiscordCom: Community Discord
     DiscordDev: Development Discord
@@ -33,6 +42,117 @@ Footer:
     NoAffiliation: Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.
     License: Scratch Addons is licensed under the terms of GNU General Public License v3.0.
 
+# Strings used for the dark theme switch
 DarkTheme:
   Title: Click to toggle the dark theme.
-  Label: Dark theme switch button
+  Label: Dark theme switch
+
+# Strings used for Scratch Addons Docs
+Docs:
+  SectionSiteName: Scratch Addons Docs
+  DocsNav: Docs navigation
+  DocsNavToggleLabel: Toggle docs navigation sidebar
+  TOC: Table of contents
+  TOCToggleLabel: Toggle table of contents sidebar
+  LastUpdated: Last updated at {{.Date}} by {{.Name}} on commit {{.Commit}}.
+  Improve: Improve this page.
+  SectionPages: Section Pages
+
+# Strings used for player modals
+PlayerModal: 
+  LabelPlay: Play
+  ModalTitle: Video
+  AltText: Click to view this video.
+
+# Strings used for / (index)
+IndexPage:
+  Intro:
+    Tagline: All in one browser extension for Scratch
+    Description: Scratch Addons is a browser extension that provides new features and themes for the Scratch website and project editor. It has a mission to collect, archive, and put into use userstyles and userscripts, developed by several members of the Scratch community.
+    InstallButton:
+      Loading: Loading...
+      Description: free, open source
+    ReadMore: or read more
+    Carousel:
+      Video: 
+        Caption: The trailer.
+      Popup:
+        Caption: The extension pop-up.
+        ImgAlt: Extension pop-up
+      Settings:
+        Caption: The settings page.
+        ImgAlt: Settings page
+      Demo:
+        Caption: Demonstration of the extension. ({{.Count}})
+        ImgAlt: Demonstration ({{.Count}})
+      Previous: Previous
+      Next: Next
+  Features:
+    Heading: Features
+    AddonsHeading: Addons
+    AddonsParagraph: Scratch Addons consists of addons, which are features that can empower your Scratch website and editor experience.
+    CustomizableHeading: Customizable
+    CustomizableParagraph: Scratch Addons has an easy-to-use interface to control various settings of each feature and theme.
+    InternationalHeading: International
+    InternationalParagraph: Not just English. Scratch Addons is available in Spanish, Russian, Japanese, French, and many more.
+    OSHeading: Open source
+    OSParagraph: Scratch Addons is free, open source, and built by a community of Scratchers.
+  Highlights:
+    Heading: Highlights
+    Paragraph: Remember, these are just the highlights. {{.OpenTag1}}There's more!{{.CloseTag1}}
+    ScratchMessagingHeading: Scratch Messaging
+    ScratchMessagingParagraph: 'The "grandfather" of Scratch Addons. It is available when clicking the Scratch Addons icon, and provides easy reading and replying to your Scratch messages: groups messages by project, shows full comment text and context, allows direct comment replying.'
+    ScratchNotifierHeading: Scratch Notifier
+    ScratchNotifierParagraph: It adds browser notifications on new Scratch messages. You can click the notification to go straight to the message (comment, project, etc.)
+    DeveloperToolsHeading: Developer tools
+    DeveloperToolsParagraph: '{{.OpenTag1}}From the original extension.{{.CloseTag1}} It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
+  Install:
+    Heading: Install    
+    Paragraph: Satisfied? Don't hesitate to install it now!
+    InstallButton:
+      Other: ...or {{.OpenTag1}}download it from GitHub{{.CloseTag1}} or {{.OpenTag2}}install it from the source{{.CloseTag2}}.
+  Users: Users
+
+# Strings used for /addons
+AddonsPage:
+  EasterEggAddon: This is an easter egg addon.
+  RecommendedAddon: This is a recommended addon.
+  ListViewLabel: List view
+  EasterEggLabel: Easter egg
+  EasterEggTooltip:
+    L1: To activate the addons, do the Konami Code (↑↑↓↓←→←→BA) on the settings page. Read the FAQ page for more information.
+    L2: In this page, an easter egg addon will have an egg symbol besides its name.
+
+# Strings used for /feedback
+FeedbackPage:
+  Status:
+    Sending: Sending...
+    Success: Sent! Thanks for the feedback.
+    Failed: Something went wrong. Try sending again?
+  UsernameLabel: Scratch username, or other identifiers (optional)
+  ContentLabel: Feedback
+  ContentPlaceholder: Please provide as much detail as you can.
+  SendEnabled: Send list of my currently enabled addons (recommended)
+  SubmitButton: Send
+
+# Strings used for /scratch-messaging-transition
+SMTPage:
+  ScratchMessagingLogoAlt: Scratch Messaging Extension logo
+
+# Strings used for /changelog
+ChangelogPage:
+  Highlights:
+    Title: Highlights
+  Links:
+    Title: Links
+    ReleaseGitHub: Release page on GitHub
+    RepoState: Repository state at release
+    CommitsMade: Commits made on this version
+  Status:
+    Latest: Latest
+    Yanked: Yanked
+
+# Strings used for /unsupported-browser
+UnsupportedBrowserPage:
+  Download: Download
+  HowToUpdate: How to update

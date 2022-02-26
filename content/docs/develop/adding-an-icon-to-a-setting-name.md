@@ -9,4 +9,4 @@ To add an icon to a setting name without [causing](https://github.com/ScratchAdd
 - Write `@ICONFILENAME.svg setting name` on `addon.json`
 - Add `ICONFILENAME.svg` at `/images/icons/` if missing
 - Edit `/background/load-addon-manifests.js` to add `iconfilenameIcon: "@ICONFILENAME.svg",`
-- Edit `/addons/scratch-notifier/background.js` for Scratch Notifier settings
+- Edit `/addons/scratch-notifier/notifier.js` for Scratch Notifier settings

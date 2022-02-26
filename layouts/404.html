@@ -1,3 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+
+{{ partialCached "head-404" . .Site.Language.Lang }}
+
+</head>
+
+<body>
+
+{{ partialCached "nav" . .Site.Language.Lang }}
+
+<main>
+	{{ block "main" . }}{{ end }}
+</main>
+
+{{ partialCached "footer" . .Site.Language.Lang }}
+
+</body>
+
+</html>
+
 {{ define "main" }}
 
 <h1>404</h1>
@@ -10,26 +34,11 @@
 		<li><a href='{{ "/" | absLangURL }}'>Return to the home page</a></li>
 		<li><a href="https://findtheinvisiblecow.com/">Find the invisible cow</a></li>
 	</ul>
+
+	<div class="alert alert-primary" role="alert" id="smart-404">
+		<h5>Smart 404</h5>
+		<p class="mb-0">Loading...</p>
+	</div>
 </div>
-
-<script>
-	let pageTitle = '404'
-	let pageDescription = "Sorry! That page doesn't exist!"
-
-	document.querySelectorAll("title").forEach(element => {
-		element.textContent = element.textContent.replace("404 Page not found", pageTitle)
-	})
-	document.querySelectorAll("meta[content^='404 Page not found']").forEach(element => {
-		element.content = element.content.replace("404 Page not found", pageTitle)
-	})
-	document.querySelectorAll("meta[name$='description']").forEach(element => {
-		element.content = pageDescription
-	})
-	document.querySelectorAll("meta[property$='description']").forEach(element => {
-		element.content = pageDescription
-	})
-
-	plausible("404",{ props: { path: document.location.pathname } });
-</script>
 
 {{ end }}
