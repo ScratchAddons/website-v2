@@ -39,6 +39,14 @@
 		nCommits: '{{ T "ContributorsPage.NCommits" -1 }}',
 		nContributors: '{{ T "ContributorsPage.NContributors" -1 }}'
 	}
+	window.contributorTypes = {
+		{{ range $elem_key, $elem_val := $.Site.Data.credits.contributortypes.symbol }}
+		{{ $elem_key }}: {
+			symbol: '{{ $elem_val }}',
+			description: '{{ index ( index $.Site.Data.credits.contributortypes.description "en" ) $elem_key }}'
+		},
+		{{ end }}
+	}
 </script>
 <script async src="/assets/js/contributors.js"></script>
 
