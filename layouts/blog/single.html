@@ -19,7 +19,7 @@
 			•
 			<span class="mx-1">
 				<span class="iconify" data-icon="bi:clock-fill"></span>
-				{{ i18n "Blog.ReadTime" .ReadingTime }}
+				{{ T "Blog.ReadTime" .ReadingTime }}
 			</span>
 		</p>
 	</header>
@@ -29,5 +29,9 @@
 	</div>
 
 </article>
+
+<div class="container">
+	<a href="/blog" class="text-decoration-none">⟵ {{ T "Blog.BackToBlog" }}</a>
+</div>
 
 {{ end }}	
