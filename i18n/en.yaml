@@ -123,6 +123,7 @@ AddonsPage:
     L1: To activate the addons, do the Konami Code (↑↑↓↓←→←→BA) on the settings page. Read the FAQ page for more information.
     L2: In this page, an easter egg addon will have an egg symbol besides its name.
   NAddons: "{{.Count}} addons"
+  SourceCodeLabel: Source code on GitHub
 
 # Strings used for /feedback
 FeedbackPage:
