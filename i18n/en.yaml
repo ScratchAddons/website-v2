@@ -14,7 +14,9 @@ Nav:
   Contributors: Contributors
   Feedback: Send Feedback
   Repository: Repository
+  RepositoryLabel: Repository on GitHub
   Install: Install
+  ToggleNavigation: Toggle navigation
 
 # Strings used for the site footer
 Footer:
