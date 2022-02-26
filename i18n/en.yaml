@@ -159,6 +159,7 @@ UnsupportedBrowserPage:
 
 # Strings used for blog
 Blog:
+  SectionSiteName: Scratch Addons Blog
   ReadTime:
     one: "{{.Count}} minute"
     other: "{{.Count}} minutes"
