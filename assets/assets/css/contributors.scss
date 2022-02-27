@@ -27,9 +27,9 @@
 	margin-right: 0.75rem;
 	margin-top: auto;
 	height: 64px;
-	width: 64px;	
+	width: 64px;
 	object-fit: initial;
-}	
+}
 
 .contributor-info {
 	display: flex;
@@ -37,8 +37,7 @@
 	max-width: 100%;
 	flex-direction: column;
 	justify-content: center;
-	
-}	
+}
 
 .contributor-name {
 	font-size: 1.25rem;
@@ -67,12 +66,12 @@
 img.emoji {
 	height: .90rem;
 	width: .90rem;
-	margin: 0 .05em 0 .05em;
+	margin: 0 .05em;
 	vertical-align: -0.25em;
 }
 
 body.dark {
-	
+
 	#contributors {
 		.contributor {
 			&:hover {
