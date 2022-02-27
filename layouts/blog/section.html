@@ -10,6 +10,11 @@
 		{{ range .Pages.ByPublishDate.Reverse }}
 			<div class="col mb-4 px-0 px-md-1">
 				<article class="card">
+					{{ if isset .Page.Params "cover_image" -}}
+						<a href="{{ .Permalink }}">
+							<img src="{{ .Page.Params.cover_image }}" class="card-img-top" alt="{{ .Page.Params.cover_image_alt }}">
+						</a>
+					{{- end }}
 					<div class="card-body">
 						<h3 class="card-title h3 mt-0"><a href="{{ .Permalink }}" class="text-body">{{ .Title }}</a></h3>
 						<p class="card-text">{{ .Description }}</p>
