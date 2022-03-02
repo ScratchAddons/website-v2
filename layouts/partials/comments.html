@@ -1,0 +1,46 @@
+<div class="giscus"></div>
+
+<script>
+	const giscusSrc = document.createElement('script')
+	const languageToUse = document.documentElement.lang
+	// const languageToUse = 'en'
+	const languages = ["de", "gsw", "en", "es", "fr", "id", "it", "ja", "ko", "pl", "ro", "ru", "vi", "zh-CN", "zh-TW"]
+	const dataset = {
+		repo: 'Hans5958/GitHub-API-Testing',
+		repoId: 'MDEwOlJlcG9zaXRvcnkyMDg3ODMzMDQ=',
+		category: 'Announcements',
+		categoryId: 'DIC_kwDODHHHyM4CN6sV',
+		mapping: 'pathname',
+		reactionsEnabled: 1,
+		emitMetadata: 0,
+		inputPosition: 'top',
+		theme: document.querySelector('body.dark') ? 'dark' : 'light',
+		lang: languages.includes(languageToUse) ? languageToUse : 'en'
+	}
+
+	giscusSrc.src = 'https://giscus.app/client.js'
+	giscusSrc.crossOrigin = 'anonymous'
+	giscusSrc.async = 'true'
+
+	for (let key in dataset) {
+		giscusSrc.dataset[key] = dataset[key]
+	}
+
+	console.log(giscusSrc.outerHTML)
+
+	document.body.appendChild(giscusSrc)
+
+	document.addEventListener('change-theme', event => {
+		const theme = event.detail.scheme
+		console.log(theme)
+		const iframe = document.querySelector('iframe.giscus-frame');
+		if (!iframe) return;
+		iframe.contentWindow.postMessage({ 
+			giscus: {
+				setConfig: {
+					theme
+				}
+			}
+		}, 'https://giscus.app');
+	})
+</script>

@@ -171,6 +171,13 @@ waitForElement("#dark-toggle").then(() => {
         }
         updateDarkTheme(!darkTheme, true)
         if (event && event.shiftKey) updateExtensionStyledTheme(!extensionStyledTheme, true)
+        let changeThemeEvent = new CustomEvent('change-theme', {
+            detail: {
+                scheme: darkTheme ? 'dark' : 'light',
+                type: extensionStyledTheme ? 'extension' : 'default'
+            }
+        })
+        document.dispatchEvent(changeThemeEvent)
     })
         
 })
