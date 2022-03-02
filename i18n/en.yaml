@@ -8,6 +8,9 @@ Global:
   FirefoxShort: Firefox
   Install: Install
   InstallFor: Install for {{.Browser}}
+  ReadTime:
+    one: "{{.Count}} minute"
+    other: "{{.Count}} minutes"
 
 # Strings used for the site navigation bar
 Nav:
@@ -160,11 +163,4 @@ UnsupportedBrowserPage:
 
 # Strings used for blog
 Blog:
-  SectionHeading:
-    Title: Blog
-    Tagline: Get the latest news about Scratch Addons, in text!
-  SectionSiteName: Scratch Addons Blog
-  BackToBlog: back to blog index
-  ReadTime:
-    one: "{{.Count}} minute"
-    other: "{{.Count}} minutes"
+  SectionSiteName: Scratch Addons Blog    # This is unused in other languages, but it is used in English.

@@ -1,8 +1,8 @@
 {{ define "main" }}
 
 <header id="intro" class="intro-heading post-header">
-	<h1 class="post-title" itemprop="name headline">{{ T "Blog.SectionHeading.Title" }}</h1>
-	<p>{{ T "Blog.SectionHeading.Tagline" }}</p>
+	<h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
+	<p>{{ .Description }}</p>
 </header>
 			
 <div class="container">
