@@ -10,8 +10,19 @@
 		<div class="contributor-info">
 			<p class="contributor-name">{{ .login }}</p>
 			<p class="contribution-details">
-				<!-- Change en to $.Page.Language.Lang when ready -->
-				{{ range .contributions }}<span title='{{ index ( index $.Site.Data.credits.contributortypes.description "en" ) . }}' data-toggle="tooltip" data-placement="bottom">{{ index $.Site.Data.credits.contributortypes.symbol . }}</span>{{ end }}
+				{{ if isset .Site.Data.credits.contributortypes.description $.Page.Language.Lang }}
+					{{ range .contributions -}}
+						{{ if isset ( index $.Site.Data.credits.contributortypes.description $.Page.Language.Lang ) . -}}
+							<span title='{{ index ( index $.Site.Data.credits.contributortypes.description $.Page.Language.Lang ) . }}' data-toggle="tooltip" data-placement="bottom">{{ index $.Site.Data.credits.contributortypes.symbol . }}</span>
+						{{- else -}}
+							<span title='{{ index $.Site.Data.credits.contributortypes.description.en . }}' data-toggle="tooltip" data-placement="bottom">{{ index $.Site.Data.credits.contributortypes.symbol . }}</span>
+						{{ end }}
+					{{- end }}
+				{{ else }}
+					{{ range .contributions -}}
+						<span title='{{ index $.Site.Data.credits.contributortypes.description.en . }}' data-toggle="tooltip" data-placement="bottom">{{ index $.Site.Data.credits.contributortypes.symbol . }}</span>
+					{{- end }}
+				{{ end }}
 				{{ if isset . "commits"}}
 				<span class="contribution-commits" aria-label='{{ T "ContributorsPage.NCommits" .commits }}'>
 					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" class="iconify" data-icon="octicon:git-commit-16" style="vertical-align: -0.125em; transform: rotate(360deg);">
