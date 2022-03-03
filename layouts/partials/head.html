@@ -39,6 +39,10 @@
 <meta name="twitter:image:alt" content='{{ T "Global.LogoAlt" }}' />
 {{ end }}
 
+{{ range .AlternativeOutputFormats -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink (T ( $.Param "section_site_name" )) | safeHTML }}
+{{ end }}
+
 {{ if .IsTranslated }}{{ range .Translations }}{{ if or ( eq .IsHome false ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />
 {{- end }}{{ end }}{{ end }}
