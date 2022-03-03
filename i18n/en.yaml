@@ -11,15 +11,20 @@ Global:
   ReadTime:
     one: "{{.Count}} minute"
     other: "{{.Count}} minutes"
+  RSSDescription: Recent content on {{ .SiteName }}
 
-# Strings used for the site navigation bar
+# Strings used for links to pages. Future pages on header and footer should be put on this.
+Links:
+  Blog: Blog
+
+# Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
   Contributors: Contributors
   Feedback: Send Feedback
   Repository: Repository
   Install: Install
 
-# Strings used for the site footer
+# Strings used for the site footer (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Footer:
   Pages:
     Header: Pages
@@ -28,7 +33,6 @@ Footer:
     Contributors: Contributors
     Changelog: Changelog
     Addons: Addons
-    Blog: Blog
   Discuss:
     Header: Discuss
     Discussion: Discussion Forum

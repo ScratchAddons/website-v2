@@ -15,13 +15,11 @@
 	<channel>
 		<title>{{ T ( $.Param "section_site_name" ) }}</title>
 		<link>{{ .Permalink }}</link>
-		<description>Recent content on {{ T ( $.Param "section_site_name" ) }}</description>
-		<generator>Hugo -- gohugo.io</generator>{{ with .Site.LanguageCode }}
-		<language>{{.}}</language>{{end}}{{ with .Site.Author.email }}
-		<managingEditor>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</managingEditor>{{end}}{{ with .Site.Author.email }}
-		<webMaster>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</webMaster>{{end}}{{ with .Site.Copyright }}
-		<copyright>{{.}}</copyright>{{end}}{{ if not .Date.IsZero }}
-		<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
+		<description>{{ T "Global.RSSDescription" ( dict "SiteName" ( T ( $.Param "section_site_name" ) ) ) }}</description>
+		<generator>Hugo -- gohugo.io</generator>
+		{{ with .Site.LanguageCode }}<language>{{.}}</language>{{end}}
+		<copyright>{{ T "Footer.Legal.Copyright" .Site.Params.copyright_year }}</copyright>
+		{{ if not .Date.IsZero }}<lastBuildDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</lastBuildDate>{{ end }}
 		{{- with .OutputFormats.Get "RSS" -}}
 		{{ printf "<atom:link href=%q rel=\"self\" type=%q />" .Permalink .MediaType | safeHTML }}
 		{{- end -}}
@@ -30,7 +28,6 @@
 		<title>{{ .Title }}</title>
 		<link>{{ .Permalink }}</link>
 		<pubDate>{{ .Date.Format "Mon, 02 Jan 2006 15:04:05 -0700" | safeHTML }}</pubDate>
-		{{ with .Site.Author.email }}<author>{{.}}{{ with $.Site.Author.name }} ({{.}}){{end}}</author>{{end}}
 		<guid>{{ .Permalink }}</guid>
 		<description>{{ .Summary | html }}</description>
 		</item>
