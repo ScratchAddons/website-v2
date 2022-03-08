@@ -22,7 +22,9 @@ Nav:
   Contributors: Contributors
   Feedback: Send Feedback
   Repository: Repository
+  RepositoryLabel: Repository on GitHub
   Install: Install
+  ToggleNavigation: Toggle navigation
 
 # Strings used for the site footer (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Footer:
@@ -75,7 +77,7 @@ PlayerModal:
 # Strings used for / (index)
 IndexPage:
   Intro:
-    Tagline: All in one browser extension for Scratch
+    Tagline: All-in-one browser extension for Scratch
     Description: Scratch Addons is a browser extension that provides new features and themes for the Scratch website and project editor. It has a mission to collect, archive, and put into use userstyles and userscripts, developed by several members of the Scratch community.
     InstallButton:
       Loading: Loading...
