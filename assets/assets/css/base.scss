@@ -30,7 +30,7 @@ p {
 	margin-bottom: 0.5rem
 }
 
-header {
+body > header {
 	background-color: var(--header-bg);
 	color: var(--header-cnt);
 	
@@ -76,7 +76,7 @@ header {
 		
 }
 
-footer {
+body > footer {
 	width: 100%;
 	background-color: var(--footer-bg);
 	color: var(--footer-cnt);
@@ -236,6 +236,15 @@ body.dark .dark-btn-white {
 	}
 }
 
+.text-muted a,
+a.text-muted {
+	color: #6c757d !important;
+
+	&:hover {
+		color: #4f555a !important;
+	}
+}
+
 // =============================================================
 //                            COLORS
 // =============================================================
@@ -346,6 +355,10 @@ body.dark {
 		color: $dark-low-emphasis !important
 	}
 
+	.text-body {
+		color: white
+	}
+
 	#dark-toggle {
 		color: white;
 		background-color: $scratch-orange;
@@ -402,7 +415,7 @@ body.extension-styled {
 		font-size-adjust: 0.5
 	}
 
-	header {
+	> header {
 		padding-top: 1.4px;
 		padding-bottom: 1.4px;
 	}
@@ -435,7 +448,7 @@ body.extension-styled {
 
 body.dark.extension-styled {
 
-	header {
+	> header {
 		img {
 			transform: scale(1.75);
 		}

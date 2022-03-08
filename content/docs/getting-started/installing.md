@@ -7,11 +7,14 @@ weight: 2
 
 Scratch Addons is available in both Chrome Web Store and Add-ons for Firefox.
 
-- Chrome Web Store (for Google Chrome, Opera, Brave, Vivaldi, Microsoft Edge (>79), and other Chromium-based browsers)  
-  https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco  
-- Add-ons for Firefox (for Mozilla Firefox)  
-  https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/  
+- Chrome Web Store (for Google Chrome, Opera, Brave, Vivaldi, Microsoft Edge >79, and other Chromium-based browsers)  
+  https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco
 
+- Add-ons for Firefox (for Mozilla Firefox)  
+  https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/
+
+- Microsoft Edge Add-ons (for Microsoft Edge >79)  
+  https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj
 
 ## From source
 

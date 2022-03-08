@@ -1,5 +1,6 @@
 @import "variables";
 @import "parts/highlight";
+@import "parts/admonition";
 
 article {
 
@@ -34,7 +35,7 @@ article {
 		margin: 0;
 		font-size: 85%;
 		background-color: rgba(black, 0.05);
-		border-radius: 6px;
+		border-radius: .25rem;
 		color: inherit;
 	
 	 	br { display: none; }
