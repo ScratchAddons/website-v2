@@ -32,7 +32,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x 
+          node-version: 16.x 
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -42,9 +42,9 @@ jobs:
 
       - name: Execute script
         run: | 
+          echo Running...
           cd repo
-          npm ci --prefix ../script
-          node ../script/node/ci/hugo-update-addons-data.js
+          bash ../script/sh/hugo-update-addons-data.sh
 
       - name: Generate token 
         uses: tibdex/github-app-token@v1
