@@ -1,0 +1,16 @@
+{{ range $.Site.Data.credits.dependencies }}
+
+<h3>{{ T .I18nKey }}</h3>
+
+<ul>
+	{{ range .Entries }}
+	<li>
+		<a href='{{ .Link }}'>{{ if isset . "Name" }}{{ .Name }}{{ else }}{{ .ID }}{{ end }}</a>
+		({{ .License }})
+	</li>
+	{{ end }}
+</ul>
+
+
+{{ end }}
+
