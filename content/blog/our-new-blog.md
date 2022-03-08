@@ -1,7 +1,7 @@
 ---
 title: Welcome to our new blog!
 description: If you read this, chances are our blog is now up! We are proud to annouce that we got a new blog for Scratch Addons
-date: 2022-03-03T12:37:24.606Z
+date: 2022-03-08T05:28:41Z
 author: Hans5958
 ---
 

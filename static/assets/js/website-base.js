@@ -256,7 +256,9 @@ if (languageVariations.length) languageId = languageVariations[0]
 const options = { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }
 
 $(() => {
-    document.querySelectorAll("time").forEach(element => element.textContent = new Date(element.textContent).toLocaleDateString(languageId, options))
+    document.querySelectorAll("time").forEach(element => {
+        element.textContent = new Date(element.getAttribute('datetime')).toLocaleDateString(languageId, options)
+    })
 })
 
 /* =============================================================
