@@ -4,21 +4,33 @@ Global:
   LogoAlt: Scratch Addons logo
   ChromeLong: Google Chrome
   FirefoxLong: Mozilla Firefox
+  EdgeLong: Microsoft Edge
   ChromeShort: Chrome
   FirefoxShort: Firefox
+  EdgeShort: Edge
   Install: Install
   InstallFor: Install for {{.Browser}}
+  ReadTime:
+    one: "{{.Count}} minute"
+    other: "{{.Count}} minutes"
+  RSSDescription: Recent content on {{ .SiteName }}
   Website: Website
   Extension: Extension
 
-# Strings used for the site navigation bar
+# Strings used for links to pages. Future pages on header and footer should be put on this.
+Links:
+  Blog: Blog
+
+# Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
   Contributors: Contributors
   Feedback: Send Feedback
   Repository: Repository
+  RepositoryLabel: Repository on GitHub
   Install: Install
+  ToggleNavigation: Toggle navigation
 
-# Strings used for the site footer
+# Strings used for the site footer (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Footer:
   Pages:
     Header: Pages
@@ -69,7 +81,7 @@ PlayerModal:
 # Strings used for / (index)
 IndexPage:
   Intro:
-    Tagline: All in one browser extension for Scratch
+    Tagline: All-in-one browser extension for Scratch
     Description: Scratch Addons is a browser extension that provides new features and themes for the Scratch website and project editor. It has a mission to collect, archive, and put into use userstyles and userscripts, developed by several members of the Scratch community.
     InstallButton:
       Loading: Loading...
@@ -107,7 +119,7 @@ IndexPage:
     ScratchNotifierHeading: Scratch Notifier
     ScratchNotifierParagraph: It adds browser notifications on new Scratch messages. You can click the notification to go straight to the message (comment, project, etc.)
     DeveloperToolsHeading: Developer tools
-    DeveloperToolsParagraph: '{{.OpenTag1}}From the original extension.{{.CloseTag1}} It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
+    DeveloperToolsParagraph: 'From the original extension. It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
   Install:
     Heading: Install    
     Paragraph: Satisfied? Don't hesitate to install it now!
@@ -124,6 +136,8 @@ AddonsPage:
   EasterEggTooltip:
     L1: To activate the addons, do the Konami Code (↑↑↓↓←→←→BA) on the settings page. Read the FAQ page for more information.
     L2: In this page, an easter egg addon will have an egg symbol besides its name.
+  NAddons: "{{.Count}} addons"
+  SourceCodeLabel: Source code on GitHub
 
 # Strings used for /feedback
 FeedbackPage:
@@ -158,6 +172,10 @@ ChangelogPage:
 UnsupportedBrowserPage:
   Download: Download
   HowToUpdate: How to update
+
+# Strings used for blog
+Blog:
+  SectionSiteName: Scratch Addons Blog    # This is unused in other languages, but it is used in English.
 
 # Strings used for /contributors
 ContributorsPage:

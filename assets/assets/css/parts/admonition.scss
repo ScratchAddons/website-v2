@@ -1,0 +1,63 @@
+// Adapted from the Bootstrap docs
+// https://github.com/twbs/bootstrap/blob/v4-dev/site/assets/scss/_callouts.scss
+//
+// Copyright 2011-2021 The Bootstrap Authors, 2011-2021 Twitter, Inc
+// Licensed under the Creative Commons Attribution 3.0 Unported License.
+
+@import "../variables";
+
+.admonition {
+	padding: 1rem;
+	margin-top: 1.25rem;
+	margin-bottom: 1.25rem;
+	border: 1px solid #eee;
+	border-left-width: 0.25rem;
+	border-radius: .25rem;
+
+	:first-child {
+		margin-top: 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		margin-top: 1rem;
+		margin-bottom: .5rem
+	}
+
+	p {
+		margin-bottom: .5rem
+	}
+
+	:last-child {
+		margin-bottom: 0;
+	}
+
+	code {
+		border-radius: .25rem;
+	}
+
+	+ .admonition {
+		margin-top: -0.25rem;
+	}
+}
+
+// Variations
+@mixin admonition-variant($color) {
+	border-left-color: $color;
+
+	h4 {
+		color: $color;
+	}
+}
+
+.admonition-info {
+	@include admonition-variant($bs-info);
+}
+.admonition-success {
+	@include admonition-variant($bs-success);
+}
+.admonition-warning {
+	@include admonition-variant($bs-warning);
+}
+.admonition-danger {
+	@include admonition-variant($bs-danger);
+}
