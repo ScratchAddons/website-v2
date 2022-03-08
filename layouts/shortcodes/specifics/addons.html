@@ -1,4 +1,11 @@
 <div class="d-flex align-items-center" hidden>
+	<div class="pr-2">
+		{{if ( index $.Site.Data.addons $.Page.Language.Lang ) -}}
+			<p>{{ T "AddonsPage.NAddons" ( index $.Site.Data.addons $.Page.Language.Lang | len ) }}</p>
+		{{- else -}}
+			<p>{{ T "AddonsPage.NAddons" ( $.Site.Data.addons.en | len ) }}</p>
+		{{- end }}
+	</div>
 	<div class="flex-grow-1">
 		<hr />
 	</div>
@@ -40,7 +47,7 @@
 			{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.EasterEggAddon" }}'>🥚</span>{{ end -}}
 			{{ if in .tags "recommended" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.RecommendedAddon" }}'>⭐</span>{{ end -}}
 		</h5>
-		<h6 class="card-subtitle mb-2 text-muted">{{ .id }}</h6>
+		<h6 class="card-subtitle mb-2 text-muted">{{ .id }} <a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' aria-label='{{ T "AddonsPage.SourceCodeLabel" }}' rel="noopener"><span class="iconify" data-icon="simple-icons:github"></span></a></h6>
 		<p class="card-text">{{ .description }}</p>
 	</div>
 </div>

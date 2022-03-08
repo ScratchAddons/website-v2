@@ -236,6 +236,15 @@ body.dark .dark-btn-white {
 	}
 }
 
+.text-muted a,
+a.text-muted {
+	color: #6c757d !important;
+
+	&:hover {
+		color: #4f555a !important;
+	}
+}
+
 // =============================================================
 //                            COLORS
 // =============================================================
