@@ -61,13 +61,10 @@ jobs:
           cd repo
           hugo --gc --minify --config config.yml,config-prod.yml
           
-      - name: Upload build
+      - name: Upload whole repo
         uses: actions/upload-artifact@v2
         with:
-          name: public
-          path: ./repo/public
-      - name: Upload whole repo (to check i18n)
-        uses: actions/upload-artifact@v2
-        with:
-          name: public
-          path: ./repo
+          name: repo
+          path: |
+            ./repo
+            !./repo/.git
