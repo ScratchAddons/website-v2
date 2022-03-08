@@ -8,15 +8,23 @@ Global:
   FirefoxShort: Firefox
   Install: Install
   InstallFor: Install for {{.Browser}}
+  ReadTime:
+    one: "{{.Count}} minute"
+    other: "{{.Count}} minutes"
+  RSSDescription: Recent content on {{ .SiteName }}
 
-# Strings used for the site navigation bar
+# Strings used for links to pages. Future pages on header and footer should be put on this.
+Links:
+  Blog: Blog
+
+# Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
   Contributors: Contributors
   Feedback: Send Feedback
   Repository: Repository
   Install: Install
 
-# Strings used for the site footer
+# Strings used for the site footer (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Footer:
   Pages:
     Header: Pages
@@ -156,3 +164,7 @@ ChangelogPage:
 UnsupportedBrowserPage:
   Download: Download
   HowToUpdate: How to update
+
+# Strings used for blog
+Blog:
+  SectionSiteName: Scratch Addons Blog    # This is unused in other languages, but it is used in English.
