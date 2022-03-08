@@ -1,0 +1,28 @@
+{{- $class := "info" -}}
+
+{{- if .IsNamedParams }}{{- $class = .Get "type" -}}
+{{ else }}{{- $class = .Get 0 -}}
+{{ end -}}
+
+{{- if eq $class "note" }} {{- $class = "info" -}}
+{{ else if eq $class "abstract" }} {{- $class = "info" -}}
+{{ else if eq $class "summary" }} {{- $class = "info" -}}
+{{ else if eq $class "tldr" }} {{- $class = "info" -}}
+{{ else if eq $class "todo" }} {{- $class = "info" -}}
+{{ else if eq $class "tip" }} {{- $class = "info" -}}
+{{ else if eq $class "hint" }} {{- $class = "info" -}}
+{{ else if eq $class "important" }} {{- $class = "info" -}}
+{{ else if eq $class "check" }} {{- $class = "success" -}}
+{{ else if eq $class "done" }} {{- $class = "success" -}}
+{{ else if eq $class "caution" }} {{- $class = "warning" -}}
+{{ else if eq $class "attention" }} {{- $class = "warning" -}}
+{{ else if eq $class "failure" }} {{- $class = "danger" -}}
+{{ else if eq $class "fail" }} {{- $class = "danger" -}}
+{{ else if eq $class "missing" }} {{- $class = "danger" -}}
+{{ else if eq $class "error" }} {{- $class = "danger" -}}
+{{ else if eq $class "bug" }} {{- $class = "danger" -}}
+{{ end -}}
+
+<div class="admonition admonition-{{ $class }}">
+	{{ .Inner | markdownify }}
+</div>
