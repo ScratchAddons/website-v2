@@ -20,10 +20,10 @@ Global:
 # Strings used for links to pages. Future pages on header and footer should be put on this.
 Links:
   Blog: Blog
+  Credits: Credits
 
 # Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
-  Contributors: Contributors
   Feedback: Send Feedback
   Repository: Repository
   RepositoryLabel: Repository on GitHub
@@ -36,7 +36,6 @@ Footer:
     Header: Pages
     FAQ: FAQ
     Feedback: Send Feedback
-    Contributors: Contributors
     Changelog: Changelog
     Addons: Addons
   Discuss:
