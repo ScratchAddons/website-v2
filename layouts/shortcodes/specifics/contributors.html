@@ -1,0 +1,84 @@
+{{ if isset $.Site.Data.credits "contributors"  }}
+
+<div id="contributors-showcase" class="row no-gutters">
+
+{{ range $.Site.Data.credits.contributors }}
+
+<div class="contributor col-12 col-sm-6 col-md-4 col-xl-3" aria-label="{{ .login }}">
+	<a target="_blank" href="https://github.com/{{ .login }}">
+		<img class="contributor-icon" src="{{ .avatar_url }}" alt='{{ T "ContributorsPage.NProfilePicture" (dict "Name" .login) }}'>
+		<div class="contributor-info">
+			<p class="contributor-name">{{ .login }}</p>
+			<p class="contribution-details">
+				{{ if isset .Site.Data.credits.contributortypes.description $.Page.Language.Lang }}
+					{{ range .contributions -}}
+						{{ if isset ( index $.Site.Data.credits.contributortypes.description $.Page.Language.Lang ) . -}}
+							<span title='{{ index ( index $.Site.Data.credits.contributortypes.description $.Page.Language.Lang ) . }}' data-toggle="tooltip" data-placement="bottom">{{ index $.Site.Data.credits.contributortypes.symbol . }}</span>
+						{{- else -}}
+							<span title='{{ index $.Site.Data.credits.contributortypes.description.en . }}' data-toggle="tooltip" data-placement="bottom">{{ index $.Site.Data.credits.contributortypes.symbol . }}</span>
+						{{ end }}
+					{{- end }}
+				{{ else }}
+					{{ range .contributions -}}
+						<span title='{{ index $.Site.Data.credits.contributortypes.description.en . }}' data-toggle="tooltip" data-placement="bottom">{{ index $.Site.Data.credits.contributortypes.symbol . }}</span>
+					{{- end }}
+				{{ end }}
+				{{ if isset . "commits"}}
+				<span class="contribution-commits" aria-label='{{ T "ContributorsPage.NCommits" .commits }}'>
+					<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16" class="iconify" data-icon="octicon:git-commit-16" style="vertical-align: -0.125em; transform: rotate(360deg);">
+						<path fill-rule="evenodd" d="M10.5 7.75a2.5 2.5 0 1 1-5 0a2.5 2.5 0 0 1 5 0zm1.43.75a4.002 4.002 0 0 1-7.86 0H.75a.75.75 0 1 1 0-1.5h3.32a4.001 4.001 0 0 1 7.86 0h3.32a.75.75 0 1 1 0 1.5h-3.32z" fill="currentColor"></path>
+					</svg> 
+					{{ .commits }}
+				</span>
+				{{ end }}
+			</p>
+		</div>
+	</a>
+</div>
+
+{{ end }}
+
+</div>
+
+<p class="text-right" id="contributors-count">{{ T "ContributorsPage.NContributors" ( $.Site.Data.credits.contributors | len ) }}</p>
+
+{{ else }}
+
+<script>
+	window.i18nStrings = {
+		nProfilePicture: '{{ T "ContributorsPage.NProfilePicture" (dict "Name" "PLACEHOLDER") }}',
+		nCommits: '{{ T "ContributorsPage.NCommits" -1 }}',
+		nContributors: '{{ T "ContributorsPage.NContributors" -1 }}'
+	}
+	window.contributorTypes = {
+		{{ range $elem_key, $elem_val := $.Site.Data.credits.contributortypes.symbol }}
+		{{ $elem_key }}: {
+			symbol: '{{ $elem_val }}',
+			description: '{{ index ( index $.Site.Data.credits.contributortypes.description "en" ) $elem_key }}'
+		},
+		{{ end }}
+	}
+</script>
+<script async src="/assets/js/contributors.js"></script>
+
+<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+
+<div id="contributors-showcase" class="row no-gutters"></div>
+
+<p class="text-right" id="contributors-count"></p>
+
+{{ end }}
+
+<script src="https://cdn.jsdelivr.net/npm/twemoji@13/dist/twemoji.min.js"></script>
+<script>
+	const showcaseEl = document.querySelector('#contributors-showcase')
+	if (typeof twemoji === "undefined") {
+		document.querySelector('script[src$="twemoji.min.js"]').addEventListener("load", () => {
+			twemoji.parse(showcaseEl)
+			window.twemojiReparse = () => twemoji.parse(showcaseEl)
+		});
+	} else {
+		twemoji.parse(showcaseEl)
+		window.twemojiReparse = () => twemoji.parse(showcaseEl)
+	}
+</script>

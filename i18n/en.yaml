@@ -14,15 +14,17 @@ Global:
     one: "{{.Count}} minute"
     other: "{{.Count}} minutes"
   RSSDescription: Recent content on {{ .SiteName }}
+  Website: Website
+  Extension: Extension
 
 # Strings used for links to pages. Future pages on header and footer should be put on this.
 Links:
   Blog: Blog
+  Credits: Credits
   PrivacyPolicy: Privacy Policy
 
 # Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
-  Contributors: Contributors
   Feedback: Send Feedback
   Repository: Repository
   RepositoryLabel: Repository on GitHub
@@ -35,7 +37,6 @@ Footer:
     Header: Pages
     FAQ: FAQ
     Feedback: Send Feedback
-    Contributors: Contributors
     Changelog: Changelog
     Addons: Addons
   Discuss:
@@ -175,3 +176,9 @@ UnsupportedBrowserPage:
 # Strings used for blog
 Blog:
   SectionSiteName: Scratch Addons Blog    # This is unused in other languages, but it is used in English.
+
+# Strings used for /contributors
+ContributorsPage:
+  NContributors: '{{.Count}} contributors'
+  NProfilePicture: '{{.Name}} profile picture'
+  NCommits: '{{.Count}} commits'
