@@ -1,6 +1,27 @@
 @import "variables";
 @import "parts/lds-elipsis";
 
+.card-body {
+	.text-muted a {
+		color: #6c757d !important;
+
+		&:hover {
+			color: darken(#6c757d, 25%) !important;
+		}
+
+	}
+}
+
+body.dark .card-body {
+	.text-muted a {
+		color: $dark-low-emphasis !important;
+
+		&:hover {
+			color: darken($dark-low-emphasis, 25%) !important;
+		}
+	}
+}
+
 .card-columns[data-list-view="true"] {
 
     column-count: 1;
@@ -30,7 +51,7 @@
 	}
 
 	.card-img-wrapper {
-		@media (max-width: $bs-breakpoint-md - 0.02px) {
+		@media (max-width: calc($bs-breakpoint-md - 0.02px)) {
 			display: none
 		}
 	}
