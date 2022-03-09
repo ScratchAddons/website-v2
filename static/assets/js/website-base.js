@@ -147,6 +147,13 @@ const updateDarkToggle = (active) => {
     }
 }
 
+const generateChangeThemeEvent = () => new CustomEvent('change-theme', {
+    detail: {
+        scheme: darkTheme ? 'dark' : 'light',
+        type: extensionStyledTheme ? 'extension' : 'default'
+    }
+})
+
 if (localStorage.getItem("extensionStyledTheme") !== null) {
     updateExtensionStyledTheme(stringToBoolean(localStorage.getItem("extensionStyledTheme")))
     isUserSelected = true
@@ -157,6 +164,7 @@ if (localStorage.getItem("darkTheme") !== null) {
     isUserSelected = true
 }
 
+document.dispatchEvent(generateChangeThemeEvent())
 document.body.dataset.themeLoaded = true
 
 if (!isUserSelected) colorChangeListener = window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', e => {
@@ -180,13 +188,7 @@ waitForElement("#dark-toggle").then(() => {
         }
         updateDarkTheme(!darkTheme, true)
         if (event && event.shiftKey) updateExtensionStyledTheme(!extensionStyledTheme, true)
-        let changeThemeEvent = new CustomEvent('change-theme', {
-            detail: {
-                scheme: darkTheme ? 'dark' : 'light',
-                type: extensionStyledTheme ? 'extension' : 'default'
-            }
-        })
-        document.dispatchEvent(changeThemeEvent)
+        document.dispatchEvent(generateChangeThemeEvent())
     })
         
 })
