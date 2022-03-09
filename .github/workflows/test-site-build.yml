@@ -37,7 +37,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v1
         with:
-          node-version: 14.x 
+          node-version: 16.x 
       - name: Cache dependencies
         uses: actions/cache@v2
         with:
@@ -47,9 +47,9 @@ jobs:
 
       - name: Execute preparation script
         run: | 
+          echo Running...
           cd repo
-          npm install --prefix ../script
-          node ../script/node/ci/hugo-add-i18n.js
+          bash ../script/sh/hugo-deploy-site.sh
 
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
@@ -61,13 +61,10 @@ jobs:
           cd repo
           hugo --gc --minify --config config.yml,config-prod.yml
           
-      - name: Upload build
+      - name: Upload whole repo
         uses: actions/upload-artifact@v2
         with:
-          name: public
-          path: ./repo/public
-      - name: Upload whole repo (to check i18n)
-        uses: actions/upload-artifact@v2
-        with:
-          name: public
-          path: ./repo
+          name: repo
+          path: |
+            ./repo
+            !./repo/.git

@@ -1,16 +1,6 @@
 @import "variables";
 @import "parts/lds-elipsis";
 
-#contributors {
-
-	margin-bottom: 0.5rem;
-
-	.col-12 {
-		padding: 0
-	}
-
-}
-
 .contributor {
 	color: inherit;
 	border-radius: .25rem;
@@ -19,7 +9,7 @@
 	&:hover {
 		background: darken(white, 5%);
 	}
-
+	
 	a {
 		padding: 0.375rem 15px;
 		color: inherit;
@@ -47,7 +37,6 @@
 	max-width: 100%;
 	flex-direction: column;
 	justify-content: center;
-
 }
 
 .contributor-name {
@@ -75,10 +64,10 @@
 }
 
 img.emoji {
-	height: 1em;
-	width: 1em;
-	margin: 0 .05em 0 .1em;
-	vertical-align: -0.1em;
+	height: .90rem;
+	width: .90rem;
+	margin: 0 .05em;
+	vertical-align: -0.25em;
 }
 
 body.dark {

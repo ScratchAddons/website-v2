@@ -6,6 +6,7 @@
 window.i18nStrings = {
 	installChrome: '{{ T "Global.InstallFor" ( dict "Browser" ( T "Global.ChromeShort" ) ) }}',
 	installFirefox: '{{ T "Global.InstallFor" ( dict "Browser" ( T "Global.FirefoxShort" ) ) }}',
+	installEdge: '{{ T "Global.InstallFor" ( dict "Browser" ( T "Global.EdgeShort" ) ) }}',
 	installUnsupported: '{{ T "Global.Install" }}'
 }
 </script>
@@ -190,7 +191,7 @@ window.i18nStrings = {
 					<img src="/assets/img/addons/editor-devtools.png" class="card-img-top" alt="Developer tools">
 					<div class="card-body">
 						<h5 class="card-title">{{ T "IndexPage.Highlights.DeveloperToolsHeading" }}</h5>
-						<p class="card-text">{{- T "IndexPage.Highlights.DeveloperToolsParagraph" ( dict "OpenTag1" "<a href='https://sites.google.com/griffpatch.co.uk/griffpatch/home#h.p_szAG86nTECU_' rel='noopener'>" "CloseTag1" "</a>" )  | safeHTML -}}</p>
+						<p class="card-text">{{ T "IndexPage.Highlights.DeveloperToolsParagraph" }}</p>
 					</div>
 				</div>	
 			</div>
@@ -211,6 +212,9 @@ window.i18nStrings = {
 		</a>
 		<a class="btn btn-success dark-btn-white btn-lg" href="https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/" target="_blank" rel="noopener">
 			<span class="iconify" data-icon="simple-icons:firefoxbrowser"></span> {{ T "Global.FirefoxShort" }}
+		</a>
+		<a class="btn btn-success dark-btn-white btn-lg" href="https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj" target="_blank" rel="noopener">
+			<span class="iconify" data-icon="simple-icons:microsoftedge"></span> {{ T "Global.EdgeShort" }}
 		</a>
 	</p>
 	<p>

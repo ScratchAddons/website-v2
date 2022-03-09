@@ -14,11 +14,16 @@
 <meta property="og:description" content="{{ .Description }}">
 <meta property="og:site_name" content='{{ T ( $.Param "section_site_name" ) }}' />
 <meta property="og:locale" content="{{ .Site.Language.Lang }}" />
+{{ if isset .Params "cover_image" }}
+<meta property="og:image" content="{{ .Params.cover_image }}" />
+<meta property="og:image:alt" content="{{ .Params.cover_image_alt }}" />
+{{ else }}
 <meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
 <meta property="og:image:type" content="image/png" />
 <meta property="og:image:width" content="384" />
 <meta property="og:image:height" content="384" />
 <meta property="og:image:alt" content='{{ T "Global.LogoAlt" }}' />
+{{ end }}
 
 <meta name="twitter:card" content="summary" />
 <!-- <meta name="twitter:site" content="@ScratchAddons" />
@@ -26,8 +31,17 @@
 <meta name="twitter:url" content="{{ .Permalink }}" />
 <meta name="twitter:title" content='{{ if ne .IsHome "true" }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}' />
 <meta name="twitter:description" content="{{ .Description }}" />
+{{ if isset .Params "cover_image" }}
+<meta name="twitter:image" content="{{ .Params.cover_image }}" />
+<meta name="twitter:image:alt" content='{{ .Params.cover_image_alt }}' />
+{{ else }}
 <meta name="twitter:image" content="https://scratchaddons.com/assets/img/icon-square.png" />
 <meta name="twitter:image:alt" content='{{ T "Global.LogoAlt" }}' />
+{{ end }}
+
+{{ range .AlternativeOutputFormats -}}
+{{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink (T ( $.Param "section_site_name" )) | safeHTML }}
+{{ end }}
 
 {{ if .IsTranslated }}{{ range .Translations }}{{ if or ( eq .IsHome false ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
 <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" />

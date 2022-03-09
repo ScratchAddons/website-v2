@@ -32,15 +32,16 @@ const stringToBoolean = (string) => string === 'false' ? false : !!string
 
 $(() => {
 
-    window.installButtonGo = engine => {
+    window.installButtonGo = (name, engine) => {
 
-        console.log(engine)
+        // console.log(name)
 
         delete window.installButtonGo
 
         switch (engine) {
             case "Blink":
-                browser = "chrome"
+                if (name === "Microsoft Edge") browser = "edge"
+                else browser = "chrome"
                 break
             case "Gecko":
                 browser = "firefox"
@@ -53,6 +54,7 @@ $(() => {
         const storeLinks = {
             "chrome": "https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco",
             "firefox": "https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/",
+            "edge": "https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj",
             "unsupported": "/#install"
         }
     
@@ -67,6 +69,10 @@ $(() => {
                 case "firefox":
                     document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:firefoxbrowser"></span>'
                     document.querySelector("#install-browser").innerText = window.i18nStrings.installFirefox
+                    break
+                case "edge":
+                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:microsoftedge"></span>'
+                    document.querySelector("#install-browser").innerText = window.i18nStrings.installEdge
                     break
                 default:
                     document.querySelector("#install-browser-icon").innerHTML = ""
@@ -87,17 +93,20 @@ $(() => {
 
     }
 
-    if (localStorage.getItem("browserEngine")) installButtonGo(localStorage.getItem("browserEngine"))
+    if (localStorage.getItem("browserName") !== null && localStorage.getItem("browserEngine") !== null) installButtonGo(localStorage.getItem("browserName"), localStorage.getItem("browserEngine"))
     else {
+        console.log("!!!!")
+
         const detectEngineElement = document.createElement("script")
     
         detectEngineElement.type = "module"
         detectEngineElement.innerHTML = `
         import bowser from 'https://cdn.jsdelivr.net/npm/bowser/+esm'
     
+        localStorage.setItem("browserName", bowser.getParser(navigator.userAgent).parsedResult.browser.name)
         localStorage.setItem("browserEngine", bowser.getParser(navigator.userAgent).parsedResult.engine.name)
     
-        window.installButtonGo(localStorage.getItem("browserEngine"))
+        window.installButtonGo(localStorage.getItem("browserName"), localStorage.getItem("browserEngine"))
         `
         document.head.appendChild(detectEngineElement)
     }
@@ -254,7 +263,9 @@ if (languageVariations.length) languageId = languageVariations[0]
 const options = { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" }
 
 $(() => {
-    document.querySelectorAll("time").forEach(element => element.textContent = new Date(element.textContent).toLocaleDateString(languageId, options))
+    document.querySelectorAll("time").forEach(element => {
+        element.textContent = new Date(element.getAttribute('datetime')).toLocaleDateString(languageId, options)
+    })
 })
 
 /* =============================================================

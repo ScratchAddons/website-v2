@@ -6,7 +6,11 @@ aliases:
   - /translate
 ---
 
-> _Already translated: **Italian, Japanese, Portuguese, Slovenian and Spanish**. We won't be accepting any new translators for these languages_
+{{< admonition info >}}
+
+_Already translated: **Italian, Japanese, Portuguese, Slovenian and Spanish**. We won't be accepting any new translators for these languages_
+
+{{< /admonition >}}
 
 **Thanks for being interested on volunteering to translate Scratch Addons to other languages!**
 

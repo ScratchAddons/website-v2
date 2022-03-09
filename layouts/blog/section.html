@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+<header id="intro" class="intro-heading post-header">
+	<h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
+	<p>{{ .Description }}</p>
+</header>
+			
+<div class="container">
+	<div class="row row-cols-1 row-cols-lg-2 m-0">
+		{{ range .Pages.ByPublishDate.Reverse }}
+			<div class="col mb-4 px-0 px-md-1">
+				<article class="card">
+					{{ if isset .Page.Params "cover_image" -}}
+						<a href="{{ .Permalink }}">
+							<img src="{{ .Page.Params.cover_image }}" class="card-img-top" alt="{{ .Page.Params.cover_image_alt }}">
+						</a>
+					{{- end }}
+					<div class="card-body">
+						<h3 class="card-title h3 mt-0"><a href="{{ .Permalink }}" class="text-body">{{ .Title }}</a></h3>
+						<p class="card-text">{{ .Description }}</p>
+					</div>
+					<div class="card-footer text-muted">
+						<time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>{{ .Date | time.Format ":date_long" }}</time>
+					</div>
+				</article>	
+			</div>
+		{{ end }}	
+	</div>
+</div>
+
+{{ end }}

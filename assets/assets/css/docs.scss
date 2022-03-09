@@ -1,5 +1,6 @@
 @import "variables";
 @import "parts/highlight";
+@import "parts/admonition";
 
 article {
 
@@ -34,7 +35,7 @@ article {
 		margin: 0;
 		font-size: 85%;
 		background-color: rgba(black, 0.05);
-		border-radius: 6px;
+		border-radius: .25rem;
 		color: inherit;
 	
 	 	br { display: none; }
@@ -192,7 +193,12 @@ article {
 	}
 
 	a {
-		color: inherit;
+
+		color: #6c757d !important;
+
+		&:hover {
+			color: darken(#6c757d, 25%) !important;
+		}
 
 		&:not(:hover) {
 			text-decoration: none;
@@ -221,17 +227,30 @@ article {
 	}
 }
 
-body.dark {
-
-	.docs-nav .active, blockquote {
-		color: $dark-high-emphasis;	
+@media (min-width: $bs-breakpoint-md) {
+	.docs-toc,
+	.docs-pages {
+		nav > ul {
+			position: sticky;
+			top: 1.5rem;
+			max-height: calc(100vh - 3rem);
+			overflow: auto;
+			scrollbar-width: thin;
+		}
 	}
+}
+
+body.dark {
 
 	article {
 
 		code, kbd, pre, samp {
 			background: $dark-dp-1;
 			color: var(--content-cnt);
+		}
+
+		blockquote {
+			border-left-color: darken($dark-low-emphasis, 5%);
 		}
 
 	}
@@ -257,6 +276,14 @@ body.dark {
 				border-bottom-color: $bs-gray-800;
 				padding: 0;
 			}
+		}
+	}
+
+	.docs-nav a {
+		color: $dark-low-emphasis !important;
+
+		&:hover {
+			color: darken($dark-low-emphasis, 25%) !important;
 		}
 	}
 
