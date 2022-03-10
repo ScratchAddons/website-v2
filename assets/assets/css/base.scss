@@ -330,6 +330,10 @@ body.dark {
 			color: $dark-low-emphasis
 		}
 
+		&:read-only {
+			background-color: $dark-dp-24
+		}
+
 	}
 
 	hr {
