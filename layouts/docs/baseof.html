@@ -12,6 +12,8 @@
 {{ if isset $.Params "embed_css" }}{{ range $.Params.embed_css }}
 <link rel="stylesheet" href="{{ . }}" crossorigin />
 {{ end }}{{ end }}
+<script src="https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js" integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin="anonymous" defer></script>
+<script defer src="/assets/js/docs.js"></script>
 
 </head>
 
@@ -37,7 +39,7 @@
 
 	<div class="row">
 
-		<aside class="docs-pages col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id="docs-pages">
+		<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id="docs-pages">
 			<!-- d-none  -->
 			<!-- px-2 py-4 -->
 			{{ partial "docs/sidebar" . }}
@@ -53,7 +55,7 @@
 
 		</article>
 
-		<aside class="docs-toc text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id="docs-toc"> 
+		<aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id="docs-toc"> 
 			<!-- d-none  -->
 			<!-- px-2 py-4 -->
 			{{ .TableOfContents }}

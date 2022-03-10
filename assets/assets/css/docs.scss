@@ -128,7 +128,7 @@ article {
 
 }
 
-.docs-toc {
+#docs-toc nav {
 	// @include media-breakpoint-up(lg) {
 	//	 position: sticky;
 	//	 top: 5rem;
@@ -138,41 +138,39 @@ article {
 	//	 overflow-y: auto;
 	// }
 
-	nav {
-		font-size: .875rem;
-		// @include font-size(.875rem);
-		width: 100%;
-		word-wrap: break-word;
-
-		ul {
-			padding-left: 0;
-			list-style: none;
-
-			ul {
-				padding-left: 1rem;
-				margin-top: .25rem;
-			}
-		}
-
-		li {
-			margin-bottom: .25rem;
-		}
-
-		a {
-			color: inherit;
-
-			&:not(:hover) {
-				text-decoration: none;
-			}
-
-			code {
-				font: inherit;
-			}
+	a.active {
+		@media (min-width: $bs-breakpoint-xl) {
+			font-weight: 600;
+			color: rgba(0,0,0,0.85) !important;	
 		}
 	}
+
 }
 
-.docs-nav {
+#docs-nav {
+
+	a.active {
+		font-weight: 600;
+		color: rgba(0,0,0,0.85) !important;	
+	}
+
+	.docs-nav-section .docs-nav-section span {
+		margin-left: -1rem - 0.125rem
+	}
+
+	.collapse-button > svg {
+		transition: transform 0.35s ease;
+	}
+
+	.collapse-button:not(.collapsed) > svg {
+		transform: rotate(90deg);
+	}
+
+}
+
+#docs-toc nav, 
+#docs-nav {
+
 	font-size: .875rem;
 	// @include font-size(.875rem);
 	width: 100%;
@@ -191,7 +189,7 @@ article {
 	li {
 		margin-bottom: .25rem;
 	}
-
+	
 	a {
 
 		color: #6c757d !important;
@@ -209,27 +207,11 @@ article {
 		}
 	}
 
-	.docs-nav-section .docs-nav-section span {
-		margin-left: -1rem - 0.125rem
-	}
-
-	.collapse-button > svg {
-		transition: transform 0.35s ease;
-	}
-
-	.collapse-button:not(.collapsed) > svg {
-		transform: rotate(90deg);
-	}
-
-	.active {
-		font-weight: 600;
-		color: rgba(0,0,0,0.85);
-	}
 }
 
 @media (min-width: $bs-breakpoint-md) {
-	.docs-toc,
-	.docs-pages {
+	#docs-toc,
+	#docs-pages {
 		nav > ul {
 			position: sticky;
 			top: 1.5rem;
