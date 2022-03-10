@@ -3,10 +3,12 @@
 <footer class="footer">
 	<div class="container">
 		<section class="footer-intro">
-			<a href='{{ "/" | relLangURL }}' class="navbar-brand mb-3">
+			<a href='{{ "/" | relLangURL }}' class="navbar-brand">
 				<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddons" }}' class="mr-2"></img>
 				<span>{{ T "Global.ScratchAddons" }}</span>
 			</a>
+			{{ $latest := index (sort $.Site.Data.changelog "Index" "desc") 0 -}}
+			<p class="mb-3 small">{{ T "Footer.Intro" ( dict "Version" ( $latest.Version ) "AddonCount" ( $.Site.Data.addons.en | len ) ) }}</p>
 			<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 			<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 		</section>

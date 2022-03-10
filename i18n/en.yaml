@@ -55,6 +55,7 @@ Footer:
     Copyright: © {{.Count}} Scratch Addons contributors
     NoAffiliation: Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.
     License: Scratch Addons is licensed under the terms of GNU General Public License v3.0.
+  Intro: Currently {{ .Version }} with {{ .AddonCount }} addons.
 
 # Strings used for the dark theme switch
 DarkTheme:
