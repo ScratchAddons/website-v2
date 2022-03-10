@@ -22,7 +22,7 @@
 			box-shadow: 0px 0px 5px black;
 			border-radius: 0.25rem;
 			opacity: 0;
-			transition: opacity 	.15s linear
+			transition: opacity .15s linear
 		}
 
 		&:hover .carousel-caption {
@@ -39,7 +39,7 @@
 	}
 
 	#intro-img {
-		height: 75vh
+		height: calc(100vh - var(--navbar-height) - 6rem)
 	}
 
 	#install-intro {

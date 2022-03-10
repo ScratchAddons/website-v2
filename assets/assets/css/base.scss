@@ -237,7 +237,7 @@ body.dark .dark-btn-white {
 }
 
 // =============================================================
-//                            COLORS
+//                     COLORS AND VARIABLES
 // =============================================================
 
 body {
@@ -252,6 +252,7 @@ body {
 	--intro-heading-cnt: white;
 	--footer-bg: #f5f5f5;
 	--footer-cnt: #{$bs-default-black};
+	--navbar-height: 59.5px;
 
 }
 
@@ -283,6 +284,7 @@ body.extension-styled {
 	--intro-heading-cnt: white;
 	--footer-bg: #{$light-ext-level-3};
 	--footer-cnt: #{$bs-default-black};
+	--navbar-height: 60px;
 
 }
 
