@@ -145,6 +145,10 @@ article {
 		}
 	}
 
+	> ul > li > ul {
+		padding-left: 0
+	}
+
 }
 
 #docs-nav {
