@@ -6,6 +6,7 @@
 	// background-color: $scratch-orange;
 	// color: white;
 
+	height: calc(100vh - var(--navbar-height));
 
 	.carousel {
 
@@ -36,10 +37,6 @@
 		flex-direction: column;
 		justify-content: center;
 
-	}
-
-	#intro-img {
-		height: calc(100vh - var(--navbar-height) - 6rem)
 	}
 
 	#install-intro {
