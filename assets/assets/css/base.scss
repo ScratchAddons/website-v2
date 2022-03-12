@@ -81,13 +81,6 @@ body > footer {
 	background-color: var(--footer-bg);
 	color: var(--footer-cnt);
 	
-	> div {
-		padding: 1rem 0;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-	
 	section {
 		display: block;
 		margin: 0 1rem 1rem 1rem;
