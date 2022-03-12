@@ -1,6 +1,6 @@
 {{ range sort $.Site.Data.changelog "Index" "desc" }}{{ $latest := index (sort $.Site.Data.changelog "Index" "desc") 0 }}
 <section id="{{ .Version }}" class="mt-3">
-	<h2 class="postition-sticky sticky-top background-body">
+	<h2>
 		{{ .Name }}
 		<small class="text-muted">
 			<time datetime="{{ .Date }}">{{ .Date }}</time>
