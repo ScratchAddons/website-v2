@@ -73,7 +73,7 @@ const run = async () => {
 		
 		// Contributor wrapper (wraps link wrapper)
 		let wrapEl = document.createElement("div")
-		wrapEl.className = "contributor col-12 col-sm-6 col-md-4 col-xl-3"
+		wrapEl.className = "contributor col-12 col-sm-6 col-lg-4 col-xl-3"
 		wrapEl.setAttribute("aria-label", contributorLabel)
 		wrapEl.appendChild(linkEl)
 

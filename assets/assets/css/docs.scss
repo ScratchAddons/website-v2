@@ -145,6 +145,10 @@ article {
 		}
 	}
 
+	> ul > li > ul {
+		padding-left: 0
+	}
+
 }
 
 #docs-nav {
@@ -193,13 +197,10 @@ article {
 	a {
 
 		color: #6c757d !important;
+		text-decoration: none;
 
 		&:hover {
 			color: darken(#6c757d, 25%) !important;
-		}
-
-		&:not(:hover) {
-			text-decoration: none;
 		}
 
 		code {
@@ -209,8 +210,23 @@ article {
 
 }
 
-@media (min-width: $bs-breakpoint-md) {
-	#docs-toc,
+@media (min-width: $bs-breakpoint-xl) {
+	#docs-toc {
+		nav > ul {
+			position: sticky;
+			top: 1.5rem;
+			max-height: calc(100vh - 3rem);
+			overflow: auto;
+			scrollbar-width: thin;
+
+			> li {
+				margin-right: 0.25rem
+			}
+		}
+	}
+}
+
+@media (min-width: $bs-breakpoint-lg) {
 	#docs-pages {
 		nav > ul {
 			position: sticky;
@@ -218,6 +234,10 @@ article {
 			max-height: calc(100vh - 3rem);
 			overflow: auto;
 			scrollbar-width: thin;
+
+			> li {
+				margin-right: 0.25rem
+			}
 		}
 	}
 }
@@ -261,11 +281,32 @@ body.dark {
 		}
 	}
 
-	.docs-nav a {
-		color: $dark-low-emphasis !important;
+	#docs-toc nav,
+	#docs-nav {
 
-		&:hover {
-			color: darken($dark-low-emphasis, 25%) !important;
+		a {
+			color: $dark-low-emphasis !important;
+	
+			&:hover {
+				color: $dark-high-emphasis !important;
+			}
+		}
+
+	} 
+
+	#docs-toc nav {
+		a.active {
+			@media (min-width: $bs-breakpoint-xl) {
+				font-weight: 600;
+				color: $dark-high-emphasis !important;	
+			}
+		}
+	}
+
+	#docs-nav {
+		a.active {
+			font-weight: 600;
+			color: $dark-high-emphasis !important;	
 		}
 	}
 

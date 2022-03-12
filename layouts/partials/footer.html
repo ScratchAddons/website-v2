@@ -1,12 +1,14 @@
 <a id="dark-toggle" class="btn" title='{{ T "DarkTheme.Title" }}' aria-label='{{ T "DarkTheme.Label" }}' data-toggle="tooltip" data-placement="left"></a>
 
 <footer class="footer">
-	<div class="container">
+	<div class="container py-4 d-flex justify-content-between flex-wrap">
 		<section class="footer-intro">
-			<a href='{{ "/" | relLangURL }}' class="navbar-brand mb-3">
+			<a href='{{ "/" | relLangURL }}' class="navbar-brand">
 				<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddons" }}' class="mr-2"></img>
 				<span>{{ T "Global.ScratchAddons" }}</span>
 			</a>
+			{{ $latest := index (sort $.Site.Data.changelog "Index" "desc") 0 -}}
+			<p class="mb-3 small">{{ T "Footer.Intro" ( dict "Version" ( $latest.Version ) "AddonCount" ( $.Site.Data.addons.en | len ) ) }}</p>
 			<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 			<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 		</section>
@@ -34,10 +36,10 @@
 			<a href="/docs/policies/privacy/website" rel="noopener">{{ T "Links.PrivacyPolicy" }}</a>
 			<a href="https://youtube.com/ScratchAddons" rel="noopener">{{ T "Footer.Resources.YouTube" }}</a>
 		</section>
-		<section class="w-100 mt-3">
+		<section class="w-100 mb-0">
 			<p>{{ T "Footer.Legal.Copyright" .Site.Params.copyright_year }}</p>
 			<p>{{ T "Footer.Legal.NoAffiliation" }}</p>
-			<p>{{ T "Footer.Legal.License" }}</p>
+			<p class="mb-0">{{ T "Footer.Legal.License" }}</p>
 		</section>
 	</div>
 </footer>

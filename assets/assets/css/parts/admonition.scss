@@ -40,9 +40,15 @@
 	}
 }
 
+body.dark {
+	.admonition {
+		border-color: #222
+	}
+}
+
 // Variations
 @mixin admonition-variant($color) {
-	border-left-color: $color;
+	border-left-color: $color !important;
 
 	h4 {
 		color: $color;
