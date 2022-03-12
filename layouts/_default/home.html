@@ -205,7 +205,8 @@ window.i18nStrings = {
 
 <section id="install" class="container text-center py-4">
 	<div class="row">
-		<div class="col-12 col-lg-6 mb-4 mb-lg-0">
+		<div class="col-12 col-lg"></div>
+		<div class="col-12 col-lg-auto mb-4 mb-lg-0 mr-lg-3">
 			<h2>{{ T "IndexPage.Install.Heading" }}</h2>
 			<p>{{ T "IndexPage.Install.Paragraph" }}</p>
 			<p>
@@ -226,11 +227,11 @@ window.i18nStrings = {
 				{{- T "IndexPage.Install.InstallButton.Other" ( dict "OpenTag1" "<a href='https://github.com/ScratchAddons/ScratchAddons/releases' target='_blank' rel='noopener'>" "CloseTag1" "</a>" "OpenTag2" ( .Scratch.Get "open_tag_2" ) "CloseTag2" "</a>" ) | safeHTML }}
 			</p>
 		</div>
-		<div class="col-12 col-lg-6 d-flex flex-column justify-content-center">
+		<div class="col-12 col-lg-auto ml-lg-3 d-flex flex-column justify-content-center">
 			<p id="total-users" style="font-size: 3rem; font-weight: 500; line-height: 3rem;" class="odometer mb-0"></p>
-			<p style="font-size: 1.75rem; font-weight: 500;">{{ T "IndexPage.Users" }}</div></p>
+			<p style="font-size: 1.75rem; font-weight: 500;">{{ T "IndexPage.Users" }}</p>
 		</div>
-	
+		<div class="col-12 col-lg"></div>
 	</div>
 </section>
 
