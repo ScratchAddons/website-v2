@@ -1021,3 +1021,22 @@
   Entry: |
     - Bug fix: addons not working on forum topics if "more forum toolbar buttons" addon enabled
     - Bug fix: editor addons sometimes not loaded
+
+- Version: v1.25.0
+  Index: 63
+  Tag: v1.25.0
+  Name: v1.25.0
+  Date: 2022-03-15
+  Status: Released
+  Entry: |
+    - New addon: color picker inputs
+    - New addon: horizontal tabs on My Stuff
+    - New addon: live forum post preview
+    - "Muted project player mode" addon: allow macOS users to use Cmd instead of Ctrl
+    - "Message count on extension icon" addon: new "orange" preset
+    - Settings page: show "no results found" message when searching
+    - Bug fix: "Scratch Messaging" crashing when comment not found
+    - Bug fix: "hide new variables" affecting performance
+    - Bug fix: "debugger" breakpoints sometimes not working
+    - Bug fix: "profile statistics" showing wrong date
+    - Bug fix: "more forum toolbar buttons" not working on signature settings page
