@@ -8,7 +8,7 @@ aliases:
 
 {{< admonition info >}}
 
-_Already translated: **Italian, Japanese, Portuguese, Slovenian and Spanish**. We won't be accepting any new translators for these languages_
+_Already translated: **Italian, Japanese, Portuguese, Slovenian and Spanish**. We won't be accepting any new translators for these languages._
 
 {{< /admonition >}}
 
