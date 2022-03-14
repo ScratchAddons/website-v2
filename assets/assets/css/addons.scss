@@ -22,6 +22,18 @@ body.dark .card-body {
 	}
 }
 
+.card-columns {
+	column-count: 1;
+
+	@media (min-width: $bs-breakpoint-md) {
+		column-count: 2;
+	}
+
+	@media (min-width: $bs-breakpoint-lg) {
+		column-count: 3;
+	}
+}
+
 .card-columns[data-list-view="true"] {
 
     column-count: 1;

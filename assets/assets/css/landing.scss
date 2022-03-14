@@ -6,6 +6,7 @@
 	// background-color: $scratch-orange;
 	// color: white;
 
+	height: calc(100vh - var(--navbar-height));
 
 	.carousel {
 
@@ -22,7 +23,7 @@
 			box-shadow: 0px 0px 5px black;
 			border-radius: 0.25rem;
 			opacity: 0;
-			transition: opacity 	.15s linear
+			transition: opacity .15s linear
 		}
 
 		&:hover .carousel-caption {
@@ -36,10 +37,6 @@
 		flex-direction: column;
 		justify-content: center;
 
-	}
-
-	#intro-img {
-		height: 75vh
 	}
 
 	#install-intro {
@@ -126,7 +123,6 @@
 	
 	.features-icon {
 		text-align: center;
-		margin-bottom: 0.5rem
 	}
 	
 	.features-circle {
@@ -179,6 +175,10 @@ h2 {
 	height: 200px;
 	width: 200px;
 	border: 2px black dashed
+}
+
+.odometer {
+	font-family: inherit !important;
 }
 
 body.dark {

@@ -81,16 +81,9 @@ body > footer {
 	background-color: var(--footer-bg);
 	color: var(--footer-cnt);
 	
-	> div {
-		padding: 1rem 0;
-		display: flex;
-		justify-content: space-between;
-		flex-wrap: wrap;
-	}
-	
 	section {
 		display: block;
-		padding: 0 1rem;
+		margin: 0 1rem 1rem 1rem;
 		
 		h3 {
 			font-size: 1rem;
@@ -136,6 +129,11 @@ body > footer {
 			height: 37.5px; 
 			width: 37.5px; 
 			transform: scale(1.25)
+		}
+
+		.navbar-brand {
+			margin-left: 4.6875px;
+			margin-bottom: 0.33rem;
 		}
 
 	}
@@ -237,7 +235,7 @@ body.dark .dark-btn-white {
 }
 
 // =============================================================
-//                            COLORS
+//                     COLORS AND VARIABLES
 // =============================================================
 
 body {
@@ -252,6 +250,7 @@ body {
 	--intro-heading-cnt: white;
 	--footer-bg: #f5f5f5;
 	--footer-cnt: #{$bs-default-black};
+	--navbar-height: 59.5px;
 
 }
 
@@ -283,6 +282,7 @@ body.extension-styled {
 	--intro-heading-cnt: white;
 	--footer-bg: #{$light-ext-level-3};
 	--footer-cnt: #{$bs-default-black};
+	--navbar-height: 60px;
 
 }
 
@@ -326,6 +326,10 @@ body.dark {
 
 		&::placeholder {
 			color: $dark-low-emphasis
+		}
+
+		&:read-only {
+			background-color: $dark-dp-24
 		}
 
 	}
