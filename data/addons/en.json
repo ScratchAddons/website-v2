@@ -183,6 +183,18 @@
 		"credits": [{ "name": "World_Languages" }, { "name": "griffpatch" }]
 	},
 	{
+		"id": "color-inputs",
+		"name": "Color picker inputs",
+		"description": "Allows setting an exact value (0-100) for each slider in the costume editor color picker.",
+		"tags": ["editor", "costumeEditor", "featured"],
+		"credits": [
+			{
+				"name": "TheColaber",
+				"link": "https://scratch.mit.edu/users/TheColaber/"
+			}
+		]
+	},
+	{
 		"id": "color-picker",
 		"name": "Hex color picker",
 		"description": "Adds hex code inputs to color pickers.",
@@ -678,6 +690,18 @@
 		"credits": [{ "name": "itta611", "link": "https://github.com/itta611/" }]
 	},
 	{
+		"id": "forum-live-preview",
+		"name": "Live forum post preview",
+		"description": "Automatically shows a preview when you stop typing while writing or editing a forum post.",
+		"tags": ["community", "forums"],
+		"credits": [
+			{
+				"name": "Maximouse",
+				"link": "https://scratch.mit.edu/users/Maximouse/"
+			}
+		]
+	},
+	{
 		"id": "forum-quote-code-beautifier",
 		"name": "Customizable quotes and code blocks on forums",
 		"description": "Shows nicer code and quote blocks on the forums.",
@@ -795,6 +819,18 @@
 		"tags": ["community", "forums"],
 		"credits": [
 			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+		]
+	},
+	{
+		"id": "horizontal-mystuff-tabs",
+		"name": "Horizontal tabs on My Stuff",
+		"description": "Moves the My Stuff navigation buttons (\"All Projects\", \"My Studios\", \"Trash\") to the top of the page, instead of keeping them on the left.",
+		"tags": ["community", "theme"],
+		"credits": [
+			{
+				"name": "Maximouse",
+				"link": "https://scratch.mit.edu/users/Maximouse/"
+			}
 		]
 	},
 	{
