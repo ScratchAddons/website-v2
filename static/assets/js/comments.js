@@ -1,13 +1,15 @@
+const scriptEl = document.currentScript
+const parentEl = scriptEl.parentElement
+parentEl.querySelector('.link-to-search').href = 'https://github.com/ScratchAddons/website-v2/discussions?discussions_q=' + encodeURI(document.location.pathname)
+
 const giscusEl = document.createElement('script')
 const languageToUse = document.documentElement.lang
-// const languageToUse = 'en'
-const languages = ["de", "gsw", "en", "es", "fr", "id", "it", "ja", "ko", "pl", "ro", "ru", "vi", "zh-CN", "zh-TW"]
-console.log(document.querySelector('body.dark'))
-const giscusOptions = {
-	repo: 'Hans5958/GitHub-API-Testing',
-	repoId: 'MDEwOlJlcG9zaXRvcnkyMDg3ODMzMDQ=',
-	category: 'Announcements',
-	categoryId: 'DIC_kwDODHHHyM4CN6sV',
+const languages = scriptEl.dataset.giscusLangs ? scriptEl.dataset.giscusLangs.substring(1).split(' ') : ["en"]
+const giscusDataset = {
+	repo: 'ScratchAddons/website-v2',
+	repoId: 'MDEwOlJlcG9zaXRvcnkzNjU3NzE1MTQ=',
+	category: 'Page comments',
+	categoryId: 'DIC_kwDOFc06-s4COGAf',
 	mapping: 'pathname',
 	reactionsEnabled: 1,
 	emitMetadata: 0,
@@ -17,7 +19,6 @@ const giscusOptions = {
 }
 
 const updateTheme = (theme = document.querySelector('body.dark') ? 'dark' : 'light') => {
-	console.log(theme)
 	const iframe = document.querySelector('iframe.giscus-frame');
 	if (!iframe) return;
 	iframe.contentWindow.postMessage({ 
@@ -34,9 +35,9 @@ giscusEl.crossOrigin = 'anonymous'
 giscusEl.async = 'true'
 
 const loadGiscus = event => {
-	giscusOptions.theme = event.detail.scheme
-	for (let key in giscusOptions) {
-		giscusEl.dataset[key] = giscusOptions[key]
+	giscusDataset.theme = event.detail.scheme
+	for (let key in giscusDataset) {
+		giscusEl.dataset[key] = giscusDataset[key]
 	}	
 	document.body.appendChild(giscusEl)
 	document.removeEventListener('change-theme', event => loadGiscus(event))

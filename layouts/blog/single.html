@@ -39,15 +39,11 @@
 
 	<hr />
 
-	<div id="comments">
+	{{ if ( not $.Params.disable_comments ) }}
 
-		<h3>Comments</h3>
+		<div id="comments">{{ partial "comments" }}</div>
 
-		<p>Make sure to follow the <a href="/docs/policies/code-of-conduct">code of conduct</a>.</p>
-
-		{{ partial "comments" }}
-
-	</div>
+	{{ end }}
 
 </div>
 
