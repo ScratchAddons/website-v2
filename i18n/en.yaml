@@ -178,8 +178,12 @@ UnsupportedBrowserPage:
 Blog:
   SectionSiteName: Scratch Addons Blog    # This is unused in other languages, but it is used in English.
 
-# Strings used for /contributors
-ContributorsPage:
+# Strings used for /credits
+CreditsPage:
   NContributors: '{{.Count}} contributors'
   NProfilePicture: '{{.Name}} profile picture'
   NCommits: '{{.Count}} commits'
+
+Comments:
+  Heading: Comments
+  Description: Make sure to follow {{ .OpenTag1 }}the code of conduct{{ .CloseTag1 }}. You can see this comment section on {{ .OpenTag2 }}GitHub Discussions{{ .CloseTag2 }}, as well as editing and removing your comment.

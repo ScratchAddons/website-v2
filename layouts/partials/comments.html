@@ -1,0 +1,4 @@
+<h3>{{ T "Comments.Heading" }}</h3>
+<p class="mb-3">{{ T "Comments.Description" (dict "OpenTag1" "<a href='/docs/policies/code-of-conduct'>" "CloseTag1" "</a>" "OpenTag2" "<a class='link-to-search'>" "CloseTag2" "</a>") | safeHTML }}</p>
+<div class="giscus"></div>
+<script async defer src="/assets/js/comments.js" data-giscus-langs='{{- range site.Data.giscuslangs }} {{ . }}{{ end }}'></script>

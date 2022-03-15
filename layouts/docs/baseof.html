@@ -45,15 +45,26 @@
 			{{ partial "docs/sidebar" . }}
 		</aside>
 	
-		<article class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+		<div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+		
+			<article>
 
-			{{ block "article" . }}{{ end }}
+				{{ block "article" . }}{{ end }}
+
+			</article>
 
 			<hr />
 
 			{{ partial "docs/footnote" . }}
 
-		</article>
+			{{ if ( not $.Params.disable_comments ) }}
+
+				<div id="comments" class="mt-4">{{ partial "comments" }}</div>
+	
+			{{ end }}
+	
+
+		</div>
 
 		<aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id="docs-toc"> 
 			<!-- d-none  -->

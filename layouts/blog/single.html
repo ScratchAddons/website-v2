@@ -34,7 +34,17 @@
 </article>
 
 <div class="container">
+	
 	<a href="/blog" class="text-decoration-none">⟵ back to blog index</a>
+
+	<hr />
+
+	{{ if ( not $.Params.disable_comments ) }}
+
+		<div id="comments">{{ partial "comments" }}</div>
+
+	{{ end }}
+
 </div>
 
 {{ end }}	
