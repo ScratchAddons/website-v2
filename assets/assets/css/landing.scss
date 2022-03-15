@@ -6,7 +6,7 @@
 	// background-color: $scratch-orange;
 	// color: white;
 
-	height: calc(100vh - var(--navbar-height));
+	min-height: calc(100vh - var(--navbar-height));
 
 	.carousel {
 
