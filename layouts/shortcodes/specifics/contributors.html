@@ -10,7 +10,7 @@
 		<div class="contributor-info">
 			<p class="contributor-name">{{ .login }}</p>
 			<p class="contribution-details">
-				{{ if isset .Site.Data.credits.contributortypes.description $.Page.Language.Lang }}
+				{{ if isset $.Site.Data.credits.contributortypes.description $.Page.Language.Lang }}
 					{{ range .contributions -}}
 						{{ if isset ( index $.Site.Data.credits.contributortypes.description $.Page.Language.Lang ) . -}}
 							<span title='{{ index ( index $.Site.Data.credits.contributortypes.description $.Page.Language.Lang ) . }}' data-toggle="tooltip" data-placement="bottom">{{ index $.Site.Data.credits.contributortypes.symbol . }}</span>
@@ -54,7 +54,7 @@
 		{{ range $elem_key, $elem_val := $.Site.Data.credits.contributortypes.symbol }}
 		{{ $elem_key }}: {
 			symbol: '{{ $elem_val }}',
-			description: '{{ index ( index $.Site.Data.credits.contributortypes.description "en" ) $elem_key }}'
+			description: '{{ index $.Site.Data.credits.contributortypes.description.en $elem_key }}'
 		},
 		{{ end }}
 	}
