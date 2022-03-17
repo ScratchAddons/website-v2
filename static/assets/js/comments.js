@@ -1,6 +1,6 @@
 const scriptEl = document.currentScript
 const parentEl = scriptEl.parentElement
-parentEl.querySelector('.link-to-search').href = 'https://github.com/ScratchAddons/website-v2/discussions?discussions_q=' + encodeURI(document.location.pathname)
+parentEl.querySelector('.link-to-search').href = 'https://github.com/ScratchAddons/website-v2/discussions/categories/page-comments?discussions_q=' + encodeURI(document.location.pathname) + '+category%3A%22Page+comments%22'
 
 const giscusEl = document.createElement('script')
 const giscusLang = scriptEl.dataset.giscusLang || "en"

@@ -110,3 +110,8 @@
       Name: Odometer
       License: MIT
       Link: https://www.npmjs.com/package/odometer
+    - ID: giscus
+      Type: other
+      Name: giscus
+      License: MIT
+      Link: https://giscus.app/
