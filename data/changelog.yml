@@ -1040,3 +1040,9 @@
     - Bug fix: "debugger" breakpoints sometimes not working
     - Bug fix: "profile statistics" showing wrong date
     - Bug fix: "more forum toolbar buttons" not working on signature settings page
+  Highlights:
+    Description: |
+      New addon: "color picker inputs", which allows setting an exact value (0-100) for each slider in the costume editor color picker. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "horizontal tabs on My Stuff" and "live forum post preview".
+    YouTubeID: XRCeR56ZLUE
