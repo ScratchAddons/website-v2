@@ -1,4 +1,4 @@
 <h3>{{ T "Comments.Heading" }}</h3>
 <p class="mb-3">{{ T "Comments.Description" (dict "OpenTag1" "<a href='/docs/policies/code-of-conduct'>" "CloseTag1" "</a>" "OpenTag2" "<a class='link-to-search'>" "CloseTag2" "</a>") | safeHTML }}</p>
 <div class="giscus"></div>
-<script async defer src="/assets/js/comments.js" {{ if in site.Data.giscuslangs $.Site.Language }}data-giscus-lang='{{ site.Data.giscuslangs }}'{{ end }}></script>
+<script async defer src="/assets/js/comments.js" {{ if in site.Data.giscuslangs site.Language.Lang }}data-giscus-lang='{{ site.Language.Lang }}'{{ end }}></script>
