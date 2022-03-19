@@ -52,6 +52,15 @@ languages:
     weight: 1
     contentDir: content
 
+disableKinds:
+  - taxonomyTerm
+  - taxonomy
+
+# When taxonomy is needed, remove above and 
+# uncomment below to disable tags and categories.
+
+# taxonomies:
+
 params:
   contributors_issue: 183
   copyright_year: 2022
