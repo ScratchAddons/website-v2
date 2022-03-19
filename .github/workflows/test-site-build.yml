@@ -4,7 +4,8 @@ on:
       - master
     paths:
       - .github/workflows/*
-      - _config.yml
+      - config.yml
+      - config-prod.yml
       - assets/**
       - content/**
       - data/**
