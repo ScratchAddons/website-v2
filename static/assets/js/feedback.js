@@ -1,10 +1,14 @@
-fetch("https://scratchaddons-feedback.glitch.me/", {mode:'no-cors'})
+const i18n = window.i18nStrings
+const form = document.querySelector("#feedback-form")
+
 const version = new URL(location.href).searchParams.get("ext_version") || new URL(location.href).searchParams.get("version")
+
 let enabledAddons = null
 if (location.hash.length && /[0-9A-Fa-f]/g.test(location.hash.substring(2))) {
     enabledAddons = location.hash.substring(2)
 } else {
-    document.querySelector("#feedback-send-enabled").style.display = 'none'
+    form.querySelector("#feedback-addons-list").checked = false
+    form.querySelector("#feedback-addons-list").disabled = true
 }
 
 const setStatus = (statusText, status) => {
@@ -15,14 +19,14 @@ const setStatus = (statusText, status) => {
     element.classList.add(`alert-${status}`)
 }
 
-document.querySelector("#feedback-form").onsubmit = async event => {
+form.onsubmit = async event => {
 
     event.preventDefault()
-    setStatus(window.i18nStrings.statusSending, "primary")
+    setStatus(i18n.statusSending, "primary")
 
-    document.querySelector('#feedback-username').readOnly = true
-    document.querySelector("#feedback-content").readOnly = true
-    document.querySelector("#feedback-submit").disabled = true
+    form.querySelector('#feedback-username').readOnly = true
+    form.querySelector("#feedback-content").readOnly = true
+    form.querySelector("#feedback-submit").disabled = true
 
     // document.querySelector("#sending").style.display = "block";
 
@@ -30,23 +34,44 @@ document.querySelector("#feedback-form").onsubmit = async event => {
         version, 
         userAgent: navigator.userAgent, 
         language: navigator.language, 
-        content: document.querySelector('#feedback-content').value, 
-        username: document.querySelector('#feedback-username').value ,
-        enabledAddons: document.querySelector("#feedback-send-enabled > input").checked ? enabledAddons : null
+        content: form.querySelector('#feedback-content').value, 
+        username: form.querySelector('#feedback-username').value ,
+        enabledAddons: form.querySelector("#feedback-addons-list").checked ? enabledAddons : null
     }
 
     try {
-        const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {method:"POST", body: JSON.stringify(body)})
+        const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
+            method: "POST", 
+            body: JSON.stringify(body)
+        })
         if (!res.ok) throw "";
-        setTimeout(() => document.querySelector("#feedback-submit").disabled = false, 10000)
-        setStatus(window.i18nStrings.statusSuccess, "success")
+        setTimeout(() => form.querySelector("#feedback-submit").disabled = false, 10000)
+        setStatus(i18n.statusSuccess, "success")
     } catch(err) {
-        setStatus(window.i18nStrings.statusFailed, "danger")
-        document.querySelector("#feedback-submit").disabled = false
+        setStatus(i18n.statusFailed, "danger")
+        form.querySelector("#feedback-submit").disabled = false
     }
 
-    document.querySelector('#feedback-username').readOnly = false
-    document.querySelector("#feedback-content").readOnly = false
+    form.querySelector('#feedback-username').readOnly = false
+    form.querySelector("#feedback-content").readOnly = false
 };
 
 window.addEventListener("load", () => document.querySelector("textarea").focus());
+
+const setOffline = () => {
+    const allInputs = [...form.querySelectorAll('button'), ...form.querySelectorAll('input'), ...form.querySelectorAll('textarea')]
+    allInputs.forEach(element => {
+        element.disabled = true
+    });
+    setStatus(i18n.statusOffline, "danger")
+}
+
+fetch("https://scratchaddons-feedback.glitch.me/", {
+    mode: 'no-cors'
+})
+    .then(response => {
+        if (response.status == 200) setOffline()
+    })
+    .catch(() => {
+        setOffline()
+    })

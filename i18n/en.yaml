@@ -146,6 +146,7 @@ FeedbackPage:
     Sending: Sending...
     Success: Sent! Thanks for the feedback.
     Failed: Something went wrong. Try sending again?
+    Offline: Something went wrong on the feedback server. Check back later, or use the mentioned alternatives.
   UsernameLabel: Scratch username, or other identifiers (optional)
   ContentLabel: Feedback
   ContentPlaceholder: Please provide as much detail as you can.
