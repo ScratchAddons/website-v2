@@ -19,8 +19,7 @@ const setStatus = (statusText, status) => {
     element.classList.add(`alert-${status}`)
 }
 
-form.onsubmit = async event => {
-
+form.addEventListener("submit", async event => {
     event.preventDefault()
     setStatus(i18n.statusSending, "primary")
 
@@ -54,7 +53,7 @@ form.onsubmit = async event => {
 
     form.querySelector('#feedback-username').readOnly = false
     form.querySelector("#feedback-content").readOnly = false
-};
+})
 
 window.addEventListener("load", () => document.querySelector("textarea").focus());
 
@@ -70,7 +69,7 @@ fetch("https://scratchaddons-feedback.glitch.me/", {
     mode: 'no-cors'
 })
     .then(response => {
-        if (response.status == 200) setOffline()
+        if (response.status !== 200) setOffline()
     })
     .catch(() => {
         setOffline()
