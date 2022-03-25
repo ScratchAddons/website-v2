@@ -69,7 +69,8 @@ fetch("https://scratchaddons-feedback.glitch.me/", {
     mode: 'no-cors'
 })
     .then(response => {
-        if (response.status !== 200) setOffline()
+        // 0 shouldn't be included here, but in my local testing it does that. I'm just adding it incase this happens in other places.
+        if (response.status !== 200 && response.status !== 0) setOffline()
     })
     .catch(() => {
         setOffline()
