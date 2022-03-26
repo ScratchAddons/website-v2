@@ -1046,3 +1046,12 @@
 
       Other new addons added this update are "horizontal tabs on My Stuff" and "live forum post preview".
     YouTubeID: XRCeR56ZLUE
+
+- Version: v1.25.1
+  Index: 64
+  Tag: v1.25.1
+  Name: v1.25.1
+  Date: 2022-03-27
+  Status: Released
+  Entry: |
+    - Adapt addons to the upcoming Scratch April Fools update
