@@ -7,8 +7,11 @@ let enabledAddons = null
 if (location.hash.length && /[0-9A-Fa-f]/g.test(location.hash.substring(2))) {
     enabledAddons = location.hash.substring(2)
 } else {
-    form.querySelector("#feedback-addons-list").checked = false
-    form.querySelector("#feedback-addons-list").disabled = true
+    aListCheck = form.querySelector("#feedback-addons-list")
+    aListCheck.checked = false
+    aListCheck.disabled = true
+    aListCheck.parentElement.title = window.i18nStrings.noAddonsList
+    aListCheck.parentElement.dataset.toggle = "tooltip"
 }
 
 const setStatus = (statusText, status) => {
