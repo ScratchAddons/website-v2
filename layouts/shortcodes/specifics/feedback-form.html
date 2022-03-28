@@ -2,7 +2,9 @@
 	window.i18nStrings = {
 		statusSending: '{{ T "FeedbackPage.Status.Sending" }}',
 		statusSuccess: '{{ T "FeedbackPage.Status.Success" }}',
-		statusFailed: '{{ T "FeedbackPage.Status.Failed" }}'
+		statusFailed: '{{ T "FeedbackPage.Status.Failed" }}',
+		statusOffline: '{{ T "FeedbackPage.Status.Offline" }}',
+		noAddonsList: '{{ T "FeedbackPage.NoAddonsList" }}',
 	}
 </script>
 <script defer src="/assets/js/feedback.js"></script>
@@ -17,6 +19,9 @@
 		<label for="feedback-content">{{ T "FeedbackPage.ContentLabel" }}</label>
 		<textarea type="text" class="form-control" id="feedback-content" placeholder='{{ T "FeedbackPage.ContentPlaceholder" }}' maxlength="1500" minlength="2" autofocus required></textarea>
 	</div>
-	<div id="feedback-send-enabled" class="form-group"><input type="checkbox" checked> {{ T "FeedbackPage.SendEnabled" }}</div>
+	<div class="form-group form-check">
+		<input type="checkbox" id="feedback-addons-list" class="form-check-input" checked>
+		<label class="form-check-label" for="feedback-addons-list">{{ T "FeedbackPage.SendEnabled" }}</label>
+	</div>
 	<button class="btn btn-primary" id="feedback-submit">{{ T "FeedbackPage.SubmitButton" }}</a>
 </form>	
