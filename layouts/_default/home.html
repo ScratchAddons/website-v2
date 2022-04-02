@@ -12,7 +12,9 @@ window.i18nStrings = {
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-default.css">
 <script defer src="https://cdn.jsdelivr.net/npm/odometer@0.4.8/odometer.min.js"></script>
-<script defer src="/assets/js/index.js"></script>
+<script src="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@3,npm/@splidejs/splide-extension-auto-scroll@0.3.7"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3/dist/css/splide.min.css">
+<script defer src="/assets/js/landing.js"></script>
 
 <section id="intro" class="row px-4 py-5 mb-0 intro-heading text-left">
 	<div class="col-12 col-lg-6 py-4 px-3 px-md-4 d-flex flex-column justify-content-center" id="intro-info">
@@ -175,36 +177,24 @@ window.i18nStrings = {
 		{{- .Scratch.Add "open_tag_1" "' class='white-underline'>" }}
 		{{- T "IndexPage.Highlights.Paragraph" ( dict "OpenTag1" ( .Scratch.Get "open_tag_1" ) "CloseTag1" "</a>" )  | safeHTML -}}
 	</p>
-	<div class="container">
-		<div class="row row-cols-1 row-cols-lg-3 mx-0">
-			<div class="col mb-2 px-0 px-lg-1">
-				<div class="card">
-					<img src="/assets/img/addons/scratch-messaging.png" class="card-img-top" alt="Scratch Messaging">
-					<div class="card-body">
-						<h5 class="card-title">{{ T "IndexPage.Highlights.ScratchMessagingHeading" }}</h5>
-						<p class="card-text">{{ T "IndexPage.Highlights.ScratchMessagingParagraph" }}</p>
-					</div>
-				</div>	
-			</div>
-			<div class="col mb-2 px-0 px-lg-1">
-				<div class="card">
-					<img src="/assets/img/addons/scratch-notifier.png" class="card-img-top" alt="Scratch Notifier">
-					<div class="card-body">
-						<h5 class="card-title">{{ T "IndexPage.Highlights.ScratchNotifierHeading" }}</h5>
-						<p class="card-text">{{ T "IndexPage.Highlights.ScratchNotifierParagraph" }}</p>
-					</div>
-				</div>	
-			</div>
-			<div class="col px-0 px-lg-1">
-				<div class="card mb-0">
-					<img src="/assets/img/addons/editor-devtools.png" class="card-img-top" alt="Developer tools">
-					<div class="card-body">
-						<h5 class="card-title">{{ T "IndexPage.Highlights.DeveloperToolsHeading" }}</h5>
-						<p class="card-text">{{ T "IndexPage.Highlights.DeveloperToolsParagraph" }}</p>
-					</div>
-				</div>	
-			</div>
+	<div class="splide" id="highlights-carousel">
+		<div class="splide__track">
+			<ul class="splide__list">
+			{{- if ( index $.Site.Data.addons $.Page.Language.Lang ) }}
+				{{- template "addon-card" ( index $.Site.Data.addons $.Page.Language.Lang ) -}}
+			{{ else }}
+				{{- template "addon-card" $.Site.Data.addons.en -}}
+			{{ end -}}
+			</ul>
 		</div>
+		<!-- <a class="carousel-control-prev" role="button" data-slide="prev">
+			<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+			<span class="sr-only">{{ T "IndexPage.Intro.Carousel.Previous" }}</span>
+		</a>
+		<a class="carousel-control-next" role="button" data-slide="next">
+			<span class="carousel-control-next-icon" aria-hidden="true"></span>
+			<span class="sr-only">{{ T "IndexPage.Intro.Carousel.Next" }}</span>
+		</a> -->
 	</div>
 </section>
 
@@ -277,5 +267,31 @@ window.i18nStrings = {
 	"name": "Scratch Addons"
 }
 </script>
+
+{{ end }}
+
+{{- define "addon-card" }}
+
+{{ range . }}
+
+{{ if in .tags "featured" }}
+
+<li class="splide__slide">
+	<div class="card {{ range .tags }} tag-{{ . }}{{ end }} splide__slide my-auto" id="addon-{{ .id }}">
+		{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
+			<div class="card-img-wrapper">
+				<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+			</div>
+		{{- end }}
+		<div class="card-body">
+			<h5 class="card-title">{{ .name }}</h5>
+			<p class="card-text">{{ .description }}</p>
+		</div>
+	</div>
+</li>
+
+{{ end }}
+
+{{ end }}
 
 {{ end }}
