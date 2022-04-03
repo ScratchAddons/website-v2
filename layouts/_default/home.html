@@ -10,10 +10,8 @@ window.i18nStrings = {
 	installUnsupported: '{{ T "Global.Install" }}'
 }
 </script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/odometer@0.4.8/themes/odometer-theme-default.css">
-<script defer src="https://cdn.jsdelivr.net/npm/odometer@0.4.8/odometer.min.js"></script>
-<script src="https://cdn.jsdelivr.net/combine/npm/@splidejs/splide@3,npm/@splidejs/splide-extension-auto-scroll@0.3.7"></script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3/dist/css/splide.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/themes/odometer-theme-default.min.css,npm/@splidejs/splide@3/dist/css/splide.min.css">
+<script src="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/odometer.min.js,npm/@splidejs/splide@3,npm/@splidejs/splide-extension-auto-scroll@0.3.7"></script>
 <script defer src="/assets/js/landing.js"></script>
 
 <section id="intro" class="row px-4 py-5 mb-0 intro-heading text-left">
@@ -274,7 +272,7 @@ window.i18nStrings = {
 
 {{ range . }}
 
-{{ if in .tags "featured" }}
+{{ if in .tags "recommended" }}
 
 <li class="splide__slide">
 	<div class="card {{ range .tags }} tag-{{ . }}{{ end }} splide__slide my-auto" id="addon-{{ .id }}">
