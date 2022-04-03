@@ -27,9 +27,13 @@ new Splide('#highlights-carousel', {
         1199.98: {
             perPage: 3,
         },
-        991.98: {
+        767.98: {
+            perPage: 2,
+        },
+        575.98: {
             perPage: 1,
         }
+
     },
     autoScroll: {
         speed: 1,

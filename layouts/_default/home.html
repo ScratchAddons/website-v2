@@ -179,7 +179,7 @@ window.i18nStrings = {
 	</p>
 	<div class="splide" id="highlights-carousel">
 		<div class="splide__track">
-			<ul class="splide__list">
+			<ul class="splide__list align-items-center">
 			{{- if ( index $.Site.Data.addons $.Page.Language.Lang ) }}
 				{{- template "addon-card" ( index $.Site.Data.addons $.Page.Language.Lang ) -}}
 			{{ else }}
