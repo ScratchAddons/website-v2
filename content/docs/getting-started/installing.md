@@ -5,16 +5,13 @@ weight: 2
 
 ## From extension stores
 
-Scratch Addons is available in both Chrome Web Store and Add-ons for Firefox.
+Scratch Addons is available in these stores.
 
-- Chrome Web Store (for Google Chrome, Opera, Brave, Vivaldi, Microsoft Edge >79, and other Chromium-based browsers)  
-  https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco
-
-- Add-ons for Firefox (for Mozilla Firefox)  
-  https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/
-
-- Microsoft Edge Add-ons (for Microsoft Edge >79)  
-  https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj
+| Store | Install | Supported browsers | System requirements |
+| - | - | - | - |
+| Chrome Web Store | [![Install for Chrome Web Store](https://img.shields.io/chrome-web-store/v/fbeffbjdlemaoicjdapfpikkikjoneco?style=flat-square&logo=google-chrome&logoColor=white&label=install&color=4285F4)](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) | Google Chrome 80+<br />Microsoft Edge 80+<br />Opera 67+<br />Brave 1.3+<br />Vivaldi 2.11+<br />*Chromium 80+* | Windows 7+<br />OS X / MacOS 10.11+<br />Chromebooks less than ~6 years old
+| Add-ons for Firefox | [![Install for Add-ons for Firefox](https://img.shields.io/amo/v/scratch-messaging-extension?style=flat-square&logo=firefox-browser&logoColor=white&label=install&color=FF7139)](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/) | Mozilla Firefox 86+ | Windows 7+<br />OS X / MacOS 10.12+
+| Microsoft Edge Addons | [![Install for Microsoft Edge Addons](https://img.shields.io/badge/dynamic/json?style=flat-square&logo=microsoftedge&logoColor=white&label=install&color=0078D7&prefix=v&query=%24.version&url=https%3A%2F%2Fmicrosoftedge.microsoft.com%2Faddons%2Fgetproductdetailsbycrxid%2Filiepgjnemckemgnledoipfiilhajdjj)](https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj) | Microsoft Edge 80+ | Windows 7+<br />OS X / MacOS 10.11+
 
 ## From source
 
