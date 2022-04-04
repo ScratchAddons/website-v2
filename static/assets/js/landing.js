@@ -51,16 +51,13 @@ $(() => {
         type: 'loop',
         perMove: 1,
         start: 1,
-        // autoplay: true,
+        autoplay: true,
+        interval: 4000,
+        pauseOnHover: true,
         // arrows: { 
         //     prev: prevArrow,
         //     next: nextArrow,
         // }
-    }).mount();    
+    }).mount();
 
-})
-
-document.querySelectorAll('.splide .plyrmdl-modal').forEach(el => {
-    document.body.appendChild(el.cloneNode(true))
-    el.remove()
 })

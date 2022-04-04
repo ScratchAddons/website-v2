@@ -32,3 +32,8 @@ $('.plyrmdl-modal.plyrmdl-yt').on('hide.bs.modal', event => {
 	// console.log("hide: " + youtubeId)
 	window.plyrmdl[youtubeId].player.stop()
 })
+
+document.querySelectorAll('not:(body) .plyrmdl-modal').forEach(el => {
+	document.body.appendChild(el.cloneNode(true))
+	el.remove()
+})
