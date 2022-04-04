@@ -268,7 +268,7 @@ window.i18nSplide = {
 {{ if in .tags "recommended" }}
 
 <li class="splide__slide">
-	<div class="card {{ range .tags }} tag-{{ . }}{{ end }} splide__slide my-auto" id="addon-{{ .id }}">
+	<div class="splide__slide card" id="addon-{{ .id }}">
 		{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
 			<div class="card-img-wrapper">
 				<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
