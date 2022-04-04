@@ -27,7 +27,7 @@ on:
       - layouts/**
       - static/**
 
-name: Deployment/Testing
+name: Site Deployment
 
 jobs:
   deploy:
