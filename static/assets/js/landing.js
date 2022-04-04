@@ -16,6 +16,10 @@ fetch("https://scratchaddons.com/usercount.json").then(res => res.json()).then((
                       HIGHLIGHTS CAROUSEL
 ============================================================= */
 
+Splide.defaults = {
+    i18n: window.i18nSplide
+};
+
 new Splide('#highlights-carousel', {
     type: 'loop',
     perPage: 5,

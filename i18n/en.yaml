@@ -16,6 +16,12 @@ Global:
   RSSDescription: Recent content on {{ .SiteName }}
   Website: Website
   Extension: Extension
+  Carousel:
+    Prev: Previous
+    Next: Next
+    First: Go to first
+    Last: Go to last
+    SlideX: Go to item {{ .Count }}
 
 # Strings used for links to pages. Future pages on header and footer should be put on this.
 Links:
@@ -100,8 +106,6 @@ IndexPage:
       Demo:
         Caption: Demonstration of the extension. ({{.Count}})
         ImgAlt: Demonstration ({{.Count}})
-      Previous: Previous
-      Next: Next
   Features:
     Heading: Features
     AddonsHeading: Addons
