@@ -8,7 +8,7 @@
 
 	min-height: calc(100vh - var(--navbar-height));
 
-	.carousel {
+	.splide {
 
 		.carousel-item-wrapper {
 			> * {
@@ -28,6 +28,11 @@
 
 		&:hover .carousel-caption {
 			opacity: 0.9;
+		}
+
+		.splide__arrow {
+			margin-left: 1rem;
+			margin-right: 1rem;
 		}
 
 	}

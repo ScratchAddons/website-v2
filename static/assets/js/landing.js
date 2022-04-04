@@ -12,8 +12,9 @@ fetch("https://scratchaddons.com/usercount.json").then(res => res.json()).then((
     observer.observe(document.querySelector("#total-users"))
 })
 
-const prevArrow = document.querySelector('#highlights-carousel carousel-control-prev')
-const nextArrow = document.querySelector('#highlights-carousel carousel-control-next')
+/* =============================================================
+                      HIGHLIGHTS CAROUSEL
+============================================================= */
 
 new Splide('#highlights-carousel', {
     type: 'loop',
@@ -43,3 +44,23 @@ new Splide('#highlights-carousel', {
     //     next: nextArrow,
     // }
 }).mount(window.splide.Extensions);
+
+$(() => {
+
+    new Splide('#intro-carousel', {
+        type: 'loop',
+        perMove: 1,
+        start: 1,
+        // autoplay: true,
+        // arrows: { 
+        //     prev: prevArrow,
+        //     next: nextArrow,
+        // }
+    }).mount();    
+
+})
+
+document.querySelectorAll('.splide .plyrmdl-modal').forEach(el => {
+    document.body.appendChild(el.cloneNode(true))
+    el.remove()
+})

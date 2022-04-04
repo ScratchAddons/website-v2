@@ -11,7 +11,7 @@ window.i18nStrings = {
 }
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/themes/odometer-theme-default.min.css,npm/@splidejs/splide@3/dist/css/splide.min.css">
-<script src="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/odometer.min.js,npm/@splidejs/splide@3,npm/@splidejs/splide-extension-auto-scroll@0.3.7"></script>
+<script defer src="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/odometer.min.js,npm/@splidejs/splide@3,npm/@splidejs/splide-extension-auto-scroll@0.3.7"></script>
 <script defer src="/assets/js/landing.js"></script>
 
 <section id="intro" class="row px-4 py-5 mb-0 intro-heading text-left">
@@ -27,84 +27,69 @@ window.i18nStrings = {
 		</div>
 	</div>
 	<div class="col-12 col-lg-6" id="intro-img">
-		<div id="carousel-intro" class="carousel slide h-100" data-interval="false">
-			<ol class="carousel-indicators mb-0">
-				<li data-target="#carousel-intro" data-slide-to="0"></li>
-				<li data-target="#carousel-intro" data-slide-to="1" class="active"></li>
-				<li data-target="#carousel-intro" data-slide-to="2"></li>
-				<li data-target="#carousel-intro" data-slide-to="3"></li>
-				<li data-target="#carousel-intro" data-slide-to="4"></li>
-				<li data-target="#carousel-intro" data-slide-to="5"></li>
-				<li data-target="#carousel-intro" data-slide-to="6"></li>
-			</ol>
-			<div class="carousel-inner h-100">
-				<div class="carousel-item h-100">
-					<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-						{{ partial "youtube" (dict "id" "nQ4N9zlzj0M") }}
-					</div>
-					<div class="carousel-caption d-none d-md-block m-auto p-2">
-						<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Video.Caption" }}</h5>
-					</div>
-				</div>
-				<div class="carousel-item active h-100">
-					<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-						<img src="/assets/img/showcase/popup-light.png" alt='{{ T "IndexPage.Intro.Carousel.Popup.ImgAlt" }}' class="show-only-light">
-						<img src="/assets/img/showcase/popup-dark.png" alt='{{ T "IndexPage.Intro.Carousel.Popup.ImgAlt" }}' class="show-only-dark">
-					</div>
-					<div class="carousel-caption d-none d-md-block m-auto p-2">
-						<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Popup.Caption" }}</h5>
-					</div>
-				</div>
-				<div class="carousel-item h-100">
-					<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-						<img src="/assets/img/showcase/settings-light.png" alt='{{ T "IndexPage.Intro.Carousel.Settings.ImgAlt" }}' class="show-only-light">
-						<img src="/assets/img/showcase/settings-dark.png" alt='{{ T "IndexPage.Intro.Carousel.Settings.ImgAlt" }}' class="show-only-dark">
-					</div>
-					<div class="carousel-caption d-none d-md-block m-auto p-2">
-						<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Settings.Caption" }}</h5>
-					</div>
-				</div>
-				<div class="carousel-item h-100">
-					<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-						<img src="/assets/img/showcase/demo-1.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" ( dict "Count" 1 ) }}'>
-					</div>
-					<div class="carousel-caption d-none d-md-block m-auto p-2">
-						<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" ( dict "Count" 1 ) }}</h5>
-					</div>
-				</div>
-				<div class="carousel-item h-100">
-					<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-						<img src="/assets/img/showcase/demo-2.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 2 }}'>
-					</div>
-					<div class="carousel-caption d-none d-md-block m-auto p-2">
-						<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 2 }}</h5>
-					</div>
-				</div>
-				<div class="carousel-item h-100">
-					<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-						<img src="/assets/img/showcase/demo-3.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 3 }}'>
-					</div>
-					<div class="carousel-caption d-none d-md-block m-auto p-2">
-						<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 3 }}</h5>
-					</div>
-				</div>
-				<div class="carousel-item h-100">
-					<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-						<img src="/assets/img/showcase/demo-4.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 4 }}'>
-					</div>
-					<div class="carousel-caption d-none d-md-block m-auto p-2">
-						<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 4 }}</h5>
-					</div>
-				</div>
+		<div class="splide h-100 d-flex align-items-stretch position-relative" id="intro-carousel">
+			<div class="splide__track">
+				<ul class="splide__list align-items-center">
+					<li class="splide__slide h-100">
+						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+							{{ partial "youtube" (dict "id" "nQ4N9zlzj0M") }}
+						</div>
+						<div class="carousel-caption d-none d-md-block m-auto p-2">
+							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Video.Caption" }}</h5>
+						</div>	
+					</li>
+					<li class="splide__slide h-100">
+						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+							<img src="/assets/img/showcase/popup-light.png" alt='{{ T "IndexPage.Intro.Carousel.Popup.ImgAlt" }}' class="show-only-light">
+							<img src="/assets/img/showcase/popup-dark.png" alt='{{ T "IndexPage.Intro.Carousel.Popup.ImgAlt" }}' class="show-only-dark">
+						</div>
+						<div class="carousel-caption d-none d-md-block m-auto p-2">
+							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Popup.Caption" }}</h5>
+						</div>	
+					</li>
+					<li class="splide__slide h-100">
+						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+							<img src="/assets/img/showcase/settings-light.png" alt='{{ T "IndexPage.Intro.Carousel.Settings.ImgAlt" }}' class="show-only-light">
+							<img src="/assets/img/showcase/settings-dark.png" alt='{{ T "IndexPage.Intro.Carousel.Settings.ImgAlt" }}' class="show-only-dark">
+						</div>
+						<div class="carousel-caption d-none d-md-block m-auto p-2">
+							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Settings.Caption" }}</h5>
+						</div>	
+					</li>
+					<li class="splide__slide h-100">
+						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+							<img src="/assets/img/showcase/demo-1.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" ( dict "Count" 1 ) }}'>
+						</div>
+						<div class="carousel-caption d-none d-md-block m-auto p-2">
+							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" ( dict "Count" 1 ) }}</h5>
+						</div>	
+					</li>
+					<li class="splide__slide h-100">
+						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+							<img src="/assets/img/showcase/demo-2.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 2 }}'>
+						</div>
+						<div class="carousel-caption d-none d-md-block m-auto p-2">
+							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 2 }}</h5>
+						</div>	
+					</li>
+					<li class="splide__slide h-100">
+						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+							<img src="/assets/img/showcase/demo-3.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 3 }}'>
+						</div>
+						<div class="carousel-caption d-none d-md-block m-auto p-2">
+							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 3 }}</h5>
+						</div>	
+					</li>
+					<li class="splide__slide h-100">
+						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+							<img src="/assets/img/showcase/demo-4.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 4 }}'>
+						</div>
+						<div class="carousel-caption d-none d-md-block m-auto p-2">
+							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 4 }}</h5>
+						</div>	
+					</li>
+				</ul>
 			</div>
-			<a class="carousel-control-prev" href="#carousel-intro" role="button" data-slide="prev">
-				<span class="carousel-control-prev-icon" aria-hidden="true"></span>
-				<span class="sr-only">{{ T "IndexPage.Intro.Carousel.Previous" }}</span>
-			</a>
-			<a class="carousel-control-next" href="#carousel-intro" role="button" data-slide="next">
-				<span class="carousel-control-next-icon" aria-hidden="true"></span>
-				<span class="sr-only">{{ T "IndexPage.Intro.Carousel.Next" }}</span>
-			</a>
 		</div>
 	</div>
 </section>
