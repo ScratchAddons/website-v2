@@ -130,6 +130,8 @@ IndexPage:
 AddonsPage:
   EasterEggAddon: This is an easter egg addon.
   RecommendedAddon: This is a recommended addon.
+  FeaturedAddon: This is a featured addon.
+  BetaAddon: This is a beta addon.
   ListViewLabel: List view
   EasterEggLabel: Easter egg
   EasterEggTooltip:
