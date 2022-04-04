@@ -115,3 +115,8 @@
       Name: giscus
       License: MIT
       Link: https://giscus.app/
+    - ID: "@splidejs/splide"
+      Type: npm
+      Name: Splide
+      License: MIT
+      Link: https://www.npmjs.com/package/@splidejs/splide
