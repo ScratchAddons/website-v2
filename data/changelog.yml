@@ -1055,3 +1055,27 @@
   Status: Released
   Entry: |
     - Adapt addons to the upcoming Scratch April Fools update
+
+- Version: v1.26.1
+  Index: 65
+  Tag: v1.26.1
+  Name: v1.26.1
+  Date: 2022-05-22
+  Status: Released
+  Entry: |
+    - New addon: customizable default costume editor colors [beta]
+    - New addon: sound duration display
+    - New ability to view the internal Scratch Addons settings file, available inside "more settings" in the settings page
+    - Addons such as "sprite folders" and "unshare button in editor" now use Scratch modals instead of browser prompts when asking for input or confirmation
+    - "Scratch 2.0 → 3.0" addon: style profile page scrollbars and alerts
+    - "Website dark mode and customizable colors" addon: add dark mode to more parts of the website
+    - Bug fix: "website dark mode and customizable colors" changing text color on project stage
+    - Bug fix: "forum search" not working in majority of cases
+    - Bug fix: “Ctrl+Enter to post” not letting macOS users use Cmd key 
+    - Bug fix: "60FPS project player mode" causing variables to not visually update in some cases
+  Highlights:
+    Description: |
+      New addon: "customizable default costume editor colors", which lets you change the default colors and outline size used by the costume editor. Go to Scratch Addons settings to enable it.
+
+      Another new addon added in this update is "sound duration display", which adds a display to the sound editor that shows the total length and the elapsed time of the sound, or the selection within it.
+    YouTubeID: mTX1V9e6KK0
