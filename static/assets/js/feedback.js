@@ -1,34 +1,39 @@
 const i18n = window.i18nStrings
+let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
+
 const form = document.querySelector("#feedback-form")
+const usernameField = form.querySelector('#feedback-username')
+const contentField = form.querySelector("#feedback-content")
+const submitButton = form.querySelector("#feedback-submit")
+const addonsListCheckbox = form.querySelector("#feedback-addons-list")
 
 const version = new URL(location.href).searchParams.get("ext_version") || new URL(location.href).searchParams.get("version")
 
-let enabledAddons = null
+let enabledAddons
 if (location.hash.length && /[0-9A-Fa-f]/g.test(location.hash.substring(2))) {
     enabledAddons = location.hash.substring(2)
 } else {
-    aListCheck = form.querySelector("#feedback-addons-list")
-    aListCheck.checked = false
-    aListCheck.disabled = true
-    aListCheck.parentElement.title = window.i18nStrings.noAddonsList
-    aListCheck.parentElement.dataset.toggle = "tooltip"
+    addonsListCheckbox.checked = false
+    addonsListCheckbox.disabled = true
+    addonsListCheckbox.parentElement.title = window.i18nStrings.noAddonsList
+    addonsListCheckbox.parentElement.dataset.toggle = "tooltip"
 }
 
 const setStatus = (statusText, status) => {
-    const element = document.querySelector('#feedback-status')
-    element.textContent = statusText
-    element.hidden = false
-    element.classList.remove([...element.classList].filter(className => /alert-/.exec(className))[0])
-    element.classList.add(`alert-${status}`)
+    const statusEl = document.querySelector('#feedback-status')
+    statusEl.textContent = statusText
+    statusEl.hidden = false
+    statusEl.classList.remove([...statusEl.classList].filter(className => /alert-/.exec(className))[0])
+    statusEl.classList.add(`alert-${status}`)
 }
 
 form.addEventListener("submit", async event => {
     event.preventDefault()
     setStatus(i18n.statusSending, "primary")
 
-    form.querySelector('#feedback-username').readOnly = true
-    form.querySelector("#feedback-content").readOnly = true
-    form.querySelector("#feedback-submit").disabled = true
+    usernameField.readOnly = true
+    contentField.readOnly = true
+    submitButton.disabled = true
 
     // document.querySelector("#sending").style.display = "block";
 
@@ -36,26 +41,36 @@ form.addEventListener("submit", async event => {
         version, 
         userAgent: navigator.userAgent, 
         language: navigator.language, 
-        content: form.querySelector('#feedback-content').value, 
-        username: form.querySelector('#feedback-username').value ,
-        enabledAddons: form.querySelector("#feedback-addons-list").checked ? enabledAddons : null
+        content: contentField.value, 
+        username: usernameField.value ,
+        enabledAddons: addonsListCheckbox.checked ? enabledAddons : null
     }
 
     try {
+        lastFeedbackRequestTime = Date.now()
+        localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)    
         const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
             method: "POST", 
             body: JSON.stringify(body)
         })
         if (!res.ok) throw "";
-        setTimeout(() => form.querySelector("#feedback-submit").disabled = false, 10000)
+        setTimeout(() => submitButton.disabled = false, 10000)
         setStatus(i18n.statusSuccess, "success")
     } catch(err) {
         setStatus(i18n.statusFailed, "danger")
-        form.querySelector("#feedback-submit").disabled = false
+        submitButton.disabled = false
     }
 
-    form.querySelector('#feedback-username').readOnly = false
-    form.querySelector("#feedback-content").readOnly = false
+    usernameField.readOnly = false
+    contentField.readOnly = false
+})
+
+contentField.addEventListener("input", event => {
+    if (event.target.value.length < 2) return
+    const diff = Date.now() - lastFeedbackRequestTime
+    if (!lastFeedbackRequestTime || diff < 0 || diff > (60*4 + 45) * 1000) {
+        startUpServer()
+    }
 })
 
 window.addEventListener("load", () => document.querySelector("textarea").focus());
@@ -68,13 +83,23 @@ const setOffline = () => {
     setStatus(i18n.statusOffline, "danger")
 }
 
-fetch("https://scratchaddons-feedback.glitch.me/", {
-    mode: 'no-cors'
-})
-    .then(response => {
-        // 0 shouldn't be included here, but in my local testing it does that. I'm just adding it incase this happens in other places.
-        if (response.status !== 200 && response.status !== 0) setOffline()
+const startUpServer = () => {
+    lastFeedbackRequestTime = Date.now()
+    localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)
+    return new Promise(resolve => {
+        fetch("https://scratchaddons-feedback.glitch.me/", {
+            mode: 'no-cors'
+        })
+            .then(response => {
+                // 0 shouldn't be included here, but in my local testing it does that. I'm just adding it incase this happens in other places.
+                if (response.status !== 200 && response.status !== 0) {
+                    setOffline()
+                    resolve(false)
+                } else resolve(true)
+            })
+            .catch(() => {
+                setOffline()
+                resolve(false)
+            })
     })
-    .catch(() => {
-        setOffline()
-    })
+}
