@@ -9,7 +9,10 @@ Global:
   FirefoxShort: Firefox
   EdgeShort: Edge
   Install: Install
-  InstallFor: Install for {{.Browser}}
+  InstallBrowser:
+    Firefox: Install for Firefox
+    Chrome: Install for Chrome
+    Edge: Install for Edge
   ReadTime:
     one: "{{.Count}} minute"
     other: "{{.Count}} minutes"
