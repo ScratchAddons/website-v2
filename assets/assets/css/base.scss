@@ -292,12 +292,10 @@ body.dark {
 	--content-bg: #{$dark-neutral};
 	--content-cnt: white;
 	--header-bg: #{$dark-dp-2};
-	--header-cnt: white;
 	--intro-heading-bg: #{$dark-dp-2};
-	--intro-heading-cnt: white;
 	--footer-bg: #{$dark-dp-2};
 	--footer-cnt: #{darken(white, 20%)};
-	--footer-cnt-2: #{darken(white, 5%)}
+	--footer-cnt-2: #{darken(white, 5%)};
 	--secondary: #{$dark-low-emphasis};
 
 }
@@ -305,13 +303,7 @@ body.dark {
 body.extension-styled {
 
 	background-color: $light-ext-level-1;
-	color: $bs-default-black;
 	--content-bg: #{$light-ext-level-1};
-	--content-cnt: #{$bs-default-black};
-	--header-bg: #{$scratch-orange};
-	--header-cnt: white;
-	--intro-heading-bg: #{$scratch-orange};
-	--intro-heading-cnt: white;
 	--footer-bg: #{$light-ext-level-3};
 	--footer-cnt: #{$bs-default-black};
 	--navbar-height: 60px;
@@ -321,13 +313,9 @@ body.extension-styled {
 body.dark.extension-styled {
 
 	background-color: $dark-ext-level-1;
-	color: white;
 	--content-bg: #{$dark-ext-level-1};
-	--content-cnt: white;
 	--header-bg: #{$scratch-orange};
-	--header-cnt: white;
 	--intro-heading-bg: #{$dark-ext-level-2};
-	--intro-heading-cnt: white;
 	--footer-bg: #{$dark-ext-level-3};
 	--footer-cnt: white;
 
@@ -387,10 +375,10 @@ body.dark {
 		color: white !important
 	}
 
-	#dark-toggle {
-		color: white;
-		background-color: $scratch-orange;
-	}
+	// #dark-toggle {
+	// 	color: white;
+	// 	background-color: $scratch-orange;
+	// }
 
 	.navbar-toggler {
 		color: rgba(255,255,255,.5);
@@ -477,7 +465,39 @@ body.extension-styled {
 body.dark.extension-styled {
 
 	> header {
-background-color: $dark-ext-level-2
+		img {
+			transform: scale(1.75);
+		}
+	}
+
+	textarea, input {
+		background-color: $dark-dp-1;
+		border-color: black;
+		color: white;
+
+		&:focus, &:active {
+			background-color: $dark-dp-1;
+			border-color: black;
+			color: white;
+		}
+
+		&::placeholder {
+			color: $dark-low-emphasis;
+			font-size-adjust: 0.47;
+		}
+
+	}
+
+	.card {
+		border-color: $dark-ext-level-3;
+	}
+
+	.card-body {
+		background-color: $dark-ext-level-2;
+	}
+
+	.card-header, .card-footer {
+		background-color: $dark-ext-level-2
 	}
 
 }
