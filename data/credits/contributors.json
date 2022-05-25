@@ -1,0 +1,74 @@
+[
+	{
+		"$comment": "This data is for testing purposes and will be replaced upon build. To add yourself, please read the FAQ.",
+		"login": "ScratchAddons",
+		"name": "ScratchAddons",
+		"avatar_url": "https://avatars.githubusercontent.com/u/68296977?v=4",
+		"profile": "https://github.com/ScratchAddons",
+		"contributions": [
+			"projectManagement",
+			"maintenance",
+			"ideas",
+			"business",
+			"translation",
+			"mod"
+		],
+		"commits": 1000
+	},
+	{
+		"login": "LLK",
+		"name": "Scratch",
+		"avatar_url": "https://avatars.githubusercontent.com/u/3420800?v=4",
+		"profile": "https://github.com/LLK",
+		"contributions": [
+			"a11y",
+			"blog",
+			"bug",
+			"tutorial",
+			"security",
+			"data",
+			"design"
+		],
+		"commits": 700
+	},
+	{
+		"login": "github",
+		"name": "GitHub",
+		"avatar_url": "https://avatars.githubusercontent.com/u/9919?v=4",
+		"profile": "https://github.com/github",
+		"contributions": [
+			"code",
+			"tool",
+			"infra",
+			"review",
+			"fundingFinding",
+			"financial"
+		],
+		"commits": 30
+	},
+	{
+		"login": "octocat",
+		"name": "The Octocat",
+		"avatar_url": "https://avatars.githubusercontent.com/u/583231?v=4",
+		"profile": "https://github.com/octocat",
+		"contributions": [
+			"eventOrganizing",
+			"platform",
+			"example",
+			"doc"
+		],
+		"commits": 35
+	},
+	{
+		"login": "ghost",
+		"name": "Deleted user",
+		"avatar_url": "https://avatars.githubusercontent.com/u/10137?v=4",
+		"profile": "https://github.com/ghost",
+		"contributions": [
+			"talk",
+			"content",
+			"audio"
+		],
+		"commits": 5
+	}
+]

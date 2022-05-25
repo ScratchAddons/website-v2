@@ -1,5 +1,3 @@
-{{ if isset $.Site.Data.credits "contributors"  }}
-
 <div id="contributors-showcase" class="row no-gutters">
 
 {{ range $.Site.Data.credits.contributors }}
@@ -42,43 +40,14 @@
 
 <p class="text-right" id="contributors-count">{{ T "CreditsPage.NContributors" ( $.Site.Data.credits.contributors | len ) }}</p>
 
-{{ else }}
-
-<script>
-	window.i18nStrings = {
-		nProfilePicture: '{{ T "CreditsPage.NProfilePicture" (dict "Name" "PLACEHOLDER") }}',
-		nCommits: '{{ T "CreditsPage.NCommits" -1 }}',
-		nContributors: '{{ T "CreditsPage.NContributors" -1 }}'
-	}
-	window.contributorTypes = {
-		{{ range $elem_key, $elem_val := $.Site.Data.credits.contributortypes.symbol }}
-		{{ $elem_key }}: {
-			symbol: '{{ $elem_val }}',
-			description: '{{ index $.Site.Data.credits.contributortypes.description.en $elem_key }}'
-		},
-		{{ end }}
-	}
-</script>
-<script async src="/assets/js/contributors.js"></script>
-
-<div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
-
-<div id="contributors-showcase" class="row no-gutters"></div>
-
-<p class="text-right" id="contributors-count"></p>
-
-{{ end }}
-
 <script src="https://cdn.jsdelivr.net/npm/twemoji@13/dist/twemoji.min.js"></script>
 <script>
 	const showcaseEl = document.querySelector('#contributors-showcase')
 	if (typeof twemoji === "undefined") {
 		document.querySelector('script[src$="twemoji.min.js"]').addEventListener("load", () => {
 			twemoji.parse(showcaseEl)
-			window.twemojiReparse = () => twemoji.parse(showcaseEl)
 		});
 	} else {
 		twemoji.parse(showcaseEl)
-		window.twemojiReparse = () => twemoji.parse(showcaseEl)
 	}
 </script>
