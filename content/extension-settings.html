@@ -4,10 +4,15 @@ description: How to access Scratch Addons settings, step by step.
 ---
 
 <script>
-    const img = new Image(1, 1);
-    img.src = "chrome-extension://fbeffbjdlemaoicjdapfpikkikjoneco/images/cs/icon.svg";
-    // Redirect to settings if extension is installed (Chromium only)
-    img.onload = () => location.href = "https://scratch.mit.edu/scratch-addons-extension/settings";
+    fetch("chrome-extension://fbeffbjdlemaoicjdapfpikkikjoneco/images/cs/icon.svg")
+	 .then(res => res.text())
+	 .then(text => {
+		if (typeof text === "string" && text.startsWith("<svg")) {
+			// Redirect to settings if extension is installed (Chromium only)
+			location.href = "https://scratch.mit.edu/scratch-addons-extension/settings";
+		}
+	 })
+	 .catch(err => {});
 </script>
 
 <h1>Scratch Addons settings</h1>
