@@ -1,18 +1,23 @@
 <header>
 
 	<nav class="navbar navbar-expand-md navbar-dark">
-		
+
 		<a href='{{ "/" | relLangURL }}' class="navbar-brand">
 			<img src="/assets/img/icon.svg" alt='{{ T "Global.LogoAlt" }}'></img>
 			<span>{{ T ( $.Param "section_site_name" ) }}</span>
 		</a>
-	
+
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label='{{ T "Nav.ToggleNavigation" }}'>
 			<span class="navbar-toggler-icon"></span>
 	  	</button>
-	
+
 		<div class="collapse navbar-collapse" id="navbar-collapsible">
 			<ul class="navbar-nav ml-md-auto">
+				<li class="nav-item" id="install-nav"><a class="nav-link install-btn ml-md-2" href='{{ "/#install" | relLangURL }}'>{{ T "Global.Install" }}</a></li>
+				<li class="nav-item"><a class="nav-link" href='{{ "/addons" | relLangURL }}'>{{ T "Nav.Addons" }}</a></li>
+				<li class="nav-item"><a class="nav-link" href='{{ "/feedback" | relLangURL }}'>{{ T "Nav.Feedback" }}</a></li>
+				<li class="nav-item"><a class="nav-link" href='{{ "/docs" | relLangURL }}'>{{ T "Nav.Docs" }}</a></li>
+				<li class="nav-item"><a class="nav-link" href="https://github.com/ScratchAddons/ScratchAddons" aria-label='{{ T "Nav.RepositoryLabel" }}' rel="noopener">{{ T "Nav.Repository" }} <span class="iconify" data-icon="simple-icons:github"></span></a></li>
 				{{ if .IsTranslated -}}
 					<li class="nav-item dropdown hide-from-spiders">
 						<a class="nav-link dropdown-toggle" href="#" id="navbar-languages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Site.Language.LanguageName }}</a>
@@ -23,13 +28,9 @@
 						</div>
 					</li>
 				{{- end }}
-				<li class="nav-item"><a class="nav-link" href='{{ "/credits" | relLangURL }}'>{{ T "Links.Credits" }}</a></li>
-				<li class="nav-item"><a class="nav-link" href='{{ "/feedback" | relLangURL }}'>{{ T "Nav.Feedback" }}</a></li>
-				<li class="nav-item"><a class="nav-link" href="https://github.com/ScratchAddons/ScratchAddons" aria-label='{{ T "Nav.RepositoryLabel" }}' rel="noopener">{{ T "Nav.Repository" }} <span class="iconify" data-icon="simple-icons:github"></span></a></li>
-				<li class="nav-item" id="install-nav"><a class="nav-link install-btn ml-md-2" href='{{ "/#install" | relLangURL }}'>{{ T "Global.Install" }}</a></li>
 			</ul>
 		</div>
-	
+
 	</nav>
-	
+
 </header>

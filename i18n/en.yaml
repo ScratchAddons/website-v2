@@ -34,10 +34,12 @@ Links:
 
 # Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
+  Install: Install
+  Addons: All Addons
   Feedback: Send Feedback
+  Docs: Documentation
   Repository: Repository
   RepositoryLabel: Repository on GitHub
-  Install: Install
   ToggleNavigation: Toggle navigation
 
 # Strings used for the site footer (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
@@ -83,7 +85,7 @@ Docs:
   SectionPages: Section Pages
 
 # Strings used for player modals
-PlayerModal: 
+PlayerModal:
   LabelPlay: Play
   ModalTitle: Video
   AltText: Click to view this video.
@@ -98,7 +100,7 @@ IndexPage:
       Description: free, open source
     ReadMore: or read more
     Carousel:
-      Video: 
+      Video:
         Caption: The trailer.
       Popup:
         Caption: The extension pop-up.
@@ -123,7 +125,7 @@ IndexPage:
     Heading: Highlights
     Paragraph: Remember, these are just the highlights. {{.OpenTag1}}There's more!{{.CloseTag1}}
   Install:
-    Heading: Install    
+    Heading: Install
     Paragraph: Satisfied? Don't hesitate to install it now!
     InstallButton:
       Other: ...or {{.OpenTag1}}download it from GitHub{{.CloseTag1}} or {{.OpenTag2}}install it from the source{{.CloseTag2}}.
