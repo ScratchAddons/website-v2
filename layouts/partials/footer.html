@@ -13,10 +13,10 @@
 				<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
 			</div>
 			<div class="footer-socials">
-				<a href="https://youtube.com/ScratchAddons"><span class="iconify" data-icon="simple-icons:youtube"></span></a>
-				<a href="https://discord.gg/R5NBqwMjNc"><span class="iconify" data-icon="simple-icons:discord"></span></a>
-				<a href="https://twitter.com/ScratchAddons"><span class="iconify" data-icon="simple-icons:twitter"></span></a>
-				<a href="https://github.com/ScratchAddons"><span class="iconify" data-icon="simple-icons:github"></span></a>
+				<a href="https://youtube.com/ScratchAddons" aria-label='{{ T "Links.YouTube" }}'><span class="iconify" data-icon="simple-icons:youtube"></span></a>
+				<a href="https://discord.gg/R5NBqwMjNc" aria-label='{{ T "Links.Discord" }}'><span class="iconify" data-icon="simple-icons:discord"></span></a>
+				<!-- <a href="https://twitter.com/ScratchAddons" aria-label="'{{ T "Links.Twitter" }}'><span class="iconify" data-icon="simple-icons:twitter"></span></a> -->
+				<a href="https://github.com/ScratchAddons" aria-label='{{ T "Links.GitHub" }}'><span class="iconify" data-icon="simple-icons:github"></span></a>
 			</div>
 		</section>
 		<section class="mb-4">
@@ -26,7 +26,6 @@
 			<a href='{{ "/credits" | relLangURL }}'>{{ T "Links.Credits" }}</a>
 			<a href='{{ "/changelog" | relLangURL }}'>{{ T "Footer.Pages.Changelog" }}</a>
 			<a href='{{ "/addons" | relLangURL }}'>{{ T "Footer.Pages.Addons" }}</a>
-			<a href='{{ "/blog" | relURL }}'>{{ T "Links.Blog" }}</a>
 		</section>
 		<section class="mb-4">
 			<h3>{{ T "Footer.Discuss.Header" }}</h3>
@@ -37,11 +36,10 @@
 		</section>
 		<section class="mb-4">
 			<h3>{{ T "Footer.Resources.Header" }}</h3>
-			<a href="https://github.com/ScratchAddons" rel="noopener">{{ T "Footer.Resources.Organization" }}</a>
 			<a href="https://github.com/ScratchAddons/ScratchAddons" rel="noopener">{{ T "Footer.Resources.Repository" }}</a>
 			<a href='{{ "/docs" | relLangURL }}' rel="noopener">{{ T "Footer.Resources.Documentation" }}</a>
 			<a href="/docs/policies/privacy/website" rel="noopener">{{ T "Links.PrivacyPolicy" }}</a>
-			<a href="https://youtube.com/ScratchAddons" rel="noopener">{{ T "Footer.Resources.YouTube" }}</a>
+			<a href='{{ "/blog" | relURL }}'>{{ T "Links.Blog" }}</a>
 		</section>
 		<section class="w-100 mb-0">
 			<p>{{ T "Footer.Legal.Copyright" .Site.Params.copyright_year }}</p>
