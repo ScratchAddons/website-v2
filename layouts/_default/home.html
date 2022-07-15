@@ -212,7 +212,7 @@ window.i18nSplide = {
 			</p>
 			<p>
 				{{- .Scratch.Add "open_tag_2" "<a href='" }}
-				{{- .Scratch.Add "open_tag_2" ( "/docs/getting-started/installing" | relLangURL ) }}
+				{{- .Scratch.Add "open_tag_2" ( "/docs/getting-started/installing#from-source" | relLangURL ) }}
 				{{- .Scratch.Add "open_tag_2" "' target='_blank' rel='noopener'>" }}
 				{{- T "IndexPage.Install.InstallButton.Other" ( dict "OpenTag1" "<a href='https://github.com/ScratchAddons/ScratchAddons/releases' target='_blank' rel='noopener'>" "CloseTag1" "</a>" "OpenTag2" ( .Scratch.Get "open_tag_2" ) "CloseTag2" "</a>" ) | safeHTML }}
 			</p>
