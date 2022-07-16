@@ -1116,3 +1116,13 @@
 
       Another new addon is "reverse order of project controls", which moves the green flag and stop buttons to the right and the full screen button to the left, like in Scratch 2.0. Also, you can now customize the projects shown on the cloud games tab.
     YouTubeID: ostWH0KN4bM
+
+- Version: 1.27.1
+  Index: 68
+  Tag: v1.27.1
+  Name: v1.27.1
+  Date: 2022-07-17
+  Status: Released
+  Entry: |
+    - Bug fix: "auto-hide block palette" causing editor crash after clicking "make new block"
+    - Bug fix: "project progress bar" not working and showing a vertical bar
