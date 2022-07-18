@@ -78,5 +78,6 @@ Make sure your addon doesn't break other addons.
 Make sure your code is understandable; having unnecessary comments is better than no comments.
 
 ## Step 12: Send a pull request!
-Fork the repo if you haven't already, commit your new addon and send a PR!  
-Keep in mind we might request you to make some changes, however, we will probably accept your addon as long as it's minimally suitable.
+Fork the repo if you haven't already, create a new branch, commit your new addon, and send a PR!  
+Keep in mind we might request that you make some changes. However, we will probably accept your addon as long as it's minimally suitable.  
+To keep the process smooth and improve the chances of your PR being merged, you should review the [quality guidelines](/docs/develop/getting-started/quality-guidelines) that we abide by.
