@@ -29,7 +29,7 @@ Any elements inside `<div id="app">` that are modified with a userscript will be
   ```
 
 ## Stage Header
-New addons that add elements to the stage header must be compatible with the following addons by using the `stageHeader` space with the `addon.tab.appendToSharedSpace` API:
+New addons that add elements to the stage header must be compatible with the following addons by using their respective spaces with the [`addon.tab.appendToSharedSpace`](https://scratchaddons.com/docs/reference/addon-api/addon.tab/addon.tab.appendtosharedspace/) API:
 - 60FPS project player mode
 - Clone counter
 - Gamepad support
@@ -38,5 +38,6 @@ New addons that add elements to the stage header must be compatible with the fol
 - Pause button
 
 Other things that affect the stage header:
-- Entering full screen (the `fullscreenStageHeader` space must be used)
+- Entering and exiting full screen (the `fullscreenStageHeader` space must be used in full screen)
+- Activating Turbo Mode
 - The "reverse order of project controls" addon
