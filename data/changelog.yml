@@ -1126,3 +1126,12 @@
   Entry: |
     - Bug fix: "auto-hide block palette" causing editor crash after clicking "make new block"
     - Bug fix: "project progress bar" not working and showing a vertical bar
+
+- Version: 1.27.2
+  Index: 69
+  Tag: v1.27.2
+  Name: v1.27.2
+  Date: 2022-07-20
+  Status: Released
+  Entry: |
+    - Bug fix: "hide stage and sprite pane" crashing the page if "touching mouse pointer" block runs while the stage is hidden
