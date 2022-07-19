@@ -10,7 +10,7 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:title" content='{{ if ne .IsHome "true" }}{{ .Title }}{{ else }}{{ T ( $.Param "section_site_name" ) }}{{ end }}' />
+<meta property="og:title" content='{{ if ne .IsHome true }}{{ .Title }}{{ else }}{{ T ( $.Param "section_site_name" ) }}{{ end }}' />
 <meta property="og:description" content="{{ .Description }}">
 <meta property="og:site_name" content='{{ T ( $.Param "section_site_name" ) }}' />
 <meta property="og:locale" content="{{ .Site.Language.Lang }}" />
@@ -29,7 +29,7 @@
 <!-- <meta name="twitter:site" content="@ScratchAddons" />
 <meta name="twitter:creator" content="@ScratchAddons" /> -->
 <meta name="twitter:url" content="{{ .Permalink }}" />
-<meta name="twitter:title" content='{{ if ne .IsHome "true" }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}' />
+<meta name="twitter:title" content='{{ if ne .IsHome true }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}' />
 <meta name="twitter:description" content="{{ .Description }}" />
 {{ if isset .Params "cover_image" }}
 <meta name="twitter:image" content="{{ .Params.cover_image }}" />

@@ -1,0 +1,108 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - master
+    paths:
+      - .github/workflows/*
+      - config.yml
+      - config-prod.yml
+      - assets/**
+      - content/**
+      - data/**
+      - i18n/**
+      - layouts/**
+      - static/**
+  pull_request:
+    branches:
+      - master
+    paths:
+      - .github/workflows/*
+      - config.yml
+      - config-prod.yml
+      - assets/**
+      - content/**
+      - data/**
+      - i18n/**
+      - layouts/**
+      - static/**
+
+name: Site Deployment
+
+jobs:
+  deploy:
+    name: Deployment/Testing
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Checkout ScratchAddons/website-v2 (deployment)
+        uses: actions/checkout@v3
+        if: github.event_name != 'pull_request'
+        with:
+          path: repo
+          fetch-depth: 0
+      - name: Checkout ScratchAddons/website-v2 (testing)
+        uses: actions/checkout@v3
+        if: github.event_name == 'pull_request'
+        with:
+          path: repo
+      - name: Checkout ScratchAddons/website-v2-script
+        uses: actions/checkout@v3
+        with:
+          repository: ScratchAddons/website-v2-script
+          path: script
+      - name: Checkout ScratchAddons/website-i18n
+        uses: actions/checkout@v3
+        with:
+          repository: ScratchAddons/website-i18n
+          path: i18n
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x 
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Execute preparation script
+        run: | 
+          echo Running...
+          cd repo
+          bash ../script/sh/hugo-deploy-site.sh
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+          extended: true
+      - name: Build site
+        run: |
+          cd repo
+          hugo --gc --minify --config config.yml,config-prod.yml
+
+      - name: Generate token (deployment)
+        uses: tibdex/github-app-token@v1
+        id: generate-token
+        if: (github.event_name != 'pull_request') && (github.repository_owner == 'ScratchAddons')
+        with:
+          app_id: ${{ secrets.BOT_APP_ID }}
+          private_key: ${{ secrets.BOT_PRIVATE_KEY }}
+      - name: Deploy site (deployment)
+        uses: peaceiris/actions-gh-pages@v3
+        if: (github.event_name != 'pull_request') && (github.repository_owner == 'ScratchAddons')
+        with:
+          github_token: ${{ steps.generate-token.outputs.token }}
+          publish_dir: ./repo/public
+          force_orphan: true
+          cname: scratchaddons.com
+
+      - name: Upload whole repo
+        uses: actions/upload-artifact@v3
+        with:
+          name: repo
+          path: |
+            ./repo
+            !./repo/.git

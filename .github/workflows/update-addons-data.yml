@@ -14,27 +14,27 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ScratchAddons/website-v2
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           path: repo
       - name: Checkout ScratchAddons/website-v2-script
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: ScratchAddons/website-v2-script
           path: script
       - name: Checkout ScratchAddons/ScratchAddons
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           repository: ScratchAddons/ScratchAddons
           path: sa
           ref: ${{ github.event.inputs.ref }}
 
       - name: Set up Node.js
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
           node-version: 16.x 
       - name: Cache dependencies
-        uses: actions/cache@v2
+        uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -53,7 +53,7 @@ jobs:
           app_id: ${{ secrets.BOT_APP_ID }}
           private_key: ${{ secrets.BOT_PRIVATE_KEY }}
       - name: Create pull request
-        uses: peter-evans/create-pull-request@v3
+        uses: peter-evans/create-pull-request@v4
         with:
           token: ${{ steps.generate-token.outputs.token }}
           commit-message: Update addons data (${{ github.event.inputs.ref }})

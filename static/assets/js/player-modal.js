@@ -21,6 +21,11 @@ $('.plyrmdl-thumb.plyrmdl-yt').mousedown(event => {
 	}
 })
 
+document.querySelectorAll(':not(body) .plyrmdl-modal').forEach(el => {
+	document.body.appendChild(el.cloneNode(true))
+	el.remove()
+})
+
 $('.plyrmdl-modal.plyrmdl-yt').on('shown.bs.modal', event => {
 	const youtubeId = event.target.closest("[data-youtube-id]").dataset.youtubeId
 	// console.log("show: " + youtubeId)

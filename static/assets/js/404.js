@@ -31,6 +31,7 @@ const redirectLanguages = {
 	if (pathName === "/404" || pathName === "/404.html") {
 		smart404Status("No suggestions since you are looking for the 404 page.")
 		return
+		
 	}
 
 	try {

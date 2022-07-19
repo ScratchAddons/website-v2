@@ -9,13 +9,22 @@ Global:
   FirefoxShort: Firefox
   EdgeShort: Edge
   Install: Install
-  InstallFor: Install for {{.Browser}}
+  InstallBrowser:
+    Firefox: Install for Firefox
+    Chrome: Install for Chrome
+    Edge: Install for Edge
   ReadTime:
     one: "{{.Count}} minute"
     other: "{{.Count}} minutes"
   RSSDescription: Recent content on {{ .SiteName }}
   Website: Website
   Extension: Extension
+  Carousel:
+    Prev: Previous
+    Next: Next
+    First: Go to first
+    Last: Go to last
+    SlideX: Go to item {{ .Count }}
 
 # Strings used for links to pages. Future pages on header and footer should be put on this.
 Links:
@@ -100,8 +109,6 @@ IndexPage:
       Demo:
         Caption: Demonstration of the extension. ({{.Count}})
         ImgAlt: Demonstration ({{.Count}})
-      Previous: Previous
-      Next: Next
   Features:
     Heading: Features
     AddonsHeading: Addons
@@ -115,12 +122,6 @@ IndexPage:
   Highlights:
     Heading: Highlights
     Paragraph: Remember, these are just the highlights. {{.OpenTag1}}There's more!{{.CloseTag1}}
-    ScratchMessagingHeading: Scratch Messaging
-    ScratchMessagingParagraph: 'The "grandfather" of Scratch Addons. It is available when clicking the Scratch Addons icon, and provides easy reading and replying to your Scratch messages: groups messages by project, shows full comment text and context, allows direct comment replying.'
-    ScratchNotifierHeading: Scratch Notifier
-    ScratchNotifierParagraph: It adds browser notifications on new Scratch messages. You can click the notification to go straight to the message (comment, project, etc.)
-    DeveloperToolsHeading: Developer tools
-    DeveloperToolsParagraph: 'From the original extension. It adds a find box and new menu options to the editor: copy/paste blocks, better tidy up, go to custom block definition, and more!'
   Install:
     Heading: Install    
     Paragraph: Satisfied? Don't hesitate to install it now!
@@ -132,6 +133,8 @@ IndexPage:
 AddonsPage:
   EasterEggAddon: This is an easter egg addon.
   RecommendedAddon: This is a recommended addon.
+  FeaturedAddon: This is a featured addon.
+  BetaAddon: This is a beta addon.
   ListViewLabel: List view
   EasterEggLabel: Easter egg
   EasterEggTooltip:
@@ -146,6 +149,8 @@ FeedbackPage:
     Sending: Sending...
     Success: Sent! Thanks for the feedback.
     Failed: Something went wrong. Try sending again?
+    Offline: Something went wrong on the feedback server. Check back later, or use the mentioned alternatives.
+  NoAddonsList: The list is not available to be sent. Please open this page through the extension.
   UsernameLabel: Scratch username, or other identifiers (optional)
   ContentLabel: Feedback
   ContentPlaceholder: Please provide as much detail as you can.

@@ -1040,3 +1040,89 @@
     - Bug fix: "debugger" breakpoints sometimes not working
     - Bug fix: "profile statistics" showing wrong date
     - Bug fix: "more forum toolbar buttons" not working on signature settings page
+  Highlights:
+    Description: |
+      New addon: "color picker inputs", which allows setting an exact value (0-100) for each slider in the costume editor color picker. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "horizontal tabs on My Stuff" and "live forum post preview".
+    YouTubeID: XRCeR56ZLUE
+
+- Version: v1.25.1
+  Index: 64
+  Tag: v1.25.1
+  Name: v1.25.1
+  Date: 2022-03-27
+  Status: Released
+  Entry: |
+    - Adapt addons to the upcoming Scratch April Fools update
+
+- Version: v1.26.0
+  Index: 65
+  Tag: v1.26.0
+  Name: v1.26.0
+  Date: 2022-05-22
+  Status: Released
+  Entry: |
+    - New addon: customizable default costume editor colors [beta]
+    - New addon: sound duration display
+    - New ability to view the internal Scratch Addons settings file, available inside "more settings" in the settings page
+    - Addons such as "sprite folders" and "unshare button in editor" now use Scratch modals instead of browser prompts when asking for input or confirmation
+    - "Scratch 2.0 → 3.0" addon: style profile page scrollbars and alerts
+    - "Website dark mode and customizable colors" addon: add dark mode to more parts of the website
+    - Bug fix: "website dark mode and customizable colors" changing text color on project stage
+    - Bug fix: "forum search" not working in majority of cases
+    - Bug fix: “Ctrl+Enter to post” not letting macOS users use Cmd key 
+    - Bug fix: "60FPS project player mode" causing variables to not visually update in some cases
+  Highlights:
+    Description: |
+      New addon: "customizable default costume editor colors", which lets you change the default colors and outline size used by the costume editor. Go to Scratch Addons settings to enable it.
+
+      Another new addon added in this update is "sound duration display", which adds a display to the sound editor that shows the total length and the elapsed time of the sound, or the selection within it.
+    YouTubeID: mTX1V9e6KK0
+
+- Version: 1.26.1
+  Index: 66
+  Tag: v1.26.1
+  Name: v1.26.1
+  Date: 2022-06-08
+  Status: Released
+  Entry: |
+    - Adapt addons to the upcoming Scratch update (unshared projects no longer being accessible by knowing the project ID)
+    - Fix outdated update notices showing up in settings
+
+- Version: v1.27.0
+  Index: 67
+  Tag: v1.27.0
+  Name: v1.27.0
+  Date: 2022-07-14
+  Status: Released
+  Entry: |
+    - New addon: hide stage and sprite pane
+    - New addon: reverse order of project controls
+    - New addon: one-click studio invites
+    - "Auto-hiding block palette" addon: fixed many bugs
+    - "Cloud games" addon: listed projects can now be customized
+    - "Sprite and script count" addon: new setting to show icons instead of text
+    - "Confirmations" addon: new "confirm cancelling comments" setting
+    - "Debugger" and "pause" addons: fix bugs, improve performance
+    - Bug fix: extension getting corrupted after importing settings
+    - Bug fix: "developer tools" find bar showing above the green flag in small windows
+    - Bug fix: "Scratch Messaging" showing messages already marked as read
+    - Bug fix: "grab single block with Ctrl key" glitching if Ctrl is held when using right click → duplicate
+    - Bug fix: "unshare button in editor" breaking the "Share" button after the project was unshared
+  Highlights:
+    Description: |
+      New addon: "hide stage and sprite pane", which adds a button that hides the stage and the sprite pane, making the code area much larger. Go to Scratch Addons settings to enable it.
+
+      Another new addon is "reverse order of project controls", which moves the green flag and stop buttons to the right and the full screen button to the left, like in Scratch 2.0. Also, you can now customize the projects shown on the cloud games tab.
+    YouTubeID: ostWH0KN4bM
+
+- Version: 1.27.1
+  Index: 68
+  Tag: v1.27.1
+  Name: v1.27.1
+  Date: 2022-07-17
+  Status: Released
+  Entry: |
+    - Bug fix: "auto-hide block palette" causing editor crash after clicking "make new block"
+    - Bug fix: "project progress bar" not working and showing a vertical bar
