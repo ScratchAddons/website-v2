@@ -25,12 +25,12 @@ Example manifest:
       "matches": ["https://scratch.mit.edu/*"]
     },
     {
-      "url": "second_userstyles.css",
+      "url": "second_userstyle.css",
       "matches": ["https://scratch.mit.edu/projects/*", "https://scratch.mit.edu/users/*"]
     }
   ],
   "tags": ["community"],
-  "enabled_by_default": false
+  "enabledByDefault": false
 }
 ```
 
