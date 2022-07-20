@@ -5,6 +5,7 @@
 		<a href='{{ "/" | relLangURL }}' class="navbar-brand">
 			<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddonsAlt" }}'></img>
 			<span>{{ T ( $.Param "section_site_name" ) }}</span>
+			{{ if not hugo.IsProduction }}<span class="badge badge-primary" style="background-color: 175ef8">dev</span>{{ end }}
 		</a>
 	
 		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
