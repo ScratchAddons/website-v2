@@ -30,7 +30,7 @@ Example manifest:
     }
   ],
   "tags": ["community"],
-  "enabled_by_default": false
+  "enabledByDefault": false
 }
 ```
 
