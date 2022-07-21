@@ -29,12 +29,17 @@ Global:
 # Strings used for links to pages. Future pages on header and footer should be put on this.
 Links:
   Blog: Blog
+  Docs: Docs
+  Addons: Addons
   Credits: Credits
   PrivacyPolicy: Privacy Policy
   YouTube: YouTube
   Discord: Discord
   # Twitter: Twitter
   GitHub: GitHub
+  DiscordCom: Community Discord
+  Discussion: Discussion Forum
+  Community: Community
 
 # Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
@@ -51,12 +56,9 @@ Footer:
     FAQ: FAQ
     Feedback: Send Feedback
     Changelog: Changelog
-    Addons: Addons
   Discuss:
     Header: Discuss
-    Discussion: Discussion Forum
     Issues: Issues
-    DiscordCom: Community Discord
     DiscordDev: Development Discord
   Resources:
     Header: Resources
