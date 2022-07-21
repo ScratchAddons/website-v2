@@ -1135,3 +1135,13 @@
   Status: Released
   Entry: |
     - Bug fix: "hide stage and sprite pane" crashing the page if "touching mouse pointer" block runs while the stage is hidden
+
+- Version: 1.27.3
+  Index: 70
+  Tag: v1.27.3
+  Name: v1.27.3
+  Date: 2022-07-22
+  Status: Released
+  Entry: |
+    - Bug fix: "hide stage and sprite pane" hiding the stage in project pages
+    - Bug fix: "auto-hide block palette" not updating workspace metrics after changing settings
