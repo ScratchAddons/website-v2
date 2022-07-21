@@ -240,30 +240,6 @@ body.dark .dark-btn-white {
 	display: none
 }
 
-#dark-toggle {
-	// width: 4rem;
-	// height: 4rem;
-	// border-radius: 50%;
-	// background-color: black;
-	// position: fixed;
-	// top: calc(100% - 5rem);
-	// left: calc(100% - 5rem);
-	// opacity: 25%;
-	// padding: 1rem;
-	// color: white;
-	// z-index: 1100;
-	// transition: opacity .15s ease-in-out;
-
-	svg {
-		width: 100%;
-		height: 100%;
-	}
-
-	// &:hover {
-	// 	opacity: 90%
-	// }
-}
-
 .copyleft {
 	display: inline-block;
 	transform: rotateY(180deg);
