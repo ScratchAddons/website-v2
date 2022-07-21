@@ -66,7 +66,7 @@ Footer:
     # YouTube: YouTube
   Legal:
     Copyright: © {{.Count}} Scratch Addons contributors
-    NoAffiliation: Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.
+    NoAffiliation: Scratch Addons is not affiliated, associated, or in any way officially connected with the Scratch website or the organizations that maintain it.
     License: Scratch Addons is licensed under the terms of GNU General Public License v3.0.
   Intro: Currently {{ .Version }} with {{ .AddonCount }} addons.
 
