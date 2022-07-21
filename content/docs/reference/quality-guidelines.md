@@ -1,7 +1,7 @@
 ---
 title: Quality Guidelines
 aliases:
-  - /docs/developing/getting-started/quality-guidelines
+  - /docs/developing/quality-guidelines
 ---
 Keep these guidelines in mind when creating or reviewing a pull request (PR). If you're not sure about a certain guideline when creating a PR, you can submit the PR as a draft and mention that you need help with a specific aspect of your PR. Many developers and community members are willing and able to help your PR improve!
 
