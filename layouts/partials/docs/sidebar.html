@@ -21,7 +21,7 @@
 			{{ end -}}
 				<a href="{{ $s.RelPermalink }}" class="docs-nav-page pl-0 pr-2{{ if not $show }} collapsed{{ end }}{{ if ( or $active $show ) }} active{{ end }}">{{ if isset $s.Params "toc_title" }}{{ $s.Params.toc_title | markdownify }}{{ else }}{{ $s.LinkTitle | markdownify }}{{ end }}</a>
 		</span>
-		<ul class="docs-nav-section-pages collapse {{ if $show }}show{{ end }}" id="{{ $sid }}">
+		<ul class="docs-nav-section-pages {{ if (gt $l 1) }}collapse{{ end }} {{ if $show }}show{{ end }}" id="{{ $sid }}">
 			{{- $pages := where (union $s.Pages $s.Sections).ByWeight ".Params.toc_hide" "!=" true }}
 			{{- $pages := $pages | first 50 }}
 			{{- range $pages }}
