@@ -24,7 +24,7 @@ To get started, you need to access the settings page of the addon to see the fun
 
 1. Locate Scratch Addons on the toolbar and click it.
    
-   Usually, it is on the top-right corner of your browser. For Google Chrome users, if you are not browsing Scratch, you need to click the puzzle icon to find the extension icon.
+   Usually, it is on the top-right corner of your browser. For Google Chrome users, you may need to click the puzzle icon to find the extension icon.
 
    ![](/assets/img/getting-started/step-1.png)
 
