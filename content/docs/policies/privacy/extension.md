@@ -5,7 +5,7 @@ description: This page informs you of our policies regarding the collection, use
 aliases:
   - /docs/privacy/policies/extension
   - /privacy/extension
-disable_comments: true
+no_comments: true
 ---
 
 > Last updated: 28 May 2021

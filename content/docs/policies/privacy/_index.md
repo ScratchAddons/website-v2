@@ -5,7 +5,7 @@ weight: 1
 aliases:
   - /docs/privacy/policies
   - /privacy
-disable_comments: true
+no_comments: true
 ---
 
 Our policy regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and website.
