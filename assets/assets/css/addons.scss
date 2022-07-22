@@ -3,10 +3,10 @@
 
 .card-body {
 	.text-muted a {
-		color: #6c757d !important;
+		color: $bs-muted !important;
 
 		&:hover {
-			color: darken(#6c757d, 25%) !important;
+			color: darken($bs-muted, 25%) !important;
 		}
 
 	}
