@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>説明文書</title><link>https://scratchaddons.com/ja/docs/</link><description>説明文書の最近のコンテンツ</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2022 Scratch Addons 貢献者</copyright><atom:link href="https://scratchaddons.com/ja/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>よくある質問</title><link>https://scratchaddons.com/ja/docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/faq/</guid><description>Scratch Addonsに関するよくある質問を掲載します。
+Scratch Addonsとは? Scratch Addonsは、Scratchウェブサイトとプロジェクトエディターの新機能やテーマを提供するブラウザー拡張機能です。Scratchコミュニティーのメンバーにて開発されたユーザースクリプトやユーザースタイルを収集し、アドオンとして利用できるようにしています。アドオンは各自に有効化できます。
+アドオンとは? アドオンは拡張機能のようなものですが、Scratch AddonsのAPIを利用できます。このAPIによって、Scratchページ上でスクリプトを実行したり、Scratchウェブサイトの外観を変えることができます。
+こうしたスクリプトはaddon.*JavaScript APIを使って、Scratchに関連する情報(たとえば、現在ログイン中のユーザー名)を入手したり、通知の送信など拡張機能のAPIを利用できます。
+もしすべてがアドオンなら、Scratch Addonsの役目は何ですか? Scratch Addonsはアドオンを読み込みます。たとえば:
+アドオンを個別に有効化したり、設定を変更したりする。 アドオンにAPIを提供し、実行する。 addon.auth APIなど、データを提供する。 スクリプトの実行用にコードを挿入する。 Reduxへのアクセスを提供する。 アドオン間の干渉を防ぐ。 アドオン間でのコードの重複を防ぐ。 Scratch Addonsは安全ですか? はい。Scratch Addonsの最新バージョンにはセキュリティー上の問題は存在しないはずです。Scratch Addonsはオープンソースソフトウェアで、コードは常時Scratch Addonsの貢献者によってレビューされています。また、Chrome Web StoreとAdd-ons for Firefoxのレビュアーによっても確認済みです。
+どうやって脆弱性を報告できますか? 脆弱性情報は、World_Languages氏に直接連絡してください。メールアドレスはworldxlanguages (at) gmail.comです。48時間以内に回答がない場合は、ここにてIssueを作成してください。そのときは、メールを送信したことを述べてください。
+セキュリティー方針と過去に発見された脆弱性情報は各ウェブサイトで確認できます。
+Scratch Addonsを使っても、アカウントは安全ですか? Scratch Addonsの基礎は、アカウントの認証情報を必要しません。そのため、多くの機能は、ログアウト時でも動作します。Scratch Addonsは、ブラウザーから提供されるクッキーを用いて認証します。Scratchメッセージのようなアドオンはログアウト時は動作しませんが、それ以外の部分は問題ありません。
+Scratch Addonsのコードはすべて複数の貢献者によりチェックされているため、ウイルスなどを隠すことはできません。
+Scratchのアカウント情報や拡張機能設定は、ブラウザー内にとどまります。詳細はプライバシーポリシーを参照してください。
+Scratch Addonsについて、Scratch上で言及していいですか? できません - しないでください。方針により、拡張機能等の宣伝は禁止されています。ただし、Scratch外であれば、問題はありません。
+どうやってScratch Addonsに貢献できますか? Scratch Addonsへの貢献を考えてくれて、ありがとございます。
+オープンソースプロジェクトとして、どのような貢献も歓迎します。特別な役職は必要ありません。だれでも参加できます。
+以下のような方法があります:
+コードを貢献する
+JavaScript、HTML5、CSSの知識がある場合は、コーディングで貢献できます。バグを修正したり、機能追加の要請にこたえたり、自分のアドオンを作れます。
+リポジトリをフォークした後は、変更をし、プルリクエストを送信できます。その後開発者たちがマージします。
+拡張機能以外への貢献も大歓迎です。GitHub ページでリポジトリの一覧を確認できます。
+提案する
+Scratch Addonsにほしい機能がありますか? 提案してみましょう!
+バグを報告する
+アドオンや設定ページなど、拡張機能に問題がある場合は、バグレポートを送信できます。
+翻訳する
+英語以外の言語を話す場合は、Scratch Addonの翻訳に協力できます。なお、日本語の翻訳者は受け付けていません。詳細を確認できます。</description></item></channel></rss>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scratch Addons</title><link>https://scratchaddons.com/sl/</link><description>Nedavna vsebina na Scratch Addons</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2022 sodelavci Scratch Addons</copyright><atom:link href="https://scratchaddons.com/sl/index.xml" rel="self" type="application/rss+xml"/><item><title>O dodatkih</title><link>https://scratchaddons.com/sl/docs/develop/getting-started/addon-basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/develop/getting-started/addon-basics/</guid><description>Kaj sploh je dodatek? Pravzaprav dodatek ni nič drugega kot uporabniška skripta, uporabniški slog ali kombinacija obojega. Če je karkoli od tega povezano, združimo vse v en dodatek z enim imenom. Tako ima dodatek &amp;ldquo;Scratch 3 Developer Tools&amp;rdquo; uporabniško skripto, namenjeno dodajanju polja za iskanje v urejevalnik, in uporabniški slog, ki temu polju doda CSS.
+Kaj je uporabniška skripta? Uporabniška skripta je delček kode JavaScript, ki deluje v zavihku Scratcheve spletne strani.</description></item><item><title>Quick Start</title><link>https://scratchaddons.com/sl/docs/getting-started/quick-start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/getting-started/quick-start/</guid><description>Namestitev Začnite tako, da namestite Scratch Addons. Na voljo je v Spletni trgovini Chrome in Dodatkih za Firefox.
+Spletna trgovina Chrome (za Google Chrome in druge brskalnike, narejene na podlagi Chromium) Dodatki za Firefox (za Mozilla Firefox) Microsoft Edge Add-ons (for Microsoft Edge) Za začetek To get started, you need to access the settings page of the addon to see the functions of it.
+Locate Scratch Addons on the toolbar and click it.</description></item><item><title>Namestitev</title><link>https://scratchaddons.com/sl/docs/getting-started/installing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/getting-started/installing/</guid><description>Iz trgovin z razširitvami Scratch Addons je na voljo v Spletni trgovini Chrome in v Dodatkih za Firefox.
+Spletna trgovina Chrome (za Google Chrome, Opera, Brave, Vivaldi, Microsoft Edge &amp;gt;79 in druge brskalnike, narejene na osnovi Chromium)
+https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco
+Dodatki za Firefox (za brskalnik Mozilla Firefox)
+https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/
+Dodatki Microsoft Edge (za Microsoft Edge &amp;gt;79) https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj
+Z izvirno kodo About GitHub releases The releases page contains the code and installation files for all development builds of Scratch Addons, as well as the mirror of the store builds.</description></item><item><title>Izdelava dodatka</title><link>https://scratchaddons.com/sl/docs/develop/getting-started/creating-an-addon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/develop/getting-started/creating-an-addon/</guid><description>Potrebna programska oprema: urejevalnik besedila, brskalnik Chrome.
+Preden nadaljujete, izključite morebitno že nameščeno razširitev Scratch Addons, da se izognete težavam.
+1. korak: Preberite članek o dodatkih Najprej preberite članek na zgornji povezavi, da se seznanite z izrazi.
+2. korak: Fork/podvojite kodo Ali prenesite kot ZIP, če imate to raje. Skratka, prenesite kodo na svoj računalnik.
+3. korak: Naložite razširitev v Chrome Opomba: Za delo z dodatki priporočamo Chrome. Kljub temu naj dodatki delujejo tudi v brskalniku Firefox.</description></item><item><title>Pogosta vprašanja</title><link>https://scratchaddons.com/sl/docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/faq/</guid><description>Na tej strani je seznam pogostih vprašanj o razširitvi in projektu Scratch Addons.
+Kaj je Scratch Addons? Scratch Addons je razširitev brskalnikov za spletno stran in urejevalnik projektov Scratch. Doda nove funkcije in teme (v razširitvi se imenujejo dodatki) za spletno stran in urejevalnik projektov. Njen cilj je zbrati obstoječe razširitve, uporabniške skripte in uporabniške sloge, ki so jih razvili člani Scratcheve skupnosti, na enem mestu, do katerega lahko uporabniki enostavno dostopajo in kjer lahko še vedno izberejo tiste dodatke, ki bi jih radi uporabili.</description></item><item><title>Brskalnik ni podprt</title><link>https://scratchaddons.com/sl/unsupported-browser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/unsupported-browser/</guid><description>Brskalnik ni podprt Scratch Addons ne deluje v brskalniku, ki ga uporabljate. Uporabite najnovejšo različico brskalnika Chrome, Firefox ali katerega drugega brskalnika, narejenega na podlagi enega od teh:
+Chromium 80+ Chrome 80+ Prenos Navodila za posodobitev Microsoft Edge 80+ Prenos Navodila za posodobitev Opera 67+ Prenos Navodila za posodobitev Brave 1.3+ Prenos Vivaldi 2.11+ Prenos Navodila za posodobitev Sistemske zahteve: Windows 7+ OS X / macOS 10.11+ Prenosniki Chromebook, stari manj kot ~6 let Firefox 86+ Firefox 86+ Prenos Navodila za posodobitev Sistemske zahteve: Windows 7+ OS X / macOS 10.</description></item><item><title>Dodajanje ikone k imenu nastavitve</title><link>https://scratchaddons.com/sl/docs/develop/adding-an-icon-to-a-setting-name/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/develop/adding-an-icon-to-a-setting-name/</guid><description>Da v ime nastavitve dodate ikono, ne da bi to povzročilo težave,
+Prepričajte se, da ime datoteke z ikono ne vsebuje vezajev Spremenite ime nastavitve v datoteki addon.json v @IMEIKONE.svg ime nastavitve Dodajte datoteko IMEIKONE.svg v mapo /images/icons/, če je tam še ni Dodajte imeikoneIcon: &amp;quot;@IMEIKONE.svg&amp;quot;, v /background/load-addon-manifests.js Če gre za nastavitev dodatka Scratch Notifier, uredite še datoteko /addons/scratch-notifier/notifier.js</description></item><item><title>Dodatki</title><link>https://scratchaddons.com/sl/addons/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/addons/</guid><description>Dodatki Na tej strani je seznam vseh dodatkov, ki so del Scratch Addons.
+Ta stran ni dokončana, in za dodajanje preostalih slik potrebujemo vašo pomoč. Več informacij je na voljo tu.
+139 dodatkov
+Pogled seznama
+Skrivni dodatki
+2D izbira barv
+2d-color-picker Zamenja drsnika za svetlost in nasičenost barv v urejevalniku videzov z 2D drsnikom. Držite tipko Shift med vlečenjem, da spremenite samo vrednost ene osi.
+60FPS način v predvajalniku projektov
+🌟
+60fps Alt&amp;#43;kliknite zeleno zastavico, da preklopite 60FPS.</description></item><item><title>Localizing Addons</title><link>https://scratchaddons.com/sl/docs/localization/localizing-addons/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/localization/localizing-addons/</guid><description>Localizing addons is easy.
+Adding messages Under addons-l10n/en/, make a file named ADDONID.json, where ADDONID is the addon&amp;rsquo;s ID (the folder name). Write your messages that you want to translate there:
+{ &amp;#34;ADDONID/meow&amp;#34;: &amp;#34;Meow&amp;#34;, &amp;#34;ADDONID/cats&amp;#34;: &amp;#34;{number, plural, one {1 cat} other {# cats}}&amp;#34;, &amp;#34;ADDONID/eat&amp;#34;: &amp;#34;I want to eat {food}!&amp;#34;, &amp;#34;ADDONID/salmon&amp;#34;: &amp;#34;salmon&amp;#34;, &amp;#34;ADDONID/sardine&amp;#34;: &amp;#34;sardine&amp;#34; } Placeholders Sometimes messages need to have things that are dynamically generated. For example, number of cats, or input.</description></item><item><title>Nastavitve Scratch Addons</title><link>https://scratchaddons.com/sl/extension-settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/extension-settings/</guid><description>Nastavitve Scratch Addons Kako pridem do nastavitev Scratch Addons 1. korak Kliknite ikono razširitve Scratch Addons Najdete jo v zgornjem desnem kotu brskalnika. Uporabniki brskalnika Google Chrome morajo najprej kliknite ikono sestavljanke.
+2. korak Kliknite ikono zobnika, da odprete stran z nastavitvami To odpre stran Nastavitve, kjer lahko spremenite, kako razširitev deluje.
+3. korak Na seznamu dodatkov vključite tiste, ki jih želite Lahko tudi spremenite nastavitve posameznega dodatka.</description></item><item><title>Nasvidenje!</title><link>https://scratchaddons.com/sl/farewell/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/farewell/</guid><description>Nasvidenje! Scratch Addons je odstranjen. Hvala za uporabo razširitve!
+Razširitev lahko znova namestite tako, da kliknite zgornji gumb za namestitev. Lahko tudi dodate oceno na strani razširitve za Chrome ali strani dodatka za Firefox.
+Glede na vaše razloge za odstranitev razširitve je tu nekaj drugih stvari, ki jih lahko naredite.
+Imate težave? Prosimo, da nam to poveste tukaj ali jih prijavite tukaj. Manjka funkcija, ki jo potrebujete? Povejte nam tukaj ali jo predlagajte tukaj ali pa jo opišite na našem forumu.</description></item><item><title>Posodobitev razširitve</title><link>https://scratchaddons.com/sl/scratch-messaging-transition/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/scratch-messaging-transition/</guid><description>Razširitev Scratch Messaging Extension je zdaj Scratch Addons! Kaj se je zgodilo? Razširitev Scratch Messaging Extension (avtorja griffpatch) je posodobljena in se zdaj imenuje Scratch Addons.
+Kliknite ikono Scratch Addons v vrstici z razširitvami, da odprete na novo oblikovan pregled sporočil!
+Scratch Addons vsebuje tudi veliko drugih funkcij, povezanih s Scratchem. Če bi jih radi vključili, pojdite v nastavitve Scratch Addons. Vključite lahko na primer Scratch Notifier, da dobite obvestila brskalnika on novih sporočilih na Scratchu.</description></item><item><title>Povratne informacije</title><link>https://scratchaddons.com/sl/feedback/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/feedback/</guid><description>Povratne informacije Imate komentar o Scratch Addons? Sporočite nam ga tako, da izpolnite ta obrazec.
+Scratch uporabniško ime ali drug kontakt (neobvezno)
+Povratne informacije
+Pošlji seznam dodatkov, ki jih imam trenutno vključene (priporočeno)
+Pošlji
+Druge možnosti Če potrebujete drug način komunikacije, je tu nekaj možnosti.
+Prijavite težavo na GitHub. Ustvarite objavo na našem forumu Pošljite sporočilo na našem Discord strežniku Kontaktirajte enega od sodelavcev na Discordu, Twitterju ali kako drugače Pogovora s sodelavci na Scratchu ne priporočamo zaradi pravila, ki ne dovoli oglaševanja razširitev ali uporabniških skript.</description></item><item><title>Pozdravljeni!</title><link>https://scratchaddons.com/sl/welcome/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/welcome/</guid><description>Pozdravljeni! Scratch Addons je uspešno nameščen!
+Hvala za namestitev. Upamo, da vam bo razširitev všeč!
+Za začetek 1. korak Kliknite ikono razširitve Scratch Addons Najdete jo v zgornjem desnem kotu brskalnika. Uporabniki brskalnika Google Chrome morajo najprej kliknite ikono sestavljanke.
+2. korak Kliknite ikono zobnika, da odprete stran z nastavitvami To odpre stran Nastavitve, kjer lahko spremenite, kako razširitev deluje.
+3. korak Na seznamu dodatkov vključite tiste, ki jih želite Lahko tudi spremenite nastavitve posameznega dodatka.</description></item><item><title>Pridružite se ekipi prevajalcev</title><link>https://scratchaddons.com/sl/docs/localization/joining-the-localization-team/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/localization/joining-the-localization-team/</guid><description>Already translated: Italian, Japanese, Portuguese, Slovenian and Spanish. We won&amp;rsquo;t be accepting any new translators for these languages.
+Thanks for being interested on volunteering to translate Scratch Addons to other languages!
+Scratch Addons is a non-profit open source project where volunteer web developers maintain the extension and create its addons.
+Even if you haven&amp;rsquo;t ever coded a single line of JavaScript, you can still help us achieve our goal of making everyone&amp;rsquo;s experience with Scratch better!</description></item><item><title>Seznam sprememb</title><link>https://scratchaddons.com/sl/changelog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/changelog/</guid><description>Seznam sprememb Vse pomembne spremembe v tem projektu bodo naštete na tej strani.
+Opomba: Ta seznam je skrajšan. Za podatke o vseh spremembah preberite podroben seznam.
+v1.27.3 2022-07-22 Najnovejša različica ¶ Bug fix: &amp;ldquo;hide stage and sprite pane&amp;rdquo; hiding the stage in project pages Bug fix: &amp;ldquo;auto-hide block palette&amp;rdquo; not updating workspace metrics after changing settings Povezave Stran različice na GitHub Izvirna koda te različice Spremembe kode v tej različici v1.</description></item><item><title>Uporabniške skripte</title><link>https://scratchaddons.com/sl/docs/develop/addon-types/userscripts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/develop/addon-types/userscripts/</guid><description>Kaj to so? Uporabniške skripte omogočajo izvajanje kode na Scratchevi spletni strani - z njimi lahko dodate gumbe, izboljšate Scratchev urejevalnik, in sploh vse, kar si lahko predstavljate.
+Kako dodam uporabniško skripto? Vedno znova naložite Scratch Addons na strani chrome://extensions, potem ko spremenite vaš dodatek.
+Odprite datoteko addon.json in dodajte lastnost userscripts&amp;quot;.
+Ta lastnost mora biti seznam.
+Vsak element seznama mora imeti naslednji lastnosti: &amp;quot;url&amp;quot; in &amp;quot;matches&amp;quot;.
+&amp;quot;url&amp;quot; mora biti relativen URL datoteke JavaScript.</description></item><item><title>Uporabniški slogi</title><link>https://scratchaddons.com/sl/docs/develop/addon-types/userstyles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/docs/develop/addon-types/userstyles/</guid><description>Kaj to so? Uporabniški slogi omogočajo dodajanje kode CSS Scratchevi spletni strani - z njimi lahko naredite gumbe, ki jih dodajo uporabniške skripte, barvite, ali pa spremenite videz Scratchevih elementov.
+Kako dodam uporabniški slog? Vedno znova naložite Scratch Addons na strani chrome://extensions, potem ko spremenite vaš dodatek.
+Odprite datoteko addon.json in dodajte lastnost &amp;quot;userstyles&amp;quot;.
+Ta lastnost mora biti seznam.
+Vsak element seznama mora imeti naslednji lastnosti: &amp;quot;url&amp;quot; in &amp;quot;matches&amp;quot;.
+&amp;quot;url&amp;quot; mora biti relativen URL datoteke CSS.</description></item><item><title>Zahvale</title><link>https://scratchaddons.com/sl/credits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/sl/credits/</guid><description>Zahvale Sodelavci Zelo smo hvaležni tem čudovitim ljudem za njihove prispevke k Scratch Addons, funkcijam razširitve, temam, spletni strani itd. (ključ za emoji)
+Veseli smo prispevkov vseh vrst! Ste na kakršen koli način sodelovali? Tukaj preberite, kako lahko dodate svoje ime.
+This project follows the all-contributors specification. View the contributors repository here.
+WorldLanguages
+📆🚧
+🤔💼
+🌍🫂
+574
+apple502j
+🚧
+🛡️🐛🌍
+718
+tb148
+💻🔧
+24
+BoomerScratch
+💻
+35
+Explosion-Scratch
+💻📖🤔🐛🫂
+9
+GrahamSH-LLK</description></item></channel></rss>

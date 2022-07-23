@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>説明文書</title><link>https://scratchaddons.com/ja/docs/getting-started/</link><description>説明文書の最近のコンテンツ</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2022 Scratch Addons 貢献者</copyright><atom:link href="https://scratchaddons.com/ja/docs/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>クイックスタート</title><link>https://scratchaddons.com/ja/docs/getting-started/quick-start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/getting-started/quick-start/</guid><description>インストール Scratch Addonsをインストールしましょう。Scratch AddonsはChrome Web StoreとAdd-ons for Firefoxの両方で入手できます。
+Chrome Web Store (Google ChromeとChromiumベースのブラウザー用) Add-ons for Firefox (Mozilla Firefox用) Microsoft Edge Add-ons (Microsoft Edge用) 始め方 始めるには、アドオン設定ページにアクセスして、機能を確認してみましょう。
+Scratch Addonsがツールバーにあるのでクリックしてください。 ほとんどの場合ブラウザーの右上部にあります。Google Chromeユーザーは、Scratchを閲覧していない間は、パズルのアイコンをクリックすると拡張機能アイコンが表示されます。
+歯車アイコンをクリックして設定ページを表示します。
+アドオン一覧を見て好きなだけ機能を有効化・無効化してみてください。 アドオンには、さらに細かく設定できるものもあります。</description></item><item><title>インストール</title><link>https://scratchaddons.com/ja/docs/getting-started/installing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/getting-started/installing/</guid><description>拡張機能ストアから Scratch Addonsは、Chrome Web StoreとAdd-ons for Firefoxの両方で入手可能です。
+Chrome Web Store (Google Chrome、Opera、Brave、Vivaldi、Microsoft Edge &amp;gt;79、その他のChromiumベースのブラウザー) https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco
+Add-ons for Firefox (Mozilla Firefox) https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/
+Microsoft Edge Add-ons (Microsoft Edge &amp;gt;79用) https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj
+ソースコードから GitHubリリースについて リリースページ には、ストア版のミラーに加え、Scratch Addonsの開発版のコードとインストールファイルがあります。
+リポジトリのクローン 開発用にScratch Addonsをインストールするためには、この方法がおすすめです。Gitをインストールして、以下の手順に従ってください:
+リポジトリをダウンロードするには、 https://github.com/ScratchAddons/ScratchAddons.git をクローンしてください。
+$ git clone https://github.com/ScratchAddons/ScratchAddons.git Scratch Addonsを更新するには、フォルダー内に cd し、次のコマンドを実行してください:
+$ git fetch $ git pull Scratch Addonsが更新され、コードの編集に適した状態になります。Google Chromeを使用している場合は、 アップデートを完了させる ために追加の手順が必要です。
+Zip 形式でダウンロード Gitをインストールしていない場合は、この方法が利用できます。この場合は、Scratch Addonsをアップデートする場合に手動で同じ作業を繰り返さないといけません。
+リポジトリ にて、ダウンロードボタンを押します。
+クリックし、「Download ZIP」を選択します。
+アーカイブをフォルダーに解凍します。
+Google Chrome上でのインストール アドレスバーに chrome://extensions と入力し、拡張機能管理ページを開きます。</description></item></channel></rss>

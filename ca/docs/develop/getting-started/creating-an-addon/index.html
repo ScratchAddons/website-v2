@@ -1,0 +1,181 @@
+<!doctype html><html lang=ca>
+<head>
+<title>Creació d'un Addon - Scratch Addons Docs</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content>
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/ca/docs/develop/getting-started/creating-an-addon/">
+<meta property="og:title" content="Creació d'un Addon">
+<meta property="og:description" content>
+<meta property="og:site_name" content="Scratch Addons Docs">
+<meta property="og:locale" content="ca">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/ca/docs/develop/getting-started/creating-an-addon/">
+<meta name=twitter:title content="Creació d'un Addon - Scratch Addons Docs">
+<meta name=twitter:description content>
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=alternate hreflang=en href=https://scratchaddons.com/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=tr href=https://scratchaddons.com/tr/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=it href=https://scratchaddons.com/it/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ar href=https://scratchaddons.com/ar/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=bg href=https://scratchaddons.com/bg/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=cs href=https://scratchaddons.com/cs/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=es href=https://scratchaddons.com/es/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=fa href=https://scratchaddons.com/fa/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=fr href=https://scratchaddons.com/fr/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=hu href=https://scratchaddons.com/hu/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=id href=https://scratchaddons.com/id/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ja href=https://scratchaddons.com/ja/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ko href=https://scratchaddons.com/ko/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=nb href=https://scratchaddons.com/nb/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=pl href=https://scratchaddons.com/pl/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ro href=https://scratchaddons.com/ro/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=sv href=https://scratchaddons.com/sv/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=th href=https://scratchaddons.com/th/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=vi href=https://scratchaddons.com/vi/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=zh-cn href=https://scratchaddons.com/zh-cn/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=zh-tw href=https://scratchaddons.com/zh-tw/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=pt-br href=https://scratchaddons.com/pt-br/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=nl href=https://scratchaddons.com/nl/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=de href=https://scratchaddons.com/de/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=sl href=https://scratchaddons.com/sl/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ru href=https://scratchaddons.com/ru/docs/develop/getting-started/creating-an-addon/>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ca/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons logo'></img>
+<span>Scratch Addons Docs</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Canvia la navegació'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class="nav-item dropdown hide-from-spiders">
+<a class="nav-link dropdown-toggle" href=# id=navbar-languages role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>català</a>
+<div class=dropdown-menu aria-labelledby=navbar-languages>
+<a class=dropdown-item href=https://scratchaddons.com/docs/develop/getting-started/creating-an-addon/>English</a><a class=dropdown-item href=https://scratchaddons.com/tr/docs/develop/getting-started/creating-an-addon/>Türkçe</a><a class=dropdown-item href=https://scratchaddons.com/it/docs/develop/getting-started/creating-an-addon/>italiano</a><a class=dropdown-item href=https://scratchaddons.com/ar/docs/develop/getting-started/creating-an-addon/>العربية</a><a class=dropdown-item href=https://scratchaddons.com/bg/docs/develop/getting-started/creating-an-addon/>български</a><a class=dropdown-item href=https://scratchaddons.com/cs/docs/develop/getting-started/creating-an-addon/>čeština</a><a class=dropdown-item href=https://scratchaddons.com/es/docs/develop/getting-started/creating-an-addon/>español</a><a class=dropdown-item href=https://scratchaddons.com/fa/docs/develop/getting-started/creating-an-addon/>فارسی</a><a class=dropdown-item href=https://scratchaddons.com/fr/docs/develop/getting-started/creating-an-addon/>français</a><a class=dropdown-item href=https://scratchaddons.com/hu/docs/develop/getting-started/creating-an-addon/>magyar</a><a class=dropdown-item href=https://scratchaddons.com/id/docs/develop/getting-started/creating-an-addon/>Indonesia</a><a class=dropdown-item href=https://scratchaddons.com/ja/docs/develop/getting-started/creating-an-addon/>日本語</a><a class=dropdown-item href=https://scratchaddons.com/ko/docs/develop/getting-started/creating-an-addon/>한국어</a><a class=dropdown-item href=https://scratchaddons.com/nb/docs/develop/getting-started/creating-an-addon/>norsk bokmål</a><a class=dropdown-item href=https://scratchaddons.com/pl/docs/develop/getting-started/creating-an-addon/>polski</a><a class=dropdown-item href=https://scratchaddons.com/ro/docs/develop/getting-started/creating-an-addon/>română</a><a class=dropdown-item href=https://scratchaddons.com/sv/docs/develop/getting-started/creating-an-addon/>svenska</a><a class=dropdown-item href=https://scratchaddons.com/th/docs/develop/getting-started/creating-an-addon/>ไทย</a><a class=dropdown-item href=https://scratchaddons.com/vi/docs/develop/getting-started/creating-an-addon/>Tiếng Việt</a><a class=dropdown-item href=https://scratchaddons.com/zh-cn/docs/develop/getting-started/creating-an-addon/>中文（中国）</a><a class=dropdown-item href=https://scratchaddons.com/zh-tw/docs/develop/getting-started/creating-an-addon/>中文（台灣）</a><a class=dropdown-item href=https://scratchaddons.com/pt-br/docs/develop/getting-started/creating-an-addon/>português (Brasil)</a><a class=dropdown-item href=https://scratchaddons.com/nl/docs/develop/getting-started/creating-an-addon/>Nederlands</a><a class=dropdown-item href=https://scratchaddons.com/de/docs/develop/getting-started/creating-an-addon/>Deutsch</a><a class=dropdown-item href=https://scratchaddons.com/sl/docs/develop/getting-started/creating-an-addon/>slovenščina</a><a class=dropdown-item href=https://scratchaddons.com/ru/docs/develop/getting-started/creating-an-addon/>русский</a>
+</div></li><li class=nav-item><a class=nav-link href=/ca/credits>Crèdits</a></li><li class=nav-item><a class=nav-link href=/ca/feedback>Enviar comentaris</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label='Repositori a Github' rel=noopener>Repositori <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/ca/#install>Instal·la</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Commuta la barra lateral de navegació de documents'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Navegació de documents</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>Taula de continguts</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='Commuta la barra lateral de la taula de continguts'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/ca/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-cadocs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-cadocsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Començant</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-cadocsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-cadocsgetting-startedquick-start href=/ca/docs/getting-started/quick-start/>Quick Start</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsgetting-startedinstalling href=/ca/docs/getting-started/installing/>Instal·lació</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-cadocsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/develop/ class="docs-nav-page pl-0 pr-2 active">Desenvolupament</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-cadocsdevelop><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-cadocsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 active">Començant</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-cadocsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-cadocsdevelopgetting-startedaddon-basics href=/ca/docs/develop/getting-started/addon-basics/>Addon Basics</a>
+</li><li>
+<a class="docs-nav-page active" id=docs-nav-page-cadocsdevelopgetting-startedcreating-an-addon href=/ca/docs/develop/getting-started/creating-an-addon/>Creació d&rsquo;un Addon</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-cadocsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 collapsed">Tipus d&rsquo; Addons</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-cadocsdevelopaddon-types>
+<li>
+<a class=docs-nav-page id=docs-nav-page-cadocsdevelopaddon-typesuserscripts href=/ca/docs/develop/addon-types/userscripts/>Userscripts</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsdevelopaddon-typesuserstyles href=/ca/docs/develop/addon-types/userstyles/>Userstyles</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsdevelopadding-an-icon-to-a-setting-name href=/ca/docs/develop/adding-an-icon-to-a-setting-name/>Adding an Icon to a Setting Name</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-cadocslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-cadocslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-cadocslocalizationjoining-the-localization-team href=/ca/docs/localization/joining-the-localization-team/>Joining the Localization Team</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocslocalizationlocalizing-addons href=/ca/docs/localization/localizing-addons/>Localizing Addons</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsfaq href=/ca/docs/faq/>Preguntes freqüents / FAQ</a>
+</li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1>Creació d&rsquo;un Addon</h1><p>Programari necessari: editor de text, Chrome.
+Si és possible, desactiva l&rsquo;extensió Scratch Addons que has baixat de la botiga abans de continuar per evitar problemes.</p><h2 id=pas-1-llegeix-les-fons-bàsiques-dels-complementsdocsdevelopgetting-startedaddon-basics>Pas 1: llegeix les <a href=/docs/develop/getting-started/addon-basics/>fons bàsiques dels complements</a> <a href=#pas-1-llegeix-les-fons-b%c3%a0siques-dels-complementsdocsdevelopgetting-startedaddon-basics class=anchor aria-label=Anchor></a></h2><p>Assegura&rsquo;t de llegir aquest article per familiaritzar-te amb la terminologia.</p><h2 id=pas-2-bifurcaclona-el-repo>Pas 2: bifurca/clona el repo <a href=#pas-2-bifurcaclona-el-repo class=anchor aria-label=Anchor></a></h2><p>O descarra&rsquo;l com a ZIP, si vols. En altres paraules, només cal que baixis el codi font.</p><h2 id=pas-3-carrega-lextensió-al-chrome>Pas 3: Carrega l&rsquo;extensió al Chrome <a href=#pas-3-carrega-lextensi%c3%b3-al-chrome class=anchor aria-label=Anchor></a></h2><p><em>Nota: es recomana el Chrome per treballar amb complements. No obstant això, s&rsquo;espera que els complements funcionin al Firefox.</em>
+Ara que tens l&rsquo;extensió al teu sistema de fitxers, vés a <code>chrome://extensions</code> i canvieu el &ldquo;mode de desenvolupador&rdquo;.
+Fes clic a &ldquo;Carrega una extensió desempaquetada&rdquo; i, a continuació, selecciona la carpeta on es troba Scratch Addons. Si tens problemes amb això, assegura&rsquo;t de seleccionar la carpeta on es troba el <code>manifest.json</code>.
+Això és tot, has carregat l&rsquo;extensió! Hauria de ser semblant a això:
+<img src=https://user-images.githubusercontent.com/17484114/91502527-accfd580-e89e-11ea-9e16-7daa2b808379.png alt=imatge>
+Nota: ignora completament que diu &ldquo;errors&rdquo;. Això és només un avís per a una clau de manifest no reconeguda que requereix el Firefox.</p><h2 id=pas-4-de-què-tracta-el-teu-addon>Pas 4: De què tracta el teu addon? <a href=#pas-4-de-qu%c3%a8-tracta-el-teu-addon class=anchor aria-label=Anchor></a></h2><p>Ara ve la part divertida!
+Què farà el teu complement? Pensa en un ID d&rsquo;addon autodescriptiu (sense espais ni caràcters especials, excepte guions).
+Ho tens llest?</p><h2 id=pas-5-crea-la-carpeta-per-laddon>Pas 5: Crea la carpeta per l&rsquo;addon <a href=#pas-5-crea-la-carpeta-per-laddon class=anchor aria-label=Anchor></a></h2><p>Amb un explorador de arxius, vés a la carpeta on es troba Scratch Addons al vostre sistema de fitxers. Troba la carpeta <code>addons</code>.
+A continuació, crea una carpeta nova amb el teu èpic ID de addon com a nom.</p><h2 id=pas-6-afegeix-un-manifest-de-addon>Pas 6: Afegeix un manifest de addon <a href=#pas-6-afegeix-un-manifest-de-addon class=anchor aria-label=Anchor></a></h2><p>El manifest del complement indica al Scratch Addons com funciona el teu addon. Assegura&rsquo;t de fer-ho bé per evitar mals de cap.
+Dins de la carpeta que acabes de crear, crea un fitxer <code>addon.json</code>.
+Aquesta és una base que pots utilitzar per començar a programar, assegura&rsquo;t canviar-la en el futur:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Espai en blanc èpic per posar el nom del Espai en blanc èpic per posar el nom del complement&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Hola món! Seria molt intel·ligent substituir aquest espai en blanc per una descripció.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;tags&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;community&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;enabledByDefault&#34;</span><span class=p>:</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>Per obtenir més informació sobre què pots declarar al manifest, consulta <a href=/docs/reference/addon-manifest/>aquest article</a>.</p><h2 id=pas-7-indica-a-scratch-addons-quin-és-lidentificador-del-vostre-addon>Pas 7: Indica a Scratch Addons quin és l&rsquo;identificador del vostre addon <a href=#pas-7-indica-a-scratch-addons-quin-%c3%a9s-lidentificador-del-vostre-addon class=anchor aria-label=Anchor></a></h2><p>Scratch Addons no pot trobar carpetes noves per si sól, de manera que has d&rsquo;afegir el nom a un fitxer especial.
+Vés a <code>scratchAddonsFolder/addons/addons.json</code> i afegeix l&rsquo;ID del vostre addon a l&rsquo;array.</p><h2 id=pas-8-hola-món>Pas 8: Hola món <a href=#pas-8-hola-m%c3%b3n class=anchor aria-label=Anchor></a></h2><p>El teu addon no fa res de moment, així que és hora de comprovar si tot el que hem fet anteriorment ha funcionat.
+Vés a <code>chrome://extensions</code> i torna a carregar Scratch Addons fent clic al símbol d&rsquo;actualització de la targeta.
+Ara, fes clic amb el botó dret a la icona del Scratch Addons i fes clic a &ldquo;Opcions&rdquo;.
+Hauríes de veure el vostre complement a la llista! Un cop el trobis, activa&rsquo;l i configura qualsevol configuració que pugui tenir.</p><h2 id=pas-9-la-part-divertida-el-codi>Pas 9: La part divertida, el codi! <a href=#pas-9-la-part-divertida-el-codi class=anchor aria-label=Anchor></a></h2><p><em>Abans de continuar, assegura&rsquo;t de llegir l&rsquo;article de la wiki enllaçat al pas 1.</em></p><p>Aquí ve la part divertida: crea els teus propis fitxers JS o CSS!
+Consell de pro: després de fer qualsevol canvi al vostre complement, assegura&rsquo;t d&rsquo;actualitzar l&rsquo;extensió de Scratch Addons com vas fer al pas 8.</p><p>Depenent del que vulguis que faci el teu addon, ara hauríes de comprovar aquestes pàgines de la wiki:</p><ul>
+<li><a href=/docs/develop/addon-types/userscripts>Userscripts</a></li><li><a href=/docs/develop/addon-types/userstyles>Userstyles</a></li></ul><h2 id=pas-10-fes-que-el-teu-addon-sigui-personalitzable>Pas 10: Fes que el teu addon sigui personalitzable <a href=#pas-10-fes-que-el-teu-addon-sigui-personalitzable class=anchor aria-label=Anchor></a></h2><p>Si vols, pots personalitzar el teu addon!
+Els usuaris del teu addon podran canviar la configuració, introduir números i molt més!
+Per començar, veu <a href=/docs/reference/addon-manifest/#settings-object>com declarar la configuració al manifest del addon</a>.
+A continuació, vés a la <a href=/docs/reference/addon-api/addon.settings>addon.settings documentation</a> per saber com accedir a les opcions d&rsquo;usuari des dels scripts d&rsquo;usuari.</p><h2 id=pas-11-abans-de-publicar-el-teu-addon>Pas 11: Abans de publicar el teu addon <a href=#pas-11-abans-de-publicar-el-teu-addon class=anchor aria-label=Anchor></a></h2><p>Ara que el teu addon funciona, assegurem-nos que el podem afegir a la biblioteca d&rsquo;addons.
+Assegura&rsquo;t que el manifest del teu addon sigui adequat, <a href=/docs/reference/addon-manifest>més informació aquí</a>. Mantingues molta atenció al nom, la descripció i les etiquetes del teu addon Assegura&rsquo;t d&rsquo;establir <code>"enabledByDefault"</code> com a <code>false</code> o suprimiu-lo.
+Assegura&rsquo;t que el teu addon no trenqui altres addons.
+Assegura&rsquo;t que el teu codi sigui comprensible; tenir comentaris innecessaris és millor que no fer comentaris.</p><h2 id=pas-12-envians-una-sollicitud>Pas 12: Envian&rsquo;s una sol·licitud! <a href=#pas-12-envians-una-sollicitud class=anchor aria-label=Anchor></a></h2><p>Fes una ullada el repo si encara no ho has fet, compromeu el teu nou addon i envia un PR!
+Tingues en compte que potser et demanarem que feu alguns canvis, però, probablement acceptem el teu complement sempre que sigui mínimament adequat.</p></article><hr>
+<p class=text-muted>
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/develop/getting-started/creating-an-addon.md>Millora aquesta pàgina.</a>
+</p><div id=comments class=mt-4><h3>Comentaris</h3><p class=mb-3>Assegureu-vos de seguir <a href=/docs/policies/code-of-conduct>el codi de conducta</a>. Pots veure aquesta secció de comentaris a les <a class=link-to-search>Discussions de GitHub</a>, així com editar i eliminar el teu comentari.</p><div class=giscus></div><script async defer src=/assets/js/comments.js></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#pas-1-llegeix-les-fons-bàsiques-dels-complementsdocsdevelopgetting-startedaddon-basics>Pas 1: llegeix les <a href=/docs/develop/getting-started/addon-basics/>fons bàsiques dels complements</a></a></li><li><a href=#pas-2-bifurcaclona-el-repo>Pas 2: bifurca/clona el repo</a></li><li><a href=#pas-3-carrega-lextensió-al-chrome>Pas 3: Carrega l&rsquo;extensió al Chrome</a></li><li><a href=#pas-4-de-què-tracta-el-teu-addon>Pas 4: De què tracta el teu addon?</a></li><li><a href=#pas-5-crea-la-carpeta-per-laddon>Pas 5: Crea la carpeta per l&rsquo;addon</a></li><li><a href=#pas-6-afegeix-un-manifest-de-addon>Pas 6: Afegeix un manifest de addon</a></li><li><a href=#pas-7-indica-a-scratch-addons-quin-és-lidentificador-del-vostre-addon>Pas 7: Indica a Scratch Addons quin és l&rsquo;identificador del vostre addon</a></li><li><a href=#pas-8-hola-món>Pas 8: Hola món</a></li><li><a href=#pas-9-la-part-divertida-el-codi>Pas 9: La part divertida, el codi!</a></li><li><a href=#pas-10-fes-que-el-teu-addon-sigui-personalitzable>Pas 10: Fes que el teu addon sigui personalitzable</a></li><li><a href=#pas-11-abans-de-publicar-el-teu-addon>Pas 11: Abans de publicar el teu addon</a></li><li><a href=#pas-12-envians-una-sollicitud>Pas 12: Envian&rsquo;s una sol·licitud!</a></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Fes clic per canviar el tema fosc.' aria-label='Canvi de tema fosc' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/ca/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons' class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<p class="mb-3 small">Actualment 1.27.3 amb 139 addons.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Pàgines</h3><a href=/ca/docs/faq>FAQ</a>
+<a href=/ca/feedback>Enviar comentaris</a>
+<a href=/ca/credits>Crèdits</a>
+<a href=/ca/changelog>Historial de canvis</a>
+<a href=/ca/addons>Addons</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Discutiu</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Fòrum de discussió</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Problemes</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Discord de la comunitat</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Discord de desenvolupament</a>
+</section><section>
+<h3>Recursos</h3><a href=https://github.com/ScratchAddons rel=noopener>Organització</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repositori</a>
+<a href=/ca/docs rel=noopener>Documentació</a>
+<a href=/docs/policies/privacy/website rel=noopener>Política de privacitat</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Col·laboradors de Scratch Addons</p><p>Scratch Addons no està afiliat, associat o connectat de cap manera oficial amb Scratch, el Scratch Team, la Scratch Foundation o cap de les seves filials o afiliats.</p><p class=mb-0>Scratch Addons té llicència sota els termes de la GNU General Public License v3.0.</p></section></div></footer></body></html>

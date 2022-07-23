@@ -1,0 +1,220 @@
+<!doctype html><html lang=en>
+<head>
+<title>addon.tab.traps (Traps) - Scratch Addons Docs</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="addon.tab.traps is a public API for userscripts that can be used to obtain objects that are not otherwise available.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/docs/reference/addon-api/addon.tab/addon.tab.traps/">
+<meta property="og:title" content="addon.tab.traps (Traps)">
+<meta property="og:description" content="addon.tab.traps is a public API for userscripts that can be used to obtain objects that are not otherwise available.">
+<meta property="og:site_name" content="Scratch Addons Docs">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/docs/reference/addon-api/addon.tab/addon.tab.traps/">
+<meta name=twitter:title content="addon.tab.traps (Traps) - Scratch Addons Docs">
+<meta name=twitter:description content="addon.tab.traps is a public API for userscripts that can be used to obtain objects that are not otherwise available.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons logo'></img>
+<span>Scratch Addons Docs</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Toggle navigation'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class=nav-item><a class=nav-link href=/credits>Credits</a></li><li class=nav-item><a class=nav-link href=/feedback>Send Feedback</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label='Repository on GitHub' rel=noopener>Repository <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/#install>Install</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Toggle docs navigation sidebar'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Docs navigation</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>Table of contents</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='Toggle table of contents sidebar'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-docs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsgetting-startedquick-start href=/docs/getting-started/quick-start/>Quick Start</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsgetting-startedinstalling href=/docs/getting-started/installing/>Installing</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/ class="docs-nav-page pl-0 pr-2 collapsed">Developing</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelop><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopgetting-startedaddon-basics href=/docs/develop/getting-started/addon-basics/>Addon Basics</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopgetting-startedcreating-an-addon href=/docs/develop/getting-started/creating-an-addon/>Creating an Addon</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 collapsed">Addon Types</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopaddon-types>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopaddon-typesuserscripts href=/docs/develop/addon-types/userscripts/>Userscripts</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopaddon-typesuserstyles href=/docs/develop/addon-types/userstyles/>Userstyles</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopadding-an-icon-to-a-setting-name href=/docs/develop/adding-an-icon-to-a-setting-name/>Adding an Icon to a Setting Name</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationjoining-the-localization-team href=/docs/localization/joining-the-localization-team/>Joining the Localization Team</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationlocalizing-addons href=/docs/localization/localizing-addons/>Localizing Addons</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreference role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/ class="docs-nav-page pl-0 pr-2 active">Reference</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreference><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreferenceaddon-api role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/addon-api/ class="docs-nav-page pl-0 pr-2 active">Addon API</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreferenceaddon-api>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonself href=/docs/reference/addon-api/addon.self/>addon.self</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonsettings href=/docs/reference/addon-api/addon.settings/>addon.settings</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonauth href=/docs/reference/addon-api/addon.auth/>addon.auth</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonaccount href=/docs/reference/addon-api/addon.account/>addon.account</a>
+</li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreferenceaddon-apiaddontab role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/addon-api/addon.tab/ class="docs-nav-page pl-0 pr-2 active">addon.tab</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreferenceaddon-apiaddontab>
+<li>
+<a class="docs-nav-page active" id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabtraps href=/docs/reference/addon-api/addon.tab/addon.tab.traps/>addon.tab.traps</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabredux href=/docs/reference/addon-api/addon.tab/addon.tab.redux/>addon.tab.redux</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabappendtosharedspace href=/docs/reference/addon-api/addon.tab/addon.tab.appendtosharedspace/>addon.tab.appendToSharedSpace</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonpopup href=/docs/reference/addon-api/addon.popup/>addon.popup</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-manifest href=/docs/reference/addon-manifest/>Addon Manifest</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferencedesign href=/docs/reference/design/>Design</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsfaq href=/docs/faq/>Frequently Asked Questions</a>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docspolicies role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/policies/ class="docs-nav-page pl-0 pr-2 collapsed">Policies</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docspolicies><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docspoliciesprivacy role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/policies/privacy/ class="docs-nav-page pl-0 pr-2 collapsed">Privacy Policy</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docspoliciesprivacy>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciesprivacyextension href=/docs/policies/privacy/extension/>Extension</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciesprivacywebsite href=/docs/policies/privacy/website/>Website</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciessecurity href=/docs/policies/security/>Security Policy</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciescode-of-conduct href=/docs/policies/code-of-conduct/>Code of Conduct</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspolicieschrome-web-store-privacy-information href=/docs/policies/chrome-web-store-privacy-information/>Chrome Web Store Privacy Information</a>
+</li></ul></li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1><code>addon.tab.traps</code> (Traps)</h1><p><strong>This page is out of date and is in need of a rewrite. If you know anything about traps, please contribute!</strong></p><p><code>addon.tab.traps</code> is a public API for userscripts that can be used to obtain objects that are not otherwise available. The actual traps are coded at <a href=https://github.com/ScratchAddons/ScratchAddons/blob/master/content-scripts/prototype-handler.js>prototype-handler</a>.</p><p>They share some APIs with &ldquo;Once&rdquo; traps, but is very different and is documented at <a href=Fake-redux-state>Fake redux state</a> separately.</p><h2 id=examples>Examples <a href=#examples class=anchor aria-label=Anchor></a></h2><p><a href=https://github.com/ScratchAddons/ScratchAddons/blob/master/addons/editor-stepping/userscript.js>editor-stepping</a> addon shows how to manipulate <code>Thread</code> object trapped.</p><h2 id=trap-terminology>Trap terminology <a href=#trap-terminology class=anchor aria-label=Anchor></a></h2><p>There are two types of traps, named after how many times they get trapped. Singleton instance like VM or ScratchBlocks get trapped only once per trap, so they are called &ldquo;Once&rdquo;. Objects like Thread can get trapped multiple times, so they are called &ldquo;Many&rdquo;.</p><p>Difference between Once and Many is simple: the addon only stores reference for Once.</p><h2 id=trappable-object>Trappable Object <a href=#trappable-object class=anchor aria-label=Anchor></a></h2><table>
+<thead>
+<tr>
+<th>Trap name</th><th>Description</th><th>Once/Many</th></tr></thead><tbody>
+<tr>
+<td>vm</td><td>Scratch VM, trapped by Function.prototype.bind</td><td>Once</td></tr><tr>
+<td>vm.propsVMBind</td><td>Scratch VM, trapped from props.vm using bind</td><td>Once</td></tr><tr>
+<td>vm.propsVMAssign</td><td>Scratch VM, trapped from props.vm using assign</td><td>Once</td></tr><tr>
+<td>thread</td><td>Thread object used in Scratch VM</td><td>Many</td></tr><tr>
+<td>ScratchBlocks</td><td>ScratchBlocks object</td><td>Once</td></tr><tr>
+<td>workspace</td><td>ScratchBlocks workspace</td><td>Once</td></tr></tbody></table><h2 id=addontabtrapsoncevalues><code>addon.tab.traps.onceValues</code> <a href=#addontabtrapsoncevalues class=anchor aria-label=Anchor></a></h2><p><code>onceValues</code> attribute of <code>addon.tab.traps</code> stores references for &ldquo;Once&rdquo; traps. It is an prototypeless object - e.g. you cannot call <code>onceValues.hasOwnProperty()</code>.</p><p>Keys are the &ldquo;trap name&rdquo; listed above, and values are the trapped values.</p><p>Example: to get VM object, use <code>addon.tab.traps.onceValues.vm</code></p><h2 id=addontabtrapsgetblockly><code>addon.tab.traps.getBlockly</code> <a href=#addontabtrapsgetblockly class=anchor aria-label=Anchor></a></h2><table>
+<tr>
+<td>Return value</td><td><code>Promise&lt;object></code></td></tr><td>Promise rejects if</td><td>The addon isn't running on a project</td></table><p>Gets the instance of Blockly being used by Scratch.
+This is different from <code>window.Blockly</code>.</p><h2 id=addontabtrapsgetpaper><code>addon.tab.traps.getPaper</code> <a href=#addontabtrapsgetpaper class=anchor aria-label=Anchor></a></h2><table>
+<tr>
+<td>Return value</td><td><code>Promise&lt;object></code></td></tr><td>Promise rejects if</td><td>The addon isn't running on a project, or if Paper couldn't be found</td></table><p>Gets the instance of Paper being used by Scratch. (@scratch/paper)</p><h2 id=addontabtrapsgetinternalkey><code>addon.tab.traps.getInternalKey</code> <a href=#addontabtrapsgetinternalkey class=anchor aria-label=Anchor></a></h2><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>element</td><td><code>HTMLElement</code></td><td>Yes</td><td>The reference element</td></tr></table><table>
+<tr>
+<td>Return value</td><td><code>String</code></td></tr></table><p>Gets the internal key for React.</p><h2 id=events>Events <a href=#events class=anchor aria-label=Anchor></a></h2><p><code>addon.tab.traps</code> itself is not an <code>EventTarget</code>. However, it&rsquo;s possible to add or remove listeners, by using some public APIs. <code>traps.addOnceListener</code>/<code>removeOnceListener</code> is for &ldquo;Once&rdquo; traps, and <code>addManyListener</code>/<code>removeManyListener</code> is for &ldquo;Many&rdquo; traps. Note that listeners for &ldquo;Once&rdquo; objects can fire multiple times under some conditions, and may never fire if the object is trapped before loading the userscript.</p><p>These methods work like <code>addEventListener</code>/<code>removeEventListener</code>, but third argument is not supported at all. The first argument is for trap name; for example, if it needs to be fired when <code>thread</code> is trapped, do <code>addManyListener("thread", callback)</code>. The second argument is callback function that can take one argument for CustomEvent object, which contains the trapped value.</p><p>The CustomEvent object passed to callback always has <code>value</code> attribute for trapped value, and may have <code>trapName</code> if the first argument for the listener is <code>*</code> (see below).</p><p>Special event: if the trap name passed to these methods is <code>*</code>, it will fire when any object for the category is trapped. For example, callback in <code>addOnceListener("*", callback)</code> gets fired whenever an object in Once category is trapped. To check what is trapped, the CustomEvent passed to the callback also has <code>trapName</code> attribute for the trap name.</p></article><hr>
+<p class=text-muted>
+Last updated at 22 April 2022 by RedGuy12 on commit <a href=https://github.com/ScratchAddons/website-v2/commit/686f6b723706491f9468e42664f91ce924b478b4><code>686f6b7</code></a>.
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/reference/addon-api/addon.tab/addon.tab.traps.md>Improve this page.</a>
+</p><div id=comments class=mt-4><h3>Comments</h3><p class=mb-3>Make sure to follow <a href=/docs/policies/code-of-conduct>the code of conduct</a>. You can see this comment section on <a class=link-to-search>GitHub Discussions</a>, as well as editing and removing your comment.</p><div class=giscus></div><script async defer src=/assets/js/comments.js data-giscus-lang=en></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#examples>Examples</a></li><li><a href=#trap-terminology>Trap terminology</a></li><li><a href=#trappable-object>Trappable Object</a></li><li><a href=#addontabtrapsoncevalues><code>addon.tab.traps.onceValues</code></a></li><li><a href=#addontabtrapsgetblockly><code>addon.tab.traps.getBlockly</code></a></li><li><a href=#addontabtrapsgetpaper><code>addon.tab.traps.getPaper</code></a></li><li><a href=#addontabtrapsgetinternalkey><code>addon.tab.traps.getInternalKey</code></a></li><li><a href=#events>Events</a></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Click to toggle the dark theme.' aria-label='Dark theme switch' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons' class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<p class="mb-3 small">Currently 1.27.3 with 139 addons.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Pages</h3><a href=/docs/faq>FAQ</a>
+<a href=/feedback>Send Feedback</a>
+<a href=/credits>Credits</a>
+<a href=/changelog>Changelog</a>
+<a href=/addons>Addons</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Discuss</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Discussion Forum</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Issues</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Community Discord</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Development Discord</a>
+</section><section>
+<h3>Resources</h3><a href=https://github.com/ScratchAddons rel=noopener>Organization</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repository</a>
+<a href=/docs rel=noopener>Documentation</a>
+<a href=/docs/policies/privacy/website rel=noopener>Privacy Policy</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Scratch Addons contributors</p><p>Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.</p><p class=mb-0>Scratch Addons is licensed under the terms of GNU General Public License v3.0.</p></section></div></footer></body></html>

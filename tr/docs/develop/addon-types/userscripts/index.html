@@ -1,0 +1,213 @@
+<!doctype html><html lang=tr>
+<head>
+<title>Kullanıcı Komut Dosyaları - Scratch Eklentileri Belgeleri</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="Kullanıcı komut dosyaları, Scratch sayfaları boyunca kod çalıştırmanıza izin verir - düğme ekleme, Scratch düzenleyiciyi geliştirme veya hayal edebileceğiniz herhangi bir şey gibi şeyler yapabilirsiniz.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/tr/docs/develop/addon-types/userscripts/">
+<meta property="og:title" content="Kullanıcı Komut Dosyaları">
+<meta property="og:description" content="Kullanıcı komut dosyaları, Scratch sayfaları boyunca kod çalıştırmanıza izin verir - düğme ekleme, Scratch düzenleyiciyi geliştirme veya hayal edebileceğiniz herhangi bir şey gibi şeyler yapabilirsiniz.">
+<meta property="og:site_name" content="Scratch Eklentileri Belgeleri">
+<meta property="og:locale" content="tr">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Eklentilerinin logosu">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/tr/docs/develop/addon-types/userscripts/">
+<meta name=twitter:title content="Kullanıcı Komut Dosyaları - Scratch Eklentileri Belgeleri">
+<meta name=twitter:description content="Kullanıcı komut dosyaları, Scratch sayfaları boyunca kod çalıştırmanıza izin verir - düğme ekleme, Scratch düzenleyiciyi geliştirme veya hayal edebileceğiniz herhangi bir şey gibi şeyler yapabilirsiniz.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Eklentilerinin logosu">
+<link rel=alternate hreflang=en href=https://scratchaddons.com/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=pl href=https://scratchaddons.com/pl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=fr href=https://scratchaddons.com/fr/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=sl href=https://scratchaddons.com/sl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=it href=https://scratchaddons.com/it/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ar href=https://scratchaddons.com/ar/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=bg href=https://scratchaddons.com/bg/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ca href=https://scratchaddons.com/ca/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=cs href=https://scratchaddons.com/cs/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=de href=https://scratchaddons.com/de/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=es href=https://scratchaddons.com/es/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=fa href=https://scratchaddons.com/fa/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=id href=https://scratchaddons.com/id/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ja href=https://scratchaddons.com/ja/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ko href=https://scratchaddons.com/ko/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=nb href=https://scratchaddons.com/nb/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=nl href=https://scratchaddons.com/nl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=pt-br href=https://scratchaddons.com/pt-br/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ro href=https://scratchaddons.com/ro/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ru href=https://scratchaddons.com/ru/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=sv href=https://scratchaddons.com/sv/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=th href=https://scratchaddons.com/th/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=vi href=https://scratchaddons.com/vi/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=zh-cn href=https://scratchaddons.com/zh-cn/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=zh-tw href=https://scratchaddons.com/zh-tw/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=hu href=https://scratchaddons.com/hu/docs/develop/addon-types/userscripts/>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/tr/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Eklentilerinin logosu'></img>
+<span>Scratch Eklentileri Belgeleri</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Gezinme ayarı'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class="nav-item dropdown hide-from-spiders">
+<a class="nav-link dropdown-toggle" href=# id=navbar-languages role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>Türkçe</a>
+<div class=dropdown-menu aria-labelledby=navbar-languages>
+<a class=dropdown-item href=https://scratchaddons.com/docs/develop/addon-types/userscripts/>English</a><a class=dropdown-item href=https://scratchaddons.com/pl/docs/develop/addon-types/userscripts/>polski</a><a class=dropdown-item href=https://scratchaddons.com/fr/docs/develop/addon-types/userscripts/>français</a><a class=dropdown-item href=https://scratchaddons.com/sl/docs/develop/addon-types/userscripts/>slovenščina</a><a class=dropdown-item href=https://scratchaddons.com/it/docs/develop/addon-types/userscripts/>italiano</a><a class=dropdown-item href=https://scratchaddons.com/ar/docs/develop/addon-types/userscripts/>العربية</a><a class=dropdown-item href=https://scratchaddons.com/bg/docs/develop/addon-types/userscripts/>български</a><a class=dropdown-item href=https://scratchaddons.com/ca/docs/develop/addon-types/userscripts/>català</a><a class=dropdown-item href=https://scratchaddons.com/cs/docs/develop/addon-types/userscripts/>čeština</a><a class=dropdown-item href=https://scratchaddons.com/de/docs/develop/addon-types/userscripts/>Deutsch</a><a class=dropdown-item href=https://scratchaddons.com/es/docs/develop/addon-types/userscripts/>español</a><a class=dropdown-item href=https://scratchaddons.com/fa/docs/develop/addon-types/userscripts/>فارسی</a><a class=dropdown-item href=https://scratchaddons.com/id/docs/develop/addon-types/userscripts/>Indonesia</a><a class=dropdown-item href=https://scratchaddons.com/ja/docs/develop/addon-types/userscripts/>日本語</a><a class=dropdown-item href=https://scratchaddons.com/ko/docs/develop/addon-types/userscripts/>한국어</a><a class=dropdown-item href=https://scratchaddons.com/nb/docs/develop/addon-types/userscripts/>norsk bokmål</a><a class=dropdown-item href=https://scratchaddons.com/nl/docs/develop/addon-types/userscripts/>Nederlands</a><a class=dropdown-item href=https://scratchaddons.com/pt-br/docs/develop/addon-types/userscripts/>português (Brasil)</a><a class=dropdown-item href=https://scratchaddons.com/ro/docs/develop/addon-types/userscripts/>română</a><a class=dropdown-item href=https://scratchaddons.com/ru/docs/develop/addon-types/userscripts/>русский</a><a class=dropdown-item href=https://scratchaddons.com/sv/docs/develop/addon-types/userscripts/>svenska</a><a class=dropdown-item href=https://scratchaddons.com/th/docs/develop/addon-types/userscripts/>ไทย</a><a class=dropdown-item href=https://scratchaddons.com/vi/docs/develop/addon-types/userscripts/>Tiếng Việt</a><a class=dropdown-item href=https://scratchaddons.com/zh-cn/docs/develop/addon-types/userscripts/>中文（中国）</a><a class=dropdown-item href=https://scratchaddons.com/zh-tw/docs/develop/addon-types/userscripts/>中文（台灣）</a><a class=dropdown-item href=https://scratchaddons.com/hu/docs/develop/addon-types/userscripts/>magyar</a>
+</div></li><li class=nav-item><a class=nav-link href=/tr/credits>Teşekkürler</a></li><li class=nav-item><a class=nav-link href=/tr/feedback>Geri Bildirim Gönder</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label="GitHub'daki Depo" rel=noopener>Depo <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/tr/#install>İndir</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Belge gezinme çubuğunu göster/gizle'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Belgelerde gezinme</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>İçindekiler</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='İçindekiler çubuğunu göster/gizle'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/tr/docs/ class="docs-nav-page pl-0 pr-2 active">Giriş</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-trdocs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-trdocsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/tr/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Başlarken</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-trdocsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-trdocsgetting-startedquick-start href=/tr/docs/getting-started/quick-start/>Hızlı Başlangıç</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-trdocsgetting-startedinstalling href=/tr/docs/getting-started/installing/>Yükleme</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-trdocsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/tr/docs/develop/ class="docs-nav-page pl-0 pr-2 active">Geliştirme</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-trdocsdevelop><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-trdocsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/tr/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Başlarken</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-trdocsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-trdocsdevelopgetting-startedaddon-basics href=/tr/docs/develop/getting-started/addon-basics/>Eklenti Temelleri</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-trdocsdevelopgetting-startedcreating-an-addon href=/tr/docs/develop/getting-started/creating-an-addon/>Bir Eklenti Oluşturma</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-trdocsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/tr/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 active">Eklenti Türleri</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-trdocsdevelopaddon-types>
+<li>
+<a class="docs-nav-page active" id=docs-nav-page-trdocsdevelopaddon-typesuserscripts href=/tr/docs/develop/addon-types/userscripts/>Kullanıcı Komut Dosyaları</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-trdocsdevelopaddon-typesuserstyles href=/tr/docs/develop/addon-types/userstyles/>Kullanıcı Stilleri</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-trdocsdevelopadding-an-icon-to-a-setting-name href=/tr/docs/develop/adding-an-icon-to-a-setting-name/>Bir Ayar için Simge Ekleme</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-trdocslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/tr/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Yerelleştirme</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-trdocslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-trdocslocalizationlocalizing-addons href=/tr/docs/localization/localizing-addons/>Eklentileri Yerelleştirme</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-trdocslocalizationjoining-the-localization-team href=/tr/docs/localization/joining-the-localization-team/>Yerelleştirme Ekibine Katılma</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-trdocsfaq href=/tr/docs/faq/>Sık Sorulan Sorular</a>
+</li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1>Kullanıcı Komut Dosyaları</h1><h2 id=o-da-neyin-nesi>O da neyin nesi? <a href=#o-da-neyin-nesi class=anchor aria-label=Anchor></a></h2><p>Kullanıcı komut dosyaları, Scratch sayfaları boyunca kod çalıştırmanıza izin verir - düğme ekleme, Scratch düzenleyiciyi geliştirme veya hayal edebileceğiniz herhangi bir şey gibi şeyler yapabilirsiniz.</p><h2 id=nasıl-bir-kullanıcı-komut-dosyası-eklerim>Nasıl bir kullanıcı komut dosyası eklerim? <a href=#nas%c4%b1l-bir-kullan%c4%b1c%c4%b1-komut-dosyas%c4%b1-eklerim class=anchor aria-label=Anchor></a></h2><p><strong>Eklentinizde herhangi bir değişiklik yaptıktan sonra Scratch Eklentilerini <code>chrome://extensions</code> dan yenilemeyi unutmayın.</strong>
+Eklentinizin (addon.json) manifest dosyasına gidin ve <code>userscripts"</code> adında bir özellik ekleyin.
+Bu özellik bir dizi olmalıdır.
+Dizinin her bir öğesi şu özelliklere sahip olmalıdır: <code>"url"</code> ve <code>"eşleşir"</code>.
+<code>"url"</code>, bir JavaScript dosyasına göreli bir bağlantı olmalıdır.
+<code>"matches"</code>, kullanıcı komut dosyalarını çalıştırmak istediğiniz bağlantırları bir dizisi olmalıdır. Yıldız işaretlerini kullanabilirsiniz.
+Örnek manifest:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Scratch Mesajlaşma&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Scratch mesajlarınızı kolayca okumanızı ve yanıtlamanızı sağlar.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;userscripts&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;userscript.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/*&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;second_userscript.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/projects/*&#34;</span><span class=p>,</span> <span class=s2>&#34;https://scratch.mit.edu/users/*&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;tags&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;community&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;enabled_by_default&#34;</span><span class=p>:</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=javascript-dosyası-nasıl-görünüyor>JavaScript dosyası nasıl görünüyor? <a href=#javascript-dosyas%c4%b1-nas%c4%b1l-g%c3%b6r%c3%bcn%c3%bcyor class=anchor aria-label=Anchor></a></h2><p>Kullanıcı komut dosyaları, JS dosyalarının çalışması için belirli bir yapı gerekir.
+Kullanıcı komut dosyaları için, tüm kodunuzu şuna benzeyen bir işlevin içine sarmanız <strong>zorunludur</strong>:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Merhaba, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>Daha temiz bir koda sahip olmak için kendi fonksiyonlarınızı yazmak istiyorsanız, bunları ana fonksiyonların içine dahil etmelisiniz:
+<strong>Bu çalışacak:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Bu çalışıyor!
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>sayMerhaba</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>sayMerhaba</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Merhaba, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p><strong>Bu işe YARAMAZ:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Bu işe yaramaz!
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>sayMerhaba</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>sayMerhaba</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Merhaba, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Hata: eklenti tanımlı değil!
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></div><h2 id=addon-apileridocsdevelopingaddon-apis-reference><a href=/docs/developing/addon-apis-reference><code>addon.*</code> API&rsquo;leri</a> <a href=#addon-apileridocsdevelopingaddon-apis-reference class=anchor aria-label=Anchor></a></h2><p>Bazı <code>addon.*</code> API&rsquo;lerine kullanıcı komut dosyalarına erişebilirsiniz. Daha fazla bilgi için belgelere bakın.</p><h2 id=kullanıcı-komut-dosyalarının-teknik-yönleri>Kullanıcı Komut Dosyalarının teknik yönleri <a href=#kullan%c4%b1c%c4%b1-komut-dosyalar%c4%b1n%c4%b1n-teknik-y%c3%b6nleri class=anchor aria-label=Anchor></a></h2><p>Kullanıcı komut dosyaları, Scratch sayfası tamamen yüklendikten sonra çalışır - başka bir deyişle, <code>defer</code> modunda çalışırlar.
+Teknik olarak konuşursak, her kullanıcı komut dosyası, bir işlevi dışa aktaran bir JavaScript modülüdür. JavaScript modülleri her zaman &ldquo;katı mod"da çalışır.
+Bu, aynı eklentinin kullanıcı komut dosyalarının değişkenleri ve işlevleri PAYLAŞMADIĞI anlamına gelir! Bunu yapmak istiyorsanız, <code>global</code> nesnesini kullanmalısınız (daha fazla bilgi aşağıda).
+Scratch Eklentileri daha sonra dışa aktarılan bu işlev modüllerini çağırır ve özel sarmalayıcıların yanı sıra <code>addon.*</code> API&rsquo;lerine erişmesini sağlar:</p><ul>
+<li><code>addon</code>: Kullanıcı komut dosyalarına <a href=/docs/developing/addon-apis-reference><code>addon.*</code> API&rsquo;lerine</a> erişim sağlar.</li><li><code>global</code>: bu, aynı eklentinin tüm kullanıcı komut dosyaları arasında paylaşılan bir nesnedir. <strong>Örnek kullanım:</strong></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// userscript-1.js
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>global</span><span class=p>.</span><span class=nx>sayMerhaba</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Merhaba, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// userscript-2.js
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>global</span><span class=p>.</span><span class=nx>sayMerhaba</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Bu, eklenti bildiriminde olduğu sürece çalışır, userscript-1.js, userscripts dizisindeki userscript-2.js&#39;den öncedir.
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></div><ul>
+<li><code>console</code>: Bu, gördüğünüz günlüğü hangi eklentinin tetiklediğini kolayca görmenizi sağlayan bir sarmalayıcıdır.</li></ul><h2 id=kullanıcı-komut-dosyalarında-hata-ayıklama>Kullanıcı Komut Dosyalarında hata ayıklama <a href=#kullan%c4%b1c%c4%b1-komut-dosyalar%c4%b1nda-hata-ay%c4%b1klama class=anchor aria-label=Anchor></a></h2><p><strong>Eklentinizde herhangi bir değişiklik yaptıktan sonra Scratch Eklentilerini <code>chrome://extensions</code>&lsquo;dan yenilemeyi unutmayın.</strong>
+Kullanıcı komut dosyalarında hata ayıklamak için öncelikle eklentinizin etkin olduğundan emin olun.
+Ardından, kullanıcı komut dosyanızın çalışması gerektiğini belirttiğiniz bir URL&rsquo;ye gidin.
+Ctrl+Shift+J tuşlarına basarak konsolu açın.
+Sizinki de dahil olmak üzere eklentilere göre konsol günlüklerini görmelisiniz. Bir devtools uzmanıysanız, kodunuzda kesme noktaları ayarlamakta herhangi bir sorun yaşamayacaksınız.
+İpucu: Dosyanızı her seferinde değiştirmeden <code>addon.*</code> API&rsquo;sini test etmek istiyorsanız, eklentinizi <code>window.addon = addon;</code> yapın (ana işlevin içinde) ve eklentinizin konsoldan <code>addon</code> nesnesi. Bu depoya katkıda bulunmadan önce bu satırı kaldırdığınızdan emin olun! Kullanıcı komut dosyaları global nesneyi kirletmemelidir.</p></article><hr>
+<p class=text-muted>
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/develop/addon-types/userscripts.md>Bu sayfayı geliştirin</a>
+</p><div id=comments class=mt-4><h3>Yorumlar</h3><p class=mb-3><a href=/docs/policies/code-of-conduct>Davranış kurallarına</a> uyduğunuzdan emin olun. Bu yorum bölümünü <a class=link-to-search>GitHub Tartışmalarında</a> görebilir, yorumunuzu düzenleyebilir ve kaldırabilirsiniz.</p><div class=giscus></div><script async defer src=/assets/js/comments.js data-giscus-lang=tr></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#o-da-neyin-nesi>O da neyin nesi?</a></li><li><a href=#nasıl-bir-kullanıcı-komut-dosyası-eklerim>Nasıl bir kullanıcı komut dosyası eklerim?</a></li><li><a href=#javascript-dosyası-nasıl-görünüyor>JavaScript dosyası nasıl görünüyor?</a></li><li><a href=#addon-apileridocsdevelopingaddon-apis-reference><a href=/docs/developing/addon-apis-reference><code>addon.*</code> API&rsquo;leri</a></a></li><li><a href=#kullanıcı-komut-dosyalarının-teknik-yönleri>Kullanıcı Komut Dosyalarının teknik yönleri</a></li><li><a href=#kullanıcı-komut-dosyalarında-hata-ayıklama>Kullanıcı Komut Dosyalarında hata ayıklama</a></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Koyu temayı açmak için tıklayın.' aria-label='Koyu tema ayarı' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/tr/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Eklentileri' class=mr-2></img>
+<span>Scratch Eklentileri</span>
+</a>
+<p class="mb-3 small">Şu anki sürüm 1.27.3 ve 139 eklenti içeriyor.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Sayfalar</h3><a href=/tr/docs/faq>SSS</a>
+<a href=/tr/feedback>Geri Bildirim Gönder</a>
+<a href=/tr/credits>Teşekkürler</a>
+<a href=/tr/changelog>Değişiklik Günlüğü</a>
+<a href=/tr/addons>Eklentiler</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Tartışma</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Tartışma Forumu</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Sorunlar</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Topluluk Discord'u</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Geliştirici Discord'u</a>
+</section><section>
+<h3>Kaynaklar</h3><a href=https://github.com/ScratchAddons rel=noopener>Kuruluş</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Depo</a>
+<a href=/tr/docs rel=noopener>Belgeler</a>
+<a href=/docs/policies/privacy/website rel=noopener>Gizlilik Politikası</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Scratch Eklentileri katkıda bulunanlar</p><p>Scratch Eklentileri, Scratch, Scratch Ekibi, Scratch Vakfı veya herhangi bir kuruluşa bağlı değildir veya kısaca herhangi bir şekilde resmi olarak bağlantısı yoktur.</p><p class=mb-0>Scratch Eklentileri, GNU General Public License v3.0 altında lisanslanmıştır.</p></section></div></footer></body></html>

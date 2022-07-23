@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scratch Addons Docs</title><link>https://scratchaddons.com/docs/reference/addon-api/</link><description>Recent content on Scratch Addons Docs</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2022 Scratch Addons contributors</copyright><atom:link href="https://scratchaddons.com/docs/reference/addon-api/index.xml" rel="self" type="application/rss+xml"/><item><title>addon.self</title><link>https://scratchaddons.com/docs/reference/addon-api/addon.self/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/docs/reference/addon-api/addon.self/</guid><description>Available in userscripts ✔️ Available in popup scripts ✔️ Required manifest permissions None Description Allows addons to get information about themselves or the browser.
+Examples Using addon.self.dir With addon.self.dir, we can get the URL to an image inside the addon&amp;rsquo;s directory.
+const img = document.createElement(&amp;#34;img&amp;#34;); img.src = addon.self.dir + &amp;#34;/image.svg&amp;#34;; // Will be something like `chrome-extension://aeepldbjfoihffgcaejikpoeppffnlbd/addons/addon-id/image.svg` document.body.appendChild(img); Using addon.self.disabled and events (dynamicDisable) We use the disabled and reenabled events to hide the image when the addon is disabled, without requiring the user to refresh the page.</description></item><item><title>addon.settings</title><link>https://scratchaddons.com/docs/reference/addon-api/addon.settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/docs/reference/addon-api/addon.settings/</guid><description>Available in userscripts ✔️ Available in popup scripts ✔️ Required manifest permissions None Description Allows addons to change their behavior according to user-specified addon settings.
+Examples Reacting to settings change addon.settings.addEventListener(&amp;#34;change&amp;#34;, function() { console.log(&amp;#34;Settings changed!&amp;#34;); if(addon.settings.get(&amp;#34;removeIdeasBtn&amp;#34;) === true &amp;amp;&amp;amp; tipsButtonShown === false) showTipsButton(); else if(addon.settings.get(&amp;#34;removeIdeasBtn&amp;#34;) === false &amp;amp;&amp;amp; tipsButtonShown === true) hideTipsButton(); }); Methods addon.settings.get Parameter
+Type
+Required
+Description
+settingId
+String
+Yes
+Setting ID to retrieve.
+Return value
+String | Number | Boolean
+Throws if
+The given setting ID wasn't declared in the addon manifest.</description></item><item><title>addon.auth</title><link>https://scratchaddons.com/docs/reference/addon-api/addon.auth/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/docs/reference/addon-api/addon.auth/</guid><description>Available in userscripts ✔️ Available in popup scripts ✔️ Required manifest permissions None Description Allows addons to get information about the current Scratch account session.
+Examples Reacting to auth info change addon.auth.addEventListener(&amp;#34;change&amp;#34;, async function() { console.log(await addon.auth.fetchIsLoggedIn()); }); Properties addon.auth.scratchLang Type
+String
+Nullable
+No Language of the Scratch website.
+This language option can be changed by the user in the footer of Scratch&amp;rsquo;s website.
+This property changing does not fire a change event.</description></item><item><title>addon.account</title><link>https://scratchaddons.com/docs/reference/addon-api/addon.account/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/docs/reference/addon-api/addon.account/</guid><description>Available in userscripts ✔️ Available in popup scripts ❌ Required manifest permissions None Description Allows addons to execute actions in the currently logged in Scratch user.
+Methods getMsgCount Return value
+Promise&amp;lt;Number | null>
+Gets the unread message count of the currently logged in user.
+The promise will resolve to null if addon.auth.isLoggedIn is false.</description></item><item><title>addon.popup</title><link>https://scratchaddons.com/docs/reference/addon-api/addon.popup/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/docs/reference/addon-api/addon.popup/</guid><description>Available in userscripts ❌ Available in popup scripts ✔️ Required manifest permissions None Description Allows addon popup scripts to get information about the popup context.
+Properties addon.popup.isFullscreen Type
+Boolean
+Nullable
+No Whether the current popup is displayed in fullscreen.
+addon.popup.isLightMode Type
+Boolean
+Nullable
+No Whether the user has enabled light mode on Scratch Addons settings.
+Methods addon.popup.getSelectedTabUrl Return value
+Promise&amp;lt;String | null>
+Gets the URL of the Scratch tab that is selected.</description></item></channel></rss>

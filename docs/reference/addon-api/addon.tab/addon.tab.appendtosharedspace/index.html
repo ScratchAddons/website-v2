@@ -1,0 +1,306 @@
+<!doctype html><html lang=en>
+<head>
+<title>addon.tab.appendToSharedSpace - Scratch Addons Docs</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="Allows multiple addons to add their own UI elements to the same area inside Scratch.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/docs/reference/addon-api/addon.tab/addon.tab.appendtosharedspace/">
+<meta property="og:title" content="addon.tab.appendToSharedSpace">
+<meta property="og:description" content="Allows multiple addons to add their own UI elements to the same area inside Scratch.">
+<meta property="og:site_name" content="Scratch Addons Docs">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/docs/reference/addon-api/addon.tab/addon.tab.appendtosharedspace/">
+<meta name=twitter:title content="addon.tab.appendToSharedSpace - Scratch Addons Docs">
+<meta name=twitter:description content="Allows multiple addons to add their own UI elements to the same area inside Scratch.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons logo'></img>
+<span>Scratch Addons Docs</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Toggle navigation'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class=nav-item><a class=nav-link href=/credits>Credits</a></li><li class=nav-item><a class=nav-link href=/feedback>Send Feedback</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label='Repository on GitHub' rel=noopener>Repository <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/#install>Install</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Toggle docs navigation sidebar'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Docs navigation</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>Table of contents</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='Toggle table of contents sidebar'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-docs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsgetting-startedquick-start href=/docs/getting-started/quick-start/>Quick Start</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsgetting-startedinstalling href=/docs/getting-started/installing/>Installing</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/ class="docs-nav-page pl-0 pr-2 collapsed">Developing</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelop><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopgetting-startedaddon-basics href=/docs/develop/getting-started/addon-basics/>Addon Basics</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopgetting-startedcreating-an-addon href=/docs/develop/getting-started/creating-an-addon/>Creating an Addon</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 collapsed">Addon Types</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopaddon-types>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopaddon-typesuserscripts href=/docs/develop/addon-types/userscripts/>Userscripts</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopaddon-typesuserstyles href=/docs/develop/addon-types/userstyles/>Userstyles</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopadding-an-icon-to-a-setting-name href=/docs/develop/adding-an-icon-to-a-setting-name/>Adding an Icon to a Setting Name</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationjoining-the-localization-team href=/docs/localization/joining-the-localization-team/>Joining the Localization Team</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationlocalizing-addons href=/docs/localization/localizing-addons/>Localizing Addons</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreference role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/ class="docs-nav-page pl-0 pr-2 active">Reference</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreference><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreferenceaddon-api role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/addon-api/ class="docs-nav-page pl-0 pr-2 active">Addon API</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreferenceaddon-api>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonself href=/docs/reference/addon-api/addon.self/>addon.self</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonsettings href=/docs/reference/addon-api/addon.settings/>addon.settings</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonauth href=/docs/reference/addon-api/addon.auth/>addon.auth</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonaccount href=/docs/reference/addon-api/addon.account/>addon.account</a>
+</li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreferenceaddon-apiaddontab role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/addon-api/addon.tab/ class="docs-nav-page pl-0 pr-2 active">addon.tab</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreferenceaddon-apiaddontab>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabtraps href=/docs/reference/addon-api/addon.tab/addon.tab.traps/>addon.tab.traps</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabredux href=/docs/reference/addon-api/addon.tab/addon.tab.redux/>addon.tab.redux</a>
+</li><li>
+<a class="docs-nav-page active" id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabappendtosharedspace href=/docs/reference/addon-api/addon.tab/addon.tab.appendtosharedspace/>addon.tab.appendToSharedSpace</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonpopup href=/docs/reference/addon-api/addon.popup/>addon.popup</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-manifest href=/docs/reference/addon-manifest/>Addon Manifest</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferencedesign href=/docs/reference/design/>Design</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsfaq href=/docs/faq/>Frequently Asked Questions</a>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docspolicies role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/policies/ class="docs-nav-page pl-0 pr-2 collapsed">Policies</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docspolicies><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docspoliciesprivacy role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/policies/privacy/ class="docs-nav-page pl-0 pr-2 collapsed">Privacy Policy</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docspoliciesprivacy>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciesprivacyextension href=/docs/policies/privacy/extension/>Extension</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciesprivacywebsite href=/docs/policies/privacy/website/>Website</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciessecurity href=/docs/policies/security/>Security Policy</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciescode-of-conduct href=/docs/policies/code-of-conduct/>Code of Conduct</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspolicieschrome-web-store-privacy-information href=/docs/policies/chrome-web-store-privacy-information/>Chrome Web Store Privacy Information</a>
+</li></ul></li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1><code>addon.tab.appendToSharedSpace</code></h1><h2 id=description>Description <a href=#description class=anchor aria-label=Anchor></a></h2><p>Allows multiple addons to add their own UI elements to the same area inside Scratch.<br>
+The important part of this API is the order number, which prevents the appending new UI elements from being a racy operation and the order of the buttons varying impredictively, specially in the cases where the addons support dynamicEnable.</p><h2 id=method>Method <a href=#method class=anchor aria-label=Anchor></a></h2><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>options</td><td><code>Object</code></td><td>Yes</td><td>
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>space</td><td><code>String</code></td><td>Yes</td><td>The ID of the space where the element should be appended.</td></tr><tr>
+<td>element</td><td><code>HTMLElement</code></td><td>Yes</td><td>The element, owned by the addon calling the method, that should be appended.</td></tr><tr>
+<td>order</td><td><code>Number</code></td><td>Yes</td><td>The order number for the element. Lowest gets appended first in the parent element.</td></tr><tr>
+<td>scope</td><td><code>HTMLElement</code></td><td>Only for some spaces</td><td>The specific element to append the element in, for spaces that appear multiple times per page.</td></tr></table></td></tr></table><table>
+<tr>
+<td>Return value</td><td><code>Boolean</code></td></tr><tr>
+<td>Description</td><td>Whether the element was appended.</td></tr></table><h2 id=scratch-editor-spaces>Scratch editor spaces <a href=#scratch-editor-spaces class=anchor aria-label=Anchor></a></h2><h3 id=stageheader><code>stageHeader</code> <a href=#stageheader class=anchor aria-label=Anchor></a></h3><p>Right side of the stage header in editor, embed and projectplayer modes.<br>
+The standard CSS margin for the buttons added in this space is <code>margin-right: 0.2rem</code>.</p><table>
+<tr>
+<td>Space parent element</td><td><code>div[class^="stage-header_stage-size-row"]</code></td></tr><tr>
+<td>Space starting bound</td><td>None</td></tr><tr>
+<td>Space ending bound</td><td>Small stage button or fullscreen icon</td></tr><tr>
+<td><code>scope</code> option used</td><td>❌</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th><th>Visibility in small stage mode</th></tr><tr>
+<td><code>debugger</code></td><td>Debugger button</td><td>0</td><td>Hidden</td></tr><tr>
+<td><code>gamepad</code></td><td>Gamepad button</td><td>1</td><td>Hidden</td></tr></table><h3 id=fullscreenstageheader><code>fullscreenStageHeader</code> <a href=#fullscreenstageheader class=anchor aria-label=Anchor></a></h3><p>Right side of the stage header in fullscreen mode.<br>
+The standard CSS margin for the buttons added in this space is <code>margin-right: 0.2rem</code>.</p><table>
+<tr>
+<td>Space parent element</td><td><code>div[class^="stage-header_stage-menu-wrapper"]</code></td></tr><tr>
+<td>Space starting bound</td><td>None</td></tr><tr>
+<td>Space ending bound</td><td>Fullscreen icon</td></tr><tr>
+<td><code>scope</code> option used</td><td>❌</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th></tr><tr>
+<td><code>gamepad</code></td><td>Gamepad button</td><td>0</td></tr></table><h3 id=aftergreenflag><code>afterGreenFlag</code> <a href=#aftergreenflag class=anchor aria-label=Anchor></a></h3><p>Buttons that go between the green flag and the stop button.</p><table>
+<tr>
+<td>Space parent element</td><td><code>div[class^="controls_controls-container"]</code></td></tr><tr>
+<td>Space starting bound</td><td>Green flag button</td></tr><tr>
+<td>Space ending bound</td><td>Stop button</td></tr><tr>
+<td><code>scope</code> option used</td><td>❌</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th><th>Visibility in small stage mode</th></tr><tr>
+<td><code>pause</code></td><td>Pause button</td><td>0</td><td>Visible</td></tr></table><h3 id=afterstopbutton><code>afterStopButton</code> <a href=#afterstopbutton class=anchor aria-label=Anchor></a></h3><p>Elements that go after the project control buttons.<br>
+The standard CSS for the buttons added in this space is <code>padding: 0.25rem</code>.</p><table>
+<tr>
+<td>Space parent element</td><td><code>div[class^="controls_controls-container"]</code></td></tr><tr>
+<td>Space starting bound</td><td>Stop button</td></tr><tr>
+<td>Space ending bound</td><td>None</td></tr><tr>
+<td><code>scope</code> option used</td><td>❌</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th><th>Visibility in small stage mode</th></tr><tr>
+<td><code>mute-project</code></td><td>Muted project indicator</td><td>0</td><td>Visible</td></tr><tr>
+<td><code>mouse-pos</code></td><td>Mouse coordinates</td><td>1</td><td>Hidden</td></tr><tr>
+<td><code>clone-count</code></td><td>Clone count</td><td>2</td><td>Hidden</td></tr></table><h3 id=aftersoundtab><code>afterSoundTab</code> <a href=#aftersoundtab class=anchor aria-label=Anchor></a></h3><p>Added editor tabs that go after the sound tab.<br>
+The order number should match the used <code>activeTabIndex</code> by the new tab.</p><table>
+<tr>
+<td>Space parent element</td><td><code>div[class^="react-tabs_react-tabs__tab-list"]</code></td></tr><tr>
+<td>Space starting bound</td><td>Sound tab</td></tr><tr>
+<td>Space ending bound</td><td>Search bar added by <code>editor-devtools</code></td></tr><tr>
+<td><code>scope</code> option used</td><td>❌</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th></tr><tr>
+<td><code>variable-manager</code></td><td>Variables tab</td><td>3</td></tr></table><h2 id=scratch-website-spaces>Scratch website spaces <a href=#scratch-website-spaces class=anchor aria-label=Anchor></a></h2><h3 id=aftercopylinkbutton><code>afterCopyLinkButton</code> <a href=#aftercopylinkbutton class=anchor aria-label=Anchor></a></h3><p>Buttons that go after the &ldquo;copy link&rdquo; button in project pages.</p><table>
+<tr>
+<td>Space parent element</td><td><code>.flex-row.action-buttons</code></td></tr><tr>
+<td>Space starting bound</td><td>Copy link button</td></tr><tr>
+<td>Space ending bound</td><td>None</td></tr><tr>
+<td><code>scope</code> option used</td><td>❌</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th></tr><tr>
+<td><code>remix-tree-button</code></td><td>Remix tree button</td><td>0</td></tr></table><h3 id=beforeremixbutton><code>beforeRemixButton</code> <a href=#beforeremixbutton class=anchor aria-label=Anchor></a></h3><p>Elements that go to the left of the &ldquo;remix&rdquo; or &ldquo;see inside&rdquo; buttons in project pages.</p><table>
+<tr>
+<td>Space parent element</td><td><code>div.project-buttons</code></td></tr><tr>
+<td>Space starting bound</td><td>None</td></tr><tr>
+<td>Space ending bound</td><td>Remix button or see inside button</td></tr><tr>
+<td><code>scope</code> option used</td><td>❌</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th></tr><tr>
+<td><code>project-info</code></td><td>Sprite and script count</td><td>0</td></tr><tr>
+<td><code>turbowarp-player</code></td><td>TurboWarp button</td><td>1</td></tr></table><h2 id=scratch-forums-spaces>Scratch forums spaces <a href=#scratch-forums-spaces class=anchor aria-label=Anchor></a></h2><h3 id=forumsbeforepostreport><code>forumsBeforePostReport</code> <a href=#forumsbeforepostreport class=anchor aria-label=Anchor></a></h3><p>Links placed before the &ldquo;report&rdquo; button in a specific post.<br>
+If the &ldquo;report&rdquo; button does not exist, a visible placeholder dot will be added to the page automatically to act as a separator between the <code>forumsBeforePostReport</code> and <code>forumsAfterPostReport</code> spaces.<br>
+Addition of the <code>|</code> separator is handled by the space.</p><table>
+<tr>
+<td>Space parent element</td><td><code>.postfootright > ul</code></td></tr><tr>
+<td>Space starting bound</td><td>None</td></tr><tr>
+<td>Space ending bound</td><td>Report button</td></tr><tr>
+<td><code>scope</code> option used</td><td>✔️ (usually a <code>div.blockpost</code>)</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th></tr><tr>
+<td><code>my-ocular</code></td><td>Reactions</td><td>0</td></tr><tr>
+<td><code>my-ocular</code></td><td>Reaction menu</td><td>1</td></tr><tr>
+<td><code>my-ocular</code></td><td>View in Ocular button</td><td>2</td></tr></table><h3 id=forumsafterpostreport><code>forumsAfterPostReport</code> <a href=#forumsafterpostreport class=anchor aria-label=Anchor></a></h3><p>Links placed after the &ldquo;report&rdquo; button in a specific post.<br>
+If the &ldquo;report&rdquo; button does not exist, a visible placeholder dot will be added to the page automatically to act as a separator between the <code>forumsBeforePostReport</code> and <code>forumsAfterPostReport</code> spaces.<br>
+Addition of the <code>|</code> separator is handled by the space.</p><table>
+<tr>
+<td>Space parent element</td><td><code>.postfootright > ul</code></td></tr><tr>
+<td>Space starting bound</td><td>Report button</td></tr><tr>
+<td>Space ending bound</td><td>None</td></tr><tr>
+<td><code>scope</code> option used</td><td>✔️ (usually a <code>div.blockpost</code>)</td></tr></table><table>
+<tr>
+<th>Addon ID</th><th>Element</th><th>Order number</th></tr><tr>
+<td><code>show-bbcode</code></td><td>Show BBCode button</td><td>0</td></tr></table></article><hr>
+<p class=text-muted>
+Last updated at 27 July 2021 by WorldLanguages on commit <a href=https://github.com/ScratchAddons/website-v2/commit/2bfaf63bc9cb6f0f42b2d5347611582384440665><code>2bfaf63</code></a>.
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/reference/addon-api/addon.tab/addon.tab.appendToSharedSpace.md>Improve this page.</a>
+</p><div id=comments class=mt-4><h3>Comments</h3><p class=mb-3>Make sure to follow <a href=/docs/policies/code-of-conduct>the code of conduct</a>. You can see this comment section on <a class=link-to-search>GitHub Discussions</a>, as well as editing and removing your comment.</p><div class=giscus></div><script async defer src=/assets/js/comments.js data-giscus-lang=en></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#description>Description</a></li><li><a href=#method>Method</a></li><li><a href=#scratch-editor-spaces>Scratch editor spaces</a>
+<ul>
+<li><a href=#stageheader><code>stageHeader</code></a></li><li><a href=#fullscreenstageheader><code>fullscreenStageHeader</code></a></li><li><a href=#aftergreenflag><code>afterGreenFlag</code></a></li><li><a href=#afterstopbutton><code>afterStopButton</code></a></li><li><a href=#aftersoundtab><code>afterSoundTab</code></a></li></ul></li><li><a href=#scratch-website-spaces>Scratch website spaces</a>
+<ul>
+<li><a href=#aftercopylinkbutton><code>afterCopyLinkButton</code></a></li><li><a href=#beforeremixbutton><code>beforeRemixButton</code></a></li></ul></li><li><a href=#scratch-forums-spaces>Scratch forums spaces</a>
+<ul>
+<li><a href=#forumsbeforepostreport><code>forumsBeforePostReport</code></a></li><li><a href=#forumsafterpostreport><code>forumsAfterPostReport</code></a></li></ul></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Click to toggle the dark theme.' aria-label='Dark theme switch' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons' class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<p class="mb-3 small">Currently 1.27.3 with 139 addons.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Pages</h3><a href=/docs/faq>FAQ</a>
+<a href=/feedback>Send Feedback</a>
+<a href=/credits>Credits</a>
+<a href=/changelog>Changelog</a>
+<a href=/addons>Addons</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Discuss</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Discussion Forum</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Issues</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Community Discord</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Development Discord</a>
+</section><section>
+<h3>Resources</h3><a href=https://github.com/ScratchAddons rel=noopener>Organization</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repository</a>
+<a href=/docs rel=noopener>Documentation</a>
+<a href=/docs/policies/privacy/website rel=noopener>Privacy Policy</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Scratch Addons contributors</p><p>Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.</p><p class=mb-0>Scratch Addons is licensed under the terms of GNU General Public License v3.0.</p></section></div></footer></body></html>

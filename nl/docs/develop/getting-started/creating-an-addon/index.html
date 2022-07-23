@@ -1,0 +1,181 @@
+<!doctype html><html lang=nl>
+<head>
+<title>Een Addon Maken - Scratch Addons-Documentatie</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content>
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/nl/docs/develop/getting-started/creating-an-addon/">
+<meta property="og:title" content="Een Addon Maken">
+<meta property="og:description" content>
+<meta property="og:site_name" content="Scratch Addons-Documentatie">
+<meta property="og:locale" content="nl">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons-logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/nl/docs/develop/getting-started/creating-an-addon/">
+<meta name=twitter:title content="Een Addon Maken - Scratch Addons-Documentatie">
+<meta name=twitter:description content>
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons-logo">
+<link rel=alternate hreflang=en href=https://scratchaddons.com/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=tr href=https://scratchaddons.com/tr/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ca href=https://scratchaddons.com/ca/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=it href=https://scratchaddons.com/it/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ar href=https://scratchaddons.com/ar/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=bg href=https://scratchaddons.com/bg/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=cs href=https://scratchaddons.com/cs/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=es href=https://scratchaddons.com/es/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=fa href=https://scratchaddons.com/fa/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=fr href=https://scratchaddons.com/fr/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=hu href=https://scratchaddons.com/hu/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=id href=https://scratchaddons.com/id/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ja href=https://scratchaddons.com/ja/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ko href=https://scratchaddons.com/ko/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=nb href=https://scratchaddons.com/nb/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=pl href=https://scratchaddons.com/pl/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ro href=https://scratchaddons.com/ro/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=sv href=https://scratchaddons.com/sv/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=th href=https://scratchaddons.com/th/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=vi href=https://scratchaddons.com/vi/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=zh-cn href=https://scratchaddons.com/zh-cn/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=zh-tw href=https://scratchaddons.com/zh-tw/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=pt-br href=https://scratchaddons.com/pt-br/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=de href=https://scratchaddons.com/de/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=sl href=https://scratchaddons.com/sl/docs/develop/getting-started/creating-an-addon/><link rel=alternate hreflang=ru href=https://scratchaddons.com/ru/docs/develop/getting-started/creating-an-addon/>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/nl/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons-logo'></img>
+<span>Scratch Addons-Documentatie</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Navigatie In- of Uitschakelen'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class="nav-item dropdown hide-from-spiders">
+<a class="nav-link dropdown-toggle" href=# id=navbar-languages role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>Nederlands</a>
+<div class=dropdown-menu aria-labelledby=navbar-languages>
+<a class=dropdown-item href=https://scratchaddons.com/docs/develop/getting-started/creating-an-addon/>English</a><a class=dropdown-item href=https://scratchaddons.com/tr/docs/develop/getting-started/creating-an-addon/>Türkçe</a><a class=dropdown-item href=https://scratchaddons.com/ca/docs/develop/getting-started/creating-an-addon/>català</a><a class=dropdown-item href=https://scratchaddons.com/it/docs/develop/getting-started/creating-an-addon/>italiano</a><a class=dropdown-item href=https://scratchaddons.com/ar/docs/develop/getting-started/creating-an-addon/>العربية</a><a class=dropdown-item href=https://scratchaddons.com/bg/docs/develop/getting-started/creating-an-addon/>български</a><a class=dropdown-item href=https://scratchaddons.com/cs/docs/develop/getting-started/creating-an-addon/>čeština</a><a class=dropdown-item href=https://scratchaddons.com/es/docs/develop/getting-started/creating-an-addon/>español</a><a class=dropdown-item href=https://scratchaddons.com/fa/docs/develop/getting-started/creating-an-addon/>فارسی</a><a class=dropdown-item href=https://scratchaddons.com/fr/docs/develop/getting-started/creating-an-addon/>français</a><a class=dropdown-item href=https://scratchaddons.com/hu/docs/develop/getting-started/creating-an-addon/>magyar</a><a class=dropdown-item href=https://scratchaddons.com/id/docs/develop/getting-started/creating-an-addon/>Indonesia</a><a class=dropdown-item href=https://scratchaddons.com/ja/docs/develop/getting-started/creating-an-addon/>日本語</a><a class=dropdown-item href=https://scratchaddons.com/ko/docs/develop/getting-started/creating-an-addon/>한국어</a><a class=dropdown-item href=https://scratchaddons.com/nb/docs/develop/getting-started/creating-an-addon/>norsk bokmål</a><a class=dropdown-item href=https://scratchaddons.com/pl/docs/develop/getting-started/creating-an-addon/>polski</a><a class=dropdown-item href=https://scratchaddons.com/ro/docs/develop/getting-started/creating-an-addon/>română</a><a class=dropdown-item href=https://scratchaddons.com/sv/docs/develop/getting-started/creating-an-addon/>svenska</a><a class=dropdown-item href=https://scratchaddons.com/th/docs/develop/getting-started/creating-an-addon/>ไทย</a><a class=dropdown-item href=https://scratchaddons.com/vi/docs/develop/getting-started/creating-an-addon/>Tiếng Việt</a><a class=dropdown-item href=https://scratchaddons.com/zh-cn/docs/develop/getting-started/creating-an-addon/>中文（中国）</a><a class=dropdown-item href=https://scratchaddons.com/zh-tw/docs/develop/getting-started/creating-an-addon/>中文（台灣）</a><a class=dropdown-item href=https://scratchaddons.com/pt-br/docs/develop/getting-started/creating-an-addon/>português (Brasil)</a><a class=dropdown-item href=https://scratchaddons.com/de/docs/develop/getting-started/creating-an-addon/>Deutsch</a><a class=dropdown-item href=https://scratchaddons.com/sl/docs/develop/getting-started/creating-an-addon/>slovenščina</a><a class=dropdown-item href=https://scratchaddons.com/ru/docs/develop/getting-started/creating-an-addon/>русский</a>
+</div></li><li class=nav-item><a class=nav-link href=/nl/credits>Credits</a></li><li class=nav-item><a class=nav-link href=/nl/feedback>Feedback Geven</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label='Archief op GitHub' rel=noopener>Archief <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/nl/#install>Installeren</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Documentatie-navigatievenster wisselen'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Documentatienavigatie</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>Inhoudsopgave</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='Inhoudsopgavevenster wisselen'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/nl/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-nldocs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-nldocsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/nl/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Aan de slag</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-nldocsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-nldocsgetting-startedquick-start href=/nl/docs/getting-started/quick-start/>Snelle Start</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-nldocsgetting-startedinstalling href=/nl/docs/getting-started/installing/>Installeren</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-nldocslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/nl/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Lokalisatie</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-nldocslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-nldocslocalizationlocalizing-addons href=/nl/docs/localization/localizing-addons/>Addons Lokaliseren</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-nldocslocalizationjoining-the-localization-team href=/nl/docs/localization/joining-the-localization-team/>Meedoen met het Lokalisatieteam</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-nldocsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/nl/docs/develop/ class="docs-nav-page pl-0 pr-2 active">Ontwikkeling</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-nldocsdevelop><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-nldocsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/nl/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 active">Aan de slag</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-nldocsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-nldocsdevelopgetting-startedaddon-basics href=/nl/docs/develop/getting-started/addon-basics/>Addon-Basis</a>
+</li><li>
+<a class="docs-nav-page active" id=docs-nav-page-nldocsdevelopgetting-startedcreating-an-addon href=/nl/docs/develop/getting-started/creating-an-addon/>Een Addon Maken</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-nldocsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/nl/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 collapsed">Addontypes</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-nldocsdevelopaddon-types>
+<li>
+<a class=docs-nav-page id=docs-nav-page-nldocsdevelopaddon-typesuserscripts href=/nl/docs/develop/addon-types/userscripts/>Userscripts</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-nldocsdevelopaddon-typesuserstyles href=/nl/docs/develop/addon-types/userstyles/>Userstyles</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-nldocsdevelopadding-an-icon-to-a-setting-name href=/nl/docs/develop/adding-an-icon-to-a-setting-name/>Een Pictogram Toevoegen aan een Instellingsnaam</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-nldocsfaq href=/nl/docs/faq/>Veelgestelde Vragen</a>
+</li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1>Een Addon Maken</h1><p>Vereiste software: teksteditor, Chrome.
+Wanneer mogelijk, schakel de Scratch Addons-extensie die je hebt gedownload van de store uit om problemen te voorkomen.</p><h2 id=stap-1-lees-over-de-addon-basisdocsdevelopgetting-startedaddon-basics>Stap 1: Lees over <a href=/docs/develop/getting-started/addon-basics/>de addon-basis</a> <a href=#stap-1-lees-over-de-addon-basisdocsdevelopgetting-startedaddon-basics class=anchor aria-label=Anchor></a></h2><p>Lees dat artikel om de termen te weten.</p><h2 id=stap-2-vertakkopieer-het-archief>Stap 2: Vertak/kopieer het archief <a href=#stap-2-vertakkopieer-het-archief class=anchor aria-label=Anchor></a></h2><p>Of download als ZIP als je dat wilt. In andere woorden, download gewoon de broncode lokaal.</p><h2 id=stap-3-laad-de-extensie-in-chrome>Stap 3: Laad de extensie in Chrome <a href=#stap-3-laad-de-extensie-in-chrome class=anchor aria-label=Anchor></a></h2><p><em>Opmerking: Chrome is aanbevolen voor het werken aan addons. Addons zijn wel verwacht om op Firefox te werken.</em>
+Nu dat je de extensie in je bestandssysteem hebt, ga naar <code>chrome://extensions</code> en schakel &ldquo;ontwikkelaarmodus&rdquo; in.
+Klik op &ldquo;uitgepakte extensie laden&rdquo;, selecteer dan de map met Scratch Addons. Als je hiermee problemen hebt, zorg ervoor dat je de map selecteert waar <code>manifest.json</code> zich bevindt.
+Dat is het, je hebt de extensie geladen! Het zou er ongeveer zo uit moeten zien:
+<img src=https://user-images.githubusercontent.com/17484114/91502527-accfd580-e89e-11ea-9e16-7daa2b808379.png alt=afbeelding><br>
+Opmerking: je kunt de &ldquo;errors&rdquo; veilig negeren. Dat is gewoon een waarschuwing voor een onherkende manifest-key die Firefox nodig heeft.</p><h2 id=stap-4-waar-gaat-je-addon-over>Stap 4: Waar gaat je addon over? <a href=#stap-4-waar-gaat-je-addon-over class=anchor aria-label=Anchor></a></h2><p>Nu komt het leuke!<br>
+Wat gaat je addon doen? Bedenk een zelfbeschrijvende addon-ID (geen spaties of speciale tekens, behalve streepjes, en het liefst in het Engels).<br>
+Snap je het?</p><h2 id=stap-5-maak-de-map-voor-de-addon>Stap 5: Maak de map voor de addon <a href=#stap-5-maak-de-map-voor-de-addon class=anchor aria-label=Anchor></a></h2><p>Ga in een bestandenverkenner naar de map met Scratch Addons. Ga naar de <code>addons</code>-map.<br>
+Maak dan een nieuwe map met je geweldige addon-ID als naam.</p><h2 id=stap-6-voeg-een-addon-manifest-toe>Stap 6: Voeg een addon-manifest toe <a href=#stap-6-voeg-een-addon-manifest-toe class=anchor aria-label=Anchor></a></h2><p>De addon-manifest vertelt Scratch Addons over hoe je addon werkt. Doe dit goed om veel hoofdpijn te voorkomen.<br>
+Maak een bestand genaamd <code>addon.json</code> in de map die je net hebt gemaakt.<br>
+Dit is een basis die je kunt gebruiken om te beginnen met programmeren, zorg ervoor dat je het verandert in de toekomst:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Geweldige plaatsvervanger voor addonnaam&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Hallo Wereld! Het zou heel slim zijn om deze plaatsvervangende tekst te vervangen met een beschrijving.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;tags&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;community&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;enabledByDefault&#34;</span><span class=p>:</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>Voor meer informatie over wat je kunt verklaren in de manifest, check <a href=/docs/reference/addon-manifest/>dit artikel</a>.</p><h2 id=stap-7-vertel-scratch-addons-wat-het-id-van-je-addon-is>Stap 7: Vertel Scratch Addons wat het ID van je addon is <a href=#stap-7-vertel-scratch-addons-wat-het-id-van-je-addon-is class=anchor aria-label=Anchor></a></h2><p>Scratch Addons kan niet uit zichzelf nieuwe mappen vinden, dus dan zul je de naam aan een speciaal bestand toe moeten voegen.<br>
+Ga naar <code>scratchAddonsFolder/addons/addons.json</code> en voeg het ID van je addon toe aan de array.</p><h2 id=stap-8-hallo-wereld>Stap 8: Hallo wereld <a href=#stap-8-hallo-wereld class=anchor aria-label=Anchor></a></h2><p>Op dit moment doet je addon niets, dus nu is een goed moment om te controleren of alles wat we net hebben gemaakt werkt.<br>
+Ga naar <code>chrome://extensions</code> en ververs Scratch Addons door op het ververspictogram op zijn kaart te klikken.<br>
+Rechterklik nu op het Scratch Addons-pictogram, en klik op &ldquo;opties&rdquo;.<br>
+Je zou je addon in de lijst moeten zien staan! Als je het ziet, zet het aan, en verander de instellingen die je hebt.</p><h2 id=stap-9-het-leuke-code>Stap 9: Het leuke, code! <a href=#stap-9-het-leuke-code class=anchor aria-label=Anchor></a></h2><p><em>Voordat je verdergaat, zorg ervoor dat je het wiki-artikel in stap 1 hebt gelezen.</em></p><p>Hier komt het leukste deel: maak je eigen JS- of CSS-bestanden!<br>
+Pro-tip: nadat je veranderingen maakt aan je addon, ververs dan de Scratch Addons-extensie zoals in stap 8.</p><p>Afhankelijk van wat je wilt dat je addon doet, zou je deze wikipagina&rsquo;s moeten bekijken:</p><ul>
+<li><a href=/docs/develop/addon-types/userscripts>Userscripts</a></li><li><a href=/docs/develop/addon-types/userstyles>Userstyles</a></li></ul><h2 id=stap-10-maak-je-addon-aanpasbaar>Stap 10: Maak je addon aanpasbaar <a href=#stap-10-maak-je-addon-aanpasbaar class=anchor aria-label=Anchor></a></h2><p>Als je wilt, kun je je addon aanpasbaar maken!<br>
+Gebruikers van je addon kunnen instellingen in- of uitschakelen, getallen invoeren, en meer!<br>
+Om te beginnen, bekijk <a href=/docs/reference/addon-manifest/#settings-object>hoe je instellingen in de addon-manifest verklaart</a>.<br>
+Ga dan naar de <a href=/docs/reference/addon-api/addon.settings>addon.settings-documentatie</a> om te leren hoe je toegang krijgt tot de keuzes van gebruikers van userscripts.</p><h2 id=stap-11-voordat-je-je-addon-publiceert>Stap 11: Voordat je je addon publiceert <a href=#stap-11-voordat-je-je-addon-publiceert class=anchor aria-label=Anchor></a></h2><p>Nu dat je addon werkt, laten we ervoor zorgen dat we het aan de addonbibliotheek kunnen toevoegen.<br>
+Zorg ervoor dat de manifest van je addon geschikt is, <a href=/docs/reference/addon-manifest>hier meer informatie</a>. Let goed op de naam, beschrijving en tags van je addon. Stel <code>"enabledByDefault"</code> in op <code>false</code> of verwijder het.<br>
+Zorg ervoor dat je addon geen andere addons verhindert.<br>
+Zorg ervoor dat je code begrijpbaar is; het hebben van onnodige opmerkingen is beter dan niets.</p><h2 id=stap-12-maak-een-pull-verzoek>Stap 12: Maak een pull-verzoek! <a href=#stap-12-maak-een-pull-verzoek class=anchor aria-label=Anchor></a></h2><p>Vertak het archief als je dat nog niet hebt gedaan, commit je nieuwe addon en verstuur een PV!<br>
+Onthoud dat we je kunnen vragen om wat veranderingen te maken, we accepteren je addon waarschijnlijk echter wel als het minimaal geschikt is.</p></article><hr>
+<p class=text-muted>
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/develop/getting-started/creating-an-addon.md>Verbeter deze pagina.</a>
+</p><div id=comments class=mt-4><h3>Opmerkingen</h3><p class=mb-3>Zorg ervoor dat je je aan <a href=/docs/policies/code-of-conduct>de gedragsregels</a> houdt. Je kunt deze opmerkingssectie bekijken op <a class=link-to-search>GitHub-Discussies</a>, net zoals je opmerking bewerken en verwijderen.</p><div class=giscus></div><script async defer src=/assets/js/comments.js data-giscus-lang=nl></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#stap-1-lees-over-de-addon-basisdocsdevelopgetting-startedaddon-basics>Stap 1: Lees over <a href=/docs/develop/getting-started/addon-basics/>de addon-basis</a></a></li><li><a href=#stap-2-vertakkopieer-het-archief>Stap 2: Vertak/kopieer het archief</a></li><li><a href=#stap-3-laad-de-extensie-in-chrome>Stap 3: Laad de extensie in Chrome</a></li><li><a href=#stap-4-waar-gaat-je-addon-over>Stap 4: Waar gaat je addon over?</a></li><li><a href=#stap-5-maak-de-map-voor-de-addon>Stap 5: Maak de map voor de addon</a></li><li><a href=#stap-6-voeg-een-addon-manifest-toe>Stap 6: Voeg een addon-manifest toe</a></li><li><a href=#stap-7-vertel-scratch-addons-wat-het-id-van-je-addon-is>Stap 7: Vertel Scratch Addons wat het ID van je addon is</a></li><li><a href=#stap-8-hallo-wereld>Stap 8: Hallo wereld</a></li><li><a href=#stap-9-het-leuke-code>Stap 9: Het leuke, code!</a></li><li><a href=#stap-10-maak-je-addon-aanpasbaar>Stap 10: Maak je addon aanpasbaar</a></li><li><a href=#stap-11-voordat-je-je-addon-publiceert>Stap 11: Voordat je je addon publiceert</a></li><li><a href=#stap-12-maak-een-pull-verzoek>Stap 12: Maak een pull-verzoek!</a></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Klik om het donkere thema te wisselen.' aria-label='Donker themaschakelaar' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/nl/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons' class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<p class="mb-3 small">Op dit moment 1.27.3 met 139 addons.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Pagina's</h3><a href=/nl/docs/faq>Veelgestelde vragen</a>
+<a href=/nl/feedback>Feedback Geven</a>
+<a href=/nl/credits>Credits</a>
+<a href=/nl/changelog>Changelog</a>
+<a href=/nl/addons>Addons</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Discussie</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Discussie-Forum</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Problemen</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Discord voor Gebruikers</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Discord voor Beheerders</a>
+</section><section>
+<h3>Bronnen</h3><a href=https://github.com/ScratchAddons rel=noopener>Organisatie</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Archief</a>
+<a href=/nl/docs rel=noopener>Documentatie</a>
+<a href=/docs/policies/privacy/website rel=noopener>Privacybeleid</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Scratch Addons-helpers</p><p>Scratch Addons is niet geassocieerd, verwant of officieel verbonden met Scratch, het Scratch-Team, het Scratch-fundament, of iedere dochteronderneming of geassocieerden.</p><p class=mb-0>Scratch Addons is vergund onder de voorwaarden van GNU General Public License v3.0.</p></section></div></footer></body></html>

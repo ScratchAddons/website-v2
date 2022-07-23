@@ -1,0 +1,417 @@
+<!doctype html><html lang=en>
+<head>
+<title>addon.tab - Scratch Addons Docs</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="Allows addon userscripts to get information about the tab they're currently running on.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/docs/reference/addon-api/addon.tab/">
+<meta property="og:title" content="addon.tab">
+<meta property="og:description" content="Allows addon userscripts to get information about the tab they're currently running on.">
+<meta property="og:site_name" content="Scratch Addons Docs">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/docs/reference/addon-api/addon.tab/">
+<meta name=twitter:title content="addon.tab - Scratch Addons Docs">
+<meta name=twitter:description content="Allows addon userscripts to get information about the tab they're currently running on.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=alternate type=application/rss+xml href=https://scratchaddons.com/docs/reference/addon-api/addon.tab/index.xml title="Scratch Addons Docs">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons logo'></img>
+<span>Scratch Addons Docs</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Toggle navigation'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class=nav-item><a class=nav-link href=/credits>Credits</a></li><li class=nav-item><a class=nav-link href=/feedback>Send Feedback</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label='Repository on GitHub' rel=noopener>Repository <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/#install>Install</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Toggle docs navigation sidebar'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Docs navigation</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>Table of contents</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='Toggle table of contents sidebar'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-docs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsgetting-startedquick-start href=/docs/getting-started/quick-start/>Quick Start</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsgetting-startedinstalling href=/docs/getting-started/installing/>Installing</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/ class="docs-nav-page pl-0 pr-2 collapsed">Developing</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelop><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopgetting-startedaddon-basics href=/docs/develop/getting-started/addon-basics/>Addon Basics</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopgetting-startedcreating-an-addon href=/docs/develop/getting-started/creating-an-addon/>Creating an Addon</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 collapsed">Addon Types</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopaddon-types>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopaddon-typesuserscripts href=/docs/develop/addon-types/userscripts/>Userscripts</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopaddon-typesuserstyles href=/docs/develop/addon-types/userstyles/>Userstyles</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopadding-an-icon-to-a-setting-name href=/docs/develop/adding-an-icon-to-a-setting-name/>Adding an Icon to a Setting Name</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationjoining-the-localization-team href=/docs/localization/joining-the-localization-team/>Joining the Localization Team</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationlocalizing-addons href=/docs/localization/localizing-addons/>Localizing Addons</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreference role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/ class="docs-nav-page pl-0 pr-2 active">Reference</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreference><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreferenceaddon-api role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/addon-api/ class="docs-nav-page pl-0 pr-2 active">Addon API</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreferenceaddon-api>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonself href=/docs/reference/addon-api/addon.self/>addon.self</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonsettings href=/docs/reference/addon-api/addon.settings/>addon.settings</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonauth href=/docs/reference/addon-api/addon.auth/>addon.auth</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonaccount href=/docs/reference/addon-api/addon.account/>addon.account</a>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsreferenceaddon-apiaddontab role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/addon-api/addon.tab/ class="docs-nav-page pl-0 pr-2 collapsed active">addon.tab</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsreferenceaddon-apiaddontab>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabtraps href=/docs/reference/addon-api/addon.tab/addon.tab.traps/>addon.tab.traps</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabredux href=/docs/reference/addon-api/addon.tab/addon.tab.redux/>addon.tab.redux</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabappendtosharedspace href=/docs/reference/addon-api/addon.tab/addon.tab.appendtosharedspace/>addon.tab.appendToSharedSpace</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonpopup href=/docs/reference/addon-api/addon.popup/>addon.popup</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-manifest href=/docs/reference/addon-manifest/>Addon Manifest</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferencedesign href=/docs/reference/design/>Design</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsfaq href=/docs/faq/>Frequently Asked Questions</a>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docspolicies role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/policies/ class="docs-nav-page pl-0 pr-2 collapsed">Policies</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docspolicies><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docspoliciesprivacy role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/policies/privacy/ class="docs-nav-page pl-0 pr-2 collapsed">Privacy Policy</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docspoliciesprivacy>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciesprivacyextension href=/docs/policies/privacy/extension/>Extension</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciesprivacywebsite href=/docs/policies/privacy/website/>Website</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciessecurity href=/docs/policies/security/>Security Policy</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciescode-of-conduct href=/docs/policies/code-of-conduct/>Code of Conduct</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspolicieschrome-web-store-privacy-information href=/docs/policies/chrome-web-store-privacy-information/>Chrome Web Store Privacy Information</a>
+</li></ul></li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1>addon.tab</h1><table>
+<thead>
+<tr>
+<th></th><th></th></tr></thead><tbody>
+<tr>
+<td>Available in userscripts</td><td>✔️</td></tr><tr>
+<td>Available in popup scripts</td><td>❌</td></tr><tr>
+<td>Required manifest permissions</td><td>None</td></tr></tbody></table><h2 id=description>Description <a href=#description class=anchor aria-label=Anchor></a></h2><p>Allows addon userscripts to get information about the tab they&rsquo;re currently running on.</p><h2 id=examples>Examples <a href=#examples class=anchor aria-label=Anchor></a></h2><h3 id=using-addontabwaitforelement>Using <code>addon.tab.waitForElement</code> <a href=#using-addontabwaitforelement class=anchor aria-label=Anchor></a></h3><p>We can use <code>addon.tab.waitForElement</code> with <code>{"markAsSeen": true}</code> inside a <code>while(true)</code> loop to store the IDs of all comments in the page.<br>
+Using <code>addon.tab.waitForElement</code>, we don&rsquo;t need to have code that waits until comments have loaded. This way, we also store the IDs of newly posted comments and new loaded comments when the user clicks &ldquo;load more comments&rdquo;.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>const</span> <span class=nx>commentIds</span> <span class=o>=</span> <span class=p>[];</span>
+</span></span><span class=line><span class=cl><span class=k>while</span> <span class=p>(</span><span class=kc>true</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>comment</span> <span class=o>=</span> <span class=kr>await</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>tab</span><span class=p>.</span><span class=nx>waitForElement</span><span class=p>(</span><span class=s2>&#34;div.comment&#34;</span><span class=p>,</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nx>markAsSeen</span><span class=o>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=nx>commentIds</span><span class=p>.</span><span class=nx>push</span><span class=p>(</span><span class=nx>comment</span><span class=p>.</span><span class=nx>id</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h3 id=using-addontabdisplaynonewhiledisabled-dynamicdisable>Using <code>addon.tab.displayNoneWhileDisabled</code> (<code>dynamicDisable</code>) <a href=#using-addontabdisplaynonewhiledisabled-dynamicdisable class=anchor aria-label=Anchor></a></h3><p>We use <code>addon.tab.displayNoneWhileDisabled</code> to hide an image when the addon gets disabled.<br>
+We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.<br>
+We also set the <code>display</code> CSS property of the image to <code>flex</code> when visible, even tho that is not the default value for images.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl>  <span class=cm>/* userscript.js */</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>img</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s2>&#34;img&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>img</span><span class=p>.</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s2>&#34;sa-example-img&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>addon</span><span class=p>.</span><span class=nx>tab</span><span class=p>.</span><span class=nx>displayNoneWhileDisabled</span><span class=p>(</span><span class=nx>img</span><span class=p>,</span> <span class=p>{</span> <span class=nx>display</span><span class=o>:</span> <span class=s2>&#34;flex&#34;</span> <span class=p>});</span>
+</span></span><span class=line><span class=cl>  <span class=kr>const</span> <span class=nx>btn</span> <span class=o>=</span> <span class=nb>document</span><span class=p>.</span><span class=nx>createElement</span><span class=p>(</span><span class=s2>&#34;btn&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=nx>btn</span><span class=p>.</span><span class=nx>onclick</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// We want to hide the image
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// We cannot do `img.style.display = &#34;none&#34;` because we
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=c1>// used displayNoneWhileDisabled with the same element
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=nx>img</span><span class=p>.</span><span class=nx>classList</span><span class=p>.</span><span class=nx>add</span><span class=p>(</span><span class=s2>&#34;sa-example-img-hide&#34;</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>};</span>
+</span></span></code></pre></div><div class=highlight><pre tabindex=0 class=chroma><code class=language-css data-lang=css><span class=line><span class=cl><span class=c>/* userstyle.css */</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nc>sa-example-img</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=k>display</span><span class=p>:</span> <span class=kc>flex</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>.</span><span class=nc>sa-example-img-hide</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c>/* We want to hide the image if the button was clicked, 
+</span></span></span><span class=line><span class=cl><span class=c>  even if the addon is enabled */</span>
+</span></span><span class=line><span class=cl>  <span class=k>display</span><span class=p>:</span> <span class=kc>none</span> <span class=cp>!important</span><span class=p>;</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h3 id=reacting-to-url-dynamically-changed>Reacting to URL dynamically changed <a href=#reacting-to-url-dynamically-changed class=anchor aria-label=Anchor></a></h3><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=nx>addon</span><span class=p>.</span><span class=nx>tab</span><span class=p>.</span><span class=nx>addEventListener</span><span class=p>(</span><span class=s2>&#34;urlChange&#34;</span><span class=p>,</span> <span class=kd>function</span><span class=p>(</span><span class=nx>event</span><span class=p>)</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=sb>`URL changed! It was previously </span><span class=si>${</span><span class=nx>event</span><span class=p>.</span><span class=nx>detail</span><span class=p>.</span><span class=nx>oldUrl</span><span class=si>}</span><span class=sb>, it&#39;s now </span><span class=si>${</span><span class=nx>event</span><span class=p>.</span><span class=nx>detail</span><span class=p>.</span><span class=nx>newUrl</span><span class=si>}</span><span class=sb>`</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>});</span>
+</span></span></code></pre></div><h2 id=sub-apis>Sub-APIs <a href=#sub-apis class=anchor aria-label=Anchor></a></h2><h3 id=addontabtrapsaddontabtraps><a href=addon.tab.traps>addon.tab.traps</a> <a href=#addontabtrapsaddontabtraps class=anchor aria-label=Anchor></a></h3><p>Allows addons to get direct references to objects, which are particularly useful for enhancing the editor, like the Scratch VM or the Blockly instance.</p><h3 id=addontabreduxaddontabredux><a href=addon.tab.redux>addon.tab.redux</a> <a href=#addontabreduxaddontabredux class=anchor aria-label=Anchor></a></h3><p>Allows addons to get and modify Redux state, which is useful for addons that modify scratch-www pages and the editor.</p><h2 id=properties>Properties <a href=#properties class=anchor aria-label=Anchor></a></h2><h3 id=addontabclientversion><code>addon.tab.clientVersion</code> <a href=#addontabclientversion class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<td>Value</td><td><code>"scratch-www" | "scratchr2"</code></td></tr><tr>
+<td>Nullable</td><td>Yes</td></tr></table><p>The Scratch client for the current tab (<code>scratch-www</code> or <code>scratchr2</code>).<br>
+The Scratch community website has 2 working clients used throughout the site.<br>
+<code>scratch-www</code> is React/Redux based and client side rendered. This client is the one used in the homepage.<br>
+<code>scratchr2</code> is Django/jQuery/Backbone.js based and mostly server side rendered. This client is the one used in profile pages.</p><h3 id=addontabeditormode><code>addon.tab.editorMode</code> <a href=#addontabeditormode class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<td>Value</td><td><code>"projectpage" | "editor" | "fullscreen" | "embed"</code></td></tr><tr>
+<td>Nullable</td><td>Yes</td></tr></table><p>The current viewing mode for the project (<code>projectpage</code>, <code>editor</code>, <code>fullscreen</code> or <code>embed</code>).<br>
+Will be <code>null</code> if the current tab is not a project.</p><h3 id=addontabdirection><code>addon.tab.direction</code> <a href=#addontabdirection class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<td>Value</td><td><code>"ltr" | "rtl"</code></td></tr><tr>
+<td>Nullable</td><td>No</td></tr></table><p>The writing direction for the language of the Scratch website.</p><h2 id=methods>Methods <a href=#methods class=anchor aria-label=Anchor></a></h2><h3 id=addontabwaitforelement><code>addon.tab.waitForElement</code> <a href=#addontabwaitforelement class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>selector</td><td><code>String</code></td><td>Yes</td><td>One or more selectors to match. Same parameter as <code>document.querySelector</code>.</td></tr><tr>
+<td>options</td><td><code>Object</code></td><td>No</td><td>
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Required</th><th>Default</th><th>Description</th></tr><tr>
+<td>markAsSeen</td><td><code>Boolean</code></td><td>No</td><td><code>false</code></td><td>Whether it should mark resolved elements to be skipped next time or not.</td></tr><tr>
+<td>condition</td><td><code>Function</code></td><td>No</td><td><code>() => true</code></td><td>A function that returns whether to resolve the selector or not. No arguments are passed.</td></tr><tr>
+<td>reduxCondition</td><td><code>Function</code></td><td>No</td><td><code>() => true</code></td><td>A function that returns whether to resolve the selector or not. <code>addon.tab.redux</code> is passed as an argument.</td></tr><tr>
+<td>reduxEvents</td><td><code>String[]</code></td><td>No</td><td><code>[]</code></td><td>An array of Redux events that must be dispatched before resolving the selector.</td></tr></table></td></tr></table><table>
+<tr>
+<td>Return value</td><td><code>Promise&lt;HTMLElement></code></td></tr></table><p>Waits until an element exists, then returns the element.<br>
+Internally, a <code>MutationObserver</code> that reacts to any DOM tree change is used. This observer does not react to attribute-only DOM updates.<br>
+Option <code>markAsSeen</code> should be set to true if you&rsquo;re using this method inside a <code>while(true)</code> loop.<br>
+Options <code>condition</code>, <code>reduxCondition</code> and <code>reduxEvents</code> should be used as optimizations, in order to avoid multiple calls to <code>document.querySelector</code> when it&rsquo;s guaranteed the element will not exist yet.</p><h3 id=addontabdisplaynonewhiledisabled><code>addon.tab.displayNoneWhileDisabled</code> <a href=#addontabdisplaynonewhiledisabled class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>element</td><td><code>HTMLElement</code></td><td>Yes</td><td>Element to hide</td></tr><tr>
+<td>options</td><td><code>Object</code></td><td>No</td><td>
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Required</th><th>Default</th><th>Description</th></tr><tr>
+<td>display</td><td><code>String</code></td><td>No</td><td><code>""</code></td><td>The <code>display</code> CSS value to use when the addon is enabled.</td></tr></table></td></tr></table><p>Hides the given element with <code>display: none</code> when the addon is disabled, until it is reenabled.<br>
+If the intended <code>display</code> CSS property value for the provided element when visible is not the default value for the type of provided element (for example, <code>block</code> for <code>div</code>s and <code>inline</code> for <code>span</code>s), you should provide that value inside the options parameter.<br>
+If you want to manually hide the element in situations where the addon is enabled, you should use a dedicated class name for that, instead of manually setting <code>el.style.display = "none";</code>. Use a class name selector in a userstyle to set <code>display: none !important;</code> on the element.</p><h3 id=addontabcopyimage><code>addon.tab.copyImage</code> <a href=#addontabcopyimage class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<td>Required manifest permissions</td><td><code>clipboardWrite</code></td></tr></table><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>dataURL</td><td><code>String</code></td><td>Yes</td><td>Data URL of a PNG image.</td></tr></table><table>
+<tr>
+<td>Return value</td><td><code>Promise&lt;void></code></td></tr><td>Promise rejects if</td><td>Image could not be copied.</td></table><p>Copies a PNG image to the clipboard.<br>
+Only run this in response of the user explicitly pressing Ctrl+C.<br>
+Internally uses <code>browser.clipboard.setImageData</code> in Firefox and <code>navigator.clipboard.write</code> in Chrome.</p><h3 id=addontabscratchclass><code>addon.tab.scratchClass</code> <a href=#addontabscratchclass class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>unhashedClassName</td><td><code>String</code></td><td>Min 1</td><td>One or many unhashed Scratch stylesheet class names, as one argument each.</td></tr><tr>
+<td>opts</td><td><code>Object</code></td><td>No</td><td>
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>others</td><td><code>String | String[]</code></td><td>Yes</td><td>Non-Scratch class(es) to merge</td></tr></table></td></tr></table><table>
+<tr>
+<td>Return value</td><td><code>String</code></td></tr></table><p>Gets the hashed class name for a Scratch stylesheet class name.</p><h3 id=addontabscratchmessage><code>addon.tab.scratchMessage</code> <a href=#addontabscratchmessage class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>key</td><td><code>String</code></td><td>Yes</td><td>The Scratch translation key.</td></tr></table><table>
+<tr>
+<td>Return value</td><td><code>String | ""</code></td></tr></table><p>Gets Scratch translation from the current Scratch tab.<br>
+Note that these are Scratch locales, not Scratch Addons locales.<br>
+If the message isn&rsquo;t found, <code>""</code> is returned and a warning is logged in the console.<br>
+Internally uses <code>window.django.gettext</code> or <code>window._messages</code>.</p><h3 id=addontabappendtosharedspaceaddontabappendtosharedspace><a href=addon.tab.appendtosharedspace><code>addon.tab.appendToSharedSpace</code></a> <a href=#addontabappendtosharedspaceaddontabappendtosharedspace class=anchor aria-label=Anchor></a></h3><p>See <a href=addon.tab.appendtosharedspace>addon.tab.appendToSharedSpace</a>.</p><h3 id=addontabcreateblockcontextmenu><code>addon.tab.createBlockContextMenu</code> <a href=#addontabcreateblockcontextmenu class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>blockContextMenuCallback</td><td><code>Function</code></td><td>Yes</td><td>Returns new menu items.
+<table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Description</th></tr><tr>
+<td>items</td><td>Object[]</td><td>The items added by vanilla code or other addons.
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Description</th></tr><tr>
+<td>enabled</td><td>Boolean</td><td>Whether the item is enabled or not.</td></tr><tr>
+<td>text</td><td>String</td><td>The context menu item label.</td></tr><tr>
+<td>callback</td><td>Function</td><td>The function that is called when the item is clicked.</td></tr><tr>
+<td>separator</td><td>Boolean</td><td>Whether to add a separator above the item or not.</td></tr></table></td></tr><tr>
+<td>block</td><td><code>Object</code></td><td>The targeted block, if any.</td></tr></table></td></tr><tr>
+<td>conditions</td><td><code>Object</code></td><td>No</td><td>Show the context menu item in various locations.
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Required</th><th>Default</th><th>Description</th></tr><tr>
+<td>workspace</td><td>Boolean</td><td>No</td><td>false</td><td>The workspace context menu.</td></tr><tr>
+<td>blocks</td><td>Boolean</td><td>No</td><td>false</td><td>The block context menu outside the flyout.</td></tr><tr>
+<td>flyout</td><td>Boolean</td><td>No</td><td>false</td><td>The block context menu inside the flyout.</td></tr><tr>
+<td>comments</td><td>Boolean</td><td>No</td><td>false</td><td>The context menu on comments.</td></tr></table></td></tr></table><p>Adds a context menu item for any of the context menus in the code editor.</p><h3 id=addontabcreateeditorcontextmenu><code>addon.tab.createEditorContextMenu</code> <a href=#addontabcreateeditorcontextmenu class=anchor aria-label=Anchor></a></h3><p><strong>Documentation for this is a WIP. Not all possible types are listed for some settings.</strong></p><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>callback</td><td><code>Function</code></td><td>Yes</td><td>The function that is executed when the item is clicked.
+<table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Description</th></tr><tr>
+<td>context</td><td><code>Object</code></td><td>The context for the action.
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Description</th></tr><tr>
+<td>type</td><td><code>String</code></td><td>The type of the context menu. Possible values: "sprite", "costume", "sound"</td></tr><tr>
+<td>menuItem</td><td><code>HTMLElement</code></td><td>The item element.</td></tr><tr>
+<td>target</td><td><code>HTMLElement</code></td><td>The element that this context menu is selecting.</td></tr><tr>
+<td>index</td><td><code>Number</code></td><td>The index, if applicable.</td></tr></table></td></tr></table></td></tr><tr>
+<td>options</td><td><code>Object</code></td><td>No (but then it must be returned in `callback`)</td><td>
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Required</th><th>Default</th><th>Description</th></tr><tr>
+<td>className</td><td><code>String</code></td><td>Yes</td><td></td><td>The class name to add to the item.</td></tr><tr>
+<td>types</td><td><code>String[]</code></td><td>No</td><td>All possible values</td><td>Which types of context menu the item should be added to. Possible values: "sprite", "costume", "sound"</td></tr><tr>
+<td>position</td><td><code>String</code></td><td>Yes</td><td></td><td>The shared space inside of the context menu that the item should be added to. Uses `addon.tab.appendToSharedSpace` internally. Possible values: "assetContextMenuAfterExport", "assetContextMenuAfterDelete", "monitor"</td></tr><tr>
+<td>order</td><td><code>Number</code></td><td>Yes</td><td></td><td>The order of the item within its shared space in relation to other items.</td></tr><tr>
+<td>label</td><td><code>String</code></td><td>Yes</td><td></td><td>The label for the item.</td></tr><tr>
+<td>border</td><td><code>Boolean</code></td><td>No</td><td>false</td><td>Whether to add a border to the top of the item or not.</td></tr><tr>
+<td>dangerous</td><td><code>Boolean</code></td><td>No</td><td>false</td><td>Whether to display the item as "dangerous" (orange-colored) or not.</td></tr><tr>
+<td>condition</td><td><code>Function</code></td><td>No</td><td>true</td><td>A function that determines if the item should be shown.
+<table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Description</th></tr><tr>
+<td>context</td><td><code>Object</code></td><td>The context for the action.
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Description</th></tr><tr>
+<td>type</td><td><code>String</code></td><td>The type of the context menu. Possible values: "sprite", "costume", "sound"</td></tr><tr>
+<td>menuItem</td><td><code>HTMLElement</code></td><td>The item element.</td></tr><tr>
+<td>target</td><td><code>HTMLElement</code></td><td>The element that this context menu is selecting.</td></tr><tr>
+<td>index</td><td><code>Number</code></td><td>The index, if applicable.</td></tr></table></td></tr></table></td></tr></table></td></tr></table><p>Adds a context menu item for any of the non-Blockly context menus, such as the context menu for the sprites list.</p><h3 id=addontabaddblock><code>addon.tab.addBlock</code> <a href=#addontabaddblock class=anchor aria-label=Anchor></a></h3><p><strong>Do not use this unless you are adding blocks to the debugger addon.</strong></p><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>proccode</td><td><code>String</code></td><td>Yes</td><td>The name that will be used to refer to the block internally. Must specify inputs on the block (if any) using %s (string), %n (number-only), and %b (boolean).</td></tr><tr>
+<td>blockData</td><td><code>Object</code></td><td>Yes</td><td>
+<table>
+<tr>
+<th>Property</th><th>Type</th><th>Required</th><th>Default</th><th>Description</th></tr><tr>
+<td>args</td><td><code>String[]</code></td><td>Yes</td><td></td><td>A list of names that will be used to refer to the block's inputs in the callback. If there are no inputs, use an empty array.</td></tr><tr>
+<td>displayName</td><td><code>String</code></td><td>no</td><td>The value of `proccode`</td><td>The name that will be displayed on the block to the user. Must also include block input syntax.</td></tr><tr>
+<td>callback</td><td><code>Function</code></td><td>Yes</td><td></td><td>The function that will execute when the block runs.
+<table>
+<tr>
+<th>Parameter</th><th>Description</th></tr><tr>
+<td>args</td><td>An object containing the values that are entered into the block inputs. The keys correpond to the `args` property specified earlier.</dt></tr><tr>
+<td>thread</td><td>A reference to the thread that this block is running in.</td></tr></table></td></tr><tr>
+<td>hidden</td><td><code>Boolean</code></td><td>No</td><td>false</td><td>Whether the block should appear in the flyout or not. This does not affect the workspace.</td></tr></table></td></tr></table><p>Adds a new block to the Debugger category in the block palette.</p><h3 id=addontabremoveblock><code>addon.tab.removeBlock</code> <a href=#addontabremoveblock class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>proccode</td><td><code>String</code></td><td>Yes</td><td>The `proccode` value of the block to remove</td></tr></table><p>Removes a block that was previously added to the Debugger category in the block palette.</p><h3 id=addontabloadscript><code>addon.tab.loadScript</code> <a href=#addontabloadscript class=anchor aria-label=Anchor></a></h3><p><strong>In most cases, you should use the <a href=https://scratchaddons.com/docs/reference/addon-manifest/#userscripts-and-userstyles-array><code>userscripts</code> property of the addon manifest</a> instead.</strong></p><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>path</td><td><code>String</code></td><td>Yes</td><td>The path pointing to the script.</td></tr></table><table>
+<tr>
+<td>Return value</td><td><code>Promise</code></td></tr></table><p>Runs the specified script file.</p><h3 id=addontabloadworker><code>addon.tab.loadWorker</code> <a href=#addontabloadworker class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<th>Parameter</th><th>Type</th><th>Required</th><th>Description</th></tr><tr>
+<td>path</td><td><code>String</code></td><td>Yes</td><td>The path pointing to the worker.</td></tr></table><table>
+<tr>
+<td>Return value</td><td><code>Promise&lt;Worker></code></td></tr></table><p>Loads the specified Web Worker.</p><h2 id=events>Events <a href=#events class=anchor aria-label=Anchor></a></h2><h3 id=urlchange><code>urlChange</code> <a href=#urlchange class=anchor aria-label=Anchor></a></h3><table>
+<tr>
+<th>Event detail property</th><th>Type</th><th>Description</th></tr><tr>
+<td>oldUrl</td><td><code>String</code></td><td>The URL before it was dynamically changed</td></tr><tr>
+<td>newUrl</td><td><code>String</code></td><td>The new current URL value</td></tr></table><p>Fires when Scratch dynamically changes the URL of the page.<br>
+This happens when going inside/outside the editor, or switching tabs in scratch-www studio pages.<br>
+This will not fire if <code>location.hash</code> changed.</p><hr>
+<h2>Section Pages</h2><ul>
+<li>
+<p><a href=/docs/reference/addon-api/addon.tab/addon.tab.traps/>addon.tab.traps (Traps)</a></p><p>addon.tab.traps is a public API for userscripts that can be used to obtain objects that are not otherwise available.</p></li><li>
+<p><a href=/docs/reference/addon-api/addon.tab/addon.tab.redux/>addon.tab.redux (Redux)</a></p><p>Scratch Addons supports getting and modifying Redux state!</p></li><li>
+<p><a href=/docs/reference/addon-api/addon.tab/addon.tab.appendtosharedspace/>addon.tab.appendToSharedSpace</a></p><p>Allows multiple addons to add their own UI elements to the same area inside Scratch.</p></li></ul></article><hr>
+<p class=text-muted>
+Last updated at 22 April 2022 by RedGuy12 on commit <a href=https://github.com/ScratchAddons/website-v2/commit/686f6b723706491f9468e42664f91ce924b478b4><code>686f6b7</code></a>.
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/reference/addon-api/addon.tab/_index.md>Improve this page.</a>
+</p><div id=comments class=mt-4><h3>Comments</h3><p class=mb-3>Make sure to follow <a href=/docs/policies/code-of-conduct>the code of conduct</a>. You can see this comment section on <a class=link-to-search>GitHub Discussions</a>, as well as editing and removing your comment.</p><div class=giscus></div><script async defer src=/assets/js/comments.js data-giscus-lang=en></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#description>Description</a></li><li><a href=#examples>Examples</a>
+<ul>
+<li><a href=#using-addontabwaitforelement>Using <code>addon.tab.waitForElement</code></a></li><li><a href=#using-addontabdisplaynonewhiledisabled-dynamicdisable>Using <code>addon.tab.displayNoneWhileDisabled</code> (<code>dynamicDisable</code>)</a></li><li><a href=#reacting-to-url-dynamically-changed>Reacting to URL dynamically changed</a></li></ul></li><li><a href=#sub-apis>Sub-APIs</a>
+<ul>
+<li><a href=#addontabtrapsaddontabtraps><a href=addon.tab.traps>addon.tab.traps</a></a></li><li><a href=#addontabreduxaddontabredux><a href=addon.tab.redux>addon.tab.redux</a></a></li></ul></li><li><a href=#properties>Properties</a>
+<ul>
+<li><a href=#addontabclientversion><code>addon.tab.clientVersion</code></a></li><li><a href=#addontabeditormode><code>addon.tab.editorMode</code></a></li><li><a href=#addontabdirection><code>addon.tab.direction</code></a></li></ul></li><li><a href=#methods>Methods</a>
+<ul>
+<li><a href=#addontabwaitforelement><code>addon.tab.waitForElement</code></a></li><li><a href=#addontabdisplaynonewhiledisabled><code>addon.tab.displayNoneWhileDisabled</code></a></li><li><a href=#addontabcopyimage><code>addon.tab.copyImage</code></a></li><li><a href=#addontabscratchclass><code>addon.tab.scratchClass</code></a></li><li><a href=#addontabscratchmessage><code>addon.tab.scratchMessage</code></a></li><li><a href=#addontabappendtosharedspaceaddontabappendtosharedspace><a href=addon.tab.appendtosharedspace><code>addon.tab.appendToSharedSpace</code></a></a></li><li><a href=#addontabcreateblockcontextmenu><code>addon.tab.createBlockContextMenu</code></a></li><li><a href=#addontabcreateeditorcontextmenu><code>addon.tab.createEditorContextMenu</code></a></li><li><a href=#addontabaddblock><code>addon.tab.addBlock</code></a></li><li><a href=#addontabremoveblock><code>addon.tab.removeBlock</code></a></li><li><a href=#addontabloadscript><code>addon.tab.loadScript</code></a></li><li><a href=#addontabloadworker><code>addon.tab.loadWorker</code></a></li></ul></li><li><a href=#events>Events</a>
+<ul>
+<li><a href=#urlchange><code>urlChange</code></a></li></ul></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Click to toggle the dark theme.' aria-label='Dark theme switch' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons' class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<p class="mb-3 small">Currently 1.27.3 with 139 addons.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Pages</h3><a href=/docs/faq>FAQ</a>
+<a href=/feedback>Send Feedback</a>
+<a href=/credits>Credits</a>
+<a href=/changelog>Changelog</a>
+<a href=/addons>Addons</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Discuss</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Discussion Forum</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Issues</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Community Discord</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Development Discord</a>
+</section><section>
+<h3>Resources</h3><a href=https://github.com/ScratchAddons rel=noopener>Organization</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repository</a>
+<a href=/docs rel=noopener>Documentation</a>
+<a href=/docs/policies/privacy/website rel=noopener>Privacy Policy</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Scratch Addons contributors</p><p>Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.</p><p class=mb-0>Scratch Addons is licensed under the terms of GNU General Public License v3.0.</p></section></div></footer></body></html>

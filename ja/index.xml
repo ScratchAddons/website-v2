@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Scratch Addons</title><link>https://scratchaddons.com/ja/</link><description>Scratch Addonsの最近のコンテンツ</description><generator>Hugo -- gohugo.io</generator><language>en</language><copyright>© 2022 Scratch Addons 貢献者</copyright><atom:link href="https://scratchaddons.com/ja/index.xml" rel="self" type="application/rss+xml"/><item><title>Addon Basics</title><link>https://scratchaddons.com/ja/docs/develop/getting-started/addon-basics/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/develop/getting-started/addon-basics/</guid><description>What&amp;rsquo;s an addon, really? Actually, an addon isn&amp;rsquo;t much more than a userscript, a userstyle, or a combination of the two. If any of these are related, then we make them part of the same addon, under a single name. For example, the &amp;ldquo;Scratch 3 Developer Tools&amp;rdquo; addon has a userscript in charge of adding a find box to the editor, and a userstyle that adds CSS to that box.</description></item><item><title>クイックスタート</title><link>https://scratchaddons.com/ja/docs/getting-started/quick-start/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/getting-started/quick-start/</guid><description>インストール Scratch Addonsをインストールしましょう。Scratch AddonsはChrome Web StoreとAdd-ons for Firefoxの両方で入手できます。
+Chrome Web Store (Google ChromeとChromiumベースのブラウザー用) Add-ons for Firefox (Mozilla Firefox用) Microsoft Edge Add-ons (Microsoft Edge用) 始め方 始めるには、アドオン設定ページにアクセスして、機能を確認してみましょう。
+Scratch Addonsがツールバーにあるのでクリックしてください。 ほとんどの場合ブラウザーの右上部にあります。Google Chromeユーザーは、Scratchを閲覧していない間は、パズルのアイコンをクリックすると拡張機能アイコンが表示されます。
+歯車アイコンをクリックして設定ページを表示します。
+アドオン一覧を見て好きなだけ機能を有効化・無効化してみてください。 アドオンには、さらに細かく設定できるものもあります。</description></item><item><title>インストール</title><link>https://scratchaddons.com/ja/docs/getting-started/installing/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/getting-started/installing/</guid><description>拡張機能ストアから Scratch Addonsは、Chrome Web StoreとAdd-ons for Firefoxの両方で入手可能です。
+Chrome Web Store (Google Chrome、Opera、Brave、Vivaldi、Microsoft Edge &amp;gt;79、その他のChromiumベースのブラウザー) https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco
+Add-ons for Firefox (Mozilla Firefox) https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/
+Microsoft Edge Add-ons (Microsoft Edge &amp;gt;79用) https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj
+ソースコードから GitHubリリースについて リリースページ には、ストア版のミラーに加え、Scratch Addonsの開発版のコードとインストールファイルがあります。
+リポジトリのクローン 開発用にScratch Addonsをインストールするためには、この方法がおすすめです。Gitをインストールして、以下の手順に従ってください:
+リポジトリをダウンロードするには、 https://github.com/ScratchAddons/ScratchAddons.git をクローンしてください。
+$ git clone https://github.com/ScratchAddons/ScratchAddons.git Scratch Addonsを更新するには、フォルダー内に cd し、次のコマンドを実行してください:
+$ git fetch $ git pull Scratch Addonsが更新され、コードの編集に適した状態になります。Google Chromeを使用している場合は、 アップデートを完了させる ために追加の手順が必要です。
+Zip 形式でダウンロード Gitをインストールしていない場合は、この方法が利用できます。この場合は、Scratch Addonsをアップデートする場合に手動で同じ作業を繰り返さないといけません。
+リポジトリ にて、ダウンロードボタンを押します。
+クリックし、「Download ZIP」を選択します。
+アーカイブをフォルダーに解凍します。
+Google Chrome上でのインストール アドレスバーに chrome://extensions と入力し、拡張機能管理ページを開きます。</description></item><item><title>Creating an Addon</title><link>https://scratchaddons.com/ja/docs/develop/getting-started/creating-an-addon/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/develop/getting-started/creating-an-addon/</guid><description>Required software: text editor, Chrome.
+If possible, disable the Scratch Addons extension you downloaded from the store before proceeding to avoid issues.
+Step 1: Read about addon basics Make sure to read that article to be familiar with the terminology.
+Step 2: Fork/clone the repo Or download as ZIP, if you want. In other words, just download the source code locally.
+Step 3: Load the extension into Chrome Note: Chrome is recommended for working on addons.</description></item><item><title>よくある質問</title><link>https://scratchaddons.com/ja/docs/faq/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/faq/</guid><description>Scratch Addonsに関するよくある質問を掲載します。
+Scratch Addonsとは? Scratch Addonsは、Scratchウェブサイトとプロジェクトエディターの新機能やテーマを提供するブラウザー拡張機能です。Scratchコミュニティーのメンバーにて開発されたユーザースクリプトやユーザースタイルを収集し、アドオンとして利用できるようにしています。アドオンは各自に有効化できます。
+アドオンとは? アドオンは拡張機能のようなものですが、Scratch AddonsのAPIを利用できます。このAPIによって、Scratchページ上でスクリプトを実行したり、Scratchウェブサイトの外観を変えることができます。
+こうしたスクリプトはaddon.*JavaScript APIを使って、Scratchに関連する情報(たとえば、現在ログイン中のユーザー名)を入手したり、通知の送信など拡張機能のAPIを利用できます。
+もしすべてがアドオンなら、Scratch Addonsの役目は何ですか? Scratch Addonsはアドオンを読み込みます。たとえば:
+アドオンを個別に有効化したり、設定を変更したりする。 アドオンにAPIを提供し、実行する。 addon.auth APIなど、データを提供する。 スクリプトの実行用にコードを挿入する。 Reduxへのアクセスを提供する。 アドオン間の干渉を防ぐ。 アドオン間でのコードの重複を防ぐ。 Scratch Addonsは安全ですか? はい。Scratch Addonsの最新バージョンにはセキュリティー上の問題は存在しないはずです。Scratch Addonsはオープンソースソフトウェアで、コードは常時Scratch Addonsの貢献者によってレビューされています。また、Chrome Web StoreとAdd-ons for Firefoxのレビュアーによっても確認済みです。
+どうやって脆弱性を報告できますか? 脆弱性情報は、World_Languages氏に直接連絡してください。メールアドレスはworldxlanguages (at) gmail.comです。48時間以内に回答がない場合は、ここにてIssueを作成してください。そのときは、メールを送信したことを述べてください。
+セキュリティー方針と過去に発見された脆弱性情報は各ウェブサイトで確認できます。
+Scratch Addonsを使っても、アカウントは安全ですか? Scratch Addonsの基礎は、アカウントの認証情報を必要しません。そのため、多くの機能は、ログアウト時でも動作します。Scratch Addonsは、ブラウザーから提供されるクッキーを用いて認証します。Scratchメッセージのようなアドオンはログアウト時は動作しませんが、それ以外の部分は問題ありません。
+Scratch Addonsのコードはすべて複数の貢献者によりチェックされているため、ウイルスなどを隠すことはできません。
+Scratchのアカウント情報や拡張機能設定は、ブラウザー内にとどまります。詳細はプライバシーポリシーを参照してください。
+Scratch Addonsについて、Scratch上で言及していいですか? できません - しないでください。方針により、拡張機能等の宣伝は禁止されています。ただし、Scratch外であれば、問題はありません。
+どうやってScratch Addonsに貢献できますか? Scratch Addonsへの貢献を考えてくれて、ありがとございます。
+オープンソースプロジェクトとして、どのような貢献も歓迎します。特別な役職は必要ありません。だれでも参加できます。
+以下のような方法があります:
+コードを貢献する
+JavaScript、HTML5、CSSの知識がある場合は、コーディングで貢献できます。バグを修正したり、機能追加の要請にこたえたり、自分のアドオンを作れます。
+リポジトリをフォークした後は、変更をし、プルリクエストを送信できます。その後開発者たちがマージします。
+拡張機能以外への貢献も大歓迎です。GitHub ページでリポジトリの一覧を確認できます。
+提案する
+Scratch Addonsにほしい機能がありますか? 提案してみましょう!
+バグを報告する
+アドオンや設定ページなど、拡張機能に問題がある場合は、バグレポートを送信できます。
+翻訳する
+英語以外の言語を話す場合は、Scratch Addonの翻訳に協力できます。なお、日本語の翻訳者は受け付けていません。詳細を確認できます。</description></item><item><title>Joining the Localization Team</title><link>https://scratchaddons.com/ja/docs/localization/joining-the-localization-team/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/localization/joining-the-localization-team/</guid><description>Already translated: Italian, Japanese, Portuguese, Slovenian and Spanish. We won&amp;rsquo;t be accepting any new translators for these languages.
+Thanks for being interested on volunteering to translate Scratch Addons to other languages!
+Scratch Addons is a non-profit open source project where volunteer web developers maintain the extension and create its addons.
+Even if you haven&amp;rsquo;t ever coded a single line of JavaScript, you can still help us achieve our goal of making everyone&amp;rsquo;s experience with Scratch better!</description></item><item><title>Localizing Addons</title><link>https://scratchaddons.com/ja/docs/localization/localizing-addons/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/localization/localizing-addons/</guid><description>Localizing addons is easy.
+Adding messages Under addons-l10n/en/, make a file named ADDONID.json, where ADDONID is the addon&amp;rsquo;s ID (the folder name). Write your messages that you want to translate there:
+{ &amp;#34;ADDONID/meow&amp;#34;: &amp;#34;Meow&amp;#34;, &amp;#34;ADDONID/cats&amp;#34;: &amp;#34;{number, plural, one {1 cat} other {# cats}}&amp;#34;, &amp;#34;ADDONID/eat&amp;#34;: &amp;#34;I want to eat {food}!&amp;#34;, &amp;#34;ADDONID/salmon&amp;#34;: &amp;#34;salmon&amp;#34;, &amp;#34;ADDONID/sardine&amp;#34;: &amp;#34;sardine&amp;#34; } Placeholders Sometimes messages need to have things that are dynamically generated. For example, number of cats, or input.</description></item><item><title>Scratch Addons 設定</title><link>https://scratchaddons.com/ja/extension-settings/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/extension-settings/</guid><description>Scratch Addons 設定 Scratch Addons 設定画面のアクセス方法 ステップ 1 Scratch Addons拡張機能アイコンをクリック ブラウザーの右上にあります。Google Chromeでは、パズルのアイコンをクリックしてください。
+ステップ 2 歯車アイコンで設定ページに行く 設定ページが開きます。ここで、拡張機能を設定できます。
+ステップ 3 アドオンのリストから、使いたいものを有効化する アドオンには、さらに細かく設定できるものもあります。</description></item><item><title>Userscripts</title><link>https://scratchaddons.com/ja/docs/develop/addon-types/userscripts/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/develop/addon-types/userscripts/</guid><description>What are they? Userscripts allow you to run code along Scratch pages - you can do stuff like add buttons, enhance the Scratch editor, or anything you can imagine.
+How do I add a userscript? Make sure to refresh Scratch Addons from chrome://extensions after doing any changes to your addon.
+Go to the manifest of your addon (addon.json) and add a property called userscripts&amp;quot;.
+This property must be an array.</description></item><item><title>Userstyles</title><link>https://scratchaddons.com/ja/docs/develop/addon-types/userstyles/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/develop/addon-types/userstyles/</guid><description>What are they? Userstyles allows you to inject CSS on the Scratch website - useful to make the buttons you add with userscripts colorful, or to customize native Scratch element.
+How do I add a userstyle? Make sure to refresh Scratch Addons from chrome://extensions after doing any changes to your addon.
+Go to the manifest of your addon (addon.json) and add a property called &amp;quot;userstyles&amp;quot;.
+This property must be an array.</description></item><item><title>アドオン</title><link>https://scratchaddons.com/ja/addons/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/addons/</guid><description>アドオン Scratch Addonsのすべてのアドオンを掲載しています。
+スクリーンショットの撮影に協力してくれる人を募集しています。
+139 アドオン
+一覧表示
+イースターエッグ
+2D カラーピッカー
+2d-color-picker コスチュームエディターの鮮やかさと明るさのスライダーを2Dカラーピッカーにする。Shiftキーを押して一方のみを変更する。
+60FPSモード
+🌟
+60fps 緑の旗をAltキーを押しながらクリックして60FPSにする。
+何もしないアドオン
+🥚
+account-settings-capitalize 何もしないアドオン。
+サムネイル設定
+🌟
+animated-thumb プロジェクトのサムネイルを設定するボタンを、プロジェクトページの右下に追加する。
+絵文字の変更
+better-emojis コメント欄の絵文字をベクター画像に変える。
+プロフィールページバナー
+⭐
+better-featured-project プロフィールページの注目のプロジェクト表示をバナーにする。
+画像のHD アップロード
+⚠️
+better-img-uploads 「コスチュームをアップロード」ボタンの上に、画像を自動的にSVGに変換して画質を保つ「HDアップロード」ボタンを追加する。
+選択範囲を引用
+better-quoter フォーラム投稿の一部を選択し、Quoteボタンを押して選択範囲を引用する。
+ビットマップ画像をコピー
+bitmap-copy ペイントエディターでビットマップ画像をコピー可能にする。
+Ctrlキーでブロックをつかむ
+⭐
+block-cherry-picking Ctrlキーを押している間、ブロックをつかむとそのブロックだけが移動するようにする。
+ブロックカウント
+block-count エディターのメニューバーに合計ブロック数を表示する。
+Altキーでスクリプトを複製
+⭐
+block-duplicate Altキーを押したままスクリプトをドラッグし、スクリプトを複製する。Ctrlキーも押すと、ブロックを個別に複製できる。
+ブロックパレットアイコン
+⭐
+block-palette-icons ブロックパレットのカテゴリーにアイコンを追加する。
+ブロック置換
+🌟
+block-switching ブロックを右クリックして類似のブロックに変える。
+ブロックを画像に出力
+blocks2image コードエリアを右クリックしてブロックをSVG/PNGとして出力する。
+キャットブロック
+⭐
+cat-blocks 2020年のエイプリルフールの「キャットブロック」を追加する。
+クローンカウンター
+🌟
+clones クローンの合計数をステージの上に表示する。</description></item><item><title>クレジット</title><link>https://scratchaddons.com/ja/credits/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/credits/</guid><description>クレジット 貢献者 Scratch Addonsや、機能、テーマ、ウェブサイトなどに貢献していただき、ありがとうございます。(emoji key)
+どんな貢献でも大歓迎です! 貢献しましたか? 以下に名前を記載する方法を ここで確認できます。
+このプロジェクトはall-contributors仕様を利用しています。貢献者のリポジトリを閲覧できます。
+WorldLanguages
+📆🚧🤔💼🌍🫂
+574
+apple502j
+🚧🛡️🐛🌍
+718
+tb148
+💻🔧
+24
+BoomerScratch
+💻
+35
+Explosion-Scratch
+💻📖🤔🐛🫂
+9
+GrahamSH-LLK
+💻🤔📖🎨
+297
+mxmou
+💻💡🌍
+194
+griffpatch
+💻💼
+5
+Hans5958
+💻📖🤔🔧💡
+889
+GDUcrash
+💻🎨
+16
+jeffalo
+💻🤔📹
+29
+GarboMuffin
+💻
+119
+towerofnix
+💻
+6
+NoobTracker
+💻🤔
+4
+lholliger
+💻
+easrng
+💻
+4
+devxan
+🐛🤔📖🫂
+2
+retronbv
+💻🤔🫂
+2
+PlatinumPhoenix
+🤔
+scratchusernamemrtbts
+🤔🐛🌍💻
+1
+DroneBetter</description></item><item><title>ご利用ありがとうございました。</title><link>https://scratchaddons.com/ja/farewell/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/farewell/</guid><description> ご利用ありがとうございました。 Scratch Addonsはアンインストールされました。ご利用ありがとうございました。
+上のボタンで再インストールできます。また、Chrome拡張機能のページやFirefox アドオンのページでレビューを送信できます。
+以下も試してみてください:
+問題が発生しましたか? フィードバックを投稿するか、GitHubで投稿してください。 探していた機能が見当たりませんか? フィードバックを投稿するか、GitHub IssueやDiscussionsで提案してください。 意見がありますか? ここにて投稿できます。</description></item><item><title>フィードバックを送信</title><link>https://scratchaddons.com/ja/feedback/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/feedback/</guid><description>フィードバックを送信 Scratch Addonsについて意見がありますか? ここで投稿できます。
+Scratchのユーザー名 (任意)
+フィードバック
+現在有効のアドオンの一覧を送信する (推奨)
+送信
+あるいは 以下の方法でもやりとりできます。
+リポジトリにてIssueを作成する。 Discussionsページにて投稿する。 Discordサーバーにてメッセージを送信する。 Discord、Twitterなどで連絡する。 Scratchの規約上、Scratch上で連絡を取ることは禁止されています。
+FAQページ も参照してください。</description></item><item><title>ブラウザーはサポートされていません</title><link>https://scratchaddons.com/ja/unsupported-browser/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/unsupported-browser/</guid><description> ブラウザーはサポートされていません Scratch Addonsは、このブラウザーでは動作しません。 最新のChrome、Firefoxなどのブラウザーを使用してください:
+Chromium 80+ Chrome 80+ ダウンロード 更新方法 Microsoft Edge 80+ ダウンロード 更新方法 Opera 67+ ダウンロード 更新方法 Brave 1.3+ ダウンロード Vivaldi 2.11+ ダウンロード 更新方法 システム要件: Windows 7+ OS X/MacOS 10.11+ 過去6年間に製造されたChromebook Firefox 86+ Firefox 86+ ダウンロード 更新方法 システム要件: Windows 7+ OS X / MacOS 10.12+</description></item><item><title>ようこそ!</title><link>https://scratchaddons.com/ja/welcome/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/welcome/</guid><description>ようこそ! Scratch Addonsがインストールされました!
+インストールありがとうございます。ぜひ、この拡張機能をお楽しみください。
+始め方 ステップ 1 Scratch Addons拡張機能アイコンをクリック ブラウザーの右上にあります。Google Chromeでは、パズルのアイコンをクリックしてください。
+ステップ 2 歯車アイコンで設定ページに行く 設定ページが開きます。ここで、拡張機能を設定できます。
+ステップ 3 アドオンのリストから、使いたいものを有効化する アドオンには、さらに細かく設定できるものもあります。
+支援したいですか? GitHub リポジトリにスターしたり、Chrome 拡張機能ページやFirefox アドオンページにてレビューを投稿できます。</description></item><item><title>拡張機能の更新</title><link>https://scratchaddons.com/ja/scratch-messaging-transition/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/scratch-messaging-transition/</guid><description>Scratch Messaging拡張機能はScratch Addonsになりました! どうしたのですか? griffpatchのScratch Messaging Extensionは、Scratch Addonsに更新されました。
+Scratch Addonsアイコンをクリックして新しいメッセージを確認できます!
+Scratch Addonsには、他の機能も追加されています。Scratch Addons設定にて有効化できます。
+たとえば、Scratch通知をオンにすると、メッセージを受け取った時にブラウザ通知が届きます。
+エディターのダークモードや読み込み進捗バーなど、Scratchプロジェクトのテーマや機能も利用できます。
+Scratch Addonsとは? Scratch Addonsは、Scratchのためのブラウザ拡張機能です。Scratchウェブサイトやプロジェクトエディター用の機能やテーマを提供します。
+Scratch Addonsは完全無料、オープンソースソフトウェアです。ソースコードはGitHubで閲覧、貢献できます。
+バグ修正、新機能、テーマなどが、一週間から一か月間隔でリリースされます。
+何かしないといけないことはありますか? いいえ。
+Scratch Messaging Extensionはすでにアップデートされました。Scratch Addonsアイコンをクリックして、Scratchメッセージを通常通り使うことができます。
+他の機能を有効化したい場合は、アイコンをクリックして歯車アイコンをクリックし、設定ページに行ってください。
+フィードバックを送る 意見がありますか? フィードバックを送信できます。
+または、GitHubにてIssueを投稿できます。</description></item><item><title>更新履歴</title><link>https://scratchaddons.com/ja/changelog/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/changelog/</guid><description>更新履歴 主要な更新内容が以下に掲載されます。
+注意:ここに掲載されていないものを含めた内容に関しては、詳細な更新履歴を参照してください。
+v1.27.3 2022-07-22 最新 ¶ Bug fix: &amp;ldquo;hide stage and sprite pane&amp;rdquo; hiding the stage in project pages Bug fix: &amp;ldquo;auto-hide block palette&amp;rdquo; not updating workspace metrics after changing settings リンク GitHubのリリースページ リリース時のリポジトリ 前バージョンとのコード比較 v1.27.2 2022-07-20 ¶ Bug fix: &amp;ldquo;hide stage and sprite pane&amp;rdquo; crashing the page if &amp;ldquo;touching mouse pointer&amp;rdquo; block runs while the stage is hidden リンク GitHubのリリースページ リリース時のリポジトリ 前バージョンとのコード比較 v1.27.1 2022-07-17 ¶ Bug fix: &amp;ldquo;auto-hide block palette&amp;rdquo; causing editor crash after clicking &amp;ldquo;make new block&amp;rdquo; Bug fix: &amp;ldquo;project progress bar&amp;rdquo; not working and showing a vertical bar リンク GitHubのリリースページ リリース時のリポジトリ 前バージョンとのコード比較 v1.</description></item><item><title>設定名にアイコンを加える</title><link>https://scratchaddons.com/ja/docs/develop/adding-an-icon-to-a-setting-name/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://scratchaddons.com/ja/docs/develop/adding-an-icon-to-a-setting-name/</guid><description>クラッシュを引き起こさずに設定名にアイコンを加えるには、
+ファイル名にハイフンは利用できない。 @アイコンファイル名.svg 設定名とaddon.jsonに書く。 存在しない場合は、/images/icons/にアイコンファイル名.svgを追加する。 /background/load-addon-manifests.jsを編集し、アイコンファイル名Icon: &amp;quot;@アイコンファイル名.svg&amp;quot;,を追加する。 Scratch 通知の設定では、/addons/scratch-notifier/notifier.jsを編集する。</description></item></channel></rss>

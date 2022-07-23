@@ -1,0 +1,213 @@
+<!doctype html><html lang=ca>
+<head>
+<title>Userscripts - Scratch Addons Docs</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="Els userscripts permeten executar codi a les pàgines de Scratch: pots fer coses com afegir botons, millorar l'editor de Scratch o qualsevol cosa que imaginis.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/ca/docs/develop/addon-types/userscripts/">
+<meta property="og:title" content="Userscripts">
+<meta property="og:description" content="Els userscripts permeten executar codi a les pàgines de Scratch: pots fer coses com afegir botons, millorar l'editor de Scratch o qualsevol cosa que imaginis.">
+<meta property="og:site_name" content="Scratch Addons Docs">
+<meta property="og:locale" content="ca">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/ca/docs/develop/addon-types/userscripts/">
+<meta name=twitter:title content="Userscripts - Scratch Addons Docs">
+<meta name=twitter:description content="Els userscripts permeten executar codi a les pàgines de Scratch: pots fer coses com afegir botons, millorar l'editor de Scratch o qualsevol cosa que imaginis.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=alternate hreflang=en href=https://scratchaddons.com/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=pl href=https://scratchaddons.com/pl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=tr href=https://scratchaddons.com/tr/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=fr href=https://scratchaddons.com/fr/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=sl href=https://scratchaddons.com/sl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=it href=https://scratchaddons.com/it/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ar href=https://scratchaddons.com/ar/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=bg href=https://scratchaddons.com/bg/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=cs href=https://scratchaddons.com/cs/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=de href=https://scratchaddons.com/de/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=es href=https://scratchaddons.com/es/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=fa href=https://scratchaddons.com/fa/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=id href=https://scratchaddons.com/id/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ja href=https://scratchaddons.com/ja/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ko href=https://scratchaddons.com/ko/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=nb href=https://scratchaddons.com/nb/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=nl href=https://scratchaddons.com/nl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=pt-br href=https://scratchaddons.com/pt-br/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ro href=https://scratchaddons.com/ro/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ru href=https://scratchaddons.com/ru/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=sv href=https://scratchaddons.com/sv/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=th href=https://scratchaddons.com/th/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=vi href=https://scratchaddons.com/vi/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=zh-cn href=https://scratchaddons.com/zh-cn/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=zh-tw href=https://scratchaddons.com/zh-tw/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=hu href=https://scratchaddons.com/hu/docs/develop/addon-types/userscripts/>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ca/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons logo'></img>
+<span>Scratch Addons Docs</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Canvia la navegació'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class="nav-item dropdown hide-from-spiders">
+<a class="nav-link dropdown-toggle" href=# id=navbar-languages role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>català</a>
+<div class=dropdown-menu aria-labelledby=navbar-languages>
+<a class=dropdown-item href=https://scratchaddons.com/docs/develop/addon-types/userscripts/>English</a><a class=dropdown-item href=https://scratchaddons.com/pl/docs/develop/addon-types/userscripts/>polski</a><a class=dropdown-item href=https://scratchaddons.com/tr/docs/develop/addon-types/userscripts/>Türkçe</a><a class=dropdown-item href=https://scratchaddons.com/fr/docs/develop/addon-types/userscripts/>français</a><a class=dropdown-item href=https://scratchaddons.com/sl/docs/develop/addon-types/userscripts/>slovenščina</a><a class=dropdown-item href=https://scratchaddons.com/it/docs/develop/addon-types/userscripts/>italiano</a><a class=dropdown-item href=https://scratchaddons.com/ar/docs/develop/addon-types/userscripts/>العربية</a><a class=dropdown-item href=https://scratchaddons.com/bg/docs/develop/addon-types/userscripts/>български</a><a class=dropdown-item href=https://scratchaddons.com/cs/docs/develop/addon-types/userscripts/>čeština</a><a class=dropdown-item href=https://scratchaddons.com/de/docs/develop/addon-types/userscripts/>Deutsch</a><a class=dropdown-item href=https://scratchaddons.com/es/docs/develop/addon-types/userscripts/>español</a><a class=dropdown-item href=https://scratchaddons.com/fa/docs/develop/addon-types/userscripts/>فارسی</a><a class=dropdown-item href=https://scratchaddons.com/id/docs/develop/addon-types/userscripts/>Indonesia</a><a class=dropdown-item href=https://scratchaddons.com/ja/docs/develop/addon-types/userscripts/>日本語</a><a class=dropdown-item href=https://scratchaddons.com/ko/docs/develop/addon-types/userscripts/>한국어</a><a class=dropdown-item href=https://scratchaddons.com/nb/docs/develop/addon-types/userscripts/>norsk bokmål</a><a class=dropdown-item href=https://scratchaddons.com/nl/docs/develop/addon-types/userscripts/>Nederlands</a><a class=dropdown-item href=https://scratchaddons.com/pt-br/docs/develop/addon-types/userscripts/>português (Brasil)</a><a class=dropdown-item href=https://scratchaddons.com/ro/docs/develop/addon-types/userscripts/>română</a><a class=dropdown-item href=https://scratchaddons.com/ru/docs/develop/addon-types/userscripts/>русский</a><a class=dropdown-item href=https://scratchaddons.com/sv/docs/develop/addon-types/userscripts/>svenska</a><a class=dropdown-item href=https://scratchaddons.com/th/docs/develop/addon-types/userscripts/>ไทย</a><a class=dropdown-item href=https://scratchaddons.com/vi/docs/develop/addon-types/userscripts/>Tiếng Việt</a><a class=dropdown-item href=https://scratchaddons.com/zh-cn/docs/develop/addon-types/userscripts/>中文（中国）</a><a class=dropdown-item href=https://scratchaddons.com/zh-tw/docs/develop/addon-types/userscripts/>中文（台灣）</a><a class=dropdown-item href=https://scratchaddons.com/hu/docs/develop/addon-types/userscripts/>magyar</a>
+</div></li><li class=nav-item><a class=nav-link href=/ca/credits>Crèdits</a></li><li class=nav-item><a class=nav-link href=/ca/feedback>Enviar comentaris</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label='Repositori a Github' rel=noopener>Repositori <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/ca/#install>Instal·la</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Commuta la barra lateral de navegació de documents'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Navegació de documents</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>Taula de continguts</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='Commuta la barra lateral de la taula de continguts'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/ca/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-cadocs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-cadocsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Començant</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-cadocsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-cadocsgetting-startedquick-start href=/ca/docs/getting-started/quick-start/>Quick Start</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsgetting-startedinstalling href=/ca/docs/getting-started/installing/>Instal·lació</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-cadocsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/develop/ class="docs-nav-page pl-0 pr-2 active">Desenvolupament</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-cadocsdevelop><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-cadocsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Començant</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-cadocsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-cadocsdevelopgetting-startedaddon-basics href=/ca/docs/develop/getting-started/addon-basics/>Addon Basics</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsdevelopgetting-startedcreating-an-addon href=/ca/docs/develop/getting-started/creating-an-addon/>Creació d&rsquo;un Addon</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-cadocsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 active">Tipus d&rsquo; Addons</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-cadocsdevelopaddon-types>
+<li>
+<a class="docs-nav-page active" id=docs-nav-page-cadocsdevelopaddon-typesuserscripts href=/ca/docs/develop/addon-types/userscripts/>Userscripts</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsdevelopaddon-typesuserstyles href=/ca/docs/develop/addon-types/userstyles/>Userstyles</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsdevelopadding-an-icon-to-a-setting-name href=/ca/docs/develop/adding-an-icon-to-a-setting-name/>Adding an Icon to a Setting Name</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-cadocslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/ca/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-cadocslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-cadocslocalizationjoining-the-localization-team href=/ca/docs/localization/joining-the-localization-team/>Joining the Localization Team</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocslocalizationlocalizing-addons href=/ca/docs/localization/localizing-addons/>Localizing Addons</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-cadocsfaq href=/ca/docs/faq/>Preguntes freqüents / FAQ</a>
+</li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1>Userscripts</h1><h2 id=que-són>Que són? <a href=#que-s%c3%b3n class=anchor aria-label=Anchor></a></h2><p>Els userscripts permeten executar codi a les pàgines de Scratch: pots fer coses com afegir botons, millorar l&rsquo;editor de Scratch o qualsevol cosa que imaginis.</p><h2 id=com-puc-afegir-un-userscript>Com puc afegir un userscript? <a href=#com-puc-afegir-un-userscript class=anchor aria-label=Anchor></a></h2><p><strong>Assegura&rsquo;t d&rsquo;actualitzar el Scratch Addons des de <code>chrome://extensions</code> després de fer qualsevol canvi al teu addon.</strong>
+Vés al manifest del teu addon (addon.json) i afegeix una propietat anomenada <code>userscripts"</code>.
+Aquesta propietat ha de ser a una matriu.
+Cada element de la matriu ha de tenir les propietats següents: <code>"url"</code> i <code>"matches"</code>.
+<code>"url"</code> ha de ser un URL relatiu a un fitxer JavaScript.
+<code>"matches"</code> ha de ser una matriu d&rsquo;URL on vols executar l&rsquo;userscript. Pots utilitzar asteriscs.
+Exemple de manifest:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Scratch Messaging&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Provides easy reading and replying to your Scratch messages.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;userscripts&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;userscript.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/*&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;second_userscript.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/projects/*&#34;</span><span class=p>,</span> <span class=s2>&#34;https://scratch.mit.edu/users/*&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;tags&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;community&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;enabledByDefault&#34;</span><span class=p>:</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=com-es-veu-el-fitxer-javascript>Com es veu el fitxer JavaScript? <a href=#com-es-veu-el-fitxer-javascript class=anchor aria-label=Anchor></a></h2><p>Els fitxers Userscripts JS requereixen una estructura específica per funcionar.
+Per als scripts d&rsquo;usuari, <strong>has</strong> d&rsquo;embolicar tot el teu codi dins d&rsquo;una funció semblant a aquesta:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=kr>await</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>fetchUsername</span><span class=p>());</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>Si vols escriure les vostres pròpies funcions per tenir un codi més net, hauríes d&rsquo;incloure-les dins de la funció principal:
+<strong>Això funcionarà:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// This works!
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>sayHello</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>sayHello</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=kr>await</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>fetchUsername</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p><strong>Això NO funcionarà:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// This WON&#39;T work!
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>sayHello</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>sayHello</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=kr>await</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>fetchUsername</span><span class=p>());</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Error: addon is not defined!
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></div><h2 id=addon-apisdocsdevelopingaddon-apis-reference><a href=/docs/developing/addon-apis-reference><code>addon.*</code> APIs</a> <a href=#addon-apisdocsdevelopingaddon-apis-reference class=anchor aria-label=Anchor></a></h2><p>Podeu accedir a algunes API <code>addon.*</code> des dels userscripts. Per a més informació, consulta la documentació.</p><h2 id=aspectes-tècnics-dels-userscripts>Aspectes tècnics dels userscripts <a href=#aspectes-t%c3%a8cnics-dels-userscripts class=anchor aria-label=Anchor></a></h2><p>Userscripts s&rsquo;executen després de que la pàgina Scratch s&rsquo;hagi carregat completament, és a dir, s&rsquo;executen en mode <code>defer</code>.
+Tècnicament parlant, cada userscript és un mòdul JavaScript que exporta una funció. Els mòduls JavaScript sempre s&rsquo;executen en &ldquo;strict mode&rdquo;.
+Això vol dir que els userscripts del mateix addon NO comparteixen variables i funcions! Si vols fer-ho, hauríes d&rsquo;utilitzar l&rsquo;objecte <code>global</code> (més informació a continuació).
+A continuació, Scratch Addons crida als mòduls de funció exportats, donant-li accés a les API <code>addon.*</code>, així com a wrappers especials:</p><ul>
+<li><code>addon</code>: dóna accés als userscripts a les <a href=/docs/developing/addon-apis-reference><code>addon.*</code> API</a>.</li><li><code>global</code>: aquest és un objecte compartit entre tots els userscripts del mateix complement. <strong>Exemple d&rsquo;ús:</strong></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// userscript-1.js
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>global</span><span class=p>.</span><span class=nx>sayHello</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>fetchUsername</span><span class=p>());</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// userscript-2.js
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>global</span><span class=p>.</span><span class=nx>sayHello</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Això funciona, sempre que al manifest del addon, userscript-1.js estigui abans que userscript-2.js a la matriu userscripts.
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></div><ul>
+<li><code>console</code>: aquest és un wrapper que permet veure quin addon ha activat el registre que esteu veient fàcilment.</li></ul><h2 id=depuració-duserscripts>Depuració d&rsquo;userscripts <a href=#depuraci%c3%b3-duserscripts class=anchor aria-label=Anchor></a></h2><p><strong>Assegura&rsquo;t d&rsquo;actualitzar els complements de Scratch des de <code>chrome://extensions</code> després de fer qualsevol canvi al teu addon.</strong>
+Per depurar els userscripts, primer assegura&rsquo;ts que el teu addon estigui habilitat.
+A continuació, vés a un URL on has especificat que s&rsquo;hauria d&rsquo;executar el vostre userscript.
+Obre la consola prement Ctrl+Maj+J.
+Hauríes de veure els registres de la consola dels addons, inclòs el teu. Si ets un professional del devtools, no tindrás cap problema per establir punts d&rsquo;interrupció al teu codi.
+Suggeriment: si vols provar l&rsquo;API <code>addon.*</code> sense canviar el fitxer cada vegada, fes que el teu addon sigui <code>window.addon = addon;</code> (dins de la funció principal) i podrás accedir al <code>addon</code> del teuaddon objecte de complement des de la consola. Assegura&rsquo;t d&rsquo;eliminar aquesta línia abans de contribuir a aquest repo! Els Userscripts no han de contaminar l&rsquo;objecte global.</p></article><hr>
+<p class=text-muted>
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/develop/addon-types/userscripts.md>Millora aquesta pàgina.</a>
+</p><div id=comments class=mt-4><h3>Comentaris</h3><p class=mb-3>Assegureu-vos de seguir <a href=/docs/policies/code-of-conduct>el codi de conducta</a>. Pots veure aquesta secció de comentaris a les <a class=link-to-search>Discussions de GitHub</a>, així com editar i eliminar el teu comentari.</p><div class=giscus></div><script async defer src=/assets/js/comments.js></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#que-són>Que són?</a></li><li><a href=#com-puc-afegir-un-userscript>Com puc afegir un userscript?</a></li><li><a href=#com-es-veu-el-fitxer-javascript>Com es veu el fitxer JavaScript?</a></li><li><a href=#addon-apisdocsdevelopingaddon-apis-reference><a href=/docs/developing/addon-apis-reference><code>addon.*</code> APIs</a></a></li><li><a href=#aspectes-tècnics-dels-userscripts>Aspectes tècnics dels userscripts</a></li><li><a href=#depuració-duserscripts>Depuració d&rsquo;userscripts</a></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Fes clic per canviar el tema fosc.' aria-label='Canvi de tema fosc' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/ca/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons' class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<p class="mb-3 small">Actualment 1.27.3 amb 139 addons.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Pàgines</h3><a href=/ca/docs/faq>FAQ</a>
+<a href=/ca/feedback>Enviar comentaris</a>
+<a href=/ca/credits>Crèdits</a>
+<a href=/ca/changelog>Historial de canvis</a>
+<a href=/ca/addons>Addons</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Discutiu</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Fòrum de discussió</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Problemes</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Discord de la comunitat</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Discord de desenvolupament</a>
+</section><section>
+<h3>Recursos</h3><a href=https://github.com/ScratchAddons rel=noopener>Organització</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repositori</a>
+<a href=/ca/docs rel=noopener>Documentació</a>
+<a href=/docs/policies/privacy/website rel=noopener>Política de privacitat</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Col·laboradors de Scratch Addons</p><p>Scratch Addons no està afiliat, associat o connectat de cap manera oficial amb Scratch, el Scratch Team, la Scratch Foundation o cap de les seves filials o afiliats.</p><p class=mb-0>Scratch Addons té llicència sota els termes de la GNU General Public License v3.0.</p></section></div></footer></body></html>

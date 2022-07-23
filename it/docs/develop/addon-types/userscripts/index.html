@@ -1,0 +1,213 @@
+<!doctype html><html lang=it>
+<head>
+<title>Userscript - Documentazione Scratch Addon</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="Gli userscript ti permettono di eseguire del codice all'interno delle pagine di Scratch - puoi aggiungere pulsanti, migliorare l'editor di Scratch e fare tutto quello che ti viene in mente.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/it/docs/develop/addon-types/userscripts/">
+<meta property="og:title" content="Userscript">
+<meta property="og:description" content="Gli userscript ti permettono di eseguire del codice all'interno delle pagine di Scratch - puoi aggiungere pulsanti, migliorare l'editor di Scratch e fare tutto quello che ti viene in mente.">
+<meta property="og:site_name" content="Documentazione Scratch Addon">
+<meta property="og:locale" content="it">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Logo degli Scratch Addon">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/it/docs/develop/addon-types/userscripts/">
+<meta name=twitter:title content="Userscript - Documentazione Scratch Addon">
+<meta name=twitter:description content="Gli userscript ti permettono di eseguire del codice all'interno delle pagine di Scratch - puoi aggiungere pulsanti, migliorare l'editor di Scratch e fare tutto quello che ti viene in mente.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Logo degli Scratch Addon">
+<link rel=alternate hreflang=en href=https://scratchaddons.com/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=pl href=https://scratchaddons.com/pl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=tr href=https://scratchaddons.com/tr/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=fr href=https://scratchaddons.com/fr/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=sl href=https://scratchaddons.com/sl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ar href=https://scratchaddons.com/ar/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=bg href=https://scratchaddons.com/bg/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ca href=https://scratchaddons.com/ca/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=cs href=https://scratchaddons.com/cs/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=de href=https://scratchaddons.com/de/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=es href=https://scratchaddons.com/es/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=fa href=https://scratchaddons.com/fa/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=id href=https://scratchaddons.com/id/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ja href=https://scratchaddons.com/ja/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ko href=https://scratchaddons.com/ko/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=nb href=https://scratchaddons.com/nb/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=nl href=https://scratchaddons.com/nl/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=pt-br href=https://scratchaddons.com/pt-br/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ro href=https://scratchaddons.com/ro/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=ru href=https://scratchaddons.com/ru/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=sv href=https://scratchaddons.com/sv/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=th href=https://scratchaddons.com/th/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=vi href=https://scratchaddons.com/vi/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=zh-cn href=https://scratchaddons.com/zh-cn/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=zh-tw href=https://scratchaddons.com/zh-tw/docs/develop/addon-types/userscripts/><link rel=alternate hreflang=hu href=https://scratchaddons.com/hu/docs/develop/addon-types/userscripts/>
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/it/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Logo degli Scratch Addon'></img>
+<span>Documentazione Scratch Addon</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Attiva/disattiva navigazione'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class="nav-item dropdown hide-from-spiders">
+<a class="nav-link dropdown-toggle" href=# id=navbar-languages role=button data-toggle=dropdown aria-haspopup=true aria-expanded=false>italiano</a>
+<div class=dropdown-menu aria-labelledby=navbar-languages>
+<a class=dropdown-item href=https://scratchaddons.com/docs/develop/addon-types/userscripts/>English</a><a class=dropdown-item href=https://scratchaddons.com/pl/docs/develop/addon-types/userscripts/>polski</a><a class=dropdown-item href=https://scratchaddons.com/tr/docs/develop/addon-types/userscripts/>Türkçe</a><a class=dropdown-item href=https://scratchaddons.com/fr/docs/develop/addon-types/userscripts/>français</a><a class=dropdown-item href=https://scratchaddons.com/sl/docs/develop/addon-types/userscripts/>slovenščina</a><a class=dropdown-item href=https://scratchaddons.com/ar/docs/develop/addon-types/userscripts/>العربية</a><a class=dropdown-item href=https://scratchaddons.com/bg/docs/develop/addon-types/userscripts/>български</a><a class=dropdown-item href=https://scratchaddons.com/ca/docs/develop/addon-types/userscripts/>català</a><a class=dropdown-item href=https://scratchaddons.com/cs/docs/develop/addon-types/userscripts/>čeština</a><a class=dropdown-item href=https://scratchaddons.com/de/docs/develop/addon-types/userscripts/>Deutsch</a><a class=dropdown-item href=https://scratchaddons.com/es/docs/develop/addon-types/userscripts/>español</a><a class=dropdown-item href=https://scratchaddons.com/fa/docs/develop/addon-types/userscripts/>فارسی</a><a class=dropdown-item href=https://scratchaddons.com/id/docs/develop/addon-types/userscripts/>Indonesia</a><a class=dropdown-item href=https://scratchaddons.com/ja/docs/develop/addon-types/userscripts/>日本語</a><a class=dropdown-item href=https://scratchaddons.com/ko/docs/develop/addon-types/userscripts/>한국어</a><a class=dropdown-item href=https://scratchaddons.com/nb/docs/develop/addon-types/userscripts/>norsk bokmål</a><a class=dropdown-item href=https://scratchaddons.com/nl/docs/develop/addon-types/userscripts/>Nederlands</a><a class=dropdown-item href=https://scratchaddons.com/pt-br/docs/develop/addon-types/userscripts/>português (Brasil)</a><a class=dropdown-item href=https://scratchaddons.com/ro/docs/develop/addon-types/userscripts/>română</a><a class=dropdown-item href=https://scratchaddons.com/ru/docs/develop/addon-types/userscripts/>русский</a><a class=dropdown-item href=https://scratchaddons.com/sv/docs/develop/addon-types/userscripts/>svenska</a><a class=dropdown-item href=https://scratchaddons.com/th/docs/develop/addon-types/userscripts/>ไทย</a><a class=dropdown-item href=https://scratchaddons.com/vi/docs/develop/addon-types/userscripts/>Tiếng Việt</a><a class=dropdown-item href=https://scratchaddons.com/zh-cn/docs/develop/addon-types/userscripts/>中文（中国）</a><a class=dropdown-item href=https://scratchaddons.com/zh-tw/docs/develop/addon-types/userscripts/>中文（台灣）</a><a class=dropdown-item href=https://scratchaddons.com/hu/docs/develop/addon-types/userscripts/>magyar</a>
+</div></li><li class=nav-item><a class=nav-link href=/it/credits>Crediti</a></li><li class=nav-item><a class=nav-link href=/it/feedback>Invia Feedback</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label='Repository su GitHub' rel=noopener>Archivio <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/it/#install>Installa</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Mostra/nascondi barra di navigazione della documentazione'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Navigazione documentazione</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>Tavola dei contenuti</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='Mostra/nascondi barra della tavola dei contenuti'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/it/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-itdocs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-itdocsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/it/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Per Iniziare</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-itdocsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-itdocsgetting-startedquick-start href=/it/docs/getting-started/quick-start/>Come iniziare subito</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-itdocsgetting-startedinstalling href=/it/docs/getting-started/installing/>Installazione</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-itdocslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/it/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localizzazione</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-itdocslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-itdocslocalizationlocalizing-addons href=/it/docs/localization/localizing-addons/>Localizzazione degli Addon</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-itdocslocalizationjoining-the-localization-team href=/it/docs/localization/joining-the-localization-team/>Unirsi al Team per la Localizzazione</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-itdocsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/it/docs/develop/ class="docs-nav-page pl-0 pr-2 active">Sviluppo</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-itdocsdevelop><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-itdocsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/it/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Come iniziare</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-itdocsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-itdocsdevelopgetting-startedaddon-basics href=/it/docs/develop/getting-started/addon-basics/>Informazioni di Base sugli Addon</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-itdocsdevelopgetting-startedcreating-an-addon href=/it/docs/develop/getting-started/creating-an-addon/>Creare un Addon</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-itdocsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/it/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 active">Tipi di Addon</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-itdocsdevelopaddon-types>
+<li>
+<a class="docs-nav-page active" id=docs-nav-page-itdocsdevelopaddon-typesuserscripts href=/it/docs/develop/addon-types/userscripts/>Userscript</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-itdocsdevelopaddon-typesuserstyles href=/it/docs/develop/addon-types/userstyles/>Userstyle</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-itdocsdevelopadding-an-icon-to-a-setting-name href=/it/docs/develop/adding-an-icon-to-a-setting-name/>Aggiungere un&rsquo;icona a una particolare Impostazione</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-itdocsfaq href=/it/docs/faq/>Domande Frequenti</a>
+</li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1>Userscript</h1><h2 id=cosa-sono>Cosa sono? <a href=#cosa-sono class=anchor aria-label=Anchor></a></h2><p>Gli userscript ti permettono di eseguire del codice all&rsquo;interno delle pagine di Scratch - puoi aggiungere pulsanti, migliorare l&rsquo;editor di Scratch e fare tutto quello che ti viene in mente.</p><h2 id=come-si-fa-ad-aggiungere-uno-userscript>Come si fa ad aggiungere uno userscript? <a href=#come-si-fa-ad-aggiungere-uno-userscript class=anchor aria-label=Anchor></a></h2><p><strong>Assicurati di aggiornare Scratch Addon in <code>chrome://extensions</code> dopo avere apportato qualunque cambiamento al tuo addon.</strong><br>
+Vai al manifest del tuo addon (addon.json) e aggiungi una proprietà chiamata <code>"userscripts"</code>.<br>
+Questa proprietà deve essere un array.<br>
+Ogni elemento dell&rsquo;array deve avere le seguenti proprietà: <code>"url"</code> e <code>"matches"</code>.<br>
+<code>"url"</code> deve essere un URL relativo ad un file JavaScript.<br>
+<code>"matches"</code> deve essere un array di URL in cui vuoi eseguire il tuo userscript. Puoi usare asterischi come caratteri jolly.
+Esempio di manifest:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Scratch Messaging&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;description&#34;</span><span class=p>:</span> <span class=s2>&#34;Provides easy reading and replying to your Scratch messages.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;userscripts&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;userscript.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/*&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;second_userscript.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/projects/*&#34;</span><span class=p>,</span> <span class=s2>&#34;https://scratch.mit.edu/users/*&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;tags&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;community&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;enabled_by_default&#34;</span><span class=p>:</span> <span class=kc>false</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=come-è-fatto-il-file-javascript>Come è fatto il file JavaScript? <a href=#come-%c3%a8-fatto-il-file-javascript class=anchor aria-label=Anchor></a></h2><p>Gli userscript JS per poter funzionare devono avere una precisa struttura.<br>
+Per gli userscript <strong>devi</strong> inserire tutto il tuo codice all&rsquo;interno di una funzione come questa:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>Se vuoi scrivere le tue funzioni in modo che il codice sia più pulito, devi inserirle dentro la funzione principale:<br>
+<strong>Questo funziona:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Questo funziona!
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>sayHello</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=kd>function</span> <span class=nx>sayHello</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p><strong>Questo NON funziona:</strong></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Questo NON funziona!
+</span></span></span><span class=line><span class=cl><span class=c1></span>  <span class=nx>sayHello</span><span class=p>();</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=kd>function</span> <span class=nx>sayHello</span><span class=p>()</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Errore: addon non è definito!
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></div><h2 id=addon-apidocsdevelopingaddon-apis-reference><a href=/docs/developing/addon-apis-reference><code>addon.*</code> API</a> <a href=#addon-apidocsdevelopingaddon-apis-reference class=anchor aria-label=Anchor></a></h2><p>Negli userscript puoi accedere molte delle API <code>addon.*</code>. Per ulteriori informazioni consulta la documentazione.</p><h2 id=aspetti-tecnici-degli-userscript>Aspetti tecnici degli userscript <a href=#aspetti-tecnici-degli-userscript class=anchor aria-label=Anchor></a></h2><p>Gli userscript vengono eseguiti dopo che la pagina Scratch è stata completamente caricata - in altre parole vengono eseguiti in modalità <code>defer</code>.
+In termini tecnici, ogni userscript è un modulo JavaScript che esporta una funzione. I moduli JavaScript vengono sempre eseguiti in &ldquo;strict mode&rdquo;.<br>
+Questo significa che gli userscript dello stesso addon NON condividono variabili e funzioni! Se vuoi farlo devi usare l&rsquo;oggetto <code>global</code> object (vedi qui sotto per ulteriori informazioni).
+Scratch Addon chiama poi questi moduli funzione esportati, dando loro accesso alle API <code>addon.*</code> oltre ad alcuni speciali wrapper:</p><ul>
+<li><code>addon</code>: fornisce allo script persistente accesso alle <a href=/docs/developing/addon-apis-reference><code>addon.*</code> API</a>.</li><li><code>global</code>: questo è un oggetto condiviso tra tutti gli userscript dello stesso addon. <strong>Esempio di uso:</strong></li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-js data-lang=js><span class=line><span class=cl><span class=c1>// userscript-1.js
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>global</span><span class=p>.</span><span class=nx>sayHello</span> <span class=o>=</span> <span class=p>()</span> <span class=p>=&gt;</span> <span class=nx>console</span><span class=p>.</span><span class=nx>log</span><span class=p>(</span><span class=s2>&#34;Hello, &#34;</span> <span class=o>+</span> <span class=nx>addon</span><span class=p>.</span><span class=nx>auth</span><span class=p>.</span><span class=nx>username</span><span class=p>);</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span><span class=line><span class=cl>
+</span></span><span class=line><span class=cl><span class=c1>// userscript-2.js
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=kr>export</span> <span class=k>default</span> <span class=kr>async</span> <span class=kd>function</span> <span class=p>({</span> <span class=nx>addon</span><span class=p>,</span> <span class=nx>global</span><span class=p>,</span> <span class=nx>console</span> <span class=p>})</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nx>global</span><span class=p>.</span><span class=nx>sayHello</span><span class=p>();</span>
+</span></span><span class=line><span class=cl>  <span class=c1>// Questo funziona se, nel manifest dell&#39;addon, userscript-1.js è prima di userscript-2.js nell&#39;array userscripts.
+</span></span></span><span class=line><span class=cl><span class=c1></span><span class=p>}</span>
+</span></span></code></pre></div><ul>
+<li><code>console</code>: questo wrapper ti permette di vedere facilmente quale addon ha attivato il log che stai guardando.</li></ul><h2 id=debug-degli-userscript>Debug degli userscript <a href=#debug-degli-userscript class=anchor aria-label=Anchor></a></h2><p><strong>Assicurati di aggiornare Scratch Addon alla pagina <code>chrome://extensions</code> dopo ogni cambiamento apportato al tuo addon.</strong>
+Per debuggare gli userscript assicurati prima di tutto di abilitare il tuo addon.
+Poi vai all&rsquo;URL dove il tuo userscript dovrebbe essere eseguito.
+Apri la console premendo Ctrl+Shift+J.
+Dovresti vedere i log degli addon, inclusi i tuoi. Se sei un professionista dei devtools non avrai problemi a definire i necessari breakpoint nel tuo codice.
+Suggerimento da professionisti: se vuoi testare la API <code>addon.*</code> senza modificare ogni volta il tuo file, inserisci nel tuo addon l&rsquo;istruzione <code>window.addon = addon;</code> (dentro la funzione principale) così potrai accedere all&rsquo;oggetto <code>addon</code> del tuo addon dalla console. Assicurati di rimuovere questa istruzione prima di rilasciare il tuo contributo in questo repository! Gli userscript non devono &ldquo;sporcare&rdquo; l&rsquo;oggetto global.</p></article><hr>
+<p class=text-muted>
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/develop/addon-types/userscripts.md>Migliora questa pagina.</a>
+</p><div id=comments class=mt-4><h3>Commenti</h3><p class=mb-3>Assicurati di seguire <a href=/docs/policies/code-of-conduct>il codice di comportamento</a>. Puoi vedere questa sezione di commenti su <a class=link-to-search>GitHub Discussions</a> e puoi anche modificare o cancellare il tuo commento. </p><div class=giscus></div><script async defer src=/assets/js/comments.js data-giscus-lang=it></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#cosa-sono>Cosa sono?</a></li><li><a href=#come-si-fa-ad-aggiungere-uno-userscript>Come si fa ad aggiungere uno userscript?</a></li><li><a href=#come-è-fatto-il-file-javascript>Come è fatto il file JavaScript?</a></li><li><a href=#addon-apidocsdevelopingaddon-apis-reference><a href=/docs/developing/addon-apis-reference><code>addon.*</code> API</a></a></li><li><a href=#aspetti-tecnici-degli-userscript>Aspetti tecnici degli userscript</a></li><li><a href=#debug-degli-userscript>Debug degli userscript</a></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Clicca per passare al tema scuro.' aria-label='Passaggio a tema scuro' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/it/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addon' class=mr-2></img>
+<span>Scratch Addon</span>
+</a>
+<p class="mb-3 small">Al momento 1.27.3 con 139 addon.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Pagine</h3><a href=/it/docs/faq>Domande Frequenti</a>
+<a href=/it/feedback>Invia Feedback</a>
+<a href=/it/credits>Crediti</a>
+<a href=/it/changelog>Changelog</a>
+<a href=/it/addons>Gli Addon</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Discuti</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Pagina di Discussione</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Problemi</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Comunità su Discord</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Sviluppo su Discord</a>
+</section><section>
+<h3>Risorse</h3><a href=https://github.com/ScratchAddons rel=noopener>Organizzazione</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Archivio</a>
+<a href=/it/docs rel=noopener>Documentazione</a>
+<a href=/docs/policies/privacy/website rel=noopener>Politica della Privacy</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Sviluppatori degli Scratch Addon</p><p>Scratch Addon non è affiliato, associato o connesso ufficialmente in alcun modo con Scratch, lo Scratch Team, la Scratch Foundation o qualunque loro filiale o affiliata.</p><p class=mb-0>Scratch Addon è concesso in licenza secondo i termini della GNU General Public License v3.0.</p></section></div></footer></body></html>

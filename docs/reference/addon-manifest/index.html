@@ -1,0 +1,446 @@
+<!doctype html><html lang=en>
+<head>
+<title>Addon Manifest - Scratch Addons Docs</title><meta charset=utf-8>
+<meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name=description content="In order to tell the addon loader how the addon plans to work, addons use a standard addon.json file located at the root of the addon's folder.">
+<meta name=author content>
+<link rel=icon href=/assets/img/icon.png>
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://scratchaddons.com/docs/reference/addon-manifest/">
+<meta property="og:title" content="Addon Manifest">
+<meta property="og:description" content="In order to tell the addon loader how the addon plans to work, addons use a standard addon.json file located at the root of the addon's folder.">
+<meta property="og:site_name" content="Scratch Addons Docs">
+<meta property="og:locale" content="en">
+<meta property="og:image" content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta property="og:image:type" content="image/png">
+<meta property="og:image:width" content="384">
+<meta property="og:image:height" content="384">
+<meta property="og:image:alt" content="Scratch Addons logo">
+<meta name=twitter:card content="summary">
+<meta name=twitter:url content="https://scratchaddons.com/docs/reference/addon-manifest/">
+<meta name=twitter:title content="Addon Manifest - Scratch Addons Docs">
+<meta name=twitter:description content="In order to tell the addon loader how the addon plans to work, addons use a standard addon.json file located at the root of the addon's folder.">
+<meta name=twitter:image content="https://scratchaddons.com/assets/img/icon-square.png">
+<meta name=twitter:image:alt content="Scratch Addons logo">
+<link rel=stylesheet href=https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css crossorigin>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/base.css>
+<script src=https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1,npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@1.0.7 crossorigin></script>
+<script async src=/assets/js/website-base.js></script>
+<script async defer data-domain=scratchaddons.com src=/assets/js/plausible.js></script>
+<script>window.plausible=window.plausible||function(){(window.plausible.q=window.plausible.q||[]).push(arguments)}</script>
+<link rel=stylesheet href=https://scratchaddons.com/assets/css/docs.css>
+<script src=https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js integrity="sha256-gubREDR9KS63knQ5UnyEERKZ0VwGIblzagmc3mzgIM8=" crossorigin=anonymous defer></script>
+<script defer src=/assets/js/docs.js></script>
+</head><body>
+<header>
+<nav class="navbar navbar-expand-md navbar-dark">
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons logo'></img>
+<span>Scratch Addons Docs</span>
+</a>
+<button class=navbar-toggler type=button data-toggle=collapse data-target=#navbar-collapsible aria-controls=navbar-collapsible aria-expanded=false aria-label='Toggle navigation'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="collapse navbar-collapse" id=navbar-collapsible>
+<ul class="navbar-nav ml-md-auto">
+<li class=nav-item><a class=nav-link href=/credits>Credits</a></li><li class=nav-item><a class=nav-link href=/feedback>Send Feedback</a></li><li class=nav-item><a class=nav-link href=https://github.com/ScratchAddons/ScratchAddons aria-label='Repository on GitHub' rel=noopener>Repository <span class=iconify data-icon=simple-icons:github></span></a></li><li class=nav-item id=install-nav><a class="nav-link install-btn ml-md-2" href=/#install>Install</a></li></ul></div></nav></header><div><nav class="navbar navbar-light navbar-expand d-xl-none border-bottom">
+<button class="navbar-toggler d-block align-left d-lg-none" type=button data-toggle=collapse data-target=#docs-pages aria-controls=docs-pages aria-expanded=false aria-label='Toggle docs navigation sidebar'>
+<span class=navbar-toggler-icon></span>
+</button>
+<div class="flex-grow-1 align-items-center mx-2 d-lg-none">
+<span>Docs navigation</span>
+</div><div class="flex-grow-1 align-items-center mx-2 text-right">
+<span>Table of contents</span>
+</div><button class="navbar-toggler d-block d-xl-none align-right" type=button data-toggle=collapse data-target=#docs-toc aria-controls=docs-toc aria-expanded=false aria-label='Toggle table of contents sidebar'>
+<span class=navbar-toggler-icon></span>
+</button>
+</nav></div><main>
+<div class=container-fluid>
+<div class=row>
+<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id=docs-pages>
+<nav id=docs-nav aria-label="Docs navigation">
+<ul class="docs-nav-list text-muted"><li class=docs-nav-section>
+<span><a href=/docs/ class="docs-nav-page pl-0 pr-2 active">Home</a>
+</span>
+<ul class="docs-nav-section-pages show" id=docs-nav-section-pages-docs><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsgetting-startedquick-start href=/docs/getting-started/quick-start/>Quick Start</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsgetting-startedinstalling href=/docs/getting-started/installing/>Installing</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelop role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/ class="docs-nav-page pl-0 pr-2 collapsed">Developing</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelop><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopgetting-started role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/getting-started/ class="docs-nav-page pl-0 pr-2 collapsed">Getting Started</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopgetting-started>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopgetting-startedaddon-basics href=/docs/develop/getting-started/addon-basics/>Addon Basics</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopgetting-startedcreating-an-addon href=/docs/develop/getting-started/creating-an-addon/>Creating an Addon</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsdevelopaddon-types role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/develop/addon-types/ class="docs-nav-page pl-0 pr-2 collapsed">Addon Types</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsdevelopaddon-types>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopaddon-typesuserscripts href=/docs/develop/addon-types/userscripts/>Userscripts</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopaddon-typesuserstyles href=/docs/develop/addon-types/userstyles/>Userstyles</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsdevelopadding-an-icon-to-a-setting-name href=/docs/develop/adding-an-icon-to-a-setting-name/>Adding an Icon to a Setting Name</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docslocalization role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/localization/ class="docs-nav-page pl-0 pr-2 collapsed">Localization</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docslocalization>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationjoining-the-localization-team href=/docs/localization/joining-the-localization-team/>Joining the Localization Team</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docslocalizationlocalizing-addons href=/docs/localization/localizing-addons/>Localizing Addons</a>
+</li></ul></li><li class=docs-nav-section>
+<span><a class=collapse-button data-toggle=collapse href=#docs-nav-section-pages-docsreference role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/ class="docs-nav-page pl-0 pr-2 active">Reference</a>
+</span>
+<ul class="docs-nav-section-pages collapse show" id=docs-nav-section-pages-docsreference><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsreferenceaddon-api role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/addon-api/ class="docs-nav-page pl-0 pr-2 collapsed">Addon API</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsreferenceaddon-api>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonself href=/docs/reference/addon-api/addon.self/>addon.self</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonsettings href=/docs/reference/addon-api/addon.settings/>addon.settings</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonauth href=/docs/reference/addon-api/addon.auth/>addon.auth</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonaccount href=/docs/reference/addon-api/addon.account/>addon.account</a>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docsreferenceaddon-apiaddontab role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/reference/addon-api/addon.tab/ class="docs-nav-page pl-0 pr-2 collapsed">addon.tab</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docsreferenceaddon-apiaddontab>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabtraps href=/docs/reference/addon-api/addon.tab/addon.tab.traps/>addon.tab.traps</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabredux href=/docs/reference/addon-api/addon.tab/addon.tab.redux/>addon.tab.redux</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddontabaddontabappendtosharedspace href=/docs/reference/addon-api/addon.tab/addon.tab.appendtosharedspace/>addon.tab.appendToSharedSpace</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferenceaddon-apiaddonpopup href=/docs/reference/addon-api/addon.popup/>addon.popup</a>
+</li></ul></li><li>
+<a class="docs-nav-page active" id=docs-nav-page-docsreferenceaddon-manifest href=/docs/reference/addon-manifest/>Addon Manifest</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docsreferencedesign href=/docs/reference/design/>Design</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docsfaq href=/docs/faq/>Frequently Asked Questions</a>
+</li><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docspolicies role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/policies/ class="docs-nav-page pl-0 pr-2 collapsed">Policies</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docspolicies><li class=docs-nav-section>
+<span><a class="collapse-button collapsed" data-toggle=collapse href=#docs-nav-section-pages-docspoliciesprivacy role=button aria-expanded=true><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5.0 01.708.0l6 6a.5.5.0 010 .708l-6 6a.5.5.0 01-.708-.708L10.293 8 4.646 2.354a.5.5.0 010-.708z"/></g></svg></a>
+<a href=/docs/policies/privacy/ class="docs-nav-page pl-0 pr-2 collapsed">Privacy Policy</a>
+</span>
+<ul class="docs-nav-section-pages collapse" id=docs-nav-section-pages-docspoliciesprivacy>
+<li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciesprivacyextension href=/docs/policies/privacy/extension/>Extension</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciesprivacywebsite href=/docs/policies/privacy/website/>Website</a>
+</li></ul></li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciessecurity href=/docs/policies/security/>Security Policy</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspoliciescode-of-conduct href=/docs/policies/code-of-conduct/>Code of Conduct</a>
+</li><li>
+<a class=docs-nav-page id=docs-nav-page-docspolicieschrome-web-store-privacy-information href=/docs/policies/chrome-web-store-privacy-information/>Chrome Web Store Privacy Information</a>
+</li></ul></li></ul></li></ul></nav></aside><div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
+<article>
+<h1>Addon Manifest</h1><p>Addons are located inside the <code>addons</code> folder. Each addon is inside its own folder as well.
+In order to tell the addon loader how the addon plans to work, addons use a standard <code>addon.json</code> file located at the root of the addon&rsquo;s folder.</p><h2 id=name-string-required><code>name</code> (string, required) <a href=#name-string-required class=anchor aria-label=Anchor></a></h2><p>The name of the addon. Must be <code>Sentence case</code>.<br>
+It needs to be relatively short and consistent with other addon&rsquo;s names.<br>
+Use nouns instead of verbs (for example, <code>Customizable new sprite position</code> instead of <code>Change new sprite position</code>) unless doing so would result in the addon name being overly complicated.</p><h2 id=description-string-required><code>description</code> (string, required) <a href=#description-string-required class=anchor aria-label=Anchor></a></h2><p>The description of the addons. Must end with a period.</p><p>Use standard grammar for referring to parts of the Scratch website or editor:</p><p><strong>Pages on the website:</strong></p><ul>
+<li>project page</li><li>editor</li><li>(user) profile</li><li>studio page</li><li>forums</li><li>(forum) topic</li><li>(forum) post</li><li>(Scratch) 2.0/3.0-styled page <em>(a page which looks like Scratch 2.0/3.0, is a part of scratchr2/scratch-www)</em></li></ul><p><strong>Scratch UI elements:</strong></p><ul>
+<li>(website) navigation bar <em>(only use when talking about the website)</em></li><li>(editor) menu bar <em>(only use when talking about the editor)</em></li><li>sprite pane <em>(the list of sprites below the stage)</em></li><li>costume editor <em>(not paint editor)</em>, list of costumes</li><li>list of sounds, costume/sound list <em>(for features that work with both costumes and sounds)</em></li><li>costume/sound <em>(not asset)</em></li><li>block category</li><li>block category menu</li><li>block palette</li><li>code area <em>(not workspace - Code tab excluding the block palette)</em></li><li>block dropdown <em>(a dropdown menu opened by clicking a block input)</em></li><li>block context menu <em>(a menu opened by right clicking a block)</em></li><li>script <em>(not stack of blocks)</em></li><li>extension</li><li>comment (on the website/in the code area)</li></ul><p><strong>Locations of added UI elements:</strong></p><ul>
+<li>in <em>(not on)</em> the navigation bar</li><li>on <em>(not in)</em> the forums</li><li>on <em>(not in)</em> the stage</li><li>above the stage (in the editor/on the project page)</li><li>next to the green flag</li><li>next to the Remix button</li></ul><p><strong>Common words and phrases:</strong></p><ul>
+<li>customizable</li><li>more</li><li>fix</li><li>better</li><li>with &mldr; key</li></ul><h2 id=tags-array-required><code>tags</code> (array, required) <a href=#tags-array-required class=anchor aria-label=Anchor></a></h2><p>Tags are used for filtering and badges on the Scratch Addons settings page.</p><h3 id=required-factual-tags>Required factual tags <a href=#required-factual-tags class=anchor aria-label=Anchor></a></h3><p>Addons must have one of these tags. No less than one, no more than one.</p><table>
+<tr>
+<th>Tag name</th><th>Used by settings page</th><th>Description</th></tr><tr>
+<td><code>community</code></td><td>✔️</td><td>Scratch website features</td></tr><tr>
+<td><code>editor</code></td><td>✔️</td><td>Scratch editor features</td></tr><tr>
+<td><code>popup</code></td><td>✔️</td><td>Extension popup features</td></tr></table><h3 id=optional-factual-tags>Optional factual tags <a href=#optional-factual-tags class=anchor aria-label=Anchor></a></h3><p>Addon authors can usually determine these tags themselves.</p><table>
+<tr>
+<th>Tag name</th><th>Used by settings page</th><th>Description</th></tr><tr>
+<td><code>theme</code></td><td>✔️</td><td>Addons that should be listed in the "themes" category. Tags <code>community</code> or <code>editor</code> are still required.</td></tr><tr>
+<td><code>easterEgg</code></td><td>✔️</td><td>Addons with this tag are visible in the settings page while disabled only after typing the Konami code.</td></tr><tr>
+<td><code>codeEditor</code></td><td>✔️</td><td>Addons that mainly affect the Code tab of the editor.</td></tr><tr>
+<td><code>costumeEditor</code></td><td>✔️</td><td>Addons that mainly affect the Backdrops/Costumes tab of the editor.</td></tr><tr>
+<td><code>projectPlayer</code></td><td>✔️</td><td>Addons that affect the project player in both the website and editor, or that add UI elements above the stage.</td></tr><tr>
+<td><code>editorMenuBar</code></td><td>❌</td><td>Addons that add UI elements to the editor's menu bar.</td></tr><tr>
+<td><code>projectPage</code></td><td>✔️</td><td>Addons that affect project pages on the website.</td></tr><tr>
+<td><code>profiles</code></td><td>✔️</td><td>Addons that affect profile pages on the website.</td></tr><tr>
+<td><code>forums</code></td><td>✔️</td><td>Addons that affect the Scratch Forums.</td></tr><tr>
+<td><code>studios</code></td><td>❌</td><td>Addons that affect studio pages on the website.</td></tr><tr>
+<td><code>comments</code></td><td>❌</td><td>Addons that affect comments on the website, inside project pages, profiles and studios.</td></tr></table><h3 id=optional-subjective-tags>Optional subjective tags <a href=#optional-subjective-tags class=anchor aria-label=Anchor></a></h3><p>Addon authors shouldn&rsquo;t add these tags themselves.<br>
+Whether to add any of these tags will be discussed before merging the addon to the repository.</p><table>
+<tr>
+<th>Tag name</th><th>Used by settings page</th><th>Description</th></tr><tr>
+<td><code>recommended</code></td><td>✔️</td><td>High-quality addons that add highly requested or obvious missing features.</td></tr><tr>
+<td><code>featured</code></td><td>✔️</td><td>Quality addons that add useful features or nice aesthetic changes.</td></tr><tr>
+<td><code>beta</code></td><td>✔️</td><td>Addons that haven't been deeply tested, may break in the future or are known to not work properly.</td></tr><tr>
+<td><code>danger</code></td><td>✔️</td><td>Addons that users shouldn't enable without paying close attention.</td></tr></table><h2 id=versionadded-string-required><code>versionAdded</code> (string, required) <a href=#versionadded-string-required class=anchor aria-label=Anchor></a></h2><p>The version the addon was added. If the value is the same as the current version of the extension, the addon will get the new tag.</p><h2 id=permissions-array><code>permissions</code> (array) <a href=#permissions-array class=anchor aria-label=Anchor></a></h2><p>You can specify permissions by providing a <code>permissions</code> array.<br>
+Possible items: <code>notifications</code>, <code>clipboardWrite</code>.</p><h2 id=userscripts-and-userstyles-array><code>userscripts</code> and <code>userstyles</code> (array) <a href=#userscripts-and-userstyles-array class=anchor aria-label=Anchor></a></h2><p>Declaring userscripts and userstyles is very similar.
+This is an array of objects, not strings.<br>
+Each object must specify the url to the userscript/userstyle through the <code>url</code> property, and provide an array of URL matches. If any of these patterns match, the userscript/userstyle is injected.</p><h3 id=matches-array><code>matches</code> (array) <a href=#matches-array class=anchor aria-label=Anchor></a></h3><p>Matches that allow the userscript/userstyle to run on. Values can be a URL match pattern, or <code>projects</code>, <code>projectEmbeds</code>, <code>studios</code>, <code>profiles</code>, <code>topics</code>, <code>newPostScreens</code>, <code>editingScreens</code>, <code>forums</code>, <code>scratchWWWNoProject</code>.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;userscripts&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;userscript.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/*&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;second_userscript.js&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/&#34;</span><span class=p>,</span> <span class=s2>&#34;https://scratch.mit.edu/users/*&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h3 id=runatcomplete-boolean-userscripts-only><code>runAtComplete</code> (boolean, userscripts only) <a href=#runatcomplete-boolean-userscripts-only class=anchor aria-label=Anchor></a></h3><p>Specifies whether the userscript should run after the page has loaded (after the window load event). If unspecified, <code>true</code> is assumed.<br>
+If set to <code>false</code>, the userscript is only guaranteed to run after the &lt;head> element of the document has loaded.</p><h3 id=if-object-userstyles-only><code>if</code> (object, userstyles only) <a href=#if-object-userstyles-only class=anchor aria-label=Anchor></a></h3><p>Optionally, you can provide an <code>if</code> object that will only apply your userstyle if any of the specified sub-properties evaluates to <code>true</code>. More advanced behavior can be achieved in userscripts using <a href=https://scratchaddons.com/docs/reference/addon-api/addon.settings/#addonsettingsget><code>addon.settings.get</code></a> and <a href=https://scratchaddons.com/docs/reference/addon-api/addon.self/#getenabledaddons><code>addon.self.getEnabledAddons</code></a>.</p><p>Sub-properties:</p><ul>
+<li>
+<p><code>settings</code> (object, optional) The settings within this addon that must be of specific values. The key(s) are the IDs of the settings, and the value(s) are the corresponding expected values. All key(s) must evaluate to <code>true</code> for the sub-property to evaluate to <code>true</code>.</p><p>In the following example, the <code>signature</code> setting must equal <code>true</code> and the <code>mode</code> setting must equal <code>forums</code> in order for the userstyle to be applied. If either of these settings are set to values that do not match the expected values, the userstyle will not be applied.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;userstyles&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;userstyle.css&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/*&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;if&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>{</span> <span class=nt>&#34;signature&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span> <span class=nt>&#34;mode&#34;</span><span class=p>:</span> <span class=s2>&#34;forums&#34;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>An array can also be provided for the value of a key: the key will evaluate to <code>true</code> if the setting is set to <em>any</em> of the provided values.</p><p>In the following example, the <code>mode</code> setting may equal either <code>forums</code> or <code>new</code> for the userstyle to be applied. If the setting is not set to either of these, the userstyle will not be applied.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;userstyles&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;userstyle.css&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/*&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;if&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>{</span> <span class=nt>&#34;mode&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;forums&#34;</span><span class=p>,</span> <span class=s2>&#34;new&#34;</span><span class=p>]</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div></li><li>
+<p><code>addonEnabled</code> (string / array of strings, optional) The addon(s) that must be enabled. If multiple addons are listed, only one has to be enabled for the sub-property to evaluate to <code>true</code>. The string(s) are the IDs of the addons.</p><p>In the following example, either the <code>debugger</code> or <code>clones</code> addon must be enabled for the userstyle to be applied. If neither of these addons are enabled, the userstyle will not be applied.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;userstyles&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;url&#34;</span><span class=p>:</span> <span class=s2>&#34;userstyle.css&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;matches&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;https://scratch.mit.edu/*&#34;</span><span class=p>],</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;if&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;addonEnabled&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;debugger&#34;</span><span class=p>,</span> <span class=s2>&#34;clones&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div></li></ul><h2 id=settings-object><code>settings</code> (object) <a href=#settings-object class=anchor aria-label=Anchor></a></h2><p>Settings allow the addon&rsquo;s users to specify settings in Scratch Addons&rsquo; settings panel. Inside your userscripts, you can then access those settings with the <code>addon.settings</code> API.<br>
+Specify a <code>settings</code> property and provide an array of option objects.</p><p>Sub-properties:</p><ul>
+<li>
+<p><code>name</code> (string, required) The user-visible text for the option.</p></li><li>
+<p><code>id</code> (string, required) An identifier to get the user-specified value from your code.</p></li><li>
+<p><code>type</code> (string, required) Either <code>boolean</code> (an on/off toggle), <code>positive_integer</code> (an input box that only allows 0 and above), <code>integer</code> (an input box that allows any integer) <code>string</code> (up to 100 chars),<code>color</code> (a browser color input that returns a hex code) or <code>select</code> (see <code>potential_values</code>).</p></li><li>
+<p><code>default</code> (string, required) The default value for the option. A boolean, string, or number, depending on the specified type.</p></li><li>
+<p><code>min</code>/<code>max</code> (number, optional for <code>positive_integer</code>, <code>integer</code>, and <code>string</code> types only) For integers, the minimum/maximum value allowed, and for strings, the minimum/maximum allowed length of the value.</p></li><li>
+<p><code>potentialValues</code> (array of objects, required for <code>select</code> type only) Array of objects, with properties <code>id</code>, the value received from <code>addon.settings.get()</code>, and <code>name</code>, the user-visible option text.</p></li><li>
+<p><code>allowTransparency</code> (boolean, required for <code>color</code> type only) Whether the user should be allowed to enter transparent colors or not.</p></li><li>
+<p><code>if</code> (object, optional) Only make this setting visible if any of the specified sub-properties evaluates to <code>true</code>.</p><p><strong>Be careful &ndash; hiding a setting does not revert its value or nullify it. This only affects the settings page UI. If you want to handle a case where this setting is hidden, you must replicate the condition check that results in this setting being hidden.</strong></p><ul>
+<li>
+<p><code>settings</code> (object, optional) The settings within this addon that must be of specific values. The key(s) are the IDs of the settings, and the value(s) are the corresponding expected values. All key(s) must evaluate to <code>true</code> for the sub-property to evaluate to <code>true</code>.</p><p>In the following example, the <code>signature</code> setting must equal <code>true</code> and the <code>mode</code> setting must equal <code>forums</code> in order for this setting to be visible. If either of these settings are set to values that do not match the expected values, this setting will not be visible.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// ...
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Option&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;option&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;boolean&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;default&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;if&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>{</span> <span class=nt>&#34;signature&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span> <span class=nt>&#34;mode&#34;</span><span class=p>:</span> <span class=s2>&#34;forums&#34;</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><p>An array can also be provided for the value of a key: the key will evaluate to <code>true</code> if the setting is set to <em>any</em> of the provided values.</p><p>In the following example, the <code>mode</code> setting may equal either <code>forums</code> or <code>new</code> for this setting to be visible. If the setting is not set to either of these, this setting will not be visible.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=c1>// ...
+</span></span></span><span class=line><span class=cl><span class=c1></span>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Option&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;option&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;boolean&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;default&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;if&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>{</span> <span class=nt>&#34;mode&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;forums&#34;</span><span class=p>,</span> <span class=s2>&#34;new&#34;</span><span class=p>]</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div></li><li>
+<p><code>addonEnabled</code> (string / array of strings, optional) The addon(s) that must be enabled. If multiple addons are listed, only one has to be enabled for the sub-property to evaluate to <code>true</code>. The string(s) are the IDs of the addons.</p><p>In the following example, either the <code>debugger</code> or <code>clones</code> addon must be enabled for this setting to be visible. If neither of these addons are enabled, this setting will not be visible.</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Option&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;option&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;boolean&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;default&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;if&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;addonEnabled&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;debugger&#34;</span><span class=p>,</span> <span class=s2>&#34;clones&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div></li></ul></li></ul><p>Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Send notifications&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;send_notifications&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;boolean&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;default&#34;</span><span class=p>:</span> <span class=kc>false</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Notification close delay in seconds&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;close_delay&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;positive_integer&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;default&#34;</span><span class=p>:</span> <span class=mi>5</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;if&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;settings&#34;</span><span class=p>:</span> <span class=p>{</span> <span class=nt>&#34;send_notifications&#34;</span><span class=p>:</span> <span class=kc>true</span> <span class=p>}</span>
+</span></span><span class=line><span class=cl>      <span class=p>}</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=addonpreview-object><code>addonPreview</code> (object) <a href=#addonpreview-object class=anchor aria-label=Anchor></a></h2><p>Specifies the type of preview to show above the addon&rsquo;s settings.</p><p>Sub-properties:</p><ul>
+<li><code>type</code> (string, required) Only <code>editor-dark-mode</code> is currently supported. To add more, use the <code>editor-dark-mode</code> files in the <code>/webpages/settings/components/previews</code> folder as an example, then add the components to <a href=https://github.com/ScratchAddons/ScratchAddons/blob/d6f41737c8162e6feeb98f6a9f5b479378e8b813/webpages/settings/index.html#L88>/webpages/settings/index.html</a> and <a href=https://github.com/ScratchAddons/ScratchAddons/blob/d6f41737c8162e6feeb98f6a9f5b479378e8b813/webpages/settings/index.js#L52>/webpages/settings/index.js</a>.</li></ul><p>Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;addonPreview&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;editor-dark-mode&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=presetpreview-object><code>presetPreview</code> (object) <a href=#presetpreview-object class=anchor aria-label=Anchor></a></h2><p>Specifies the type of preview to show inside the preset buttons.</p><p>Sub-properties:</p><ul>
+<li><code>type</code> (string, required) Possible values:
+<ul>
+<li><code>palette</code> Shows a ribbon of colors.</li></ul></li><li><code>colors</code> (array of strings, required for <code>palette</code> type only) The hex colors to show in the ribbon. By convention, the array should contain 6 colors, but more or less can be shown if needed.</li></ul><p>Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;presetPreview&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;palette&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;colors&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;#000000&#34;</span><span class=p>,</span> <span class=s2>&#34;#222222&#34;</span><span class=p>,</span> <span class=s2>&#34;#444444&#34;</span><span class=p>,</span> <span class=s2>&#34;#666666&#34;</span><span class=p>,</span> <span class=s2>&#34;#aaaaaa&#34;</span><span class=p>,</span> <span class=s2>&#34;#ffffff&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=credits-array><code>credits</code> (array) <a href=#credits-array class=anchor aria-label=Anchor></a></h2><p>You can provide a <code>credits</code> array of objects. This attribution is shown in the extension settings.</p><p>Sub-properties:</p><ul>
+<li><code>name</code> (string, required) The name of the person, site, or other resource to credit.</li><li><code>note</code> (string, optional) A brief note about how the credited person/site contributed to the addon. The note will be displayed in parentheses. By convention, notes are lowercase except for proper nouns, and commas are used as separators if a single person contributed in multiple ways. Try to use the following terminology &ndash; don&rsquo;t limit yourself to these terms, but try to stay consistent if possible:
+<ul>
+<li>addon (not necessary if only one person made the addon or if there are no settings/presets)</li><li>addon version (for addons ported from userscripts/userstyles)</li><li>original userscript (for addons ported from userscripts)</li><li>original userstyle (for addons ported from userstyles)</li><li>If someone created a setting or preset, note its name in the credit</li></ul></li><li><code>id</code> (string, required if <code>note</code> is specified) An identifier for this credit object. Used internally for localization of the <code>note</code> property.</li><li><code>link</code> (string, optional) A URL that links to the original content or the main page of the person/site credited.<br>
+Example:</li></ul><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;credits&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Maximouse&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;note&#34;</span><span class=p>:</span> <span class=s2>&#34;addon, \&#34;Experimental\&#34; Dark&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;addon&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;link&#34;</span><span class=p>:</span> <span class=s2>&#34;https://github.com/mxmou/customize-scratch#watch-youtube-videos-on-scratch-in-full-screen&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=enabledbydefault-boolean><code>enabledByDefault</code> (boolean) <a href=#enabledbydefault-boolean class=anchor aria-label=Anchor></a></h2><p>You can provide the <code>enabledByDefault</code> property and set it to <code>true</code> to specify if the addon should be enabled by default. Its default value is <code>false</code>.<br>
+Keep in mind, few addons will be enabled by default. If you want your addon to be enabled by default, please open a discussion issue.</p><h2 id=info-array><code>info</code> (array) <a href=#info-array class=anchor aria-label=Anchor></a></h2><p>An array of additional information (e.g. warnings, notices) about the addon. Each item of the array is an object consisting of <code>type</code> (string) -either <code>warning</code> or <code>notice</code> - <code>text</code> (string) - the text to be displayed - and <code>id</code> (string) - the id of the information.
+Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;info&#34;</span><span class=p>:</span> <span class=p>[</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;notice&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;text&#34;</span><span class=p>:</span> <span class=s2>&#34;Example notice.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;exmapleID&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>},</span>
+</span></span><span class=line><span class=cl>    <span class=p>{</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;type&#34;</span><span class=p>:</span> <span class=s2>&#34;warning&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;text&#34;</span><span class=p>:</span> <span class=s2>&#34;Example warning.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;exmapleID&#34;</span>
+</span></span><span class=line><span class=cl>    <span class=p>}</span>
+</span></span><span class=line><span class=cl>  <span class=p>]</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=presets-array><code>presets</code> (array) <a href=#presets-array class=anchor aria-label=Anchor></a></h2><p>An array of presets for the addon. Each item in the <code>presets</code> array should be an object consisting of <code>name</code> (string), <code>id</code>(string), <code>description</code> (string) and <code>values</code> (object). The keys in the <code>values</code> object should the addon settings ids, and the values should be the values to set the setting with the id of the key to.</p><p>Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;presets&#34;</span><span class=p>:</span> <span class=p>[</span>	
+</span></span><span class=line><span class=cl>    <span class=p>{</span>	
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;preset 1&#34;</span><span class=p>,</span>	
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;id&#34;</span><span class=p>:</span> <span class=s2>&#34;preset1&#34;</span><span class=p>,</span>	
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;desctiption&#34;</span><span class=p>:</span> <span class=s2>&#34;the first preset&#34;</span><span class=p>,</span>	
+</span></span><span class=line><span class=cl>      <span class=nt>&#34;values&#34;</span><span class=p>:</span> <span class=p>{</span>	
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;boolean_setting&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>	
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;string_setting&#34;</span><span class=p>:</span> <span class=s2>&#34;This is a string setting&#34;</span><span class=p>,</span>	
+</span></span><span class=line><span class=cl>        <span class=nt>&#34;integer_setting&#34;</span><span class=p>:</span> <span class=mi>180</span>	
+</span></span><span class=line><span class=cl>      <span class=p>}</span>	
+</span></span><span class=line><span class=cl>    <span class=p>}</span>	
+</span></span><span class=line><span class=cl>  <span class=p>]</span>	
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=libraries-array><code>libraries</code> (array) <a href=#libraries-array class=anchor aria-label=Anchor></a></h2><p>An array of libraries that the addon uses.</p><h2 id=popup-object><code>popup</code> (object) <a href=#popup-object class=anchor aria-label=Anchor></a></h2><p>When added, creates a new popup tab in the browser popup.</p><p>Sub-properties:</p><ul>
+<li><code>icon</code> (string, required) The path to the icon that shows in the popup&rsquo;s tab. The root of a relative path is <code>/popups/&lt;addonId>/</code>.</li><li><code>name</code> (string, required) The name that will display in the popup&rsquo;s tab.</li><li><code>fullscreen</code> (boolean, optional) Whether or not the popup tab should provide the option to open in full screen mode. Defaults to <code>false</code>.</li><li><code>html</code> (string, required) The path to the popup&rsquo;s HTML file. The root of a relative path is <code>/popups/&lt;addonId>/</code>.</li><li><code>script</code> (string, required) The path to the popup&rsquo;s JS file. The root of a relative path is <code>/popups/&lt;addonId>/</code>.</li></ul><p>Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;popup&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;icon&#34;</span><span class=p>:</span> <span class=s2>&#34;../../images/icons/envelope.svg&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;name&#34;</span><span class=p>:</span> <span class=s2>&#34;Messaging&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;fullscreen&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;html&#34;</span><span class=p>:</span> <span class=s2>&#34;popup.html&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;script&#34;</span><span class=p>:</span> <span class=s2>&#34;popup.js&#34;</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div><h2 id=dynamicdisable-boolean><code>dynamicDisable</code> (boolean) <a href=#dynamicdisable-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether the addon&rsquo;s scripts should be considered disabled when the addon is disabled while the page is running. Defaults to <code>false</code>.</p><h2 id=dynamicenable-boolean><code>dynamicEnable</code> (boolean) <a href=#dynamicenable-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether the addon&rsquo;s scripts should be considered enabled when the addon is enabled while the page is running. Defaults to <code>false</code>.</p><h2 id=injectasstyleelt-boolean><code>injectAsStyleElt</code> (boolean) <a href=#injectasstyleelt-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether the addon&rsquo;s userstyles should be injected as style elements rather than link elements. Defaults to <code>false</code>.</p><h2 id=updateuserstylesonsettingschange-boolean><code>updateUserstylesOnSettingsChange</code> (boolean) <a href=#updateuserstylesonsettingschange-boolean class=anchor aria-label=Anchor></a></h2><p>Indicates whether the addon&rsquo;s userstyles should be removed and rematched to the new settings. Defaults to <code>false</code>.</p><h2 id=customcssvariables-array><code>customCssVariables</code> (array) <a href=#customcssvariables-array class=anchor aria-label=Anchor></a></h2><p>An array of CSS variables that will be set if the addon is enabled. Each item is an object with two properties, both required:</p><ul>
+<li><code>name</code> (string): the name of the variable. To avoid conflicts between variables with the same name in different addons, the actual name will be <code>--{addonId}-{name}</code>, where <code>{addonId}</code> is the addon ID converted to camel case and <code>{name}</code> is the value of this property.</li><li><code>value</code>: a <em>value provider</em> - a string, number, or an object with a <code>type</code> property that defines what the CSS variable will be set to. The possible types are:
+<ul>
+<li><code>settingValue</code>: the value of an addon setting. Value providers of this type have an additional required property named <code>settingId</code> (string).</li><li><code>ternary</code>: returns one of two possible values depending on the result of a Boolean value provider. The following additional properties are required:
+<ul>
+<li><code>source</code>: a value provider that returns a Boolean.</li><li><code>true</code>: the result that will be used if <code>source</code> returns true.</li><li><code>false</code>: the result that will be used if <code>source</code> returns false.</li></ul></li><li><code>textColor</code>: chooses one of two possible text colors based on a background color. The following additional properties can be set:
+<ul>
+<li><code>source</code> (required): a value provider that returns a background color.</li><li><code>black</code>: a value provider that returns the text color that will be used on bright background colors. Defaults to <code>#575e75</code>.</li><li><code>white</code>: a value provider that returns the text color that will be used on dark background colors. Defaults to <code>#ffffff</code>.</li><li><code>threshold</code>: white text will be used on colors at least as dark as the threshold, which must be a number between 0 and 255. Defaults to 170, which is equivalent to the color <code>#aaaaaa</code>.</li></ul></li><li><code>multiply</code>: multiplies components of the result of the <code>source</code> color value provider (required) with specified coefficients <code>r</code>, <code>g</code>, <code>b</code>, and <code>a</code>, which must be numbers between 0 and 1. 1 is the default value if a coefficient is not specified.</li><li><code>brighten</code>: same as <code>multiply</code>, but increases the components of the source color instead.</li><li><code>alphaBlend</code>: has two additional properties, <code>opaqueSource</code> and <code>transparentSource</code>. Both are required and must be value providers that return colors. <code>opaqueSource</code> does not need to be fully opaque, but its opacity will be ignored.</li><li><code>makeHsv</code>: converts a HSV color to RGB. The additional properties are <code>h</code>, <code>s</code>, and <code>v</code>. Each must be a value provider that returns either a number or a color. Colors will be converted to HSV and the value of the relevant component will be used. This allows making a color that uses the hue of one color chosen by the user and the brightness of another.</li><li><code>recolorFilter</code>: a CSS filter that replaces every color with the result of the <code>source</code> color value provider (required).</li></ul></li></ul><h2 id=latestupdate-object><code>latestUpdate</code> (object) <a href=#latestupdate-object class=anchor aria-label=Anchor></a></h2><p>Provides information to the settings page about the latest update to this addon. Responsible for the &ldquo;New options&rdquo; tag and the New tag on individual addon settings. If not specified, no update-specific tags will be added.</p><p>Sub-properties:</p><ul>
+<li><code>version</code> (string, required) The version that this update applies to. If the value is the same as the current version of the extension, the addon will get the &ldquo;New options&rdquo; tag and display the indicators (if any) specified in <code>temporaryNotice</code> and <code>newSettings</code>.</li><li><code>isMajor</code> (boolean, optional) Indicates if the addon should be included in the &ldquo;Featured new addons and updates&rdquo; category. Defaults to <code>false</code> if not specified. This will be discussed before merging the addon to the repository using the same discretion as the Featured or Recommended tags on regular new addons.</li><li><code>temporaryNotice</code> (string, optional) A text description of the new features or changes. This will appear as a notice-style banner at the top of the info section (above any warnings or notices) when the addon has the &ldquo;New options&rdquo; tag. If not specified, no banner will be displayed.</li><li><code>newSettings</code> (array of strings, optional) The IDs of any settings that should be designated as new in this update. These settings will display the New tag when the addon has the &ldquo;New options&rdquo; tag. If not specified, no settings will display the New tag.</li></ul><p>Example:</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-json data-lang=json><span class=line><span class=cl><span class=p>{</span>
+</span></span><span class=line><span class=cl>  <span class=nt>&#34;latestUpdate&#34;</span><span class=p>:</span> <span class=p>{</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;version&#34;</span><span class=p>:</span> <span class=s2>&#34;3.0.0&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;isMajor&#34;</span><span class=p>:</span> <span class=kc>true</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;temporaryNotice&#34;</span><span class=p>:</span> <span class=s2>&#34;Aaaaaaaaaa my update.&#34;</span><span class=p>,</span>
+</span></span><span class=line><span class=cl>    <span class=nt>&#34;newSettings&#34;</span><span class=p>:</span> <span class=p>[</span><span class=s2>&#34;setting-2&#34;</span><span class=p>,</span> <span class=s2>&#34;setting-3&#34;</span><span class=p>]</span>
+</span></span><span class=line><span class=cl>  <span class=p>}</span>
+</span></span><span class=line><span class=cl><span class=p>}</span>
+</span></span></code></pre></div></article><hr>
+<p class=text-muted>
+Last updated at 22 July 2022 by Hans5958 on commit <a href=https://github.com/ScratchAddons/website-v2/commit/de809d26138c5ea964b8dafc1aef1c62972595e4><code>de809d2</code></a>.
+<a href=https://github.com/ScratchAddons/website-v2/edit/master/content/docs/reference/addon-manifest.md>Improve this page.</a>
+</p><div id=comments class=mt-4><h3>Comments</h3><p class=mb-3>Make sure to follow <a href=/docs/policies/code-of-conduct>the code of conduct</a>. You can see this comment section on <a class=link-to-search>GitHub Discussions</a>, as well as editing and removing your comment.</p><div class=giscus></div><script async defer src=/assets/js/comments.js data-giscus-lang=en></script></div></div><aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id=docs-toc>
+<nav id=TableOfContents>
+<ul>
+<li><a href=#name-string-required><code>name</code> (string, required)</a></li><li><a href=#description-string-required><code>description</code> (string, required)</a></li><li><a href=#tags-array-required><code>tags</code> (array, required)</a>
+<ul>
+<li><a href=#required-factual-tags>Required factual tags</a></li><li><a href=#optional-factual-tags>Optional factual tags</a></li><li><a href=#optional-subjective-tags>Optional subjective tags</a></li></ul></li><li><a href=#versionadded-string-required><code>versionAdded</code> (string, required)</a></li><li><a href=#permissions-array><code>permissions</code> (array)</a></li><li><a href=#userscripts-and-userstyles-array><code>userscripts</code> and <code>userstyles</code> (array)</a>
+<ul>
+<li><a href=#matches-array><code>matches</code> (array)</a></li><li><a href=#runatcomplete-boolean-userscripts-only><code>runAtComplete</code> (boolean, userscripts only)</a></li><li><a href=#if-object-userstyles-only><code>if</code> (object, userstyles only)</a></li></ul></li><li><a href=#settings-object><code>settings</code> (object)</a></li><li><a href=#addonpreview-object><code>addonPreview</code> (object)</a></li><li><a href=#presetpreview-object><code>presetPreview</code> (object)</a></li><li><a href=#credits-array><code>credits</code> (array)</a></li><li><a href=#enabledbydefault-boolean><code>enabledByDefault</code> (boolean)</a></li><li><a href=#info-array><code>info</code> (array)</a></li><li><a href=#presets-array><code>presets</code> (array)</a></li><li><a href=#libraries-array><code>libraries</code> (array)</a></li><li><a href=#popup-object><code>popup</code> (object)</a></li><li><a href=#dynamicdisable-boolean><code>dynamicDisable</code> (boolean)</a></li><li><a href=#dynamicenable-boolean><code>dynamicEnable</code> (boolean)</a></li><li><a href=#injectasstyleelt-boolean><code>injectAsStyleElt</code> (boolean)</a></li><li><a href=#updateuserstylesonsettingschange-boolean><code>updateUserstylesOnSettingsChange</code> (boolean)</a></li><li><a href=#customcssvariables-array><code>customCssVariables</code> (array)</a></li><li><a href=#latestupdate-object><code>latestUpdate</code> (object)</a></li></ul></nav></aside></div></div></main><a id=dark-toggle class=btn title='Click to toggle the dark theme.' aria-label='Dark theme switch' data-toggle=tooltip data-placement=left></a>
+<footer class=footer>
+<div class="container py-4 d-flex justify-content-between flex-wrap">
+<section class=footer-intro>
+<a href=/ class=navbar-brand>
+<img src=/assets/img/icon.svg alt='Scratch Addons' class=mr-2></img>
+<span>Scratch Addons</span>
+</a>
+<p class="mb-3 small">Currently 1.27.3 with 139 addons.</p><iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder=0 scrolling=0 width=170 height=30 title=GitHub></iframe>
+</section><section>
+<h3>Pages</h3><a href=/docs/faq>FAQ</a>
+<a href=/feedback>Send Feedback</a>
+<a href=/credits>Credits</a>
+<a href=/changelog>Changelog</a>
+<a href=/addons>Addons</a>
+<a href=/blog>Blog</a>
+</section><section>
+<h3>Discuss</h3><a href=https://github.com/ScratchAddons/ScratchAddons/discussions rel=noopener>Discussion Forum</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons/issues rel=noopener>Issues</a>
+<a href=https://discord.gg/R5NBqwMjNc rel=noopener>Community Discord</a>
+<a href=https://discord.gg/Ak8sCDQ rel=noopener>Development Discord</a>
+</section><section>
+<h3>Resources</h3><a href=https://github.com/ScratchAddons rel=noopener>Organization</a>
+<a href=https://github.com/ScratchAddons/ScratchAddons rel=noopener>Repository</a>
+<a href=/docs rel=noopener>Documentation</a>
+<a href=/docs/policies/privacy/website rel=noopener>Privacy Policy</a>
+<a href=https://youtube.com/ScratchAddons rel=noopener>YouTube</a>
+</section><section class="w-100 mb-0">
+<p>© 2022 Scratch Addons contributors</p><p>Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.</p><p class=mb-0>Scratch Addons is licensed under the terms of GNU General Public License v3.0.</p></section></div></footer></body></html>

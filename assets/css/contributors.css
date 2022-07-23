@@ -1,0 +1,102 @@
+.lds-ellipsis {
+  display: block;
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto; }
+  .lds-ellipsis div {
+    position: absolute;
+    top: 33px;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+    background: black;
+    animation-timing-function: cubic-bezier(0, 1, 1, 0); }
+    .lds-ellipsis div:nth-child(1) {
+      left: 8px;
+      animation: lds-ellipsis1 0.6s infinite; }
+    .lds-ellipsis div:nth-child(2) {
+      left: 8px;
+      animation: lds-ellipsis2 0.6s infinite; }
+    .lds-ellipsis div:nth-child(3) {
+      left: 32px;
+      animation: lds-ellipsis2 0.6s infinite; }
+    .lds-ellipsis div:nth-child(4) {
+      left: 56px;
+      animation: lds-ellipsis3 0.6s infinite; }
+
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1); }
+  100% {
+    transform: scale(0); } }
+
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0); }
+  100% {
+    transform: translate(24px, 0); } }
+
+body.dark .lds-ellipsis div {
+  background: white; }
+
+.contributor {
+  color: inherit;
+  border-radius: .25rem;
+  transition: background-color .15s ease-in-out; }
+  .contributor:hover {
+    background: #f2f2f2; }
+  .contributor a {
+    padding: 0.375rem 15px;
+    color: inherit;
+    display: flex; }
+    .contributor a:hover {
+      text-decoration: none; }
+
+.contributor-icon {
+  margin-right: 0.75rem;
+  margin-top: auto;
+  height: 64px;
+  width: 64px;
+  object-fit: initial; }
+
+.contributor-info {
+  display: flex;
+  flex: 1 0 0;
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center; }
+
+.contributor-name {
+  font-size: 1.25rem;
+  line-height: 1;
+  word-break: break-all; }
+
+.contribution-details {
+  font-size: 0.75rem;
+  line-height: 1;
+  margin-bottom: 0; }
+
+.contribution-commits {
+  background: var(--primary);
+  padding: 0 5px;
+  margin-left: 0.125rem;
+  border-radius: 1rem;
+  color: white; }
+  .contribution-commits:only-child {
+    margin-left: 0; }
+
+img.emoji {
+  height: .90rem;
+  width: .90rem;
+  margin: 0 .05em;
+  vertical-align: -0.25em; }
+
+body.dark #contributors .contributor:hover {
+  background: #1f1f1f; }
