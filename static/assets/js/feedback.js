@@ -1,5 +1,6 @@
 const i18n = window.i18nStrings
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
+let wakeUpTimeout = setTimeout(() => {}, 0)
 
 const form = document.querySelector("#feedback-form")
 const usernameField = form.querySelector('#feedback-username')
@@ -67,11 +68,14 @@ form.addEventListener("submit", async event => {
 
 contentField.addEventListener("input", event => {
     if (event.target.value.length < 2) return
+    clearTimeout(wakeUpTimeout)
     const diff = Date.now() - lastFeedbackRequestTime
     if (!lastFeedbackRequestTime || diff < 0 || diff > (60*4 + 45) * 1000) {
-        startUpServer()
+        wakeUpTimeout = setTimeout(startUpServer(), 2000)
     }
 })
+
+startUpServer()
 
 window.addEventListener("load", () => document.querySelector("textarea").focus());
 
