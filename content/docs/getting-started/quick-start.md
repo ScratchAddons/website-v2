@@ -34,6 +34,6 @@ To get started, you need to access the settings page of the addon to see the fun
 
 3. Feel free to look through the addons list and turn on/off whatever you want.
    
-   You can also configure each of the addons on the bottom section of each addons.
+   You can also configure an addon in its settings that will open when enabled or expanded.
 
    ![](/assets/img/getting-started/step-3.png)
