@@ -141,9 +141,9 @@ const updateDarkTheme = (active, updateLocalStorage = false) => {
 const updateDarkToggle = (active) => {
     if (toggle === undefined) return
     if (active) {
-        toggle.innerHTML = '<span class="iconify" data-icon="fa-solid:sun" data-inline="false"></span>'
+        toggle.innerHTML = '<span class="iconify" data-icon="fa-solid:sun" data-inline="true"></span>'
     } else {
-        toggle.innerHTML = '<span class="iconify" data-icon="fa-solid:moon" data-inline="false"></span>'
+        toggle.innerHTML = '<span class="iconify" data-icon="fa-solid:moon" data-inline="true"></span>'
     }
 }
 
@@ -187,6 +187,7 @@ waitForElement("#dark-toggle").then(() => {
             return
         }
         updateDarkTheme(!darkTheme, true)
+        updateDarkToggle(darkTheme)
         if (event && event.shiftKey) updateExtensionStyledTheme(!extensionStyledTheme, true)
         document.dispatchEvent(generateChangeThemeEvent())
     })
