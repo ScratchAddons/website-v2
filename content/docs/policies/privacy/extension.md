@@ -14,7 +14,7 @@ This page informs you of our policies regarding the collection, use, and disclos
 
 We use your data to provide and improve the service. By using the service, you agree to the collection and use of information in accordance with this policy.
 
-"Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) or [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/).
+"Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco), [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/) or [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/scratch-addons/iliepgjnemckemgnledoipfiilhajdjj).
 
 "The Scratch website" refers to <https://scratch.mit.edu> and all of its subdomains, such as <https://api.scratch.mit.edu> and <https://clouddata.scratch.mit.edu>.  
 
@@ -26,7 +26,7 @@ We use your data to provide and improve the service. By using the service, you a
 
 - **We never send Scratch account information or extension settings outside of your browser.**
 
-  Extension settings only leave your device if you've enabled Chrome/Firefox Sync.
+  Extension settings only leave your device if you've enabled Chrome/Firefox/Edge Sync.
 
 - **By default, the extension only interacts with the Scratch website and this website.**
 
