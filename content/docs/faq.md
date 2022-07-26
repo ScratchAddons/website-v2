@@ -35,7 +35,7 @@ By itself, Scratch Addons is just an addon loader. Its main tasks are:
 
 ### Is Scratch Addons safe? 
 
-Yes. Scratch Addons should not have any security issues in its most recent version. Scratch Addons is an open source project, so the code is constantly being verified by Scratch Addons contributors, as well as by reviewers from the Chrome Web Store and Add-ons for Firefox.
+Yes. Scratch Addons should not have any security issues in its most recent version. Scratch Addons is an open source project, so the code is constantly being verified by Scratch Addons contributors, as well as by reviewers from the Chrome Web Store, Add-ons for Firefox and Microsoft Edge Add-ons.
 
 ### How can I report a security vulnerability?
 
