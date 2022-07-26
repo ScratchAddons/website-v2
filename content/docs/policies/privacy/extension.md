@@ -60,7 +60,7 @@ Permanently-stored information might include:
 
 The extension by itself does not send any of this information outside of your device. 
 
-However, if you enable Chrome Sync, Firefox Sync, or any other compatible browser data synchronization feature, this information might be sent to that service by your browser.
+However, if you enable Chrome Sync, Firefox Sync, Edge Sync, or any other compatible browser data synchronization feature, this information might be sent to that service by your browser.
 
 ## Third Parties
 
