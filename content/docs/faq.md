@@ -90,6 +90,7 @@ We never send Scratch account information outside of your browser. See [the exte
 To enable addons, first go to the settings by:
 
 - Opening the popup and clicking the gear icon
+- by going to https://scratch.mit.edu/scratch-addons-extension/settings. Note: this URL only works for Scratch Addons users.
 
 Then, find the addon to enable using the sidebar or the search box. Toggle the switch at the right side to enable the addon. Some addons ask for additional permissions, which must be granted to enable the addon.
 
