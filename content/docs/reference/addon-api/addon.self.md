@@ -143,7 +143,7 @@ In that case, the `reenabled` event will fire.
     <td>tag</td>
     <td><code>String</code></td>
     <td>No</td>
-    <td>The group tag for filtering.</td>
+    <td>The tag for filtering.</td>
   </tr>
 </table>
 
@@ -154,7 +154,7 @@ In that case, the `reenabled` event will fire.
   </tr>
 </table>
 
-Gets a list of addon IDs enabled, optionally filtered using group name.
+Gets a list of addon IDs enabled, optionally filtered using tag (addon's group).
 
 ## Events
 ### `disabled`

@@ -528,7 +528,7 @@ Keep in mind, few addons will be enabled by default. If you want your addon to b
 | - | - |
 | Type | `Array` |
 
-An array of additional information (e.g. warnings, notices) about the addon. Each item of the array is an object consisting of `type` (string) -either `warning`. `notice` or `info` - `text` (string) - the text to be displayed - and `id` (string) - the id of the information.
+An array of additional information (e.g. warnings, notices) about the addon. Each item of the array is an object consisting of `id` (string) - the id of the information, `text` (string) - the text to be displayed and optional `type` (string) - either `warning`, `notice` or `info` (default type).
 Example:
 ```json
 {
