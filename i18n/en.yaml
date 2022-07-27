@@ -35,7 +35,6 @@ Links:
   PrivacyPolicy: Privacy Policy
   YouTube: YouTube
   Discord: Discord
-  # Twitter: Twitter
   GitHub: GitHub
   DiscordCom: Community Discord
   Discussion: Discussion Forum
@@ -62,10 +61,8 @@ Footer:
     DiscordDev: Development Discord
   Resources:
     Header: Resources
-    # Organization: Organization
     Repository: Repository
     Documentation: Documentation
-    # YouTube: YouTube
   Legal:
     Copyright: "{{ .Copyleft }} {{ .Year }} Scratch Addons contributors"
     NoAffiliation: Scratch Addons is not affiliated, associated, or in any way officially connected with the Scratch website or the organizations that maintain it.
@@ -187,7 +184,8 @@ UnsupportedBrowserPage:
 
 # Strings used for blog
 Blog:
-  SectionSiteName: Scratch Addons Blog    # This is unused in other languages, but it is used in English.
+  SectionSiteName: Scratch Addons Blog
+  # This is unused in other languages, but it is used in English.
 
 # Strings used for /credits
 CreditsPage:
