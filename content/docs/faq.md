@@ -11,7 +11,7 @@ embed_js:
 
 This page lists frequently asked questions related to the Scratch Addons extension and project.
 
-## General Questions
+## General questions
 
 ### What is Scratch Addons?
 
@@ -29,18 +29,13 @@ Scratch Addons includes over 100 addons, which can be enabled or disabled indivi
 
 [TurboWarp](https://turbowarp.org/) has some addons from Scratch Addons which can be used on their editor without installing Scratch Addons. However, Scratch Addons also includes addons for the Scratch website and the popup display. Therefore, it is still useful to have Scratch Addons even if you only code using TurboWarp.
 
-## System Requirements
+## System requirements
 
 ### What are the system requirements for Scratch Addons?
 
-Scratch Addons is officially supported on [Google Chrome](https://google.com/chrome/) (version 80 and above) and [Mozilla Firefox](https://mozilla.org/firefox/) (version 74 and above). Scratch Addons should also work on other desktop browsers that are based on those browsers, such as:
+Scratch Addons is officially supported on [Google Chrome](https://google.com/chrome/) (version 80 and up) and [Mozilla Firefox](https://mozilla.org/firefox/) (version 74 and up), and should also work on other desktop browsers that are based on those browsers. Please check [this page](../getting-started/installing/) for the complete information.
 
-- [Microsoft Edge](https://microsoft.com/edge/) (version 80+)
-- [Opera](https://opera.com/download/) (version 67+)
-- [Vivaldi](https://vivaldi.com/download/) (version 2.11+)
-- [Brave](https://brave.com/download/) (version 1.3+)
-
-Additionally, Scratch Addons (for obvious reasons) requires Internet connection.
+Additionally, Scratch Addons requires Internet connection.
 
 ### Can I use Scratch Addons on a mobile device?
 
@@ -68,7 +63,7 @@ Some browser extensions and userscripts may interfere with Scratch Addons. If yo
 - Better3.0: This browser extension can interfere with some addons. Luckily, most of its features are also available as addons.
 - Redux DevTools: This can interfere with the internal workings of Scratch Addons. You should disable Redux DevTools extension if you are not using it.
 
-## Security and Privacy
+## Security and privacy
 
 ### Is Scratch Addons safe? 
 
@@ -113,7 +108,7 @@ Some specific advices:
 
 ### I cannot receive notifications. Why?
 
-First, disable and re-enable the "Scratch notifier" addon. This can fix some issues.
+First, disable and re-enable the "Scratch Notifier" addon. This can fix some issues.
 
 If the problem continues, then check the operating system's notification settings. You have to allow the browser - such as Google Chrome - to send notifications. 
 
@@ -205,7 +200,7 @@ If you think a feature is missing, or you want to suggest an addon to the extens
 
 You can do it on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) or [our Discord server](https://discord.gg/R5NBqwMjNc). There, you can discuss about it and ask questions if you're having trouble.
 
-## Technical Questions
+## Technical
 
 ### What is an "addon", exactly?
 
@@ -225,7 +220,14 @@ By itself, Scratch Addons is just an addon loader. Its main tasks are:
 - Avoid addons from interfering with each other.
 - Avoid duplicate work from different addons.
 
+## Other 
 
-## I have more questions!
+### How can I add/remove myself from the contributors page?
+
+If you want your name to be on the page, please read and follow the instructions of [this issue](https://github.com/ScratchAddons/contributors/issues/{{< specifics/contributors-issue >}}).
+
+If you don’t want your name to be on the page, please tell us by creating an issue on our contributors repository, or by other means of contact. We’re sorry for the inconvenience.
+
+### I have more questions!
 
 If you have more questions that need answers, you can create a post on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) or send a message [on our Discord server](https://discord.gg/R5NBqwMjNc). Someone will try to answer it for you.
