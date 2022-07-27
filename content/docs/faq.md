@@ -71,9 +71,9 @@ Yes. Scratch Addons should not have any security issues in its most recent versi
 
 ### How can I report a security vulnerability?
 
-If you happen to find a security vulnerability please contact World_Languages privately by emailing `worldxlanguages (at) gmail.com`. If you don't get a response within 48 hours, please create an issue [here](https://github.com/ScratchAddons/ScratchAddons/issues/) mentioning you sent an email.
+If you happen to find a security vulnerability please contact World_Languages privately by emailing [`worldxlanguages@gmail.com`](mailto:worldxlanguages@gmail.com). If you don't get a response within 48 hours, please create an issue [here](https://github.com/ScratchAddons/ScratchAddons/issues/) mentioning you sent an email.
 
-You can either [read our security policy](https://github.com/ScratchAddons/ScratchAddons/security/policy), or [check our advisories that we have published](https://github.com/ScratchAddons/ScratchAddons/security/advisories?state=published).
+You can either read our [security policy](https://github.com/ScratchAddons/ScratchAddons/security/policy), or check out our [advisories that we have published](https://github.com/ScratchAddons/ScratchAddons/security/advisories?state=published).
 
 ### Will my account be safe when using Scratch Addons?
 
@@ -81,7 +81,7 @@ Scratch Addons doesn't use your account credentials to essentially work. In fact
 
 Addons on Scratch Addons also have been audited by multiple contributors on the repository, so no-one can just slip some malicious code under our eyes.
 
-We never send Scratch account information outside of your browser. See [the extension privacy policy](/docs/privacy/policies/extension) for more information.
+We never send Scratch account information outside of your browser. See the [extension privacy policy](/docs/privacy/policies/extension) for more information.
 
 ## Using Scratch Addons
 
@@ -90,7 +90,7 @@ We never send Scratch account information outside of your browser. See [the exte
 To enable addons, first go to the settings by:
 
 - Opening the popup and clicking the gear icon, or:
-- by going to [https://scratch.mit.edu/scratch-addons-extension/settings](https://scratch.mit.edu/scratch-addons-extension/settings). Note: this URL only works for Scratch Addons users.
+- by going [here](https://scratch.mit.edu/scratch-addons-extension/settings). Note: this URL only works for Scratch Addons users.
 
 Then, find the addon to enable using the sidebar or the search box. Toggle the switch at the right side to enable the addon. Some addons ask for additional permissions, which must be granted to enable the addon.
 
@@ -112,8 +112,8 @@ First, disable and re-enable the "Scratch Notifier" addon. This can fix some iss
 
 If the problem continues, then check the operating system's notification settings. You have to allow the browser - such as Google Chrome - to send notifications. 
 
-- Windows: You can configure it on the "Notifications & actions" settings' "Change notification settings for individual senders" section. See [the help article](https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-8942c744-6198-fe56-4639-34320cf9444e).
-- macOS: You can configure it on the System Preferences's "Notifications" section. After opening the page, select the browser (e.g. Google Chrome) on the left and enable the notification. See [the help article](https://support.apple.com/en-us/HT204079).
+- Windows: You can configure it on the "Notifications & actions" settings' "Change notification settings for individual senders" section. See the [help article](https://support.microsoft.com/en-us/windows/change-notification-settings-in-windows-8942c744-6198-fe56-4639-34320cf9444e).
+- macOS: You can configure it on the System Preferences's "Notifications" section. After opening the page, select the browser (e.g. Google Chrome) on the left and enable the notification. See the [help article](https://support.apple.com/en-us/HT204079).
 
 You should also make sure that "focus assist" (on Windows) or "Do Not Disturb" (on macOS) is disabled.
 
@@ -121,13 +121,13 @@ You should also make sure that "focus assist" (on Windows) or "Do Not Disturb" (
 
 The video recorded using "Project video recorder" addon is in the WebM format, which is usually smaller than other filetypes such as MP4. You can view WebM files using the browser (by dragging and dropping the file), or by using apps such as [VLC Media Player](https://www.videolan.org/).
 
-To convert WebM files into MP4 or other formats, use online converters such as [https://cloudconvert.com/webm-to-mp4](https://cloudconvert.com/webm-to-mp4). Note that this can take a long time depending on the size of the video.
+To convert WebM files into MP4 or other formats, use online converters such as [CloudConvert](https://cloudconvert.com/webm-to-mp4). Note that this can take a long time depending on the size of the video.
 
 ### How can you activate the easter egg addons?
 
 To reveal the easter egg addons, do the Konami Code (↑↑↓↓←→←→BA) with your keyboard on the settings page. After that, the easter egg addons will be shown, letting you to activate them.
 
-Some of our easter egg addons are "Fix capitalization of Account Settings" and "Semicolon glitch". Check out [the addons tab](/addons) for a complete list.
+Some of our easter egg addons are "Fix capitalization of Account Settings" and "Semicolon glitch". Check out the [addons tab](/addons) for a complete list.
 
 ## Contributing
 
@@ -145,7 +145,7 @@ Anyway, back to the point. You can contribute in many ways, and some of it is re
 
   After that, you need to create a pull request. You can do so by forking [the repository](https://github.com/ScratchAddons/ScratchAddons/), do your necessary changes, and create a pull request. If it is deemed feasible, we will merge it.
 
-  We're also open for contributions of other aspects than the extension. You can view our repositories on [our GitHub organization page](https://github.com/ScratchAddons) and help us build them.
+  We're also open for contributions of other aspects than the extension. You can view our repositories on our [GitHub organization page](https://github.com/ScratchAddons) and help us build them.
 
 - **Suggest an idea**  
   
@@ -153,7 +153,7 @@ Anyway, back to the point. You can contribute in many ways, and some of it is re
 
 - **Report a bug**
   
-  Found a bug in one of our addon, the settings page, or anything else on our extension? [Send us a bug report](#what-can-i-do-if-i-find-a-problem).
+  Found a bug in one of our addon, the settings page, or anything else on our extension? Send us a [bug report](#what-can-i-do-if-i-find-a-problem).
 
 - **Translate Scratch Addons**  
   
@@ -161,15 +161,15 @@ Anyway, back to the point. You can contribute in many ways, and some of it is re
 
 - **Write the documentation**
 
-  Are you familiar with Scratch Addons? If so, you can write the documentation for it. The documentation can include how to use it, or how it works. Please contact us on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) for further information.
+  Are you familiar with Scratch Addons? If so, you can write the documentation for it. The documentation can include how to use it, or how it works. Please contact us on our [Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) for further information.
 
 - **Send feedback**  
   
-  You can send feedback on our form, located at [the feedback page](https://scratchaddons.com/feedback). Your feedback may give us a different perspective in the extension development and help us know things needed attention and fix bugs.
+  You can send feedback on our form, located at the [feedback page](https://scratchaddons.com/feedback). Your feedback may give us a different perspective in the extension development and help us know things needed attention and fix bugs.
 
 - **Leave a review on the stores**
 
-  You can leave us a review about Scratch Addons on [the Chrome extension page](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco), [the Firefox addon page](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/) or the [Microsoft Edge addon page](https://microsoftedge.microsoft.com/addons/detail/scratch-addons/iliepgjnemckemgnledoipfiilhajdjj).
+  You can leave us a review about Scratch Addons on the [Chrome extension page](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco), the [Firefox addon page](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/) or the [Microsoft Edge addon page](https://microsoftedge.microsoft.com/addons/detail/scratch-addons/iliepgjnemckemgnledoipfiilhajdjj).
 
 - **Star our repository**
 
@@ -177,7 +177,7 @@ Anyway, back to the point. You can contribute in many ways, and some of it is re
 
 - **Spread the word**
 
-  You can tell anyone about Scratch Addons, like your friends, your relatives, your family members, or even your teacher, if you want. We're just asking you to [not do this on the Scratch website](#can-i-tell-people-about-scratch-addons-on-scratch).
+  You can tell anyone about Scratch Addons, like your friends, your relatives, your family members, or even your teacher, if you want. We're just asking you not [to do this on the Scratch website](#can-i-tell-people-about-scratch-addons-on-scratch).
 
 ### How can I create my own addon?
 
@@ -187,10 +187,10 @@ Read more about how to create an addon on Scratch Addons [here](/docs/develop/ge
 
 You can tell us using one of these methods.
 
-- Send it through [our feedback form](https://scratchaddons.com/feedback).
+- Send it through our [feedback form](https://scratchaddons.com/feedback).
 - Create an issue on [the repository](https://github.com/ScratchAddons/ScratchAddons/issues).
-- Create a post on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions).
-- Tell us on [our Discord server](https://discord.gg/R5NBqwMjNc).
+- Create a post on our [Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions).
+- Tell us on our [Discord server](https://discord.gg/R5NBqwMjNc).
 
 ### I think you missed a feature. What can I do?
 
@@ -198,7 +198,7 @@ If you think a feature is missing, or you want to suggest an addon to the extens
 
 ### Where can I discuss about Scratch Addons?
 
-You can do it on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) or [our Discord server](https://discord.gg/R5NBqwMjNc). There, you can discuss about it and ask questions if you're having trouble.
+You can do it on our [Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) or our [Discord server](https://discord.gg/R5NBqwMjNc). There, you can discuss about it and ask questions if you're having trouble.
 
 ## Technical
 
@@ -230,4 +230,4 @@ If you don’t want your name to be on the page, please tell us by creating an i
 
 ### I have more questions!
 
-If you have more questions that need answers, you can create a post on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) or send a message [on our Discord server](https://discord.gg/R5NBqwMjNc). Someone will try to answer it for you.
+If you have more questions that need answers, you can create a post on our [Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) or send a message on our [Discord server](https://discord.gg/R5NBqwMjNc). Someone will try to answer it for you.
