@@ -180,7 +180,7 @@ Anyway, back to the point. You can contribute in many ways, and some of it is re
 
 ### How can I create my own addon?
 
-Read more about [it here](/docs/develop/getting-started).
+Read more about it [here](/docs/develop/getting-started).
 
 ### What can I do if I find a problem?
 
