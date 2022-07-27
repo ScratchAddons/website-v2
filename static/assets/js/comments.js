@@ -1,6 +1,15 @@
 const scriptEl = document.currentScript
 const parentEl = scriptEl.parentElement
-parentEl.querySelector('.link-to-search').href = 'https://github.com/ScratchAddons/website-v2/discussions/categories/page-comments?discussions_q=' + encodeURI(document.location.pathname) + '+category%3A%22Page+comments%22'
+const digestMessage = async str => {
+	var buffer = new TextEncoder('utf-8').encode(str);
+	var digest = await crypto.subtle.digest('SHA-1', buffer);
+	return Array.from(new Uint8Array(digest)).map( x => x.toString(16).padStart(2,'0') ).join('');
+}
+
+digestMessage(encodeURI(document.location.pathname.slice(1)))
+	.then(hash => {
+		parentEl.querySelector('.link-to-search').href = 'https://github.com/ScratchAddons/website-v2/discussions/categories/page-comments?discussions_q=category%3A%22Page+comments%22+in%3Abody+' + hash
+	})
 
 const giscusEl = document.createElement('script')
 const giscusLang = scriptEl.dataset.giscusLang || "en"
@@ -13,7 +22,8 @@ const giscusDataset = {
 	reactionsEnabled: 1,
 	emitMetadata: 0,
 	inputPosition: 'top',
-	lang: giscusLang 
+	lang: giscusLang,
+	strict: 1 
 }
 
 const updateTheme = (theme = document.querySelector('body.dark') ? 'dark' : 'light') => {
