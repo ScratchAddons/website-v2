@@ -154,7 +154,7 @@ In that case, the `reenabled` event will fire.
   </tr>
 </table>
 
-Gets a list of addon IDs enabled, optionally filtered using tag (addon's group).
+Gets a list of addon IDs enabled, optionally filtered using [tag](https://scratchaddons.com/docs/reference/addon-manifest/#tags).
 
 ## Events
 ### `disabled`
