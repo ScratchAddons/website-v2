@@ -14,7 +14,7 @@ Make sure to read that article to be familiar with the terminology.
 Or download as ZIP, if you want. In other words, just download the source code locally.
 
 ## Step 3: Load the extension into Chrome
-*Note: Chrome is recommended for working on addons. Nevertheless, addons are expected to work on Firefox.*  
+*Note: Chrome is recommended for working on addons. Nevertheless, addons are expected to work on Firefox and Edge.*  
 Now that you have the extension in your filesystem, go to `chrome://extensions` and toggle "developer mode".  
 Click "load unpacked", then select the folder where Scratch Addons is located. If you're having issues with this, make sure to be selecting the folder where `manifest.json` is located.  
 That's it, you loaded the extension! It should look similar to this:  

@@ -5,9 +5,9 @@ weight: 2
 
 ## Supported Versions
 
-Scratch Addons should not have any security issues in its most recent version, found in the Chrome Web Store and Addons for Firefox.
+Scratch Addons should not have any security issues in its most recent version, found in the Chrome Web Store, Add-ons for Firefox and Microsoft Edge Add-ons.
 
-We only officially support the most recent stable versions of Chrome and Firefox. However, if you found a vulnerability that only occurs if using an old browser version, please report it (see below).
+We only officially support the most recent stable versions of Chrome, Firefox and Edge. However, if you found a vulnerability that only occurs if using an old browser version, please report it (see below).
 
 ## Reporting a Vulnerability
 

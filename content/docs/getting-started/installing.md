@@ -52,7 +52,7 @@ If you don't have Git installed, you can try this method instead. Note that you 
 
 3. Extract the archive into a folder.
 
-### Installing on Google Chrome
+### Installing on Google Chrome or Microsoft Edge
 
 1. Type `chrome://extensions` into your address bar to open the Extension Management page.
 
