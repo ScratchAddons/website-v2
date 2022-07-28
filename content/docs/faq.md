@@ -33,7 +33,7 @@ Scratch Addons includes over 100 addons, which can be enabled or disabled indivi
 
 ### What are the system requirements for Scratch Addons?
 
-Scratch Addons is officially supported on [Google Chrome](https://google.com/chrome/) (version 80 and up) and [Mozilla Firefox](https://mozilla.org/firefox/) (version 74 and up), and should also work on other desktop browsers that are based on those browsers. Please check [this page](../getting-started/installing/) for the complete information.
+Scratch Addons is officially supported on [Google Chrome](https://google.com/chrome/) (version 80 and up) and [Mozilla Firefox](https://mozilla.org/firefox/) (version 74 and up), and should also work on other desktop browsers that are based on those browsers. Please check out [this page](../getting-started/installing/) for the complete information.
 
 Additionally, Scratch Addons requires Internet connection.
 
@@ -71,7 +71,7 @@ Yes. Scratch Addons should not have any security issues in its most recent versi
 
 ### How can I report a security vulnerability?
 
-If you happen to find a security vulnerability please contact World_Languages privately by emailing `worldxlanguages (at) gmail.com`. If you don't get a response within 48 hours, please create an issue [here](https://github.com/ScratchAddons/ScratchAddons/issues/) mentioning you sent an email.
+If you happen to find a security vulnerability please contact World_Languages privately by emailing `worldxlanguages (at) gmail.com`. If you don't get a response within 48 hours, please [create an issue](https://github.com/ScratchAddons/ScratchAddons/issues/) mentioning that you had sent an email.
 
 You can either [read our security policy](https://github.com/ScratchAddons/ScratchAddons/security/policy), or [check our advisories that we have published](https://github.com/ScratchAddons/ScratchAddons/security/advisories?state=published).
 
@@ -89,8 +89,8 @@ We never send Scratch account information outside of your browser. See [the exte
 
 To enable addons, first go to the settings by:
 
-- Opening the popup and clicking the gear icon, or:
-- by going to [https://scratch.mit.edu/scratch-addons-extension/settings](https://scratch.mit.edu/scratch-addons-extension/settings). Note: this URL only works for Scratch Addons users.
+- Opening the popup and clicking the gear icon
+- by going to https://scratch.mit.edu/scratch-addons-extension/settings. Note: this URL only works for Scratch Addons users.
 
 Then, find the addon to enable using the sidebar or the search box. Toggle the switch at the right side to enable the addon. Some addons ask for additional permissions, which must be granted to enable the addon.
 
@@ -121,7 +121,7 @@ You should also make sure that "focus assist" (on Windows) or "Do Not Disturb" (
 
 The video recorded using "Project video recorder" addon is in the WebM format, which is usually smaller than other filetypes such as MP4. You can view WebM files using the browser (by dragging and dropping the file), or by using apps such as [VLC Media Player](https://www.videolan.org/).
 
-To convert WebM files into MP4 or other formats, use online converters such as [https://cloudconvert.com/webm-to-mp4](https://cloudconvert.com/webm-to-mp4). Note that this can take a long time depending on the size of the video.
+To convert WebM files into MP4 or other formats, use online converters such as [CloudConvert](https://cloudconvert.com/webm-to-mp4). Note that this can take a long time depending on the size of the video.
 
 ### How can you activate the easter egg addons?
 
@@ -157,7 +157,7 @@ Anyway, back to the point. You can contribute in many ways, and some of it is re
 
 - **Translate Scratch Addons**  
   
-  If you can speak another language than English fluently, you can help translate/localize Scratch Addons to your language. You can start from [here](/docs/localization/joining-the-localization-team).
+  If you can speak another language than English fluently, you can help translate/localize Scratch Addons to your language. You can start by [joining].(/docs/localization/joining-the-localization-team).
 
 - **Write the documentation**
 
@@ -177,11 +177,11 @@ Anyway, back to the point. You can contribute in many ways, and some of it is re
 
 - **Spread the word**
 
-  You can tell anyone about Scratch Addons, like your friends, your relatives, your family members, or even your teacher, if you want. We're just asking you to [not do this on the Scratch website](#can-i-tell-people-about-scratch-addons-on-scratch).
+  You can tell anyone about Scratch Addons, like your friends, your relatives, your family members, or even your teacher, if you want. We're just asking you [not to do this on the Scratch website](#can-i-tell-people-about-scratch-addons-on-scratch).
 
 ### How can I create my own addon?
 
-Read more about how to create an addon on Scratch Addons [here](/docs/develop/getting-started).
+Read more about it [here](/docs/develop/getting-started).
 
 ### What can I do if I find a problem?
 
