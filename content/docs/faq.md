@@ -224,7 +224,7 @@ By itself, Scratch Addons is just an addon loader. Its main tasks are:
 
 ### How can I add/remove myself from the contributors page?
 
-If you want your name to be on the page, please read and follow the instructions of [this issue](https://github.com/ScratchAddons/contributors/issues/183).
+If you want your name to be on the page, please read and follow the instructions of [this issue](https://github.com/ScratchAddons/contributors/issues/{{< specifics/contributors-issue >}}).
 
 If you don’t want your name to be on the page, please tell us by creating an issue on our contributors repository, or by other means of contact. We’re sorry for the inconvenience.
 
