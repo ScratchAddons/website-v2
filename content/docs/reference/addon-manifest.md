@@ -343,14 +343,14 @@ Sub-properties:
 - `min`/`max` (number, optional for `positive_integer`, `integer`, and `string` types only) For integers, the minimum/maximum value allowed, and for strings, the minimum/maximum allowed length of the value.
 - `potentialValues` (array of objects, required for `select` type only) Array of objects, with properties `id`, the value received from `addon.settings.get()`, and `name`, the user-visible option text.
 - `allowTransparency` (boolean, required for `color` type only) Whether the user should be allowed to enter transparent colors or not.
-- `row` (array of objects, only for `table` type). Every element in table contains this array of objects. Each object should contain: `name`, `id`, `type` and `default`. For example:
+- `row` (array of objects, only for `table` type). Every element in table contains this array of objects. Each object should contain: `name`, `id`, `type` (any setting type other than `table`) and `default`. For example:
   ```json
   {
     "row": [
       {
-        "name": "Project/Studio URL",
-        "id": "url",
-        "type": "untranslated",
+        "name": "Playername",
+        "id": "name",
+        "type": "string",
         "default": ""
       }
     ],
