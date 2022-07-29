@@ -249,7 +249,7 @@ Matches that allow the userscript/userstyle to run on. Values can be a URL match
     },
     {
       "url": "second_userscript.js",
-      "matches": ["https://scratch.mit.edu/", "https://scratch.mit.edu/users/*"]
+      "matches": ["projects", "https://scratch.mit.edu/users/*"]
     }
   ]
 }
@@ -338,11 +338,24 @@ Specify a `settings` property and provide an array of option objects.
 Sub-properties:
 - `name` (string, required) The user-visible text for the option.   
 - `id` (string, required) An identifier to get the user-specified value from your code.  
-- `type` (string, required) Either `boolean` (an on/off toggle), `positive_integer` (an input box that only allows 0 and above), `integer` (an input box that allows any integer) `string` (up to 100 chars),`color` (a browser color input that returns a hex code)  or `select` (see `potential_values`).  
+- `type` (string, required) Either `boolean` (an on/off toggle), `positive_integer` (an input box that only allows 0 and above), `integer` (an input box that allows any integer) `string` (up to 100 chars),`color` (a browser color input that returns a hex code), `table` (list of elements, where user can add custom elements, remove existing ones and change order of them) or `select` (see `potential_values`).  
 - `default` (string, required) The default value for the option. A boolean, string, or number, depending on the specified type.  
 - `min`/`max` (number, optional for `positive_integer`, `integer`, and `string` types only) For integers, the minimum/maximum value allowed, and for strings, the minimum/maximum allowed length of the value.
 - `potentialValues` (array of objects, required for `select` type only) Array of objects, with properties `id`, the value received from `addon.settings.get()`, and `name`, the user-visible option text.
 - `allowTransparency` (boolean, required for `color` type only) Whether the user should be allowed to enter transparent colors or not.
+- `row` (array of objects, only for `table` type). Every element in table contains this array of objects. Each object should contain: `name`, `id`, `type` (any setting type other than `table`) and `default`. For example:
+  ```json
+  {
+    "row": [
+      {
+        "name": "Playername",
+        "id": "name",
+        "type": "string",
+        "default": ""
+      }
+    ],
+  }
+  ```
 - `if` (object, optional) Only make this setting visible if any of the specified sub-properties evaluates to `true`.
   
   **Be careful -- hiding a setting does not revert its value or nullify it. This only affects the settings page UI. If you want to handle a case where this setting is hidden, you must replicate the condition check that results in this setting being hidden.**
@@ -515,7 +528,7 @@ Keep in mind, few addons will be enabled by default. If you want your addon to b
 | - | - |
 | Type | `Array` |
 
-An array of additional information (e.g. warnings, notices) about the addon. Each item of the array is an object consisting of `type` (string) -either `warning` or `notice` - `text` (string) - the text to be displayed - and `id` (string) - the id of the information.
+An array of additional information (e.g. warnings, notices) about the addon. Each item of the array is an object consisting of `id` (string) - the id of the information, `text` (string) - the text to be displayed and optional `type` (string) - either `warning`, `notice` or `info` (default type).
 Example:
 ```json
 {
