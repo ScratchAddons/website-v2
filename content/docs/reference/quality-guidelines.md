@@ -16,6 +16,7 @@ New addons:
 - must have clear, concise, and easy-to-understand titles, descriptions, info notices (if any), and setting names (if any). English is required: the base addon manifest is used as a reference for our translators. The developers and members of the community should scrutinize and help with this. An effective meter for this is to test it **blindly** -- that is, download and try out the addon before reading the PR description.
 - must be easy to use. The labels and design language used in any UI that the addon adds or modifies should be understandable by whoever will be using that addon. Again, testing blindly is an effective meter for this. Addons without an effective UI communicating its changes will be ranked lower than other addons in the settings page.
 - must be compatible with our existing addons. This doesn't just mean avoiding bugs: addons should complement each other by supporting each other's features. For example, an addon that has a user interface should support our respective dark mode addon.
+- must work without any other addons enabled.
 
 In order for an approval to be valid, it must have the following checklist accompanying it as a comment:
 ```markdown
@@ -28,6 +29,7 @@ In order for an approval to be valid, it must have the following checklist accom
 [] All titles, descriptions, info notices, and setting names provided are clear and concise
 [] I personally found the addon to be easy to use during my testing
 [] I personally tested with all other addons and features enabled and did not find compatibility issues
+[] I personally tested with no other addons enabled and did not find issues
 [] The addon is well-integrated with other addons
 <!-- The following checklist items aren't required, but please check them if applicable to give us as much info on your approval as possible. -->
 [] I blind-tested this PR
