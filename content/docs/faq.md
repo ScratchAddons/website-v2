@@ -133,7 +133,7 @@ Some of our easter egg addons are "Fix capitalization of Account Settings" and "
 
 ### How can I contribute to Scratch Addons?
 
-Firstly, thank you for your interest of contributing to Scratch Addons. We appreciate your interest and your later contributions. 
+Firstly, we appreciate your interest in contributing to Scratch Addons!
 
 As an open source project, we welcome any kind of contributions. You don't even need to ask us or to have a certain rank. Anyone is welcome. There's even a chance that you don't even realize that you have contributed to the project! 
 
