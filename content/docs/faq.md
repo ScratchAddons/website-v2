@@ -35,8 +35,6 @@ Scratch Addons includes over 100 addons, which can be enabled or disabled indivi
 
 Scratch Addons is officially supported on the desktop versions of [Google Chrome](https://google.com/chrome/) (version 80 and up) and [Mozilla Firefox](https://mozilla.org/firefox/) (version 74 and up), and should also work on other desktop browsers that are based on those browsers. Please check out [this page](../getting-started/installing/) for complete information.
 
-Additionally, Scratch Addons requires Internet connection.
-
 ### Can I use Scratch Addons on a mobile device?
 
 For Android users: Yes, but it is not recommended. Major browsers do not allow Scratch Addons (or any other extensions) to be installed, so you need to use browsers such as [Kiwi](https://kiwibrowser.com/) to do so. Scratch Addons' UI is not well-tested on touchscreens or environments with small screen size, so some of the features might not work as expected.
