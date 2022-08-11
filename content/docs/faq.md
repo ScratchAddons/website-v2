@@ -133,7 +133,7 @@ Some of our easter egg addons are "Fix capitalization of Account Settings" and "
 
 Firstly, we appreciate your interest in contributing to Scratch Addons!
 
-As an open source project, we welcome any kind of contribution. You don't need to ask in advance -- everyone is welcome to contribute!
+As an open source project, we welcome any kind of contribution. You don't need to ask in advance -- everyone is welcome to contribute! You can contribute in many ways, many of which don't require programming knowledge.
 
 - **Contribute some code**
   
@@ -161,7 +161,7 @@ You can also contribute to other aspects of the organization, such as our websit
 
 - **Send feedback**  
   
-  You can send feedback on our form, located at [the feedback page](https://scratchaddons.com/feedback). Your feedback may give us a different perspective in the extension development and help us know things needed attention and fix bugs.
+  You can send feedback [on this page](https://scratchaddons.com/feedback). Your feedback may give us a different perspective in the extension development and help us know things needed attention and fix bugs.
 
 - **Leave a review on the stores**
 
