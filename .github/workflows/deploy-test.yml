@@ -32,7 +32,7 @@ name: Site Deployment
 jobs:
   deploy:
     name: Deployment/Testing
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - name: Checkout ScratchAddons/website-v2 (deployment)
         uses: actions/checkout@v3
