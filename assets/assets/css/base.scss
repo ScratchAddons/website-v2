@@ -33,26 +33,26 @@ p {
 body > header {
 	background-color: var(--header-bg);
 	color: var(--header-cnt);
-	
+
 	img {
 		height: 30px;
 		width: 30px;
 		transform: scale(1.75);
 	}
-	
+
 	.navbar-brand img {
 		margin-right: 0.5rem
 	}
 
 	.navbar-dark .navbar-nav .nav-link {
 		color: var(--header-cnt);
-	
+
 		@media (min-width: $bs-breakpoint-md) {
-	
+
 			border-radius: .25rem;
 			transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out;
 			margin-left: 0.125rem;
-	
+
 			&:hover,
 			&:not(:disabled):not(.disabled).active,
 			&.focus, &:focus {
@@ -60,27 +60,27 @@ body > header {
 				background-color: white;
 				border-color: white;
 			}
-			
+
 			&.focus, &:focus {
 				box-shadow: 0 0 0 .2rem rgba(216,217,219,.5);
 			}
-		
+
 			&.disabled, &:disabled {
 				background-color: #f8f9fa;
 				border-color: #f8f9fa;
 			}
-	
+
 		}
-		
+
 	}
-		
+
 }
 
 body > footer {
 	width: 100%;
 	background-color: var(--footer-bg);
 	color: var(--footer-cnt);
-	
+
 	> div {
 		padding: 1rem 0;
 		display: flex;
@@ -94,23 +94,23 @@ body > footer {
 			color: var(--footer-cnt-2)
 		}
 	}
-	
+
 	section {
 		display: block;
 		padding: 0 1rem;
-		
+
 		h3 {
 			font-size: 1rem;
 			margin-bottom: 0.5rem;
 			font-weight: 600;
 			color: var(--footer-cnt-2)
 		}
-		
+
 		p {
 			font-size: 0.75rem;
 			margin-bottom: 0.5rem;
 		}
-		
+
 		> a {
 			margin-bottom: 0rem;
 			display: block;
@@ -125,7 +125,7 @@ body > footer {
 		// 		max-width: 100%
 		// 	}
 		// }
-		
+
 	}
 
 	.footer-intro {
@@ -133,7 +133,7 @@ body > footer {
 		> div {
 			display: block;
 			margin-bottom: 0.75rem;
-			
+
 			&:last-of-type {
 				margin-bottom: 0
 			}
@@ -144,10 +144,10 @@ body > footer {
 			margin-bottom: 0.25rem;
 
 		}
-		
+
 		img {
-			height: 37.5px; 
-			width: 37.5px; 
+			height: 37.5px;
+			width: 37.5px;
 			transform: scale(1.25)
 		}
 
@@ -167,7 +167,7 @@ body > footer {
 			}
 		}
 	}
-	 
+
 }
 
 main > h1:nth-of-type(1),
@@ -188,12 +188,12 @@ main > h1:nth-of-type(1),
 		background-color: #e2e6ea;
 		border-color: #dae0e5;
 	}
-	
+
 	&:not(:disabled):not(.disabled).active {
 		background-color: #dae0e5;
 		border-color: #d3d9df;
 	}
-	
+
 	&.focus, &:focus {
 		background-color: #e2e6ea;
 		border-color: #dae0e5;
@@ -214,7 +214,9 @@ body.dark .dark-btn-white {
 
 #install-nav .nav-link {
 	@media (min-width: $bs-breakpoint-md) {
-		@include btn-white()
+		border: 2px solid white;
+		margin-right: 5px;
+		padding: 6px 8px;
 	}
 }
 
@@ -436,7 +438,7 @@ body.extension-styled {
 	.card-header, .card-footer {
 		background-color: $light-ext-level-2
 	}
-	
+
 }
 
 // =============================================================
