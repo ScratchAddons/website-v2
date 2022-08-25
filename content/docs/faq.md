@@ -153,7 +153,7 @@ You can also contribute to other aspects of the organization, such as our websit
 
 - **Translate Scratch Addons**  
   
-  If you are fluent in another language, you can help translate/localize Scratch Addons to said language. You can start by [joining the localization team].(/docs/localization/joining-the-localization-team).
+  If you are fluent in another language, you can help translate/localize Scratch Addons to said language. You can start by [joining the localization team](/docs/localization/joining-the-localization-team).
 
 - **Write the documentation**
 
