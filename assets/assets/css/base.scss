@@ -214,7 +214,9 @@ body.dark .dark-btn-white {
 
 #install-nav .nav-link {
 	@media (min-width: $bs-breakpoint-md) {
-		@include btn-white()
+		border: 1px solid white;
+		padding-top: calc(0.5rem - 1px);
+		padding-bottom: calc(0.5rem - 1px);
 	}
 }
 
