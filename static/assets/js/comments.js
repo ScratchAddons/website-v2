@@ -1,5 +1,11 @@
 const scriptEl = document.currentScript
 const parentEl = scriptEl.parentElement
+
+/**
+ * Digest a message to be hashed with SHA-1.
+ * @param {string} str Message to be digested.
+ * @returns The SHA-1 hash of the string
+ */
 const digestMessage = async str => {
 	var buffer = new TextEncoder('utf-8').encode(str);
 	var digest = await crypto.subtle.digest('SHA-1', buffer);
@@ -26,22 +32,30 @@ const giscusDataset = {
 	strict: 1 
 }
 
+/**
+ * Updates the theme (color scheme) of the Giscus instance. 
+ * @param {string} theme Selected theme, between "dark" and "light"
+ */
 const updateTheme = (theme = document.querySelector('body.dark') ? 'dark' : 'light') => {
-	const iframe = document.querySelector('iframe.giscus-frame');
-	if (!iframe) return;
+	const iframe = document.querySelector('iframe.giscus-frame')
+	if (!iframe) return
 	iframe.contentWindow.postMessage({ 
 		giscus: {
 			setConfig: {
 				theme
 			}
 		}
-	}, 'https://giscus.app');
+	}, 'https://giscus.app')
 }
 
 giscusEl.src = 'https://giscus.app/client.js'
 giscusEl.crossOrigin = 'anonymous'
 giscusEl.async = 'true'
 
+/**
+ * Loads Giscus on the page
+ * @param {string} theme The initial theme.
+ */
 const loadGiscus = theme => {
 	giscusDataset.theme = theme
 	for (let key in giscusDataset) {
