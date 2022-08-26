@@ -7,6 +7,8 @@ const usernameField = form.querySelector('#feedback-username')
 const contentField = form.querySelector("#feedback-content")
 const submitButton = form.querySelector("#feedback-submit")
 const addonsListCheckbox = form.querySelector("#feedback-addons-list")
+const statusEl = document.querySelector('#feedback-status')
+let hasWarnedContent = false
 
 const version = new URL(location.href).searchParams.get("ext_version") || new URL(location.href).searchParams.get("version")
 
@@ -21,7 +23,6 @@ if (location.hash.length && /[0-9A-Fa-f]/g.test(location.hash.substring(2))) {
 }
 
 const setStatus = (statusText, status) => {
-    const statusEl = document.querySelector('#feedback-status')
     statusEl.textContent = statusText
     statusEl.hidden = false
     statusEl.classList.remove([...statusEl.classList].filter(className => /alert-/.exec(className))[0])
@@ -80,13 +81,54 @@ const holdSendButton = seconds => {
     step()
 }
 
+const setPreSendWarning = (heading, description) => {
+    setStatus("", "warning")
+    const headingEl = document.createElement('p')
+    headingEl.textContent = heading
+    statusEl.appendChild(headingEl)
+    headingEl.insertAdjacentHTML('afterbegin', `<b>${i18n.preSendWarning.warning}</b> `)
+    const descriptionEl = document.createElement('p')
+    descriptionEl.textContent = description
+    statusEl.appendChild(descriptionEl)
+    const overrideEl = document.createElement('p')
+    overrideEl.textContent = i18n.preSendWarning.override
+    overrideEl.classList.add('mb-0')
+    statusEl.appendChild(overrideEl)
+    holdSendButton(5)
+}
+
+const preSendCheck = content => {
+    content = content.toLowerCase()
+    let warningText = false
+    const notSTWords = 'scratch team,st'.split(',')
+    if (notSTWords.some(el => content.includes(el))) {
+        warningText = [i18n.preSendWarning.notST.heading, i18n.preSendWarning.notST.description]
+    }
+    const punishmentWords = 'ban,block,kick,punish,punishment'.split(',')
+    if (punishmentWords.some(el => content.includes(el))) {
+        warningText = [i18n.preSendWarning.punishment.heading, i18n.preSendWarning.punishment.description]
+    }
+    if (warningText) {
+        if (hasWarnedContent && hasWarnedContent === content) {
+            hasWarnedContent = ""
+            return true
+        } else {
+            hasWarnedContent = content
+            setPreSendWarning(...warningText)
+            return false    
+        }
+    } else {
+        return true
+    }
+}
+// preSendCheck('I hate this guy please ban him')
+
 form.addEventListener("submit", async event => {
     event.preventDefault()
     setStatus(i18n.statusSending, "primary")
 
     usernameField.readOnly = true
     contentField.readOnly = true
-    submitButton.disabled = true
 
     // document.querySelector("#sending").style.display = "block";
 
@@ -99,19 +141,20 @@ form.addEventListener("submit", async event => {
         enabledAddons: addonsListCheckbox.checked ? enabledAddons : null
     }
 
-    try {
-        lastFeedbackRequestTime = Date.now()
-        localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)    
-        const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
-            method: "POST", 
-            body: JSON.stringify(body)
-        })
-        if (!res.ok) throw "";
-        holdSendButton(10)
-        setStatus(i18n.statusSuccess, "success")
-    } catch(err) {
-        setStatus(i18n.statusFailed, "danger")
-        submitButton.disabled = false
+    if (preSendCheck(contentField.value)) {
+        try {
+            lastFeedbackRequestTime = Date.now()
+            localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)    
+            const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
+                method: "POST", 
+                body: JSON.stringify(body)
+            })
+            if (!res.ok) throw "";
+            holdSendButton(10)
+            setStatus(i18n.statusSuccess, "success")
+        } catch(err) {
+            setStatus(i18n.statusFailed, "danger")
+        }
     }
 
     usernameField.readOnly = false

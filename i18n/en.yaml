@@ -161,7 +161,16 @@ FeedbackPage:
   ContentPlaceholder: Please provide as much detail as you can.
   SendEnabled: Send list of my currently enabled addons (recommended)
   SubmitButton: Send
-
+  PreSendWarning:
+    Warning: "Warning:"
+    Override: If you are really sure to send this feedback, you can press the "Send" button again.
+    NotST:
+      Heading: We are not the Scratch Team.
+      Description: Keep in mind that Scratch Addons is not affiliated with the Scratch website or the organizations that maintain it. You are still welcome to give ideas to improve your experience on Scratch with Scratch Addons.
+    Punishment:
+      Heading: We can't punish people. We are not the Scratch Team.
+      Description: Scratch Addons is not affiliated with the Scratch website or the organizations that maintain it. We have no control of the content and the moderation on the Scratch website.
+    
 # Strings used for /scratch-messaging-transition
 SMTPage:
   ScratchMessagingLogoAlt: Scratch Messaging Extension logo
