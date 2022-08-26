@@ -28,57 +28,6 @@ const setStatus = (statusText, status) => {
     statusEl.classList.add(`alert-${status}`)
 }
 
-form.addEventListener("submit", async event => {
-    event.preventDefault()
-    setStatus(i18n.statusSending, "primary")
-
-    usernameField.readOnly = true
-    contentField.readOnly = true
-    submitButton.disabled = true
-
-    // document.querySelector("#sending").style.display = "block";
-
-    const body = {
-        version, 
-        userAgent: navigator.userAgent, 
-        language: navigator.language, 
-        content: contentField.value, 
-        username: usernameField.value ,
-        enabledAddons: addonsListCheckbox.checked ? enabledAddons : null
-    }
-
-    try {
-        lastFeedbackRequestTime = Date.now()
-        localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)    
-        const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
-            method: "POST", 
-            body: JSON.stringify(body)
-        })
-        if (!res.ok) throw "";
-        setTimeout(() => submitButton.disabled = false, 10000)
-        setStatus(i18n.statusSuccess, "success")
-    } catch(err) {
-        setStatus(i18n.statusFailed, "danger")
-        submitButton.disabled = false
-    }
-
-    usernameField.readOnly = false
-    contentField.readOnly = false
-})
-
-contentField.addEventListener("input", event => {
-    if (event.target.value.length < 2) return
-    clearTimeout(wakeUpTimeout)
-    const diff = Date.now() - lastFeedbackRequestTime
-    if (!lastFeedbackRequestTime || diff < 0 || diff > (60*4 + 45) * 1000) {
-        wakeUpTimeout = setTimeout(startUpServer(), 2000)
-    }
-})
-
-startUpServer()
-
-window.addEventListener("load", () => document.querySelector("textarea").focus());
-
 const setOffline = () => {
     const allInputs = [...form.querySelectorAll('button'), ...form.querySelectorAll('input'), ...form.querySelectorAll('textarea')]
     allInputs.forEach(element => {
@@ -107,3 +56,77 @@ const startUpServer = () => {
             })
     })
 }
+
+// Credit to https://stackoverflow.com/a/29972322 for the timer logic
+const holdSendButton = seconds => {
+    submitButton.disabled = true
+    let remaining = seconds, expected = Date.now()
+    const step = () => {
+        var dt = Date.now() - expected
+        if (dt > 1000) {
+            // something really bad happened. Maybe the browser (tab) was inactive?
+            // possibly special handling to avoid futile "catch up" run
+        }
+        expected += 1000
+        if (remaining) {
+            setTimeout(step, Math.max(0, 1000 - dt))
+            submitButton.textContent = i18n.submitButton + " (" + remaining + ")"
+        } else {
+            submitButton.disabled = false
+            submitButton.textContent = i18n.submitButton
+        }
+        remaining--
+    }
+    step()
+}
+
+form.addEventListener("submit", async event => {
+    event.preventDefault()
+    setStatus(i18n.statusSending, "primary")
+
+    usernameField.readOnly = true
+    contentField.readOnly = true
+    submitButton.disabled = true
+
+    // document.querySelector("#sending").style.display = "block";
+
+    const body = {
+        version, 
+        userAgent: navigator.userAgent, 
+        language: navigator.language, 
+        content: contentField.value, 
+        username: usernameField.value ,
+        enabledAddons: addonsListCheckbox.checked ? enabledAddons : null
+    }
+
+    try {
+        lastFeedbackRequestTime = Date.now()
+        localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)    
+        const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
+            method: "POST", 
+            body: JSON.stringify(body)
+        })
+        if (!res.ok) throw "";
+        holdSendButton(10)
+        setStatus(i18n.statusSuccess, "success")
+    } catch(err) {
+        setStatus(i18n.statusFailed, "danger")
+        submitButton.disabled = false
+    }
+
+    usernameField.readOnly = false
+    contentField.readOnly = false
+})
+
+contentField.addEventListener("input", event => {
+    if (event.target.value.length < 2) return
+    clearTimeout(wakeUpTimeout)
+    const diff = Date.now() - lastFeedbackRequestTime
+    if (!lastFeedbackRequestTime || diff < 0 || diff > (60*4 + 45) * 1000) {
+        wakeUpTimeout = setTimeout(startUpServer(), 2000)
+    }
+})
+
+startUpServer()
+
+window.addEventListener("load", () => document.querySelector("textarea").focus());
