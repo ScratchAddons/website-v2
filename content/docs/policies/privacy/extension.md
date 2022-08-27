@@ -8,13 +8,13 @@ aliases:
 no_comments: true
 ---
 
-> Last updated: 26 July 2022
+> Last updated: 28 May 2021
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 
 We use your data to provide and improve the service. By using the service, you agree to the collection and use of information in accordance with this policy.
 
-"Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco), [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/) or [Microsoft Edge Add-ons](https://microsoftedge.microsoft.com/addons/detail/scratch-addons/iliepgjnemckemgnledoipfiilhajdjj).
+"Extension" refers to our browser extension, which you can download from the [Chrome Web Store](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) or [Add-ons for Firefox](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/).
 
 "The Scratch website" refers to <https://scratch.mit.edu> and all of its subdomains, such as <https://api.scratch.mit.edu> and <https://clouddata.scratch.mit.edu>.  
 
@@ -26,7 +26,7 @@ We use your data to provide and improve the service. By using the service, you a
 
 - **We never send Scratch account information or extension settings outside of your browser.**
 
-  Extension settings only leave your device if you've enabled Chrome/Firefox/Edge Sync.
+  Extension settings only leave your device if you've enabled Chrome/Firefox Sync.
 
 - **By default, the extension only interacts with the Scratch website and this website.**
 
@@ -60,7 +60,7 @@ Permanently-stored information might include:
 
 The extension by itself does not send any of this information outside of your device. 
 
-However, if you enable Chrome Sync, Firefox Sync, Edge Sync, or any other compatible browser data synchronization feature, this information might be sent to that service by your browser.
+However, if you enable Chrome Sync, Firefox Sync, or any other compatible browser data synchronization feature, this information might be sent to that service by your browser.
 
 ## Third Parties
 
@@ -90,5 +90,4 @@ If you have any questions, please contact us through our feedback page at <https
 
 ## Extension Privacy Policy Changelog
 
-- **22 July 2022:** reference Microsoft Edge browser
 - **28 May 2021:** created
