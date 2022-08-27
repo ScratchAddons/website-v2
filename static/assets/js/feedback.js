@@ -1,3 +1,16 @@
+const notSTWords = [
+    /\bscratch *team\b/i,
+    /\bst\b/,
+]
+
+const punishmentWords = [
+    /\bban\b/,
+    /\b(please|pls|plz) *block\b/,
+    /\bkick\b/,
+    /\bpunish\b/,
+    /\bpunishment\b/
+]
+
 const i18n = window.i18nStrings
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
 let wakeUpTimeout = setTimeout(() => {}, 0)
@@ -100,12 +113,10 @@ const setPreSendWarning = (heading, description) => {
 const preSendCheck = content => {
     content = content.toLowerCase()
     let warningText = false
-    const notSTWords = 'scratch team,st'.split(',')
-    if (notSTWords.some(el => content.includes(el))) {
+    if (notSTWords.some(el => content.search(el) + 1)) {
         warningText = [i18n.preSendWarning.notST.heading, i18n.preSendWarning.notST.description]
     }
-    const punishmentWords = 'ban,block,kick,punish,punishment'.split(',')
-    if (punishmentWords.some(el => content.includes(el))) {
+    if (punishmentWords.some(el => content.search(el) + 1)) {
         warningText = [i18n.preSendWarning.punishment.heading, i18n.preSendWarning.punishment.description]
     }
     if (warningText) {
