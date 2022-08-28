@@ -173,7 +173,10 @@
 		"name": "Clone counter",
 		"description": "Adds a counter above the stage in the editor which shows the total amount of clones.",
 		"tags": ["editor", "projectPlayer", "recommended"],
-		"credits": [{ "name": "Jeffalo" }]
+		"credits": [
+			{ "name": "Jeffalo" },
+			{ "name": "OregSam", "link": "https://github.com/OregSamSas" }
+		]
 	},
 	{
 		"id": "cloud-games",
@@ -408,7 +411,7 @@
 		"id": "default-costume-editor-color",
 		"name": "Customizable default costume editor colors",
 		"description": "Changes the default colors and outline size used by the costume editor.",
-		"tags": ["editor", "costumeEditor", "featured", "beta"],
+		"tags": ["editor", "costumeEditor", "featured"],
 		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
@@ -542,8 +545,8 @@
 	{
 		"id": "editor-devtools",
 		"name": "Developer tools",
-		"description": "Adds a find box and new menu options to the editor: copy/paste blocks, better clean up, go to custom block definition, and more! Press Ctrl+F to focus the find box, Ctrl+Space to bring up the \"add block by name\" popup, Ctrl+Left/Right to navigate find history.",
-		"tags": ["editor", "codeEditor", "costumeEditor", "recommended"],
+		"description": "Adds new menu options to the editor: copy/paste blocks, better clean up, and more! Use Ctrl+Space (Shift+Space on macOS) to bring up the \"add block by name\" popup.",
+		"tags": ["editor", "codeEditor", "recommended"],
 		"credits": [{ "name": "griffpatch" }]
 	},
 	{
@@ -582,7 +585,7 @@
 	{
 		"id": "editor-stage-left",
 		"name": "Display stage on left side",
-		"description": "Moves the stage to the left side of the editor.",
+		"description": "Moves the stage to the left side of the editor, like in Scratch 2.0.",
 		"tags": ["editor", "theme", "featured"],
 		"credits": [{ "name": "NitroCipher/ZenithRogue" }]
 	},
@@ -651,6 +654,19 @@
 			{
 				"name": "TheColaber",
 				"link": "https://scratch.mit.edu/users/TheColaber/"
+			}
+		]
+	},
+	{
+		"id": "find-bar",
+		"name": "Editor find bar",
+		"description": "Adds a find bar to find and jump to scripts, costumes and sounds next to the sounds tab. Use Ctrl+Left and Ctrl+Right in the code area to navigate to previous or next visited position after using the find bar.",
+		"tags": ["editor", "codeEditor", "costumeEditor", "recommended"],
+		"credits": [
+			{ "name": "griffpatch" },
+			{
+				"name": "TheColaber",
+				"link": "https://scratch.mit.edu/users/thecolaber/"
 			}
 		]
 	},
@@ -904,6 +920,13 @@
 		]
 	},
 	{
+		"id": "jump-to-def",
+		"name": "Jump to custom block definition",
+		"description": "Allows you to jump to a custom block's definition using the middle mouse button or Shift+Click on the block.",
+		"tags": ["editor", "codeEditor", "recommended"],
+		"credits": [{ "name": "griffpatch" }]
+	},
+	{
 		"id": "last-edit-tooltip",
 		"name": "Shared/edited dates tooltip",
 		"description": "Hover over a project's share date for information on when exactly it was shared and last edited.",
@@ -999,7 +1022,7 @@
 	{
 		"id": "move-to-top-bottom",
 		"name": "Move costume to top or bottom",
-		"description": "Adds a right click context menu item to move a costume or a sound to the top or the bottom of the list. Previously part of the developer tools.",
+		"description": "Adds a right click context menu item to move a costume or a sound to the top or the bottom of the list.",
 		"tags": ["editor", "costumeEditor", "featured"]
 	},
 	{
@@ -1157,6 +1180,15 @@
 				"name": "Tacodude7729",
 				"link": "https://scratch.mit.edu/users/Tacodude7729/"
 			}
+		]
+	},
+	{
+		"id": "remove-search-bar-autocomplete",
+		"name": "Remove autocomplete from search bar",
+		"description": "Stops web browsers from autocompleting suggestions in the navigation bar's search bar.",
+		"tags": ["community"],
+		"credits": [
+			{ "name": "jbthepig", "link": "https://scratch.mit.edu/users/jbthepig/" }
 		]
 	},
 	{
@@ -1422,6 +1454,20 @@
 			{
 				"name": "Maximouse",
 				"link": "https://scratch.mit.edu/users/Maximouse/"
+			}
+		]
+	},
+	{
+		"id": "zebra-striping",
+		"name": "Alternating nested block colors",
+		"description": "Makes blocks of the same category alternate between lighter and darker shades when nested inside each other. This is also known as zebra striping.",
+		"tags": ["editor", "codeEditor", "featured"],
+		"credits": [
+			{ "name": "CST1229", "link": "https://github.com/CST1229" },
+			{ "name": "GarboMuffin" },
+			{
+				"name": "TheColaber",
+				"link": "https://scratch.mit.edu/users/thecolaber"
 			}
 		]
 	}
