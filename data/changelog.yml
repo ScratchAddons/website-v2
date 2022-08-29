@@ -1080,7 +1080,7 @@
       Another new addon added in this update is "sound duration display", which adds a display to the sound editor that shows the total length and the elapsed time of the sound, or the selection within it.
     YouTubeID: mTX1V9e6KK0
 
-- Version: 1.26.1
+- Version: v1.26.1
   Index: 66
   Tag: v1.26.1
   Name: v1.26.1
@@ -1117,7 +1117,7 @@
       Another new addon is "reverse order of project controls", which moves the green flag and stop buttons to the right and the full screen button to the left, like in Scratch 2.0. Also, you can now customize the projects shown on the cloud games tab.
     YouTubeID: ostWH0KN4bM
 
-- Version: 1.27.1
+- Version: v1.27.1
   Index: 68
   Tag: v1.27.1
   Name: v1.27.1
@@ -1127,7 +1127,7 @@
     - Bug fix: "auto-hide block palette" causing editor crash after clicking "make new block"
     - Bug fix: "project progress bar" not working and showing a vertical bar
 
-- Version: 1.27.2
+- Version: v1.27.2
   Index: 69
   Tag: v1.27.2
   Name: v1.27.2
@@ -1136,7 +1136,7 @@
   Entry: |
     - Bug fix: "hide stage and sprite pane" crashing the page if "touching mouse pointer" block runs while the stage is hidden
 
-- Version: 1.27.3
+- Version: v1.27.3
   Index: 70
   Tag: v1.27.3
   Name: v1.27.3
