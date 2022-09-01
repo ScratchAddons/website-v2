@@ -42,7 +42,7 @@
 			<a href='{{ "/blog" | relURL }}'>{{ T "Links.Blog" }}</a>
 		</section>
 		<section class="w-100 mb-0">
-			<p>{{ T "Footer.Legal.Copyright" ( dict "Year" .Site.Params.copyright_year "Copyleft" "sdsd" ) | safeHTML }}</p>
+			<p>{{ T "Footer.Legal.Copyright" ( dict "Year" .Site.Params.copyright_year "Copyleft" "<span class=copyleft>©</span>" ) | safeHTML }}</p>
 			<p>{{ T "Footer.Legal.NoAffiliation" }}</p>
 			<p class="mb-0">{{ T "Footer.Legal.License" }}</p>
 		</section>
