@@ -3,7 +3,8 @@ on:
     inputs:
       upload_repo:
         description: 'Upload repository as an artifact'
-        type: boolean 
+        type: boolean
+        default: false
   push:
     branches:
       - master
