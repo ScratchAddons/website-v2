@@ -12,10 +12,10 @@
 		"description": "Alt+Click the green flag to toggle 60FPS.",
 		"tags": ["editor", "projectPlayer", "recommended"],
 		"credits": [
-			{ "name": "Jeffalo", "link": "https://scratch.mit.edu/users/Jeffalo" },
+			{ "name": "Jeffalo", "link": "https://scratch.mit.edu/users/Jeffalo/" },
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -74,11 +74,11 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			},
 			{
 				"name": "pufferfish101007",
-				"link": "https://scratch.mit.edu/users/pufferfish101007"
+				"link": "https://scratch.mit.edu/users/pufferfish101007/"
 			}
 		]
 	},
@@ -96,7 +96,7 @@
 		"credits": [
 			{
 				"name": "lisa_wolfgang",
-				"link": "https://scratch.mit.edu/users/lisa_wolfgang"
+				"link": "https://scratch.mit.edu/users/lisa_wolfgang/"
 			},
 			{ "name": "GarboMuffin" }
 		]
@@ -109,7 +109,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -142,7 +142,7 @@
 			{ "name": "GarboMuffin" },
 			{
 				"name": "pufferfish101007",
-				"link": "https://scratch.mit.edu/users/pufferfish101007"
+				"link": "https://scratch.mit.edu/users/pufferfish101007/"
 			}
 		]
 	},
@@ -163,7 +163,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			},
 			{ "name": "GarboMuffin" }
 		]
@@ -173,7 +173,10 @@
 		"name": "Clone counter",
 		"description": "Adds a counter above the stage in the editor which shows the total amount of clones.",
 		"tags": ["editor", "projectPlayer", "recommended"],
-		"credits": [{ "name": "Jeffalo" }]
+		"credits": [
+			{ "name": "Jeffalo" },
+			{ "name": "OregSam", "link": "https://github.com/OregSamSas" }
+		]
 	},
 	{
 		"id": "cloud-games",
@@ -224,7 +227,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -248,7 +251,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -277,7 +280,7 @@
 		"description": "Automatically posts the comment or forum post on Ctrl+Enter.",
 		"tags": ["community"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
+			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		]
 	},
 	{
@@ -304,11 +307,11 @@
 			},
 			{
 				"name": "lisa_wolfgang",
-				"link": "https://scratch.mit.edu/users/lisa_wolfgang"
+				"link": "https://scratch.mit.edu/users/lisa_wolfgang/"
 			},
 			{
 				"name": "GarboMuffin",
-				"link": "https://scratch.mit.edu/users/GarboMuffin"
+				"link": "https://scratch.mit.edu/users/GarboMuffin/"
 			}
 		]
 	},
@@ -349,15 +352,15 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			},
 			{
 				"name": "World_Languages",
-				"link": "https://scratch.mit.edu/users/World_Languages"
+				"link": "https://scratch.mit.edu/users/World_Languages/"
 			},
 			{
 				"name": "griffpatch",
-				"link": "https://scratch.mit.edu/users/griffpatch"
+				"link": "https://scratch.mit.edu/users/griffpatch/"
 			}
 		]
 	},
@@ -408,7 +411,7 @@
 		"id": "default-costume-editor-color",
 		"name": "Customizable default costume editor colors",
 		"description": "Changes the default colors and outline size used by the costume editor.",
-		"tags": ["editor", "costumeEditor", "featured", "beta"],
+		"tags": ["editor", "costumeEditor", "featured"],
 		"credits": [{ "name": "GarboMuffin" }]
 	},
 	{
@@ -417,7 +420,7 @@
 		"description": "Change the default project from the Scratch Cat to any existing project.",
 		"tags": ["editor", "beta"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		]
 	},
 	{
@@ -428,7 +431,7 @@
 		"credits": [
 			{
 				"name": "RustingRobot",
-				"link": "https://scratch.mit.edu/users/RustingRobot"
+				"link": "https://scratch.mit.edu/users/RustingRobot/"
 			}
 		]
 	},
@@ -457,7 +460,7 @@
 		"credits": [
 			{
 				"name": "Chrome_Cat",
-				"link": "https://scratch.mit.edu/users/Chrome_Cat"
+				"link": "https://scratch.mit.edu/users/Chrome_Cat/"
 			},
 			{ "name": "GarboMuffin" }
 		]
@@ -485,7 +488,7 @@
 		"id": "editor-buttons-reverse-order",
 		"name": "Reverse order of project controls",
 		"description": "Moves the green flag and stop buttons to the right and the full screen button to the left, like in Scratch 2.0.",
-		"tags": ["editor", "projectPlayer", "featured"]
+		"tags": ["editor", "projectPlayer", "theme", "featured"]
 	},
 	{
 		"id": "editor-colored-context-menus",
@@ -502,7 +505,7 @@
 		"credits": [
 			{
 				"name": "lisa_wolfgang",
-				"link": "https://scratch.mit.edu/users/lisa_wolfgang"
+				"link": "https://scratch.mit.edu/users/lisa_wolfgang/"
 			},
 			{ "name": "GarboMuffin" }
 		]
@@ -542,8 +545,8 @@
 	{
 		"id": "editor-devtools",
 		"name": "Developer tools",
-		"description": "Adds a find box and new menu options to the editor: copy/paste blocks, better clean up, go to custom block definition, and more! Press Ctrl+F to focus the find box, Ctrl+Space to bring up the \"add block by name\" popup, Ctrl+Left/Right to navigate find history.",
-		"tags": ["editor", "codeEditor", "costumeEditor", "recommended"],
+		"description": "Adds new menu options to the editor: copy/paste blocks, better clean up, and more! Use Ctrl+Space (Shift+Space on macOS) to bring up the \"add block by name\" popup.",
+		"tags": ["editor", "codeEditor", "recommended"],
 		"credits": [{ "name": "griffpatch" }]
 	},
 	{
@@ -582,7 +585,7 @@
 	{
 		"id": "editor-stage-left",
 		"name": "Display stage on left side",
-		"description": "Moves the stage to the left side of the editor.",
+		"description": "Moves the stage to the left side of the editor, like in Scratch 2.0.",
 		"tags": ["editor", "theme", "featured"],
 		"credits": [{ "name": "NitroCipher/ZenithRogue" }]
 	},
@@ -601,7 +604,7 @@
 			{ "name": "NitroCipher/ZenithRogue" },
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -611,7 +614,7 @@
 		"description": "Replaces the \"Shared\" button next to the project title box with a button to unshare the project.",
 		"tags": ["editor", "editorMenuBar"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		]
 	},
 	{
@@ -629,7 +632,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			},
 			{ "name": "Maximouse", "link": "https://mxmou.github.io/exactcount" },
 			{ "name": "World_Languages" }
@@ -650,7 +653,20 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
+			}
+		]
+	},
+	{
+		"id": "find-bar",
+		"name": "Editor find bar",
+		"description": "Adds a find bar to find and jump to scripts, costumes and sounds next to the sounds tab. Use Ctrl+Left and Ctrl+Right in the code area to navigate to previous or next visited position after using the find bar.",
+		"tags": ["editor", "codeEditor", "costumeEditor", "recommended"],
+		"credits": [
+			{ "name": "griffpatch" },
+			{
+				"name": "TheColaber",
+				"link": "https://scratch.mit.edu/users/thecolaber/"
 			}
 		]
 	},
@@ -764,7 +780,7 @@
 			{ "name": "NitroCipher/ZenithRogue" },
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			},
 			{ "name": "RedGuy7", "link": "https://paul-s-reid.com/web-dev" }
 		]
@@ -808,7 +824,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			},
 			{
 				"name": "Maximouse",
@@ -829,7 +845,7 @@
 		"description": "Lets you hide love, favorite, remix and view counts in the front page and project pages.",
 		"tags": ["community", "projectPage"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		]
 	},
 	{
@@ -838,7 +854,7 @@
 		"description": "Hides signatures in forum posts and adds a \"Show signature\" button.",
 		"tags": ["community", "forums"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		]
 	},
 	{
@@ -887,7 +903,7 @@
 		"credits": [
 			{
 				"name": "pufferfish101007",
-				"link": "https://scratch.mit.edu/users/pufferfish101007"
+				"link": "https://scratch.mit.edu/users/pufferfish101007/"
 			}
 		]
 	},
@@ -904,6 +920,13 @@
 		]
 	},
 	{
+		"id": "jump-to-def",
+		"name": "Jump to custom block definition",
+		"description": "Allows you to jump to a custom block's definition using the middle mouse button or Shift+Click on the block.",
+		"tags": ["editor", "codeEditor", "recommended"],
+		"credits": [{ "name": "griffpatch" }]
+	},
+	{
 		"id": "last-edit-tooltip",
 		"name": "Shared/edited dates tooltip",
 		"description": "Hover over a project's share date for information on when exactly it was shared and last edited.",
@@ -911,9 +934,9 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			},
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
+			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		]
 	},
 	{
@@ -999,7 +1022,7 @@
 	{
 		"id": "move-to-top-bottom",
 		"name": "Move costume to top or bottom",
-		"description": "Adds a right click context menu item to move a costume or a sound to the top or the bottom of the list. Previously part of the developer tools.",
+		"description": "Adds a right click context menu item to move a costume or a sound to the top or the bottom of the list.",
 		"tags": ["editor", "costumeEditor", "featured"]
 	},
 	{
@@ -1012,7 +1035,7 @@
 			{ "name": "William Horning", "link": "https://wgyt.tk/" },
 			{
 				"name": "lisa_wolfgang",
-				"link": "https://scratch.mit.edu/users/lisa_wolfgang"
+				"link": "https://scratch.mit.edu/users/lisa_wolfgang/"
 			}
 		]
 	},
@@ -1024,7 +1047,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -1106,7 +1129,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -1118,7 +1141,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -1128,7 +1151,7 @@
 		"description": "Redirects you to the standard (\"main\") forums when you click a link to the mobile forums.",
 		"tags": ["community", "forums"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" }
+			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		]
 	},
 	{
@@ -1137,7 +1160,7 @@
 		"description": "Adds the Remix button to your own projects.",
 		"tags": ["community", "projectPage"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" }
+			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		]
 	},
 	{
@@ -1157,6 +1180,15 @@
 				"name": "Tacodude7729",
 				"link": "https://scratch.mit.edu/users/Tacodude7729/"
 			}
+		]
+	},
+	{
+		"id": "remove-search-bar-autocomplete",
+		"name": "Remove autocomplete from search bar",
+		"description": "Stops web browsers from autocompleting suggestions in the navigation bar's search bar.",
+		"tags": ["community"],
+		"credits": [
+			{ "name": "jbthepig", "link": "https://scratch.mit.edu/users/jbthepig/" }
 		]
 	},
 	{
@@ -1205,7 +1237,10 @@
 		"description": "Enables the new version of scratchblocks on the forums.",
 		"tags": ["community", "forums", "beta"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion/" },
+			{
+				"name": "Weredime (9gr)",
+				"link": "https://scratch.mit.edu/users/9gr/"
+			},
 			{ "name": "CubeyTheCube", "link": "https://github.com/CubeyTheCube" },
 			{ "name": "apple502j", "link": "https://github.com/apple502j" }
 		]
@@ -1243,11 +1278,11 @@
 			{ "name": "CST1229", "link": "https://github.com/CST1229" },
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			},
 			{
 				"name": "lisa_wolfgang",
-				"link": "https://scratch.mit.edu/users/lisa_wolfgang"
+				"link": "https://scratch.mit.edu/users/lisa_wolfgang/"
 			}
 		]
 	},
@@ -1310,7 +1345,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -1320,7 +1355,10 @@
 		"description": "Adds a button at the top of the \"curators\" tab in studios you manage, that lists your followers and followed users and lets you invite a shown user with a single click.",
 		"tags": ["community", "studios", "featured"],
 		"credits": [
-			{ "name": "Verixion", "link": "https://scratch.mit.edu/users/Verixion" },
+			{
+				"name": "Weredime (9gr)",
+				"link": "https://scratch.mit.edu/users/9gr/"
+			},
 			{ "name": "World_Languages" }
 		]
 	},
@@ -1333,7 +1371,7 @@
 			{ "name": "World_Languages" },
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -1372,7 +1410,7 @@
 		"credits": [
 			{
 				"name": "TheColaber",
-				"link": "https://scratch.mit.edu/users/TheColaber"
+				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		]
 	},
@@ -1416,6 +1454,20 @@
 			{
 				"name": "Maximouse",
 				"link": "https://scratch.mit.edu/users/Maximouse/"
+			}
+		]
+	},
+	{
+		"id": "zebra-striping",
+		"name": "Alternating nested block colors",
+		"description": "Makes blocks of the same category alternate between lighter and darker shades when nested inside each other. This is also known as zebra striping.",
+		"tags": ["editor", "codeEditor", "featured"],
+		"credits": [
+			{ "name": "CST1229", "link": "https://github.com/CST1229" },
+			{ "name": "GarboMuffin" },
+			{
+				"name": "TheColaber",
+				"link": "https://scratch.mit.edu/users/thecolaber"
 			}
 		]
 	}

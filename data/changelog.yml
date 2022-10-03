@@ -1080,7 +1080,7 @@
       Another new addon added in this update is "sound duration display", which adds a display to the sound editor that shows the total length and the elapsed time of the sound, or the selection within it.
     YouTubeID: mTX1V9e6KK0
 
-- Version: 1.26.1
+- Version: v1.26.1
   Index: 66
   Tag: v1.26.1
   Name: v1.26.1
@@ -1117,7 +1117,7 @@
       Another new addon is "reverse order of project controls", which moves the green flag and stop buttons to the right and the full screen button to the left, like in Scratch 2.0. Also, you can now customize the projects shown on the cloud games tab.
     YouTubeID: ostWH0KN4bM
 
-- Version: 1.27.1
+- Version: v1.27.1
   Index: 68
   Tag: v1.27.1
   Name: v1.27.1
@@ -1126,3 +1126,57 @@
   Entry: |
     - Bug fix: "auto-hide block palette" causing editor crash after clicking "make new block"
     - Bug fix: "project progress bar" not working and showing a vertical bar
+
+- Version: v1.27.2
+  Index: 69
+  Tag: v1.27.2
+  Name: v1.27.2
+  Date: 2022-07-20
+  Status: Released
+  Entry: |
+    - Bug fix: "hide stage and sprite pane" crashing the page if "touching mouse pointer" block runs while the stage is hidden
+
+- Version: v1.27.3
+  Index: 70
+  Tag: v1.27.3
+  Name: v1.27.3
+  Date: 2022-07-22
+  Status: Released
+  Entry: |
+    - Bug fix: "hide stage and sprite pane" hiding the stage in project pages
+    - Bug fix: "auto-hide block palette" not updating workspace metrics after changing settings
+
+- Version: v1.28.0
+  Index: 71
+  Tag: v1.28.0
+  Name: v1.28.0
+  Date: 2022-08-30
+  Status: Released
+  Entry: |
+    - New addon: alternating nested block colors
+    - New addon: editor find bar (previously part of “developer tools”, it can now search sounds)
+    - New addon: jump to custom block definition (previously part of “developer tools”)
+    - New addon: remove autocomplete from search bar
+    - The extension popup now remembers the tab that was last selected, instead of defaulting to the messages tab
+    - "Variable manager" addon: list items can now be inserted without holding the Shift key
+    - "Customizable navigation bar" addon: new "compact user dropdown" setting
+    - "Clone counter" addon: new "show icon only" setting
+    - "Confirmations" addon: new "confirm deleting projects" setting
+    - "Customizable new sprite position" addon: new "behavior when duplicating sprites" setting
+    - "Editor dark mode and customizable colors" addon: new customizable block palette opacity ("block palette background" setting now allows a transparency value)
+    - "Cloud games" addon: the cloud games tab can now be opened in a new tab, just like the Scratch Messaging tab
+    - "Cloud games" addon: now highlights the currently open project
+    - "Live forum post preview" addon: new "refresh rate" setting
+    - "Gamepad support" addon: new "reset controls to default" and "clear all controls" buttons
+    - "Customizable block colors": bug fixes, improve compatibility with other addons
+    - "Better emojis" addon: improve performance
+    - "Local timezone on forums": stop using ScratchDB as information source, use mobile forums instead
+    - Bug fix: some editor addons breaking after changing editor language
+    - Bug fix: "auto-hiding block palette" hiding the sprite direction popup
+    - Bug fix: "variable manager" allowing variable names to be empty
+  Highlights:
+    Description: |
+      New addon: "alternating nested block colors", which makes blocks of the same category alternate between lighter and darker shades when nested inside each other (zebra striping). Go to Scratch Addons settings to enable it.
+
+      The "editor find bar" and "jump to custom block definition" addons, previously part of the "developer tools" addon, can now be toggled separately.
+    YouTubeID: e_70jvFOmfI

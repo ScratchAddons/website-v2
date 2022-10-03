@@ -81,14 +81,29 @@ body > footer {
 	background-color: var(--footer-bg);
 	color: var(--footer-cnt);
 	
+	> div {
+		padding: 1rem 0;
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	a {
+		color: var(--footer-cnt);
+		&:hover {
+			color: var(--footer-cnt-2)
+		}
+	}
+	
 	section {
 		display: block;
-		margin: 0 1rem 1rem 1rem;
+		padding: 0 1rem;
 		
 		h3 {
 			font-size: 1rem;
 			margin-bottom: 0.5rem;
 			font-weight: 600;
+			color: var(--footer-cnt-2)
 		}
 		
 		p {
@@ -96,7 +111,7 @@ body > footer {
 			margin-bottom: 0.5rem;
 		}
 		
-		a {
+		> a {
 			margin-bottom: 0rem;
 			display: block;
 		}
@@ -115,14 +130,19 @@ body > footer {
 
 	.footer-intro {
 
-		> * {
+		> div {
 			display: block;
-			margin-bottom: 0.25rem;
-			color: var(--footer-cnt);
-
+			margin-bottom: 0.75rem;
+			
 			&:last-of-type {
 				margin-bottom: 0
 			}
+		}
+
+		.footer-ghbtns iframe {
+			display: block;
+			margin-bottom: 0.25rem;
+
 		}
 		
 		img {
@@ -132,10 +152,20 @@ body > footer {
 		}
 
 		.navbar-brand {
-			margin-left: 4.6875px;
-			margin-bottom: 0.33rem;
+			color: var(--footer-cnt-2)
 		}
 
+	}
+
+	.footer-socials {
+		a {
+			margin-right: 0.25rem;
+
+			svg {
+				width: 2rem;
+				height: 2rem;
+			}
+		}
 	}
 	 
 }
@@ -184,7 +214,9 @@ body.dark .dark-btn-white {
 
 #install-nav .nav-link {
 	@media (min-width: $bs-breakpoint-md) {
-		@include btn-white()
+		border: 1px solid white;
+		padding-top: calc(0.5rem - 1px);
+		padding-bottom: calc(0.5rem - 1px);
 	}
 }
 
@@ -210,28 +242,9 @@ body.dark .dark-btn-white {
 	display: none
 }
 
-#dark-toggle {
-	width: 4rem;
-	height: 4rem;
-	border-radius: 50%;
-	background-color: black;
-	position: fixed;
-	top: calc(100% - 5rem);
-	left: calc(100% - 5rem);
-	opacity: 25%;
-	padding: 1rem;
-	color: white;
-	z-index: 1100;
-	transition: opacity .15s ease-in-out;
-
-	svg {
-		width: 100%;
-		height: 100%;
-	}
-
-	&:hover {
-		opacity: 90%
-	}
+.copyleft {
+	display: inline-block;
+	transform: rotateY(180deg);
 }
 
 // =============================================================
@@ -249,7 +262,8 @@ body {
 	--intro-heading-bg: #{$scratch-orange};
 	--intro-heading-cnt: white;
 	--footer-bg: #f5f5f5;
-	--footer-cnt: #{$bs-default-black};
+	--footer-cnt: #{lighten($bs-default-black, 20%)};
+	--footer-cnt-2: #{lighten($bs-default-black, 5%)};
 	--navbar-height: 59.5px;
 
 }
@@ -261,11 +275,10 @@ body.dark {
 	--content-bg: #{$dark-neutral};
 	--content-cnt: white;
 	--header-bg: #{$dark-dp-2};
-	--header-cnt: white;
 	--intro-heading-bg: #{$dark-dp-2};
-	--intro-heading-cnt: white;
 	--footer-bg: #{$dark-dp-2};
-	--footer-cnt: white;
+	--footer-cnt: #{darken(white, 20%)};
+	--footer-cnt-2: #{darken(white, 5%)};
 	--secondary: #{$dark-low-emphasis};
 
 }
@@ -273,13 +286,7 @@ body.dark {
 body.extension-styled {
 
 	background-color: $light-ext-level-1;
-	color: $bs-default-black;
 	--content-bg: #{$light-ext-level-1};
-	--content-cnt: #{$bs-default-black};
-	--header-bg: #{$scratch-orange};
-	--header-cnt: white;
-	--intro-heading-bg: #{$scratch-orange};
-	--intro-heading-cnt: white;
 	--footer-bg: #{$light-ext-level-3};
 	--footer-cnt: #{$bs-default-black};
 	--navbar-height: 60px;
@@ -289,13 +296,9 @@ body.extension-styled {
 body.dark.extension-styled {
 
 	background-color: $dark-ext-level-1;
-	color: white;
 	--content-bg: #{$dark-ext-level-1};
-	--content-cnt: white;
 	--header-bg: #{$scratch-orange};
-	--header-cnt: white;
 	--intro-heading-bg: #{$dark-ext-level-2};
-	--intro-heading-cnt: white;
 	--footer-bg: #{$dark-ext-level-3};
 	--footer-cnt: white;
 
@@ -355,10 +358,10 @@ body.dark {
 		color: white !important
 	}
 
-	#dark-toggle {
-		color: white;
-		background-color: $scratch-orange;
-	}
+	// #dark-toggle {
+	// 	color: white;
+	// 	background-color: $scratch-orange;
+	// }
 
 	.navbar-toggler {
 		color: rgba(255,255,255,.5);

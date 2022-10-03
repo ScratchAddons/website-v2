@@ -1,43 +1,48 @@
-<a id="dark-toggle" class="btn" title='{{ T "DarkTheme.Title" }}' aria-label='{{ T "DarkTheme.Label" }}' data-toggle="tooltip" data-placement="left"></a>
-
 <footer class="footer">
-	<div class="container py-4 d-flex justify-content-between flex-wrap">
-		<section class="footer-intro">
-			<a href='{{ "/" | relLangURL }}' class="navbar-brand">
-				<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddons" }}' class="mr-2"></img>
-				<span>{{ T "Global.ScratchAddons" }}</span>
-			</a>
-			{{ $latest := index (sort $.Site.Data.changelog "Index" "desc") 0 -}}
-			<p class="mb-3 small">{{ T "Footer.Intro" ( dict "Version" ( $latest.Version ) "AddonCount" ( $.Site.Data.addons.en | len ) ) }}</p>
-			<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
-			<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=fork&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+	<div class="container my-4">
+		<section class="footer-intro mb-4">
+			<div>
+				<a href='{{ "/" | relLangURL }}' class="navbar-brand">
+					<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddons" }}' class="mr-2"></img>
+					<span>{{ T "Global.ScratchAddons" }}</span>
+				</a>
+				{{ $latest := index (sort $.Site.Data.changelog "Index" "desc") 0 -}}
+				<p class="mb-3 small">{{ T "Footer.Intro" ( dict "Version" ( $latest.Version ) "AddonCount" ( $.Site.Data.addons.en | len ) ) }}</p>
+			</div>
+			<div class="footer-ghbtns">
+				<iframe src="https://ghbtns.com/github-btn.html?user=ScratchAddons&repo=ScratchAddons&type=star&count=true&size=large" frameborder="0" scrolling="0" width="170" height="30" title="GitHub"></iframe>
+			</div>
+			<div class="footer-socials">
+				<a href="https://youtube.com/ScratchAddons" aria-label='{{ T "Links.YouTube" }}'><span class="iconify" data-icon="simple-icons:youtube"></span></a>
+				<a href="https://discord.gg/R5NBqwMjNc" aria-label='{{ T "Links.Discord" }}'><span class="iconify" data-icon="simple-icons:discord"></span></a>
+				<a href="https://twitter.com/ScratchAddons" aria-label='{{ T "Links.Twitter" }}'><span class="iconify" data-icon="simple-icons:twitter"></span></a>
+				<a href="https://github.com/ScratchAddons" aria-label='{{ T "Links.GitHub" }}'><span class="iconify" data-icon="simple-icons:github"></span></a>
+			</div>
 		</section>
-		<section>
+		<section class="mb-4">
 			<h3>{{ T "Footer.Pages.Header" }}</h3>
 			<a href='{{ "/docs/faq" | relLangURL }}'>{{ T "Footer.Pages.FAQ" }}</a>
 			<a href='{{ "/feedback" | relLangURL }}'>{{ T "Footer.Pages.Feedback" }}</a>
 			<a href='{{ "/credits" | relLangURL }}'>{{ T "Links.Credits" }}</a>
 			<a href='{{ "/changelog" | relLangURL }}'>{{ T "Footer.Pages.Changelog" }}</a>
-			<a href='{{ "/addons" | relLangURL }}'>{{ T "Footer.Pages.Addons" }}</a>
-			<a href='{{ "/blog" | relURL }}'>{{ T "Links.Blog" }}</a>
+			<a href='{{ "/addons" | relLangURL }}'>{{ T "Links.Addons" }}</a>
 		</section>
-		<section>
+		<section class="mb-4">
 			<h3>{{ T "Footer.Discuss.Header" }}</h3>
-			<a href="https://github.com/ScratchAddons/ScratchAddons/discussions" rel="noopener">{{ T "Footer.Discuss.Discussion" }}</a>
+			<a href="https://github.com/ScratchAddons/ScratchAddons/discussions" rel="noopener">{{ T "Links.Discussion" }}</a>
 			<a href="https://github.com/ScratchAddons/ScratchAddons/issues" rel="noopener">{{ T "Footer.Discuss.Issues" }}</a>
-			<a href="https://discord.gg/R5NBqwMjNc" rel="noopener">{{ T "Footer.Discuss.DiscordCom" }}</a>
+			<a href="https://discord.gg/R5NBqwMjNc" rel="noopener">{{ T "Links.DiscordCom" }}</a>
 			<a href="https://discord.gg/Ak8sCDQ" rel="noopener">{{ T "Footer.Discuss.DiscordDev" }}</a>
 		</section>
-		<section>
+		<section class="mb-4">
 			<h3>{{ T "Footer.Resources.Header" }}</h3>
-			<a href="https://github.com/ScratchAddons" rel="noopener">{{ T "Footer.Resources.Organization" }}</a>
 			<a href="https://github.com/ScratchAddons/ScratchAddons" rel="noopener">{{ T "Footer.Resources.Repository" }}</a>
 			<a href='{{ "/docs" | relLangURL }}' rel="noopener">{{ T "Footer.Resources.Documentation" }}</a>
 			<a href="/docs/policies/privacy/website" rel="noopener">{{ T "Links.PrivacyPolicy" }}</a>
-			<a href="https://youtube.com/ScratchAddons" rel="noopener">{{ T "Footer.Resources.YouTube" }}</a>
+			<a href='{{ "/blog" | relURL }}'>{{ T "Links.Blog" }}</a>
 		</section>
 		<section class="w-100 mb-0">
-			<p>{{ T "Footer.Legal.Copyright" .Site.Params.copyright_year }}</p>
+			<p>{{ T "Footer.Legal.Copyright" ( dict "Year" .Site.Params.copyright_year "Copyleft" "<span class=copyleft>©</span>" ) | safeHTML }}</p>
 			<p>{{ T "Footer.Legal.NoAffiliation" }}</p>
 			<p class="mb-0">{{ T "Footer.Legal.License" }}</p>
 		</section>

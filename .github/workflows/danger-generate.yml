@@ -1,0 +1,59 @@
+on: 
+  pull_request:
+    branches:
+      - master
+    types:
+      - opened
+      - edited
+      - reopened
+      - synchronize
+      - ready_for_review
+
+name: Danger (Generate)
+
+concurrency: 
+  group: danger-generate-${{ github.event.number }}
+  cancel-in-progress: true
+
+jobs:
+  generate:
+    name: Generate
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout ScratchAddons/website-v2
+        uses: actions/checkout@v3
+        with:
+          path: repo
+      - name: Checkout ScratchAddons/website-v2-script
+        uses: actions/checkout@v3
+        with:
+          repository: ScratchAddons/website-v2-script
+          path: script
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x 
+      - name: Cache dependencies
+        uses: actions/cache@v3
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('.github/workflows/danger-generate.yml') }}
+          restore-keys: ${{ runner.os }}-node-
+
+      - name: Execute script
+        run: | 
+          echo Running...
+          cd repo
+          bash ../script/sh/danger-generate.sh
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PR_NUMBER: ${{ github.event.number }}
+
+      - name: Upload for sending
+        uses: actions/upload-artifact@v3
+        with:
+          name: to-send
+          path: |
+            dangerfile.js
+            pr-number

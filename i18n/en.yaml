@@ -29,8 +29,17 @@ Global:
 # Strings used for links to pages. Future pages on header and footer should be put on this.
 Links:
   Blog: Blog
+  Docs: Docs
+  Addons: Addons
   Credits: Credits
   PrivacyPolicy: Privacy Policy
+  YouTube: YouTube
+  Discord: Discord
+  GitHub: GitHub
+  DiscordCom: Community Discord
+  Discussion: Discussion Forum
+  Community: Community
+  Twitter: Twitter
 
 # Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
@@ -47,22 +56,17 @@ Footer:
     FAQ: FAQ
     Feedback: Send Feedback
     Changelog: Changelog
-    Addons: Addons
   Discuss:
     Header: Discuss
-    Discussion: Discussion Forum
     Issues: Issues
-    DiscordCom: Community Discord
     DiscordDev: Development Discord
   Resources:
     Header: Resources
-    Organization: Organization
     Repository: Repository
     Documentation: Documentation
-    YouTube: YouTube
   Legal:
-    Copyright: © {{.Count}} Scratch Addons contributors
-    NoAffiliation: Scratch Addons is not affiliated, associated, or in any way officially connected with Scratch, the Scratch Team, the Scratch Foundation, or any of its subsidiaries or its affiliates.
+    Copyright: "{{ .Copyleft }} {{ .Year }} Scratch Addons contributors"
+    NoAffiliation: Scratch Addons is not affiliated, associated, or in any way officially connected with the Scratch website or the organizations that maintain it.
     License: Scratch Addons is licensed under the terms of GNU General Public License v3.0.
   Intro: Currently {{ .Version }} with {{ .AddonCount }} addons.
 
@@ -181,7 +185,8 @@ UnsupportedBrowserPage:
 
 # Strings used for blog
 Blog:
-  SectionSiteName: Scratch Addons Blog    # This is unused in other languages, but it is used in English.
+  SectionSiteName: Scratch Addons Blog
+  # This is unused in other languages, but it is used in English.
 
 # Strings used for /credits
 CreditsPage:
