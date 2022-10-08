@@ -226,6 +226,14 @@ article {
 	}
 }
 
+.color-preview {
+	width: 0.9rem;
+	height: 0.9rem;
+	border: 0.05rem solid black;
+	vertical-align: -0.125rem;
+	display: inline-block;
+}
+
 @media (min-width: $bs-breakpoint-lg) {
 	#docs-pages {
 		nav > ul {
