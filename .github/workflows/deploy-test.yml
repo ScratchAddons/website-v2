@@ -95,7 +95,7 @@ jobs:
           path: ./repo/public
       - name: Upload whole repo
         uses: actions/upload-artifact@v3
-        if: (github.event_name == 'workflow_dispatch') && (inputs.print_tags)
+        if: (github.event_name == 'workflow_dispatch') && (inputs.upload_repo)
         with:
           name: repo
           path: |
