@@ -8,7 +8,7 @@ Keep these guidelines in mind when creating or reviewing a pull request (PR). If
 All PRs:
 - should have sound reasoning as to why they should be merged. This should be specified under the "Reason for changes" header when writing the PR description. Even if it seems obvious, others may need the additional context. PRs with little to no reason to be merged are likely to be delayed, ignored, or even closed.
 - must support both the Chromium and Firefox browser engines. Avoid using new or experimental web technologies unless a fallback is implemented that preserves feature parity. View the [unsupported browser](https://scratchaddons.com/unsupported-browser/) page to determine the current minimum versions that must be supported.
-- must be tested thoroughly. We have a very large userbase, so it's especially important that all possible use cases are considered. Every PR should be tested on a Chromium-based browser (Chrome, Edge, Brave, or another) **and** Firefox. Any tests done should be added to the "Tests" section of the PR description. **Org members, this is required in order to give approval.**
+- must be tested thoroughly. We have a very large userbase, so it's especially important that all possible use cases are considered. Every PR should be tested on a Chromium-based browser (Chrome, Edge, Brave, or another) **and** Firefox. In addition, both LTR and RTL language modes should be supported. Any tests done should be added to the "Tests" section of the PR description. **Org members, this is required in order to give approval.**
 - must have **all** code reviewed line-by-line. **Org members, this is required in order to give approval.**
 - should be reviewed by someone familiar with the aspects that the PR is changing. This isn't a hard requirement, but a person like this will help iron out edge cases and minor issues.
 
@@ -24,6 +24,7 @@ In order for an approval to be valid, it must have the following checklist accom
 [] Valid reason to merge
 [] To the best of my knowledge, supports all browsers supported by the extension
 [] I personally tested all features in both a Chromium-based browser and Firefox
+[] All added UI elements support both LTR and RTL language modes
 [] I personally reviewed all code line-by-line
 <!-- For new addons and features, the following checklist items must also be included and completed. -->
 [] All titles, descriptions, info notices, and setting names provided are clear and concise
