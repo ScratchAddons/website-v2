@@ -1180,3 +1180,34 @@
 
       The "editor find bar" and "jump to custom block definition" addons, previously part of the "developer tools" addon, can now be toggled separately.
     YouTubeID: e_70jvFOmfI
+
+- Version: v1.29.0
+  Index: 72
+  Tag: v1.29.0
+  Name: v1.29.0
+  Date: 2022-10-26
+  Status: Released
+  Entry: |
+    - New addon: opacity slider [beta]
+    - New addon: project volume slider
+    - New addon: rename broadcasts
+    - New addon: select stage colors in the costume editor
+    - New "show addon names and descriptions in English" toggle for users that haven't set English as their default browser language (available inside “more settings” in the settings page)
+    - "Line breaks in comments" addon: new "add scroll bars to tall comments" and "maximum number of lines" settings
+    - "Hide projects stats" addon: new "show stats on my own project pages" setting and My Stuff page support
+    - "Customizable block colors" addon: new "comments" color setting
+    - "ocular integration" addon: new "show statuses everywhere/only on other's profiles" setting
+    - "Scratch Messaging" addon: support Ctrl+Enter to post comments
+    - "Profile statistics" addon: fix bugs, enhance dark mode support
+    - "TurboWarp button" addon: add ability to customize TurboWarp settings in "replace player" mode
+    - Bug fix: "shared/edited dates tooltip" sometimes not working
+    - Bug fix: "duplicate script with Alt key" leaving the original block detached from the script after duplicating
+    - Bug fix: "infinite scrolling" misplacing forum posts
+    - Bug fix: "developer tools" add block by name popup lacking colored block backgrounds if other addons disabled
+    - Bug fix: "editor dark mode and customizable colors" incorrectly colors right click context menu text in light themes
+  Highlights:
+    Description: |
+      New addon: "opacity slider", which adds an opacity slider to the costume editor color picker. Go to Scratch Addons settings to enable it.
+
+      Other new addons added this update are "project volume slider", "rename broadcasts", and "select stage colors in the costume editor".
+    YouTubeID: OCaaH-TtQB0
