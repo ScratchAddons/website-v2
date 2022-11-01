@@ -5,6 +5,7 @@ weight: 100
 aliases:
   - /docs/chrome-web-store-privacy-information
   - /docs/policies/chrome-web-store-privacy-information
+no_comments: true
 ---
 
 This is how we fill the "privacy practices" form on the Chrome Web Store Developer Dashboard.
