@@ -1,6 +1,7 @@
 ---
 title: Security Policy
 weight: 2
+no_comments: true
 ---
 
 ## Supported Versions
