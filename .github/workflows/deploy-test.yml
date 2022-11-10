@@ -7,7 +7,7 @@ on:
         default: false
   push:
     branches:
-      - master
+      - install
     paths:
       - .github/workflows/*
       - config.yml
