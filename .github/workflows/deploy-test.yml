@@ -83,7 +83,6 @@ jobs:
         with:
           hugo-version: latest
           extended: true
-
       - name: Build site
         run: |
           cd repo
