@@ -1,13 +1,8 @@
 on:
   workflow_dispatch:
-    inputs:
-      upload_repo:
-        description: 'Upload repository as an artifact'
-        type: boolean
-        default: false
   push:
     branches:
-      - master
+      - install
     paths:
       - .github/workflows/*
       - config.yml
@@ -41,15 +36,9 @@ jobs:
     steps:
       - name: Checkout ScratchAddons/website-v2 (deployment)
         uses: actions/checkout@v3
-        if: github.event_name != 'pull_request'
         with:
           path: repo
           fetch-depth: 0
-      - name: Checkout ScratchAddons/website-v2 (testing)
-        uses: actions/checkout@v3
-        if: github.event_name == 'pull_request'
-        with:
-          path: repo
       - name: Checkout ScratchAddons/website-v2-script
         uses: actions/checkout@v3
         with:
@@ -77,7 +66,6 @@ jobs:
           echo Running...
           cd repo
           bash ../script/sh/hugo-deploy-site.sh
-
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
@@ -87,20 +75,10 @@ jobs:
         run: |
           cd repo
           hugo --gc --minify --config config.yml,config-prod.yml
-
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1
-        if: (github.event_name != 'pull_request') && (github.repository_owner == 'ScratchAddons')
         with:
           path: ./repo/public
-      - name: Upload whole repo
-        uses: actions/upload-artifact@v3
-        if: (github.event_name == 'workflow_dispatch') && (inputs.upload_repo)
-        with:
-          name: repo
-          path: |
-            ./repo
-            !./repo/.git
 
   deploy:
     name: Deployment
@@ -112,7 +90,6 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    if: (github.event_name != 'pull_request') && (github.repository_owner == 'ScratchAddons')
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
