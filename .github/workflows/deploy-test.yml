@@ -77,15 +77,18 @@ jobs:
           echo Running...
           cd repo
           bash ../script/sh/hugo-deploy-site.sh
+
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: latest
           extended: true
+
       - name: Build site
         run: |
           cd repo
           hugo --gc --minify --config config.yml,config-prod.yml
+
       - name: Upload GitHub Pages artifact
         uses: actions/upload-pages-artifact@v1
         if: (github.event_name != 'pull_request') && (github.repository_owner == 'ScratchAddons')
@@ -99,6 +102,7 @@ jobs:
           path: |
             ./repo
             !./repo/.git
+
   deploy:
     name: Deployment
     runs-on: ubuntu-latest
