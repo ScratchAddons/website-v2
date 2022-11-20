@@ -10,8 +10,8 @@ If possible, disable the Scratch Addons extension you downloaded from the store 
 ## Step 1: Read about [addon basics](/docs/develop/getting-started/addon-basics/)
 Make sure to read that article to be familiar with the terminology.
 
-## Step 2: Fork/clone the repo
-Or download as ZIP, if you want. In other words, just download the source code locally.
+## Step 2: Fork/clone the [repo](https://github.com/ScratchAddons/ScratchAddons)
+Follow [these instructions](https://github.com/ScratchAddons/ScratchAddons#from-source) to download the source code locally and add Scratch Addons to your browser.
 
 ## Step 3: Load the extension into Chrome
 *Note: Chrome is recommended for working on addons. Nevertheless, addons are expected to work on Firefox and Edge.*  
