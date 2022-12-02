@@ -5,7 +5,6 @@ description: Allows multiple addons to add their own UI elements to the same are
 weight: 3
 ---
 
-## Summary
 The shared spaces API provides a standard way for addons to add their own custom UI elements to areas ("spaces") inside Scratch.
 
 For example, both the "mouse position" and "clone counter" addons add their own HTML elements to the project player stage header, after the stop button.
@@ -65,9 +64,9 @@ This API does not remove the need to wait until the shared space HTML element ex
 The list of existing shared spaces is hardcoded inside the code definition of the method (`addon-api/content-script/Tab.js`).  
 Each shared space has a name, and is defined by these properties:
 1. **Space parent element**: the HTML element where addons would typically add their UI elements inside of. This will be the parent element of all elements added to the shared space.
-2. **Space starting bound** (optional): the sibling which shared space items should always be added after of.
-3. **Space ending bound** (optional): the sibling which shared space items should always be added before of.
-4. **Accepts `scope` option**: whether a space can exist multiple times per page. In those cases, addons should manually provide the HTML element that will act as the parent element.
+2. **Space starting bound** (optional): the sibling after which shared space items should always be added.
+3. **Space ending bound** (optional): the sibling before which shared space items should always be added.
+4. **Accepts `scope` option**: whether a space can exist multiple times per page. In those cases, addons should manually provide an HTML element that contains the wanted parent element.
 
 As an example, the definition of the `afterGreenFlag` shared space calls `document.querySelector('div[class^="controls_controls-container"]')` to find the space parent element. Additionally, this space does not use the `scope` option, because there can only be 1 project player per document.
 
@@ -101,7 +100,7 @@ In cases where only one addon is adding custom UI elements, it's not necessary t
         </tr>
         <tr>
           <td>space</td>
-          <td><code>String</code></td>
+          <td><code>string</code></td>
           <td>Yes</td>
           <td>The name of the space where the element should be added (see list below).</td>
         </tr>
@@ -113,7 +112,7 @@ In cases where only one addon is adding custom UI elements, it's not necessary t
         </tr>
         <tr>
           <td>order</td>
-          <td><code>Number</code></td>
+          <td><code>number</code></td>
           <td>Yes</td>
           <td>The order number for the element.</td>
         </tr>
@@ -131,11 +130,11 @@ In cases where only one addon is adding custom UI elements, it's not necessary t
 <table>
   <tr>
     <td>Return value</td>
-    <td><code>Boolean</code></td>
+    <td><code>boolean</code></td>
   </tr>
   <tr>
     <td>Description</td>
-    <td>Whether the element was appended. Typically ignored.</td>
+    <td>Whether the element was added. Typically ignored.</td>
   </tr>
 </table>
 
@@ -493,7 +492,7 @@ Addition of the `|` separator is handled by the shared spaces API.
   </tr>
   <tr>
     <td><code>scope</code> option used</td>
-    <td>✔️ (one of <code>div.blockpost</code>)</td>
+    <td>✔️ (usually a <code>div.blockpost</code>)</td>
   </tr>
 </table>
 
@@ -552,7 +551,7 @@ See [forumsBeforePostReport](#forumsbeforepostreport) for more information.
   </tr>
   <tr>
     <td><code>scope</code> option used</td>
-    <td>✔️ (one of <code>div.blockpost</code>)</td>
+    <td>✔️ (usually a <code>div.blockpost</code>)</td>
   </tr>
 </table>
 
