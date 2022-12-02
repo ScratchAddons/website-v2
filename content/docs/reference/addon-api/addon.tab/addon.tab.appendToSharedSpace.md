@@ -473,7 +473,7 @@ Elements added to this space will be positioned before the "report" button in a 
 
 ![Shared space image](/assets/img/docs/sharedspace-forumsbeforepostreport.jpg)
 
-If the "report" button does not exist, a visible placeholder dot will be added to the post automatically to act as a separator between the `forumsBeforePostReport` and `forumsAfterPostReport` spaces.
+If the "report" button does not exist (user is logged out), a visible placeholder dot will be added to the post automatically to act as a separator between the `forumsBeforePostReport` and `forumsAfterPostReport` spaces.
 
 Addition of the `|` separator is handled by the shared spaces API.
 
