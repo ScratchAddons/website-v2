@@ -1,3 +1,5 @@
+{{ define "html" -}}
+
 <!DOCTYPE html>
 
 <html>
@@ -6,36 +8,21 @@
 
 	<meta name="robots" content="noindex">
 	<meta charset="utf-8">
-	<title>{{ .Description }}</title>
-	<link rel="canonical" href="{{ .Description }}" />
-	<meta http-equiv="refresh" content="0;URL={{ .Description }}">
 
-	<!--[if lt IE 9]>
-	<script type="text/javascript">window.IE=true</script>
-	<![endif]-->
-	<script type="text/javascript">
-		function redirect() {
-			var url = "{{ .Description }}"
-			if (typeof window.IE !== "undefined") {
-				document.getElementsByTagName("a")[0].click()
-			} else { 
-				window.location.replace(url)
-			}
-		}
-	</script>
+	<title>{{ .Params.to }}</title>
+	<link rel="canonical" href="{{ .Params.to }}" />
+	<meta http-equiv="refresh" content="0; URL={{ .Params.to }}">
 
-	<style>
-	* {
-		font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif;
-	}
-	</style>
+	<style>body {font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans",sans-serif}</style>
 
 </head>
 
-<body onload="redirect()">
+<body>
 
-	<p>You will be redirected to <a href="{{ .Description }}">{{ .Description }}<a> shortly.</p>
+	<p>You will be redirected to <a href="{{ .Params.to }}">{{ .Params.to }}<a> shortly.</p>
 
 </body>
 
 </html>
+
+{{- end }}
