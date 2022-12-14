@@ -59,7 +59,6 @@ Some browser extensions and userscripts may interfere with Scratch Addons. If yo
 
 - Scratch 3 Developer Tools: This browser extension is a copy of the Developer tools addon. You should uninstall the Developer Tools browser extension and turn on the addon instead.
 - Better3.0: This browser extension can interfere with some addons. Luckily, most of its features are also available as addons.
-- Redux DevTools: This can interfere with the internal workings of Scratch Addons. You should disable the Redux DevTools extension if you are not using it.
 
 ## Security and privacy
 
