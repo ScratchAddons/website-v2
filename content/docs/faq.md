@@ -29,6 +29,10 @@ Scratch Addons includes over 100 addons, which can be enabled or disabled indivi
 
 [TurboWarp](https://turbowarp.org/) has some addons from Scratch Addons which can be used on their editor without installing Scratch Addons. However, Scratch Addons also includes addons for the Scratch website and the popup display. Therefore, it is still useful to have Scratch Addons even if you only code using TurboWarp.
 
+### Is Scratch Addons free?
+
+Scratch Addons is completely free to use. It is open source, and built by a community of Scratchers.
+
 ## System requirements
 
 ### What are the system requirements for Scratch Addons?
