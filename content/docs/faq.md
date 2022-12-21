@@ -194,26 +194,6 @@ If you want to suggest an addon for the extension or have some other kind of goo
 
 You can do it on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) or [our Discord server](https://discord.gg/R5NBqwMjNc). There, you can ask questions and engage with the Scratch Addons community.
 
-## Technical
-
-### What is an "addon", exactly?
-
-An addon is similar to an extension or a userscript, but they use special APIs provided by the Scratch Addons extension. These APIs allow addons to run scripts on a Scratch page (userscripts), run scripts on the background (persistent scripts), or apply styles to the Scratch website (userstyles).
-
-Userscripts can use the `addon.*` JavaScript APIs, which allow them to obtain Scratch-related information (for example, the currently logged in user) and use extension APIs (like sending notifications).
-
-### If everything is an addon, then what does Scratch Addons do?
-
-By itself, Scratch Addons is just an addon loader. Its main tasks are to:
-
-- Allow users to enable, disable and configure addons.
-- Run addons and provide APIs to them.
-- Provide useful data to addons (for example, the addon.auth API).
-- Pollute prototypes for use by addon userscripts.
-- Provide ways to access and modify Redux state.
-- Avoid addons from interfering with each other.
-- Avoid duplicate work from different addons.
-
 ## Other 
 
 ### How can I add/remove myself to/from the contributors page?
