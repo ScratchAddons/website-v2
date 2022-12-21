@@ -75,7 +75,7 @@ Please report security vulnerabilities privately to us. See our [security policy
 
 Yes. Features related to your Scratch account are thoroughly reviewed by Scratch Addons contributors to ensure that they will not harm your Scratch account. Scratch Addons keeps your account credentials secure, and it will not modify or delete your projects or assets without your permission. However, you may use the extension without any account-related features if you so choose.
 
-Addons on Scratch Addons also have been audited by multiple contributors on the repository, so no-one can just slip some malicious code under our eyes.
+Addons on Scratch Addons also have been audited by multiple contributors on the repository, so no one can just slip some malicious code under our eyes.
 
 We never send any confidential or personally identifying information outside of your browser. See [the extension privacy policy](/docs/privacy/policies/extension) for more information.
 
