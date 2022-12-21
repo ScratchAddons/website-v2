@@ -69,9 +69,7 @@ Yes. Scratch Addons should not have any security issues in its most recent versi
 
 ### How can I report a security vulnerability?
 
-If you happen to find a security vulnerability, please contact World_Languages privately by emailing `worldxlanguages (at) gmail.com`. If you don't get a response within 48 hours, please [create an issue](https://github.com/ScratchAddons/ScratchAddons/issues/) mentioning that you had sent an email.
-
-You can either [read our security policy](https://github.com/ScratchAddons/ScratchAddons/security/policy) or [check our advisories that we have published](https://github.com/ScratchAddons/ScratchAddons/security/advisories?state=published).
+Please report security vulnerabilities privately to us. See our [security policy](https://scratchaddons.com/docs/policies/security/) for more information, such as contact details and the historical list of reported vulnerabilities.
 
 ### Will my account be safe when using Scratch Addons?
 
