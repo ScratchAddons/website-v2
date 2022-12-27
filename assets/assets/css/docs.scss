@@ -224,6 +224,14 @@ article {
 			margin-top: 0.25rem;
 		}
 
+		@media (min-width: $bs-breakpoint-xl) {
+			pointer-events: none;
+
+			> svg {
+				display: none;
+			}
+		}
+
 	}
 
 	*:last-child {
