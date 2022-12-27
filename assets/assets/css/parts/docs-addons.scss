@@ -4,6 +4,7 @@
 	float: right;
 	clear: right;
 	margin-left: 1rem;
+	background-color: #fff;
 	border: 1px solid rgba(0,0,0,.2);
 	border-radius: .3rem;
 	font-size: 85%;
@@ -57,4 +58,31 @@
 
 .infobox-data:only-child {
 	text-align: center;
+}
+
+body.dark {
+
+	.infobox {
+		border-color: $dark-dp-16;
+		background-color: $dark-dp-1;
+	}
+
+}
+
+body.extension-styled {
+
+	.infobox {
+		border-color: $light-ext-level-3;
+		background-color: $light-ext-level-2;
+	}
+	
+}
+
+body.dark.extension-styled {
+
+	.infobox {
+		border-color: $dark-ext-level-3;
+		background-color: $dark-ext-level-2;
+	}
+
 }
