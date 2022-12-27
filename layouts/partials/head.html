@@ -1,6 +1,16 @@
 <!-- Title and Meta -->
 
-<title>{{ if ne .IsHome true }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}</title>
+{{ .Scratch.Set "site" ( T ( $.Param "section_site_name" ) ) -}}
+
+{{ .Scratch.Set "title" .Title -}}
+{{ .Scratch.Set "title_page" (printf "%s - %s" ( .Scratch.Get "title" ) ( .Scratch.Get "site" ) ) -}}
+{{ .Scratch.Set "title_social" ( .Scratch.Get "title" ) -}}
+{{ if eq .IsHome true -}}
+	{{ .Scratch.Set "title_social" ( .Scratch.Get "site" ) -}}
+	{{ .Scratch.Set "title_page" ( .Scratch.Get "site" ) -}}
+{{ end -}}
+
+<title>{{ .Scratch.Get "title_page" }}</title>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <meta name="description" content="{{ .Description }}" />
@@ -10,9 +20,9 @@
 
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ .Permalink }}">
-<meta property="og:title" content='{{ if ne .IsHome true }}{{ .Title }}{{ else }}{{ T ( $.Param "section_site_name" ) }}{{ end }}' />
+<meta property="og:title" content='{{ .Scratch.Get "title_social" }}' />
 <meta property="og:description" content="{{ .Description }}">
-<meta property="og:site_name" content='{{ T ( $.Param "section_site_name" ) }}' />
+<meta property="og:site_name" content='{{ .Scratch.Get "site" }}' />
 <meta property="og:locale" content="{{ .Site.Language.Lang }}" />
 {{ if isset .Params "cover_image" }}
 <meta property="og:image" content="{{ .Params.cover_image }}" />
@@ -29,7 +39,7 @@
 <meta name="twitter:site" content="@ScratchAddons" />
 <meta name="twitter:creator" content="@ScratchAddons" />
 <meta name="twitter:url" content="{{ .Permalink }}" />
-<meta name="twitter:title" content='{{ if ne .IsHome true }}{{ .Title }} - {{ end }}{{ T ( $.Param "section_site_name" ) }}' />
+<meta name="twitter:title" content='{{ .Scratch.Get "title_page" }}' />
 <meta name="twitter:description" content="{{ .Description }}" />
 {{ if isset .Params "cover_image" }}
 <meta name="twitter:image" content="{{ .Params.cover_image }}" />
