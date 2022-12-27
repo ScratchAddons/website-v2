@@ -49,9 +49,15 @@
 		<aside class="text-muted mb-3 mb-xl-0 p-3 p-xl-0" id="docs-toc"> 
 			<!-- d-none  -->
 			<!-- px-2 py-4 -->
-				<p class="mb-1">Contents</p>
-				<hr class="my-1" />
-				{{ .TableOfContents }}
+				<a class="text-muted collapse-button collapsed d-flex w-100" data-toggle="collapse" href="#docs-toc-inner" role="button" aria-expanded="true">
+					<div>Contents</div>
+					{{- template "svg" -}}
+				</a> 
+				<div class="collapse" id="docs-toc-inner">
+					<hr class="my-1" />
+					{{ .TableOfContents }}
+				</div>
+				
 		</aside>
 		{{- end }}
 
@@ -87,3 +93,5 @@
 	{{ .Content }}
 
 {{ end }}
+
+{{- define "svg" -}}<svg style="vertical-align: -0.125rem;" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8L4.646 2.354a.5.5 0 0 1 0-.708z"/></g></svg>{{- end -}}

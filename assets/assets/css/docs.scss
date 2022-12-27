@@ -162,14 +162,14 @@ article {
 		margin-left: -1rem - 0.125rem
 	}
 
-	.collapse-button > svg {
-		transition: transform 0.35s ease;
-	}
+}
 
-	.collapse-button:not(.collapsed) > svg {
-		transform: rotate(90deg);
-	}
+.collapse-button > svg {
+	transition: transform 0.35s ease;
+}
 
+.collapse-button:not(.collapsed) > svg {
+	transform: rotate(90deg);
 }
 
 #docs-toc nav, 
@@ -214,6 +214,18 @@ article {
 	border: 1px solid rgba(0,0,0,.2);
 	border-radius: .3rem;
 
+	> a {
+
+		display: flex;
+		justify-content: space-between;
+		text-decoration: none;
+
+		> svg {
+			margin-top: 0.25rem;
+		}
+
+	}
+
 	*:last-child {
 		margin-bottom: 0;
 	}
@@ -257,11 +269,17 @@ article {
 		max-height: calc(100vh - 3rem);
 		overflow: auto;
 		scrollbar-width: thin;
-		background-color: #fff;
 
 		> li {
 			margin-right: 0.25rem
 		}
+	}
+}
+
+@media (max-width: $bs-breakpoint-xl) {
+	#docs-toc {
+		background-color: #fff;
+		
 	}
 }
 
