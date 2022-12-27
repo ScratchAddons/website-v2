@@ -210,18 +210,28 @@ article {
 
 }
 
+@media (max-width: $bs-breakpoint-xl) {
+	#docs-toc {
+		border: 1px solid rgba(0,0,0,.2);
+		border-radius: .3rem;
+
+		*:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
 @media (min-width: $bs-breakpoint-xl) {
 	#docs-toc {
-		nav > ul {
-			position: sticky;
-			top: 1.5rem;
-			max-height: calc(100vh - 3rem);
-			overflow: auto;
-			scrollbar-width: thin;
+		align-self: start;
+		position: sticky;
+		top: 1.5rem;
+		max-height: calc(100vh - 3rem);
+		overflow: auto;
+		scrollbar-width: thin;
 
-			> li {
-				margin-right: 0.25rem
-			}
+		> li {
+			margin-right: 0.25rem
 		}
 	}
 }
@@ -236,18 +246,100 @@ article {
 
 @media (min-width: $bs-breakpoint-lg) {
 	#docs-pages {
-		nav > ul {
-			position: sticky;
-			top: 1.5rem;
-			max-height: calc(100vh - 3rem);
-			overflow: auto;
-			scrollbar-width: thin;
+		align-self: start;
+		position: sticky;
+		top: 1.5rem;
+		max-height: calc(100vh - 3rem);
+		overflow: auto;
+		scrollbar-width: thin;
 
-			> li {
-				margin-right: 0.25rem
-			}
+		> li {
+			margin-right: 0.25rem
 		}
 	}
+}
+
+#docs-container {
+	display: grid;
+	grid-template-columns: repeat(12, 1fr);
+	column-gap: 30px;
+}
+
+#docs-container > * {
+	grid-column: 1 / 13;
+}
+
+#docs-pages {
+	grid-row: 1;
+}
+
+#docs-header {
+	grid-row: 2;
+}
+
+#docs-toc {
+	grid-row: 3;
+}
+
+#docs-content {
+	grid-row: 4;
+}
+
+#docs-footer {
+	grid-row: 5;
+}
+
+@media (min-width: $bs-breakpoint-lg) {
+	#docs-container > * {
+		grid-column: 4 / 13;
+	}
+
+	#docs-pages {
+		grid-column: 1 / 4;
+		grid-row: 1 / 5;
+	}
+
+	#docs-header {
+		grid-row: 1;
+	}
+	
+	#docs-toc {
+		grid-row: 2;
+	}
+	
+	#docs-content {
+		grid-row: 3;
+	}
+	
+	#docs-footer {
+		grid-row: 4;
+	}
+	
+}
+
+@media (min-width: $bs-breakpoint-xl) {
+	#docs-container > * {
+		grid-column: 3 / 11;
+	}
+
+	#docs-pages {
+		grid-column: 1 / 3;
+		grid-row: 1 / 5;
+	}
+
+	#docs-toc {
+		grid-column: 11 / 13;
+		grid-row: 1 / 5;
+	}
+
+	#docs-content {
+		grid-row: 2;
+	}
+	
+	#docs-footer {
+		grid-row: 3;
+	}
+	
 }
 
 body.dark {

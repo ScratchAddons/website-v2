@@ -37,40 +37,38 @@
 
 <div class="container-fluid">
 
-	<div class="row">
+	<div id="docs-container">
 
-		<aside class="col-lg-3 col-xl-2 d-lg-flex collapse order-1 order-lg-2 order-xl-1" id="docs-pages">
+		<aside class="collapse d-lg-block" id="docs-pages">
 			<!-- d-none  -->
 			<!-- px-2 py-4 -->
 			{{ partial "docs/sidebar" . }}
 		</aside>
-	
-		<div class="docs-main col col-lg-9 col-xl-8 order-3 order-lg-3 order-xl-2">
-		
-			<article>
 
-				{{ block "article" . }}{{ end }}
-
-			</article>
-
-			<hr />
-
-			{{ partial "docs/footnote" . }}
-
-			{{ if ( not $.Params.no_comments ) }}
-
-				<div id="comments" class="mt-4">{{ partial "comments" }}</div>
-	
-			{{ end }}
-	
-
-		</div>
-
-		<aside class="text-muted col-xl-2 d-xl-flex collapse order-2 order-lg-1 order-xl-3" id="docs-toc"> 
+		{{ if ( and (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") (ne .TableOfContents "") ) -}}
+		<aside class="text-muted mb-3 mb-xl-0 p-3 p-xl-0" id="docs-toc"> 
 			<!-- d-none  -->
 			<!-- px-2 py-4 -->
-			{{ .TableOfContents }}
+				<p class="mb-1">Contents</p>
+				<hr class="my-1" />
+				{{ .TableOfContents }}
 		</aside>
+		{{- end }}
+
+		<div id="docs-header">
+			{{ block "header" . }}{{ end }}
+		</div>
+	
+		<article id="docs-content">
+			{{ block "content" . }}{{ end }}
+		</article>
+
+		<div id="docs-footer">
+			{{ partial "docs/footer" . }}
+			{{ if ( not $.Params.no_comments ) -}}
+				<div id="comments" class="mt-4">{{ partial "comments" }}</div>
+			{{- end }}
+		</div>
 
 	</div>
 
@@ -78,9 +76,14 @@
 
 {{ end }}
 
-{{ define "article" }}
+{{ define "header" }}
 
 	<h1>{{ .Title }}</h1>
+
+{{ end }}
+
+{{ define "content" }}
+
 	{{ .Content }}
 
 {{ end }}
