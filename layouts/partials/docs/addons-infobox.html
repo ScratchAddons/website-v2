@@ -1,0 +1,52 @@
+<div class="infobox">
+	<table class="unstyled">
+		<tr>
+			<td class="infobox-name" colspan="2">
+				{{ .name }}
+			</td>
+		</tr>
+		<tr>
+			<td colspan="2">
+				{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
+					<img src="/assets/img/addons/{{ .id }}.png" alt="{{ .name }}" class="infobox-img">
+				{{- end }}
+			</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">ID</td>
+			<td class="infobox-data">{{ .id }}</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">Description</td>
+			<td class="infobox-data">{{ .description }}</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">Credits</td>
+			<td class="infobox-data">
+				<ul>{{ range .credits }}
+					<li>
+						{{ if isset . "link" }}
+							<a href="{{ .link }}">{{ .name }}</a>
+						{{ else }}
+							{{ .name }}
+						{{ end }}
+						{{ with .note }}({{ . }}){{ end }}
+					</li>
+				{{ end }}</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="infobox-label">Tags</td>
+			<td class="infobox-data">
+				<ul>{{ range .tags }}
+					<li>{{ . }}</li>
+				{{ end }}</ul>
+			</td>
+		</tr>
+		<tr>
+			<td class="infobox-data" colspan="2">
+				<a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' rel="noopener">Source code</a>
+			</td>
+		</tr>
+	</table>
+</div>
