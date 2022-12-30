@@ -338,7 +338,7 @@ body.dark {
 	}
 
 	hr {
-		border-top-color: rgba(white, 0.1);
+		border-top-color: $border-color-dark;
 	}
 
 	.card {
@@ -364,30 +364,32 @@ body.dark {
 	// }
 
 	.navbar-toggler {
-		color: rgba(255,255,255,.5);
-		border-color: rgba(255,255,255,.1);
+		color: $border-color-dark;
+		border-color: $border-color-dark;
 	}
 
 	.navbar-toggler-icon {
 		background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='30' height='30' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.5)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 	}
 
-	$border-dark: 1px solid rgba(white, 0.1) !important;
-
 	.border-top {
-		border-top: $border-dark
+		border-top-color: $border-color-dark
 	}
 
 	.border-bottom {
-		border-bottom: $border-dark
+		border-bottom-color: $border-color-dark
 	}
 
 	.border-left {
-		border-left: $border-dark
+		border-left-color: $border-color-dark
 	}
 
 	.border-right {
-		border-right: $border-dark
+		border-right-color: $border-color-dark
+	}
+
+	.border {
+		border-color: $border-color-dark
 	}
 
 	.show-only-light {
