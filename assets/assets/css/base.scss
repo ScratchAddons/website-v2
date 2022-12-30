@@ -234,11 +234,7 @@ body.dark .dark-btn-white {
 	}
 }
 
-.show-only-light {
-	display: inherit
-}
-
-.show-only-dark {
+body:not(.dark) .show-only-dark {
 	display: none
 }
 
@@ -394,10 +390,6 @@ body.dark {
 
 	.show-only-light {
 		display: none
-	}
-
-	.show-only-dark {
-		display: inherit
 	}
 
 }

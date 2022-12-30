@@ -79,15 +79,15 @@ $(() => {
         if (document.querySelector("#install-intro")) {
             switch (browser) {
                 case "chrome":
-                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:googlechrome"></span>'
+                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify-inline" data-icon="simple-icons:googlechrome"></span>'
                     document.querySelector("#install-browser").innerText = window.i18nStrings.installChrome
                     break
                 case "firefox":
-                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:firefoxbrowser"></span>'
+                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify-inline" data-icon="simple-icons:firefoxbrowser"></span>'
                     document.querySelector("#install-browser").innerText = window.i18nStrings.installFirefox
                     break
                 case "edge":
-                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify" data-icon="simple-icons:microsoftedge"></span>'
+                    document.querySelector("#install-browser-icon").innerHTML = '<span class="iconify-inline" data-icon="simple-icons:microsoftedge"></span>'
                     document.querySelector("#install-browser").innerText = window.i18nStrings.installEdge
                     break
                 default:
@@ -174,11 +174,11 @@ const updateDarkTheme = (active, updateLocalStorage = false) => {
  */
 const updateDarkToggle = (active) => {
     if (toggle === undefined) return
-    if (active) {
-        toggle.innerHTML = '<span class="iconify" data-icon="fa-solid:sun" data-inline="true"></span>'
-    } else {
-        toggle.innerHTML = '<span class="iconify" data-icon="fa-solid:moon" data-inline="true"></span>'
-    }
+    // if (active) {
+    //     toggle.innerHTML = '<span class="iconify-inline" data-icon="fa-solid:sun"></span>'
+    // } else {
+    //     toggle.innerHTML = '<span class="iconify-inline" data-icon="fa-solid:moon"></span>'
+    // }
 }
 /**
  * Generates a "change-theme" event.

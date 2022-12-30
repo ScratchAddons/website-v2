@@ -6,19 +6,19 @@
 		<h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
 		<p>
 			<span class="mx-1">
-				<span class="iconify" data-icon="bi:calendar-fill"></span>
+				<span class="iconify-inline" data-icon="bi:calendar-fill"></span>
 				<time class="post-date-published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}' itemprop="datePublished">
 					{{ .Date | time.Format ":date_long"  }}
 				</time>
 			</span>
 			•
 			<span class="mx-1">
-				<span class="iconify" data-icon="bi:person-circle"></span>
+				<span class="iconify-inline" data-icon="bi:person-circle"></span>
 				{{ .Params.author }}
 			</span>
 			•
 			<span class="mx-1">
-				<span class="iconify" data-icon="bi:clock-fill"></span>
+				<span class="iconify-inline" data-icon="bi:clock-fill"></span>
 				{{ T "Global.ReadTime" .ReadingTime }}
 			</span>
 		</p>
