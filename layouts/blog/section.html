@@ -1,15 +1,15 @@
 {{ define "main" }}
 
-<header id="intro" class="intro-heading post-header">
+<header id="intro" class="intro-heading post-header md-content">
 	<h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
 	<p>{{ .Description }}</p>
 </header>
 			
-<div class="container">
+<div class="container md-content">
 	<div class="row row-cols-1 row-cols-lg-2 m-0">
 		{{ range .Pages.ByPublishDate.Reverse }}
 			<div class="col mb-4 px-0 px-md-1">
-				<article class="card md-style">
+				<article class="card md-content">
 					{{ if isset .Page.Params "cover_image" -}}
 						<a href="{{ .Permalink }}">
 							<img src="{{ .Page.Params.cover_image }}" class="card-img-top" alt="{{ .Page.Params.cover_image_alt }}">

@@ -5,6 +5,7 @@
 <head>
 
 {{ partial "head" . }}
+{{ partial "scss" "assets/css/markdown.scss" }}
 {{ partial "scss" "assets/css/docs.scss" }}
 {{ if isset $.Params "embed_js" }}{{ range $.Params.embed_js }}
 <script defer src="{{ . }}"></script>
@@ -61,15 +62,15 @@
 		</aside>
 		{{- end }}
 
-		<div id="docs-header" class="md-style">
+		<div id="docs-header" class="md-content mb-3">
 			{{ block "header" . }}{{ end }}
 		</div>
 	
-		<article id="docs-content" class="md-style">
+		<article id="docs-content" class="md-content">
 			{{ block "content" . }}{{ end }}
 		</article>
 
-		<div id="docs-footer" class="md-style">
+		<div id="docs-footer" class="md-content">
 			{{ partial "docs/footer" . }}
 			{{ if ( not $.Params.no_comments ) -}}
 				<div id="comments" class="mt-4">{{ partial "comments" }}</div>

@@ -1,8 +1,8 @@
 {{ define "main" }}
 
-<article class="md-style" itemscope itemtype="http://schema.org/BlogPosting">
+<article itemscope itemtype="http://schema.org/BlogPosting" class="mb-3">
 
-	<header id="intro" class="intro-heading post-header">
+	<header id="intro" class="intro-heading post-header md-content">
 		<h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
 		<p class="mb-0">
 			<span class="mx-1">
@@ -24,7 +24,7 @@
 		</p>
 	</header>
 
-	<div class="container" itemprop="articleBody">
+	<div class="container md-content" itemprop="articleBody">
 		{{ if isset $.Params "cover_image" -}}
 			<img src='{{ $.Params.cover_image }}' alt='{{ $.Params.cover_image_alt }}' itemprop="image" class="mb-4">
 		{{- end }}
