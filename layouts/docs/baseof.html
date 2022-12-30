@@ -50,7 +50,7 @@
 			<!-- d-none  -->
 			<!-- px-2 py-4 -->
 				<a class="text-muted collapse-button collapsed" data-toggle="collapse" href="#docs-toc-inner" role="button" aria-expanded="true">
-					<div>Contents</div>
+					<div>{{ T "Docs.TOC" }}</div>
 					{{- template "svg" -}}
 				</a> 
 				<div class="collapse d-xl-block" id="docs-toc-inner">
@@ -61,15 +61,15 @@
 		</aside>
 		{{- end }}
 
-		<div id="docs-header">
+		<div id="docs-header" class="md-style">
 			{{ block "header" . }}{{ end }}
 		</div>
 	
-		<article id="docs-content">
+		<article id="docs-content" class="md-style">
 			{{ block "content" . }}{{ end }}
 		</article>
 
-		<div id="docs-footer">
+		<div id="docs-footer" class="md-style">
 			{{ partial "docs/footer" . }}
 			{{ if ( not $.Params.no_comments ) -}}
 				<div id="comments" class="mt-4">{{ partial "comments" }}</div>

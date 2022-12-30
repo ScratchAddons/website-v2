@@ -3,7 +3,6 @@
 @import "parts/admonition";
 
 article {
-
 	h1, h2, h3, h4, h5, h6 {
 		&:hover .anchor {
 			&::after {
@@ -14,6 +13,13 @@ article {
 			}
 		}
 	}
+
+	> :last-child {
+        margin-bottom: 0
+    }
+}
+
+.md-style {
 
 	blockquote {
 		padding: 0 1em;
@@ -118,10 +124,6 @@ article {
 	h1:first-child {
 		margin-top: 0;
 	}
-
-    > :last-child {
-        margin-bottom: 0
-    }
 
 	li {
 		* {
@@ -399,7 +401,7 @@ article {
 
 body.dark {
 
-	article {
+	.md-style {
 	
 		pre {
 			background-color: $dark-dp-1;
@@ -474,7 +476,7 @@ body.dark {
 
 body.extension-styled {
 
-	article {
+	.md-style {
 	
 		pre {
 			background-color: $light-ext-level-2;
@@ -490,7 +492,7 @@ body.extension-styled {
 
 body.dark.extension-styled {
 
-	article {
+	.md-style {
 
 		pre {
 			background-color: $dark-ext-level-2;

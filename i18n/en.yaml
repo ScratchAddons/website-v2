@@ -81,8 +81,8 @@ Docs:
   SectionSiteName: Scratch Addons Docs
   DocsNav: Docs navigation
   DocsNavToggleLabel: Toggle docs navigation sidebar
-  TOC: Table of contents
-  TOCToggleLabel: Toggle table of contents sidebar
+  TOC: Contents
+  TOCToggleLabel: Toggle table of contents dropdown
   LastUpdated: Last updated at {{.Date}} by {{.Name}} on commit {{.Commit}}.
   Improve: Improve this page.
   SectionPages: Section Pages

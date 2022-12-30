@@ -1,10 +1,10 @@
 {{ define "main" }}
 
-<article class="content" itemscope itemtype="http://schema.org/BlogPosting">
+<article class="md-style" itemscope itemtype="http://schema.org/BlogPosting">
 
 	<header id="intro" class="intro-heading post-header">
 		<h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
-		<p>
+		<p class="mb-0">
 			<span class="mx-1">
 				<span class="iconify-inline" data-icon="bi:calendar-fill"></span>
 				<time class="post-date-published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}' itemprop="datePublished">
