@@ -1,0 +1,42 @@
+<header>
+
+	<nav class="navbar navbar-expand-md navbar-dark">
+		
+		<a href='{{ "/" | relLangURL }}' class="navbar-brand">
+			<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddonsAlt" }}'></img>
+			<span>{{ T ( $.Param "section_site_name" ) }}</span>
+			{{ if not hugo.IsProduction }}<span class="badge badge-primary" style="background-color: 175ef8">dev</span>{{ end }}
+		</a>
+	
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+	  	</button>
+	
+		<div class="collapse navbar-collapse" id="navbar-collapsible">
+			<ul class="navbar-nav ml-md-auto">
+				<div class="form-inline" id="docs-search">
+					<input class="form-control mr-sm-2" id="docs-search-input" type="search" placeholder="Search" aria-label="Search">
+					<div id="docs-search-results"></div>
+				</div>
+				{{ if .IsTranslated -}}
+					<li class="nav-item dropdown hide-from-spiders">
+						<a class="nav-link dropdown-toggle" href="#" id="navbar-languages" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">{{ .Site.Language.LanguageName }}</a>
+						<div class="dropdown-menu dropdown-menu-md-right" aria-labelledby="navbar-languages">
+							{{ if .IsTranslated }}{{ range .Translations -}}{{ if or ( eq .IsHome false ) ( in $.Site.Data.translatedindex .Language.Lang ) -}}
+								<a class="dropdown-item" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+							{{- end }}{{ end }}{{ end }}
+						</div>
+					</li>
+				{{- end }}
+				<li class="nav-item">
+					<button id="dark-toggle" class="btn nav-link" title='{{ T "DarkTheme.Title" }}' aria-label='{{ T "DarkTheme.Label" }}' data-toggle="tooltip" data-placement="bottom">
+						<span class="iconify-inline show-only-dark" data-icon="fa-solid:sun"></span>
+						<span class="iconify-inline show-only-light" data-icon="fa-solid:moon"></span>
+					</button>	
+				</li>
+			</ul>
+		</div>
+	
+	</nav>
+	
+</header>
