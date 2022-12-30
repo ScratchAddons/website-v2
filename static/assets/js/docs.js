@@ -24,8 +24,6 @@ const search = async (pagefind, query) => {
 		searchResultEl.classList.add('d-none')
 		return
 	}
-
-	searchResultEl.classList.remove('d-none')
 	
 	const search = await pagefind.search(query);
 	const results = await Promise.all(search.results.slice(0, 5).map(r => r.data()));
@@ -34,7 +32,7 @@ const search = async (pagefind, query) => {
 
 	if (results.length === 0) {
 		const noneEl = document.createElement('p')
-		noneEl.textContent = "No results."
+		noneEl.textContent = window.i18nStrings.searchNoResults
 		searchResultEl.appendChild(noneEl)
 	}
 
@@ -57,7 +55,9 @@ const search = async (pagefind, query) => {
 		itemEl.appendChild(excerptEl)
 
 		searchResultEl.appendChild(itemEl)
-		console.log(results[i])
+		// console.log(results[i])
 	}
+
+	searchResultEl.classList.remove('d-none')
 
 }

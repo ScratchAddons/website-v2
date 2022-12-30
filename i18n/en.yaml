@@ -25,6 +25,9 @@ Global:
     First: Go to first
     Last: Go to last
     SlideX: Go to item {{ .Count }}
+  Search:
+    Search: Search
+    NoResults: No results.
 
 # Strings used for links to pages. Future pages on header and footer should be put on this.
 Links:

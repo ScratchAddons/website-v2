@@ -15,8 +15,9 @@
 		<div class="collapse navbar-collapse" id="navbar-collapsible">
 			<ul class="navbar-nav ml-md-auto">
 				<div class="form-inline" id="docs-search">
-					<input class="form-control mr-sm-2" id="docs-search-input" type="search" placeholder="Search" aria-label="Search">
+					<input class="form-control mr-sm-2" id="docs-search-input" type="search" placeholder='{{ T "Global.Search.Search" }}' aria-label='{{ T "Global.Search.Search" }}'>
 					<div id="docs-search-results"></div>
+					<script>window.i18nStrings = {...window.i18nStrings, searchNoResults: '{{ T "Global.Search.NoResults" }}'}</script>
 				</div>
 				{{ if .IsTranslated -}}
 					<li class="nav-item dropdown hide-from-spiders">
