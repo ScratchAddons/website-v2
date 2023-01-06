@@ -48,4 +48,4 @@ We’ve saved the best for last. In the near future, you’ll be able to use the
 
 ![image2](https://user-images.githubusercontent.com/43426138/210119516-24158120-df87-4c73-8d42-f6ff1a6671ab.gif)
 
-This may seem like wizardry, but it’s all the amazing work of [@Tacodude](https://github.com/Tacodude7729). We’re looking forward to releasing this in v1.31!
+This may seem like wizardry, but it’s all the amazing work of [@Tacodiva](https://github.com/Tacodiva). We’re looking forward to releasing this in v1.31!
