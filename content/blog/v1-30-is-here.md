@@ -1,7 +1,7 @@
 ---
 title: v1.30 is here!
 description: Happy New Year! It’s been over two months since the last version, but we’ve been working hard on several exciting new features.
-date: 2023-01-01T00:00:00Z
+date: 2023-01-06T00:00:00Z
 author: lisa-wolfgang
 ---
 
