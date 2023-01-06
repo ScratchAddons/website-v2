@@ -1219,34 +1219,34 @@
   Date: 2023-01-06
   Status: Released
   Entry: |
-    - New addon: “costume editor snapping”
-    - New addon: “collapsing sprite properties” [recommended]
-    - New addon: “insert blocks by name” (previously part of “developer tools”)
-    - New addon: “always show number pad”
-    - “Auto-hiding block palette” and “customizable code area zoom” addons: changed speed settings
-    - “Website dark mode and customizable colors” addon: support upcoming “Scratch Link” website page
-    - “Block switching” addon: removed unnecessary “add border” setting
-    - “TurboWarp button” addon: player now respects full screen background color settings
-    - The “pause button” addon is now enabled by default for new users
-    - Bug fix: right click context menu items hidden behind stage (“sprite folders”, “auto-hiding block palette” and “HD image uploads” addons)
-    - Bug fix: “website dark mode and customizable colors” causing text to be unreadable in some parts of the Scratch website
-    - Bug fix: “ocular integration” status overflow covering part of forum posts
-    - Bug fix: “TurboWarp button” player crashing in certain situations
-    - Bug fix: “TurboWarp button” player stage header white in dark mode
-    - Bug fix: “debugger” blocks untranslated in threads tab
-    - Bug fix: Firefox applying dark mode in “Contact Us” form on the Scratch website
-    - Bug fix: “customizable block colors” and “3.0 Scratchblocks on forums” not working on all forum pages
-    - Bug fix: “customizable navigation bar” compact user dropdown setting not working on the My Stuff page
-    - Bug fix: “HD image uploads” button not showing in “add backdrop” dropdown
-    - Bug fix: “volume slider” resets volume when entering editor
-    - Bug fix: “developer tools” not considering certain unusual types of broadcasts
-    - Bug fix: “enhanced full screen” blurry when resizing the window
-    - Bug fix: “editor dark mode and customizable colors” using incorrect text colors for the project title and remix button
-    - Bug fix: “high resolution thumbnails” should ignore images inside forum posts
-    - Bug fix: “hide delete button” not working for sounds
-    - Bug fix: “customizable block colors” preventing variable monitors from showing
-    - Bug fix: “editor find bar” Ctrl+Left and Ctrl+Right shortcuts not working properly after leaving and entering the editor
-    - Scratch Addons is no longer incompatible with the “Redux DevTools” browser extension
+    - New addon: "costume editor snapping"
+    - New addon: "collapsing sprite properties" [recommended]
+    - New addon: "insert blocks by name" (previously part of "developer tools")
+    - New addon: "always show number pad"
+    - "Auto-hiding block palette" and "customizable code area zoom" addons: changed speed settings
+    - "Website dark mode and customizable colors" addon: support upcoming "Scratch Link" website page
+    - "Block switching" addon: removed unnecessary "add border" setting
+    - "TurboWarp button" addon: player now respects full screen background color settings
+    - The "pause button" addon is now enabled by default for new users
+    - Bug fix: right click context menu items hidden behind stage ("sprite folders", "auto-hiding block palette" and "HD image uploads" addons)
+    - Bug fix: "website dark mode and customizable colors" causing text to be unreadable in some parts of the Scratch website
+    - Bug fix: "ocular integration" status overflow covering part of forum posts
+    - Bug fix: "TurboWarp button" player crashing in certain situations
+    - Bug fix: "TurboWarp button" player stage header white in dark mode
+    - Bug fix: "debugger" blocks untranslated in threads tab
+    - Bug fix: Firefox applying dark mode in "Contact Us" form on the Scratch website
+    - Bug fix: "customizable block colors" and "3.0 Scratchblocks on forums" not working on all forum pages
+    - Bug fix: "customizable navigation bar" compact user dropdown setting not working on the My Stuff page
+    - Bug fix: "HD image uploads" button not showing in "add backdrop" dropdown
+    - Bug fix: "volume slider" resets volume when entering editor
+    - Bug fix: "developer tools" not considering certain unusual types of broadcasts
+    - Bug fix: "enhanced full screen" blurry when resizing the window
+    - Bug fix: "editor dark mode and customizable colors" using incorrect text colors for the project title and remix button
+    - Bug fix: "high resolution thumbnails" should ignore images inside forum posts
+    - Bug fix: "hide delete button" not working for sounds
+    - Bug fix: "customizable block colors" preventing variable monitors from showing
+    - Bug fix: "editor find bar" Ctrl+Left and Ctrl+Right shortcuts not working properly after leaving and entering the editor
+    - Scratch Addons is no longer incompatible with the "Redux DevTools" browser extension
   Highlights:
     Description: |
       New addon: "costume editor snapping", which lets you snap objects in the costume editor to bounding boxes and vector nodes. Go to Scratch Addons settings to enable it.
