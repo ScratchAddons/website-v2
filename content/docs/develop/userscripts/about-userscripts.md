@@ -1,5 +1,5 @@
 ---
-title: Userscripts
+title: About userscripts
 description: Userscripts allow you to run code along Scratch pages - you can do stuff like add buttons, enhance the Scratch editor, or anything you can imagine.
 aliases: 
   - /docs/developing/about-userscripts
