@@ -89,3 +89,8 @@ To finish updating (assuming you followed the updating steps [here](#cloning-the
 
 Note: Firefox temporary add-ons are actually temporary. Restarting Firefox will remove them, so if you want to use the development version of Scratch Addons all the time, it is recommended that you use a Chromium-based browser like Google Chrome.
 
+## TurboWarp
+
+Some addons, primarily editor addons, are implemented natively within TurboWarp (so called TurboWarp Addons). If you want to try the select addons of Scratch Addons without installing the browser extension, this is one way of it. Check out https://turbowarp.org/addons to configure the available addons.
+
+Since TurboWarp also offers [a desktop client](https://desktop.turbowarp.org/), this means that you can also use the available addons as an offline editor app.
