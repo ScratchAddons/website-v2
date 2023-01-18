@@ -1,5 +1,5 @@
 ---
-title: Userscripts best practices
+title: Best practices for userscripts
 description: Follow these best practices when writing or reviewing userscript code.
 ---
 
