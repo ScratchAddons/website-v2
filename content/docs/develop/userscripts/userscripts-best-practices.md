@@ -101,14 +101,10 @@ TODO.
 
 #### Scratch website
 
-##### Some pages don't reload after logging in
+##### scratch-www pages don't reload after logging in
 
-Some scratch-www pages do not force a page reload after logging in. For example, if you go to a project page while being logged out, then log in, the page will not reload.
-
-The pages that have this behavior are:
-- The messages page (/messages)
-- Project pages
-- Studios
+Unlike scratchr2 pages, scratch-www pages do not force a page reload after logging in. For example, if you go to a project page while being logged out, then log in, the page will not reload. This also affects studios, the messages page, etc.  
+In contrast, all Scratch pages reload after logging out.
 
 ##### Project pages never return 404s
 
@@ -116,4 +112,4 @@ Even if the project is unshared or doesn't exist, Scratch returns a 200 HTTP sta
 
 ##### Other situations to consider
 
-- The messages page is available while logged out.
+TODO.
