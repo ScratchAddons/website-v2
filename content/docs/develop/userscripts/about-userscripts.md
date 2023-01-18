@@ -1,14 +1,29 @@
 ---
 title: About userscripts
-description: Userscripts allow you to run code along Scratch pages - you can do stuff like add buttons, enhance the Scratch editor, or anything you can imagine.
+description: Userscripts are JavaScript files that are executed every time the user loads a Scratch page. They can modify the document's HTML, add new buttons, customize Scratch editor behavior, and so much more.
 aliases: 
   - /docs/developing/about-userscripts
 ---
-## What are they?
-Userscripts allow you to run code along Scratch pages - you can do stuff like add buttons, enhance the Scratch editor, or anything you can imagine.
 
-## How do I add a userscript?
-**Make sure to refresh Scratch Addons from `chrome://extensions` after doing any changes to your addon.**  
+Userscripts are JavaScript files that are executed every time the user loads a Scratch page. They can modify the document's HTML, add new buttons, customize Scratch editor behavior, and so much more.
+
+Similarly to userscripts that you might download for userscript managers like Tampermonkey or Greasemonkey, Scratch Addons userscripts consist of pieces of JavaScript that are executed in the same execution context as the JavaScript code from Scratch itself. In browser extension vocabulary, this execution context is often named "main world".
+
+Even though Scratch Addons userscripts are part of a browser extension, they cannot access any `chrome.*` or `browser.*` APIs. Instead, Scratch Addons offers an [`addon.*` API](/docs/reference/addon-api/). 
+
+
+## Declaring userscripts in the addon manifest
+
+{{< admonition warning >}}
+**Some changes require an extension reload** from `chrome://extensions` to take effect, such as updating the addon manifest file.
+
+It's not necessary to reload the extension when changing the source of an already existing userscript JavaScript file. In those cases, reloading the page is enough.
+{{< /admonition >}}
+
+<!-- TODO: revamp -->
+
+<!-- TODO: create a "matches" page -->
+
 Go to the manifest of your addon (addon.json) and add a property called `userscripts"`.  
 This property must be an array.  
 Each item of the array must have the following properties: `"url"` and `"matches"`.  
@@ -34,62 +49,91 @@ Example manifest:
 }
 ```
 
-## What does the JavaScript file look like?
-Userscript JS files require a specific structure to work.  
-For userscripts, you **must** wrap all your code inside a function looking like this:
+## Creating your first userscript
+
+Unlike extension content scripts and Tampermonkey userscripts, you must wrap all of your code inside a module default export:
 ```js
-export default async function ({ addon, global, console }) {
+// Example userscript
+export default async function ({ addon, console }) {
   console.log("Hello, " + await addon.auth.fetchUsername());
+  console.log("How are you today?");
 }
 ```
-If you want to abstract code into functions for cleaner code, you should include them inside the main function:  
-**This will work:**
+
+Remember that JavaScript allows functions to be declared inside other functions, for example:
 ```js
-export default async function ({ addon, global, console }) {
-  // This works!
-  sayHello();
-  async function sayHello() {
+export default async function ({ addon, console }) {
+  async function sayHelloToUser() {
     console.log("Hello, " + await addon.auth.fetchUsername());
   }
+
+  await sayHelloToUser();
+  console.log("How are you today?");
 }
 ```
-**This will NOT work:**
+
+{{< admonition info >}}
+You can access many `addon.*` API utilities from userscripts. For example, you can get the current username, wait until an element exists on the page, or get a reference to the Scratch VM object.
+
+For more information, check the [API reference](/docs/reference/addon-api/).
+{{< /admonition >}}
+
+
+## Modifying the document HTML
+
+Use [browser DOM APIs](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API) to customize the HTML of the page.
+
+<!-- TODO : an example -->
+
+## Localizing userscripts
+
+Addon userscripts sometimes need to reference English words or sentences. Make sure not to hardcode them in the code, so that they can be part of the translation process.
+
+{{< admonition error >}}
 ```js
-export default async function ({ addon, global, console }) {
-  // This WON'T work!
-  sayHello();
-}
-async function sayHello() {
-  console.log("Hello, " + await addon.auth.fetchUsername());
-  // Error: addon is not defined!
+// Don't do this:
+document.querySelector(".sa-find-bar").placeholder = "Find blocks";
+```
+{{< /admonition >}}
+
+To create a translatable string, follow these steps:
+1. Create a file named `addon-id.json` inside the `/addon-l10n/en` folder.
+2. Provide an ID for every string:
+```json
+{
+  "addon-id/find": "Find blocks"
 }
 ```
-
-## [`addon.*` APIs](/docs/developing/addon-apis-reference)
-You can access many `addon.*` APIs from userscripts. For more information, check the documentation.
-
-## Technical aspects of userscripts
-Userscripts run after the Scratch page has fully loaded - in other words, they run in `defer` mode.
-Technically speaking, each userscript is a JavaScript module that exports a function. JavaScript modules always run on "strict mode".  
-This means that userscripts of the same addon DO NOT share variables and functions! If you want to do that, you should use the `global` object (more info below).
-Scratch Addons then calls that function modules exported, giving it access to the `addon.*` APIs, as well as special wrappers:  
-- `addon`: gives userscripts access to the [`addon.*` APIs](/docs/developing/addon-apis-reference).
-- `global`: this is a shared object between all userscripts of the same addon. **Example usage:**
+3. Make sure to import the `msg()` function in your userscript. The first line of your userscript should look like this:
 ```js
-// userscript-1.js
-export default async function ({ addon, global, console }) {
-  global.sayHello = () => console.log("Hello, " + addon.auth.fetchUsername());
-}
-
-// userscript-2.js
-export default async function ({ addon, global, console }) {
-  global.sayHello();
-  // This works, as long as in the addon manifest, userscript-1.js is before userscript-2.js in the userscripts array.
-}
+export default async function ({ addon, console, msg  }) {
+                                              // ^^^
 ```
-- `console`: this is a wrapper that allows you to see what addon triggered the log you're seeing easily.
+4. Use the `msg()` function in your code, instead of a hardcoded string:
+```js
+document.querySelector(".sa-find-bar").placeholder = msg("find");
+```
+
+{{< admonition info >}}
+For more information about localizing userscripts, see [this page](/docs/localization/localizing-addons/).
+{{< /admonition >}}
+
+
+## Technical details
+
+Each userscript file is a JavaScript module that exports a function. Scratch Addons only imports the module if needed, and executes it after the page has fully loaded.
+
+<!-- TODO: explain runAtComplete -->
+
+Userscripts are JavaScript modules, so they always run on ["strict mode"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode). This also means that userscripts may use [top-level imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) to import other JavaScript files.
+
+<!-- TODO: explain execution order isn't guaranteed -->
+
 
 ## Debugging userscripts
+
+<!-- TODO: revisit this section -->
+
 **Make sure to refresh Scratch Addons from `chrome://extensions` after making any changes to your addon.**  
 To debug userscripts, first of all make sure your addon is enabled.  
 Then, go to a URL where you specified your userscript should run.  
