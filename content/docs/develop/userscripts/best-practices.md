@@ -91,6 +91,8 @@ For example, it's not necessary to use waitForElement when searching for forum p
 - Never use `==` for comparisons. Use `===` instead.
 - Use optional chaining if an object can sometimes be `null`.  
 For example, `document.querySelector(".remix-button")?.textContent`.
+- Use `for ... of` loops or `.forEach()`.  
+Avoid C style loops like `for (let i = 0; i < arr.length; i++)`.
 
 #### Only use "let" over "const" if the variable may be reassigned
 
