@@ -111,6 +111,12 @@ window.isDarkMode = true;
 ```
 {{< /admonition >}}
 
+#### Do not declare functions outside of the default export
+
+There's no reason to declare functions outside the `export default async function(){}` function. JavaScript allows functions to be declared inside other functions.
+
+You may move functions to separate JS module files (which aren't declared as userscripts in the addon manifest) if appropriate, but keep in mind that those imported files won't have access to the `addon` object, unless you expose a setup function that accepts it as an argument, and call the function in the userscript entry point.
+
 #### Do not unpollute functions
 
 Multiple addons might want to pollute the same function, such as Scratch VM methods, `XMLHttpRequest`, `fetch()` or `FileReader()`.  
