@@ -5,14 +5,33 @@ description: Follow these best practices when writing or reviewing userscript co
 
 Follow these best practices when writing or reviewing userscript code.
 
+
 ### DOM manipulation
 
-<!--
-TODOs:
-- Do not .remove() elements unless the addon created it
-- Use addEventListener instead of inline events such as "onclick"
-- Use waitForElement() only if the element might not exist
--->
+
+#### Use addEventListener instead of "onevent"
+
+Avoid setting "onevent" values on HTML elements, such as `onclick`. Instead, use `addEventListener`. This allows multiple addons to register the same event on the same element, without conflicting.  
+It is still valid to use "onevent", but only for elements who were created by the same addon that is registering the event.  
+In all cases, avoid setting "onevent" HTML attributes, for example `element.setAttribute("onclick", "don't do this")`.
+
+{{< admonition error >}}
+```js
+// Don't do this:
+document.querySelector(".remix-button").onclick = () => {
+  prompt("Are you sure you want to remix?");
+};
+```
+{{< /admonition >}}
+
+{{< admonition success >}}
+```js
+// Do this instead:
+document.querySelector(".remix-button").addEventListener("click", () => {
+  prompt("Are you sure you want to remix?");
+});
+```
+{{< /admonition >}}
 
 #### Avoid using innerHTML
 
@@ -35,13 +54,48 @@ document.querySelector(".sa-remix-button").append(span);
 ```
 {{< /admonition >}}
 
+#### Hide elements instead of removing them
+
+Avoid calling `.remove()` on HTML elements, which in extreme cases, can cause the project page to crash.  
+Addons may only use it for elements they themselves created, in specific situations.
+
+{{< admonition error >}}
+```js
+// Don't do this:
+document.querySelector(".remix-button").remove();
+```
+{{< /admonition >}}
+
+{{< admonition success >}}
+```js
+// Do this instead:
+document.querySelector(".remix-button").style.display = "none";
+
+// Or do this, with help from a userstyle:
+document.querySelector(".remix-button").classList.add("sa-remix-button-hidden");
+```
+{{< /admonition >}}
+
+#### Only use waitForElement when necessary
+
+Avoid using the `addon.tab.waitForElement` API if the element is guaranteed to exist. It will still work, and performance will not be heavily impacted, but it might confuse other developers that are reading the code. The usage of waitForElement should usually mean that there is at least 1 scenario where the element doesn't exist at that execution point.  
+For example, it's not necessary to use waitForElement when searching for forum posts, unless the userscript was declared with `"runAtComplete": false`. In those cases, simply use `document.querySelectorAll()` normally.
+
+
 ### JavaScript best practices
 
-<!--
-TODOs:
-- Use modern javascript (fetch(), optional chaining, let & const)
-- Apply common JavaScript best practices (triple equals, const unless mutable later)
--->
+
+#### Use modern JavaScript
+
+- Prefer newer APIs, such as `fetch()` over `XMLHttpRequest`.
+- Never use `==` for comparisons. Use `===` instead.
+- Use optional chaining if an object can sometimes be `null`.  
+For example, `document.querySelector(".remix-button")?.textContent`.
+
+#### Only use "let" over "const" if the variable may be reassigned
+
+People reading your code may assume that a variable that was declared through the "let" keyword might be reassigned at some other point of the script. If that's not the case, use the "const" keyword instead.  
+Remember that in JavaScript, declaring an object or an array as a "const", does not mean its values are frozen. Values in the object can still be changed, even if the variable itself cannot be reassigned.
 
 #### Do not set global variables
 
@@ -86,17 +140,26 @@ const newDeleteSprite = function (...args) {
 ```
 {{< /admonition >}}
 
-### Edge cases 
+
+### Edge cases
 
 
 #### Scratch project page and editor
 
-TODO.
 
+##### The DOM is destroyed after going inside or outside the editor
+
+Scratch creates all HTML elements each time the user clicks "see inside" or "see project page", and destroys the old ones.  
+This can usually be fixed by using `addon.tab.waitForElement` or the `urlChange` event.
+
+#### The Scratch editor language can be changed without a reload
+
+Unlike the Scratch website, the Scratch editor will not reload when changing the language. When selecting a different language, Scratch might destroy and re-create some HTML elements.
 
 ##### Other situations to consider
 
 - The project editor may be used without a defined project ID (for example, when logged out).
+- The editor might switch from LTR to RTL (or viceversa) without requiring a page reload.
 
 
 #### Scratch website
@@ -112,4 +175,4 @@ Even if the project is unshared or doesn't exist, Scratch returns a 200 HTTP sta
 
 ##### Other situations to consider
 
-TODO.
+- Each of the 4 tabs inside studios have different URLs, but do not trigger a browser navigation. Addons that affect any of the 4 pages should run, no matter the initial URL.
