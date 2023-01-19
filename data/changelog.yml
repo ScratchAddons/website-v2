@@ -1253,3 +1253,26 @@
 
       Other new addons added this update are "collapsing sprite properties", "insert blocks by name", and "always show number pad".
     YouTubeID: oRo0tMWEpiA
+
+- Version: v1.30.1
+  Index: 74
+  Tag: v1.30.1
+  Name: v1.30.1
+  Date: 2023-01-19
+  Status: Released
+  Entry: |
+    - "Alternating nested block colors" addon: alternate blocks of same color even if their categories are different
+    - "Insert blocks by name" addon: fix mistake in addon description, the correct hotkey is Shift+Click
+    - "Variable manager" addon: require a click to display long variable values
+    - "Project progress bar" addon: improve design
+    - Bug fix: "enhanced full screen" causing stage to be white after seeing inside
+    - Bug fix: "project volume slider" doesn't show real volume
+    - Bug fix: "opacity slider" cannot be moved by clicking or touching the slider
+    - Bug fix: "collapsing sprite properties" not animating if "file drag and drop" is enabled
+    - Bug fix: "collapsing sprite properties" not working properly in some languages
+    - Bug fix: "collapsing sprite properties" not fully compatible with "sprite folders" addon
+    - Bug fix: "gamepad support" controls reset after unplugging controller
+    - Bug fix: "costume editor snapping" breaking reshape tool
+    - Bug fix: "searchable dropdowns" can create variables with the same name as existing ones
+    - Bug fix: "Scratch Messaging" comment post dates "time ago" text not localized to other languages
+    - Bug fix: "clone counter" can show a negative number of clones when dynamically enabled
