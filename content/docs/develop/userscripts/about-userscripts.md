@@ -20,15 +20,12 @@ Even though Scratch Addons userscripts are part of a browser extension, they can
 It's not necessary to reload the extension when changing the source of an already existing userscript JavaScript file. In those cases, reloading the page is enough.
 {{< /admonition >}}
 
-<!-- TODO: revamp -->
+Userscripts are declared inside a "userscripts" array.
 
-<!-- TODO: create a "matches" page -->
+Each item of the array must have the following properties:
+- `"url"`: the relative URL to a JavaScript file.
+- `"matches"`: the list of Scratch pages where the userscript will run. See [matches](/docs/reference/addon-manifest/#matches) for more information.
 
-Go to the manifest of your addon (addon.json) and add a property called `userscripts"`.  
-This property must be an array.  
-Each item of the array must have the following properties: `"url"` and `"matches"`.  
-`"url"` must be a relative URL to a JavaScript file.  
-`"matches"` must be an array of URLs where you want to run the userscript on. You can use asterisks.
 Example manifest:
 ```json
 {
@@ -37,11 +34,7 @@ Example manifest:
   "userscripts": [
     {
       "url": "userscript.js",
-      "matches": ["https://scratch.mit.edu/*"]
-    },
-    {
-      "url": "second_userscript.js",
-      "matches": ["https://scratch.mit.edu/projects/*", "https://scratch.mit.edu/users/*"]
+      "matches": ["projects", "https://scratch.mit.edu/", "profiles"]
     }
   ],
   "tags": ["community"],
