@@ -7,7 +7,7 @@ aliases:
 
 Userscripts are JavaScript files that are executed every time the user loads a Scratch page. They can modify the document's HTML, add new buttons, customize Scratch editor behavior, and so much more.
 
-Similarly to userscripts that you might download for userscript managers like Tampermonkey or Greasemonkey, Scratch Addons userscripts consist of pieces of JavaScript that are executed in the same execution context as the JavaScript code from Scratch itself. In browser extension vocabulary, this execution context is often named "main world".
+Similarly to userscripts that you might download for userscript managers like Tampermonkey or Greasemonkey, Scratch Addons userscripts consist of pieces of JavaScript that are executed in the same execution context as the JavaScript code from Scratch itself. In browser extension vocabulary, this execution context is often called the "main world".
 
 Even though Scratch Addons userscripts are part of a browser extension, they cannot access any `chrome.*` or `browser.*` APIs. Instead, Scratch Addons offers an [`addon.*` API](/docs/reference/addon-api/). 
 
@@ -87,7 +87,7 @@ Use [browser DOM APIs](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM
 
 ## Localizing userscripts
 
-Addon userscripts sometimes need to reference English words or sentences. Make sure not to hardcode them in the code, so that they can be part of the translation process.
+Addon userscripts sometimes need to reference English words or sentences. Make sure not to hardcode them, so that they can be part of the translation process.
 
 {{< admonition error >}}
 ```js

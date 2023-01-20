@@ -12,7 +12,7 @@ Follow these best practices when writing or reviewing userscript code.
 #### Use addEventListener instead of "onevent"
 
 Avoid setting "onevent" values on HTML elements, such as `onclick`. Instead, use `addEventListener`. This allows multiple addons to register the same event on the same element, without conflicting.  
-It is still valid to use "onevent", but only for elements who were created by the same addon that is registering the event.  
+It is still valid to use "onevent", but only for elements that were created by the same addon that is registering the event.  
 In all cases, avoid setting "onevent" HTML attributes, for example `element.setAttribute("onclick", "don't do this")`.
 
 {{< admonition error >}}
