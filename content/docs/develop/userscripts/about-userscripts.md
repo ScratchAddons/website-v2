@@ -83,7 +83,16 @@ For more information, check the [API reference](/docs/reference/addon-api/).
 
 Use [browser DOM APIs](https://developer.mozilla.org/en-US/docs/Web/API/HTML_DOM_API) to customize the HTML of the page.
 
-<!-- TODO : an example -->
+Here's an example:
+```js
+const myButton = document.createElement("button");
+myButton.textContent = "Click me!";
+myButton.classList.add("button");
+myButton.setAttribute("title", "You're hovering a button");
+
+const myContainer = document.querySelector(".container");
+myContainer.append(myButton);
+```
 
 ## Localizing userscripts
 
