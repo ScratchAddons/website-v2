@@ -96,6 +96,21 @@ Avoid C style loops like `for (let i = 0; i < arr.length; i++)`.
 
 #### Only use "let" over "const" if the variable may be reassigned
 
+{{< admonition info >}}
+We usually use `camelCase` to name variables, no matter if they're declared with "let" or "const".  
+For constant strings or numbers, we usually use `SNAKE_CASE`.
+
+Here's an example:
+```js
+let actionCounter = 0;
+actionCounter++;
+
+const remixButton = document.querySelector(".remix-button");
+
+const DEFAULT_ZOOM = 1.20;
+```
+{{< /admonition >}}
+
 People reading your code may assume that a variable that was declared through the "let" keyword might be reassigned at some other point of the script. If that's not the case, use the "const" keyword instead.  
 Remember that in JavaScript, declaring an object or an array as a "const", does not mean its values are frozen. Values in the object can still be changed, even if the variable itself cannot be reassigned.
 
