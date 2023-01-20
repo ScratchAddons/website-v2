@@ -141,6 +141,3 @@ The order in which userscripts run may vary on each page load. After page load, 
 Userscripts may opt-in into being executed before the page has fully loaded by specifying `"runAtComplete": false` in the addon manifest, once for each userscript.
 
 As of now, only `document.head` is guaranteed to exist when running a userscript early. In the future, `document.body` will also be guaranteed to exist, so no userscripts will ever run before the HTML document loaded enough to reach `</head> <body>`.
-
-
-<!-- TODO: explain execution order isn't guaranteed -->
