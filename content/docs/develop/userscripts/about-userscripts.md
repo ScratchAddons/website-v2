@@ -128,15 +128,3 @@ Each userscript file is a JavaScript module that exports a function. Scratch Add
 Userscripts are JavaScript modules, so they always run on ["strict mode"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode). This also means that userscripts may use [top-level imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) to import other JavaScript files.
 
 <!-- TODO: explain execution order isn't guaranteed -->
-
-
-## Debugging userscripts
-
-<!-- TODO: revisit this section -->
-
-**Make sure to refresh Scratch Addons from `chrome://extensions` after making any changes to your addon.**  
-To debug userscripts, first of all make sure your addon is enabled.  
-Then, go to a URL where you specified your userscript should run.  
-Open the console by pressing Ctrl+Shift+J.  
-You should see console logs by addons, including yours. If you're a devtools pro, you won't have any trouble setting breakpoints in your code.  
-Protip: if you want to test the `addon.*` API without changing your file every time, make your addon `window.addon = addon;` (inside the main function), and you'll be able to access your addon's `addon` object from the console. Make sure to remove that line before contributing to the repo! Userscripts must not pollute the global object.
