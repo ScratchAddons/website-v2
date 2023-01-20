@@ -175,7 +175,7 @@ const newDeleteSprite = function (...args) {
 Scratch creates all HTML elements each time the user clicks "see inside" or "see project page", and destroys the old ones.  
 This can usually be fixed by using `addon.tab.waitForElement` or the `urlChange` event.
 
-#### The Scratch editor language can be changed without a reload
+##### The Scratch editor language can be changed without a reload
 
 Unlike the Scratch website, the Scratch editor will not reload when changing the language. When selecting a different language, Scratch might destroy and re-create some HTML elements.
 
