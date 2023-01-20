@@ -263,8 +263,9 @@ Matches that allow the userscript/userstyle to run on. Values can be a URL match
 | Available in userscripts | ✔️ |
 | Available in userstyles | ❌ |
 
-Specifies whether the userscript should run after the page has loaded (after the window load event). If unspecified, `true` is assumed.  
-If set to `false`, the userscript is only guaranteed to run after the \<head> element of the document has loaded.
+Specifies whether the userscript should run after the page has loaded. If unspecified, `true` is assumed.  
+
+See [about userscripts](/docs/develop/userscripts/about-userscripts/#runatcomplete) for more information.
 
 ### `if`
 

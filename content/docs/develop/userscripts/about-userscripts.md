@@ -125,15 +125,22 @@ document.querySelector(".sa-find-bar").placeholder = msg("find");
 
 {{< admonition info >}}
 For more information about localizing userscripts, see [this page](/docs/localization/localizing-addons/).
-{{< /admonition >}}
+{{</admonition >}}
 
 
 ## Technical details
 
 Each userscript file is a JavaScript module that exports a function. Scratch Addons only imports the module if needed, and executes it after the page has fully loaded.
 
-<!-- TODO: explain runAtComplete -->
-
 Userscripts are JavaScript modules, so they always run on ["strict mode"](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode). This also means that userscripts may use [top-level imports](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import) to import other JavaScript files.
+
+The order in which userscripts run may vary on each page load. After page load, the user might dynamically enable some addons in a custom order, so order of execution is never guaranteed. Some APIs like [`addon.tab.appendToSharedSpace`](addon.tab.appendtosharedspace) attempt to fix any potential race conditions and unexpected behavior when dynamically enabling addons.
+
+### runAtComplete
+
+Userscripts may opt-in into being executed before the page has fully loaded by specifying `"runAtComplete": false` in the addon manifest, once for each userscript.
+
+As of now, only `document.head` is guaranteed to exist when running a userscript early. In the future, `document.body` will also be guaranteed to exist, so no userscripts will ever run before the HTML document loaded enough to reach `</head> <body>`.
+
 
 <!-- TODO: explain execution order isn't guaranteed -->
