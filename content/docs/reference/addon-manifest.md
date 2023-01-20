@@ -239,7 +239,33 @@ Each object must specify the url to the userscript/userstyle through the `url` p
 | - | - |
 | Type | `Array` |
 
-Matches that allow the userscript/userstyle to run on. Values can be a URL match pattern, or `projects`, `projectEmbeds`, `studios`, `profiles`, `topics`, `newPostScreens`, `editingScreens`, `forums`, `scratchWWWNoProject`.
+{{< admonition info >}}
+Userscripts and userstyles are matched against the **initial URL** of the page. For example, userscripts/userstyles that only intend to affect the insides of the project editor must also run if the user is navigating to a project page, and vice versa.
+{{< /admonition >}}
+
+Matches for the userscript/userstyle to run on. Values can be well-known matchers, URL match patterns, or regex patterns.
+
+Well-known matchers:
+- `projects` (project page and editor routes, excluding project embeds)
+- `projectEmbeds`
+- `studios` (includes all 4 tabs inside studios)
+- `profiles`
+- `topics` (forum topics)
+- `newPostScreens`
+- `editingScreens` (forum routes with editing screens, including "change signature" page)
+- `forums` (all forum pages, except mobile forums)
+- `scratchWWWNoProject` (all scratch-www routes, except project pages)
+
+URL match pattern examples:
+- `https://scratch.mit.edu/` (front page)
+- `https://scratch.mit.edu/*` (all pages)
+- `https://scratch.mit.edu/users/*/followers/` (Followers pages from all users)
+- `https://scratch.mit.edu/404` (pages that returned HTTP 404 status code - scratch-www pages usually never return 404)
+
+Regex patterns:
+- `^https:(absolute-regex)`
+- `^(relative-regex)`
+
 ```json
 {
   "userscripts": [
@@ -249,7 +275,7 @@ Matches that allow the userscript/userstyle to run on. Values can be a URL match
     },
     {
       "url": "second_userscript.js",
-      "matches": ["projects", "https://scratch.mit.edu/users/*"]
+      "matches": ["projects", "https://scratch.mit.edu/users/*/followers/"]
     }
   ]
 }
