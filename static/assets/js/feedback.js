@@ -1,14 +1,17 @@
 const notSTWords = [
-    /\bscratch *team\b/i,
+    /\bscratch\s*team\b/i,
     /\bst\b/,
 ]
 
 const punishmentWords = [
     /\bban\b/,
-    /\b(please|pls|plz) *block\b/,
+    /\bunban\b/,
+    /\b(please|pls|plz)\s*block\b/,
     /\bkick\b/,
     /\bpunish\b/,
-    /\bpunishment\b/
+    /\bpunishment\b/,
+    /\bmute\b/,
+    /\bunmute\b/,
 ]
 
 const i18n = window.i18nStrings
