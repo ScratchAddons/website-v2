@@ -6,12 +6,12 @@ const notSTWords = [
 const punishmentWords = [
     /\bban\b/,
     /\bunban\b/,
-    /\b(please|pls|plz)\s*block\b/,
+    /\b(please|pl[sz])\s*block\b/,
     /\bkick\b/,
     /\bpunish\b/,
     /\bpunishment\b/,
-    /\bmute\b/,
-    /\bunmute\b/,
+    /\b(please|pl[sz])\s*mute\b/,
+    /\b(please|pl[sz])\s*unmute\b/,
 ]
 
 const i18n = window.i18nStrings
