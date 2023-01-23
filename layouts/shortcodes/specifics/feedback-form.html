@@ -1,3 +1,5 @@
+{{ $ts := now.UnixMilli }}
+
 <script>
 	window.i18nStrings = {
 		statusSending: '{{ T "FeedbackPage.Status.Sending" }}',
@@ -8,17 +10,20 @@
 		preSendWarning: {
 			warning: '{{ T "FeedbackPage.PreSendWarning.Warning" }}',
 			override: '{{ T "FeedbackPage.PreSendWarning.Override" }}',
-			notST: {
-				heading: '{{ T "FeedbackPage.PreSendWarning.NotST.Heading" }}',
-				description: '{{ T "FeedbackPage.PreSendWarning.NotST.Description" }}',
-			},
-			punishment: {
-				heading: '{{ T "FeedbackPage.PreSendWarning.Punishment.Heading" }}',
-				description: '{{ T "FeedbackPage.PreSendWarning.Punishment.Description" }}',
+			variations: {
+				notST: {
+					heading: '{{ T "FeedbackPage.PreSendWarning.Variations.NotST.Heading" }}',
+					description: '{{ T "FeedbackPage.PreSendWarning.Variations.NotST.Description" | htmlEscape }}',
+				},
+				punishment: {
+					heading: '{{ T "FeedbackPage.PreSendWarning.Variations.Punishment.Heading" }}',
+					description: '{{ T "FeedbackPage.PreSendWarning.Variations.Punishment.Description" ( dict "Tag1Start" (add $ts 1) "Tag1End" (add $ts 2) ) | htmlEscape }}',
+				}
 			}
 		},
 		submitButton: '{{ T "FeedbackPage.SubmitButton" }}'
 	}
+	window.i18nTimestamp = Number('{{ $ts }}')
 </script>
 <script defer src="/assets/js/feedback.js"></script>
 

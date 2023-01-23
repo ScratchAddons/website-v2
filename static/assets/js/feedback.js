@@ -1,18 +1,19 @@
-const notSTWords = [
-    /\bscratch\s*team\b/i,
-    /\bst\b/,
-]
-
-const punishmentWords = [
-    /\bban\b/,
-    /\bunban\b/,
-    /\b(please|pl[sz])\s*block\b/,
-    /\bkick\b/,
-    /\bpunish\b/,
-    /\bpunishment\b/,
-    /\b(please|pl[sz])\s*mute\b/,
-    /\b(please|pl[sz])\s*unmute\b/,
-]
+const variations = {
+    notST: [
+        /\bscratch\s*team\b/i,
+        /\bst\b/,
+    ],
+    punishment: [
+        /\bban\b/,
+        /\bunban\b/,
+        /\b(please|pl[sz])\s*block\b/,
+        /\bkick\b/,
+        /\bpunish\b/,
+        /\bpunishment\b/,
+        /\b(please|pl[sz])\s*mute\b/,
+        /\b(please|pl[sz])\s*unmute\b/,
+    ]
+}
 
 const i18n = window.i18nStrings
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
@@ -104,7 +105,7 @@ const setPreSendWarning = (heading, description) => {
     statusEl.appendChild(headingEl)
     headingEl.insertAdjacentHTML('afterbegin', `<b>${i18n.preSendWarning.warning}</b> `)
     const descriptionEl = document.createElement('p')
-    descriptionEl.textContent = description
+    descriptionEl.innerHTML = description
     statusEl.appendChild(descriptionEl)
     const overrideEl = document.createElement('p')
     overrideEl.textContent = i18n.preSendWarning.override
@@ -113,14 +114,23 @@ const setPreSendWarning = (heading, description) => {
     holdSendButton(5)
 }
 
+for (const variation in variations) {
+    const variationObj = i18n.preSendWarning.variations[variation]
+    for (const key in variationObj) {
+        variationObj[key] = DOMPurify.sanitize(variationObj[key])
+    }
+}
+const punishment = i18n.preSendWarning.variations.punishment
+punishment.description = punishment.description.replace(window.i18nTimestamp + 1, '<a href="https://en.scratch-wiki.info/wiki/Report">').replace(window.i18nTimestamp + 2, '</a>')
+
 const preSendCheck = content => {
     content = content.toLowerCase()
     let warningText = false
-    if (notSTWords.some(el => content.search(el) + 1)) {
-        warningText = [i18n.preSendWarning.notST.heading, i18n.preSendWarning.notST.description]
-    }
-    if (punishmentWords.some(el => content.search(el) + 1)) {
-        warningText = [i18n.preSendWarning.punishment.heading, i18n.preSendWarning.punishment.description]
+    for (var variation in variations) {
+        if (variations[variation].some(el => content.search(el) + 1)) {
+            warningText = [i18n.preSendWarning.variations[variation].heading, i18n.preSendWarning.variations[variation].description]
+            break
+        }
     }
     if (warningText) {
         if (hasWarnedContent && hasWarnedContent === content) {
