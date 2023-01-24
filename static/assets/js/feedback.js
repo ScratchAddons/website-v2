@@ -4,14 +4,16 @@ const variations = {
         /\bst\b/,
     ],
     punishment: [
-        /\bban\b/,
-        /\bunban\b/,
-        /\b(please|pl[sz])\s*block\b/,
-        /\bkick\b/,
-        /\bpunish\b/,
-        /\bpunishment\b/,
-        /\b(please|pl[sz])\s*mute\b/,
-        /\b(please|pl[sz])\s*unmute\b/,
+        /\bban(ing|ned)?\b/,
+        /\bunban(ing|ned)?\b/,
+        /\bkick(ing|ed)?\b/,
+        /\bpunish(ing|ed|ment)?\b/,
+        /\b(please|pl[sz])\s*block(ing|ed)?\b/,
+        /\b(please|pl[sz])\s*mut(ed?|ing)\b/,
+        /\b(please|pl[sz])\s*unmut(ed?|ing)\b/,
+        /\bblock(ing|ed)?\s*(please|pl[sz])\b/,
+        /\bmut(ed?|ing)\s*(please|pl[sz])\b/,
+        /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
     ]
 }
 
