@@ -726,7 +726,7 @@ Adds a new block to the Debugger category in the block palette.
 Removes a block that was previously added to the Debugger category in the block palette.
 
 ### `addon.tab.loadScript`
-**In most cases, you should use the [`userscripts` property of the addon manifest](https://scratchaddons.com/docs/reference/addon-manifest/#userscripts-and-userstyles-array) instead.**
+**In most cases, you should use the [`userscripts` property of the addon manifest](/docs/reference/addon-manifest/#userscripts-and-userstyles-array) instead.**
 
 <table>
   <tr>

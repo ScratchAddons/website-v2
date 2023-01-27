@@ -39,9 +39,9 @@ We are continuing work to split the developer tools addon (formerly the Scratch 
 Addons such as “auto-hiding block palette” and “customizable code area zoom” now have faster animation speed settings thanks to [@DNin01](https://github.com/DNin01), so you can go faster than fast and quicker than quick when you’re working on projects.
 
 ## Redux DevTools compatibility
-Thanks to a patch by [@ErrorGamer2000](https://github.com/ErrorGamer2000), the “Redux DevTools” browser extension has been removed from the [list of incompatible extensions](https://scratchaddons.com/docs/faq/#are-there-any-incompatible-programs). Developers can now confidently use this extension to develop addons that use Redux!
+Thanks to a patch by [@ErrorGamer2000](https://github.com/ErrorGamer2000), the “Redux DevTools” browser extension has been removed from the [list of incompatible extensions](/docs/faq/#are-there-any-incompatible-programs). Developers can now confidently use this extension to develop addons that use Redux!
 
-Besides these highlights, there are a huge number of other improvements and fixes included in this update. You can view all of them in the [full changelog](https://scratchaddons.com/changelog/#v1.30.0).
+Besides these highlights, there are a huge number of other improvements and fixes included in this update. You can view all of them in the [full changelog](/changelog/#v1.30.0).
 
 ## A sneak peek...
 We’ve saved the best for last. In the near future, you’ll be able to use the middle-click block dropdown to type complex expressions and get the resulting blocks into your editor. For example, you’ll be able to type “if touching cat then say my variable + 1 for timer seconds” and it will just work!
