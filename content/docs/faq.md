@@ -19,7 +19,7 @@ Scratch Addons is an "all-in-one" browser extension for the Scratch website and 
 
 ### Who created Scratch Addons?
 
-Scratch Addons is a team project led by World_Languages. You can find the list of people who have contributed to us on the [Contributors](/contributors) page. While the "Scratch Messaging" and "Developer tools" addons were initially created by griffpatch, he does not maintain the extension.
+Scratch Addons is a team project led by World_Languages. You can find the list of people who have contributed to us on [the Credits page](/credits). While the "Scratch Messaging" and "Developer tools" addons were initially created by griffpatch, he does not maintain the extension.
 
 ### What does Scratch Addons include?
 
