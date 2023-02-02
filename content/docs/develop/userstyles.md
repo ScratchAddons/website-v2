@@ -3,8 +3,10 @@ title: Userstyles
 description: Userstyles allows you to inject CSS on the Scratch website - useful to make the buttons you add with userscripts colorful, or to customize native Scratch element.
 aliases: 
   - /docs/developing/about-userstyles
+  - /docs/develop/addon-types/userscripts
+weight: 2
 ---
-## What are they?
+
 Userstyles allows you to inject CSS on the Scratch website - useful to make the buttons you add with userscripts colorful, or to customize native Scratch element.
 
 ## How do I add a userstyle?
