@@ -76,7 +76,7 @@ body > header {
 		
 }
 
-.dropdown-menu[aria-labelledby=navbar-languages] {
+.dropdown-menu.show[aria-labelledby=navbar-languages] {
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 }
