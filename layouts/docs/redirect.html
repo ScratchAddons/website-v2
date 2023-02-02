@@ -1,0 +1,28 @@
+{{ define "html" -}}
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="robots" content="noindex">
+	<meta charset="utf-8">
+
+	<title>{{ .Params.to }}</title>
+	<link rel="canonical" href="{{ .Params.to }}" />
+	<meta http-equiv="refresh" content="0; URL={{ .Params.to }}">
+
+	<style>body {font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans",sans-serif}</style>
+
+</head>
+
+<body>
+
+	<p>You will be redirected to <a href="{{ .Params.to }}">{{ .Params.to }}<a> shortly.</p>
+
+</body>
+
+</html>
+
+{{- end }}

@@ -1,3 +1,5 @@
+{{ block "html" . -}}
+
 <!DOCTYPE html>
 
 <html lang="{{ .Site.Language.Lang }}">
@@ -33,6 +35,8 @@
 </body>
 
 </html>
+
+{{- end }}
 
 {{ define "main" }}
 
