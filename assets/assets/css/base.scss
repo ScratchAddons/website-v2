@@ -76,6 +76,11 @@ body > header {
 		
 }
 
+.dropdown-menu[aria-labelledby=navbar-languages] {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
 body > footer {
 	width: 100%;
 	background-color: var(--footer-bg);
