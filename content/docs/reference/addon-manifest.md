@@ -274,7 +274,7 @@ If set to `false`, the userscript is only guaranteed to run after the \<head> el
 | Available in userscripts | ❌ |
 | Available in userstyles | ✔️ |
 
-Optionally, you can provide an `if` object that will only apply your userstyle if any of the specified sub-properties evaluates to `true`. More advanced behavior can be achieved in userscripts using [`addon.settings.get`](https://scratchaddons.com/docs/reference/addon-api/addon.settings/#addonsettingsget) and [`addon.self.getEnabledAddons`](https://scratchaddons.com/docs/reference/addon-api/addon.self/#getenabledaddons).
+Optionally, you can provide an `if` object that will only apply your userstyle if any of the specified sub-properties evaluates to `true`. More advanced behavior can be achieved in userscripts using [`addon.settings.get`](/docs/reference/addon-api/addon.settings/#addonsettingsget) and [`addon.self.getEnabledAddons`](/docs/reference/addon-api/addon.self/#getenabledaddons).
 
 Sub-properties:
 - `settings` (object, optional) The settings within this addon that must be of specific values. The key(s) are the IDs of the settings, and the value(s) are the corresponding expected values. All key(s) must evaluate to `true` for the sub-property to evaluate to `true`. 

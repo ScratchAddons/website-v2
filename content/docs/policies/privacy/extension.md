@@ -8,7 +8,7 @@ aliases:
 no_comments: true
 ---
 
-> Last updated: 28 May 2021
+> Last updated: 26 July 2022
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 
@@ -90,4 +90,5 @@ If you have any questions, please contact us through our feedback page at <https
 
 ## Extension Privacy Policy Changelog
 
+- **26 July 2022:** reference Microsoft Edge browser ([diff](https://github.com/ScratchAddons/website-v2/commit/610c656bd30fd394bd6dbff98bfad677ce99e7f0))
 - **28 May 2021:** created

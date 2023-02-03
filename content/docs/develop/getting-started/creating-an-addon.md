@@ -10,8 +10,8 @@ If possible, disable the Scratch Addons extension you downloaded from the store 
 ## Step 1: Read about [addon basics](/docs/develop/getting-started/addon-basics/)
 Make sure to read that article to be familiar with the terminology.
 
-## Step 2: Fork/clone the repo
-Or download as ZIP, if you want. In other words, just download the source code locally.
+## Step 2: Fork/clone the [repo](https://github.com/ScratchAddons/ScratchAddons)
+Follow [these instructions](/docs/getting-started/installing/#from-source) to download the source code locally.
 
 ## Step 3: Load the extension into Chrome
 *Note: Chrome is recommended for working on addons. Nevertheless, addons are expected to work on Firefox and Edge.*  
@@ -78,5 +78,5 @@ Make sure your addon doesn't break other addons.
 Make sure your code is understandable; having unnecessary comments is better than no comments.
 
 ## Step 12: Send a pull request!
-Fork the repo if you haven't already, commit your new addon and send a PR!  
+Follow the steps on our [contributing guidelines](https://github.com/ScratchAddons/ScratchAddons/blob/master/.github/CONTRIBUTING.md). Simply put, fork the repo if you haven't already, commit your new addon and send a PR!  
 Keep in mind we might request you to make some changes, however, we will probably accept your addon as long as it's minimally suitable.

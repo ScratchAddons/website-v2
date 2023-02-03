@@ -19,7 +19,7 @@ Scratch Addons is an "all-in-one" browser extension for the Scratch website and 
 
 ### Who created Scratch Addons?
 
-Scratch Addons is a team project led by World_Languages. You can find the list of people who have contributed to us on the [Contributors](/contributors) page. While the "Scratch Messaging" and "Developer tools" addons were initially created by griffpatch, he does not maintain the extension.
+Scratch Addons is a team project led by World_Languages. You can find the list of people who have contributed to us on [the Credits page](/credits). While the "Scratch Messaging" and "Developer tools" addons were initially created by griffpatch, he does not maintain the extension.
 
 ### What does Scratch Addons include?
 
@@ -33,7 +33,7 @@ Scratch Addons includes over 100 addons, which can be enabled or disabled indivi
 
 ### What are the system requirements for Scratch Addons?
 
-Scratch Addons is officially supported on the desktop versions of [Google Chrome](https://google.com/chrome/) (version 80 and up) and [Mozilla Firefox](https://mozilla.org/firefox/) (version 74 and up), and should also work on other desktop browsers that are based on those browsers. Please check out [this page](../getting-started/installing/) for complete information.
+Scratch Addons is officially supported on the desktop versions of [Google Chrome](https://google.com/chrome/) (version 80 and up), [Microsoft Edge](https://www.microsoft.com/en-us/edge) (version 80 and up), and [Mozilla Firefox](https://mozilla.org/firefox/) (version 86 and up), and should also work on other desktop browsers that are based on those browsers. Please check out [this page](../getting-started/installing/) for complete information.
 
 ### Can I use Scratch Addons on a mobile device?
 
@@ -59,7 +59,6 @@ Some browser extensions and userscripts may interfere with Scratch Addons. If yo
 
 - Scratch 3 Developer Tools: This browser extension is a copy of the Developer tools addon. You should uninstall the Developer Tools browser extension and turn on the addon instead.
 - Better3.0: This browser extension can interfere with some addons. Luckily, most of its features are also available as addons.
-- Redux DevTools: This can interfere with the internal workings of Scratch Addons. You should disable the Redux DevTools extension if you are not using it.
 
 ## Security and privacy
 
@@ -141,7 +140,7 @@ As an open source project, we welcome any kind of contribution. You don't need t
 
   To incorporate your changes into the main extension, you need to create a pull request. You can do so by forking [the repository](https://github.com/ScratchAddons/ScratchAddons/), creating a branch, making the necessary changes, and then locating the option to create a pull request. We will review it and most likely make some changes before it gets merged.
 
-You can also contribute to other aspects of the organization, such as our website. You can view all of our repositories on [our GitHub organization page](https://github.com/ScratchAddons).
+  You can also contribute to other aspects of the organization, such as our website. You can view all of our repositories on [our GitHub organization page](https://github.com/ScratchAddons).
 
 - **Suggest an idea**  
   
@@ -153,7 +152,7 @@ You can also contribute to other aspects of the organization, such as our websit
 
 - **Translate Scratch Addons**  
   
-  If you are fluent in another language, you can help translate/localize Scratch Addons to said language. You can start by [joining the localization team].(/docs/localization/joining-the-localization-team).
+  If you are fluent in another language, you can help translate/localize Scratch Addons to said language. You can start by [joining the localization team](/docs/localization/joining-the-localization-team).
 
 - **Write the documentation**
 
@@ -161,7 +160,7 @@ You can also contribute to other aspects of the organization, such as our websit
 
 - **Send feedback**  
   
-  You can send feedback [on this page](https://scratchaddons.com/feedback). Your feedback may give us a different perspective in the extension development and help us know things needed attention and fix bugs.
+  You can send feedback [on this page](/feedback). Your feedback may give us a different perspective in the extension development and help us know things needed attention and fix bugs.
 
 - **Leave a review on the stores**
 
@@ -173,7 +172,7 @@ You can also contribute to other aspects of the organization, such as our websit
 
 - **Spread the word**
 
-You can tell anyone about Scratch Addons, including your friends, relatives, and teachers. We're just asking you [not to do this on the Scratch website](#can-i-tell-people-about-scratch-addons-on-scratch).
+  You can tell anyone about Scratch Addons, including your friends, relatives, and teachers. We're just asking you [not to do this on the Scratch website](#can-i-tell-people-about-scratch-addons-on-scratch).
 
 ### How can I create my own addon?
 
@@ -183,7 +182,7 @@ Read more about it [here](/docs/develop/getting-started).
 
 You can tell us using one of these methods.
 
-- Send it through [our feedback form](https://scratchaddons.com/feedback).
+- Send it through [our feedback form](/feedback).
 - Create an issue on [the repository](https://github.com/ScratchAddons/ScratchAddons/issues).
 - Create a post on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions).
 - Tell us on [our Discord server](https://discord.gg/R5NBqwMjNc).

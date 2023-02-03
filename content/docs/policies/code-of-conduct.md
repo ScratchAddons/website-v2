@@ -2,6 +2,7 @@
 title: Contributor Covenant Code of Conduct
 toc_title: Code of Conduct
 weight: 3
+no_comments: true
 ---
 
 ## Our Pledge

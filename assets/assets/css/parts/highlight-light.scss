@@ -1,4 +1,7 @@
-// https://github.com/PhilipTrauner/pygments-github-css
+/*
+ * https://github.com/PhilipTrauner/pygments-github-css
+ * Values further adjusted from https://github.com/primer/github-syntax-light/blob/master/lib/github-light.css
+ */
 
 .hll { background-color: #ffffcc }
 .c { color: #6a737d } /* Comment */
@@ -16,7 +19,7 @@
 .gr { color: red } /* Generic.Error */ /* old */
 .gh { color: #005cc5; font-weight: bold } /* Generic.Heading */ /* edited */
 .gi { color: #22863a; background-color: #f0fff4 } /* Generic.Inserted */
-.go { color: #888 } /* Generic.Output */ /* old */
+.go { color: #005cc5 } /* Generic.Output */ /* old */
 .gp { color: navy; } /* Generic.Prompt */ /* old */
 .gs { font-weight: bold } /* Generic.Strong */
 .gu { color: #6f42c1; font-weight: bold } /* Generic.Subheading */

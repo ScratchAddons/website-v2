@@ -1,7 +1,12 @@
-// Shoutouts to @GrahamSH-LLK (on GitHub)
+// Shoutouts to GrahamSH-LLK (on GitHub)
+// Generates the JSON-LD structured data for the FAQ page.
 
+/**
+ * Main entity for the structured data.
+ */
 const mainEntity = []
 
+// Read the article and push items to the main entity.
 document.querySelectorAll("article > *").forEach((value, index) => {
 	if (value.tagName === "H3") {
 		mainEntity.push({
@@ -17,12 +22,16 @@ document.querySelectorAll("article > *").forEach((value, index) => {
 	}
 })
 
+/**
+ * The structured data.
+ */
 const structuredData = {
 	"@context": "https://schema.org",
 	"@type": "FAQPage",
 	mainEntity
 }
 
+// Add the structured data on the document head.
 const script = document.createElement('script');
 script.setAttribute('type', 'application/ld+json');
 script.textContent = JSON.stringify(structuredData);

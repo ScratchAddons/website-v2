@@ -5,6 +5,7 @@ weight: 100
 aliases:
   - /docs/chrome-web-store-privacy-information
   - /docs/policies/chrome-web-store-privacy-information
+no_comments: true
 ---
 
 This is how we fill the "privacy practices" form on the Chrome Web Store Developer Dashboard.
@@ -19,6 +20,7 @@ Allows users to customize their experience on the Scratch website (scratch.mit.e
 | cookies                     | Used to access the scratchcsrftoken cookie, which needs to be included as an X-CsrfToken header for Scratch API calls.                |
 | webRequest                  | Necessary in order to add an artificial "Referer" header so that requests to the Scratch API from the background page correctly work. |
 | webRequestBlocking          | Necessary in order to add, edit and remove headers before they are sent (see webRequest).                                                                                                                 |
+| declarativeNetRequestWithHostAccess | Necessary in order to add an artificial "Referer" header so that requests to the Scratch API from the background page correctly work.
 | storage                     | Used to store extension settings.                                                                                                     |
 | contextMenus                | Used to show the "mute for..." feature.  
 | alarms                      | Used for the "mute for..." feature.

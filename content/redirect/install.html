@@ -1,0 +1,75 @@
+---
+layout: empty
+url: /install
+aliases:
+    - /redirect/install
+---
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta name="robots" content="noindex">
+	<meta charset="utf-8">
+
+	<script>
+        window.installButtonGo = (name, engine) => {
+            const storeLinks = {
+                "chrome": "https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco",
+                "firefox": "https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/",
+                "edge": "https://microsoftedge.microsoft.com/addons/detail/iliepgjnemckemgnledoipfiilhajdjj",
+                "unsupported": "/#install"
+            }
+
+            // Figure out the browser
+            switch (engine) {
+                case "Blink":
+                    if (name === "Microsoft Edge") browser = "edge"
+                    else browser = "chrome"
+                    break
+                case "Gecko":
+                    browser = "firefox"
+                    break
+                default:
+                    browser = "unsupported"
+                    break
+            }
+
+            document.location.replace(storeLinks[browser])
+        }
+    
+        // Use Bowser to get the used browser, and save it to the local storage to avoid calling Bowser again.
+        if (localStorage.getItem("browserName") !== null && localStorage.getItem("browserEngine") !== null) installButtonGo(localStorage.getItem("browserName"), localStorage.getItem("browserEngine"))
+        else {
+            console.info("No browser data saved. Getting bowser to get it...")
+    
+            const detectEngineElement = document.createElement("script")
+        
+            detectEngineElement.type = "module"
+            detectEngineElement.innerHTML = `
+            import bowser from 'https://cdn.jsdelivr.net/npm/bowser/+esm'
+        
+            localStorage.setItem("browserName", bowser.getParser(navigator.userAgent).parsedResult.browser.name)
+            localStorage.setItem("browserEngine", bowser.getParser(navigator.userAgent).parsedResult.engine.name)
+        
+            window.installButtonGo(localStorage.getItem("browserName"), localStorage.getItem("browserEngine"))
+            `
+            document.head.appendChild(detectEngineElement)
+        }
+    </script>
+
+    <style>body {font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Helvetica Neue",Arial,"Noto Sans",sans-serif}</style>
+    
+</head>
+
+<body>
+
+	<p>You will be redirected to your destination shortly.</p>
+
+</body>
+
+</html>
+
+

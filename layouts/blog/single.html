@@ -1,30 +1,30 @@
 {{ define "main" }}
 
-<article class="content" itemscope itemtype="http://schema.org/BlogPosting">
+<article itemscope itemtype="http://schema.org/BlogPosting" class="mb-3">
 
-	<header id="intro" class="intro-heading post-header">
+	<header id="intro" class="intro-heading post-header md-content">
 		<h1 class="post-title" itemprop="name headline">{{ .Title }}</h1>
-		<p>
+		<p class="mb-0">
 			<span class="mx-1">
-				<span class="iconify" data-icon="bi:calendar-fill"></span>
+				<span class="iconify-inline" data-icon="bi:calendar-fill"></span>
 				<time class="post-date-published" datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}' itemprop="datePublished">
 					{{ .Date | time.Format ":date_long"  }}
 				</time>
 			</span>
 			•
 			<span class="mx-1">
-				<span class="iconify" data-icon="bi:person-circle"></span>
+				<span class="iconify-inline" data-icon="bi:person-circle"></span>
 				{{ .Params.author }}
 			</span>
 			•
 			<span class="mx-1">
-				<span class="iconify" data-icon="bi:clock-fill"></span>
+				<span class="iconify-inline" data-icon="bi:clock-fill"></span>
 				{{ T "Global.ReadTime" .ReadingTime }}
 			</span>
 		</p>
 	</header>
 
-	<div class="container" itemprop="articleBody">
+	<div class="container md-content" itemprop="articleBody">
 		{{ if isset $.Params "cover_image" -}}
 			<img src='{{ $.Params.cover_image }}' alt='{{ $.Params.cover_image_alt }}' itemprop="image" class="mb-4">
 		{{- end }}

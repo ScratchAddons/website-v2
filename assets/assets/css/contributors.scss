@@ -75,7 +75,7 @@ body.dark {
 	#contributors {
 		.contributor {
 			&:hover {
-				background: $dark-dp-1;
+				background: var(--secondary-bg);
 			}
 		}
 	}

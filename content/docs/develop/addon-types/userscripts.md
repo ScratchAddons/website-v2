@@ -34,15 +34,15 @@ Example manifest:
 }
 ```
 
-## How does the JavaScript file look like?
-Userscripts JS files require a specific structure to work.  
+## What does the JavaScript file look like?
+Userscript JS files require a specific structure to work.  
 For userscripts, you **must** wrap all your code inside a function looking like this:
 ```js
 export default async function ({ addon, global, console }) {
   console.log("Hello, " + await addon.auth.fetchUsername());
 }
 ```
-If you want to write your own functions to have cleaner code, you should include them inside the main function:  
+If you want to abstract code into functions for cleaner code, you should include them inside the main function:  
 **This will work:**
 ```js
 export default async function ({ addon, global, console }) {
@@ -66,7 +66,7 @@ async function sayHello() {
 ```
 
 ## [`addon.*` APIs](/docs/developing/addon-apis-reference)
-You can access some `addon.*` APIs from userscripts. For more information, check the documentation.
+You can access many `addon.*` APIs from userscripts. For more information, check the documentation.
 
 ## Technical aspects of userscripts
 Userscripts run after the Scratch page has fully loaded - in other words, they run in `defer` mode.
@@ -90,9 +90,9 @@ export default async function ({ addon, global, console }) {
 - `console`: this is a wrapper that allows you to see what addon triggered the log you're seeing easily.
 
 ## Debugging userscripts
-**Make sure to refresh Scratch Addons from `chrome://extensions` after doing any changes to your addon.**  
+**Make sure to refresh Scratch Addons from `chrome://extensions` after making any changes to your addon.**  
 To debug userscripts, first of all make sure your addon is enabled.  
 Then, go to a URL where you specified your userscript should run.  
 Open the console by pressing Ctrl+Shift+J.  
 You should see console logs by addons, including yours. If you're a devtools pro, you won't have any trouble setting breakpoints in your code.  
-Protip: if you want to test the `addon.*` API without changing your file every time, make your addon `window.addon = addon;` (inside the main function), and you'll be able to access your addon's `addon` object from the console. Make sure to remove that line before contributing to this repo! Userscripts must not pollute the global object.
+Protip: if you want to test the `addon.*` API without changing your file every time, make your addon `window.addon = addon;` (inside the main function), and you'll be able to access your addon's `addon` object from the console. Make sure to remove that line before contributing to the repo! Userscripts must not pollute the global object.

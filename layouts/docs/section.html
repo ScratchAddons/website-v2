@@ -1,6 +1,11 @@
-{{ define "article" }}
+{{ define "header" }}
 
-	<h1>{{ .Title }}</h1>
+	<h1>{{ if isset $.Params "h1_title" }}{{ $.Params.h1_title | markdownify }}{{ else }}{{ .Title | markdownify }}{{ end }}</h1>
+
+{{ end }}	
+
+{{ define "content" }}
+
 	{{ .Content }}
 
 	<hr />

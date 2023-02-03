@@ -120,3 +120,8 @@
       Name: Splide
       License: MIT
       Link: https://www.npmjs.com/package/@splidejs/splide
+    - ID: simple-scrollspy
+      Type: npm
+      Name: Simple Scrollspy
+      License: MIT
+      Link: https://www.npmjs.com/package/simple-scrollspy

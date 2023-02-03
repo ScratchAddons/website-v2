@@ -12,7 +12,7 @@
 
 {{- partial "nav" . -}}
 
-{{ $style := resources.Get "assets/css/docs.scss" | resources.ToCSS }}
+{{ $style := resources.Get "assets/css/markdown.scss" | resources.ToCSS }}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 <main>
@@ -29,7 +29,7 @@
 
 {{ define "main" }}
 
-	<article class="content">
+	<article class="md-content">
 
 		{{ block "article" . }}{{ end }}
 				

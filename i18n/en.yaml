@@ -39,6 +39,8 @@ Links:
   DiscordCom: Community Discord
   Discussion: Discussion Forum
   Community: Community
+  Twitter: Twitter
+  Reddit: Reddit
 
 # Strings used for the site navigation bar (NEW PAGES SHOULD BE PUT ON "Links" FIELD!)
 Nav:
@@ -79,8 +81,8 @@ Docs:
   SectionSiteName: Scratch Addons Docs
   DocsNav: Docs navigation
   DocsNavToggleLabel: Toggle docs navigation sidebar
-  TOC: Table of contents
-  TOCToggleLabel: Toggle table of contents sidebar
+  TOC: Contents
+  TOCToggleLabel: Toggle table of contents dropdown
   LastUpdated: Last updated at {{.Date}} by {{.Name}} on commit {{.Commit}}.
   Improve: Improve this page.
   SectionPages: Section Pages
@@ -159,7 +161,17 @@ FeedbackPage:
   ContentPlaceholder: Please provide as much detail as you can.
   SendEnabled: Send list of my currently enabled addons (recommended)
   SubmitButton: Send
-
+  PreSendWarning:
+    Warning: "Warning:"
+    Override: If you are really sure to send this feedback, you can press the "Send" button again.
+    Variations:
+      NotST:
+        Heading: We are not the Scratch Team.
+        Description: Keep in mind that Scratch Addons is not affiliated with the Scratch website or the organizations that maintain it. You are still welcome to give ideas to improve your experience on Scratch with Scratch Addons.
+      Punishment:
+        Heading: We can't punish people. We are not the Scratch Team.
+        Description: "Scratch Addons is not affiliated with the Scratch website or the organizations that maintain it. We have no control of the content and the moderation on the Scratch website. {{ .Tag1Start }}There are many ways that you can report on the Scratch website.{{ .Tag1End }}"
+    
 # Strings used for /scratch-messaging-transition
 SMTPage:
   ScratchMessagingLogoAlt: Scratch Messaging Extension logo

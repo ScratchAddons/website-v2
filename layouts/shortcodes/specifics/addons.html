@@ -49,7 +49,7 @@
 			{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.EasterEggAddon" }}'>🥚</span>{{ end -}}
 			{{ if in .tags "beta" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.BetaAddon" }}'>⚠️</span>{{ end -}}
 		</h5>
-		<h6 class="card-subtitle mb-2 text-muted">{{ .id }} <a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' aria-label='{{ T "AddonsPage.SourceCodeLabel" }}' rel="noopener"><span class="iconify" data-icon="simple-icons:github"></span></a></h6>
+		<h6 class="card-subtitle mb-2 text-muted">{{ .id }} <a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' aria-label='{{ T "AddonsPage.SourceCodeLabel" }}' rel="noopener"><span class="iconify-inline" data-icon="simple-icons:github"></span></a></h6>
 		<p class="card-text">{{ .description }}</p>
 	</div>
 </div>
