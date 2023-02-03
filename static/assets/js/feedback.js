@@ -116,12 +116,12 @@ const setPreSendWarning = (heading, description) => {
     holdSendButton(5)
 }
 
-for (const variation in variations) {
-    const variationObj = i18n.preSendWarning.variations[variation]
-    // for (const key in variationObj) {
-    //     variationObj[key] = DOMPurify.sanitize(variationObj[key])
-    // }
-}
+// for (const variation in variations) {
+//     const variationObj = i18n.preSendWarning.variations[variation]
+//     for (const key in variationObj) {
+//         variationObj[key] = DOMPurify.sanitize(variationObj[key])
+//     }
+// }
 const punishment = i18n.preSendWarning.variations.punishment
 punishment.description = punishment.description.replace(window.i18nTimestamp + 1, '<a href="https://en.scratch-wiki.info/wiki/Report">').replace(window.i18nTimestamp + 2, '</a>')
 
@@ -197,5 +197,6 @@ contentField.addEventListener("input", event => {
 })
 
 startUpServer()
+submitButton.type = "submit"
 
 window.addEventListener("load", () => document.querySelector("textarea").focus());
