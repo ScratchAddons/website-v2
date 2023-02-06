@@ -1276,3 +1276,21 @@
     - Bug fix: "searchable dropdowns" can create variables with the same name as existing ones
     - Bug fix: "Scratch Messaging" comment post dates "time ago" text not localized to other languages
     - Bug fix: "clone counter" can show a negative number of clones when dynamically enabled
+
+- Version: v1.30.2
+  Index: 75
+  Tag: v1.30.2
+  Name: v1.30.2
+  Date: 2023-02-06
+  Status: Released
+  Entry: |
+    - "Website dark mode and customizable colors" addon: fix compatibility with new project page love and favorite icons
+    - The "mute" functionality (available when right clicking the extension icon) is now called "do not disturb"
+    - "Costume editor snapping" addon: do not disable vanilla Scratch's "snap to center" when toggling magnet button
+    - "Editor find bar" addon: remove unnecessary "find" label next to the find bar
+    - "Customizable block colors" addon: various changes related to the upcoming new Scratch block colors
+    - "Editor dark mode and customizable colors" addon: change color of extension icons, such as music and video sensing
+    - "Project video recorder" addon: rename "start recording" button to "record"
+    - Bug fix: "collapsing sprite properties" not compatible with "search sprites by name"
+    - Bug fix: "website dark mode and customizable colors" and "Scratch 2.0 → 3.0" causing all closed sticky topic icons on the forums to be blue
+    - Bug fix: "more items per row" slightly changing height of rows on default addon settings
