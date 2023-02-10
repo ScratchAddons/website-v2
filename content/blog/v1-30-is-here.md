@@ -5,7 +5,7 @@ date: 2023-01-06T00:00:00Z
 author: lisa-wolfgang
 ---
 
-Happy New Year! It’s 2023, so what better time for the 30th release of Scratch Addons? It’s been over two months since the last version, but we’ve been working hard on several exciting new features.
+Happy New Year! It’s 2023, so what better time for the 30th update to Scratch Addons? It’s been over two months since the last version, but we’ve been working hard on several exciting new features.
 
 ## Costume editor snapping
 
