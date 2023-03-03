@@ -563,12 +563,12 @@ Example:
     {
       "type": "notice",
       "text": "Example notice.",
-      "id": "exmapleID"
+      "id": "exampleID"
     },
     {
       "type": "warning",
       "text": "Example warning.",
-      "id": "exmapleID"
+      "id": "exampleID"
     }
   ]
 }
@@ -590,7 +590,7 @@ Example:
     {	
       "name": "preset 1",	
       "id": "preset1",	
-      "desctiption": "the first preset",	
+      "description": "the first preset",	
       "values": {	
         "boolean_setting": true,	
         "string_setting": "This is a string setting",	

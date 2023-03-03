@@ -58,7 +58,7 @@ If you don't have Git installed, you can try this method instead. Note that you 
 
 2. Click the toggle next to `Developer mode` to turn on the Developer Mode. This allows you to install extensions from a folder or file.
 
-   ![Extension Managment top bar screenshot](/assets/img/docs/developer-mode-toggle.png)
+   ![Extension Management top bar screenshot](/assets/img/docs/developer-mode-toggle.png)
 
 3. You should see the `Load unpacked` button appear. Clicking it will allow you to select a folder to upload.
 
