@@ -54,7 +54,7 @@
   Date: 2020-10-27
   Status: Yanked
   Entry: |
-    Only released on Firefox due to an issue with perfomance warnings not showing. See [v1.2.1](#v1.2.1).
+    Only released on Firefox due to an issue with performance warnings not showing. See [v1.2.1](#v1.2.1).
 
 - Version: v1.2.1
   Index: 5
@@ -458,7 +458,7 @@
     - New setting on "show full areas" addon: show scroll for forums Scratchblocks
     - "Developer tools" addon: fix send to top/bottom buttons showing on all items, instead of just costumes
     -  "Mute project player" addon: fix Ctrl+GreenFlag not working in MacOS
-    - "Auto-hide block pallete" addon: fix closing animation sometimes not working
+    - "Auto-hide block palette" addon: fix closing animation sometimes not working
   Highlights:
     Description: |
       New feature: "Drag and drop files" addon, which lets you drag images and sounds from your file explorer into the sprites pane or costume/sound list. Go to Scratch Addons settings to enable it.
@@ -503,7 +503,7 @@
     - Bug fix: "variable manager" not loading when reentering the editor
   Highlights:
     Description: |
-      New feature: "editor dark mode" was remade and is now deeply customizable. Go to Scratch Addons settings to change specific colors, toggle dark comments and scollbars, and more!
+      New feature: "editor dark mode" was remade and is now deeply customizable. Go to Scratch Addons settings to change specific colors, toggle dark comments and scrollbars, and more!
 
       Featured new addons this update are "custom scripts area zoom settings" and "change new sprite default position".
 
@@ -774,7 +774,7 @@
     - "Featured" addons are now displayed separately in settings page
     - Ability to send list of enabled addons when sending feedback to Scratch Addons developers
     - Bug fix: "customizable default project" working inconsistently
-    - Bug fix: "display stage on left side" breaking trashing of blocks by dragging them to pallete in RTL languages
+    - Bug fix: "display stage on left side" breaking trashing of blocks by dragging them to palette in RTL languages
     - Bug fix: addons sometimes not loading in the page randomly
   Highlights:
     Description: |

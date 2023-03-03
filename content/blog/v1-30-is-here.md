@@ -17,7 +17,7 @@ It’s difficult to position shapes precisely in the costume editor, but this po
 - Centers of other objects
 - Corners of other objects
 
-What’s more, all of the above is togglable from within the editor itself, making it easy to get the exact behavior you need in each situation.
+What’s more, all of the above is toggleable from within the editor itself, making it easy to get the exact behavior you need in each situation.
 
 ## Collapsing sprite properties
 Users on small screens rejoice: you're about to get double the sprite grid space!
