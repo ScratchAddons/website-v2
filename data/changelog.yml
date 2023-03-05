@@ -1294,3 +1294,26 @@
     - Bug fix: "collapsing sprite properties" not compatible with "search sprites by name"
     - Bug fix: "website dark mode and customizable colors" and "Scratch 2.0 → 3.0" causing all closed sticky topic icons on the forums to be blue
     - Bug fix: "more items per row" slightly changing height of rows on default addon settings
+
+- Version: v1.31.0
+  Index: 76
+  Tag: v1.31.0
+  Name: v1.31.0
+  Date: 2023-03-09
+  Status: Released
+  Entry: |
+    - New addon: multiple rows in backpack
+    - New addon: copy reporter values
+    - New addon: share through My Stuff
+    - The "insert blocks by name" addon was completely reworked, you can now type inputs and reporters inside other blocks, and autocomplete using the Tab key
+    - "Customizable block colors" addon: two new presets have been added, including a preset for the new high-contrast block colors coming to Scratch soon
+    - "Clone counter" addon: new "show on project page" setting
+    - "Website dark mode and customizable colors" addon: support the new Explore page tabs
+    - "Website dark mode and customizable colors" addon: the "navigation bar background" color setting now accepts transparency
+    - "Block switching" addon: more blocks can now be switched to related ones, such as "delete item of list" to "delete all of list"
+    - Bug fix: compatibility issues between "better forum quoter" and "quote post number"
+  Highlights:
+    Description: |
+      The "insert blocks by name" addon was completely reworked. You can now type inputs and reporters inside other blocks, and autocomplete using the Tab key. Go to Scratch Addons settings to enable it.
+
+      The new addons added this update are "multiple rows in backpack", "copy reporter values", and "share through My Stuff".
