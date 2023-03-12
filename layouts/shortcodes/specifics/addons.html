@@ -1,5 +1,7 @@
+<script src="https://cdn.jsdelivr.net/npm/masonry-layout@4.2.2/dist/masonry.pkgd.min.js" async></script>
+
 <div class="d-flex align-items-center" hidden>
-	<div class="pr-2">
+	<div class="pe-2">
 		{{if ( index $.Site.Data.addons $.Page.Language.Lang ) -}}
 			<p>{{ T "AddonsPage.NAddons" ( index $.Site.Data.addons $.Page.Language.Lang | len ) }}</p>
 		{{- else -}}
@@ -9,13 +11,13 @@
 	<div class="flex-grow-1">
 		<hr />
 	</div>
-	<div class="pl-2">
+	<div class="ps-2">
 		<div class="form-check">
 			<input class="form-check-input" type="checkbox" id="checkbox-list-view" onchange="changeView(event)">
 			<label class="form-check-label" for="checkbox-list-view">{{ T "AddonsPage.ListViewLabel" }}</label>
 		</div>
 	</div>
-	<div class="pl-2">
+	<div class="ps-2">
 		<div class="form-check" title='{{ T "AddonsPage.EasterEggTooltip.L1" }}<br class="mb-1"/>{{ T "AddonsPage.EasterEggTooltip.L2" }}' data-toggle="tooltip" data-placement="left" data-html="true">
 			<input class="form-check-input" type="checkbox" id="checkbox-easter-egg" onchange="changeEgg(event)">
 			<label class="form-check-label" for="checkbox-easter-egg">{{ T "AddonsPage.EasterEggLabel" }}</label>
@@ -23,7 +25,7 @@
 	</div>
 </div>
 
-<div class="card-columns">
+<div class="row" data-masonry='{"percentPosition": true }'>
 	{{- if ( index $.Site.Data.addons $.Page.Language.Lang ) }}
 		{{- template "addon-card" ( index $.Site.Data.addons $.Page.Language.Lang ) -}}
 	{{ else }}
@@ -34,23 +36,24 @@
 {{- define "addon-card" }}
 
 {{ range . }}
-
-<div class="card {{ range .tags }} tag-{{ . }}{{ end }}" id="addon-{{ .id }}">
-	{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
-		<div class="card-img-wrapper">
-			<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+<div class="col-12 col-md-6 col-lg-4 mb-3">
+	<div class="card {{ range .tags }} tag-{{ . }}{{ end }}" id="addon-{{ .id }}">
+		{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
+			<div class="card-img-wrapper">
+				<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+			</div>
+		{{- end }}
+		<div class="card-body">
+			<h5 class="card-title">
+				{{ .name }}
+				{{ if in .tags "recommended" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.RecommendedAddon" }}'>🌟</span>{{ end -}}
+				{{ if in .tags "featured" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.FeaturedAddon" }}'>⭐</span>{{ end -}}
+				{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.EasterEggAddon" }}'>🥚</span>{{ end -}}
+				{{ if in .tags "beta" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.BetaAddon" }}'>⚠️</span>{{ end -}}
+			</h5>
+			<h6 class="card-subtitle mb-2 text-muted">{{ .id }} <a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' aria-label='{{ T "AddonsPage.SourceCodeLabel" }}' rel="noopener"><span class="iconify-inline" data-icon="simple-icons:github"></span></a></h6>
+			<p class="card-text">{{ .description }}</p>
 		</div>
-	{{- end }}
-	<div class="card-body">
-		<h5 class="card-title">
-			{{ .name }}
-			{{ if in .tags "recommended" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.RecommendedAddon" }}'>🌟</span>{{ end -}}
-			{{ if in .tags "featured" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.FeaturedAddon" }}'>⭐</span>{{ end -}}
-			{{ if in .tags "easterEgg" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.EasterEggAddon" }}'>🥚</span>{{ end -}}
-			{{ if in .tags "beta" }}<span data-toggle="tooltip" title='{{ T "AddonsPage.BetaAddon" }}'>⚠️</span>{{ end -}}
-		</h5>
-		<h6 class="card-subtitle mb-2 text-muted">{{ .id }} <a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' aria-label='{{ T "AddonsPage.SourceCodeLabel" }}' rel="noopener"><span class="iconify-inline" data-icon="simple-icons:github"></span></a></h6>
-		<p class="card-text">{{ .description }}</p>
 	</div>
 </div>
 

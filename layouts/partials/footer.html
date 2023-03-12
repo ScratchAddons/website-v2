@@ -2,8 +2,8 @@
 	<div class="container my-4">
 		<section class="footer-intro mb-4">
 			<div>
-				<a href='{{ "/" | relLangURL }}' class="navbar-brand">
-					<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddons" }}' class="mr-2"></img>
+				<a href='{{ "/" | relLangURL }}' class="h5 mb-2 d-block">
+					<img src="/assets/img/icon.svg" alt='{{ T "Global.ScratchAddons" }}' class="me-2"></img>
 					<span>{{ T "Global.ScratchAddons" }}</span>
 				</a>
 				{{ $latest := index (sort $.Site.Data.changelog "Index" "desc") 0 -}}

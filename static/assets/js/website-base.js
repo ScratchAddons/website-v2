@@ -164,6 +164,7 @@ const updateDarkTheme = (active, updateLocalStorage = false) => {
     document.body.classList.toggle("no-animation")
     setTimeout(() => document.body.classList.toggle("no-animation"), 200)
     document.body.classList[active ? "add" : "remove"]("dark")
+    document.body.dataset.bsTheme = active ? "dark" : "light"
     darkTheme = active
     if (updateLocalStorage) localStorage.setItem("darkTheme", active)
 }

@@ -16,11 +16,13 @@
     "url": "https://github.com/ScratchAddons/website-v2/issues"
   },
   "homepage": "https://github.com/ScratchAddons/website-v2#readme",
-  "devDependencies": {
-    "autoprefixer": "^10.2.5",
-    "bootstrap": "^5.0.1",
-    "postcss": "^8.2.15",
-    "postcss-cli": "^8.3.1",
-    "purgecss": "^4.0.3"
+  "dependencies": {
+    "@fullhuman/postcss-purgecss": "^5.0.0",
+    "autoprefixer": "^10.4.14",
+    "bootstrap": "^5.3.0-alpha1",
+    "postcss-cli": "^10.1.0",
+    "postcss-scss": "^4.0.6",
+    "postcss": "^8.4.21",
+    "purgecss": "^5.0.0"
   }
 }
