@@ -187,39 +187,41 @@ article {
 	position: relative;
 }
 
-#docs-search {
-	#docs-search-results {
-		display: none;
+#docs-search-results {
+	display: none;
 
-		z-index: 50;
-		margin-top: 1.5rem;
-		width: 100%;
-		max-width: 640px;
-		// padding: 1rem 0;
+	z-index: 50;
+	margin-top: 1.5rem;
+	width: 100%;
+	max-width: 640px;
+	// padding: 1rem 0;
+	color: black !important;
+	background-color: #fff;
+	background-clip: padding-box;
+	border: 1px solid rgba(0,0,0,.2);
+	border-radius: .3rem;
+	outline: 0;
+
+	> * {
+		display: block;
+		// margin-bottom: 1rem;
+		padding: 0.75rem 1rem;
 		color: black !important;
-		background-color: #fff;
 		background-clip: padding-box;
-		border: 1px solid rgba(0,0,0,.2);
-		border-radius: .3rem;
-		outline: 0;
 
-		> * {
-			display: block;
-			// margin-bottom: 1rem;
-			padding: 0.5rem 1rem;
-			color: black !important;
-			background-clip: padding-box;
-
-			&:hover {
-				background-color: rgba(0,0,0,.1x);
-			}
-
-			&:last-child {
-				margin-bottom: 0;
-			}
+		&:hover, &.active {
+			background-color: rgba(0,0,0,.075);
 		}
 
+		&:last-child {
+			margin-bottom: 0;
+		}
 	}
+
+}
+
+.docs-search-item-title {
+	font-weight: 600
 }
 
 #docs-search:focus-within {

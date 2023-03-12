@@ -1,18 +1,48 @@
-// Add scroll spy for table of contents (the thing that bolds the current section)
+/* =============================================================
+                         TOC SCROLLSPY
+============================================================= */
+
 scrollSpy('#TableOfContents', {
 	sectionClass: 'h2, h3, h4, h5, h6',
 	menuActiveTarget: '#TableOfContents a',
 	offset: -50,
 })
 
+/* =============================================================
+                             SEARCH
+============================================================= */
+
 const searchResultEl = document.querySelector('#docs-search-results')
 const searchInputEl = document.querySelector('#docs-search-input')
+let searchResults
+let hoveringIndex = -1
 
 ;(async () => {
 	const pagefind = await import("/_pagefind/pagefind.js");
 
 	searchInputEl.addEventListener('input', async event => {
 		search(pagefind, searchInputEl.value)
+		hoveringIndex = -1
+	})
+	searchInputEl.addEventListener('keydown', event => {
+		console.log(event.keyCode)
+		if (event.keyCode === 38) {  // up
+			if (hoveringIndex === 0) return
+			searchResultEl.children[hoveringIndex]?.classList.remove('active')
+			hoveringIndex -= 1
+			searchResultEl.children[hoveringIndex]?.classList.add('active')
+		} else if (event.keyCode === 40) { // down
+			if (hoveringIndex === searchResults.length - 1) return
+			searchResultEl.children[hoveringIndex]?.classList.remove('active')
+			hoveringIndex += 1
+			searchResultEl.children[hoveringIndex]?.classList.add('active')
+		} else if (event.keyCode === 13) {
+			if (hoveringIndex === -1) hoveringIndex = 0
+			searchResultEl.children[hoveringIndex]?.click()
+		} else {
+			return
+		}
+		event.preventDefault()
 	})
 	search(pagefind, searchInputEl.value)
 
@@ -26,30 +56,32 @@ const search = async (pagefind, query) => {
 	}
 	
 	const search = await pagefind.search(query);
-	const results = await Promise.all(search.results.slice(0, 5).map(r => r.data()));
+	searchResults = await Promise.all(search.results.slice(0, 5).map(r => r.data()));
 
 	searchResultEl.innerHTML = ''
 
-	if (results.length === 0) {
+	if (searchResults.length === 0) {
 		const noneEl = document.createElement('p')
 		noneEl.textContent = window.i18nStrings.searchNoResults
 		searchResultEl.appendChild(noneEl)
 	}
 
-	for (const i in results) {
+	for (const i in searchResults) {
 		const itemEl = document.createElement('a')
-		itemEl.href = results[i].raw_url
+		itemEl.href = searchResults[i].raw_url
 		itemEl.classList.add('docs-search-item')
 		// itemEl.classList.add('text-body')
 		itemEl.classList.add('text-decoration-none')
 
 		const titleEl = document.createElement('p')
-		titleEl.textContent = results[i].meta.title
-		titleEl.classList.add('font-weight-bold')
+		titleEl.classList.add('docs-search-item-title')
+		titleEl.textContent = searchResults[i].meta.title
+		// titleEl.classList.add('font-weight-bold')
 		itemEl.appendChild(titleEl)
 
 		const excerptEl = document.createElement('p')
-		excerptEl.innerHTML = results[i].excerpt
+		excerptEl.classList.add('docs-search-item-excerpt')
+		excerptEl.innerHTML = searchResults[i].excerpt
 		excerptEl.classList.add('small')
 		excerptEl.classList.add('mb-0')
 		itemEl.appendChild(excerptEl)
