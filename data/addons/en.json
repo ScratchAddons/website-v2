@@ -236,7 +236,6 @@
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"enabledByDefault": false,
-		"libraries": ["scratch-blocks"],
 		"versionAdded": "1.4.0"
 	},
 	{
@@ -282,17 +281,14 @@
 		"tags": ["editor", "projectPlayer", "recommended"],
 		"credits": [
 			{ "name": "Jeffalo" },
-			{ "name": "OregSam", "link": "https://github.com/OregSamSas" }
+			{ "name": "OregSam", "link": "https://github.com/OregSamSas" },
+			{ "name": "DNin01", "link": "https://github.com/DNin01" }
 		],
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"enabledByDefault": false,
 		"versionAdded": "1.2.0",
-		"latestUpdate": {
-			"version": "1.28.0",
-			"newSettings": ["showicononly"],
-			"isMajor": false
-		}
+		"latestUpdate": { "version": "1.31.0", "newSettings": ["projectpage"] }
 	},
 	{
 		"id": "cloud-games",
@@ -432,6 +428,16 @@
 		"dynamicDisable": true,
 		"enabledByDefault": false,
 		"versionAdded": "1.10.0"
+	},
+	{
+		"id": "copy-reporter",
+		"name": "Copy reporter values",
+		"description": "Adds the option to copy values displayed by variable monitors (from the right click context menu) and block reporter balloons.",
+		"tags": ["editor", "codeEditor"],
+		"credits": [{ "name": "TheKodeToad" }],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
+		"versionAdded": "1.31.0"
 	},
 	{
 		"id": "ctrl-click-run-scripts",
@@ -960,16 +966,16 @@
 			{
 				"name": "TheColaber",
 				"link": "https://scratch.mit.edu/users/TheColaber/"
-			}
+			},
+			{ "name": "DNin01", "link": "https://github.com/DNin01" }
 		],
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"enabledByDefault": false,
 		"versionAdded": "1.2.0",
 		"latestUpdate": {
-			"version": "1.29.0",
-			"temporaryNotice": "The \"Dark comments\" setting from \"Editor dark mode and customizable colors\" has been moved here and is now customizable.",
-			"newSettings": ["comment-color"]
+			"version": "1.31.0",
+			"temporaryNotice": "Two new presets have been added, including a preset for the new high-contrast block colors coming to Scratch soon."
 		},
 		"injectAsStyleElt": true,
 		"updateUserstylesOnSettingsChange": true
@@ -1012,6 +1018,22 @@
 		"dynamicDisable": true,
 		"enabledByDefault": false,
 		"versionAdded": "1.2.0"
+	},
+	{
+		"id": "expanded-backpack",
+		"name": "Multiple rows in backpack",
+		"description": "Arranges the contents of the editor backpack into an expandable two-way grid, similar to the costume library and increases the size of certain thumbnails.",
+		"tags": ["editor", "featured"],
+		"credits": [
+			{
+				"name": "pumpkinhasapatch",
+				"link": "https://github.com/pumpkinhasapatch"
+			}
+		],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
+		"enabledByDefault": false,
+		"versionAdded": "1.31.0"
 	},
 	{
 		"id": "expanding-search-bar",
@@ -1590,14 +1612,16 @@
 	{
 		"id": "middle-click-popup",
 		"name": "Insert blocks by name",
-		"description": "Middle click on the code area, use Ctrl+Space or Shift+Click to bring up a floating input box where you can type the name of a block (or parts of it) and drag the block into the code area. Hold Shift while dragging to avoid closing the box when adding multiple blocks at once.",
+		"description": "Middle or shift-click the code area, or press Ctrl+Space to bring up a block search window. Type block names (or parts of them) and drag them into the code area to add them to your project. The menu can be navigated with the arrow keys and Enter and supports autocompleting with Tab. To prevent the menu from closing, hold Shift while dragging blocks out of it.",
 		"tags": ["editor", "codeEditor", "recommended"],
 		"credits": [
+			{ "name": "Tacodiva", "link": "https://github.com/Tacodiva" },
 			{ "name": "griffpatch" },
 			{
 				"name": "TheColaber",
 				"link": "https://scratch.mit.edu/users/TheColaber/"
-			}
+			},
+			{ "name": "CST1229", "link": "https://github.com/CST1229" }
 		],
 		"info": [
 			{
@@ -1606,7 +1630,12 @@
 			}
 		],
 		"enabledByDefault": true,
-		"versionAdded": "1.30.0"
+		"versionAdded": "1.30.0",
+		"latestUpdate": {
+			"version": "1.31.0",
+			"temporaryNotice": "This addon was completely reworked. You can now type inputs and reporters inside other blocks, and autocomplete using the Tab key.",
+			"isMajor": true
+		}
 	},
 	{
 		"id": "more-links",
@@ -1776,6 +1805,8 @@
 		"credits": [
 			{ "name": "Weredime (9gr)", "link": "https://scratch.mit.edu/users/9gr/" }
 		],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
 		"versionAdded": "1.27.0"
 	},
 	{
@@ -1859,7 +1890,11 @@
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"enabledByDefault": false,
-		"versionAdded": "1.0.0"
+		"versionAdded": "1.0.0",
+		"latestUpdate": {
+			"version": "1.31.0",
+			"temporaryNotice": "The progress bar has had a redesign since v1.30.1."
+		}
 	},
 	{
 		"id": "project-info",
@@ -2169,6 +2204,22 @@
 		"dynamicDisable": true,
 		"enabledByDefault": false,
 		"versionAdded": "1.7.0"
+	},
+	{
+		"id": "share-through-mystuff",
+		"name": "Share through My Stuff",
+		"description": "Share projects through the My Stuff page.",
+		"tags": ["community"],
+		"credits": [
+			{
+				"name": "Steve0Greatness",
+				"link": "https://scratch.mit.edu/users/Steve0Greatness/"
+			}
+		],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
+		"enabledByDefault": false,
+		"versionAdded": "1.31.0"
 	},
 	{
 		"id": "show-bbcode",
