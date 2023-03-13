@@ -81,6 +81,28 @@ document.querySelector(".remix-button").classList.add("sa-remix-button-hidden");
 Avoid using the `addon.tab.waitForElement` API if the element is guaranteed to exist. It will still work, and performance will not be heavily impacted, but it might confuse other developers that are reading the code. The usage of waitForElement should usually mean that there is at least 1 scenario where the element doesn't exist at that execution point.  
 For example, it's not necessary to use waitForElement when searching for forum posts, unless the userscript was declared with `"runAtComplete": false`. In those cases, simply use `document.querySelectorAll()` normally.
 
+### Use element.closest() instead of abusing parentElement
+
+Avoid overusing parentElement when traversing an element's ancestors. Instead, use `element.closest()`, which works very similarly to `element.querySelector()`.
+
+{{< admonition error >}}
+```js
+// Don't do this:
+reportButton.addEventListener("click", (event) => {
+  const commentElement = event.target.parentElement.parentElement.parentElement.parentElement;
+})
+```
+{{< /admonition >}}
+
+{{< admonition success >}}
+```js
+// Do this instead:
+reportButton.addEventListener("click", (event) => {
+  const commentElement = event.target.closest(".comment");
+})
+```
+{{< /admonition >}}
+
 
 ## JavaScript best practices
 
