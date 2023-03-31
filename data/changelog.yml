@@ -1317,3 +1317,18 @@
     Description: |
       The "insert blocks by name" addon was completely reworked. You can now type inputs and reporters inside other blocks, and autocomplete using the Tab key. Go to Scratch Addons settings to enable it.
       The new addons added this update are "multiple rows in backpack", "copy reporter values", and "share through My Stuff".
+
+- Version: v1.31.1
+  Index: 77
+  Tag: v1.31.1
+  Name: v1.31.1
+  Date: 2023-03-30
+  Status: Released
+  Entry: |
+    - Adapt addons to the upcoming Scratch April Fools update
+    - "Insert blocks by name" addon: improve algorithm when searching
+    - "Search profile" addon: improve profile icon to match Scratch UI
+    - Bug fix: layout issue when clicking in sprite name within "debugger" while on "variable manager" tab
+    - Bug fix: "customizable block colors" hiding dropdown arrows in blocks
+    - Bug fix: "Scratch 2.0 → 3.0" account menu can overflow in some languages
+    - Bug fix: "search on My Stuff" forcing page to scroll to the top
