@@ -21,12 +21,14 @@
 				}
 			}
 		},
-		submitButton: '{{ T "FeedbackPage.SubmitButton" }}'
+		submitButton: '{{ T "FeedbackPage.SubmitButton" }}',
+		afdDisabledNotice: '{{ T "FeedbackPage.AFDDisabledNotice" ( dict "Tag1Start" (add $ts 1) "Tag1End" (add $ts 2) ) | htmlEscape }}'
 	}
 	window.i18nTimestamp = Number('{{ $ts }}')
 </script>
 <script defer src="/assets/js/feedback.js"></script>
 
+<div id="afd-disabled-notice" class="alert alert-info" role="alert" hidden>{{ T "FeedbackPage.AFDDisabledNotice" }}</div>
 <div id="feedback-status" class="alert" role="alert" hidden></div>
 <form id="feedback-form">
 	<div class="form-group mb-3">
