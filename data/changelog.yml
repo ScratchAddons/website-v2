@@ -1332,3 +1332,12 @@
     - Bug fix: "customizable block colors" hiding dropdown arrows in blocks
     - Bug fix: "Scratch 2.0 → 3.0" account menu can overflow in some languages
     - Bug fix: "search on My Stuff" forcing page to scroll to the top
+
+- Version: v1.31.2
+  Index: 78
+  Tag: v1.31.2
+  Name: v1.31.2
+  Date: 2023-04-05
+  Status: Released
+  Entry: |
+    - Bug fix: some addons not working after Scratch April Fools ended
