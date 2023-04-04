@@ -126,7 +126,7 @@ const punishment = i18n.preSendWarning.variations.punishment
 punishment.description = punishment.description.replace(window.i18nTimestamp + 1, '<a href="https://en.scratch-wiki.info/wiki/Report">').replace(window.i18nTimestamp + 2, '</a>')
 
 const afdDisabledNotice = document.getElementById("afd-disabled-notice")
-afdDisabledNotice.innerHTML = i18n.afdDisabledNotice.replace(window.i18nTimestamp + 1, '<a href="https://github.com/ScratchAddons/ScratchAddons/issues/5862#issuecomment-1493439646">').replace(window.i18nTimestamp + 2, '</a>')
+afdDisabledNotice.innerHTML = i18n.afdDisabledNotice.replace(window.i18nTimestamp + 1, '<a href="https://github.com/ScratchAddons/ScratchAddons/discussions/5860">').replace(window.i18nTimestamp + 2, '</a>')
 afdDisabledNotice.hidden = false
 
 const preSendCheck = content => {
