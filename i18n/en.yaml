@@ -173,7 +173,7 @@ FeedbackPage:
         Description: "Scratch Addons is not affiliated with the Scratch website or the organizations that maintain it. We have no control of the content and the moderation on the Scratch website. {{ .Tag1Start }}There are many ways that you can report on the Scratch website.{{ .Tag1End }}"
       AF2023Comp:
         Heading: Some addons are disabled in response to the April Fools updates.
-        Description: "Due to the Scratch's April Fools updates, cat blocks, two-column category menu, auto-hiding block palette, and data category tweaks are currently disabled for stability reasons. We will bring it back soon. {{ .Tag1Start }}Read more at this discussion.{{ .Tag1End }}"
+        Description: "Due to the Scratch's April Fools updates, cat blocks, two-column category menu, auto-hiding block palette, and data category tweaks were disabled for stability reasons. An update has been released to fix this. Please wait for your browser to update it. {{ .Tag1Start }}Read more at this discussion.{{ .Tag1End }}"
     
 # Strings used for /scratch-messaging-transition
 SMTPage:
