@@ -6,10 +6,10 @@ aliases:
 ---
 
 ## What is an addon?
-An addon is a userscript, userstyle, or both that runs on the Scratch website or project editor when enabled. For example, the "Editor find bar" addon has a userscript that adds a find box to the editor, and a userstyle that styles to that box.
+An addon is a userscript, userstyle, or combination of both that runs on the Scratch website or project editor when enabled. For example, the "Editor find bar" addon has a userscript that adds a find box to the editor, and a userstyle that styles to that box.
 
 ## What is a userscript?
-A [userscript](/docs/develop/userscripts) is a piece of JavaScript code that runs on a Scratch tab. You can specify where that userscript will run, for example, only project pages. Userscripts are similar to content scripts on browser extensions.
+A [userscript](/docs/develop/userscripts) is a piece of JavaScript code that runs on a Scratch tab. You can specify where that userscript will run, for example, only project pages. Userscripts are similar to content scripts on browser extensions, but instead of browser APIs, userscripts use [addon APIs](/docs/reference/addon-api/)
 Userscripts are useful to change the behavior of the Scratch website, for example, adding or removing buttons to the navigation bar.
 
 ## What is a userstyle?
