@@ -12,8 +12,6 @@ aliases:
 
 `addon.tab.traps` is a public API for userscripts that can be used to obtain objects that are not otherwise available. The actual traps are coded at [prototype-handler](https://github.com/ScratchAddons/ScratchAddons/blob/master/content-scripts/prototype-handler.js).
 
-They share some APIs with "Once" traps, but is very different and is documented at [Fake redux state](Fake-redux-state) separately.  
-
 ## Examples
 [editor-stepping](https://github.com/ScratchAddons/ScratchAddons/blob/master/addons/editor-stepping/userscript.js) addon shows how to manipulate `Thread` object trapped.
 
