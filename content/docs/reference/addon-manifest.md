@@ -291,7 +291,7 @@ Regex patterns:
 
 Specifies whether the userscript should run after the page has loaded. If unspecified, `true` is assumed.  
 
-See [about userscripts](/docs/develop/userscripts/about-userscripts/#runatcomplete) for more information.
+See [about userscripts](/docs/develop/userscripts/#runatcomplete) for more information.
 
 ### `if`
 
