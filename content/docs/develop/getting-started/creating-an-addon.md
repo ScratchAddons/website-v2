@@ -5,6 +5,7 @@ aliases:
   - /docs/developing/getting-started/creating-an-addon
 ---
 
+This page describes the basics on how to create an addon for Scratch Addons. Before proceeding, read the [addon basics](../addon-basics/) and disable any other instances of Scratch Addons to avoid conflicts.
 
 {{< admonition info >}}
 If you plan to submit the addon you are developing as a pull request to our GitHub repository, please read our [contributing guidelines](https://github.com/ScratchAddons/ScratchAddons/blob/master/.github/CONTRIBUTING.md) first.
