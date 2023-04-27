@@ -1,23 +1,53 @@
+const i18n = window.i18nStrings
+
 const variations = {
-    notST: [
-        /\bscratch\s*team\b/i,
-        /\bst\b/,
-    ],
-    punishment: [
-        /\bban(ing|ned)?\b/,
-        /\bunban(ing|ned)?\b/,
-        /\bkick(ing|ed)?\b/,
-        /\bpunish(ing|ed|ment)?\b/,
-        /\b(please|pl[sz])\s*block(ing|ed)?\b/,
-        /\b(please|pl[sz])\s*mut(ed?|ing)\b/,
-        /\b(please|pl[sz])\s*unmut(ed?|ing)\b/,
-        /\bblock(ing|ed)?\s*(please|pl[sz])\b/,
-        /\bmut(ed?|ing)\s*(please|pl[sz])\b/,
-        /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
-    ]
+    notST: {
+        strings: {
+            ...i18n.preSendWarning.variations.notST
+        },
+        patterns: [
+            /\bscratch\s*team\b/i,
+            /\bst\b/,
+        ]
+    },
+    punishment: {
+        strings: {
+            ...i18n.preSendWarning.variations.punishment,
+            description: i18n.preSendWarning.variations.punishment.description
+                .replace(window.i18nTimestamp + 1, '<a href="https://en.scratch-wiki.info/wiki/Report">').replace(window.i18nTimestamp + 2, '</a>')
+        },
+        patterns: [
+            /\bban(ing|ned)?\b/,
+            /\bunban(ing|ned)?\b/,
+            /\bkick(ing|ed)?\b/,
+            /\bpunish(ing|ed|ment)?\b/,
+            /\b(please|pl[sz])\s*block(ing|ed)?\b/,
+            /\b(please|pl[sz])\s*mut(ed?|ing)\b/,
+            /\b(please|pl[sz])\s*unmut(ed?|ing)\b/,
+            /\bblock(ing|ed)?\s*(please|pl[sz])\b/,
+            /\bmut(ed?|ing)\s*(please|pl[sz])\b/,
+            /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
+        ]
+    },
+    af2023Comp: {
+        strings: {
+            ...i18n.preSendWarning.variations.af2023Comp,
+            description: i18n.preSendWarning.variations.af2023Comp.description
+                .replace(window.i18nTimestamp + 1, '<a href="https://github.com/ScratchAddons/ScratchAddons/discussions/5860">').replace(window.i18nTimestamp + 2, '</a>')
+        },
+        patterns: [
+            /\bcat\s*blocks?\b/, 
+            /\b(two|2)[-\s]column(\s*category)?(\s*menu)?\b/, 
+            /\bauto-hiding(\s*block)?(\s*palette)?\b/, 
+            /\bdata\s*category\s*tweaks?\b/,
+            /\b(code|block)\s*palette?\b/,
+            // Catch all just to be safe
+            /\b(not|stopped|stop|don'?t|do\s*not|won'?t|will\s*not|didn'?t|did\s*not|)\s*work(ing)?\b/,
+            /\bbroken\b/,
+        ]
+    }
 }
 
-const i18n = window.i18nStrings
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
 let wakeUpTimeout = setTimeout(() => {}, 0)
 
@@ -65,14 +95,16 @@ const startUpServer = () => {
         })
             .then(response => {
                 // 0 shouldn't be included here, but in my local testing it does that. I'm just adding it incase this happens in other places.
-                if (response.status !== 200 && response.status !== 0) {
+                if (!(response.status === 200 || response.status === 0)) {
                     setOffline()
-                    resolve(false)
-                } else resolve(true)
+                    return resolve(false)
+                }
+                return resolve(true)
             })
-            .catch(() => {
+            .catch(e => {
+                console.error(e)
                 setOffline()
-                resolve(false)
+                return resolve(false)
             })
     })
 }
@@ -122,15 +154,14 @@ const setPreSendWarning = (heading, description) => {
 //         variationObj[key] = DOMPurify.sanitize(variationObj[key])
 //     }
 // }
-const punishment = i18n.preSendWarning.variations.punishment
-punishment.description = punishment.description.replace(window.i18nTimestamp + 1, '<a href="https://en.scratch-wiki.info/wiki/Report">').replace(window.i18nTimestamp + 2, '</a>')
 
 const preSendCheck = content => {
     content = content.toLowerCase()
     let warningText = false
-    for (var variation in variations) {
-        if (variations[variation].some(el => content.search(el) + 1)) {
-            warningText = [i18n.preSendWarning.variations[variation].heading, i18n.preSendWarning.variations[variation].description]
+    for (var variationType in variations) {
+        const variation = variations[variationType]
+        if (variation.patterns.some(el => content.search(el) + 1)) {
+            warningText = [variation.strings.heading, variation.strings.description]
             break
         }
     }
