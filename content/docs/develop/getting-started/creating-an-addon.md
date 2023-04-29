@@ -11,7 +11,7 @@ This page describes the basics on how to create an addon for Scratch Addons. Bef
 If you plan to submit the addon you are developing as a pull request to our GitHub repository, please read our [contributing guidelines](https://github.com/ScratchAddons/ScratchAddons/blob/master/.github/CONTRIBUTING.md) first.
 {{< /admonition >}}
 
-## Reqirements
+## Requirements
 Scratch Addons does not reqire any software for development except a text editor and Chromium-based browser, but we also recommened having Git, Firefox and a more advanced code editor such as Visual Studio Code installed.
 
 Disable the Scratch Addons extension you downloaded from the store before proceeding to avoid issues.
