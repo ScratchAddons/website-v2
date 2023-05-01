@@ -237,6 +237,13 @@ h2 {
 		margin-right: auto;
 		max-width: 540px;
 	}
+
+	.card-text {
+		display: -webkit-box;
+		-webkit-line-clamp: 2;
+		-webkit-box-orient: vertical;  
+		overflow: hidden;
+	}
 }
 
 // .splide__arrow {

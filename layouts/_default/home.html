@@ -170,7 +170,7 @@ window.i18nSplide = {
 	</p>
 	<div class="splide" id="highlights-carousel">
 		<div class="splide__track">
-			<ul class="splide__list align-items-center">
+			<ul class="splide__list align-items-start">
 			{{- if ( index $.Site.Data.addons $.Page.Language.Lang ) }}
 				{{- template "addon-card" ( index $.Site.Data.addons $.Page.Language.Lang ) -}}
 			{{ else }}
@@ -265,15 +265,13 @@ window.i18nSplide = {
 
 {{ range . }}
 
-{{ if in .tags "recommended" }}
+{{ if and ( in .tags "recommended" ) ( fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "") )  }}
 
 <li class="splide__slide">
 	<div class="splide__slide card" id="addon-{{ .id }}">
-		{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
-			<div class="card-img-wrapper">
-				<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
-			</div>
-		{{- end }}
+		<div class="card-img-wrapper">
+			<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+		</div>
 		<div class="card-body">
 			<h5 class="card-title">{{ .name }}</h5>
 			<p class="card-text">{{ .description }}</p>
