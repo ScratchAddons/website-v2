@@ -37,7 +37,7 @@ We might, however, use local storage capabilities to store basic preferences, su
 
 ## Analytics
 
-We use a self-hosted Plausible Analytics instance routed through our analytics subdomain to count website visits, downloads, etc. Plausible works without collecting any personal data or personally identifiable information, and without using cookies. You can see the same data we can see on the [public analytics dashboard](https://analytics.scratchaddons.com).
+We use a self-hosted Plausible Analytics instance routed through our analytics subdomain to count website visits, interactions, etc. Plausible works without collecting any personal data or personally identifiable information, and without using cookies. You can see the same data we can see on the [public analytics dashboard](https://analytics.scratchaddons.com).
 
 ## Feedback
 
