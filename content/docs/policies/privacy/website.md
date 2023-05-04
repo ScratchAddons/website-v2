@@ -47,6 +47,7 @@ When sending feedback through <https://scratchaddons.com/feedback>, some data in
 - Text written in "feedback" field.
 - The version number for your Scratch Addons instance.
 - Your browser's user agent string (which often includes your browser's and operating system's names and version numbers).
+- Optionally, the list of currently enabled addons of your Scratch Addons instance.
 
 Feedback is sent to a public open source [Glitch.com Node.js server instance](https://glitch.com/edit/#!/scratchaddons-feedback) which then redirects the information to a [Discord](https://discord.com) server. We do not log the IP addresses of the users that send feedback. You can verify this by looking at the Glitch server source code linked above.
 
