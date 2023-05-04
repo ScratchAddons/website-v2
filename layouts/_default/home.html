@@ -22,11 +22,11 @@ window.i18nSplide = {
 <script defer src="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/odometer.min.js,npm/@splidejs/splide@3,npm/@splidejs/splide-extension-auto-scroll@0.3.7"></script>
 <script defer src="/assets/js/landing.js"></script>
 
-<section id="intro" class="row px-4 py-5 mb-0 intro-heading text-left">
-	<div class="col-12 col-lg-6 py-4 px-3 px-md-4 d-flex flex-column justify-content-center" id="intro-info">
-		<h1 class="display-4 m-0 mb-3 p-0 text-left">{{ T "IndexPage.Intro.Tagline" }}</h1>
+<section id="intro" class="px-4 py-5 mb-0 intro-heading text-left">
+	<div class="container py-4 px-3 d-flex flex-column justify-content-center text-center" id="intro-info">
+		<h1 class="display-4 m-0 mb-3 p-0">{{ T "IndexPage.Intro.Tagline" }}</h1>
 		<p class="lead mb-4">{{ T "IndexPage.Intro.Description" }}</p>
-		<div id="intro-buttons" class="d-flex align-items-md-center flex-column flex-md-row">
+		<div id="intro-buttons" class="d-flex align-items-center flex-column flex-md-row justify-content-center">
 			<a id="install-intro" class="btn btn-white btn-lg install-btn disabled">
 				<p><span id="install-browser-icon"><span class="iconify-inline" data-icon="fa-solid:hourglass-start"></span></span> <span id="install-browser">{{ T "IndexPage.Intro.InstallButton.Loading" }}</span></p>
 				<p>{{ T "IndexPage.Intro.InstallButton.Description" }}</p>
@@ -34,8 +34,8 @@ window.i18nSplide = {
 			<a href="#features" class="btn" id="read-more">{{ T "IndexPage.Intro.ReadMore" }}</a>
 		</div>
 	</div>
-	<div class="col-12 col-lg-6" id="intro-img">
-		<div class="splide h-100 d-flex align-items-stretch position-relative" id="intro-carousel">
+	<div class="container" id="intro-img">
+		<div class="splide d-flex align-items-stretch position-relative" id="intro-carousel">
 			<div class="splide__track">
 				<ul class="splide__list align-items-center">
 					<li class="splide__slide h-100">

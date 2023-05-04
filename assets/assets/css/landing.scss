@@ -42,6 +42,24 @@
 		flex-direction: column;
 		justify-content: center;
 
+		h1 {
+			font-weight: 600;
+			line-height: 1.2;
+			font-size: calc(2rem + 2.42vw);
+
+			@media (min-width: $bs-breakpoint-lg) {
+				font-size: 3.5rem;
+			}
+		}
+
+		.lead {
+			font-weight: 300;
+			font-size: calc(1rem + 0.8vw);
+
+			@media (min-width: $bs-breakpoint-lg) {
+				font-size: 1.6rem;
+			}
+		}
 	}
 
 	#install-intro {
