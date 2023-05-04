@@ -42,7 +42,7 @@ Temporarily-stored information might include:
 
 - Your Scratch account's username and user ID.
 - Values of the `scratchcsrftoken` and `scratchlanguage` cookies.
-- Value of your Scratch authentication token "X-Token".
+- Value of your Scratch authentication token, `X-Token`.
 - Your most recent Scratch messages.
 
 ## Permanently-Stored Information
