@@ -45,7 +45,7 @@ When sending feedback through <https://scratchaddons.com/feedback>, some data in
 
 - Text written in the "identifiers" field, if any.
 - Text written in "feedback" field.
-- The version number for your Scratch Addons instance.
+- The version number of your Scratch Addons instance.
 - Your browser's user agent string (which often includes your browser's and operating system's names and version numbers).
 - Optionally, the list of currently enabled addons of your Scratch Addons instance.
 
