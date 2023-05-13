@@ -1,11 +1,11 @@
 ---
 title: Scratch Addons 1.32 Released!
-description: Scratch Addons version 1.32 is here after about two months with a bunch of new addons and fatures!
+description: Scratch Addons version 1.32 is here after about two months with a bunch of new addons and features!
 date: 2023-05-12T00:00:00Z
 author: Samq64
 ---
 
-Scratch Addons version 1.32 is here after a little more than two months with a bunch of new addons and fatures!
+Scratch Addons version 1.32 is here after a little more than two months with a bunch of new addons and features!
 
 ## New addons
 
@@ -21,7 +21,7 @@ When Shift+Clicking a sprite in the sprite pane, this new addon brings it to the
 
 ### Follow topics after posting
 
-When enabled, this new addon automaticlly clciks follow on any forum topic you post on so you never miss a reply from anyone.
+When enabled, this new addon automatically clicks follow on any forum topic you post on so you never miss a reply from anyone.
 
 ### Necropost highlighter
 
@@ -33,11 +33,11 @@ This new addon fixes a bug in Scratch where categories you collapsed on the foru
 
 ## New featues and settings
 
-This release also includes a bunch of new features and changes for exsisting addons.
+This release also includes a bunch of new features and changes for existing addons.
 
 ### Project volume slider
 
-The volume slider now automaticlly hides when it's not being used by default, leaving just the icon. Don't worry though, the old behavour can be re-enabled with the new "Always show slider" setting.
+The volume slider now automatically hides when it's not being used by default, leaving just the icon. Don't worry though, the old behavior can be re-enabled with the new "Always show slider" setting.
 
 ![](/assets/img/release-highlights/vol-slider-auto-hide.gif)
 
@@ -47,11 +47,11 @@ We added a setting to choose between sticking the navigation bar to the top of t
 
 ### Show user IDs
 
-Similar to the volume slider, there's now the option to only show user IDs when hoevring over their username.
+Similar to the volume slider, there's now the option to only show user IDs when hovering over their username.
 
 ### Editor dark mode and customizable colors
 
-There's now the option to customize the backdrop color of popups such as when creating varibales so they desn't have to use the accent color anymore.
+There's now the option to customize the backdrop color of popups such as when creating variables so they don't have to use the accent color anymore.
 
 ### Website dark mode and customizable colors
 
@@ -65,13 +65,13 @@ The black text setting and black preset now both use Scratch's upcoming block co
 
 ### TurboWarp player
 
-When set to replace pler mode, the TurboWarp button can now be Ctrl+Clicked to open the project in a new TurboWarp tab.
+When set to replace player mode, the TurboWarp button can now be Ctrl+Clicked to open the project in a new TurboWarp tab.
 
 ## Bug Fixes
 
-Some notible bug fixes in this release include:
+Some notable bug fixes in this release include:
 
 - Fixed various bugs in the the hex color picker addon.
 - Fixed incorrectly styled project, studios and profile buttons on the search page.
-- Fixd some random layout issues in the extension popup (Chrome and Edge).
-- Fixd the message filters addon from requesting messages from the server too often.
+- Fixed some random layout issues in the extension popup (Chrome and Edge).
+- Fixed the message filters addon from requesting messages from the server too often.
