@@ -43,7 +43,7 @@ The volume slider now automatically hides when it's not being used by default, l
 
 ### Customizable navigation bar
 
-We added the option to stick the navigation bar to the top of the page instead of the window so it doesn't get in the way as much.
+We added the option to stick the navigation bar to the top of the page instead of the window so it doesn't get in the way.
 
 ### Show user IDs
 
@@ -51,7 +51,7 @@ Similar to the volume slider, there's now the option to only show user IDs when 
 
 ### Editor dark mode and customizable colors
 
-There's now the option to customize the backdrop color of popups such as when creating variables so it can be darkened without using the accent color.
+There's now the option to customize the backdrop color of popups such as when creating variables so it can be darkened or set to any color instead of using the accent color.
 
 ![](/assets/img/release-highlights/popup-backdrop.png)
 
