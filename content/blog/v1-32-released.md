@@ -1,7 +1,7 @@
 ---
 title: Scratch Addons 1.32 Released!
 description: Scratch Addons version 1.32 is here after about two months with a bunch of new addons and features!
-date: 2023-05-16T00:00:00Z
+date: 2023-05-15T00:00:00Z
 author: Samq64
 ---
 
@@ -17,11 +17,11 @@ This new enabled by default addon fixes a bug in Scratch that causes projects to
 
 ### Move sprite to front layer
 
-When Shift+Clicking a sprite in the sprite pane, this new addon brings it to the front (or top) layer on the stage.
+When Shift+Clicking a sprite in the sprite pane, this new addon brings it to the front (top) layer on the stage.
 
 ### Follow topics after posting
 
-When enabled, this new addon automatically clicks follow on any forum topic you post on so you never miss a reply from anyone.
+When enabled, this new addon automatically clicks the follow button on any forum topic you post on so you never miss a reply from anyone.
 
 ### Necropost highlighter
 
@@ -29,9 +29,9 @@ This new addon highlights topics that were started much earlier than others on t
 
 ### Remember collapsed forum categories
 
-This new addon fixes a bug in Scratch where categories you collapsed on the forum home page (the list of forums) don't stay collapsed when you leave the page and come back. Now they do.
+This new addon fixes a bug in Scratch causing categories you collapsed on the forum home page (the list of forums) to not stay that way when you leave the page and come back.
 
-## New featues and settings
+## New features and settings
 
 This release also includes a bunch of new features and changes for existing addons.
 
@@ -43,7 +43,7 @@ The volume slider now automatically hides when it's not being used by default, l
 
 ### Customizable navigation bar
 
-We added a setting to choose between sticking the navigation bar to the top of the page and the top of the window.
+We added the option to stick the navigation bar to the top of the page instead of the window so it doesn't get in the way as much.
 
 ### Show user IDs
 
@@ -51,17 +51,19 @@ Similar to the volume slider, there's now the option to only show user IDs when 
 
 ### Editor dark mode and customizable colors
 
-There's now the option to customize the backdrop color of popups such as when creating variables so they don't have to use the accent color anymore.
+There's now the option to customize the backdrop color of popups such as when creating variables so it can be darkened without using the accent color.
+
+![](/assets/img/release-highlights/popup-backdrop.png)
 
 ### Website dark mode and customizable colors
 
-When not using "Better forum post editor buttons", the forum toolbar icons now have a dark mode version and the white background behind them was removed.
+When "Better forum post editor buttons" is disabled, the forum toolbar icons now have dark mode versions and the white background behind them was removed.
 
 ![](/assets/img/release-highlights/dark-toolbar-icons.png)
 
 ### Customizable block colors
 
-The black text setting and black preset now both use Scratch's upcoming block colors.
+Both the black text setting and black preset use Scratch's upcoming block colors.
 
 ### TurboWarp player
 
