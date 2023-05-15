@@ -29,23 +29,6 @@ const variations = {
             /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
         ]
     },
-    af2023Comp: {
-        strings: {
-            ...i18n.preSendWarning.variations.af2023Comp,
-            description: i18n.preSendWarning.variations.af2023Comp.description
-                .replace(window.i18nTimestamp + 1, '<a href="https://github.com/ScratchAddons/ScratchAddons/discussions/5860">').replace(window.i18nTimestamp + 2, '</a>')
-        },
-        patterns: [
-            /\bcat\s*blocks?\b/, 
-            /\b(two|2)[-\s]column(\s*category)?(\s*menu)?\b/, 
-            /\bauto-hiding(\s*block)?(\s*palette)?\b/, 
-            /\bdata\s*category\s*tweaks?\b/,
-            /\b(code|block)\s*palette?\b/,
-            // Catch all just to be safe
-            /\b(not|stopped|stop|don'?t|do\s*not|won'?t|will\s*not|didn'?t|did\s*not|)\s*work(ing)?\b/,
-            /\bbroken\b/,
-        ]
-    }
 }
 
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
