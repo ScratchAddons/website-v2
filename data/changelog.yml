@@ -1346,7 +1346,7 @@
   Index: 79
   Tag: v1.32.0
   Name: v1.32.0
-  Date: 2023-05-14
+  Date: 2023-05-16
   Status: Released
   Entry: |
     - New addon: faster project loading [recommended]
