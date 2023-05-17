@@ -291,7 +291,7 @@ Regex patterns:
 
 Specifies whether the userscript should run after the page has loaded. If unspecified, `true` is assumed.  
 
-See [about userscripts](/docs/develop/userscripts/about-userscripts/#runatcomplete) for more information.
+See [about userscripts](/docs/develop/userscripts/#runatcomplete) for more information.
 
 ### `if`
 
@@ -357,7 +357,7 @@ Sub-properties:
 
 | | |
 | - | - |
-| Type | `Object` |
+| Type | `Array` |
 
 Settings allow the addon's users to specify settings in Scratch Addons' settings panel. Inside your userscripts, you can then access those settings with the `addon.settings` API.  
 Specify a `settings` property and provide an array of option objects.

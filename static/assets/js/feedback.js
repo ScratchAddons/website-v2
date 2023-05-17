@@ -1,26 +1,44 @@
+const i18n = window.i18nStrings
+
 const variations = {
-    notST: [
-        /\bscratch\s*team\b/i,
-        /\bst\b/,
-    ],
-    punishment: [
-        /\bban(ing|ned)?\b/,
-        /\bunban(ing|ned)?\b/,
-        /\bkick(ing|ed)?\b/,
-        /\bpunish(ing|ed|ment)?\b/,
-        /\b(please|pl[sz])\s*block(ing|ed)?\b/,
-        /\b(please|pl[sz])\s*mut(ed?|ing)\b/,
-        /\b(please|pl[sz])\s*unmut(ed?|ing)\b/,
-        /\bblock(ing|ed)?\s*(please|pl[sz])\b/,
-        /\bmut(ed?|ing)\s*(please|pl[sz])\b/,
-        /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
-    ],
-    backpackBug: [
-        /\bback ?pack\b/
-    ]
+    notST: {
+        strings: {
+            ...i18n.preSendWarning.variations.notST
+        },
+        patterns: [
+            /\bscratch\s*team\b/i,
+            /\bst\b/,
+        ]
+    },
+    punishment: {
+        strings: {
+            ...i18n.preSendWarning.variations.punishment,
+            description: i18n.preSendWarning.variations.punishment.description
+                .replace(window.i18nTimestamp + 1, '<a href="https://en.scratch-wiki.info/wiki/Report">').replace(window.i18nTimestamp + 2, '</a>')
+        },
+        patterns: [
+            /\bban(ing|ned)?\b/,
+            /\bunban(ing|ned)?\b/,
+            /\bkick(ing|ed)?\b/,
+            /\bpunish(ing|ed|ment)?\b/,
+            /\b(please|pl[sz])\s*block(ing|ed)?\b/,
+            /\b(please|pl[sz])\s*mut(ed?|ing)\b/,
+            /\b(please|pl[sz])\s*unmut(ed?|ing)\b/,
+            /\bblock(ing|ed)?\s*(please|pl[sz])\b/,
+            /\bmut(ed?|ing)\s*(please|pl[sz])\b/,
+            /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
+        ]
+    },
+    backpackBug: {
+        strings: {
+            ...i18n.preSendWarning.variations.backpackBug
+        },
+        patterns: [
+            /\bback ?pack\b/,
+        ]
+    },
 }
 
-const i18n = window.i18nStrings
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
 let wakeUpTimeout = setTimeout(() => {}, 0)
 
@@ -68,14 +86,16 @@ const startUpServer = () => {
         })
             .then(response => {
                 // 0 shouldn't be included here, but in my local testing it does that. I'm just adding it incase this happens in other places.
-                if (response.status !== 200 && response.status !== 0) {
+                if (!(response.status === 200 || response.status === 0)) {
                     setOffline()
-                    resolve(false)
-                } else resolve(true)
+                    return resolve(false)
+                }
+                return resolve(true)
             })
-            .catch(() => {
+            .catch(e => {
+                console.error(e)
                 setOffline()
-                resolve(false)
+                return resolve(false)
             })
     })
 }
@@ -125,15 +145,14 @@ const setPreSendWarning = (heading, description) => {
 //         variationObj[key] = DOMPurify.sanitize(variationObj[key])
 //     }
 // }
-const punishment = i18n.preSendWarning.variations.punishment
-punishment.description = punishment.description.replace(window.i18nTimestamp + 1, '<a href="https://en.scratch-wiki.info/wiki/Report">').replace(window.i18nTimestamp + 2, '</a>')
 
 const preSendCheck = content => {
     content = content.toLowerCase()
     let warningText = false
-    for (var variation in variations) {
-        if (variations[variation].some(el => content.search(el) + 1)) {
-            warningText = [i18n.preSendWarning.variations[variation].heading, i18n.preSendWarning.variations[variation].description]
+    for (var variationType in variations) {
+        const variation = variations[variationType]
+        if (variation.patterns.some(el => content.search(el) + 1)) {
+            warningText = [variation.strings.heading, variation.strings.description]
             break
         }
     }

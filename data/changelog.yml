@@ -1332,3 +1332,40 @@
     - Bug fix: "customizable block colors" hiding dropdown arrows in blocks
     - Bug fix: "Scratch 2.0 → 3.0" account menu can overflow in some languages
     - Bug fix: "search on My Stuff" forcing page to scroll to the top
+
+- Version: v1.31.2
+  Index: 78
+  Tag: v1.31.2
+  Name: v1.31.2
+  Date: 2023-04-05
+  Status: Released
+  Entry: |
+    - Bug fix: some addons not working after Scratch April Fools ended
+
+- Version: v1.32.0
+  Index: 79
+  Tag: v1.32.0
+  Name: v1.32.0
+  Date: 2023-05-16
+  Status: Released
+  Entry: |
+    - New addon: faster project loading [recommended]
+    - New addon: move sprite to front layer
+    - New addon: follow topics after posting [forums]
+    - New addon: necropost highlighter [forums]
+    - New addon: remember collapsed forum categories [forums]
+    - "Project volume slider" addon: new "always show slider" setting
+    - "Customizable navigation bar" addon: new "stick to" setting
+    - "Show user IDs" addon: new "only show when hovering over username" setting
+    - "Editor dark mode and customizable colors" addon: new "popup backdrop color" setting
+    - "Website dark mode and customizable colors" addon: turn forum toolbar icons white in dark mode
+    - "Customizable block colors": changes to the black text color option and the "black" preset
+    - "TurboWarp player" addon: you can now Ctrl+Click the TurboWarp icon to open in a new tab
+    - "Hex color picker" addon: various bug fixes
+    - Bug fix: incorrectly styled Projects/Studios/Profile buttons on search
+    - Bug fix: random layout issues in extension popup (Chrome and Edge)
+    - Bug fix: "message filters" requesting messages from server too often
+  Highlights:
+    Description: |
+      New addon: "move sprite to front layer", which lets you Shift+Click a sprite within the sprite pane to move it to the front (top layer) of the stage. Go to Scratch Addons settings to enable it.
+      Other new addons added this update are "faster project loading", "follow topics after posting", "necropost highlighter", and "remember collapsed forum categories".
