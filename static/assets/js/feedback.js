@@ -14,6 +14,9 @@ const variations = {
         /\bblock(ing|ed)?\s*(please|pl[sz])\b/,
         /\bmut(ed?|ing)\s*(please|pl[sz])\b/,
         /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
+    ],
+    backpackBug: [
+        /\bback ?pack\b/
     ]
 }
 
