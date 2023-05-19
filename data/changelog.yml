@@ -1369,3 +1369,13 @@
     Description: |
       New addon: "move sprite to front layer", which lets you Shift+Click a sprite within the sprite pane to move it to the front (top layer) of the stage. Go to Scratch Addons settings to enable it.
       Other new addons added this update are "faster project loading", "follow topics after posting", "necropost highlighter", and "remember collapsed forum categories".
+
+- Version: v1.32.1
+  Index: 80
+  Tag: v1.32.1
+  Name: v1.32.1
+  Date: 2023-05-18
+  Status: Released
+  Entry: |
+    - Bug fix: "faster project loading" breaking dragging sprites from backpack
+    - Bug fix: "project volume slider" not compatible with "reverse order of project controls" and RTL languages
