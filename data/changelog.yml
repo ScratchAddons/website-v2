@@ -1253,6 +1253,9 @@
 
       Other new addons added this update are "collapsing sprite properties", "insert blocks by name", and "always show number pad".
     YouTubeID: oRo0tMWEpiA
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-30-is-here/
 
 - Version: v1.30.1
   Index: 74
@@ -1369,6 +1372,9 @@
     Description: |
       New addon: "move sprite to front layer", which lets you Shift+Click a sprite within the sprite pane to move it to the front (top layer) of the stage. Go to Scratch Addons settings to enable it.
       Other new addons added this update are "faster project loading", "follow topics after posting", "necropost highlighter", and "remember collapsed forum categories".
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-32-released/
 
 - Version: v1.32.1
   Index: 80
