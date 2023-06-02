@@ -1,5 +1,5 @@
 ---
-title: Scratch Addons 1.32 Released!
+title: Scratch Addons 1.32 released!
 description: Scratch Addons version 1.32 is here after about two months with a bunch of new addons and features!
 date: 2023-05-16T00:00:00Z
 author: Samq64
