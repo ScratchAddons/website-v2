@@ -137,6 +137,7 @@ const setPreSendWarning = (heading, description) => {
     overrideEl.classList.add('mb-0')
     statusEl.appendChild(overrideEl)
     holdSendButton(5)
+    statusEl.scrollIntoView()
 }
 
 // for (const variation in variations) {
