@@ -29,14 +29,6 @@ const variations = {
             /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
         ]
     },
-    backpackBug: {
-        strings: {
-            ...i18n.preSendWarning.variations.backpackBug
-        },
-        patterns: [
-            /\bback ?pack\b/,
-        ]
-    },
 }
 
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
