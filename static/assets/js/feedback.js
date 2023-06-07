@@ -136,6 +136,7 @@ const setPreSendWarning = (heading, description) => {
     overrideEl.textContent = i18n.preSendWarning.override
     overrideEl.classList.add('mb-0')
     statusEl.appendChild(overrideEl)
+    statusEl.scrollIntoView()
     holdSendButton(5)
 }
 
