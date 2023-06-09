@@ -11,7 +11,7 @@ Welcome back! It's about time for another Scratch Addons update, so let's go ove
 
 Telling the creator of a project apart from other users in comments sections should be easy, especially when a user looks similar to the creator. One of our new addons is "Highlight project creator in comments", which does exactly what it says! If you're on a project page's comments section and you find a comment posted by the creator of that project, you'll see a "Project Creator" badge next to that user. This can help you quickly identify the real project creator.
 
-![Project Creator badge next to a comment by Za-Chary](https://github.com/DNin01/website-v2/assets/106490990/ff9d7845-bd2c-47f6-88e2-35d65999397e)
+![Project Creator badge next to a comment by Za-Chary](/assets/img/release-highlights/creator-badge-comments.png)
 
 This also works on the discussion forums. The same addon will also add an "Original Poster" badge next to posts made by the user who started a forum topic.
 
@@ -23,7 +23,7 @@ When you need to set the project aside quickly, you may not have time to go up a
 
 If you've ever used the Debugger's Performance tab and you're on a slower device, you might have noticed that opening it slows things down, and you probably don't want measuring performance to impact the very performance you're measuring, so we've made a design change to the graphs in the Performance tab that should speed things up. Previously, the graph was animated and filled in, but now we've made it, by default, just a line, which is quicker to render.
 
-![A filled graph to the left and an outlined graph to the right](https://github.com/DNin01/website-v2/assets/106490990/dd7b6369-491c-4406-959d-55fb3d147e4a)
+![A filled graph to the left and an outlined graph to the right](/assets/img/release-highlights/graph-fill-vs-line.png)
 
 But if you want the graph to be animated and you have a faster computer, you can re-enable graph animation in the addon's settings.
 
