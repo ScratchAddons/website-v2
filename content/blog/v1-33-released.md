@@ -27,4 +27,4 @@ If you've ever used the Debugger's Performance tab and you're on a slower device
 
 But if you want the graph to be animated and you have a faster computer, you can re-enable graph animation in the addon's settings.
 
-And that's about everything. This is a pretty small update because we're also pretty busy working on supporting some changes Scratch is making, but we hope you enjoy the new features!
+And that's about every new feature. We also made a few performance and stability improvements. This is a pretty small update because we're also pretty busy working on supporting some changes Scratch is making, but we hope you enjoy the new features!
