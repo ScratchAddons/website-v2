@@ -7,7 +7,7 @@ author: DNin01
 
 Welcome back! It's about time for another Scratch Addons update, so let's go over what we have added in version 1.33!
 
-## See the VIP in an instant
+## Always see the creator in the crowd
 
 Telling the creator of a project apart from other users in comments sections should be easy, especially when a user looks similar to the creator. One of our new addons is "Highlight project creator in comments", which does exactly what it says! If you're on a project page's comments section and you find a comment posted by the creator of that project, you'll see a "Project Creator" badge next to that user. This can help you quickly identify the real project creator.
 
