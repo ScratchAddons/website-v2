@@ -265,7 +265,7 @@
 	{
 		"id": "cat-blocks",
 		"name": "Cat blocks",
-		"description": "Brings back editor cat hat blocks from April Fools 2020.",
+		"description": "Brings back editor cat hat blocks that were first introduced for April Fools' Day 2020.",
 		"tags": ["editor", "codeEditor", "featured"],
 		"credits": [
 			{
@@ -657,22 +657,12 @@
 			{ "name": "TheColaber" },
 			{ "name": "retronbv" }
 		],
-		"enabledByDefault": false,
 		"libraries": ["chartjs"],
 		"versionAdded": "1.16.0",
 		"latestUpdate": {
-			"version": "1.24.0",
-			"isMajor": true,
-			"temporaryNotice": "New \"Threads\" and \"Performance\" tabs in the debugger window.",
-			"newSettings": [
-				"log_clear_greenflag",
-				"log_greenflag",
-				"log_clone_create",
-				"log_failed_clone_creation",
-				"log_broadcasts",
-				"log_max_list_length",
-				"log_invalid_cloud_data"
-			]
+			"version": "1.33.0",
+			"temporaryNotice": "Graph animation is now disabled by default to increase performance. You can re-enable it if you want.",
+			"newSettings": ["fancy_graphs"]
 		}
 	},
 	{
@@ -985,6 +975,18 @@
 			},
 			{ "name": "DNin01", "link": "https://github.com/DNin01" }
 		],
+		"info": [
+			{
+				"id": "disablesMenuBar",
+				"type": "notice",
+				"text": "If you want to access Scratch's \"Color Mode\" menu, disable this feature."
+			},
+			{
+				"id": "aboutHighContrast",
+				"type": "info",
+				"text": "The new High Contrast block colors are available as a preset below."
+			}
+		],
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"enabledByDefault": false,
@@ -1090,11 +1092,10 @@
 		"versionAdded": "1.4.0"
 	},
 	{
-		"id": "featured-dangos",
-		"name": "Featured Dangos (April Fools 2023)",
-		"description": "Adds some dango-related projects to the front page.",
-		"tags": ["community", "easterEgg", "featured"],
-		"enabledByDefault": true,
+		"id": "featured-dangos-v2",
+		"name": "Featured dangos",
+		"description": "A Scratch Addons April Fools joke from 2023 that added a row to the front page featuring dango-related projects.",
+		"tags": ["community", "easterEgg"],
 		"versionAdded": "1.31.1"
 	},
 	{
@@ -1491,7 +1492,7 @@
 	{
 		"id": "initialise-sprite-position",
 		"name": "Customizable new sprite position",
-		"description": "Change the default x/y position of new sprites.",
+		"description": "Change where newly created sprites are placed on the stage.",
 		"tags": ["editor", "featured"],
 		"credits": [
 			{
@@ -1568,10 +1569,23 @@
 				"id": "original",
 				"link": "https://github.com/MegaScratchUserscript/Mega-Scratch-Userscript/blob/master/originals/GRA0007/scratchultimate.user.js#L23-L46"
 			},
-			{ "name": "Hans5958", "note": "remake", "id": "remake" }
+			{ "name": "Hans5958", "note": "remake", "id": "remake" },
+			{
+				"name": "ErrorGamer2000",
+				"link": "https://github.com/ErrorGamer2000",
+				"note": "update",
+				"id": "update"
+			}
 		],
-		"enabledByDefault": false,
-		"versionAdded": "1.3.0"
+		"info": [
+			{
+				"id": "privacy",
+				"type": "notice",
+				"text": "The \"Use Scratch username\" setting will send your Scratch username to TurboWarp.org for use in cloud data. TurboWarp has separate cloud data servers, so the cloud variables will be different than the ones on the Scratch player."
+			}
+		],
+		"versionAdded": "1.3.0",
+		"latestUpdate": { "version": "1.33.0", "newSettings": ["shareUsername"] }
 	},
 	{
 		"id": "load-extensions",
@@ -1889,6 +1903,22 @@
 		"versionAdded": "1.5.0"
 	},
 	{
+		"id": "op-badge",
+		"name": "Highlight project creator in comments",
+		"description": "Adds a badge next to the project creator in project comments sections. Also adds a badge next to the original poster in forum topics.",
+		"tags": ["community", "forums", "featured", "comments"],
+		"credits": [
+			{
+				"name": "MDWalters",
+				"link": "https://scratch.mit.edu/users/MDWalters/"
+			},
+			{ "name": "World_Languages" }
+		],
+		"dynamicEnable": true,
+		"enabledByDefault": false,
+		"versionAdded": "1.33.0"
+	},
+	{
 		"id": "opacity-slider",
 		"name": "Opacity slider",
 		"description": "Adds an opacity slider to the costume editor color picker.",
@@ -1931,10 +1961,21 @@
 		"description": "Adds a button to pause the project next to the green flag.",
 		"tags": ["editor", "projectPlayer", "recommended"],
 		"credits": [{ "name": "Jeffalo" }, { "name": "GarboMuffin" }],
+		"info": [
+			{
+				"text": "The project can also be paused with Alt+X (Option+X on macOS).",
+				"id": "keybind"
+			}
+		],
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"enabledByDefault": true,
-		"versionAdded": "1.3.0"
+		"versionAdded": "1.3.0",
+		"latestUpdate": {
+			"version": "1.33.0",
+			"temporaryNotice": "There's now a keybind to pause projects.",
+			"isMajor": false
+		}
 	},
 	{
 		"id": "pick-colors-from-stage",
@@ -2333,6 +2374,8 @@
 				"link": "https://scratch.mit.edu/users/TheColaber/"
 			}
 		],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
 		"versionAdded": "1.26.0"
 	},
 	{
