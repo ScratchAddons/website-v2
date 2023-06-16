@@ -1385,3 +1385,30 @@
   Entry: |
     - Bug fix: "faster project loading" breaking dragging sprites from backpack
     - Bug fix: "project volume slider" not compatible with "reverse order of project controls" and RTL languages
+
+- Version: v1.33.0
+  Index: 81
+  Tag: v1.33.0
+  Name: v1.33.0
+  Date: 2023-06-16
+  Status: Released
+  Entry: |
+    - New addon: highlight project creator in comments
+    - Adapt multiple addons to the upcoming Scratch editor update
+    - Increase available storage for addon settings from 8kB to ~20kB
+    - Change extension behavior that impacted Scratch project player performance
+    - "Pause button" addon: projects can now be paused with Alt+X
+    - "Live featured project" addon: new "use Scratch username" setting and bug fixes
+    - "Debugger" addon: new "fill and animate graphs" setting
+    - Bug fix: "remix tree" button showing twice
+    - Bug fix: "collapsing sprite properties" automatically collapsing when changing direction through dial
+    - Bug fix: "customizable navigation bar" duplicates username when changing settings
+    - Bug fix: "customizable code area zoom" doesn't react to changing editor language
+    - Bug fix: "project volume slider" interface interfering with "turbo mode" indicator
+  Highlights:
+    Description: |
+      New addon: "highlight project creator in comments", which adds a badge next to the project creator in project comments sections. Go to Scratch Addons settings to enable it.
+      Multiple addons have been adjusted in preparation for the upcoming Scratch changes. This update also brings performance and stability improvements.
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-33-released/
