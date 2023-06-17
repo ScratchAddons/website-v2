@@ -173,7 +173,7 @@ FeedbackPage:
         Description: "Scratch Addons is not affiliated with the Scratch website or the organizations that maintain it. We have no control of the content and the moderation on the Scratch website. {{ .Tag1Start }}There are many ways that you can report on the Scratch website.{{ .Tag1End }}"
       Theme3CrashBug:
         Heading: There is a known bug with the "Customizable block colors" addon.
-        Description: "If you're experiencing a crash when trying to create a custom block, this is a known bug with the \"Customizable block colors\" addon. For now, try disabling that addon until this is fixed (likely next release)."
+        Description: A bug has been found on the addon that causes a crash when creating a custom block. Please disable the addon until a fix has been released in the next version. {{ .Tag1Start }}Read more at this issue.{{ .Tag1End }}
 
 # Strings used for /scratch-messaging-transition
 SMTPage:

@@ -21,7 +21,7 @@
 				},
 				theme3CrashBug: {
 					heading: '{{ T "FeedbackPage.PreSendWarning.Variations.Theme3CrashBug.Heading" }}',
-					description: '{{ T "FeedbackPage.PreSendWarning.Variations.Theme3CrashBug.Description" | htmlEscape }}',
+					description: '{{ T "FeedbackPage.PreSendWarning.Variations.Theme3CrashBug.Description" ( dict "Tag1Start" (add $ts 1) "Tag1End" (add $ts 2) ) | htmlEscape }}',
 				}
 			}
 		},
