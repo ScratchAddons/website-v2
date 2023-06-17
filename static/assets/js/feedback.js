@@ -29,6 +29,14 @@ const variations = {
             /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
         ]
     },
+    theme3CrashBug: {
+        strings: {
+            ...i18n.preSendWarning.variations.theme3CrashBug
+        },
+        patterns: [
+            /\b(?:crash(?:es|ing)?|mak(?:e|ing|eing)|creat(?:e|ing|eing)?|new blocks?|my blocks?|custom blocks?)\b/,
+        ]
+    },
 }
 
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
@@ -185,7 +193,7 @@ form.addEventListener("submit", async event => {
     if (preSendCheck(contentField.value)) {
         try {
             lastFeedbackRequestTime = Date.now()
-            localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)    
+            localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)
             const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
                 method: "POST", 
                 body: JSON.stringify(body)
