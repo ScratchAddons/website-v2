@@ -1412,3 +1412,14 @@
   Links:
     - StringKey: ChangelogPage.Links.BlogPost
       Link: /blog/v1-33-released/
+
+- Version: v1.33.1
+  Index: 82
+  Tag: v1.33.1
+  Name: v1.33.1
+  Date: 2023-06-18
+  Status: Released
+  Entry: |
+    - Bug fix: "customizable block colors" causing the project editor to crash when attempting to create a custom block
+    - Bug fix: "confirmations" addon not properly prompting to confirm project sharing
+    - Bug fix: "highlight project creator in comments" not properly highlighting the original poster in forums
