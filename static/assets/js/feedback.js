@@ -1,13 +1,14 @@
 const i18n = window.i18nStrings
 
 const variations = {
-    notST: {
+    theme3CrashBug: {
         strings: {
-            ...i18n.preSendWarning.variations.notST
+            ...i18n.preSendWarning.variations.theme3CrashBug,
+            description: i18n.preSendWarning.variations.theme3CrashBug.description
+                .replace(window.i18nTimestamp + 1, '<a href="https://github.com/ScratchAddons/ScratchAddons/issues/6212">').replace(window.i18nTimestamp + 2, '</a>')
         },
         patterns: [
-            /\bscratch\s*team\b/i,
-            /\bst\b/,
+            /\b(?:crash(?:es|ing)?|mak(?:e|ing|eing)|creat(?:e|ing|eing)?|new blocks?|my blocks?|custom blocks?)\b/,
         ]
     },
     punishment: {
@@ -29,14 +30,13 @@ const variations = {
             /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
         ]
     },
-    theme3CrashBug: {
+    notST: {
         strings: {
-            ...i18n.preSendWarning.variations.theme3CrashBug,
-            description: i18n.preSendWarning.variations.theme3CrashBug.description
-                .replace(window.i18nTimestamp + 1, '<a href="https://github.com/ScratchAddons/ScratchAddons/issues/6212">').replace(window.i18nTimestamp + 2, '</a>')
+            ...i18n.preSendWarning.variations.notST
         },
         patterns: [
-            /\b(?:crash(?:es|ing)?|mak(?:e|ing|eing)|creat(?:e|ing|eing)?|new blocks?|my blocks?|custom blocks?)\b/,
+            /\bscratch\s*team\b/i,
+            /\bst\b/,
         ]
     },
 }
