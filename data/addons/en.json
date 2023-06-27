@@ -627,9 +627,9 @@
 		"dynamicDisable": true,
 		"versionAdded": "1.4.0",
 		"latestUpdate": {
-			"version": "1.23.0",
-			"isMajor": true,
-			"temporaryNotice": "You can now completely customize the appearance of the Scratch website."
+			"version": "1.33.2",
+			"temporaryNotice": "The presets for this addon have been updated to use Scratch's new purple accent color. Presets that use blue are still available as well.",
+			"isMajor": true
 		},
 		"injectAsStyleElt": true,
 		"updateUserstylesOnSettingsChange": true
@@ -862,9 +862,9 @@
 		"enabledByDefault": false,
 		"versionAdded": "1.0.0",
 		"latestUpdate": {
-			"version": "1.32.0",
-			"newSettings": ["popup"],
-			"temporaryNotice": "You can now customize the color of popup backdrops (the solid-color background behind prompts for actions like naming a new variable) separately."
+			"version": "1.33.2",
+			"temporaryNotice": "The presets for this addon have been updated to use Scratch's new purple accent color. Presets that use blue are still available as well.",
+			"isMajor": true
 		},
 		"injectAsStyleElt": true,
 		"updateUserstylesOnSettingsChange": true
@@ -991,10 +991,7 @@
 		"dynamicDisable": true,
 		"enabledByDefault": false,
 		"versionAdded": "1.2.0",
-		"latestUpdate": {
-			"version": "1.31.0",
-			"temporaryNotice": "Two new presets have been added, including a preset for the new high-contrast block colors coming to Scratch soon."
-		},
+		"latestUpdate": { "version": "1.33.2", "isMajor": true },
 		"injectAsStyleElt": true,
 		"updateUserstylesOnSettingsChange": true
 	},
