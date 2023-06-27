@@ -1423,3 +1423,18 @@
     - Bug fix: "customizable block colors" causing the project editor to crash when attempting to create a custom block
     - Bug fix: "confirmations" addon not properly prompting to confirm project sharing
     - Bug fix: "highlight project creator in comments" not properly highlighting the original poster in forums
+
+- Version: v1.33.2
+  Index: 83
+  Tag: v1.33.2
+  Name: v1.33.2
+  Date: 2023-06-28
+  Status: Released
+  Entry: |
+    - "Editor dark mode and customizable colors" addon: presets now use Scratch's new purple accent color
+    - "Editor dark mode and customizable colors" addon: new "3.Darker (blue)" and "Scratch's default colors (blue)" presets
+    - "Website dark mode and customizable colors" addon: presets now use Scratch's new purple accent color
+    - "Editor dark mode and customizable colors" addon: new "Experimental Dark (blue)" and "Scratch's default colors (blue)" presets
+    - Adapt multiple addons to the Scratch colors update
+    - "Customizable block colors" addon: various bug fixes
+    - Added warning before mentioning "Scratch Addons" on the Scratch forums, not just when posting comments
