@@ -6,11 +6,11 @@ author: Samq64
 ---
 Do you dislike Scratch's new purple color used throughout the website and editor? If so, Scratch Addons makes it easy to switch back to blue, or use any other color!
 
-1. Open the settings page and search for "dark mode?.
+1. Open the settings page and search for "dark mode".
 2. Enable the "Editor dark mode and customizable colors" addon.
 3. Select the "Scratch's default colours (blue)" preset near the bottom of the addon's card.
-4. Do the same with the "Website dark mode and customizable colors" addon.
-5. To make the older pages such as profiles or the discussion forums more consistent with the newer ones, enable the "Scratch 2.0 → 3.0 addon".
+4. Do the same for the "Website dark mode and customizable colors" addon.
+5. To make the older pages such as profiles or the discussion forums more consistent with newer ones, enable the "Scratch 2.0 → 3.0 addon".
 
 Now you make projects and browse Scratch with the colours you're used to.
 
