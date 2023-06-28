@@ -1438,3 +1438,7 @@
     - Adapt multiple addons to the Scratch colors update
     - "Customizable block colors" addon: various bug fixes
     - Added warning before mentioning "Scratch Addons" on the Scratch forums, not just when posting comments
+  Highlights:
+    Description: |
+      Scratch just released an update that changes some of the colors around the website. If you'd like to update your settings to use these new colors, go back, or otherwise customize the colors, you can reset or change any themes from Scratch Addons settings.
+      Scratch Addons' developers have been working hard to support the changes, but you might still experience small bugs for some time.
