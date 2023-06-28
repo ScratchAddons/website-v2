@@ -11,6 +11,6 @@ Do you dislike Scratch's new purple color used throughout the website and editor
 3. Do the same for the "[Website dark mode and customizable colors](https://scratch.mit.edu/scratch-addons-extension/settings#addon-dark-www)" addon.
 4. To make the older pages such as profiles or the discussion forums more consistent with newer ones, enable the "[Scratch 2.0 → 3.0 addon](https://scratch.mit.edu/scratch-addons-extension/settings#addon-scratchr2)".
 
-Now you make projects and browse Scratch with the colours you're used to.
+Now you can make projects and browse Scratch with the colours you're used to.
 
 We may also add an addon in the future that removes the text or icons from the editor menu bar to make it more compact and for those who don't like the icons.
