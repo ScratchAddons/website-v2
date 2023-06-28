@@ -14,4 +14,4 @@ Do you dislike Scratch's new purple color used throughout the website and editor
 
 Now you make projects and browse Scratch with the colours you're used to.
 
-We may also add an addon that removes the text or icons from the editor menu bar to make it more compact and for those who don't like the icons.
+We may also add an addon in the future that removes the text or icons from the editor menu bar to make it more compact and for those who don't like the icons.
