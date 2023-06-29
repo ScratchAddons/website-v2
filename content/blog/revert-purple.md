@@ -1,7 +1,7 @@
 ---
 title: How to revert Scratch's purple changes
 description: Here's how to switch from the new purple now used by the Scratch website and editor back to blue with Scratch Addons.
-date: 2023-06-28T00:00:00Z
+date: 2023-06-29T00:00:00Z
 author: Samq64
 ---
 Scratch has updated the website and project editor to use purple instead of blue and introduced an option to use high contrast block colors. These change so their site can be more accessible and used by everyone, including people with disabilities. There's more information about this change in the [announcement by the Scratch Team](https://scratch.mit.edu/discuss/topic/689659/).
