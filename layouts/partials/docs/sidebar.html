@@ -12,7 +12,7 @@
 	{{- $p := .page }}
 	{{- $l := .level }}
 	{{- $active := eq $p.CurrentSection $s }}
-	{{- $show := $p.IsDescendant $s }}
+	{{- $show := or ($p.IsDescendant $s) (eq $p $s) }}
 	{{- $sid := delimit (slice "docs-nav-section-pages" ($s.RelPermalink | anchorize)) "-" -}}
 	<li class="docs-nav-section">
 		<span>
