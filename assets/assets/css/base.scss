@@ -383,7 +383,7 @@ body.dark {
 // =============================================================
 
 body.extension-styled {
-	@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+	@import url('https://cdn.jsdelivr.net/npm/@fontsource/sora/index.min.css');
 
 	font-family: "Sora", $bs-font-family-sans-serif;
 	font-size-adjust: 0.47;
