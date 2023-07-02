@@ -1,7 +1,16 @@
 {{ range sort $.Site.Data.changelog "Index" "desc" }}{{ $latest := index (sort $.Site.Data.changelog "Index" "desc") 0 }}
 <section id="{{ .Version }}" class="mt-3">
 	<h2>
-		{{ .Name }}
+		{{- if and 
+			( isset $.Site.Data "changelogi18n" ) 
+			( isset $.Site.Data.changelogi18n $.Page.Language.Lang ) 
+			( isset ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version )
+			( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ) "Name" )
+		-}}
+			{{ ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Name }}
+		{{- else -}}
+			{{ .Name }}
+		{{- end -}}
 		<small class="text-muted">
 			<time datetime="{{ .Date }}">{{ .Date }}</time>
 			{{ if eq .Status "Yanked" }}<span class="badge badge-danger">{{ T "ChangelogPage.Status.Yanked" }}</span>{{ end }}
@@ -14,7 +23,18 @@
 			{{ if isset .Highlights "ImagePath" }}
 				<div class="row no-gutters align-items-center">
 					<div class="col-md-3 align-middle d-flex align-items-center">
-						<img src="{{ .Highlights.ImagePath }}" {{ if isset .Highlights "ImageAlt" }}alt='{{ .Highlights.ImageAlt }}'{{ end }} class="card-img" />
+						<img src="{{ .Highlights.ImagePath }}" {{ if isset .Highlights "ImageAlt" }}alt='
+						{{- if and 
+							( isset $.Site.Data "changelogi18n" ) 
+							( isset $.Site.Data.changelogi18n $.Page.Language.Lang ) 
+							( isset ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version )
+							( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ) "Highlights" )
+							( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Highlights "ImageAlt" )
+						-}}
+							{{ ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Highlights.ImageAlt | markdownify }}
+						{{- else -}}
+							{{ .Highlights.ImageAlt | markdownify }}
+						{{- end -}}'{{ end }} class="card-img" />
 					</div>
 					<div class="col-md-9">
 						<div class="card-body">
@@ -22,7 +42,17 @@
 								<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
 							</div>
 							<div class="changelog-highlights-description">
-								{{ .Highlights.Description | markdownify }}
+								{{- if and 
+									( isset $.Site.Data "changelogi18n" ) 
+									( isset $.Site.Data.changelogi18n $.Page.Language.Lang ) 
+									( isset ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version )
+									( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ) "Highlights" )
+									( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Highlights "Description" )
+								-}}
+									{{ ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Highlights.Description | markdownify }}
+								{{- else -}}
+									{{ .Highlights.Description | markdownify }}
+								{{- end -}}
 							</div>
 						</div>
 					</div>
@@ -40,7 +70,17 @@
 								<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
 							</div>
 							<div class="changelog-highlights-description">
-								{{ .Highlights.Description | markdownify }}
+								{{- if and 
+									( isset $.Site.Data "changelogi18n" ) 
+									( isset $.Site.Data.changelogi18n $.Page.Language.Lang ) 
+									( isset ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version )
+									( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ) "Highlights" )
+									( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Highlights "Description" )
+								-}}
+									{{ ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Highlights.Description | markdownify }}
+								{{- else -}}
+									{{ .Highlights.Description | markdownify }}
+								{{- end -}}
 							</div>
 						</div>
 					</div>
@@ -51,7 +91,17 @@
 						<h4 class="card-title">{{ T "ChangelogPage.Highlights.Title" }}</h4>
 					</div>
 					<div class="changelog-highlights-description">
-						{{ .Highlights.Description | markdownify }}
+						{{- if and 
+							( isset $.Site.Data "changelogi18n" ) 
+							( isset $.Site.Data.changelogi18n $.Page.Language.Lang ) 
+							( isset ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version )
+							( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ) "Highlights" )
+							( isset ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Highlights "Description" )
+						-}}
+							{{ ( index ( index $.Site.Data.changelogi18n $.Page.Language.Lang ) .Version ).Highlights.Description | markdownify }}
+						{{- else -}}
+							{{ .Highlights.Description | markdownify }}
+						{{- end -}}
 					</div>
 				</div>
 			{{ end }}
