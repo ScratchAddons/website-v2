@@ -153,7 +153,9 @@ body > footer {
 		img {
 			height: 37.5px; 
 			width: 37.5px; 
-			transform: scale(1.25)
+			transform: scale(1.25);
+			background-color: $scratch-orange;
+			border-radius: 100%;
 		}
 
 		.navbar-brand {
@@ -330,12 +332,6 @@ body.dark.extension-styled {
 // =============================================================
 
 body.dark {
-
-	header {
-		img {
-			transform: scale(1.25);
-		}
-	}
 
 	textarea, input {
 		background-color: $dark-dp-1;
