@@ -6,3 +6,10 @@ hugo_stats.json
 
 # Temporary lock file while building
 .hugo_build.lock
+
+# Built files
+content-i18n/
+credits/contributortypes/description/*.yml
+!credits/contributortypes/description/en.yml
+data/changelogi18n/
+data/giscuslangs.json
