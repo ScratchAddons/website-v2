@@ -275,6 +275,11 @@ body {
 
 	--navbar-height: 59.5px;
 
+	@media (prefers-contrast: more) {
+		--header-bg: #{darken($scratch-orange, 30%)};
+		--intro-heading-bg: #{darken($scratch-orange, 30%)};
+	}
+
 }
 
 body.dark {
@@ -324,6 +329,10 @@ body.dark.extension-styled {
 	--secondary-bg: #{$dark-ext-level-2};
 	--secondary-bg-2: #{$dark-ext-level-2};
 	--secondary-border: #{$dark-ext-level-3};
+
+	@media (prefers-contrast: more) {
+		--header-bg: #{$dark-ext-level-2};
+	}
 
 }
 
