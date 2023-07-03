@@ -1442,3 +1442,18 @@
     Description: |
       Scratch just released an update that changes some of the colors around the website. If you'd like to update your settings to use these new colors, go back, or otherwise customize the colors, you can reset or change any themes from Scratch Addons settings.
       Scratch Addons' developers have been working hard to support the changes, but you might still experience small bugs for some time.
+
+- Version: v1.33.3
+  Index: 84
+  Tag: v1.33.3
+  Name: v1.33.3
+  Date: 2023-07-04
+  Status: Released
+  Entry: |
+    - "Editor dark mode and customizable colors" addon: buttons on the costume editor are no longer blue, now respects "text and icon highlight color" setting
+    - "Editor dark mode and customizable colors" addon: various bug fixes
+    - "Website dark mode and customizable colors" addon: now uses a darker blue on Scratch 2.0 pages if the "Scratch default colors (blue)" preset is selected
+    - "Website dark mode and customizable colors" addon: various bug fixes
+    - Bug fix: "hide Tutorials button" not working properly and breaking "project video recorder"
+    - Bug fix: "costume editor snapping" snapping to center even if setting disabled
+    - Bug fix: "mouse position display", "clone counter" and others not showing in full screen if small stage selected
