@@ -89,7 +89,7 @@ jobs:
           hugo --gc --minify --config config.yml,config-prod.yml
 
       - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v1
+        uses: actions/upload-pages-artifact@v2
         if: (github.event_name != 'pull_request') && (github.repository_owner == 'ScratchAddons') && (github.ref_name == 'master')
         with:
           path: ./repo/public
