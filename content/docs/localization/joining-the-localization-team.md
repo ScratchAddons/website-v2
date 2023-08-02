@@ -1,5 +1,5 @@
 ---
-title: Help translate Scratch Addons
+title: Joining the Localization Team
 description: Thanks for being interested on volunteering to translate Scratch Addons to other languages! Scratch Addons is a non-profit open source project where volunteer web developers maintain the extension and create its addons.
 aliases:
   - /docs/localization/how-to-join-the-localization-team
