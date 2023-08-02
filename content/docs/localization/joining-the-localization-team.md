@@ -70,7 +70,7 @@ If you don't own a Scratch account, please send an email to `translation@scratch
 1. You will be shown Transifex's "Sign Up" screen. **DO NOT sign up with Google.**  
 1. In the "username" field, type in `scratch_` **followed by your Scratch username.**  
 For example, if your Scratch username is `john_walker954`, type `scratch_john_walker954`.
-1. In the "business email" field, enter your email (it can be gmail, outlook, or any other).
+1. In the "business email" field, enter your email (it can be Gmail, Outlook, or any other).
 1. In the "password" field, enter a password.
 1. Click the "Sign Up" button.
 1. Choose **"Join an existing organization"**.
