@@ -6,7 +6,53 @@ description: Follow these best practices when writing or reviewing userstyles.
 Follow these best practices when writing or reviewing userstyles.
 
 
-## (TITLE TODO)
+<!-- TODO: ## Addon dark mode support -->
+<!-- Examples on referencing CSS variables from editor-dark-mode, dark-www and scratchr2 -->
+
+
+## Internationalization
+
+### Consider languages with longer words
+
+Remember that im some languages, UI elements such as buttons may be narrower or wider.
+
+<!-- TODO: ### Supporting right-to-left languages (RTL) -->
+
+
+## Styling existing Scratch UI
+
+
+### Avoid targeting hashed class names
+
+The Scratch project editor usually contains class names that follow the `class_name_{hash}` format. For example, `green-flag_green-flag_1kiAo`.
+
+As the hashes might change in the future and may differ between Scratch forks, you should avoid using them in userstyles.
+
+{{< admonition error >}}
+```css
+/* Don't do this: */
+.green-flag_green-flag_1kiAo {
+  visibility: hidden;
+}
+```
+{{< /admonition >}}
+
+{{< admonition success >}}
+```css
+/* Do this instead: */
+[class*="green-flag_green-flag_"] {
+  visibility: hidden;
+}
+```
+{{< /admonition >}}
+
+### Avoid `!important` unless absolutely necessary
+
+If possible, use [CSS specificity](https://web.dev/learn/css/specificity/) features to make your selectors more specific, instead of using `!important`.
+<!-- This could be more detailed -->
+
+
+## Styling addon UI elements
 
 
 ### Begin addon-defined class names with `sa-`
@@ -15,16 +61,8 @@ Follow these best practices when writing or reviewing userstyles.
 We always use `kebab-case` when defining our own class names.
 {{< /admonition >}}
 
-For many reasons, including potential class name collisions with Scratch or other extension, it's recommended to begin class names with `sa-`.
+We recommend that addon-defined class names begin with `sa-` to avoid potential name collisions with Scratch or other extensions.
 
-<!-- TODO: more details? What about collisisons between different addons? -->
+It is also recommended to include the addon ID (or part of it) in the class name.
 
-### Avoid `!important` unless absolutely necessary
-
-<!-- TODO: explain and link to resources about specificity -->
-<!-- TODO: explain the cases where it's okay to use !important -->
-
-### Using `z-index`
-
-<!-- TODO: explain usage of z-index in the Scratch editor and related concepts -->
-
+<!-- TODO: ### explain usage of z-index in the Scratch editor and related concepts -->
