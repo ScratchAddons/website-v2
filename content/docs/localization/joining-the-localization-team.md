@@ -68,8 +68,8 @@ If you don't own a Scratch account, please send an email to `translation@scratch
 #### 2. Create a Transifex account
 1. Go to [Transifex Sign Up](https://app.transifex.com/signup/).  
 1. You will be shown Transifex's "Sign Up" screen. **DO NOT sign up with Google.**  
-1. In the "username" field, type in `scratch_` **followed by your Scratch username.**  
-For example, if your Scratch username is `john_walker954`, type `scratch_john_walker954`.
+1. In the "username" field, we highly recommend you enter your Scratch username, or a slight variation of it.  
+For example, if your Scratch username is `john_walker954`, your Transifex username can be exactly the same (`john_walker954`) or `john_walker954_scratch`.
 1. In the "business email" field, enter your email (it can be Gmail, Outlook, or any other).
 1. In the "password" field, enter a password.
 1. Click the "Sign Up" button.
