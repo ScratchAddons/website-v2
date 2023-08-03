@@ -16,7 +16,7 @@ Scratch Addons is available in more than 15 languages thanks to the help of volu
 
 * You must be **FLUENT IN THE ENGLISH LANGUAGE**.
 * You must be **a NATIVE SPEAKER** of the language you want to translate to.
-* You must have an email address which you check at least once a week.
+* You must have an email address, which you should ideally check at least once a week.
 * You must own an account on [scratch.mit.edu](https://scratch.mit.edu).
 
 {{< admonition info >}}
