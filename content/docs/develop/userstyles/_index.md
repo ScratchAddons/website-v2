@@ -4,6 +4,7 @@ description: Userstyles are CSS rules that affect Scratch pages. They can apply 
 aliases: 
   - /docs/developing/about-userstyles
   - /docs/develop/addon-types/userstyles
+  - /docs/develop/userstyles/
 weight: 2
 ---
 
