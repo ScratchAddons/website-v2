@@ -60,7 +60,7 @@ Thanks for wanting to help with translating Scratch Addons to other languages! P
 
 #### 1. Verify your Scratch account
 1. Visit this [Scratch studio](https://scratch.mit.edu/studios/33665222/comments) with your Scratch account.
-1. Send a studio comment indicating the language you want to translate to (for example, `Greek`).
+1. Send a studio comment indicating the language you want to translate to (for example, `Greek`).  
 ![Screenshot of Scratch](/assets/img/docs/scratch-req-language.png)
 
 If you don't own a Scratch account, please send an email to `translation@scratchaddons.com` instead.
@@ -88,24 +88,26 @@ If you already own a Transifex account and don't want to create a new one, pleas
 1. Make sure you're logged in to Transifex. If you just signed up, you are already logged in.
 1. Go to [Scratch Addons' Transifex page](https://app.transifex.com/join/?o=scratch-addons&p=scratch-addons-extension&t=opensource).
 1. You'll be prompted to choose the language you want to translate to.
-1. Choose one of the languages **which are "available to join"**. We do not support languages that are not available to join.
+1. Choose one of the languages **which are "available to join"**. We do not support languages that are not available to join.  
 ![Screenshot of Transifex](/assets/img/docs/transifex-req-language.png)
 1. Click the "Join Project" button.
 1. Wait until your request is accepted.
 
+If you have a Discord account, we encourage you to join our [Development Discord server](https://discord.gg/Ak8sCDQ).
 
 {{< admonition success >}}
 **If your request is accepted, you'll receive an email from Transifex. We usually review requests every 48 hours.**
 {{< /admonition >}}
 
 {{< admonition error >}}
-If your request is denied, you'll receive an email. If you believe this was a mistake, please send an email to  `translation@scratchaddons.com` indicating your Transifex username.
+If your request is denied, you'll receive an email. If you believe this was a mistake, please send an email to  `translation@scratchaddons.com` indicating your Transifex username. See below for other contact methods.
 {{< /admonition >}}
 
 ### Help or contact
 
 If you have any questions about translating, you may choose one of the following options:
 - Send an email to `translation@scratchaddons.com`.
+- Join our [Development Discord](https://discord.gg/Ak8sCDQ) server.
 - [Open a discussion on GitHub](https://github.com/ScratchAddons/ScratchAddons/discussions) (GitHub account required).
 - [Send feedback](/feedback) (make sure to specify your Scratch username in the form, we will reply in your profile).
 
