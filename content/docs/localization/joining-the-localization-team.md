@@ -39,7 +39,7 @@ We only support languages that Scratch itself supports. We also fully support RT
 
 #### Scratch Addons website
 
-Translators also have the possibility to translate the contents of the ScratchAddons.com website. For more information about translating the website, see [Translating](https://github.com/ScratchAddons/website-v2/wiki/Translating).
+Translators also have the possibility to translate the contents of the Scratch Addons website. For more information about translating the website, see [Translating](https://github.com/ScratchAddons/website-v2/wiki/Translating).
 
 ## Supported languages
 
