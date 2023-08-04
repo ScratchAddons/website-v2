@@ -24,9 +24,9 @@ We use your data to provide and improve the service. By using the service, you a
   
   We don't know how many users have enabled the pause button or turned on light mode.
 
-- **We never send Scratch account information or extension settings outside of your browser.**
+- **We never send Scratch account information or extension settings outside of your browser without your permission.**
 
-  Extension settings only leave your device if you've enabled Chrome/Firefox/Edge Sync.
+  Extension settings only leave your device if you've enabled Chrome/Firefox/Edge Sync or when you share your list of enabled addons upon sending a feedback.
 
 - **By default, the extension only interacts with the Scratch website and this website.**
 
