@@ -15,6 +15,7 @@ Scratch Addons is available in more than 15 languages thanks to the help of volu
 ## Requirements to join as a translator
 
 * You must be **FLUENT IN THE ENGLISH LANGUAGE**.
+* For example, you're fluent in English if you can use the Scratch Addons settings page in English, or if you understand griffpatch's videos. If you struggle to understand sentences without a translator, you're not fluent.
 * You must be **a NATIVE SPEAKER** of the language you want to translate to.
 * You must have an email address, which you should ideally check at least once a week.
 * You must own an account on [scratch.mit.edu](https://scratch.mit.edu).
@@ -24,7 +25,8 @@ Scratch Addons is available in more than 15 languages thanks to the help of volu
 <!-- This list of languages is also found below. Remember to update both. -->
 {{< /admonition >}}
 
-If you're not a native speaker but consider yourself fluent enough, you may also request to join.  
+If you're not a native speaker but consider yourself fluent enough, you may also request to join. Keep in mind taking some language classes does not make you fluent. If you wouldn't change your smartphone's system language to it, you're not fluent enough!
+
 We only support languages that Scratch itself supports. We also fully support RTL languages, such as Arabic and Hebrew.
 
 ## Content available for translation
