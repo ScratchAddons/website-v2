@@ -1457,3 +1457,30 @@
     - Bug fix: "hide Tutorials button" not working properly and breaking "project video recorder"
     - Bug fix: "costume editor snapping" snapping to center even if setting disabled
     - Bug fix: "mouse position display", "clone counter" and others not showing in full screen if small stage selected
+
+- Version: v1.34.0
+  Index: 85
+  Tag: v1.34.0
+  Name: v1.34.0
+  Date: 2023-08-17
+  Status: Released
+  Entry: |
+    - New addon: arrow key incrementation in editor
+    - New addon: compact editor
+    - New addon: forum post cooldown display
+    - "Non-draggable sprites in editor" addon: new "allow dragging while project is stopped" setting
+    - "Website dark mode and customizable colors" addon: new message count color settings
+    - "Website dark mode and customizable colors" addon: new Scratch 2.0 presets
+    - "Compact messages" addon: new "remove borders" setting
+    - "60FPS project player mode" addon: new accessible green flag indicator when 60FPS is enabled
+    - "Infinite scrolling" addon: the "fix footer" setting was removed
+    - "Ctrl+Enter to post" addon: add support for forums reporting form
+    - Bug fix: "customizable block colors" not working properly in older browsers
+    - Bug fix: "HD image uploads" breaking drag-and-drop of sprite3 files
+  Highlights:
+    Description: |
+      New addon: "arrow key incrementation in editor", which lets you use the up and down arrow keys to increase or decrease number values in block inputs. Go to Scratch Addons settings to enable it.
+      Another new addon is the "compact editor" theme, which decreases the size of buttons, input fields, the menu bar, and other elements in the editor, making more space for components such as the code area, the costume editor, and costume previews, as was the case in Scratch 2.0.
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-34-released/
