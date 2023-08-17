@@ -14,7 +14,7 @@ A [userscript](/docs/develop/userscripts) is a JavaScript file that is executed 
 ## What is a userstyle?
 A [userstyle](/docs/develop/userstyles) is similar to a userscript; you can specify URL patterns for them. However, userstyles inject CSS instead of JavaScript. They are often used along userscripts to style elements added by them, but they can also be used to style native Scratch elements. When that's the case, we usually call them "themes".
 
--## What should be an addon?
+## What should be an addon?
 You might wonder if it's a better idea to create a new addon, or modify an existing one.
 If two addons share some of these, they should probably be merged.
 - Both need, or don't need, permissions that require user interaction (like notifications).
