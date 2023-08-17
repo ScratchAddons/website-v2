@@ -1,6 +1,6 @@
 ---
 title: Home
-toc_root: true
+section_root: true
 cascade:
   section_site_name: Docs.SectionSiteName
 ---
