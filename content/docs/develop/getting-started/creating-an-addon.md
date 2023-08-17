@@ -64,7 +64,7 @@ Here is a minimal addon manifest:
 
 For more information on what you can declare in the manifest, see [the Addon Manifest refrence](/docs/reference/addon-manifest/).
 
-The addon doesn't do anything yet, but it should appear in the popup and settings page after reloading it.
+The addon doesn't do anything yet, but it should appear in the popup and settings page after reloading the extension.
 
 ## Userscripts and userstyles
 [Userscripts](/docs/develop/userscripts/) and [userstyles](/docs/develop/userstyles/) are what makes the addon work. Userscripts run JavaScript code and userstyles inject CSS styles. Addons may have a combination of userstyles and userscripts.

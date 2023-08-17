@@ -22,4 +22,4 @@ If two addons share some of these, they should probably be merged.
 - The user would expect that addon to offer both features.
 - If being separated, they would interfere with each other.
 
-Remember addons are customizable by the user - adding new functionality should not affect old users of the addon, unless we intentionally decide it do so.
+Remember addons are customizable by the user - adding new functionality should not affect old users of the addon, unless we intentionally decide to do so.
