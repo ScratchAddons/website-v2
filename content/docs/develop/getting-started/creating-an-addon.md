@@ -14,35 +14,8 @@ If you plan to submit the addon you are developing as a pull request to our GitH
 ## Requirements
 Scratch Addons does not require any software for development except a text editor and Chromium-based browser, but we also recommend having Git, Firefox and Visual Studio Code installed.
 
-## Downloading the source
-The recommended way of downloading Scratch Addons' source for development is to first fork the repository on GitHub and then clone the fork with`git clone https://github.com/<username>/ScratchAddons.git`.
-
-Other methods are described on the [/docs/getting-started/installing/#from-source](installation page).
-
-## Loading the extension
-{{< admonition info >}}
-Chrome is recommended for working on addons, but addons are expected to work on Firefox and Edge.
-{{< /admonition >}}
-
-### Chrome
-To load the extension into Google Chrome go to [chrome://extensions](chrome://extensions), turn on "Developer mode" in the top-right corner, click "Load unpacked" and select the `ScratchAddons` folder.
-
-This process should be similar on Microsoft Edge, Opera, Brave, Vivaldi and most other Chromium-based browsers.
-
-{{< admonition info >}}
-You can safely ignore the "Unrecognized manifest key" warning. It's required by Firefox.
-{{< /admonition >}}
-
-To reload the extension when testing, click the refresh icon on the extension's card.
-
-## Firefox
-To load the extension into Firefox go to [about:debugging](about:debugging), click "This Firefox" in the sidebar, then click "Load Temporary Add-on..." and select `manifest.json` inside the `ScratchAddons` folder.
-
-{{< admonition info >}}
-Addons loaded into Firefox this way are temporary and must be reloaded every time the browser restarts.
-{{< /admonition >}}
-
-To reload the extension when testing, click the "Reload" button on the extension's card.
+## Installation
+To install the extension for development, see [Installing from source](/docs/getting-started/installing/#from-source).
 
 ## Creating the addon folder
 Each addon has its own internal id used by the extension and other addons. Addon ids should not contain any spaces or special characters except hyphens. Addon ids should be self-descriptive, but not too long.
