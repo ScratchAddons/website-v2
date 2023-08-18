@@ -53,7 +53,6 @@ languages:
     contentDir: content
 
 disableKinds:
-  - taxonomyTerm
   - taxonomy
 
 # When taxonomy is needed, remove above and 
