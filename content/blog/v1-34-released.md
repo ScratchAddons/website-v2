@@ -1,7 +1,7 @@
 ---
 title: Scratch Addons v1.34 is here!
 description: Efficient number incrementation, a throwback to Scratch 2.0, and more!
-date: 2023-08-14T00:00:00Z
+date: 2023-08-17T04:00:00Z
 author: DNin01
 ---
 
