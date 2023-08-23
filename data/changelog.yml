@@ -1489,3 +1489,14 @@
   Links:
     - StringKey: ChangelogPage.Links.BlogPost
       Link: /blog/v1-34-released/
+
+- Version: v1.34.1
+  Index: 86
+  Tag: v1.34.1
+  Name: v1.34.1
+  Date: 2023-08-22
+  Status: Released
+  Entry: |
+    - Bug fix: "compact editor" making number inputs too narrow
+    - Bug fix: "compact editor" not properly shrinking the sprite properties in some languages
+    - Bug fix: "expandable search bar" not styling properly when search bar expanded if "Scratch 2.0 → 3.0" enabled
