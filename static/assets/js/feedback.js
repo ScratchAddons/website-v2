@@ -1,16 +1,6 @@
 const i18n = window.i18nStrings
 
 const variations = {
-    theme3CrashBug: {
-        strings: {
-            ...i18n.preSendWarning.variations.theme3CrashBug,
-            description: i18n.preSendWarning.variations.theme3CrashBug.description
-                .replace(window.i18nTimestamp + 1, '<a href="https://github.com/ScratchAddons/ScratchAddons/issues/6212">').replace(window.i18nTimestamp + 2, '</a>')
-        },
-        patterns: [
-            /\b(?:crash(?:es|ing)?|mak(?:e|ing|eing)|creat(?:e|ing|eing)?|new blocks?|my blocks?|custom blocks?)\b/,
-        ]
-    },
     punishment: {
         strings: {
             ...i18n.preSendWarning.variations.punishment,
