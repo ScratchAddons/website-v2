@@ -31,7 +31,7 @@ We only support languages that Scratch itself supports. We also fully support RT
 
 ## Content available for translation
 
-#### Scratch Addons browser extension
+### Scratch Addons browser extension
 
 - **General Translation.** These are ~150 text strings which are used by the extension. Users can only see these translations for their language if 90% of general strings were translated.
 
@@ -39,7 +39,7 @@ We only support languages that Scratch itself supports. We also fully support RT
 
 ![Screenshot of the Scratch Addons extension in Japanese](/assets/img/docs/transifex-general-vs-addons.png)
 
-#### Scratch Addons website
+### Scratch Addons website
 
 Translators also have the possibility to translate the contents of the Scratch Addons website. For more information about translating the website, see [Translating](https://github.com/ScratchAddons/website-v2/wiki/Translating).
 
@@ -60,14 +60,14 @@ These languages **do not** accept new translator requests: **Italian, Japanese, 
 
 Thanks for wanting to help with translating Scratch Addons to other languages! Please follow the steps below.
 
-#### 1. Verify your Scratch account
+### 1. Verify your Scratch account
 1. Visit this [Scratch studio](https://scratch.mit.edu/studios/33665222/comments) with your Scratch account.
 1. Send a studio comment indicating the language you want to translate to (for example, `Greek`).  
 ![Screenshot of Scratch](/assets/img/docs/scratch-req-language.png)
 
 If you don't own a Scratch account, please send an email to `translation@scratchaddons.com` instead.
 
-#### 2. Create a Transifex account
+### 2. Create a Transifex account
 1. Go to [Transifex Sign Up](https://app.transifex.com/signup/).  
 1. You will be shown Transifex's "Sign Up" screen. **DO NOT sign up with Google.**  
 1. In the "username" field, we highly recommend you enter your Scratch username, or a slight variation of it.  
@@ -86,7 +86,7 @@ For example, if your Scratch username is `john_walker954`, your Transifex userna
 
 If you already own a Transifex account and don't want to create a new one, please send an email to `translation@scratchaddons.com` indicating your Transifex account's username. Then, continue with the "requesting a language" section below.
 
-#### 3. Requesting a language
+### 3. Requesting a language
 1. Make sure you're logged in to Transifex. If you just signed up, you are already logged in.
 1. Go to [Scratch Addons' Transifex page](https://app.transifex.com/join/?o=scratch-addons&p=scratch-addons-extension&t=opensource).
 1. You'll be prompted to choose the language you want to translate to.
@@ -105,7 +105,7 @@ If you have a Discord account, we encourage you to join our [Development Discord
 If your request is denied, you'll receive an email. If you believe this was a mistake, please send an email to  `translation@scratchaddons.com` indicating your Transifex username. See below for other contact methods.
 {{< /admonition >}}
 
-### Help or contact
+## Help or contact
 
 If you have any questions about translating, you may choose one of the following options:
 - Send an email to `translation@scratchaddons.com`.
@@ -113,7 +113,7 @@ If you have any questions about translating, you may choose one of the following
 - [Open a discussion on GitHub](https://github.com/ScratchAddons/ScratchAddons/discussions) (GitHub account required).
 - [Send feedback](/feedback) (make sure to specify your Scratch username in the form, we will reply in your profile).
 
-### Credits
+## Credits
 
 - If you get accepted, you may add yourself (or be added) to [the website's credits page](/credits).
 - Your translations are licensed under the same license as Scratch Addons (GPL v3.0).
