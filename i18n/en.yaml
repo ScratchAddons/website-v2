@@ -107,13 +107,10 @@ IndexPage:
         Caption: The trailer.
       Popup:
         Caption: The extension pop-up.
-        ImgAlt: Extension pop-up
       Settings:
         Caption: The settings page.
-        ImgAlt: Settings page
       Demo:
         Caption: Demonstration of the extension. ({{.Count}})
-        ImgAlt: Demonstration ({{.Count}})
   Features:
     Heading: Features
     AddonsHeading: Addons
