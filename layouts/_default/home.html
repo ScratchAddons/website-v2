@@ -177,8 +177,7 @@ window.i18nSplide = {
 
 <section id="install" class="container text-center py-4">
 	<div class="row">
-		<div class="col-12 col-lg"></div>
-		<div class="col-12 col-lg-auto mb-4 mb-lg-0 mr-lg-3">
+		<div class="col-12 col-lg-6 mb-4 d-md-flex flex-column justify-content-center">
 			<h2>{{ T "IndexPage.Install.Heading" }}</h2>
 			<p>{{ T "IndexPage.Install.Paragraph" }}</p>
 			<p>
@@ -192,18 +191,27 @@ window.i18nSplide = {
 					<span class="iconify-inline" data-icon="simple-icons:microsoftedge"></span> {{ T "Global.EdgeShort" }}
 				</a>
 			</p>
-			<p>
+			<p class="mb-4">
 				{{- .Scratch.Add "open_tag_2" "<a href='" }}
 				{{- .Scratch.Add "open_tag_2" ( "/docs/getting-started/installing#from-source" | relLangURL ) }}
 				{{- .Scratch.Add "open_tag_2" "' target='_blank' rel='noopener'>" }}
 				{{- T "IndexPage.Install.InstallButton.Other" ( dict "OpenTag1" "<a href='https://github.com/ScratchAddons/ScratchAddons/releases' target='_blank' rel='noopener'>" "CloseTag1" "</a>" "OpenTag2" ( .Scratch.Get "open_tag_2" ) "CloseTag2" "</a>" ) | safeHTML }}
 			</p>
+			<div class="">
+				<p id="total-users" style="font-size: 3rem; font-weight: 500; line-height: 3rem;" class="odometer mb-0"></p>
+				<p style="font-size: 1.75rem; font-weight: 500;">{{ T "IndexPage.Users" }}</p>
+			</div>
 		</div>
-		<div class="col-12 col-lg-auto ml-lg-3 d-flex flex-column justify-content-center">
-			<p id="total-users" style="font-size: 3rem; font-weight: 500; line-height: 3rem;" class="odometer mb-0"></p>
-			<p style="font-size: 1.75rem; font-weight: 500;">{{ T "IndexPage.Users" }}</p>
+		<div class="col-12 col-lg-6 d-md-flex flex-column justify-content-center">
+			<h2>Try</h2>
+			<p>Try some of the editor addons on TurboWarp before installing.</p>
+			<a class="btn btn-success dark-btn-white btn-lg mb-4" href="https://turbowarp.org/addons" target="_blank" rel="noopener">
+				<span class="iconify-inline" data-icon="emojione-monotone:letter-t"></span> TurboWarp
+			</a>
+			<p class="text-center">
+				<img style="max-width: 100%;" src="/assets/img/showcase/tw-addons.png"></img>
+			</p>
 		</div>
-		<div class="col-12 col-lg"></div>
 	</div>
 </section>
 
