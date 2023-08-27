@@ -13,3 +13,4 @@ credits/contributortypes/description/*.yml
 !credits/contributortypes/description/en.yml
 data/changelogi18n/
 data/giscuslangs.json
+static/_pagefind/
