@@ -1486,6 +1486,7 @@
       New addon: "arrow key incrementation in editor", which lets you use the up and down arrow keys to increase or decrease number values in block inputs. Go to Scratch Addons settings to enable it.
 
       Another new addon is the "compact editor" theme, which decreases the size of buttons, input fields, the menu bar, and other elements in the editor, making more space for components such as the code area, the costume editor, and costume previews, as was the case in Scratch 2.0.
+    YouTubeID: sn3uURLEVh8
   Links:
     - StringKey: ChangelogPage.Links.BlogPost
       Link: /blog/v1-34-released/
