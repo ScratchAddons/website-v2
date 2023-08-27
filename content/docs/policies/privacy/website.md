@@ -57,7 +57,6 @@ When using our website, third party services might be reached, such as:
 - [Cloudflare](https://www.cloudflare.com/privacypolicy/) for website hosting
 - [GitHub](https://docs.github.com/en/github/site-policy/github-privacy-statement) for website hosting
 - [cdn.jsdelivr.net](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net) for library CDN
-- [Skypack](https://www.skypack.dev/legal/privacy-policy) for library CDN
 - [Google services](https://policies.google.com/privacy) such as YouTube
 - [Glitch](https://glitch.com/legal/privacy) for sending feedback
 
