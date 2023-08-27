@@ -14,7 +14,7 @@ Follow these best practices when writing or reviewing userstyles.
 
 ### Consider languages with longer words
 
-Remember that im some languages, UI elements such as buttons may be narrower or wider.
+Remember that in some languages, UI elements such as buttons may be narrower or wider.
 
 <!-- TODO: ### Supporting right-to-left languages (RTL) -->
 
