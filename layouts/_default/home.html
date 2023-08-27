@@ -19,86 +19,21 @@ window.i18nSplide = {
 }
 </script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/themes/odometer-theme-default.min.css,npm/@splidejs/splide@3/dist/css/splide.min.css">
-<script defer src="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/odometer.min.js,npm/@splidejs/splide@3,npm/@splidejs/splide-extension-auto-scroll@0.3.7"></script>
-<script defer src="/assets/js/landing.js"></script>
+<script defer src="https://cdn.jsdelivr.net/combine/npm/odometer@0.4.8/odometer.min.js"></script>
+<script defer src="/assets/js/landing.js" type="module"></script>
 
-<section id="intro" class="row px-4 py-5 mb-0 intro-heading text-left">
-	<div class="col-12 col-lg-6 py-4 px-3 px-md-4 d-flex flex-column justify-content-center" id="intro-info">
-		<h1 class="display-4 m-0 mb-3 p-0 text-left">{{ T "IndexPage.Intro.Tagline" }}</h1>
+<section id="intro" class="px-4 pb-0 mb-0 intro-heading text-left">
+	<div class="container pt-4 px-3 pb-0 d-flex flex-column justify-content-center text-center" id="intro-info">
+		<h1 class="display-4 m-0 mb-3 p-0">{{ T "IndexPage.Intro.Tagline" }}</h1>
 		<p class="lead mb-4">{{ T "IndexPage.Intro.Description" }}</p>
-		<div id="intro-buttons" class="d-flex align-items-md-center flex-column flex-md-row">
+		<div id="intro-buttons" class="d-flex align-items-center flex-column flex-md-row justify-content-center">
 			<a id="install-intro" class="btn btn-white btn-lg install-btn disabled">
 				<p><span id="install-browser-icon"><span class="iconify-inline" data-icon="fa-solid:hourglass-start"></span></span> <span id="install-browser">{{ T "IndexPage.Intro.InstallButton.Loading" }}</span></p>
 				<p>{{ T "IndexPage.Intro.InstallButton.Description" }}</p>
 			</a>
 			<a href="#features" class="btn" id="read-more">{{ T "IndexPage.Intro.ReadMore" }}</a>
 		</div>
-	</div>
-	<div class="col-12 col-lg-6" id="intro-img">
-		<div class="splide h-100 d-flex align-items-stretch position-relative" id="intro-carousel">
-			<div class="splide__track">
-				<ul class="splide__list align-items-center">
-					<li class="splide__slide h-100">
-						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-							{{ partial "youtube" (dict "id" "nQ4N9zlzj0M") }}
-						</div>
-						<div class="carousel-caption d-none d-md-block m-auto p-2">
-							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Video.Caption" }}</h5>
-						</div>	
-					</li>
-					<li class="splide__slide h-100">
-						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-							<img src="/assets/img/showcase/popup-light.png" alt='{{ T "IndexPage.Intro.Carousel.Popup.ImgAlt" }}' class="show-only-light">
-							<img src="/assets/img/showcase/popup-dark.png" alt='{{ T "IndexPage.Intro.Carousel.Popup.ImgAlt" }}' class="show-only-dark">
-						</div>
-						<div class="carousel-caption d-none d-md-block m-auto p-2">
-							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Popup.Caption" }}</h5>
-						</div>	
-					</li>
-					<li class="splide__slide h-100">
-						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-							<img src="/assets/img/showcase/settings-light.png" alt='{{ T "IndexPage.Intro.Carousel.Settings.ImgAlt" }}' class="show-only-light">
-							<img src="/assets/img/showcase/settings-dark.png" alt='{{ T "IndexPage.Intro.Carousel.Settings.ImgAlt" }}' class="show-only-dark">
-						</div>
-						<div class="carousel-caption d-none d-md-block m-auto p-2">
-							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Settings.Caption" }}</h5>
-						</div>	
-					</li>
-					<li class="splide__slide h-100">
-						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-							<img src="/assets/img/showcase/demo-1.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" ( dict "Count" 1 ) }}'>
-						</div>
-						<div class="carousel-caption d-none d-md-block m-auto p-2">
-							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" ( dict "Count" 1 ) }}</h5>
-						</div>	
-					</li>
-					<li class="splide__slide h-100">
-						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-							<img src="/assets/img/showcase/demo-2.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 2 }}'>
-						</div>
-						<div class="carousel-caption d-none d-md-block m-auto p-2">
-							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 2 }}</h5>
-						</div>	
-					</li>
-					<li class="splide__slide h-100">
-						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-							<img src="/assets/img/showcase/demo-3.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 3 }}'>
-						</div>
-						<div class="carousel-caption d-none d-md-block m-auto p-2">
-							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 3 }}</h5>
-						</div>	
-					</li>
-					<li class="splide__slide h-100">
-						<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
-							<img src="/assets/img/showcase/demo-4.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 4 }}'>
-						</div>
-						<div class="carousel-caption d-none d-md-block m-auto p-2">
-							<h5 class="mb-0">{{ T "IndexPage.Intro.Carousel.Demo.Caption" 4 }}</h5>
-						</div>	
-					</li>
-				</ul>
-			</div>
-		</div>
+		<img src="/assets/img/showcase/intro-hero.svg" class="w-100 pt-4">
 	</div>
 </section>
 
@@ -109,49 +44,96 @@ window.i18nSplide = {
 <section id="features" class="container text-center py-4">
 	<h2>{{ T "IndexPage.Features.Heading" }}</h2>
 	<div class="row text-left">
-		<div class="col-12 col-lg-6 align-items-center d-flex flex-column flex-md-row">
-			<div class="features-icon mb-3 mb-md-2">
-				<div class="features-circle">
-					<span class="iconify" data-icon="fa-solid:list"></span>
+		<div class="col-12 col-lg-6">
+			<div class="align-items-center d-flex flex-column flex-md-row">
+				<div class="features-icon mb-3 mb-md-2">
+					<div class="features-circle">
+						<span class="iconify" data-icon="fa-solid:list"></span>
+					</div>
+				</div>
+				<div class="feature-info ml-md-4 mb-3 ml-md-0">
+					<h3>{{ T "IndexPage.Features.AddonsHeading" }}</h3>
+					<p>{{ T "IndexPage.Features.AddonsParagraph" }}</p>
 				</div>
 			</div>
-			<div class="feature-info ml-md-4 mb-3 ml-md-0">
-				<h3>{{ T "IndexPage.Features.AddonsHeading" }}</h3>
-				<p>{{ T "IndexPage.Features.AddonsParagraph" }}</p>
+			<div class="align-items-center d-flex flex-column flex-md-row">
+				<div class="features-icon mb-3 mb-md-2">
+					<div class="features-circle">
+						<span class="iconify" data-icon="vaadin:cog"></span>
+					</div>
+				</div>
+				<div class="feature-info ml-md-4 mb-3 ml-md-0">
+					<h3>{{ T "IndexPage.Features.CustomizableHeading" }}</h3>
+					<p>{{ T "IndexPage.Features.CustomizableParagraph" }}</p>
+				</div>
+			</div>
+			<div class="align-items-center d-flex flex-column flex-md-row">
+				<div class="features-icon mb-3 mb-md-2">
+					<div class="features-circle">
+						<span class="iconify" data-icon="fluent:local-language-24-filled"></span>
+					</div>
+				</div>
+				<div class="feature-info ml-md-4 mb-3 ml-md-0">
+					<h3>{{ T "IndexPage.Features.InternationalHeading" }}</h3>
+					<p>{{ T "IndexPage.Features.InternationalParagraph" }}</p>
+				</div>
+			</div>
+			<div class="align-items-center d-flex flex-column flex-md-row">
+				<div class="features-icon mb-3 mb-md-2">
+					<div class="features-circle">
+						<span class="iconify" data-icon="el:opensource"></span>
+					</div>
+				</div>
+				<div class="feature-info ml-md-4 mb-3 ml-md-0">
+					<h3>{{ T "IndexPage.Features.OSHeading" }}</h3>
+					<p>{{ T "IndexPage.Features.OSParagraph" }}</p>
+				</div>
 			</div>
 		</div>
-		<div class="col-12 col-lg-6 align-items-center d-flex flex-column flex-md-row">
-			<div class="features-icon mb-3 mb-md-2">
-				<div class="features-circle">
-					<span class="iconify" data-icon="vaadin:cog"></span>
+		<div class="col-12 col-lg-6" id="intro-img">
+			<div class="splide d-flex align-items-stretch position-relative" id="intro-carousel">
+				<div class="splide__track">
+					<ul class="splide__list align-items-center">
+						<li class="splide__slide h-100">
+							<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+								{{ partial "youtube" (dict "id" "nQ4N9zlzj0M") }}
+							</div>
+						</li>
+						<li class="splide__slide h-100">
+							<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+								<img src="/assets/img/showcase/popup-light.png" alt='{{ T "IndexPage.Intro.Carousel.Popup.ImgAlt" }}' class="show-only-light">
+								<img src="/assets/img/showcase/popup-dark.png" alt='{{ T "IndexPage.Intro.Carousel.Popup.ImgAlt" }}' class="show-only-dark">
+							</div>
+						</li>
+						<li class="splide__slide h-100">
+							<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+								<img src="/assets/img/showcase/settings-light.png" alt='{{ T "IndexPage.Intro.Carousel.Settings.ImgAlt" }}' class="show-only-light">
+								<img src="/assets/img/showcase/settings-dark.png" alt='{{ T "IndexPage.Intro.Carousel.Settings.ImgAlt" }}' class="show-only-dark">
+							</div>
+						</li>
+						<li class="splide__slide h-100">
+							<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+								<img src="/assets/img/showcase/demo-1.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" ( dict "Count" 1 ) }}'>
+							</div>
+						</li>
+						<li class="splide__slide h-100">
+							<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+								<img src="/assets/img/showcase/demo-2.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 2 }}'>
+							</div>
+						</li>
+						<li class="splide__slide h-100">
+							<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+								<img src="/assets/img/showcase/demo-3.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 3 }}'>
+							</div>
+						</li>
+						<li class="splide__slide h-100">
+							<div class="carousel-item-wrapper h-100 d-flex justify-content-center align-items-center p-3">
+								<img src="/assets/img/showcase/demo-4.png" alt='{{ T "IndexPage.Intro.Carousel.Demo.ImgAlt" 4 }}'>
+							</div>
+						</li>
+					</ul>
 				</div>
-			</div>
-			<div class="feature-info ml-md-4 mb-3 ml-md-0">
-				<h3>{{ T "IndexPage.Features.CustomizableHeading" }}</h3>
-				<p>{{ T "IndexPage.Features.CustomizableParagraph" }}</p>
-			</div>
-		</div>
-		<div class="col-12 col-lg-6 align-items-center d-flex flex-column flex-md-row">
-			<div class="features-icon mb-3 mb-md-2">
-				<div class="features-circle">
-					<span class="iconify" data-icon="fluent:local-language-24-filled"></span>
-				</div>
-			</div>
-			<div class="feature-info ml-md-4 mb-3 ml-md-0">
-				<h3>{{ T "IndexPage.Features.InternationalHeading" }}</h3>
-				<p>{{ T "IndexPage.Features.InternationalParagraph" }}</p>
-			</div>
-		</div>
-		<div class="col-12 col-lg-6 align-items-center d-flex flex-column flex-md-row">
-			<div class="features-icon mb-3 mb-md-2">
-				<div class="features-circle">
-					<span class="iconify" data-icon="el:opensource"></span>
-				</div>
-			</div>
-			<div class="feature-info ml-md-4 mb-3 ml-md-0">
-				<h3>{{ T "IndexPage.Features.OSHeading" }}</h3>
-				<p>{{ T "IndexPage.Features.OSParagraph" }}</p>
-			</div>
+			</div>	
 		</div>
 	</div>
 </section>
@@ -233,7 +215,7 @@ window.i18nSplide = {
 	"url": "https://scratchaddons.com",
 	"image": "http://scratchaddons.com/assets/img/showcase/demo-1.png",
 	"screenshot": "http://scratchaddons.com/assets/img/showcase/demo-1.png",
-	"description": "Scratch Addons is a browser extension that provides new features and themes for the <a href='https://scratch.mit.edu'>Scratch</a> website and project editor.",
+	"description": "Scratch Addons combines new and existing features and themes for the <a href='https://scratch.mit.edu'>Scratch</a> website and project editor into one easy-to-access and configurable browser extension..",
 	"applicationCategory": "http://schema.org/OtherApplication",
 	"aggregateRating": {
 		"@type": "AggregateRating",
