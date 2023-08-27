@@ -111,6 +111,7 @@ IndexPage:
         Caption: The settings page.
       Demo:
         Caption: Demonstration of the extension. ({{.Count}})
+    HeroCaption: A browser window with the Scratch Addons popup being opened.
   Features:
     Heading: Features
     AddonsHeading: Addons
