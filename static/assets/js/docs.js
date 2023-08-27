@@ -66,26 +66,29 @@ const search = async (pagefind, query) => {
 		searchResultEl.appendChild(noneEl)
 	}
 
-	for (const i in searchResults) {
+	for (const searchResult of searchResults) {
+
 		const itemEl = document.createElement('a')
-		itemEl.href = searchResults[i].raw_url
+		itemEl.href = searchResult.raw_url
 		itemEl.classList.add('docs-search-item')
 		// itemEl.classList.add('text-body')
 		itemEl.classList.add('text-decoration-none')
 
 		const titleEl = document.createElement('p')
 		titleEl.classList.add('docs-search-item-title')
-		titleEl.textContent = searchResults[i].meta.title
+		titleEl.textContent = searchResult.meta.title
 		// titleEl.classList.add('font-weight-bold')
-		itemEl.appendChild(titleEl)
 
 		const excerptEl = document.createElement('p')
 		excerptEl.classList.add('docs-search-item-excerpt')
-		excerptEl.innerHTML = searchResults[i].excerpt
+		excerptEl.innerHTML = searchResult.excerpt
 		excerptEl.classList.add('small')
 		excerptEl.classList.add('mb-0')
-		itemEl.appendChild(excerptEl)
 
+		itemEl.href += '#:~:text=' + excerptEl.querySelector('mark').textContent
+
+		itemEl.appendChild(titleEl)
+		itemEl.appendChild(excerptEl)
 		searchResultEl.appendChild(itemEl)
 		// console.log(results[i])
 	}
