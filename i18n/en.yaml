@@ -111,6 +111,7 @@ IndexPage:
         Caption: The settings page.
       Demo:
         Caption: Demonstration of the extension. ({{.Count}})
+    HeroCaption: A browser window with the Scratch Addons popup being opened.
   Features:
     Heading: Features
     AddonsHeading: Addons
@@ -126,7 +127,7 @@ IndexPage:
     Paragraph: Remember, these are just the highlights. {{.OpenTag1}}There's more!{{.CloseTag1}}
   Install:
     Heading: Install    
-    Paragraph: Satisfied? Don't hesitate to install it now!
+    Paragraph: Ready to power up Scratch? Get it now!
     InstallButton:
       Other: ...or {{.OpenTag1}}download it from GitHub{{.CloseTag1}} or {{.OpenTag2}}install it from the source{{.CloseTag2}}.
   Users: Users
