@@ -69,11 +69,10 @@ article {
 	
 	li {
 
+		> a,
+		> span {
 
-		& > a,
-		& > span {
-
-			display: flex;
+			display: block;
 			padding: 0.25rem 0.5rem !important;
 			border-radius: 0.25rem;
 	
@@ -83,14 +82,14 @@ article {
 	
 		}
 	
-		& > span > a {
+		> span > a {
 
 			margin: -0.25rem -0.5rem;
 			padding: 0.25rem 0.5rem !important;
 
 		}
 		
-		& > ul {
+		> ul {
 			margin-left: 0.55rem;
 			padding-left: calc(0.45rem - 1px) !important;
 			border-left: solid 1px rgba(0, 0, 0, 0.25);
@@ -109,6 +108,10 @@ article {
 
 		code {
 			font: inherit;
+		}
+
+		&:empty {
+			display: none
 		}
 	}
 
@@ -146,6 +149,11 @@ article {
 	#docs-toc {
 		border: 1px solid var(--secondary-border);
 		background-color: var(--secondary-bg);
+	}
+
+	#docs-toc-inner {
+		margin-left: -0.5rem;
+		margin-right: -0.5rem;	
 	}
 
 }

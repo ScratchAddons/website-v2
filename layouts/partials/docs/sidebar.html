@@ -15,7 +15,7 @@
 	{{- $show := or ($p.IsDescendant $s) (eq $p $s) }}
 	{{- $sid := delimit (slice "docs-nav-section-pages" ($s.RelPermalink | anchorize)) "-" -}}
 	<li class="docs-nav-section">
-		<span>
+		<span class="d-flex">
 			<a href="{{ $s.RelPermalink }}" class="docs-nav-page pl-0 pr-2{{ if not $show }} collapsed{{ end }}{{ if ( or $active $show ) }} active{{ end }}">{{ if isset $s.Params "toc_title" }}{{ $s.Params.toc_title | markdownify }}{{ else }}{{ $s.LinkTitle | markdownify }}{{ end }}</a>
 			{{- if (not (eq $l 1)) -}}<a class="collapse-button{{ if not $show }} collapsed{{ end }}" data-toggle="collapse" href="#{{ $sid }}" role="button" aria-expanded="true">{{- template "svg" -}}</a>{{ end -}}
 		</span>
