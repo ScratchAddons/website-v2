@@ -14,16 +14,16 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout ScratchAddons/website-v2
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           path: repo
       - name: Checkout ScratchAddons/website-v2-script
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ScratchAddons/website-v2-script
           path: script
       - name: Checkout ScratchAddons/ScratchAddons
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ScratchAddons/ScratchAddons
           path: sa

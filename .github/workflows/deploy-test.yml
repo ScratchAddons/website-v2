@@ -40,23 +40,23 @@ jobs:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout ScratchAddons/website-v2 (deployment)
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: github.event_name != 'pull_request'
         with:
           path: repo
           fetch-depth: 0
       - name: Checkout ScratchAddons/website-v2 (testing)
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         if: github.event_name == 'pull_request'
         with:
           path: repo
       - name: Checkout ScratchAddons/website-v2-script
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ScratchAddons/website-v2-script
           path: script
       - name: Checkout ScratchAddons/website-i18n
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
         with:
           repository: ScratchAddons/website-i18n
           path: i18n
