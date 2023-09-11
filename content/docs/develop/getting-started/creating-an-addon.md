@@ -20,6 +20,12 @@ To install the extension for development, see [Installing from source](/docs/get
 ## Creating the addon folder
 Each addon has its own internal id used by the extension and other addons. Addon ids should not contain any spaces or special characters except hyphens. Addon ids should be self-descriptive, but not too long.
 
+New addons must also not use an id that was included in a stable version of the extension but later removed. There include:
+- `data-category-tweaks`
+- `fix-buttons`
+- `a11y`
+- `featured-dangos`
+
 Open the `addons.json` file in the `addons` folder, add a new addon id near the bottom of the file, then create a sub-folder with the same name.
 
 ## The addon manifest
