@@ -61,7 +61,7 @@
 			<td class="infobox-data"><ul>
 				<!-- TODO: Do better way to display types -->
 				{{ range . }}
-					<li>{{ .type }}: {{ .text }}</li>
+					<li data-info-id="{{ .id }}">{{ if .type }}{{ .type }}: {{ end }}{{ .text }}</li>
 				{{ end }}
 			</ul></td>
 		</tr>{{ end }}
