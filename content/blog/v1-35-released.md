@@ -15,7 +15,7 @@ By skewing, we mean this:
 
 ![Skewing demonstration](/assets/img/blog/v1-35-released/skew-demo.gif)
 
-You can use this to create slanted objects and italic text! To skew an object, enable the addon, then, while dragging a horizontal or vertical resize handle, hold <kbd>Ctrl</kbd> and drag parallel to the side. Hold <kbd>Ctrl</kbd> and <kbd>Alt</kbd> together to skew it out in both directions.
+You can use this to create slanted objects and italic text! To skew an object, enable the addon, then, while dragging a horizontal or vertical resize handle, hold <kbd>Ctrl</kbd> and drag parallel to the side. Hold <kbd>Ctrl</kbd> and <kbd>Alt</kbd> simultaneously to skew it out in both directions.
 
 And yes, you can skew a selection of multiple objects as well.
 
@@ -35,15 +35,15 @@ The nice thing about this is it also affects the block palette.
 
 ### Choose your own increments
 
-The "Arrow key incrementation in editor" addon has been updated and now supports setting custom increment values. Wanted to increment by more precise values like 0.25, 5, or 100? Now you can, just flick the switch "use custom values" and type the values into the input field!
+The "Arrow key incrementation in editor" addon has been updated and now allows you to enter in your own increment values. Wanted to step by more precise increments like 0.25, 5, or 100? Now you can, just flick the switch "use custom values" and type the values in!
 
-Please note that the numbers you enter can only get so significant - the fields don't accept super precise values like `0.1234` or extremely large numbers like `10000`. This change just helps you reach in-betweens that weren't before possible with the multi-choice setting.
+Please note that there is a limit to how significant the entered values can be - super precise values like `0.1234` or extremely large numbers like `10000` are not accepted. This change just helps you reach in-betweens that weren't before possible with the multi-choice setting.
 
 The addon is also now compatible with some other input fields, such as the sprite properties inputs, so now those can be incremented with the arrow keys too. Lovely!
 
 ### See how your description looks to others
 
-If you can't click links on editable fields, how are you supposed to know whether a link, mention, or hashtag in your project's Instructions or Notes and Credits section can actually be followed? Well, the new "Preview project instructions and notes" addon allows you to preview what your project page looks like to other users.
+If you can't click links on editable fields, how are you supposed to know whether a link, mention, or hashtag in your project's Instructions or Notes and Credits section can actually be followed? Well, the new "Preview project instructions and notes" addon allows you to preview what your project page looks like to visitors.
 
 ![Read-only Notes and Credits section with Preview switch set to on](/assets/img/blog/v1-35-released/preview-notes.png)
 
@@ -53,7 +53,7 @@ Last update, we removed the "fix footer" setting from the "Infinite scrolling" a
 
 ![Expanding and collapsing footer](/assets/img/blog/v1-35-released/expand-footer.gif)
 
-And now that this feature has become its own addon, you don't have to enable "Infinite scrolling" to use it.
+And now that this feature has become its own addon, you don't even have to enable "Infinite scrolling" to use it.
 
 ### What the sprite?
 
@@ -65,4 +65,4 @@ So if that bug has been annoying you, now is the perfect time to start using thi
 
 Content creators rejoice as the "Project video recorder" addon's maximum duration has been increased from 5 minutes up to 10! You can do a lot in that time!
 
-As always, we've made a few other enhancements and fixes too. Enjoy the update!
+As always, we've also made quite a few other small improvements and fixed various bugs like messages loading slower than usual in Scratch Messaging. Enjoy the update!
