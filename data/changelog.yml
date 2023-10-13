@@ -1501,3 +1501,43 @@
     - Bug fix: "compact editor" making number inputs too narrow
     - Bug fix: "compact editor" not properly shrinking the sprite properties in some languages
     - Bug fix: "expandable search bar" not styling properly when search bar expanded if "Scratch 2.0 → 3.0" enabled
+
+- Version: v1.35.0
+  Index: 87
+  Tag: v1.35.0
+  Name: v1.35.0
+  Date: 2023-10-13
+  Status: Released
+  Entry: |
+    - New addon: skewing in costume editor
+    - New addon: preview project instructions and notes [beta]
+    - New addon: point towards random direction block
+    - New addon: sticky footer (previously part of "infinite scrolling")
+    - Scratch Addons now shows an error page if settings storage is failing
+    - "Scratch Messaging" addon: enhanced loading times
+    - "Customizable block text style" addon: new "text size" setting
+    - "Fix sprite pane glitching" addon: it is now optional to disable sprite wobble
+    - "Project video recorder" addon: increased maximum recording time to 10 minutes
+    - "Arrow key incrementation in editor" addon: now supports more number fields and allows for custom values
+    - "Insert blocks by name" addon: fixed multiple bugs, enhanced performance and autocomplete
+    - "Username search" addon: now shows the user's profile picture
+    - "Customizable block text style" addon: general fixes
+    - "Scratch 2.0 → 3.0" addon: improved the look of tabs on the My Stuff page
+    - "TurboWarp button" addon: improved button contrast
+    - "Website dark mode and customizable colors" addon: better support for Scratch statistics page
+    - "Old studio layout" addon: no longer changes the aspect ratio of studio thumbnails
+    - Bug fix: "auto-hiding block palette" deleting blocks unexpectedly when dropping them close to the border
+    - Bug fix: "save blocks as image" cropping define blocks incorrectly
+    - Bug fix: sprite pane not using all available space if both "compact editor" and "collapsing sprite properties" enabled
+    - Bug fix: untranslated text in the Scratch editor menu bar if "customizable block colors" enabled
+    - Bug fix: "editor dark mode and customizable colors" showing incorrect icons in the costume editor
+    - Bug fix: "confirmations" recognizing the "choose a tutorial" button as a Share button
+    - Bug fix: "better forum quoter" sometimes quoting image URLs incorrectly
+  Highlights:
+    Description: |
+      New addon: "skewing in costume editor", which lets you hold Ctrl while scaling an object on its sides to skew it. Go to Scratch Addons settings to enable it.
+      
+      Another new addon is "preview project instructions and notes", which in your own projects, adds a toggle above the Instructions field to preview the project instructions and notes as seen by other users.
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-35-released/
