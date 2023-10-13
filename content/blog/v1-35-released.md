@@ -1,7 +1,7 @@
 ---
 title: Scratch Addons v1.35 is here!
 description: Skew shapes in costumes, make text larger, and more!
-date: 2023-10-11T00:00:00Z
+date: 2023-10-13T00:00:00Z
 author: DNin01
 ---
 
