@@ -33,11 +33,9 @@ Not only is color contrast important for readability, but also size. That's why 
 
 The nice thing about this is it also affects the block palette.
 
-### Choose your own increments
+### Set your own increments
 
-The "Arrow key incrementation in editor" addon has been updated and now allows you to enter in your own increment values. Wanted to step by more precise increments like 0.25, 5, or 100? Now you can, just flick the switch "use custom values" and type the values in!
-
-Please note that there is a limit to how significant the entered values can be - super precise values like `0.1234` or extremely large numbers like `10000` are not accepted. This change just helps you reach in-betweens that weren't before possible with the multi-choice setting.
+In the "Arrow key incrementation in editor" addon, you can now enter in custom increment values, not just select from the hardcoded options. Wanted to step by more precise increments like 0.25, 5, or 100? Now you can, just flick the switch "use custom values" and type the values in!
 
 The addon is also now compatible with some other input fields, such as the sprite properties inputs, so now those can be incremented with the arrow keys too. Lovely!
 
