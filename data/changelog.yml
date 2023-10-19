@@ -1541,3 +1541,14 @@
   Links:
     - StringKey: ChangelogPage.Links.BlogPost
       Link: /blog/v1-35-released/
+
+- Version: v1.35.1
+  Index: 88
+  Tag: v1.35.1
+  Name: v1.35.1
+  Date: 2023-10-19
+  Status: Released
+  Entry: |
+    - Bug fix: "Scratch Messaging" showing read messages as if they were unread
+    - Bug fix: "ocular integration" not working properly on forums
+    - Bug fix: new "username search" profile picture showing as white if "website dark mode" enabled
