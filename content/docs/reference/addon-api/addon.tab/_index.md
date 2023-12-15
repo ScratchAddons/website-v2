@@ -31,7 +31,7 @@ while (true) {
 ### Using `addon.tab.displayNoneWhileDisabled` (`dynamicDisable`)
 We use `addon.tab.displayNoneWhileDisabled` to hide an image when the addon gets disabled.  
 We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.  
-We also set the `display` CSS property of the image to `flex` when visible, even tho that is not the default value for images.
+We also set the `display` CSS property of the image to `flex` when visible, even though that is not the default value for images.
 ```js
   /* userscript.js */
   const img = document.createElement("img");
