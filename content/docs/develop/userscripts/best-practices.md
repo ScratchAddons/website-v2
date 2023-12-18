@@ -111,6 +111,7 @@ reportButton.addEventListener("click", (event) => {
 
 - Prefer newer APIs, such as `fetch()` over `XMLHttpRequest`.
 - Never use `==` for comparisons. Use `===` instead.
+- Avoid `keyCode`, use `event.key` instead.
 - Use optional chaining if an object can sometimes be `null`.  
 For example, `document.querySelector(".remix-button")?.textContent`.
 - Use `for ... of` loops or `.forEach()`.  
