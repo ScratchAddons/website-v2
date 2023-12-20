@@ -363,9 +363,17 @@ Settings allow the addon's users to specify settings in Scratch Addons' settings
 Specify a `settings` property and provide an array of option objects.
 
 Sub-properties:
-- `name` (string, required) The user-visible text for the option.   
-- `id` (string, required) An identifier to get the user-specified value from your code.  
-- `type` (string, required) Either `boolean` (an on/off toggle), `positive_integer` (an input box that only allows 0 and above), `integer` (an input box that allows any integer) `string` (up to 100 chars), `untranslated` (a string that isn't send for translation), `color` (a browser color input that returns a hex code), `table` (list of elements, where user can add custom elements, remove existing ones and change order of them) or `select` (see `potential_values`).
+- `name` (string, required) The user-visible text for the option.
+- `id` (string, required) An identifier to get the user-specified value from your code.
+- `type` (string, required) The type of input presented to the user. It can be one of the following:
+  - `boolean`: An on/off toggle
+  - `integer`: An input box that allows any integer
+  - `positive_integer`: An input box that only allows 0 and above
+  - `string`: A string up to 100 characters long
+  - `untranslated`: A string that isn't sent for translation
+  - `color`: A browser color input that returns a hex code
+  - `table`: A list of elements, where the user can add custom elements, remove existing ones and change order of them
+  - `select`: See `potential_values`
 - `default` (string, required) The default value for the option. A boolean, string, or number, depending on the specified type.  
 - `min`/`max` (number, optional for `positive_integer`, `integer`, and `string` types only) For integers, the minimum/maximum value allowed, and for strings, the minimum/maximum allowed length of the value.
 - `potentialValues` (array of objects, required for `select` type only) Array of objects, with properties `id`, the value received from `addon.settings.get()`, and `name`, the user-visible option text.
