@@ -363,8 +363,8 @@ Settings allow the addon's users to specify settings in Scratch Addons' settings
 Specify a `settings` property and provide an array of option objects.
 
 Sub-properties:
-- `name` (string, required) The user-visible text for the option.
-- `id` (string, required) An identifier to get the user-specified value from your code.
+- `name` (string, required) The user-visible text for the option.   
+- `id` (string, required) An identifier to get the user-specified value from your code.  
 - `type` (string, required) The type of input presented to the user. It can be one of the following:
   - `boolean`: An on/off toggle
   - `integer`: An input box that allows any integer
