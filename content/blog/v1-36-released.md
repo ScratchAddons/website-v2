@@ -1,6 +1,6 @@
 ---
 title: What's new in Scratch Addons v1.36
-description: Rearrange custom block parameters, play with new customization options, and more!
+description: Custom block parameter rearranging, new customization options, and more!
 date: null
 author: DNin01
 ---
@@ -13,6 +13,8 @@ With this new Scratch Addons update, which will be rolling out soon, we've made 
 
 You may have once created a custom block with some parameters, only to realize you want to change their order, but found no such option other than to delete the parameters and re-add them. The new [Rearrangable custom block inputs](https://scratch.mit.edu/scratch-addons-extension/settings#reorder-custom-inputs) addon solves this problem by adding buttons to switch them around.
 
+To switch the places of a parameter or label in a custom block you're editing, click on it and use the `<` and `>` buttons to switch its place with the parameter or label to the left or right.
+
 ![Custom block parameters being rearranged in the "Make a Block" modal](/assets/img/blog/v1-36-released/reordering-parameters.mp4)
 
 ### Infinite scrolling expands to search results and the explore page
@@ -21,7 +23,7 @@ The [Infinite scrolling](https://scratch.mit.edu/scratch-addons-extension/settin
 
 ### Semi-hidden toolbar in full screen
 
-When using the [Enhanced full screen](https://scratch.mit.edu/scratch-addons-extension/settings#fullscreen) addon, you only had the option to show the toolbar (the green flag and stop sign) persistently at the top of the screen or to hide it completely. Now, you can have it show only while your mouse is hovering near the top of the screen, which is a nice trade-off if I do say so myself.
+When using the [Enhanced full screen](https://scratch.mit.edu/scratch-addons-extension/settings#fullscreen) addon, you only had the option to show the toolbar (the green flag and stop sign) persistently at the top of the screen or to hide it completely. Now, you can set it to show only while your mouse is hovering near the top of the screen, which is a nice in-between.
 
 ![Mouse hovering over the top of the screen and making the toolbar show up](/assets/img/blog/v1-36-released/fullscreen-toolbar-on-hover.mp4)
 
