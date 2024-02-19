@@ -15,7 +15,7 @@ You may have once created a custom block with some parameters, only to realize y
 
 To switch the places of a parameter or label in a custom block you're editing, click on it and use the `<` and `>` buttons to switch its place with the parameter or label to the left or right.
 
-![Custom block parameters being rearranged in the "Make a Block" modal](/assets/img/blog/v1-36-released/reordering-parameters.mp4)
+<video src="/assets/img/blog/v1-36-released/reordering-parameters.mp4" controls type="video/webm" autoplay loop></video>
 
 ### Infinite scrolling expands to search results and the explore page
 
@@ -25,7 +25,7 @@ The [Infinite scrolling](https://scratch.mit.edu/scratch-addons-extension/settin
 
 When using the [Enhanced full screen](https://scratch.mit.edu/scratch-addons-extension/settings#fullscreen) addon, you only had the option to show the toolbar (the green flag and stop sign) persistently at the top of the screen or to hide it completely. Now, you can set it to show only while your mouse is hovering near the top of the screen, which is a nice in-between.
 
-![Mouse hovering over the top of the screen and making the toolbar show up](/assets/img/blog/v1-36-released/fullscreen-toolbar-on-hover.mp4)
+<video src="/assets/img/blog/v1-36-released/fullscreen-toolbar-on-hover.mp4" controls type="video/webm" autoplay loop></video>
 
 ### New theme options
 
