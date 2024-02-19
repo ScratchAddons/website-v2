@@ -1,7 +1,7 @@
 ---
 title: What's new in Scratch Addons v1.36
 description: Custom block parameter rearranging, new customization options, and more!
-date: null
+date: 2024-02-19T00:00:00Z
 author: DNin01
 ---
 
