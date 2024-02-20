@@ -68,20 +68,18 @@ Thanks for wanting to help with translating Scratch Addons to other languages! P
 If you don't own a Scratch account, please send an email to `translation@scratchaddons.com` instead.
 
 ### 2. Create a Transifex account
-1. Go to [Transifex Sign Up](https://app.transifex.com/signup/).  
-1. You will be shown Transifex's "Sign Up" screen. **DO NOT sign up with Google.**  
+1. Go to [Transifex open-source Sign up](https://app.transifex.com/signup/open-source/?join_org=scratch-addons&join_project=scratch-addons-extension).  
+1. You will be shown Transifex's "Sign up" screen. **DO NOT sign up with Google.**  
+1. In the "business email" field, enter your email (it can be Gmail, Outlook, or any other).
 1. In the "username" field, we highly recommend you enter your Scratch username, or a slight variation of it.  
 For example, if your Scratch username is `john_walker954`, your Transifex username can be exactly the same (`john_walker954`) or `john_walker954_scratch`.
-1. In the "business email" field, enter your email (it can be Gmail, Outlook, or any other).
 1. In the "password" field, enter a password.
-1. Click the "Sign Up" button.
-1. Choose **"Join an existing organization"**.
-1. Click the "Continue" button.
+1. Click the "Sign up" button.
 1. You'll be asked for your First name and Last name.  
 \- In the **First name**, we recommend you enter your Scratch username.  
 \- In the **Last name**, we recommend you enter the language you want to translate to (for example, `Greek`).
 1. In the "languages you speak" field, select at least one language you're fluent with (for example, English).
-1. Click the "Continue" button.
+1. Click the "Let's get started" button.
 1. Continue with the "requesting a language" steps below.
 
 If you already own a Transifex account and don't want to create a new one, please send an email to `translation@scratchaddons.com` indicating your Transifex account's username. Then, continue with the "requesting a language" section below.
