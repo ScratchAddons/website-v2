@@ -349,7 +349,6 @@ Internally uses `window.django.gettext` or `window._messages`.
 See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
 
 ### `addon.tab.createModal`
-
 <table>
   <tr>
     <th>Parameter</th>
@@ -408,9 +407,7 @@ See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
 Returns a blank modal using Scratch's styles.
 
 ### `addon.tab.confirm`
-
 Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
-
 <table>
   <tr>
     <th>Parameter</th>
@@ -435,9 +432,7 @@ Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
 Similar to `window.confirm`, but using Scratch's styles.
 
 ### `addon.tab.prompt`
-
 Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
-
 <table>
   <tr>
     <th>Parameter</th>
