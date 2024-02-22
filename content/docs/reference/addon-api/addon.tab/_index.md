@@ -348,6 +348,125 @@ Internally uses `window.django.gettext` or `window._messages`.
 
 See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
 
+### `addon.tab.createModal`
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The title of the modal.</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td><code>object</code></td>
+    <td>No</td>
+    <td>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>isOpen</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>Whether to open the modal by default.</td>
+        </tr>
+        <tr>
+          <td>useEditorClasses</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>If in the editor, whether to apply the editor styles instead of the `scratch-www` ones.</td>
+        </tr>
+        <tr>
+          <td>useSizesClass</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>If on <code>scratch-www</code>, whether to add the <code>modal-sizes</code> class.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Object</code></td>
+  </tr>
+</table>
+
+Returns a blank modal using Scratch's styles.
+
+### `addon.tab.confirm`
+
+Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>message</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The message displayed in the modal</td>
+  </tr>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;Boolean></code></td>
+  </tr>
+</table>
+
+Similar to `window.confirm`, but using Scratch's styles.
+
+### `addon.tab.prompt`
+
+Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
+
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>message</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The message displayed in the modal</td>
+  </tr>
+  <tr>
+    <td>defaultValue</td>
+    <td><code>string</code></td>
+    <td>No</td>
+    <td>The text box placeholder</td>
+  </tr>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;string> | null</code></td>
+  </tr>
+</table>
+
+Similar to `window.prompt`, but using Scratch's styles.
+
 ### `addon.tab.createBlockContextMenu`
 <table>
   <tr>
