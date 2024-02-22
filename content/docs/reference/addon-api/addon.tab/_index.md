@@ -384,7 +384,7 @@ See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
           <td>useEditorClasses</td>
           <td><code>Boolean</code></td>
           <td>false</td>
-          <td>If in the editor, whether to apply the editor styles instead of the `scratch-www` ones.</td>
+          <td>If in the editor, whether to apply the editor styles instead of the <code>scratch-www</code> ones.</td>
         </tr>
         <tr>
           <td>useSizesClass</td>
@@ -442,7 +442,7 @@ Returns a blank modal using Scratch's styles.
           <td>useEditorClasses</td>
           <td><code>Boolean</code></td>
           <td>false</td>
-          <td>If in the editor, whether to apply the editor styles instead of the `scratch-www` ones.</td>
+          <td>If in the editor, whether to apply the editor styles instead of the <code>scratch-www</code> ones.</td>
         </tr>
         <tr>
           <td>okButtonLabel</td>
@@ -511,7 +511,7 @@ Similar to `window.confirm`, but using Scratch's styles.
           <td>useEditorClasses</td>
           <td><code>Boolean</code></td>
           <td>false</td>
-          <td>If in the editor, whether to apply the editor styles instead of the `scratch-www` ones.</td>
+          <td>If in the editor, whether to apply the editor styles instead of the <code>scratch-www</code> ones.</td>
         </tr>
       </table>
     </td>
