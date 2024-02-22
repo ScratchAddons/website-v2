@@ -21,7 +21,7 @@ Scratch Addons is available in more than 15 languages thanks to the help of volu
 * You must own an account on [scratch.mit.edu](https://scratch.mit.edu).
 
 {{< admonition info >}}
-**These languages do NOT accept new translators:** Italian, Japanese, Portuguese, Slovenian, Spanish.
+**These languages do NOT accept new translators:** Italian, Spanish.
 <!-- This list of languages is also found below. Remember to update both. -->
 {{< /admonition >}}
 
