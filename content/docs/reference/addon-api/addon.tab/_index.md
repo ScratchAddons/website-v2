@@ -467,7 +467,7 @@ Returns a blank modal using Scratch's styles.
   </tr>
 </table>
 
-Similar to `window.confirm`, but using Scratch's styles.
+Similar to `window.confirm`, except it's asynchronous and uses Scratch's styles.
 
 ### `addon.tab.prompt`
 <table>
@@ -524,7 +524,7 @@ Similar to `window.confirm`, but using Scratch's styles.
   </tr>
 </table>
 
-Similar to `window.prompt`, but using Scratch's styles.
+Similar to `window.prompt`, except it's asynchronous and uses Scratch's styles.
 
 ### `addon.tab.createBlockContextMenu`
 <table>
