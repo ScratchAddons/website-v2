@@ -407,7 +407,6 @@ See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
 Returns a blank modal using Scratch's styles.
 
 ### `addon.tab.confirm`
-Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
 <table>
   <tr>
     <th>Parameter</th>
@@ -416,10 +415,49 @@ Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
     <th>Description</th>
   </tr>
   <tr>
+    <td>title</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The title of the modal.</td>
+  </tr>
+  <tr>
     <td>message</td>
     <td><code>string</code></td>
     <td>Yes</td>
-    <td>The message displayed in the modal</td>
+    <td>The message displayed in the modal.</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td><code>object</code></td>
+    <td>No</td>
+    <td>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>useEditorClasses</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>If in the editor, whether to apply the editor styles instead of the `scratch-www` ones.</td>
+        </tr>
+        <tr>
+          <td>okButtonLabel</td>
+          <td><code>string</code></td>
+          <td>"OK"</td>
+          <td>The label of the button for rejecting the confirmation.</td>
+        </tr>
+        <tr>
+          <td>cancelButtonLabel</td>
+          <td><code>string</code></td>
+          <td>"Cancel"</td>
+          <td>The label of the button for rejecting the confirmation.</td>
+        </tr>
+      </table>
+    </td>
   </tr>
 
 <table>
@@ -432,7 +470,6 @@ Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
 Similar to `window.confirm`, but using Scratch's styles.
 
 ### `addon.tab.prompt`
-Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
 <table>
   <tr>
     <th>Parameter</th>
@@ -441,16 +478,43 @@ Inherits [addon.tab.createModal](#addontabcreatemodal)'s parameters.
     <th>Description</th>
   </tr>
   <tr>
+    <td>title</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The title of the modal.</td>
+  </tr>
+  <tr>
     <td>message</td>
     <td><code>string</code></td>
     <td>Yes</td>
-    <td>The message displayed in the modal</td>
+    <td>The message displayed in the modal.</td>
   </tr>
   <tr>
     <td>defaultValue</td>
     <td><code>string</code></td>
     <td>No</td>
     <td>The text box placeholder</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td><code>object</code></td>
+    <td>No</td>
+    <td>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>useEditorClasses</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>If in the editor, whether to apply the editor styles instead of the `scratch-www` ones.</td>
+        </tr>
+      </table>
+    </td>
   </tr>
 
 <table>
