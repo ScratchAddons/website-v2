@@ -404,6 +404,8 @@ See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
   </tr>
 </table>
 
+Returns a blank modal using Scratch's styles. The modal's properties are listed below.
+
 <table>
   <tr>
     <th>Property</th>
@@ -446,8 +448,6 @@ See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
     <td>Removes the modal, making it no longer usable.</td>
   </tr>
 </table>
-
-Returns a blank modal using Scratch's styles.
 
 ### `addon.tab.confirm`
 <table>
