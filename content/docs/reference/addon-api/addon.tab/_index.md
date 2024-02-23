@@ -404,6 +404,49 @@ See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
   </tr>
 </table>
 
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>container</td>
+    <td><code>HTMLElement</code></td>
+    <td>The container element.</td>
+  </tr>
+  <tr>
+    <td>content</td>
+    <td><code>HTMLElement</code></td>
+    <td>Where the content should be appended.</td>
+  </tr>
+  <tr>
+    <td>backdrop</td>
+    <td><code>HTMLElement</code></td>
+    <td>The modal overlay.</td>
+  </tr>
+  <tr>
+    <td>closeButton</td>
+    <td><code>HTMLElement</code></td>
+    <td>The close (X) button on the header.</td>
+  </tr>
+  <tr>
+    <td>open</td>
+    <td><code>Function</code></td>
+    <td>Opens the modal.</td>
+  </tr>
+  <tr>
+    <td>close</td>
+    <td><code>Function</code></td>
+    <td>Closes the modal.</td>
+  </tr>
+  <tr>
+    <td>remove</td>
+    <td><code>Function</code></td>
+    <td>Removes the modal, making it no longer usable.</td>
+  </tr>
+</table>
+
 Returns a blank modal using Scratch's styles.
 
 ### `addon.tab.confirm`
@@ -459,6 +502,7 @@ Returns a blank modal using Scratch's styles.
       </table>
     </td>
   </tr>
+</table>
 
 <table>
   <tr>
@@ -516,6 +560,7 @@ Similar to `window.confirm`, except it's asynchronous and uses Scratch's styles.
       </table>
     </td>
   </tr>
+</table>
 
 <table>
   <tr>
