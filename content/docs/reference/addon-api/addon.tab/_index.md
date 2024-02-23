@@ -448,7 +448,7 @@ Returns a blank modal using Scratch's styles.
           <td>okButtonLabel</td>
           <td><code>string</code></td>
           <td>"OK"</td>
-          <td>The label of the button for rejecting the confirmation.</td>
+          <td>The label of the button for approving the confirmation.</td>
         </tr>
         <tr>
           <td>cancelButtonLabel</td>
@@ -493,7 +493,7 @@ Similar to `window.confirm`, except it's asynchronous and uses Scratch's styles.
     <td>defaultValue</td>
     <td><code>string</code></td>
     <td>No</td>
-    <td>The text box placeholder</td>
+    <td>The initial value of the text box.</td>
   </tr>
   <tr>
     <td>options</td>
@@ -520,7 +520,7 @@ Similar to `window.confirm`, except it's asynchronous and uses Scratch's styles.
 <table>
   <tr>
     <td>Return value</td>
-    <td><code>Promise&lt;string> | null</code></td>
+    <td><code>Promise&lt;string | null></code></td>
   </tr>
 </table>
 
