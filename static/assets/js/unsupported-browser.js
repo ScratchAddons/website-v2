@@ -5,6 +5,7 @@ window.parent.postMessage({msgType: "getVersionInfo"}, "*");
 window.addEventListener("message", (e) => {
     if (e.data.versionInfo) {
         document.getElementById("export-settings").style.display = "block"
+        window.parent.postMessage({msgType: "pageTitleInfo", msgContent: document.title}, "*");
     }
 });
 
