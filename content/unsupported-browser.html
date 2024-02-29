@@ -4,6 +4,11 @@ description: Scratch Addons doesn't support the browser you're using.
 robots_tag: noindex
 ---
 
+<script defer src="/assets/js/unsupported-browser.js"></script>
+
+<!-- Open all links in a new tab, including the navbar and footer links -->
+<base target="_blank"> 
+
 <section id="intro" class="intro-heading">
   <h1 class="mb-3">Unsupported Browser</h1>
   <p class="mb-1">
@@ -11,8 +16,21 @@ robots_tag: noindex
   </p>
 </section>
 
-<section class="container">
-  <p>Use updated versions of Chrome, Firefox, or other browsers based on them to get started:</p>
+<div class="container">
+
+<section class="mb-3">
+  <p>Please update your browser to use Scratch Addons. We recommend exporting your settings before doing so.</p>
+  <p id="export-settings" style="display: none">
+    <button id="export-btn" class="btn btn-primary">Export my extension settings</button>
+    <button id="export-view-btn" class="btn btn-primary">View my extension settings</button>
+    <p>After updating your browser, you can import your settings by going to Scratch Addons settings > More Settings > Import settings.</p>
+  </p>
+</section>
+
+<hr>
+
+<section>
+  <p>These are the browsers we currently support.</p>
   <br>
   <h4>
     <span class="iconify-inline" data-icon="simple-icons:googlechrome"></span> Chromium 80+
@@ -70,6 +88,8 @@ robots_tag: noindex
     <span class="iconify-inline" data-icon="simple-icons:apple"></span> OS X / MacOS 10.12+
   </p>
 </section>
+
+</div>
 
 <style>
   table.browserlist td:nth-child(1) {
