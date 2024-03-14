@@ -52,8 +52,6 @@ languages:
     weight: 1
     contentDir: content
 
-disableKinds:
-  - taxonomy
 
 # When taxonomy is needed, remove above and 
 # uncomment below to disable tags and categories.
