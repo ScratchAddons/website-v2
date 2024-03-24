@@ -253,7 +253,7 @@ Well-known matchers:
 - `topics` (forum topics)
 - `newPostScreens`
 - `editingScreens` (forum routes with editing screens, including "change signature" page)
-- `forums` (all forum pages, except mobile forums)
+- `forums` (all forum pages)
 - `scratchWWWNoProject` (all scratch-www routes, except project pages)
 
 URL match pattern examples:
