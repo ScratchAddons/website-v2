@@ -1592,3 +1592,37 @@
   Links:
     - StringKey: ChangelogPage.Links.BlogPost
       Link: /blog/v1-36-released/
+
+- Version: v1.37.0
+  Index: 90
+  Tag: v1.37.0
+  Name: v1.37.0
+  Date: 2024-03-29
+  Status: Released
+  Entry: |
+    - New addon: larger "Save Now" button [recommended]
+    - New addon: project page download button
+    - New addon: replace backpack bar with button
+    - Scratch Addons minimum browser requirements changed to: Chrome 96+, Firefox 109+
+    - Scratch Addons now allows exporting settings even if the browser is unsupported
+    - Adapt and disable some addons for the upcoming Scratch April Fools editor
+    - "Square block inputs" addon: new "number inputs" setting
+    - "Rearrangeable custom block inputs" addon: new "insert new inputs after selected input" setting
+    - "Project video recorder" addon: default video file name to project title
+    - "Full areas" addon: forum signatures no longer have a minimum height
+    - "Debugger" addon: the addon's thread list now automatically scrolls when single stepping
+    - Bug fix: "enhanced full screen" hovering not detected on Firefox
+    - Bug fix: "website dark mode and customizable colors" not working properly when reporting a profile
+    - Bug fix: "website dark mode and customizable colors" inconsistently affecting forum post previews
+    - Bug fix: "pause button" Alt+X shortcut deleting the most recently focused block
+    - Bug fix: compatibility issues between "customizable block colors" and "always show number pad"
+    - Bug fix: "auto-hiding block palette" shrinking the width of the code area by 250 pixels, causing issues in small screens
+    - Bug fix: project unpauses after opening sound library ("pause button" addon)
+  Highlights:
+    Description: |
+      New addon: "project page download button", which allows you to download projects directly from the project page, without having to open the editor first. Go to Scratch Addons settings to enable it.
+      
+      Other new addons added this update are "larger Save Now button", and "replace backpack bar with button".
+  Links:
+    - StringKey: ChangelogPage.Links.BlogPost
+      Link: /blog/v1-37-released/
