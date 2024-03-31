@@ -1,6 +1,6 @@
 ---
 title: What's new in Scratch Addons v1.37
-description: Download projects with one click and more
+description: Download projects with one click and more!
 date: 2024-03-31T00:00:00Z
 author: DNin01
 ---
@@ -11,7 +11,7 @@ This update brings in the ability to download projects with one click, plus a co
 
 Finding yourself saving a lot of your own or your favorite Scratch projects? The new [Project page download button](https://scratch.mit.edu/scratch-addons-extension/settings#download-button) addon can help. It adds a download button right below the Notes and Credits section of all projects.
 
-![The actions button row on the project page with a Download button added at the end](/assets/img/blog/v1-37-released/projectpage-download-button)
+![The actions button row on the project page with a Download button added at the end](/assets/img/blog/v1-37-released/projectpage-download-button.png)
 
 This button is functionally identical to the `File` → `Save to your computer` option in the editor, just that you don't have to go into the editor first.
 
