@@ -15,6 +15,10 @@ Scratch Addons is available in these stores.
 
 ## From source
 
+{{< admonition info >}}
+Unlike the store releases, installing from source requires a browser based on Chromium 121+ or Firefox 121+.
+{{< /admonition >}}
+
 ### About GitHub releases
 
 [The releases page](https://github.com/ScratchAddons/ScratchAddons/releases) contains the code and installation files for all development builds of Scratch Addons, as well as the mirror of the store builds.

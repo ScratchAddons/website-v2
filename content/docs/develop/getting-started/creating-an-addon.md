@@ -12,7 +12,7 @@ If you plan to submit the addon you are developing as a pull request to our GitH
 {{< /admonition >}}
 
 ## Requirements
-Scratch Addons does not require any software for development except a text editor and Chromium-based browser, but we also recommend having Git, Firefox and Visual Studio Code installed.
+Scratch Addons does not require any software for development except a text editor and a Chromium-based browser (121+), but we also recommend having Git, Firefox (121+) and Visual Studio Code installed.
 
 ## Installation
 To install the extension for development, see [Installing from source](/docs/getting-started/installing/#from-source).
@@ -21,10 +21,12 @@ To install the extension for development, see [Installing from source](/docs/get
 Each addon has its own internal id used by the extension and other addons. Addon ids should not contain any spaces or special characters except hyphens. Addon ids should be self-descriptive, but not too long.
 
 New addons must also not use an id that was included in a stable version of the extension but later removed. There include:
-- `data-category-tweaks`
-- `fix-buttons`
 - `a11y`
+- `data-category-tweaks`
 - `featured-dangos`
+- `fix-buttons`
+- `redirect-mobile-forums`
+- `tutorials-button`
 
 Open the `addons.json` file in the `addons` folder, add a new addon id near the bottom of the file, then create a sub-folder with the same name.
 
