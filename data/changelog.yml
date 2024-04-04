@@ -1626,3 +1626,12 @@
   Links:
     - StringKey: ChangelogPage.Links.BlogPost
       Link: /blog/v1-37-released/
+
+- Version: v1.37.1
+  Index: 91
+  Tag: v1.37.1
+  Name: v1.37.1
+  Date: 2023-04-04
+  Status: Released
+  Entry: |
+    - Bug fix: some addons not working after Scratch April Fools ended
