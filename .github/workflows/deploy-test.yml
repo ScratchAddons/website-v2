@@ -79,7 +79,7 @@ jobs:
           bash ../script/sh/hugo-deploy-site.sh
 
       - name: Setup Hugo
-        uses: peaceiris/actions-hugo@v2
+        uses: peaceiris/actions-hugo@v3
         with:
           hugo-version: '0.119.0'
           extended: true
