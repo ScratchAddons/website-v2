@@ -27,7 +27,7 @@ Unlike the store releases, installing from source requires a browser based on Ch
 
 This is the recommended way to install Scratch Addons for development purposes, assuming you have Git installed.
 
-If you plan on contributing, fork the repository on GitHub first and then clone the fork.
+If you plan on contributing, fork the repository on GitHub first and then clone the fork, replacing `<username>` with your Github username.
 
 ```sh
 $ git clone https://github.com/<username>/ScratchAddons.git
@@ -45,10 +45,10 @@ Remember to also update Scratch Addons from the browser.
 ### Downloading the Zip
 
 {{< admonition warning >}}
-  This method is not recommended for development unless Git cannot be installed on the system since it will need to be manually repeated every time you want to update Scratch Addons.
+  This method is not recommended for development unless Git cannot be installed on the system since it will need to be manually repeated every time you update Scratch Addons.
 {{< /admonition >}}
 
-If you don't have Git installed, you can try this method instead.
+If you don not have Git installed, use this method instead.
 
 1. Go to the [repository](https://github.com/ScratchAddons/ScratchAddons) and find the download code button.
 
@@ -66,10 +66,10 @@ To load the extension into Google Chrome and most Chromium-based browsers such a
 
 1. Click "Load unpacked" and select the `ScratchAddons` folder.
 
-1. To update the extension when testing, click the refresh icon on the extension's card.
+To update the extension when testing, click the refresh icon on the extension's card.
 
 {{< admonition info >}}
-  You can safely ignore the "Unrecognized manifest key" warning. It's required by Firefox.
+  The "Unrecognized manifest key" warning may safely be ignored, since it is required by Firefox.
 {{< /admonition >}}
 
 
@@ -78,7 +78,7 @@ To load the extension into Google Chrome and most Chromium-based browsers such a
 To load the extension into Mozilla Firefox:
 
 {{< admonition info >}}
-  Addons loaded into Firefox this way are temporary and must be reloaded every time the browser restarts. Because of this Chrome is recommended for working on addons, but addons are expected to work on Firefox.
+  Addons loaded into Firefox this way are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
 {{< /admonition >}}
 
 1. Go to [about:debugging](about:debugging)
