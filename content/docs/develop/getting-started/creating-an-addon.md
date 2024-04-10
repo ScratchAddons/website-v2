@@ -44,7 +44,7 @@ Here is a minimal addon manifest:
 }
 ```
 
-For more information on what can be declared in the manifest, see the [addon manifest](/docs/reference/addon-manifest/) reference.
+For more information on what can be declared in the manifest, see the [the Addon Manifest reference](/docs/reference/addon-manifest/).
 
 The addon does not do anything yet, but it should appear in the popup and settings page after reloading the extension.
 
