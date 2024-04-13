@@ -359,7 +359,7 @@ Sub-properties:
 | - | - |
 | Type | `Array` |
 
-Settings allow the addon's users to specify settings in Scratch Addons' settings panel. Inside your userscripts, you can then access those settings with the `addon.settings` API.  
+Settings provide users with customization options though the Scratch Addons settings page. They are accessed from userscripts through the [addon.settings API](/docs/reference/addon-api/addon.settings/) and from userstyles with a [special CSS variable](/docs/develop/userstyles/#accessing-addon-settings-from-css).
 Specify a `settings` property and provide an array of option objects.
 
 Sub-properties:
