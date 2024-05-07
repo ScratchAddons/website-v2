@@ -13,14 +13,7 @@ It's not necessary to reload the extension by going to `chrome://extensions` whe
 
 ### Use the addon.* API from the console
 
-For development, you may choose to expose the `addon` object as a global variable, so that it can be accessed within the browser console.
-
-```js
-export default async function ({ addon, console }) {
-  window.addon = addon;
-  // ...
-}
-```
+The `addon` object is accessible within the browser console through the `__addon` global variable when at least one addon is running.
 
 ### Set breakpoints with the "debugger" keyword
 

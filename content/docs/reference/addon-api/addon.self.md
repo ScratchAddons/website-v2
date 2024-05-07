@@ -70,20 +70,6 @@ The addon ID is the name of the directory inside `/addons` that identifies the a
 Path to the addon's directory, without trailing slash.  
 Should be used instead of hardcoding URLs. Locally, using a hardcoded URL like `chrome-extension://aeepldbjfoihffgcaejikpoeppffnlbd/addons/full-signature/happen.js` might appear to work properly, but the extension ID can change and it will not work in Firefox.
 
-### `addon.self.lib`
-<table>
-  <tr>
-    <td>Type</td>
-    <td><code>String</code></td>
-  </tr>
-  <tr>
-    <td>Nullable</td>
-    <td>No</td> 
-  </tr>
-</table>
-
-Path to the `/libraries` directory, without trailing slash.
-
 ### `addon.self.browser`
 <table>
   <tr>

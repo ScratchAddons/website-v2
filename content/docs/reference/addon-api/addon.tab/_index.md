@@ -973,7 +973,7 @@ Removes a block that was previously added to the Debugger category in the block 
   </tr>
 </table>
 
-Runs the specified script file.
+Runs the specified script file relative to the extension's root (e.g. `chrome-extension://aeepldbjfoihffgcaejikpoeppffnlbd/`) in a `<script>` tag.
 
 ### `addon.tab.loadWorker`
 <table>
