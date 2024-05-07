@@ -16,7 +16,7 @@ Allows addon userscripts to get information about the tab they're currently runn
 
 ## Examples
 ### Using `addon.tab.waitForElement`
-We can use `addon.tab.waitForElement` with `{"markAsSeen": true}` inside a `while(true)` loop to store the IDs of all comments in the page.
+We can use `addon.tab.waitForElement` with `{"markAsSeen": true}` inside a `while(true)` loop to store the IDs of all comments in the page.  
 Using `addon.tab.waitForElement`, we don't need to have code that waits until comments have loaded. This way, we also store the IDs of newly posted comments and new loaded comments when the user clicks "load more comments".
 ```js
 const commentIds = [];
@@ -29,8 +29,8 @@ while (true) {
 ```
 
 ### Using `addon.tab.displayNoneWhileDisabled` (`dynamicDisable`)
-We use `addon.tab.displayNoneWhileDisabled` to hide an image when the addon gets disabled.
-We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.
+We use `addon.tab.displayNoneWhileDisabled` to hide an image when the addon gets disabled.  
+We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.  
 We also set the `display` CSS property of the image to `flex` when visible, even though that is not the default value for images.
 ```js
   /* userscript.js */
@@ -52,7 +52,7 @@ We also set the `display` CSS property of the image to `flex` when visible, even
   display: flex;
 }
 .sa-example-img-hide {
-  /* We want to hide the image if the button was clicked,
+  /* We want to hide the image if the button was clicked, 
   even if the addon is enabled */
   display: none !important;
 }
@@ -80,13 +80,13 @@ Allows addons to get and modify Redux state, which is useful for addons that mod
   </tr>
   <tr>
     <td>Nullable</td>
-    <td>Yes</td>
+    <td>Yes</td> 
   </tr>
 </table>
 
-The Scratch client for the current tab (`scratch-www` or `scratchr2`).
-The Scratch community website has 2 working clients used throughout the site.
-`scratch-www` is React/Redux based and client side rendered. This client is the one used in the homepage.
+The Scratch client for the current tab (`scratch-www` or `scratchr2`).  
+The Scratch community website has 2 working clients used throughout the site.  
+`scratch-www` is React/Redux based and client side rendered. This client is the one used in the homepage.  
 `scratchr2` is Django/jQuery/Backbone.js based and mostly server side rendered. This client is the one used in profile pages.
 
 ### `addon.tab.editorMode`
@@ -97,11 +97,11 @@ The Scratch community website has 2 working clients used throughout the site.
   </tr>
   <tr>
     <td>Nullable</td>
-    <td>Yes</td>
+    <td>Yes</td> 
   </tr>
 </table>
 
-The current viewing mode for the project (`projectpage`, `editor`, `fullscreen` or `embed`).
+The current viewing mode for the project (`projectpage`, `editor`, `fullscreen` or `embed`).  
 Will be `null` if the current tab is not a project.
 
 ### `addon.tab.direction`
@@ -112,7 +112,7 @@ Will be `null` if the current tab is not a project.
   </tr>
   <tr>
     <td>Nullable</td>
-    <td>No</td>
+    <td>No</td> 
   </tr>
 </table>
 
@@ -186,9 +186,9 @@ The writing direction for the language of the Scratch website.
   </tr>
 </table>
 
-Waits until an element exists, then returns the element.
-Internally, a `MutationObserver` that reacts to any DOM tree change is used. This observer does not react to attribute-only DOM updates.
-Option `markAsSeen` should be set to true if you're using this method inside a `while(true)` loop.
+Waits until an element exists, then returns the element.  
+Internally, a `MutationObserver` that reacts to any DOM tree change is used. This observer does not react to attribute-only DOM updates.  
+Option `markAsSeen` should be set to true if you're using this method inside a `while(true)` loop.  
 Options `condition`, `reduxCondition` and `reduxEvents` should be used as optimizations, in order to avoid multiple calls to `document.querySelector` when it's guaranteed the element will not exist yet.
 
 ### `addon.tab.displayNoneWhileDisabled`
@@ -230,8 +230,8 @@ Options `condition`, `reduxCondition` and `reduxEvents` should be used as optimi
   </tr>
 </table>
 
-Hides the given element with `display: none` when the addon is disabled, until it is reenabled.
-If the intended `display` CSS property value for the provided element when visible is not the default value for the type of provided element (for example, `block` for `div`s and `inline` for `span`s), you should provide that value inside the options parameter.
+Hides the given element with `display: none` when the addon is disabled, until it is reenabled.  
+If the intended `display` CSS property value for the provided element when visible is not the default value for the type of provided element (for example, `block` for `div`s and `inline` for `span`s), you should provide that value inside the options parameter.  
 If you want to manually hide the element in situations where the addon is enabled, you should use a dedicated class name for that, instead of manually setting `el.style.display = "none";`. Use a class name selector in a userstyle to set `display: none !important;` on the element.
 
 ### `addon.tab.copyImage`
@@ -266,8 +266,8 @@ If you want to manually hide the element in situations where the addon is enable
     <td>Image could not be copied.</td>
 </table>
 
-Copies a PNG image to the clipboard.
-Only run this in response of the user explicitly pressing Ctrl+C.
+Copies a PNG image to the clipboard.  
+Only run this in response of the user explicitly pressing Ctrl+C.  
 Internally uses `browser.clipboard.setImageData` in Firefox and `navigator.clipboard.write` in Chrome and Edge.
 
 ### `addon.tab.scratchClass`
@@ -339,9 +339,9 @@ Gets the hashed class name for a Scratch stylesheet class name.
   </tr>
 </table>
 
-Gets Scratch translation from the current Scratch tab.
-Note that these are Scratch locales, not Scratch Addons locales.
-If the message isn't found, `""` is returned and a warning is logged in the console.
+Gets Scratch translation from the current Scratch tab.  
+Note that these are Scratch locales, not Scratch Addons locales.  
+If the message isn't found, `""` is returned and a warning is logged in the console.  
 Internally uses `window.django.gettext` or `window._messages`.
 
 ### [`addon.tab.appendToSharedSpace`](addon.tab.appendtosharedspace)
@@ -973,7 +973,7 @@ Removes a block that was previously added to the Debugger category in the block 
   </tr>
 </table>
 
-Runs the specified script file relative to the extension's root (e.g. `chrome-extension://aeepldbjfoihffgcaejikpoeppffnlbd/`) in a `<script>` tag.
+Runs the specified script file.
 
 ### `addon.tab.loadWorker`
 <table>
@@ -1020,6 +1020,6 @@ Loads the specified Web Worker.
   </tr>
 </table>
 
-Fires when Scratch dynamically changes the URL of the page.
-This happens when going inside/outside the editor, or switching tabs in scratch-www studio pages.
+Fires when Scratch dynamically changes the URL of the page.  
+This happens when going inside/outside the editor, or switching tabs in scratch-www studio pages.  
 This will not fire if `location.hash` changed.

@@ -13,7 +13,14 @@ It's not necessary to reload the extension by going to `chrome://extensions` whe
 
 ### Use the addon.* API from the console
 
-The `addon` object is accessible within the browser console through the `__addon` global variable when at least one addon is running.
+For development, you may choose to expose the `addon` object as a global variable, so that it can be accessed within the browser console.
+
+```js
+export default async function ({ addon, console }) {
+  window.addon = addon;
+  // ...
+}
+```
 
 ### Set breakpoints with the "debugger" keyword
 
@@ -32,7 +39,7 @@ Enter the addon ID on the "filter" console search bar to only view logs and warn
 
 #### The DOM is destroyed after going inside or outside the editor
 
-Scratch creates all HTML elements each time the user clicks "see inside" or "see project page", and destroys the old ones.
+Scratch creates all HTML elements each time the user clicks "see inside" or "see project page", and destroys the old ones.  
 This can usually be fixed by using `addon.tab.waitForElement` or the `urlChange` event.
 
 #### The Scratch editor language can be changed without a reload
@@ -49,7 +56,7 @@ Unlike the Scratch website, the Scratch editor will not reload when changing the
 
 #### scratch-www pages don't reload after logging in
 
-Unlike scratchr2 pages, scratch-www pages do not force a page reload after logging in. For example, if you go to a project page while being logged out, then log in, the page will not reload. This also affects studios, the messages page, etc.
+Unlike scratchr2 pages, scratch-www pages do not force a page reload after logging in. For example, if you go to a project page while being logged out, then log in, the page will not reload. This also affects studios, the messages page, etc.  
 In contrast, all Scratch pages reload after logging out.
 
 #### Project pages never return 404s
