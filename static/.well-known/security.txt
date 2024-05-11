@@ -1,7 +1,10 @@
-Contact: mailto:security@scratchaddons.com
-Preferred-Languages: en
 Policy: https://github.com/ScratchAddons/ScratchAddons/security/policy
 Policy: https://scratchaddons.com/docs/policies/security/
+
+Contact: https://github.com/ScratchAddons/ScratchAddons/security/advisories/new
+Contact: mailto:security@scratchaddons.com
+Preferred-Languages: en
+
 Acknowledgements: https://scratchaddons.com/credits
 
-Expires: 2023-01-01T00:00:00.000Z
+Expires: 2025-01-01T00:00:00.000Z

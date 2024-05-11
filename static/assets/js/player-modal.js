@@ -1,4 +1,4 @@
-import YTPlayer from 'https://cdn.skypack.dev/pin/yt-player@v3.5.0-XrrFLAqWZVLSo66cMa8t/mode=imports,min/optimized/yt-player.js'
+import ytPlayer from 'https://cdn.jsdelivr.net/npm/yt-player@3.6.1/+esm'
 
 window.plyrmdl = window.plyrmdl || {}
 
@@ -8,7 +8,7 @@ $('.plyrmdl-thumb.plyrmdl-yt').mousedown(event => {
 	// console.log("click: " + youtubeId)
 	window.plyrmdl[youtubeId] = window.plyrmdl[youtubeId] || {}
 
-	if (!window.plyrmdl[youtubeId].player) window.plyrmdl[youtubeId].player = new YTPlayer(`.plyrmdl-modal[data-youtube-id="${youtubeId}"] .yt-iframe`, {
+	if (!window.plyrmdl[youtubeId].player) window.plyrmdl[youtubeId].player = new ytPlayer(`.plyrmdl-modal[data-youtube-id="${youtubeId}"] .yt-iframe`, {
 		width: "1280",
 		height: "720",
 		related: 0,

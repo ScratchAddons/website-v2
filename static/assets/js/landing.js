@@ -1,3 +1,8 @@
+import { Splide } from 'https://cdn.jsdelivr.net/npm/@splidejs/splide@3/+esm'
+import { Intersection } from 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-intersection@0/+esm'
+import { AutoScroll } from 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0/+esm'
+
+
 /* =============================================================
                            USER COUNT                           
 ============================================================= */
@@ -47,7 +52,7 @@ new Splide('#highlights-carousel', {
     //     prev: prevArrow,
     //     next: nextArrow,
     // }
-}).mount(window.splide.Extensions);
+}).mount({ AutoScroll });
 
 $(() => {
 
@@ -55,13 +60,21 @@ $(() => {
         type: 'loop',
         perMove: 1,
         start: 1,
-        autoplay: true,
+        autoplay: 'pause',
+        intersection: {
+            inView: {
+                autoplay: true,
+            },
+            outView: {
+                autoplay: false,
+            },
+        },
         interval: 4000,
         pauseOnHover: true,
         // arrows: { 
         //     prev: prevArrow,
         //     next: nextArrow,
         // }
-    }).mount();
+    }).mount({ Intersection });
 
 })

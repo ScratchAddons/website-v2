@@ -5,7 +5,7 @@
 {{ .Scratch.Set "title" .Title -}}
 {{ .Scratch.Set "title_page" (printf "%s - %s" ( .Scratch.Get "title" ) ( .Scratch.Get "site" ) ) -}}
 {{ .Scratch.Set "title_social" ( .Scratch.Get "title" ) -}}
-{{ if eq .IsHome true -}}
+{{ if or (eq .IsHome true) (eq .Params.section_root true) -}}
 	{{ .Scratch.Set "title_social" ( .Scratch.Get "site" ) -}}
 	{{ .Scratch.Set "title_page" ( .Scratch.Get "site" ) -}}
 {{ end -}}

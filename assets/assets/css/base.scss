@@ -153,7 +153,9 @@ body > footer {
 		img {
 			height: 37.5px; 
 			width: 37.5px; 
-			transform: scale(1.25)
+			transform: scale(1.25);
+			background-color: $scratch-orange;
+			border-radius: 100%;
 		}
 
 		.navbar-brand {
@@ -273,6 +275,11 @@ body {
 
 	--navbar-height: 59.5px;
 
+	@media (prefers-contrast: more) {
+		--header-bg: #{darken($scratch-orange, 30%)};
+		--intro-heading-bg: #{darken($scratch-orange, 30%)};
+	}
+
 }
 
 body.dark {
@@ -323,6 +330,10 @@ body.dark.extension-styled {
 	--secondary-bg-2: #{$dark-ext-level-2};
 	--secondary-border: #{$dark-ext-level-3};
 
+	@media (prefers-contrast: more) {
+		--header-bg: #{$dark-ext-level-2};
+	}
+
 }
 
 // =============================================================
@@ -330,12 +341,6 @@ body.dark.extension-styled {
 // =============================================================
 
 body.dark {
-
-	header {
-		img {
-			transform: scale(1.25);
-		}
-	}
 
 	textarea, input {
 		background-color: $dark-dp-1;
@@ -387,7 +392,7 @@ body.dark {
 // =============================================================
 
 body.extension-styled {
-	@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+	@import url('https://cdn.jsdelivr.net/npm/@fontsource/sora/index.min.css');
 
 	font-family: "Sora", $bs-font-family-sans-serif;
 	font-size-adjust: 0.47;

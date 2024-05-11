@@ -71,10 +71,12 @@
 	}
 
 	pre {
+		color: var(--content-cnt);
 		background-color: $bs-gray-100;
 	}
 
 	code, kbd, tt, samp {
+		color: var(--content-cnt);
 		background-color: lighten($bs-gray-200, 2%);
 	}
 
@@ -141,12 +143,10 @@ body.dark {
 	
 		pre {
 			background-color: $dark-dp-1;
-			color: var(--content-cnt);
 		}
 	
 		code, kbd, tt, samp {
 			background-color: $dark-dp-4;
-			color: var(--content-cnt);
 		}
 
 		blockquote {

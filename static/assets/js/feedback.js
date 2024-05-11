@@ -1,15 +1,6 @@
 const i18n = window.i18nStrings
 
 const variations = {
-    notST: {
-        strings: {
-            ...i18n.preSendWarning.variations.notST
-        },
-        patterns: [
-            /\bscratch\s*team\b/i,
-            /\bst\b/,
-        ]
-    },
     punishment: {
         strings: {
             ...i18n.preSendWarning.variations.punishment,
@@ -29,23 +20,15 @@ const variations = {
             /\bunmut(ed?|ing)\s*(please|pl[sz])\b/,
         ]
     },
-    af2023Comp: {
+    notST: {
         strings: {
-            ...i18n.preSendWarning.variations.af2023Comp,
-            description: i18n.preSendWarning.variations.af2023Comp.description
-                .replace(window.i18nTimestamp + 1, '<a href="https://github.com/ScratchAddons/ScratchAddons/discussions/5860">').replace(window.i18nTimestamp + 2, '</a>')
+            ...i18n.preSendWarning.variations.notST
         },
         patterns: [
-            /\bcat\s*blocks?\b/, 
-            /\b(two|2)[-\s]column(\s*category)?(\s*menu)?\b/, 
-            /\bauto-hiding(\s*block)?(\s*palette)?\b/, 
-            /\bdata\s*category\s*tweaks?\b/,
-            /\b(code|block)\s*palette?\b/,
-            // Catch all just to be safe
-            /\b(not|stopped|stop|don'?t|do\s*not|won'?t|will\s*not|didn'?t|did\s*not|)\s*work(ing)?\b/,
-            /\bbroken\b/,
+            /\bscratch\s*team\b/i,
+            /\bst\b/,
         ]
-    }
+    },
 }
 
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
@@ -145,6 +128,7 @@ const setPreSendWarning = (heading, description) => {
     overrideEl.textContent = i18n.preSendWarning.override
     overrideEl.classList.add('mb-0')
     statusEl.appendChild(overrideEl)
+    statusEl.scrollIntoView()
     holdSendButton(5)
 }
 
@@ -201,7 +185,7 @@ form.addEventListener("submit", async event => {
     if (preSendCheck(contentField.value)) {
         try {
             lastFeedbackRequestTime = Date.now()
-            localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)    
+            localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)
             const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
                 method: "POST", 
                 body: JSON.stringify(body)
