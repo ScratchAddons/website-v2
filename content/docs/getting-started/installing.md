@@ -94,6 +94,6 @@ To load the extension into Mozilla Firefox:
 To reload the extension when testing, click the "Reload" button on the extension's card.
 
 {{< admonition info >}}
-  The unexpected property warnings may safely be ignored, since they are required by Chrome.
+  The unexpected WebExtension manifest property warnings may safely be ignored, since they are required by Chrome.
 {{< /admonition >}}
 
