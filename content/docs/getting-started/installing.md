@@ -69,7 +69,7 @@ To load the extension into Google Chrome and most Chromium-based browsers such a
 To update the extension when testing, click the refresh icon on the extension's card.
 
 {{< admonition info >}}
-  The "Unrecognized manifest key" warning may safely be ignored, since it is required by Firefox.
+  The "Unrecognized manifest key" warnings may safely be ignored, since they are required by Firefox.
 {{< /admonition >}}
 
 
@@ -89,4 +89,11 @@ To load the extension into Mozilla Firefox:
 
 1. Select the `manifest.json` file in the `ScratchAddons` folder.
 
+1. If a permission tab opens, click the "Enable" button.
+
 To reload the extension when testing, click the "Reload" button on the extension's card.
+
+{{< admonition info >}}
+  The unexpected property warnings may safely be ignored, since they are required by Chrome.
+{{< /admonition >}}
+
