@@ -20,7 +20,7 @@ To install the extension for development, see [Installing from source](/docs/get
 ## Creating the addon folder
 Each addon has its own internal ID used by the extension and other addons. Addon IDs should not contain any spaces or special characters except hyphens and should be self-descriptive, but not too long.
 
-New addons should not use an ID that was included in a stable version of the extension but later removed. There include:
+New addons should not use an ID that was included in a stable version of the extension but later removed. These include:
 
 - `a11y`
 - `data-category-tweaks`
