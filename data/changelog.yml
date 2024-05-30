@@ -1651,3 +1651,13 @@
       This is an experimental update that we're releasing to a portion of our user base. It contains some behind-the-scenes changes to support the new extension architecture required by browsers (Manifest V3). If you encounter any issues or unexpected behavior, please send feedback. There is also a button to send feedback in the settings page.
       
       This update doesn't introduce any new features, but stay tuned for upcoming updates.
+
+- Version: v1.38.1
+  Index: 93
+  Tag: v1.38.1
+  Name: v1.38.1
+  Date: 2023-05-30
+  Status: Released
+  Entry: |
+    - Added small speed-up for website dark mode and other themes
+    - Bug fix: extension broken on Firefox for Android
