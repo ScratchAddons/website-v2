@@ -172,7 +172,7 @@ FeedbackPage:
 
       MV3LoadBug:
         Heading: There is a known issue causing all addons to stop working
-        Description: "Scratch Addons v1.38.1 has a known issue where using some addons may cause all of them to randomly stop working. This can be teporily worked around by going to chrome://extensions and turning Scratch Addons off and back on again."
+        Description: "Scratch Addons v1.38.1 has a known issue where using some addons may cause all of them to randomly stop working. Try disabling the Necropost Highlighter addon."
 
 # Strings used for /scratch-messaging-transition
 SMTPage:
