@@ -1631,7 +1631,7 @@
   Index: 91
   Tag: v1.37.1
   Name: v1.37.1
-  Date: 2023-04-04
+  Date: 2024-04-04
   Status: Released
   Entry: |
     - Bug fix: some addons not working after Scratch April Fools ended
@@ -1656,8 +1656,17 @@
   Index: 93
   Tag: v1.38.1
   Name: v1.38.1
-  Date: 2023-05-30
+  Date: 2024-05-30
   Status: Released
   Entry: |
     - Added small speed-up for website dark mode and other themes
     - Bug fix: extension broken on Firefox for Android
+
+- Version: v1.38.2
+  Index: 94
+  Tag: v1.38.2
+  Name: v1.38.2
+  Date: 2024-06-01
+  Status: Released
+  Entry: |
+    - Bug fix: addons not working
