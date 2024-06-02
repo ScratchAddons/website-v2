@@ -54,6 +54,19 @@ document.querySelector(".sa-remix-button").append(span);
 ```
 {{< /admonition >}}
 
+### Avoid using mousemove
+
+Avoid using `mousemove` and similar DOM events that trigger very often since they are bad for performance, especially when used on the body. Use an alternative event on a child element instead whenever possible.
+
+{{< admonition error >}}
+```js
+// Don't do this:
+body.addEventListener("mousemove", (event) => {
+  // ...
+});
+```
+{{< /admonition >}}
+
 ### Hide elements instead of removing them
 
 Avoid calling `.remove()` on HTML elements, which in extreme cases, can cause the project page to crash.  
@@ -111,6 +124,7 @@ reportButton.addEventListener("click", (event) => {
 
 - Prefer newer APIs, such as `fetch()` over `XMLHttpRequest`.
 - Never use `==` for comparisons. Use `===` instead.
+- When listening to keyboard events, accessing `event.key` is the preferred way to know which key was pressed. In general, you should avoid `event.code` and `event.keyCode`.
 - Use optional chaining if an object can sometimes be `null`.  
 For example, `document.querySelector(".remix-button")?.textContent`.
 - Use `for ... of` loops or `.forEach()`.  
@@ -182,5 +196,25 @@ const newDeleteSprite = function (...args) {
   if (addon.self.disabled) return oldDeleteSprite.apply(this, args);
   // ...
 };
+```
+{{< /admonition >}}
+
+## Internationalization
+
+### Use addon.tab.scratchMessage()
+
+If a string has already been translated by Scratch use [addon.tab.scratchMessage](/docs/reference/addon-api/addon.tab/#addontabscratchmessage) instead of adding a new message.
+
+{{< admonition error >}}
+```js
+// Don't do this:
+doneButton.innerText = msg("done");
+```
+{{< /admonition >}}
+
+{{< admonition success >}}
+```js
+// Do this instead:
+doneButton.innerText = addon.tab.scratchMessage("general.done");
 ```
 {{< /admonition >}}

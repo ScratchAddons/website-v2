@@ -38,7 +38,7 @@
 <div class="card {{ range .tags }} tag-{{ . }}{{ end }}" id="addon-{{ .id }}">
 	{{ if (fileExists (delimit (slice "static/assets/img/addons/" .id ".png") "")) -}}
 		<div class="card-img-wrapper">
-			<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}">
+			<img src="/assets/img/addons/{{ .id }}.png" class="card-img-top" alt="{{ .name }}" loading="lazy">
 		</div>
 	{{- end }}
 	<div class="card-body">

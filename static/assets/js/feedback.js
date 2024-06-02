@@ -29,6 +29,17 @@ const variations = {
             /\bst\b/,
         ]
     },
+    MV3LoadBug: {
+        strings: {
+            ...i18n.preSendWarning.variations.MV3LoadBug
+        },
+        patterns: [
+            /\baddons.*broke(?:n)?\b/,
+            /\bcrash(?:ed|es|ing)?\b/,
+            /\b(do(n't|esn't|\snot)|won't).*(load|work)\b/,
+            /\b(is\snot|isn't|stopped).*(loading|working)\b/,
+        ]
+    },
 }
 
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 

@@ -4,88 +4,75 @@ weight: 3
 aliases:
   - /docs/developing/getting-started/creating-an-addon
 ---
-Required software: text editor, Chrome.  
-If possible, disable the Scratch Addons extension you downloaded from the store before proceeding to avoid issues.
 
+This page describes the basics on how to create an addon for Scratch Addons. Before proceeding, please read the [addon basics](../addon-basics/) and disable any other instances of Scratch Addons to avoid conflicts.
 
 {{< admonition info >}}
-If you plan to submit the addon you are developing as a pull request to our GitHub repository, please read our [contributing guidelines](https://github.com/ScratchAddons/ScratchAddons/blob/master/.github/CONTRIBUTING.md) first. 
-
-In case there is no existing GitHub issue in that repository related to your new addon idea, please [create one](https://github.com/ScratchAddons/ScratchAddons/issues/new/choose). However, if there is already an issue related to your feature idea, we suggest that you leave a comment on it stating your intention to develop the addon. This will enable other contributors to provide feedback on whether the addon could be accepted, or if further discussion is required.
-
-However, if you are creating an addon for personal use, you may proceed with this guide.
+If you plan to submit the addon you are developing as a pull request to our GitHub repository, please read our [contributing guidelines](https://github.com/ScratchAddons/ScratchAddons/blob/master/.github/CONTRIBUTING.md) first.
 {{< /admonition >}}
 
-## Step 1: Read about [addon basics](/docs/develop/getting-started/addon-basics/)
-Make sure to read that article to be familiar with the terminology.
+## Requirements
+Scratch Addons does not require any software for development except a text editor and a Chromium-based browser (121+), but we also recommend having Git, Firefox (121+) and Visual Studio Code installed.
 
-## Step 2: Fork/clone the [repo](https://github.com/ScratchAddons/ScratchAddons)
-Follow [these instructions](/docs/getting-started/installing/#from-source) to download the source code locally.
+## Installation
+To install the extension for development, see [Installing from source](/docs/getting-started/installing/#from-source).
 
-## Step 3: Load the extension into Chrome
-*Note: Chrome is recommended for working on addons. Nevertheless, addons are expected to work on Firefox and Edge.*  
-Now that you have the extension in your filesystem, go to `chrome://extensions` and toggle "developer mode".  
-Click "load unpacked", then select the folder where Scratch Addons is located. If you're having issues with this, make sure to be selecting the folder where `manifest.json` is located.  
-That's it, you loaded the extension! It should look similar to this:  
-![image](https://user-images.githubusercontent.com/17484114/91502527-accfd580-e89e-11ea-9e16-7daa2b808379.png)  
-Note: you can safely ignore it says "errors". That's just a warning for an unrecognized manifest key that's required by Firefox.
+## Creating the addon folder
+Each addon has its own internal ID used by the extension and other addons. Addon IDs should not contain any spaces or special characters except hyphens and should be self-descriptive, but not too long.
 
-## Step 4: What's your addon about?
-Now comes the fun part!  
-What will your addon do? Think of a self descriptive addon ID (no spaces or special characters, except hyphens).  
-Got it?
+New addons should not use an ID that was included in a stable version of the extension but later removed. These include:
 
-## Step 5: Create the folder for the addon
-Using a file explorer, go to the folder where Scratch Addons resides in your filesystem. Locate the `addons` folder.  
-Then, create a new folder with your epic addon ID as its name.
+- `a11y`
+- `data-category-tweaks`
+- `featured-dangos`
+- `fix-buttons`
+- `redirect-mobile-forums`
+- `tutorials-button`
 
-## Step 6: Add an addon manifest
-The addon manifest tells Scratch Addons how your addon works. Make sure to get this right to avoid headaches.  
-Inside the folder you just created, create an `addon.json` file.  
-This is a base you can use to start coding, make sure to change it in the future:
+Open the `addons.json` file in the `addons` folder, insert a new addon ID near the bottom of the file, then create a sub-folder with the same name.
+
+## The addon manifest
+Each addon has it's own [manifest](/docs/reference/addon-manifest/) that handles how it is displayed on the settings page, any settings the addon may have, which userscripts or userstyles to run and where to run them.
+
+Addon manifests are located in each addon's folder and named `addon.json`.
+Here is a minimal addon manifest:
 ```json
 {
-  "name": "Epic placeholder text in place of addon name",
-  "description": "Hello World! It would be really smart to replace this placeholder text with a description.",
-  "tags": ["community"],
-  "enabledByDefault": false
+  "name": "My addon",
+  "description": "TODO",
+  "tags": ["community"]
 }
 ```
-For more information on what you can declare in the manifest, check [this article](/docs/reference/addon-manifest/).
 
+For more information on what can be declared in the manifest, see the [the Addon Manifest reference](/docs/reference/addon-manifest/).
 
-## Step 7: Tell Scratch Addons what your addon's ID is
-Scratch Addons can't find new folders by itself, so you have to add the name to a special file.  
-Go to `scratchAddonsFolder/addons/addons.json` and add the ID of your addon to the array.
+The addon does not do anything yet, but it should appear in the popup and settings page after reloading the extension.
 
-## Step 8: Hello world
-Your addon does nothing at the moment, so it's a good time to check if everything we made previously worked.  
-Go to `chrome://extensions` and reload Scratch Addons by clicking the refresh symbol on its card.  
-Now, right-click the Scratch Addons icon, and click "options".  
-You should see your addon on the list! Once you find it, enable it, and set any settings that you may have.
+## Userscripts and userstyles
+[Userscripts](/docs/develop/userscripts/) and [userstyles](/docs/develop/userstyles/) are what make the addon work. Userscripts run JavaScript code and userstyles inject CSS styles. Addons may have a combination of userstyles and userscripts.
 
-## Step 9: The fun part, code!
-*Before proceeding, make sure you read the wiki article linked in step 1.*  
-  
-Here comes the fun part: create your own JS or CSS files!  
-Protip: after making any change to your addon, make sure to refresh the Scratch Addons extension like you did in step 8.  
-  
-Depending on what you want your addon to do, you should now check these wiki pages:
-- [Userscripts](/docs/develop/userscripts)
-- [Userstyles](/docs/develop/userstyles)
+Userscripts have access to [addon APIs](/docs/reference/addon-api/) to make Scratch-specific tasks such as fetching the currently logged in user easier.
 
-## Step 10: Make your addon customizable
-If you want, you can make your addon customizable!  
-Users of your addon will be able to toggle settings, enter numbers, and more!  
-To get started, see [how to declare settings in the addon manifest](/docs/reference/addon-manifest/#settings-object).  
-Then, head to the [addon.settings documentation](/docs/reference/addon-api/addon.settings) to learn how to access user choices from userscripts.
+When adding a userscript or userstyle to the addon's folder, it must be declared in the addon manifest or it will not run.
 
-## Step 11: Before publishing your addon
-Now that your addon works, let's make sure we can add it to the addon library.  
-Make sure your addon's manifest is suitable, [more info here](/docs/reference/addon-manifest). Keep close attention to the name, description and tags of your addon. Make sure to set `"enabledByDefault"` to `false` or remove it.  
-Make sure your addon doesn't break other addons.  
-Make sure your code is understandable; having unnecessary comments is better than no comments.
+## Addon settings
+The [settings object](/docs/reference/addon-manifest/#settings-object) in the addon manifest allows adding options such as toggles, text boxes or color pickers to your addon on the settings page to make it customizable by users.
 
-## Step 12: Send a pull request!
-Follow the steps on our [contributing guidelines](https://github.com/ScratchAddons/ScratchAddons/blob/master/.github/CONTRIBUTING.md). Simply put, fork the repo if you haven't already, commit your new addon and send a PR!  
-Keep in mind we might request you to make some changes, however, we will probably accept your addon as long as it's minimally suitable.
+See the [addon.settings](/docs/reference/addon-api/addon.settings) documentation on how to access user choices from userscripts and userstyles.
+
+## Before contributing
+{{< admonition info >}}
+In case there is no existing GitHub issue in that repository related to your new addon idea, please create one. However, if there is already an issue related to your feature idea, we suggest that you leave a comment on it stating your intention to develop the addon. This will enable other contributors to provide feedback on whether the addon could be accepted, or if further discussion is required.
+
+Also note that GitHub's terms of service require users to be 13+ to create an account with them.
+{{< /admonition >}}
+
+If you want to submit your addon to the Scratch Addons GitHub repository, so it can be added to the addon library, ensure the addon works as expected, with and without other addons enabled and that it does not break other addons. The addon's manifest should have a good name and description, `versionAdded` should be set to the next version of the extension and the addon should not be enabled by default. Addons should support dynamic enable and disable, but it is not required.
+Make sure the code is understandable; having unnecessary comments is better than no comments.
+
+## Sending a pull request
+Follow the steps on our [contributing guidelines](https://github.com/ScratchAddons/ScratchAddons/blob/master/.github/CONTRIBUTING.md). Simply put, fork the repository if you haven't already, commit your new addon and send a pull request.
+
+If your addon isn't finished or you need help with something, create a draft pull request.
+
+Keep in mind we might request you to make some changes, and the review process may be slow, however, we will probably accept your addon as long as it's minimally suitable and Scratch-specific.

@@ -31,7 +31,7 @@ while (true) {
 ### Using `addon.tab.displayNoneWhileDisabled` (`dynamicDisable`)
 We use `addon.tab.displayNoneWhileDisabled` to hide an image when the addon gets disabled.  
 We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.  
-We also set the `display` CSS property of the image to `flex` when visible, even tho that is not the default value for images.
+We also set the `display` CSS property of the image to `flex` when visible, even though that is not the default value for images.
 ```js
   /* userscript.js */
   const img = document.createElement("img");
@@ -347,6 +347,229 @@ Internally uses `window.django.gettext` or `window._messages`.
 ### [`addon.tab.appendToSharedSpace`](addon.tab.appendtosharedspace)
 
 See [addon.tab.appendToSharedSpace](addon.tab.appendtosharedspace).
+
+### `addon.tab.createModal`
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The title of the modal.</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td><code>object</code></td>
+    <td>No</td>
+    <td>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>isOpen</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>Whether to open the modal by default.</td>
+        </tr>
+        <tr>
+          <td>useEditorClasses</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>If in the editor, whether to apply the editor styles instead of the <code>scratch-www</code> ones.</td>
+        </tr>
+        <tr>
+          <td>useSizesClass</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>If on <code>scratch-www</code>, whether to add the <code>modal-sizes</code> class.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Object</code></td>
+  </tr>
+</table>
+
+Returns a blank modal using Scratch's styles. The modal's properties are listed below.
+
+<table>
+  <tr>
+    <th>Property</th>
+    <th>Type</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>container</td>
+    <td><code>HTMLElement</code></td>
+    <td>The container element.</td>
+  </tr>
+  <tr>
+    <td>content</td>
+    <td><code>HTMLElement</code></td>
+    <td>Where the content should be appended.</td>
+  </tr>
+  <tr>
+    <td>backdrop</td>
+    <td><code>HTMLElement</code></td>
+    <td>The modal overlay.</td>
+  </tr>
+  <tr>
+    <td>closeButton</td>
+    <td><code>HTMLElement</code></td>
+    <td>The close (X) button on the header.</td>
+  </tr>
+  <tr>
+    <td>open</td>
+    <td><code>Function</code></td>
+    <td>Opens the modal.</td>
+  </tr>
+  <tr>
+    <td>close</td>
+    <td><code>Function</code></td>
+    <td>Closes the modal.</td>
+  </tr>
+  <tr>
+    <td>remove</td>
+    <td><code>Function</code></td>
+    <td>Removes the modal, making it no longer usable.</td>
+  </tr>
+</table>
+
+### `addon.tab.confirm`
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The title of the modal.</td>
+  </tr>
+  <tr>
+    <td>message</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The message displayed in the modal.</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td><code>object</code></td>
+    <td>No</td>
+    <td>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>useEditorClasses</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>If in the editor, whether to apply the editor styles instead of the <code>scratch-www</code> ones.</td>
+        </tr>
+        <tr>
+          <td>okButtonLabel</td>
+          <td><code>string</code></td>
+          <td>"OK"</td>
+          <td>The label of the button for approving the confirmation.</td>
+        </tr>
+        <tr>
+          <td>cancelButtonLabel</td>
+          <td><code>string</code></td>
+          <td>"Cancel"</td>
+          <td>The label of the button for rejecting the confirmation.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;Boolean></code></td>
+  </tr>
+</table>
+
+Similar to `window.confirm`, except it's asynchronous and uses Scratch's styles.
+
+### `addon.tab.prompt`
+<table>
+  <tr>
+    <th>Parameter</th>
+    <th>Type</th>
+    <th>Required</th>
+    <th>Description</th>
+  </tr>
+  <tr>
+    <td>title</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The title of the modal.</td>
+  </tr>
+  <tr>
+    <td>message</td>
+    <td><code>string</code></td>
+    <td>Yes</td>
+    <td>The message displayed in the modal.</td>
+  </tr>
+  <tr>
+    <td>defaultValue</td>
+    <td><code>string</code></td>
+    <td>No</td>
+    <td>The initial value of the text box.</td>
+  </tr>
+  <tr>
+    <td>options</td>
+    <td><code>object</code></td>
+    <td>No</td>
+    <td>
+      <table>
+        <tr>
+          <th>Parameter</th>
+          <th>Type</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>useEditorClasses</td>
+          <td><code>Boolean</code></td>
+          <td>false</td>
+          <td>If in the editor, whether to apply the editor styles instead of the <code>scratch-www</code> ones.</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>Return value</td>
+    <td><code>Promise&lt;string | null></code></td>
+  </tr>
+</table>
+
+Similar to `window.prompt`, except it's asynchronous and uses Scratch's styles.
 
 ### `addon.tab.createBlockContextMenu`
 <table>
@@ -750,7 +973,7 @@ Removes a block that was previously added to the Debugger category in the block 
   </tr>
 </table>
 
-Runs the specified script file.
+Runs the specified script file relative to the extension's root (e.g. `chrome-extension://aeepldbjfoihffgcaejikpoeppffnlbd/`) in a `<script>` tag.
 
 ### `addon.tab.loadWorker`
 <table>
