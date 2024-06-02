@@ -1,7 +1,6 @@
 ---
 title: Scratch Messaging
 id: scratch-messaging
-layout: addons
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus accumsan massa sit amet sapien tristique, vel vulputate enim sagittis. Nulla vestibulum, ante vel ullamcorper porta, leo massa egestas lacus, ac bibendum mauris elit non lectus. Curabitur aliquet quis nulla nec dictum. Phasellus lobortis massa quis libero dictum, eu rhoncus leo vulputate. Etiam vehicula, nunc eu scelerisque lobortis, erat erat viverra nisi, nec egestas odio erat eu augue. Interdum et malesuada fames ac ante ipsum primis in faucibus. Curabitur ex neque, laoreet at consequat nec, semper pellentesque dolor. Proin rutrum metus nec arcu gravida sagittis. Donec fringilla fringilla leo vitae vehicula. Quisque interdum blandit malesuada. Maecenas blandit purus eu molestie mollis. Vivamus eu neque eget ante suscipit laoreet a at felis. Integer in tincidunt arcu. Sed iaculis, justo vel porta tempus, nisl turpis tempor ex, vel consequat quam nibh non elit. Fusce bibendum tincidunt diam, ac tincidunt nisi. Suspendisse ornare eget est at pulvinar.

@@ -1,0 +1,108 @@
+{{ block "html" . -}}
+
+<!DOCTYPE html>
+
+<html lang="{{ .Site.Language.Lang }}">
+
+<head>
+
+{{ partial "head" . }}
+{{ partial "scss" "assets/css/docs.scss" }}
+{{ if isset $.Params "embed_js" }}{{ range $.Params.embed_js }}
+<script defer src="{{ . }}"></script>
+{{ end }}{{ end }}
+{{ if isset $.Params "embed_css" }}{{ range $.Params.embed_css }}
+<link rel="stylesheet" href="{{ . }}" crossorigin />
+{{ end }}{{ end }}
+<script src="https://cdn.jsdelivr.net/npm/simple-scrollspy@2.2.0/demo/dist/simple-scrollspy.min.js" defer></script>
+<script defer src="/assets/js/docs.js"></script>
+{{ block "head-additional" . }}{{ end }}
+
+</head>
+
+<body>
+
+{{ block "body" . }}{{ end }}
+
+</body>
+
+</html>
+
+{{- end }}
+
+{{ define "body" }}
+
+{{ partial "nav" . }}
+
+{{ partial "docs/sidebar-toggle" . }}
+
+<main>
+	{{ block "main" . }}{{ end }}
+</main>
+
+{{ partialCached "footer" . .Site.Language.Lang }}
+
+{{ end }}
+
+{{ define "main" }}
+
+<div class="container-fluid">
+
+	<div id="docs-container">
+
+		<aside class="collapse d-lg-block" id="docs-nav-wrapper">
+			<!-- d-none  -->
+			<!-- px-2 py-4 -->
+			{{ partial "docs/sidebar" . }}
+		</aside>
+
+		{{ if ( and (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") (ne .TableOfContents "") ) -}}
+		<aside class="text-muted mb-3 mb-xl-0 p-3 p-xl-0" id="docs-toc"> 
+			<!-- d-none  -->
+			<!-- px-2 py-4 -->
+				<a class="text-muted collapse-button mx-xl-2 collapsed" data-toggle="collapse" href="#docs-toc-inner" role="button" aria-expanded="true">
+					<div>{{ T "Docs.TOC" }}</div>
+					{{- template "svg" -}}
+				</a> 
+				<div class="collapse d-xl-block" id="docs-toc-inner">
+					<hr class="my-1 mx-2" />
+					{{ .TableOfContents }}
+				</div>
+				
+		</aside>
+		{{- end }}
+
+		<div id="docs-header" class="md-content mb-3">
+			{{ block "header" . }}{{ end }}
+		</div>
+	
+		<article id="docs-content" class="md-content mb-3">
+			{{ block "content" . }}{{ end }}
+		</article>
+
+		<div id="docs-footer" class="md-content">
+			{{ partial "docs/footer" . }}
+			{{ if ( not $.Params.no_comments ) -}}
+				<div id="comments" class="mt-4">{{ partial "comments" }}</div>
+			{{- end }}
+		</div>
+
+	</div>
+
+</div>
+
+{{ end }}
+
+{{ define "header" }}
+
+	<h1>{{ .Title }}</h1>
+
+{{ end }}
+
+{{ define "content" }}
+
+	{{ .Content }}
+
+{{ end }}
+
+{{- define "svg" -}}<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" focusable="false" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"><g fill="#626262"><path fill-rule="evenodd" d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8L4.646 2.354a.5.5 0 0 1 0-.708z"/></g></svg>{{- end -}}

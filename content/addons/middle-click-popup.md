@@ -1,7 +1,6 @@
 ---
 title: Insert blocks by name
 id: middle-click-popup
-layout: addons
 ---
 
 **Insert blocks by name** is an addon which allows users to code more quickly by typing the name of blocks and inserting them at their mouse position, rather than having to search for them in the flyout. The popup is opened by middle clicking in the workspace or pressing `ctrl` + `space`. You can then type to search for blocks and using the mouse to grab one out of the popup.
