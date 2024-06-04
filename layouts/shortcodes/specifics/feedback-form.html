@@ -19,10 +19,6 @@
 					heading: '{{ T "FeedbackPage.PreSendWarning.Variations.Punishment.Heading" }}',
 					description: '{{ T "FeedbackPage.PreSendWarning.Variations.Punishment.Description" ( dict "Tag1Start" (add $ts 1) "Tag1End" (add $ts 2) ) | htmlEscape }}',
 				},
-				MV3LoadBug: {
-					heading: '{{ T "FeedbackPage.PreSendWarning.Variations.MV3LoadBug.Heading" }}',
-					description: '{{ T "FeedbackPage.PreSendWarning.Variations.MV3LoadBug.Description" | htmlEscape }}',
-				}
 			}
 		},
 		submitButton: '{{ T "FeedbackPage.SubmitButton" }}'
@@ -46,4 +42,4 @@
 		<label class="form-check-label" for="feedback-addons-list">{{ T "FeedbackPage.SendEnabled" }}</label>
 	</div>
 	<button class="btn btn-primary" id="feedback-submit" type="button">{{ T "FeedbackPage.SubmitButton" }}</a>
-</form>
+</form>	

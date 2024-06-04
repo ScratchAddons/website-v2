@@ -170,10 +170,6 @@ FeedbackPage:
         Heading: We can't punish people. We are not the Scratch Team.
         Description: "Scratch Addons is not affiliated with the Scratch website or the organizations that maintain it. We have no control of the content and the moderation on the Scratch website. {{ .Tag1Start }}There are many ways that you can report on the Scratch website.{{ .Tag1End }}"
 
-      MV3LoadBug:
-        Heading: There is a known issue causing all addons to stop working
-        Description: "Scratch Addons v1.38.1 has a known issue where using some addons may cause all of them to randomly stop working. Try disabling the Necropost Highlighter addon."
-
 # Strings used for /scratch-messaging-transition
 SMTPage:
   ScratchMessagingLogoAlt: Scratch Messaging Extension logo
