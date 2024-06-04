@@ -97,3 +97,42 @@ To reload the extension when testing, click the "Reload" button on the extension
   The unexpected WebExtension manifest property warnings may safely be ignored, since they are required by Chrome.
 {{< /admonition >}}
 
+### Installing on Firefox for Android
+
+{{< admonition info >}}
+  This is only recommened if there is a mobile specific issue that cannot be easilly replicated with the browser's devtools since extensions loaded this way are temporary and must be reinstalled over USB every time the app is restarted.
+{{< /admonition >}}
+
+#### One time setup
+
+##### Desktop
+
+1. Download and extract the Android SDK Platform Tools ([Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip), [MacOS](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)).
+1. Add the folder to the PATH environment variable so it can be used anywhere.
+1. Install web-ext with npm: `npm install --global web-ext`.
+
+##### Android
+
+1. In the Android settings app, open the about page and tap the build number 7 times.
+1. Navigate to the "Developer options" page and enable "USB debugging".
+1. Open the Firefox app and enable "Remote debugging vis USB" in its settings.
+
+#### Loading the extension
+
+1. Plug in the Android device and tap allow on it.
+2. Navigate to the `ScratchAddons` folder.
+3. Run `adb devices` to get the device's serial number and ensure ADB is working.
+4. Run the following command replacing `[serial number]` with the one from `adb devices`.
+```
+web-ext run -t firefox-android --adb-device [serial number] --firefox-apk org.mozilla.firefox
+```
+5. If the extension does not insall after 10 seconds close the Firefox app and try again.
+
+The extension should install and automaticlly reload when changes are made.
+
+#### Inspecting the extension
+1. On desktop Firefox go to [about:debugging](about:debugging).
+1. Click "Enable USB debugging".
+1. Click connect on the device in the sidebar.
+
+The extension card should show up similar a desktop one, if not restart desktop Firefox and try again.
