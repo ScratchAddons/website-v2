@@ -100,7 +100,7 @@ To reload the extension when testing, click the "Reload" button on the extension
 ### Installing on Firefox for Android
 
 {{< admonition info >}}
-  This is only recommened if there is a mobile specific issue that cannot be easilly replicated with the browser's devtools since extensions loaded this way are temporary and must be reinstalled over USB every time the app is restarted.
+  This is only recommended if there is a mobile specific issue that cannot be easily replicated with the browser's developer tools since extensions loaded this way are temporary and must be reinstalled over USB every time the app is restarted.
 {{< /admonition >}}
 
 #### One time setup
@@ -115,7 +115,7 @@ To reload the extension when testing, click the "Reload" button on the extension
 
 1. In the Android settings app, open the about page and tap the build number 7 times.
 1. Navigate to the "Developer options" page and enable "USB debugging".
-1. Open the Firefox app and enable "Remote debugging vis USB" in its settings.
+1. Open the Firefox app and enable "Remote debugging via USB" in its settings.
 
 #### Loading the extension
 
@@ -126,9 +126,9 @@ To reload the extension when testing, click the "Reload" button on the extension
 ```
 web-ext run -t firefox-android --adb-device [serial number] --firefox-apk org.mozilla.firefox
 ```
-5. If the extension does not insall after 10 seconds close the Firefox app and try again.
+5. If the extension does not install after 10 seconds close the Firefox app and try again.
 
-The extension should install and automaticlly reload when changes are made.
+The extension should install and automatically reload when changes are made.
 
 #### Inspecting the extension
 1. On desktop Firefox type `about:debugging` into the address bar.
