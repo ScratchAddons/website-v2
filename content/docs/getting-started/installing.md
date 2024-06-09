@@ -126,9 +126,8 @@ To reload the extension when testing, click the "Reload" button on the extension
 ```
 web-ext run -t firefox-android --adb-device [serial number] --firefox-apk org.mozilla.firefox
 ```
-5. If the extension does not install after 10 seconds close the Firefox app and try again.
 
-The extension should install and automatically reload when changes are made.
+The extension should install and automatically reload when changes are made, otherwise close the Firefox app and re-run the command.
 
 #### Inspecting the extension
 1. On desktop Firefox type `about:debugging` into the address bar.
