@@ -135,7 +135,7 @@ The extension should install and automatically reload when changes are made, oth
 
 #### Inspecting
 
-Desktop Firefox can inspect extensions and active tabs on the Android device over USB.
+Desktop Firefox can inspect extensions and active tabs running in the Firefox app over USB.
 
 1. On desktop Firefox type `about:debugging` into the address bar.
 1. Click "Enable USB Devices".
