@@ -134,8 +134,8 @@ web-ext run -t firefox-android --adb-device [serial number] --firefox-apk org.mo
 The extension should install and automatically reload when changes are made, otherwise close the Firefox app and re-run the command.
 
 #### Inspecting the extension
+
 1. On desktop Firefox type `about:debugging` into the address bar.
 1. Click "Enable USB Devices".
 1. Click connect on the device in the sidebar.
-
-The extension card should show up similar a desktop one, if not restart desktop Firefox and try again.
+1. Click on the device again.
