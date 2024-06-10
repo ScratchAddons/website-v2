@@ -118,6 +118,7 @@ To reload the extension when testing, click the "Reload" button on the extension
 
 1. In the Android settings app, open the about page and tap the build number 7 times.
 1. Navigate to the "Developer options" page and enable "USB debugging".
+1. Install the standard Firefox browser (not beta nor nightly channels) from the Play Store.
 1. Open the Firefox app and enable "Remote debugging via USB" in its settings.
 
 #### Loading the extension
