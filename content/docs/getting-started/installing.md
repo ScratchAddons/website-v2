@@ -133,9 +133,11 @@ web-ext run -t firefox-android --adb-device [serial number] --firefox-apk org.mo
 
 The extension should install and automatically reload when changes are made, otherwise close the Firefox app and re-run the command.
 
-#### Inspecting the extension
+#### Inspecting
+
+Desktop Firefox can inspect extensions and active tabs on the Android device over USB.
 
 1. On desktop Firefox type `about:debugging` into the address bar.
 1. Click "Enable USB Devices".
-1. Click connect on the device in the sidebar.
+1. Click connect on the device in the sidebar. If none appear, restart desktop Firefox.
 1. Click on the device again.
