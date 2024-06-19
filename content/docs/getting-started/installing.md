@@ -78,11 +78,21 @@ To update the extension when testing, click the refresh icon on the extension's 
 
 ### Installing on Mozilla Firefox
 
-To load the extension into Mozilla Firefox:
-
 {{< admonition info >}}
-  Addons loaded into Firefox this way are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
+  Local addons loaded into Firefox are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
 {{< /admonition >}}
+
+To load the extension into a new isolated Firefox profile:
+
+1. Ensure NPM is installed.
+
+1. Install `web-ext` with `npm install --global web-ext` as administrator/root.
+
+1. In the `ScratchAddons` folder, run `web-ext run`.
+
+This method will automatically reload he extension whenever changes are made, but pages will still need to be reloaded for addon changes to take effect.
+
+Alternatively, to load it into the main profile:
 
 1. Go to [about:debugging](about:debugging)
 
