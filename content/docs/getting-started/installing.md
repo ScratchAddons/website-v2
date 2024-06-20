@@ -79,7 +79,7 @@ To update the extension when testing, click the refresh icon on the extension's 
 ### Installing on Mozilla Firefox
 
 {{< admonition info >}}
-  Local addons loaded into Firefox are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
+  Local extensions loaded into Firefox are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
 {{< /admonition >}}
 
 To load the extension into a new isolated Firefox profile:
@@ -90,11 +90,13 @@ To load the extension into a new isolated Firefox profile:
 
 1. In the `ScratchAddons` folder, run `web-ext run`.
 
-This method will automatically reload he extension whenever changes are made, but pages will still need to be reloaded for addon changes to take effect.
+This method will automatically reload the extension whenever changes are made, but not tabs.
 
-Alternatively, to load it into the main profile:
+Because the browser is isolated, everything will be in its default state and will not effect the main profile.
 
-1. Go to [about:debugging](about:debugging)
+Alternatively, to load Firefox into the main profile:
+
+1. Type `about:debugging` into the address bar.
 
 1. Click "This Firefox" on the sidebar
 
