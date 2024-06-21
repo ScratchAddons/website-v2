@@ -51,6 +51,8 @@ Tacodiva made most of the addon as it stands today. Additionally, Griffpatch hel
 
 ## Changelog
 
+{{< docs/outdated-section >}}
+
 - **v1.30.0** The insert blocks by name addon was created.
 - **v1.31.0** The addon was completely overhauled, allowing for nesting blocks, adding autocomplete and changing how the blocks where shown in the popup.
 - **v1.31.1** The algorithm for searching was altered and several bugs where fixed.
@@ -66,8 +68,8 @@ Tacodiva made most of the addon as it stands today. Additionally, Griffpatch hel
 
 ## Gallery
 
-TODO
+{{< docs/stub-section >}}
 
 ## Related
 
-TODO
+{{< docs/stub-section >}}

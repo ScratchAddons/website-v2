@@ -87,6 +87,13 @@ Docs:
   Improve: Improve this page.
   SectionPages: Section Pages
 
+# Strings used on docs shortcodes
+DocsShortcodes:
+  StubPage: This page **needs expansion**. You can help by adding to it.
+  StubSection: This section **needs expansion**. You can help by adding to it.
+  OutdatedPage: This page **needs to be updated**. Please help updating it to reflect any newly available information.
+  OutdatedSection: This page **needs to be updated**. Please help updating it to reflect any newly available information.
+
 # Strings used for player modals
 PlayerModal: 
   LabelPlay: Play
@@ -208,6 +215,7 @@ CreditsPage:
   NProfilePicture: '{{.Name}} profile picture'
   NCommits: '{{.Count}} commits'
 
+# String used for comments
 Comments:
   Heading: Comments
   Description: Make sure to follow {{ .OpenTag1 }}the code of conduct{{ .CloseTag1 }}. You can see this comment section on {{ .OpenTag2 }}GitHub Discussions{{ .CloseTag2 }}, as well as editing and removing your comment.
