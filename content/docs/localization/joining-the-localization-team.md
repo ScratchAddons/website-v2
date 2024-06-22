@@ -54,7 +54,7 @@ Abkhaz (ab), Afrikaans (af), Amharic (am), Aragonese (an), Arabic (ar), Azerbaij
 
 We do not support these languages yet: Asturianu (ast), Esperanto (eo), Español Latinoamericano (es_419), Filipino (fil), Hausa (ha), Japanese (Hiragana) (ja-Hira), Occitan (oc), Portuguese (Portugal) (pt_PT). If you're interested on becoming a translator for one of these languages we currently do not support, please send an email to `translation@scratchaddons.com`.
 
-These languages **do not** accept new translator requests: **Italian, Japanese, Portuguese, Slovenian, Spanish.**
+These languages **do not** accept new translator requests: **Italian, Spanish.**
 
 ## Steps to join as a translator
 
