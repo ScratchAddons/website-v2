@@ -152,7 +152,14 @@ AddonsPage:
     L2: In this page, an easter egg addon will have an egg symbol besides its name.
   NAddons: "{{.Count}} addons"
   SourceCodeLabel: Source code on GitHub
-
+  SourceCodeLink:
+    Title: Open source code on GitHub
+  SASettingsLink:
+    Label: Settings in Scratch Addons
+    Title: Open in Scratch Addons settings
+  AddonDocsLink:
+    Label: Addon Docs page
+    Title: Read about this addon in Addon Docs
 # Strings used for /feedback
 FeedbackPage:
   Status:
