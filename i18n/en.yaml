@@ -219,3 +219,26 @@ CreditsPage:
 Comments:
   Heading: Comments
   Description: Make sure to follow {{ .OpenTag1 }}the code of conduct{{ .CloseTag1 }}. You can see this comment section on {{ .OpenTag2 }}GitHub Discussions{{ .CloseTag2 }}, as well as editing and removing your comment.
+
+AddonDocs:
+  Infobox:
+    Labels:
+      ID: ID
+      Description: Description
+      Credits: Credits
+      Tags: Tags
+      VersionAdded: Version added
+      LatestUpdate: Latest update
+      Informations: Informations
+      FeatureFlags: Feature flags
+    LatestUpdate:
+      Major: major
+    FeatureFlags:
+      enabledByDefault: Enabled by default
+      dynamicEnable: Dynamic enable
+      dynamicDisable: Dynamic disable
+      injectAsStyleElt: Inject as style element
+      updateUserstylesOnSettingsChange: Update userstyle on settings change
+    Links:
+      SourceCode: Source code
+      SASettings: Scratch Addon settings
