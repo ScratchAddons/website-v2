@@ -1,13 +1,20 @@
 {{ block "html" . -}}
 
-{{ if .Params.id }}
+{{ if .Params.id }}{{ if isset $.Site.Data.addons $.Page.Language.Lang -}}
 
 	{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
 
 	{{ .Scratch.Set "data" $data }}
 	{{ .Scratch.Set "title" $data.name }}
 
-{{ end -}}
+{{ else -}}
+
+	{{ $data := ( index ( where $.Site.Data.addons.en "id" .Params.id ) 0 ) }}
+
+	{{ .Scratch.Set "data" $data }}
+	{{ .Scratch.Set "title" $data.name }}
+
+{{ end }}{{ end -}}
 
 <!DOCTYPE html>
 

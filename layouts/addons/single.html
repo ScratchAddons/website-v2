@@ -16,9 +16,13 @@
 {{ define "content" }}
 
 	{{ if .Params.id }}
-		{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
-
-		{{ partial "docs/addons-infobox" $data }}
+		{{ if isset $.Site.Data.addons $.Page.Language.Lang }}
+			{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
+			{{ partial "docs/addons-infobox" $data }}
+		{{ else }}
+			{{ $data := ( index ( where $.Site.Data.addons.en "id" .Params.id ) 0 ) }}
+			{{ partial "docs/addons-infobox" $data }}
+		{{ end }}
 	{{ end }}
 
 	{{ .Content }}	

@@ -21,8 +21,13 @@
 				{{- if isset $s.Params "toc_title" -}}
 					{{ $s.Params.toc_title | markdownify -}}
 				{{ else if isset $s.Params "id" -}}
-					{{ $addon_data := ( index ( where ( index $data.addons $s.Language.Lang ) "id" $s.Params.id ) 0 ) }}
-					{{ $addon_data.name }}
+					{{ if isset $data.addons $s.Language.Lang }}
+						{{ $addon_data := ( index ( where ( index $data.addons $s.Language.Lang ) "id" .Params.id ) 0 ) }}
+						{{ $addon_data.name }}
+					{{ else }}
+						{{ $addon_data := ( index ( where $data.addons.en "id" .Params.id ) 0 ) }}
+						{{ $addon_data.name }}
+					{{ end }}
 				{{ else -}}
 					{{ $s.LinkTitle | markdownify -}}
 				{{ end -}}
@@ -42,8 +47,13 @@
 							{{ if isset .Params "toc_title" }}
 								{{ .Params.toc_title | markdownify }}
 							{{ else if isset .Params "id" -}}
-								{{ $addon_data := ( index ( where ( index $data.addons .Language.Lang ) "id" .Params.id ) 0 ) }}
-								{{ $addon_data.name }}			
+								{{ if isset $data.addons .Language.Lang }}
+									{{ $addon_data := ( index ( where ( index $data.addons .Language.Lang ) "id" .Params.id ) 0 ) }}
+									{{ $addon_data.name }}
+								{{ else }}
+									{{ $addon_data := ( index ( where $data.addons.en "id" .Params.id ) 0 ) }}
+									{{ $addon_data.name }}
+								{{ end }}	
 							{{ else }}
 								{{ .LinkTitle | markdownify }}
 							{{ end }}</a>
