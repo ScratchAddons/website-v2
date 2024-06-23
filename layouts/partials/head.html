@@ -2,7 +2,9 @@
 
 {{ .Scratch.Set "site" ( T ( $.Param "section_site_name" ) ) -}}
 
-{{ .Scratch.Set "title" .Title -}}
+{{ if not ( .Scratch.Get "title" ) -}}
+	{{ .Scratch.Set "title" .Title -}}
+{{ end }}
 {{ .Scratch.Set "title_page" (printf "%s - %s" ( .Scratch.Get "title" ) ( .Scratch.Get "site" ) ) -}}
 {{ .Scratch.Set "title_social" ( .Scratch.Get "title" ) -}}
 {{ if or (eq .IsHome true) (eq .Params.section_root true) -}}

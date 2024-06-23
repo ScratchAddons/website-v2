@@ -1,15 +1,25 @@
-{{ define "header" }}
-	{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
+{{ define "header" -}}
 
-	<h1>{{ $data.name }}</h1>
-	
+	{{ if .Scratch.Get "data" -}}
+
+		{{ $data := ( .Scratch.Get "data" ) -}}
+		<h1>{{ $data.name }}</h1>
+
+	{{ else -}}
+
+		<h1>{{ .Title }}</h1>
+
+	{{ end -}}
+
 {{ end }}	
 
 {{ define "content" }}
 
-	{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
+	{{ if .Params.id }}
+		{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
 
-	{{ partial "docs/addons-infobox" $data }}
+		{{ partial "docs/addons-infobox" $data }}
+	{{ end }}
 
 	{{ .Content }}	
 

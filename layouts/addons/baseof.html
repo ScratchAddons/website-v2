@@ -1,5 +1,14 @@
 {{ block "html" . -}}
 
+{{ if .Params.id }}
+
+	{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
+
+	{{ .Scratch.Set "data" $data }}
+	{{ .Scratch.Set "title" $data.name }}
+
+{{ end -}}
+
 <!DOCTYPE html>
 
 <html lang="{{ .Site.Language.Lang }}">
