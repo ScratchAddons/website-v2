@@ -78,6 +78,13 @@ jobs:
           cd repo
           bash ../script/sh/hugo-deploy-site.sh
 
+      - name: Upload whole repo
+        uses: actions/upload-artifact@v4
+        with:
+          name: repo
+          path: |
+            ./repo
+            !./repo/.git
       - name: Setup Hugo
         uses: peaceiris/actions-hugo@v3
         with:
