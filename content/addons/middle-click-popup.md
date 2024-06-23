@@ -39,11 +39,8 @@ Controls how tall the popup can be before a scrollbar appears. This is a percent
 
 ## Known issues
 
-- The blocks inside the popup of this addon will not respect the settings from the *Customizeable block shapes* addon.
+- The blocks inside the popup of this addon will not respect the settings from the *Customizable block shapes* addon.
 - The alogithm for sorting the search results still needs a lot of work, and sometimes the result you are probably looking for is hidden below a mountain of worse results.
-- The "stop other scripts in sprite" block will look in the menu like it can't connect to other blocks.
-- The "not" block cannot be put inside other triangle blocks like "and" or "or". "and not 1 = 2" will not work, but you can work around this using brackets, "and (not 1 = 2)" will work.
-- Typing Emoji into the search bar doesn't show blocks containing that emoji.
 
 ## Credit
 
