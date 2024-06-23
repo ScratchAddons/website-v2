@@ -56,7 +56,7 @@ Feedback is sent to a public open source [Glitch.com Node.js server instance](ht
 When using our website, third party services might be reached, such as:
 - [Cloudflare](https://www.cloudflare.com/privacypolicy/) for website hosting
 - [GitHub](https://docs.github.com/en/github/site-policy/github-privacy-statement) for website hosting
-- [jsDelivr](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net) for library CDN
+- [jsDelivr CDN](https://www.jsdelivr.com/terms/privacy-policy) for library CDN
 - [Google services](https://policies.google.com/privacy) such as YouTube
 - [Glitch](https://glitch.com/legal/privacy) for sending feedback
 
