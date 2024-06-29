@@ -52,7 +52,7 @@
 		<h6 class="card-subtitle mb-2 text-muted">
 			{{ .id }}
 			<a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' title='{{ T "AddonsPage.SourceCodeLink.Title" }}' aria-label='{{ T "AddonsPage.SourceCodeLabel" }}' rel="noopener" data-toggle="tooltip" data-placement="top"><span class="iconify-inline" data-icon="simple-icons:github"></span></a>
-			<a href='https://scratch.mit.edu/scratch-addons-extension/settings#{{ .id }}' title='{{ T "AddonsPage.SASettingsLink.Title" }}' aria-label='{{ T "AddonsPage.SASettingsLink.Label" }}' rel="noopener" data-toggle="tooltip" data-placement="top"><span class="iconify-inline" data-icon="fa-solid:cog"></span></a>
+			<a href='https://scratch.mit.edu/scratch-addons-extension/settings#addon-{{ .id }}' title='{{ T "AddonsPage.SASettingsLink.Title" }}' aria-label='{{ T "AddonsPage.SASettingsLink.Label" }}' rel="noopener" data-toggle="tooltip" data-placement="top"><span class="iconify-inline" data-icon="fa-solid:cog"></span></a>
 			{{ if (fileExists (delimit (slice "content/addons/" .id ".md") "")) -}}
 				<a href='./{{ .id }}' title='{{ T "AddonsPage.AddonDocsLink.Title" }}' aria-label='{{ T "AddonsPage.AddonDocsLink.Label" }}' rel="noopener" data-toggle="tooltip" data-placement="top"><span class="iconify-inline" data-icon="fa-solid:book-open"></span></a>
 			{{- end }}
