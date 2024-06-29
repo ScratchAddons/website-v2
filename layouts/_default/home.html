@@ -177,8 +177,7 @@ window.i18nSplide = {
 
 <section id="install" class="container text-center py-4">
 	<div class="row">
-		<div class="col-12 col-lg"></div>
-		<div class="col-12 col-lg-auto mb-4 mb-lg-0 mr-lg-3">
+		<div class="col-12 col-lg-6 mb-4 d-md-flex flex-column justify-content-center">
 			<h2>{{ T "IndexPage.Install.Heading" }}</h2>
 			<p>{{ T "IndexPage.Install.Paragraph" }}</p>
 			<p>
@@ -192,18 +191,30 @@ window.i18nSplide = {
 					<span class="iconify-inline" data-icon="simple-icons:microsoftedge"></span> {{ T "Global.EdgeShort" }}
 				</a>
 			</p>
-			<p>
+			<p class="mb-4">
 				{{- .Scratch.Add "open_tag_2" "<a href='" }}
 				{{- .Scratch.Add "open_tag_2" ( "/docs/getting-started/installing#from-source" | relLangURL ) }}
 				{{- .Scratch.Add "open_tag_2" "' target='_blank' rel='noopener'>" }}
 				{{- T "IndexPage.Install.InstallButton.Other" ( dict "OpenTag1" "<a href='https://github.com/ScratchAddons/ScratchAddons/releases' target='_blank' rel='noopener'>" "CloseTag1" "</a>" "OpenTag2" ( .Scratch.Get "open_tag_2" ) "CloseTag2" "</a>" ) | safeHTML }}
 			</p>
+			<div class="">
+				<p id="total-users" style="font-size: 3rem; font-weight: 500; line-height: 3rem;" class="odometer mb-0"></p>
+				<p style="font-size: 1.75rem; font-weight: 500;">{{ T "IndexPage.Users" }}</p>
+			</div>
 		</div>
-		<div class="col-12 col-lg-auto ml-lg-3 d-flex flex-column justify-content-center">
-			<p id="total-users" style="font-size: 3rem; font-weight: 500; line-height: 3rem;" class="odometer mb-0"></p>
-			<p style="font-size: 1.75rem; font-weight: 500;">{{ T "IndexPage.Users" }}</p>
+		<div class="col-12 col-lg-6 d-md-flex flex-column justify-content-center">
+			<h2>Try</h2>
+			<p>Try some of the editor addons on TurboWarp before installing.</p>
+			<p>
+				<a class="btn btn-success dark-btn-white btn-lg mb-4" href="https://turbowarp.org/discover-addons" target="_blank" rel="noopener">
+					<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 135.467 135.467" class="tw-icon"><path d="M98.192 1.204c-6.807.238-13.357 2.614-20.218 2.481-14.303.854-28.734.32-42.974.24-4.323-1.562-14.692 2.28-19.632 7.582-5.757 5.099-9.88 12.67-9.528 20.563-.585 2.59 2.655 10.996 2.145 9.186-3.048-6.151 2.036 4.726 1.333 6.589 1.045 12.599 4.386 27.163 16.26 33.89 3.327 1.708 11.174 3.291 4.647 7.217-6.228 9.08-5.964 21.685-1.254 31.34 6.966 11.962 22.255 15.536 35.143 13.595 7.323-1.644 14.712.557 21.999-.656 13.332-2.59 23.288-15.291 24.642-28.482.631-10.279-4.837-20.888-13.792-26.065 6.633-2.66 14.894-1.309 20.18-7.177 8.356-6.768 12.36-18.328 10.332-28.845 3.108-12.223.028-26.451-9.704-34.907-5.402-4.44-12.697-6.299-19.58-6.55Zm.112 12.491c8.845-.353 17.259 6.611 17.937 15.571-.26 7.166-1.9 14.2-.83 21.383-.87 9.122-10.128 16.217-19.188 14.284-4.79.366-10.896-6.132-12.154-6.71.528 9.713.301 19.443.38 29.164 11.59.787 17.88 16.23 10.979 25.284-3.968 7.175-13.046 9.719-20.683 8.02-10.39-.196-21.993 3.855-31.307-2.625-9.633-6.816-7.06-24.464 4.687-27.419 7.071-3.368 1.836-12.848 3.388-19.044-.257-6.483-6.262 3.321-10.588 1.53-7.526.691-14.583-4.652-16.424-11.9-2.849-8.363-2.462-17.443-5.32-25.804-1.58-10.348 8.274-20.262 18.63-18.96 14.84.14 29.724.575 44.542-.51 5.395-.261 10.644-1.653 15.95-2.264zM8.602 42.684l.14.316Zm50.8 45.835-.076.04zm25.047 7.218.017.74z" fill="currentColor"/><path fill="currentColor" d="M103.81 31.766q-1.056 4.619-1.584 10.029-.132 1.451.264 3.694.396 2.64.396 3.695 0 3.43-4.487 3.43-2.903 0-3.826-1.715-.132-2.903.131-7.917.264-5.938.264-7.917-.132 0-.395-.264-12.272.528-23.092 1.584-.264 1.715 0 4.222l.528 4.75q-.528 4.09-.528 12.14.396 3.43.396 29.425v9.633q0 2.243.66 3.167h8.18q5.015-.66 5.015 4.222 0 2.903-2.771 4.09-1.716.66-6.07.265-2.64-.264-6.202-.132-4.882.66-11.876 1.055-7.125.396-8.708-1.979-1.056-1.583 0-3.299 1.847-2.903 9.632-2.903 4.09 0 4.09-2.243 0-1.187-.131-2.243 0-3.299.132-5.806.395-7.125 0-20.057-.528-18.737.395-33.648l-.395-.395q-4.09.263-15.307-.132-.528 0-8.049.527 1.847 12.668 2.111 18.078l-.264 3.563q-.132 1.979-3.298 1.979-2.508 0-4.223-9.5-.792-5.675-1.583-11.48 0-.924-.924-3.167-.792-2.376-.792-3.563 0-3.299 5.014-4.09.396 0 1.32.131.924.132 1.32.132h32.723q12.14-.528 23.488-2.111.792-.396 2.375-.792 2.771-.264 4.75 1.32 1.98 1.451 1.32 4.222z"/></svg>
+					TurboWarp
+				</a>	
+			</p>
+			<p class="text-center">
+				<img style="max-width: 100%;" src="/assets/img/showcase/tw-addons.png"></img>
+			</p>
 		</div>
-		<div class="col-12 col-lg"></div>
 	</div>
 </section>
 

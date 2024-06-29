@@ -97,3 +97,8 @@ To reload the extension when testing, click the "Reload" button on the extension
   The unexpected WebExtension manifest property warnings may safely be ignored, since they are required by Chrome.
 {{< /admonition >}}
 
+## TurboWarp
+
+Some addons, primarily editor addons, are implemented natively within TurboWarp (so called TurboWarp Addons). If you want to try the select addons of Scratch Addons without installing the browser extension, this is one way of it. Check out https://turbowarp.org/addons to configure the available addons.
+
+Since TurboWarp also offers [a desktop client](https://desktop.turbowarp.org/), this means that you can also use the available addons as an offline editor app.
