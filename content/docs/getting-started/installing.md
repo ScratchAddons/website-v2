@@ -78,11 +78,11 @@ To update the extension when testing, click the refresh icon on the extension's 
 
 ### Installing on Mozilla Firefox
 
-{{< admonition info >}}
-  Local extensions loaded into Firefox are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
-{{< /admonition >}}
-
 To load the extension into Mozilla Firefox:
+
+{{< admonition info >}}
+  Extensions loaded into Firefox this way are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
+{{< /admonition >}}
 
 1. Type `about:debugging` into the address bar.
 
@@ -97,18 +97,6 @@ To reload the extension when testing, click the "Reload" button on the extension
 {{< admonition info >}}
   The unexpected WebExtension manifest property warnings may safely be ignored, since they are required by Chrome.
 {{< /admonition >}}
-
-Alternatively, to load the extension into a new isolated Firefox profile:
-
-1. Ensure NPM is installed.
-
-1. Install `web-ext` with `npm install --global web-ext` as administrator/root.
-
-1. In the `ScratchAddons` folder, run `web-ext run`.
-
-This method will automatically reload the extension whenever changes are made, but not tabs.
-
-Because the browser is isolated, everything will be in its default state and will not effect the main profile.
 
 
 ### Installing on Firefox for Android
