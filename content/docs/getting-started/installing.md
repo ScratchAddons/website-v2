@@ -110,14 +110,14 @@ To reload the extension when testing, click the "Reload" button on the extension
 ##### Desktop
 
 1. Download and extract the Android SDK Platform Tools ([Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip), [MacOS](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)).
-1. Add the folder to the PATH environment variable so it can be used anywhere.
-1. Install web-ext with npm: `npm install --global web-ext`.
+1. Add the folder to the PATH environment variable.
+1. Install web-ext with NPM by running `npm install --global web-ext`.
 
 ##### Android
 
 1. In the Android settings app, open the about page and tap the build number 7 times.
 1. Navigate to the "Developer options" page and enable "USB debugging".
-1. Install the standard Firefox browser (not beta nor nightly channels) from the Play Store.
+1. Install the standard Firefox app from the [Google Play store](https://play.google.com/store/apps/details?id=org.mozilla.firefox).
 1. Open the Firefox app and enable "Remote debugging via USB" in its settings.
 
 #### Loading the extension
@@ -125,7 +125,7 @@ To reload the extension when testing, click the "Reload" button on the extension
 1. Plug in the Android device and tap allow on it.
 2. Navigate to the `ScratchAddons` folder.
 3. Run `adb devices` to get the device's serial number and ensure ADB is working.
-4. Run the following command replacing `[serial number]` with the one from `adb devices`.
+4. Run the following command replacing `[serial number]` with the one from `adb devices`:
 ```
 web-ext run -t firefox-android --adb-device [serial number] --firefox-apk org.mozilla.firefox
 ```
@@ -134,7 +134,7 @@ The extension should install and automatically reload when changes are made, oth
 
 #### Inspecting
 
-Desktop Firefox can inspect extensions and active tabs running in the Firefox app over USB.
+Desktop Firefox can inspect extensions and active tabs running in the Firefox app over USB:
 
 1. On desktop Firefox type `about:debugging` into the address bar.
 1. Click "Enable USB Devices".
