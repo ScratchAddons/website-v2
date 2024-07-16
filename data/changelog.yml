@@ -1670,3 +1670,12 @@
   Status: Released
   Entry: |
     - Bug fix: addons not working
+
+- Version: v1.38.3
+  Index: 95
+  Tag: v1.38.3
+  Name: v1.38.3
+  Date: 2024-07-15
+  Status: Released
+    - "Scratch Messaging" addon: message count is now requested less often when not using Scratch
+    - "Show exact count" addon: the exact project count in studios now requires a click to calculate
