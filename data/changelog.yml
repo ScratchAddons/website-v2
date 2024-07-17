@@ -1680,3 +1680,12 @@
   Entry: |
     - "Scratch Messaging" addon: message count is now requested less often when not using Scratch
     - "Show exact count" addon: the exact project count in studios now requires a click to calculate
+
+- Version: v1.38.4
+  Index: 96
+  Tag: v1.38.4
+  Name: v1.38.4
+  Date: 2024-07-16
+  Status: Released
+  Entry: |
+    - Bug fix: extension not reacting to logging in or out of Scratch
