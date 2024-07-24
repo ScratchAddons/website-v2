@@ -1689,3 +1689,13 @@
   Status: Released
   Entry: |
     - Bug fix: extension not reacting to logging in or out of Scratch
+
+- Version: v1.38.5
+  Index: 97
+  Tag: v1.38.5
+  Name: v1.38.5
+  Date: 2024-07-23
+  Status: Released
+  Entry: |
+    - "Show exact count" addon: removed profile exact counts for favorites, curated studios and followed studios (send us feedback if you were using this, we may add them back!)
+    - "Forum post cooldown display" addon: optimized to avoid extra request to Scratch servers
