@@ -26,7 +26,10 @@ New addons should not use an ID that was included in a stable version of the ext
 - `data-category-tweaks`
 - `featured-dangos`
 - `fix-buttons`
+- `forum-time-zones`
+- `image-uploader`
 - `redirect-mobile-forums`
+- `scratchstats`
 - `tutorials-button`
 
 Open the `addons.json` file in the `addons` folder, insert a new addon ID near the bottom of the file, then create a sub-folder with the same name.
