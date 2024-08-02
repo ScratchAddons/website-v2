@@ -1,4 +1,4 @@
-import { Splide } from 'https://cdn.jsdelivr.net/npm/@splidejs/splide@3/+esm'
+import { Splide } from 'https://cdn.jsdelivr.net/npm/@splidejs/splide@4/+esm'
 import { Intersection } from 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-intersection@0/+esm'
 import { AutoScroll } from 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-auto-scroll@0/+esm'
 
@@ -25,7 +25,11 @@ Splide.defaults = {
     i18n: window.i18nSplide
 };
 
-new Splide('#highlights-carousel', {
+Splide.defaults = {
+    i18n: window.i18nSplide
+};
+
+const highlightsCarouselOptions = {
     type: 'loop',
     perPage: 5,
     perMove: 1,
@@ -45,21 +49,31 @@ new Splide('#highlights-carousel', {
         }
 
     },
-    autoScroll: {
-        speed: 1,
-    },
-    // arrows: { 
-    //     prev: prevArrow,
-    //     next: nextArrow,
-    // }
-}).mount({ AutoScroll });
+}
 
-$(() => {
+const highlightsCarouselExtensions = {}
 
-    new Splide('#intro-carousel', {
-        type: 'loop',
-        perMove: 1,
-        start: 1,
+if (!window.matchMedia("(prefers-reduced-motion)").matches) {
+    highlightsCarouselOptions.autoScroll = {
+        speed: 1
+    }
+    highlightsCarouselExtensions.AutoScroll = AutoScroll
+}
+
+new Splide('#highlights-carousel', highlightsCarouselOptions).mount(highlightsCarouselExtensions);
+
+/* =============================================================
+                         INTRO CAROUSEL
+============================================================= */
+
+const introCarouselOptions = {
+    type: 'loop',
+    perMove: 1,
+    start: 1,
+}
+
+if (!window.matchMedia("(prefers-reduced-motion)").matches) {
+    Object.assign({
         autoplay: 'pause',
         intersection: {
             inView: {
@@ -70,11 +84,9 @@ $(() => {
             },
         },
         interval: 4000,
-        pauseOnHover: true,
-        // arrows: { 
-        //     prev: prevArrow,
-        //     next: nextArrow,
-        // }
-    }).mount({ Intersection });
+        pauseOnHover: true,    
+    }, introCarouselOptions)
+}
 
-})
+
+new Splide('#intro-carousel', introCarouselOptions).mount({ Intersection });

@@ -1,56 +1,32 @@
-{{ define "head" }}{{ end }}
+{{ define "header" -}}
 
-{{ define "body" }}
+	{{ if .Scratch.Get "data" -}}
 
-{{ partial "nav" . }}
+		{{ $data := ( .Scratch.Get "data" ) -}}
+		<h1>{{ $data.name }}</h1>
 
-<main>
-	<h1>Addons</h1>
+	{{ else -}}
 
-	<div class="container-fluid">
+		<h1>{{ .Title }}</h1>
 
-		<div id="docs-container">
-	
-			<aside class="collapse d-lg-block" id="docs-nav-wrapper">
-				<!-- d-none  -->
-				<!-- px-2 py-4 -->
-				{{ partial "docs/sidebar" . }}
-			</aside>
-	
-			{{ if ( and (ne .TableOfContents "<nav id=\"TableOfContents\"></nav>") (ne .TableOfContents "") ) -}}
-			<aside class="text-muted mb-3 mb-xl-0 p-3 p-xl-0" id="docs-toc"> 
-				<!-- d-none  -->
-				<!-- px-2 py-4 -->
-					<a class="text-muted collapse-button mx-xl-2 collapsed" data-toggle="collapse" href="#docs-toc-inner" role="button" aria-expanded="true">
-						<div>{{ T "Docs.TOC" }}</div>
-						{{- template "svg" -}}
-					</a> 
-					<div class="collapse d-xl-block" id="docs-toc-inner">
-						<hr class="my-1 mx-2" />
-						{{ .TableOfContents }}
-					</div>
-					
-			</aside>
-			{{- end }}
-	
-			<article id="docs-content" class="md-content mb-3">
-				{{ block "content" . }}{{ end }}
-			</article>
-	
-			<div id="docs-footer" class="md-content">
-				{{ partial "docs/footer" . }}
-				{{ if ( not $.Params.no_comments ) -}}
-					<div id="comments" class="mt-4">{{ partial "comments" }}</div>
-				{{- end }}
-			</div>
-	
-		</div>
-	
-	</div>
-	
-	{{ block "content" . }}{{ end }}
-</main>
+	{{ end -}}
 
-{{ partialCached "footer" . .Site.Language.Lang }}
+{{ end }}	
+
+{{ define "content" }}
+
+	{{ if .Params.id }}
+		{{ $data := ( index ( where ( index $.Site.Data.addons $.Page.Language.Lang ) "id" .Params.id ) 0 ) }}
+
+		{{ partial "docs/addons-infobox" $data }}
+	{{ end }}
+
+	{{ .Content }}	
+
+{{ end }}
+
+{{ define "head-additional" }}
+
+	{{ partial "scss" "assets/css/markdown.scss" }}
 
 {{ end }}

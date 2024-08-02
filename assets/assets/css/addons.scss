@@ -1,5 +1,4 @@
 @import "variables";
-@import "parts/lds-elipsis";
 
 .card-body {
 	.text-muted a {
@@ -90,5 +89,12 @@ body.dark .card-body {
 		right: 0;
 		bottom: 0;
 		left: 0;
+	}
+}
+
+@media (max-width: 767.98px) {
+	#docs-content .container {
+		padding-left: 0;
+		padding-right: 0
 	}
 }

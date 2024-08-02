@@ -2,7 +2,7 @@
 
 	<ul class="docs-nav-list text-muted">
 		{{- $navRoot := cond (and (ne .Params.section_root true) (eq .Site.Home.Type "docs")) .Site.Home .FirstSection -}}
-		{{- template "section-tree-nav" (dict "page" . "section" $navRoot "level" 1) -}}
+		{{- template "section-tree-nav" (dict "page" . "section" $navRoot "level" 1 "addons_data" ( .Scratch.Get "data" ) "data" $.Site.Data "lang" $.Site.Data ) -}}
 	</ul>
 
 </nav>
@@ -11,12 +11,27 @@
 	{{- $s := .section }}
 	{{- $p := .page }}
 	{{- $l := .level }}
+	{{- $data := .data }}
 	{{- $active := eq $p.CurrentSection $s }}
 	{{- $show := or ($p.IsDescendant $s) (eq $p $s) }}
 	{{- $sid := delimit (slice "docs-nav-section-pages" ($s.RelPermalink | anchorize)) "-" -}}
 	<li class="docs-nav-section">
 		<span class="d-flex">
-			<a href="{{ $s.RelPermalink }}" class="docs-nav-page pl-0 pr-2{{ if not $show }} collapsed{{ end }}{{ if ( or $active $show ) }} active{{ end }}">{{ if isset $s.Params "toc_title" }}{{ $s.Params.toc_title | markdownify }}{{ else }}{{ $s.LinkTitle | markdownify }}{{ end }}</a>
+			<a href="{{ $s.RelPermalink }}" class="docs-nav-page pl-0 pr-2{{ if not $show }} collapsed{{ end }}{{ if ( or $active $show ) }} active{{ end }}">
+				{{- if isset $s.Params "toc_title" -}}
+					{{ $s.Params.toc_title | markdownify -}}
+				{{ else if isset $s.Params "id" -}}
+					{{ if isset $data.addons $s.Language.Lang }}
+						{{ $addon_data := ( index ( where ( index $data.addons $s.Language.Lang ) "id" .Params.id ) 0 ) }}
+						{{ $addon_data.name }}
+					{{ else }}
+						{{ $addon_data := ( index ( where $data.addons.en "id" .Params.id ) 0 ) }}
+						{{ $addon_data.name }}
+					{{ end }}
+				{{ else -}}
+					{{ $s.LinkTitle | markdownify -}}
+				{{ end -}}
+			</a>
 			{{- if (not (eq $l 1)) -}}<a class="collapse-button{{ if not $show }} collapsed{{ end }}" data-toggle="collapse" href="#{{ $sid }}" role="button" aria-expanded="true">{{- template "svg" -}}</a>{{ end -}}
 		</span>
 		<ul class="docs-nav-section-pages {{ if (gt $l 1) }}collapse{{ end }} {{ if $show }}show{{ end }}" id="{{ $sid }}">
@@ -28,10 +43,23 @@
 					{{- $mid := delimit (slice "docs-nav-page" (.RelPermalink | anchorize)) "-" }}
 					{{- $active := eq . $p }}
 					<li class="docs-nav-page">
-						<a class="{{ if $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">{{ if isset .Params "toc_title" }}{{ .Params.toc_title | markdownify }}{{ else }}{{ .LinkTitle | markdownify }}{{ end }}</a>
+						<a class="{{ if $active }} active{{ end }}" id="{{ $mid }}" href="{{ .RelPermalink }}">
+							{{ if isset .Params "toc_title" }}
+								{{ .Params.toc_title | markdownify }}
+							{{ else if isset .Params "id" -}}
+								{{ if isset $data.addons .Language.Lang }}
+									{{ $addon_data := ( index ( where ( index $data.addons .Language.Lang ) "id" .Params.id ) 0 ) }}
+									{{ $addon_data.name }}
+								{{ else }}
+									{{ $addon_data := ( index ( where $data.addons.en "id" .Params.id ) 0 ) }}
+									{{ $addon_data.name }}
+								{{ end }}	
+							{{ else }}
+								{{ .LinkTitle | markdownify }}
+							{{ end }}</a>
 					</li>
 				{{- else }}
-					{{- template "section-tree-nav" (dict "page" $p "section" . "level" (add $l 1)) }}
+					{{- template "section-tree-nav" (dict "page" $p "section" . "level" (add $l 1) "data" $data ) }}
 				{{- end }}
 			{{- end }}
 			{{- end }}

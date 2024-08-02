@@ -7,6 +7,9 @@ weight: 2
 
 Scratch Addons is available in these stores.
 
+[![Chrome Web Store](https://raw.githubusercontent.com/ScratchAddons/ScratchAddons/master/.github/readme-images/cws-badge.png)](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco)
+[![Firefox Add-ons](https://raw.githubusercontent.com/ScratchAddons/ScratchAddons/master/.github/readme-images/ff-addon-badge.png)](https://addons.mozilla.org/firefox/addon/scratch-messaging-extension/)
+
 | Store | Install | Supported browsers | System requirements |
 | - | - | - | - |
 | Chrome Web Store | [![Install for Chrome Web Store](https://img.shields.io/chrome-web-store/v/fbeffbjdlemaoicjdapfpikkikjoneco?style=flat-square&logo=google-chrome&logoColor=white&label=install&color=4285F4)](https://chrome.google.com/webstore/detail/fbeffbjdlemaoicjdapfpikkikjoneco) | Google Chrome 96+<br />Microsoft Edge 96+<br />Opera 82+<br />Brave 1.33+<br />Vivaldi 5.0+<br />*Chromium 96+* | Windows 7+<br />OS X / MacOS 10.11+
@@ -78,10 +81,10 @@ To update the extension when testing, click the refresh icon on the extension's 
 To load the extension into Mozilla Firefox:
 
 {{< admonition info >}}
-  Addons loaded into Firefox this way are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
+  Extensions loaded into Firefox this way are temporary and must be reloaded every time the browser is restarted. Because of this Chrome is recommended for development, but everything is still expected to work on Firefox.
 {{< /admonition >}}
 
-1. Go to [about:debugging](about:debugging)
+1. Type `about:debugging` into the address bar.
 
 1. Click "This Firefox" on the sidebar
 
@@ -89,11 +92,51 @@ To load the extension into Mozilla Firefox:
 
 1. Select the `manifest.json` file in the `ScratchAddons` folder.
 
-1. If a permission tab opens, click the "Enable" button.
-
 To reload the extension when testing, click the "Reload" button on the extension's card.
 
 {{< admonition info >}}
   The unexpected WebExtension manifest property warnings may safely be ignored, since they are required by Chrome.
 {{< /admonition >}}
 
+
+### Installing on Firefox for Android
+
+{{< admonition info >}}
+  This is only recommended if there is a mobile specific issue that cannot be easily replicated with the browser's developer tools since extensions loaded this way are temporary and must be reinstalled over USB every time the app is restarted.
+{{< /admonition >}}
+
+#### One time setup
+
+##### Desktop
+
+1. Download and extract the Android SDK Platform Tools ([Windows](https://dl.google.com/android/repository/platform-tools-latest-windows.zip), [MacOS](https://dl.google.com/android/repository/platform-tools-latest-darwin.zip), [Linux](https://dl.google.com/android/repository/platform-tools-latest-linux.zip)).
+1. Add the folder to the PATH environment variable.
+1. Install web-ext with NPM by running `npm install --global web-ext`.
+
+##### Android
+
+1. In the Android settings app, open the about page and tap the build number 7 times.
+1. Navigate to the "Developer options" page and enable "USB debugging".
+1. Install the standard Firefox app from the [Google Play store](https://play.google.com/store/apps/details?id=org.mozilla.firefox).
+1. Open the Firefox app and enable "Remote debugging via USB" in its settings.
+
+#### Loading the extension
+
+1. Plug in the Android device and tap allow on it.
+2. Navigate to the `ScratchAddons` folder.
+3. Run `adb devices` to get the device's serial number and ensure ADB is working.
+4. Run the following command replacing `[serial number]` with the one from `adb devices`:
+```
+web-ext run -t firefox-android --adb-device [serial number] --firefox-apk org.mozilla.firefox
+```
+
+The extension should install and automatically reload when changes are made, otherwise close the Firefox app and re-run the command.
+
+#### Inspecting
+
+Desktop Firefox can inspect extensions and active tabs running in the Firefox app over USB:
+
+1. On desktop Firefox type `about:debugging` into the address bar.
+1. Click "Enable USB Devices".
+1. Click connect on the device in the sidebar. If none appear, restart desktop Firefox.
+1. Click on the device again.

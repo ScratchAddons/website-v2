@@ -104,7 +104,7 @@
       Type: npm
       Name: Twemoji
       License: MIT
-      Link: https://www.npmjs.com/package/twemoji
+      Link: https://www.npmjs.com/package/@twemoji/api
     - ID: odometer
       Type: npm
       Name: Odometer

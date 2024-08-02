@@ -13,15 +13,15 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="infobox-label">ID</td>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.ID" }}</td>
 			<td class="infobox-data">{{ .id }}</td>
 		</tr>
 		<tr>
-			<td class="infobox-label">Description</td>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.Description" }}</td>
 			<td class="infobox-data">{{ .description }}</td>
 		</tr>
 		<tr>
-			<td class="infobox-label">Credits</td>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.Credits" }}</td>
 			<td class="infobox-data">
 				<ul>{{ range .credits }}
 					<li>
@@ -36,7 +36,7 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="infobox-label">Tags</td>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.Tags" }}</td>
 			<td class="infobox-data">
 				{{ range .tags }}
 					<span class="badge badge-primary">{{ . }}</span>
@@ -44,20 +44,20 @@
 			</td>
 		</tr>
 		<tr>
-			<td class="infobox-label">Version added</td>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.VersionAdded" }}</td>
 			<td class="infobox-data">{{ with .versionAdded }}{{ . }}{{ else }}No{{ end }}</td>
 		</tr>
 		{{ with .latestUpdate }}<tr>
-			<td class="infobox-label">Latest update</td>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.LatestUpdate" }}</td>
 			<td class="infobox-data">
 				{{ .version }}
 				{{ if .isMajor }}
-					<span class="badge badge-primary">major</span>
+					<span class="badge badge-primary">{{ T "AddonDocs.Infobox.LatestUpdate.Major" }}</span>
 				{{ end }}
 			</td>
 		</tr>{{ end }}
 		{{ with .info }}<tr>
-			<td class="infobox-label">Informations</td>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.Informations" }}</td>
 			<td class="infobox-data"><ul>
 				<!-- TODO: Do better way to display types -->
 				{{ range . }}
@@ -66,28 +66,28 @@
 			</ul></td>
 		</tr>{{ end }}
 		{{ if ( or .enabledByDefault .dynamicEnable .injectAsStyleElt .updateUserstylesOnSettingsChange ) }}<tr>
-			<td class="infobox-label">Feature flags</td>
+			<td class="infobox-label">{{ T "AddonDocs.Infobox.Labels.FeatureFlags" }}</td>
 			<td class="infobox-data">
 				{{ with .enabledByDefault }}
-				<span class="badge badge-primary">Enabled by default</span>
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.enabledByDefault" }}</span>
 				{{ end }}
 				{{ with .dynamicEnable }}
-				<span class="badge badge-primary">Dynamic enable</span>
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.dynamicEnable" }}</span>
 				{{ end }}
 				{{ with .dynamicDisable }}
-				<span class="badge badge-primary">Dynamic disable</span>
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.dynamicDisable" }}</span>
 				{{ end }}
 				{{ with .injectAsStyleElt }}
-				<span class="badge badge-primary">Inject as style element</span>
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.injectAsStyleElt" }}</span>
 				{{ end }}
 				{{ with .updateUserstylesOnSettingsChange }}
-				<span class="badge badge-primary">Update userstyle on settings change</span>
+				<span class="badge badge-primary">{{ T "AddonDocs.Infobox.FeatureFlags.updateUserstylesOnSettingsChange" }}</span>
 				{{ end }}
 			</td>
 		</tr>{{ end }}
 		<tr>
 			<td class="infobox-data" colspan="2">
-				<a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' rel="noopener">Source code</a>
+				<a href='https://github.com/ScratchAddons/ScratchAddons/tree/master/addons/{{ .id }}' rel="noopener">{{ T "AddonDocs.Infobox.Links.SourceCode" }}</a> · <a href='https://scratch.mit.edu/scratch-addons-extension/settings#addon-{{ .id }}' rel="noopener">{{ T "AddonDocs.Infobox.Links.SASettings" }}</a>
 			</td>
 		</tr>
 	</table>
