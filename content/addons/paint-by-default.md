@@ -39,7 +39,7 @@ The addon was created under the philosophy that intermediate and advanced Scratc
 ## Known issues
 
 - You cannot set the default action to any custom actions added by a Scratch modification. This includes the "HD Upload" option added by the _HD image uploads_ addon.
-- The addon's name "Paint costume by default" does not represent its options to change the default actions for the sprite, backdrop, or sound buttons. This issue is not planned to be resolved. [issue #6076](https://github.com/ScratchAddons/ScratchAddons/issues/6076)
+- The addon's name "Paint costume by default" does not represent its options to change the default actions for the sprite, backdrop, or sound buttons. This issue is not planned to be resolved. [#6076](https://github.com/ScratchAddons/ScratchAddons/issues/6076)
 
 ## Credit
 
