@@ -60,4 +60,4 @@ GarboMuffin developed the entirety of the addon. Its final name, description, se
 
 ## Related
 
-- Original pull request: [PR #3199](https://github.com/ScratchAddons/ScratchAddons/pull/3199)
+- [Original pull request (#3199)](https://github.com/ScratchAddons/ScratchAddons/pull/3199)
