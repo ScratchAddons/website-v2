@@ -1,5 +1,4 @@
 ---
-title: Insert blocks by name
 id: middle-click-popup
 ---
 
