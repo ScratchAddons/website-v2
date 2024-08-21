@@ -2,60 +2,54 @@
 id: discuss-button
 ---
 
-**Customizable navigation bar** is an addon which allows users to change the items displayed in the Scratch website navigation bar, and apply a couple other tweaks to it.
+**Customizable navigation bar** is an addon that allows users to add, modify, or remove links in the Scratch website's navigation bar, as well as tweak the user dropdown and change the bar's page scrolling behavior.
 
 ## Background
 
-Scratch removed the discuss button in July 2017.[^1] The original version brought it back which an option to remove the Ideas button.
+Scratch removed the discuss button that linked to the forums in July 2017.[^1] The original addon was introduced to bring it back and included an option to remove the ideas link.
 
 ## Features
 
-- Remove existing buttons
-- Add new buttons which can link anywhere
-- Hide the username and move it to the profile dropdown item
-- Prevent the navigation bar from scrolling with the page
+- Add new links to Scratch pages or other websites.
+- Re-order links and change their labels.
+- Remove existing links.
+- Prevent the navigation bar from scrolling with the page.
+- Move the logged-in username out of the way.
 
 ## Settings
 
 ### Items
 
-Controls which items should appear in the navigation bar. Each item has the following options:
+Controls the links displayed between the Scratch logo and search bar. Each item has the following inputs:
 
-- Name: The button label
-- URL: The button's link, can be relative or absolute.
+- Name: The link's label
+- URL: The page to link to which can be relative to the home page (e.g. /mystuff) or absolute (e.g. https://example.com).
 
 ### Compact user dropdown
 
-Moves the username of the logged in user into the profile dropdown item.
+Moves the username of the logged-in user into the profile dropdown item.
 
 ### Stick to
 
-- Top of screen: The top of the browser window regardless of scrolling
-- Top of page: Prevent the navigation bar from staying on screen when scrolling
-
-## Future plans
-
-{{< docs/stub-section >}}
-
-## Known issues
-
-{{< docs/stub-section >}}
+- Top of screen: The navigation bar stays visible even when the page scrolls. This is Scratch's default behavior.
+- Top of page: The navigation bar stays at the top of the page and scrolls away with it.
 
 ## Credit
 
-{{< docs/stub-section >}}
+The original addon was written by WorldLanguages, and TheColaber was the author of the rewrite.
 
 ## Changelog
 
-- **v1.0.0** The first version that added the discuss button and optionally removed Ideas
-- **v1.24.0** Customiable naviagtion bar
-- **v1.28.0** Compact user dropdown
-- **v1.32.0** Added Stick to setting
+- **v1.0.0** The first version that added the discuss button and optionally removed ideas.
+- **v1.24.0**: Made the links fully customizable.
+- **v1.28.0**: Added the compact user dropdown setting.
+- **v1.32.0**: Added the "stick to" setting.
 
 ## Trivia
 
-- This is the first and only addon to use a table setting
-- This is the first addon to modify the Scratch website
+- This is the first addon to modify the Scratch website.
+- This is the first and only addon to use a table setting.
+- This is one of the few addons to have no credits.
 
 ## Gallery
 
@@ -63,6 +57,7 @@ Moves the username of the logged in user into the profile dropdown item.
 
 ## Related
 
-{{< docs/stub-section >}}
+- [Table setting pull request (#2875)](https://github.com/ScratchAddons/ScratchAddons/pull/2875)
+- [Customizable editor menu bar](https://scratch.mit.edu/scratch-addons-extension/settings#addon-custom-menu-bar)
 
 [^1]: https://scratch.mit.edu/discuss/topic/269283/
