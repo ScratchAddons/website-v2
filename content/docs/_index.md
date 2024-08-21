@@ -15,7 +15,7 @@ Scratch Addons combines new and existing features and themes for the Scratch web
 - If you want to help localize the extension, [read this page](localization/joining-the-localization-team).
 - If you need help starting with Scratch Addons, [read this page](getting-started/quick-start).
 - If you are interested in the design of the project, [read this page](reference/design).
-- Found a bug? Have an idea. Tell them on [the issues tab](https://github.com/ScratchAddons/ScratchAddons/issues).
+- Found a bug? Have an idea? Tell them on [the issues tab](https://github.com/ScratchAddons/ScratchAddons/issues).
 
 ## Contributing
 
