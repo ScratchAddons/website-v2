@@ -53,7 +53,9 @@ The original addon was written by WorldLanguages, and TheColaber was the author 
 
 ## Gallery
 
-{{< docs/stub-section >}}
+![Compact user dropdown](/assets/img/addons/docs/compact-nav-dropdown.png)
+
+The compact user dropdown.
 
 ## Related
 
