@@ -66,6 +66,8 @@ Thanks for wanting to help with translating Scratch Addons to other languages! P
 
 If you don't own a Scratch account, please send an email to `translation@scratchaddons.com` instead.
 
+Do not create a new Scratch account just to fulfill this requirement. Instead, send an email to the address above. New scratcher accounts are ignored.
+
 ### 2. Create a Transifex account
 1. Go to [Transifex open-source Sign up](https://app.transifex.com/signup/open-source/?join_org=scratch-addons&join_project=scratch-addons-extension).  
 1. You will be shown Transifex's "Sign up" screen. **DO NOT sign up with Google.**  
