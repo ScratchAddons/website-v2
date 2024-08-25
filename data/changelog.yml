@@ -1699,3 +1699,44 @@
   Entry: |
     - "Show exact count" addon: removed profile exact counts for favorites, curated studios and followed studios (send us feedback if you were using this, we may add them back!)
     - "Forum post cooldown display" addon: optimized to avoid extra request to Scratch servers
+
+- Version: v1.39.0
+  Index: 98
+  Tag: v1.39.0
+  Name: v1.39.0
+  Date: 2024-08-27
+  Status: Released
+  Entry: |
+    - New addon: asset conflict dialog
+    - New addon: delete other costumes or sounds
+    - New addon: customizable code editor grid
+    - New addon: customizable stage monitors
+    - New addon: remaining reply count
+    - "Customizable block colors" addon: new insertion marker customization settings
+    - "Project video recorder" addon: reorganized modal and now remembers settings from last recording
+    - "Message count on extension icon" addon: disabled automatically for everyone without the extension pinned
+    - "ocular integration" addon: use newer purple accent color instead of old blue
+    - "Gamepad support" addon: added support for dark mode in the gamepad settings panel
+    - "Compact editor" addon: costume numbers in the costumes tab are now easier to read
+    - "Scratch Messaging" addon: shows comment previews even if they aren't found
+    - "Scratch Messaging" addon: in the "studio activity" category, shows the number of messages instead of the studio amount
+    - "Editor find bar" addon: fixed Ctrl+Z undoing what was typed in the find bar (Chrome/Edge only)
+    - "Forum search" addon: it is now functional again thanks to a new ScratchDB utility
+    - Bug fix: "auto-hiding block palette" closing the palette while a block dropdown is open or editing an input
+    - Bug fix: "HD image uploads" not discarding EXIF metadata before uploading files
+    - Bug fix: sprite pane not using all available space if “compact editor” enabled and “collapsing sprite properties” uncollapsed
+    - Bug fix: "rearrangeable custom block inputs" not working with empty labels
+    - Bug fix: "costume editor snapping" not enforcing minimum and maximum values for "snapping distance" setting
+    - Bug fix: "cat blocks" setting "watch mouse cursor" not working for newly loaded extensions (e.g. Makey Makey)
+    - Bug fix: "customizable block colors" not reacting to any setting changes after creating a custom block
+    - Bug fix: "editor find bar" doing case-sensitive broadcast search
+    - Bug fix: "editor find bar" preventing Ctrl+F from opening browser find outside of the project editor
+    - Bug fix: "two-column category menu" scrolls up instead of down when clicking in the space below the scrollbar
+    - Bug fix: "data category tweaks" causing "Save now" button to always show even if no changes were made
+    - Bug fix: "save blocks as image" being slow due to requesting the same image multiple times from Scratch servers
+    - Bug fix: incompatibilities between “project progress bar” and “faster project loading”
+    - Bug fix: the color scheme of stage monitors (e.g. variable sliders) were controlled by website dark mode instead of editor's
+    - Bug fix: number pad and other editor interface elements showing above modals and popups
+    - Removed addon "profile statistics"
+    - Removed addon "local timezone on forums"
+    - Removed addon "forums image uploader"
