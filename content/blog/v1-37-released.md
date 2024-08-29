@@ -8,7 +8,7 @@ cover_image: /assets/img/blog/generic-cover/1.37.png
 
 This update brings in the ability to download projects with one click, plus a couple other new useful features and quality-of-life improvements and some bug fixes!
 
-### Download projects fast
+## Download projects fast
 
 Finding yourself saving a lot of your own or your favorite Scratch projects? The new [Project page download button](https://scratch.mit.edu/scratch-addons-extension/settings#download-button) addon can help. It adds a download button right below the Notes and Credits section of all projects.
 
@@ -16,23 +16,23 @@ Finding yourself saving a lot of your own or your favorite Scratch projects? The
 
 This button is functionally identical to the `File` → `Save to your computer` option in the editor, just that you don't have to go into the editor first.
 
-### A smaller backpack button
+## A smaller backpack button
 
 Another new addon we've made is called [Replace backpack bar with button](https://scratch.mit.edu/scratch-addons-extension/settings#hide-backpack), which changes the backpack drawer at the bottom of the editor to this little button:
 
 <video src="/assets/img/blog/v1-37-released/small-backpack-button.mp4" controls type="video/mp4" autoplay loop></video>
 
-### Improved custom block input insertion
+## Improved custom block input insertion
 
 Now, when you have the [Rearrangeable custom block inputs](https://scratch.mit.edu/scratch-addons-extension/settings#reorder-custom-inputs) addon enabled, you can turn on the "Insert new inputs after selected input" setting to make it so that when you add an input or label, it gets inserted to the right of whatever input or label you have selected. It works like this:
 
 <video src="/assets/img/blog/v1-37-released/better-parameters.mp4" controls type="video/mp4" autoplay loop></video>
 
-### An important button gets better
+## An important button gets better
 
 That's right, our new addon, [Larger "Save Now" button](https://scratch.mit.edu/scratch-addons-extension/settings#big-save-button), which is **enabled by default**, just increases the clickable area of the "Save Now" button in the editor, a change that you might not even notice that can subconsciously make a big difference.
 
-### Other changes
+## Other changes
 
 As for the smaller stuff, there's a lot:
 - [Debugger](https://scratch.mit.edu/scratch-addons-extension/settings#debugger)'s "Threads" tab will now automatically scroll to the active thread while single stepping.
@@ -44,7 +44,7 @@ As for the smaller stuff, there's a lot:
 - Opening the sound library while a project is paused no longer resumes the audio.
 - And various other improvements and fixes.
 
-### Browser support changes
+## Browser support changes
 
 For those of you using older browsers, starting this release, Scratch Addons will drop support for Chrome versions under 96 and Firefox versions under 109. Why? It's not important. But what is important is that you will need to update your browser to continue using Scratch Addons if you are using a version that we no longer support. For more information, check [this page](https://scratchaddons.com/unsupported-browser/).
 
