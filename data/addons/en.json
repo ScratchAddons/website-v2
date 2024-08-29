@@ -1267,7 +1267,7 @@
 		"id": "exact-count",
 		"name": "Show exact count",
 		"description": "Shows exact numbers on profiles and the exact project count in studios.",
-		"tags": ["community", "recommended", "profiles", "forums", "studios"],
+		"tags": ["community", "recommended", "profiles", "studios"],
 		"credits": [
 			{
 				"name": "TheColaber",
