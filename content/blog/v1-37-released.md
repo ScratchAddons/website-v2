@@ -3,6 +3,7 @@ title: What's new in Scratch Addons v1.37
 description: Download projects with one click and more!
 date: 2024-03-31T00:00:00Z
 author: DNin01
+cover_image: /assets/img/blog/generic-cover/1.37.png
 ---
 
 This update brings in the ability to download projects with one click, plus a couple other new useful features and quality-of-life improvements and some bug fixes!
