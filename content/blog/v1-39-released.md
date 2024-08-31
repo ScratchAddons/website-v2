@@ -5,7 +5,7 @@ date: 2024-08-31T18:45:00Z
 author: DNin01
 ---
 
-Plenty of new features have been added in this update to improve your productivity on Scratch.
+Plenty of new features have been added in this update to improve your productivity on Scratch!
 
 Let's start with the new addons.
 
@@ -13,13 +13,13 @@ Let's start with the new addons.
 
 When the new [Asset conflict dialog](https://scratch.mit.edu/scratch-addons-extension/settings#addon-asset-conflict-dialog) addon is enabled, upon importing one or more costumes or sounds that have the same name as an existing asset, this addon will ask you if you want to replace it, rename the imported item, or skip the import.
 
-<video src="/assets/img/blog/v1-39-released/delete-others.mp4" controls type="video/mp4" autoplay loop></video>
+<video src="/assets/img/blog/v1-39-released/import-and-replace.mp4" controls type="video/mp4" autoplay loop></video>
 
 ## 🗑️ Delete all but one costume or sound
 
 The new [Delete other costumes or sounds](https://scratch.mit.edu/scratch-addons-extension/settings#addon-delete-others) addon lets you delete all of a sprite's costumes or sounds except for the one you choose when you right-click on a costume or sound.
 
-<video src="/assets/img/blog/v1-39-released/import-and-replace.mp4" controls type="video/mp4" autoplay loop></video>
+<video src="/assets/img/blog/v1-39-released/delete-others.mp4" controls type="video/mp4" autoplay loop></video>
 
 ## 🔮 See how close you're getting to the reply limit
 
