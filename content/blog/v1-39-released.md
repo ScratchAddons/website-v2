@@ -1,7 +1,7 @@
 ---
 title: What's new in Scratch Addons v1.39
 description: Handle asset import conflicts, delete all but one asset, and more.
-date: null # TBD
+date: 2024-08-31T18:45:00Z
 author: DNin01
 ---
 
