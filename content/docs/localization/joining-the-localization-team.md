@@ -101,7 +101,7 @@ If you have a Discord account, we encourage you to join our [Development Discord
 {{< /admonition >}}
 
 {{< admonition error >}}
-If your request is denied, you'll receive an email. If you believe this was a mistake, please send an email to  `translation@scratchaddons.com` indicating your Transifex username. See below for other contact methods.
+If your request is denied, you'll receive an email. Decisions are never final. You may send an email to  `translation@scratchaddons.com` indicating your Transifex username and your request will be strongly reconsidered. See below for other contact methods.
 {{< /admonition >}}
 
 ## Help or contact
