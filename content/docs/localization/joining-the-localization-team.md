@@ -10,7 +10,9 @@ aliases:
 If you found a **translation mistake/error** in Scratch Addons, please [send feedback](/feedback) about it.
 {{< /admonition >}}
 
-Scratch Addons is available in more than 15 languages thanks to the help of volunteers around the world.
+Thanks for the interest to help with translating Scratch Addons to other languages! Scratch Addons is available in more than 15 languages thanks to the help of volunteers around the world.
+
+Please read this page carefully to continue.
 
 ## Requirements to join as a translator
 
@@ -57,7 +59,7 @@ These languages **do not** accept new translator requests: **Italian, Spanish.**
 
 ## Steps to join as a translator
 
-Thanks for wanting to help with translating Scratch Addons to other languages! Please follow the steps below.
+Please follow the steps below.
 
 ### 1. Verify your Scratch account
 1. Visit this [Scratch studio](https://scratch.mit.edu/studios/33665222/comments) with your Scratch account.
