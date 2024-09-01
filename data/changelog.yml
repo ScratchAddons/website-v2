@@ -1740,3 +1740,12 @@
     - Removed addon "profile statistics"
     - Removed addon "local timezone on forums"
     - Removed addon "forums image uploader"
+
+- Version: v1.39.1
+  Index: 99
+  Tag: v1.39.1
+  Name: v1.39.1
+  Date: 2024-08-28
+  Status: Released
+  Entry: |
+    - Bug fix: extension broken on Firefox
