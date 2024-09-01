@@ -18,7 +18,7 @@ Allows users to customize their experience on the Scratch website (scratch.mit.e
 |-----------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
 | Host permission | Used to access information from, and run content scripts on the Scratch website.                                                        |
 | cookies                     | Used to access the scratchcsrftoken cookie, which needs to be included as an X-CsrfToken header for Scratch API calls.                |
-| webRequest                  | Used to detect 404s through the statusCode property and to precalculate data as soon as onBeforeRequest is fired. |
+| webRequest                  | Used to detect 404s through the statusCode property. |
 | declarativeNetRequestWithHostAccess | Necessary in order to add an artificial "Referer" header so that requests to the Scratch API from the background page correctly work.
 | storage                     | Used to store extension settings.                                                                                                     |
 | contextMenus                | Used to show the "do not disturb for X minutes" feature.  
