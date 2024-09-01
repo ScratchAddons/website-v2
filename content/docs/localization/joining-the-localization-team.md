@@ -64,9 +64,7 @@ Thanks for wanting to help with translating Scratch Addons to other languages! P
 1. Send a studio comment indicating the language you want to translate to (for example, `Greek`).  
 ![Screenshot of Scratch](/assets/img/docs/scratch-req-language.png)
 
-If you don't own a Scratch account, please send an email to `translation@scratchaddons.com` instead.
-
-Do not create a new Scratch account just to fulfill this requirement. Instead, send an email to the address above. New scratcher accounts are ignored.
+**If you don't have a Scratch account**, please send an email to `translation@scratchaddons.com` instead. Do not create a new Scratch account just to fulfill this requirement. New Scratcher accounts will be ignored.
 
 ### 2. Create a Transifex account
 1. Go to [Transifex open-source Sign up](https://app.transifex.com/signup/open-source/?join_org=scratch-addons&join_project=scratch-addons-extension).  
