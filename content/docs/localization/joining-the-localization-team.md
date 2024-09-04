@@ -97,7 +97,7 @@ If you already own a Transifex account and don't want to create a new one, pleas
 If you have a Discord account, we encourage you to join our [Development Discord server](https://discord.gg/Ak8sCDQ).
 
 {{< admonition success >}}
-**If your request is accepted, you'll receive an email from Transifex. We usually review requests every 48 hours.**
+**If your request is accepted, you'll receive an email from Transifex. We usually review requests every 96 hours.**
 {{< /admonition >}}
 
 {{< admonition error >}}
