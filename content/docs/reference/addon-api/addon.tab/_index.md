@@ -31,12 +31,11 @@ while (true) {
 ### Using `addon.tab.displayNoneWhileDisabled` (`dynamicDisable`)
 We use `addon.tab.displayNoneWhileDisabled` to hide an image when the addon gets disabled.  
 We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.  
-We also set the `display` CSS property of the image to `flex` when visible, even though that is not the default value for images.
 ```js
   /* userscript.js */
   const img = document.createElement("img");
   img.classList.add("sa-example-img");
-  addon.tab.displayNoneWhileDisabled(img, { display: "flex" });
+  addon.tab.displayNoneWhileDisabled(img);
   const btn = document.createElement("btn");
   btn.onclick = () => {
     // We want to hide the image
@@ -54,7 +53,7 @@ We also set the `display` CSS property of the image to `flex` when visible, even
 .sa-example-img-hide {
   /* We want to hide the image if the button was clicked, 
   even if the addon is enabled */
-  display: none !important;
+  display: none;
 }
 ```
 
@@ -205,34 +204,10 @@ Options `condition`, `reduxCondition` and `reduxEvents` should be used as optimi
     <td>Yes</td>
     <td>Element to hide</td>
   </tr>
-  <tr>
-    <td>options</td>
-    <td><code>Object</code></td>
-    <td>No</td>
-    <td>
-      <table>
-        <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>display</td>
-          <td><code>String</code></td>
-          <td>No</td>
-          <td><code>""</code></td>
-          <td>The <code>display</code> CSS value to use when the addon is enabled.</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
 </table>
 
 Hides the given element with `display: none` when the addon is disabled, until it is reenabled.  
-If the intended `display` CSS property value for the provided element when visible is not the default value for the type of provided element (for example, `block` for `div`s and `inline` for `span`s), you should provide that value inside the options parameter.  
-If you want to manually hide the element in situations where the addon is enabled, you should use a dedicated class name for that, instead of manually setting `el.style.display = "none";`. Use a class name selector in a userstyle to set `display: none !important;` on the element.
+If you want to manually hide the element in situations where the addon is enabled, you should use a dedicated class name for that, instead of manually setting `el.style.display = "none";`. Use a class name selector in a userstyle to set `display: none;` on the element.
 
 ### `addon.tab.copyImage`
 <table>
