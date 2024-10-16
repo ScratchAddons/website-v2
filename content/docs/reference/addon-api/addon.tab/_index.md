@@ -173,6 +173,13 @@ The writing direction for the language of the Scratch website.
           <td><code>[]</code></td>
           <td>An array of Redux events that must be dispatched before resolving the selector.</td>
         </tr>
+        <tr>
+          <td>resizeEvent</td>
+          <td><code>Boolean</code></td>
+          <td>No</td>
+          <td><code>false</code></td>
+          <td>Whether the selector should be resolved on a window resize, in addition to reduxEvents.</td>
+        </tr>
       </table>
     </td>
   </tr>
