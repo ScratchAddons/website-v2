@@ -249,8 +249,8 @@ If you want to manually hide the element in situations where the addon is enable
 </table>
 
 Copies a PNG image to the clipboard.  
-Only run this in response of the user explicitly pressing Ctrl+C.  
-Internally uses `browser.clipboard.setImageData` in Firefox and `navigator.clipboard.write` in Chrome and Edge.
+Only run this in response of the user explicitly clicking a button or pressing Ctrl+C.
+Internally uses `browser.clipboard.setImageData` in Firefox versions below 127 and `navigator.clipboard.write` everywhere else.
 
 ### `addon.tab.scratchClass`
 <table>
