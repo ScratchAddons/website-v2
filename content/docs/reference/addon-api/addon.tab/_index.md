@@ -662,7 +662,11 @@ Similar to `window.prompt`, except it's asynchronous and uses Scratch's styles.
 Adds a context menu item for any of the context menus in the code editor.
 
 ### `addon.tab.createEditorContextMenu`
-**Documentation for this is a WIP. Not all possible types are listed for some settings.**
+
+{{< admonition info >}}
+Documentation for this is a work in progress. Not all possible types are listed for some settings.
+{{< /admonition >}}
+
 <table>
   <tr>
     <th>Parameter</th>
@@ -835,7 +839,11 @@ Adds a context menu item for any of the context menus in the code editor.
 Adds a context menu item for any of the non-Blockly context menus, such as the context menu for the sprites list.
 
 ### `addon.tab.addBlock`
-**Do not use this unless you are adding blocks to the debugger addon.**
+
+{{< admonition warning >}}
+Do not use this unless you are adding blocks to the debugger addon.
+{{< /admonition >}}
+
 <table>
   <tr>
     <th>Parameter</th>
@@ -931,7 +939,10 @@ Adds a new block to the Debugger category in the block palette.
 Removes a block that was previously added to the Debugger category in the block palette.
 
 ### `addon.tab.loadScript`
-**In most cases, you should use the [`userscripts` property of the addon manifest](/docs/reference/addon-manifest/#userscripts-and-userstyles) instead.**
+
+{{< admonition warning >}}
+In most cases, you should use the [`userscripts` property of the addon manifest](/docs/reference/addon-manifest/#userscripts-and-userstyles) instead.
+{{< /admonition >}}
 
 <table>
   <tr>
