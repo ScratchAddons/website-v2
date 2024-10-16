@@ -957,31 +957,6 @@ Removes a block that was previously added to the Debugger category in the block 
 
 Runs the specified script file relative to the extension's root (e.g. `chrome-extension://aeepldbjfoihffgcaejikpoeppffnlbd/`) in a `<script>` tag.
 
-### `addon.tab.loadWorker`
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>path</td>
-    <td><code>String</code></td>
-    <td>Yes</td>
-    <td>The path pointing to the worker.</td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>Return value</td>
-    <td><code>Promise&lt;Worker></code></td>
-  </tr>
-</table>
-
-Loads the specified Web Worker.
-
 ## Events
 ### `urlChange`
 <table>
