@@ -28,35 +28,6 @@ while (true) {
 }
 ```
 
-### Using `addon.tab.displayNoneWhileDisabled` (`dynamicDisable`)
-We use `addon.tab.displayNoneWhileDisabled` to hide an image when the addon gets disabled.  
-We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.  
-```js
-  /* userscript.js */
-  const img = document.createElement("img");
-  img.classList.add("sa-example-img");
-  addon.tab.displayNoneWhileDisabled(img);
-  const btn = document.createElement("btn");
-  btn.onclick = () => {
-    // We want to hide the image
-    // We cannot do `img.style.display = "none"` because we
-    // used displayNoneWhileDisabled with the same element
-    img.classList.add("sa-example-img-hide");
-  };
-```
-
-```css
-/* userstyle.css */
-.sa-example-img {
-  display: flex;
-}
-.sa-example-img-hide {
-  /* We want to hide the image if the button was clicked, 
-  even if the addon is enabled */
-  display: none;
-}
-```
-
 ### Reacting to URL dynamically changed
 ```js
 addon.tab.addEventListener("urlChange", function(event) {
