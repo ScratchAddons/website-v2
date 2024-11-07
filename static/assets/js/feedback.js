@@ -35,6 +35,7 @@ const variations = {
         },
         patterns: [
             /\bfolder\b/,
+            /\bfolders\b/,
         ]
     },
 }
