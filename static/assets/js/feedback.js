@@ -29,6 +29,14 @@ const variations = {
             /\bst\b/,
         ]
     },
+    folders: {
+        strings: {
+            ...i18n.preSendWarning.variations.folders
+        },
+        patterns: [
+            /\bfolder\b/,
+        ]
+    },
 }
 
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
