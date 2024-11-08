@@ -168,7 +168,7 @@ FeedbackPage:
     Failed: Something went wrong. Try sending again?
     Offline: Something went wrong on the feedback server. Check back later, or use the mentioned alternatives.
   NoAddonsList: The list is not available to be sent. Please open this page through the extension.
-  UsernameLabel: Scratch username, or other identifiers (optional)
+  UsernameLabel: Your Scratch username, or other identifiers (optional)
   ContentLabel: Feedback
   ContentPlaceholder: Please provide as much detail as you can.
   SendEnabled: Send list of my currently enabled addons (recommended)
