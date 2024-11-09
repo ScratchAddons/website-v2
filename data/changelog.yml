@@ -1749,3 +1749,19 @@
   Status: Released
   Entry: |
     - Bug fix: extension broken on Firefox
+
+- Version: v1.39.2
+  Index: 100
+  Tag: v1.39.2
+  Name: v1.39.2
+  Date: 2024-11-09
+  Status: Released
+  Entry: |
+    - Bug fix: "sprite folders" not working after Scratch update
+    - Bug fix: native sprite delete confirmation not showing if "display stage on left side" enabled
+    - Bug fix: "HD image uploads" and "echo effect button" layout issues
+    - "Project video recorder" addon: now downloads videos as mp4 in Chrome-based browsers, instead of webm
+    - "Editor dark mode and customizable colors" addon: fixed support for new Scratch editor features
+    - "Better forum quoter" and "forum search" addons: fixed support for native 3.0 forum blocks
+    - Removed addon "sprite deletion confirmation" (it was added officially by Scratch to the editor)
+    - Removed addon "Scratch 3.0 forum blocks" (it was added officially by Scratch to the forums)
