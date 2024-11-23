@@ -2,6 +2,7 @@
 title: Send feedback to Scratch Addons developers
 description: How to send feedback to Scratch Addons.
 weight: 52
+no_comments: true
 ---
 
 **To send feedback for the Scratch Addons browser extension, please visit the Feedback page: https://scratchaddons.com/feedback/**
