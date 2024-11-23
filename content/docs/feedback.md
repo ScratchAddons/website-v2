@@ -4,9 +4,6 @@ description: How to send feedback to Scratch Addons.
 weight: 52
 ---
 
-This page is to send feedback for an *unofficial* Scratch browser extension **not affiliated with the Scratch Team**!
-We cannot do anything about moderation actions.
+**To send feedback for the Scratch Addons browser extension, please visit the Feedback page: https://scratchaddons.com/feedback/**
 
-If you want to report something on the Scratch website that breaks Scratch's rules, use the Report button on the Scratch website instead.
-
-To send feedback for the Scratch Addons browser extension, visit the Feedback page: https://scratchaddons.com/feedback/
+We can't help with issues related to Scratch moderation. Instead, use the Report button on the Scratch website, or reach Scratch through their official channels.
