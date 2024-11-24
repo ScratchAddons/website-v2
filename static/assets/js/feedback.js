@@ -27,6 +27,9 @@ const variations = {
         patterns: [
             /\bscratch\s*team\b/i,
             /\bst\b/,
+            /\bscratcher\b/,
+            /\bforg[oe]t\s*password\b/,
+            /\bdelete\s*account\b/,
         ]
     },
     folders: {
