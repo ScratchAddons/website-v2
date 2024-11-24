@@ -1,8 +1,9 @@
 ---
-title: Send Feedback
+title: Send feedback to Scratch Addons developers
 description: How to send feedback to Scratch Addons.
 weight: 3
 no_comments: true
+toc_title: Send Feedback
 ---
 
 Have something to say about Scratch Addons, the browser extension? Let us know through the feedback form located on https://scratchaddons.com/feedback/.
