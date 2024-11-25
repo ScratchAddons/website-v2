@@ -27,6 +27,9 @@ const variations = {
         patterns: [
             /\bscratch\s*team\b/i,
             /\bst\b/,
+            /\bscratcher\b/,
+            /\bforg[oe]t\s*password\b/,
+            /\bdelete\s*account\b/,
         ]
     },
     folders: {
@@ -50,6 +53,11 @@ const submitButton = form.querySelector("#feedback-submit")
 const addonsListCheckbox = form.querySelector("#feedback-addons-list")
 const statusEl = document.querySelector('#feedback-status')
 let hasWarnedContent = false
+let closePswModalButton1 = document.querySelector('#feedback-psw-modal .close')
+let closePswModalButton2 = document.querySelector('#feedback-psw-modal .modal-footer button')
+const closePswButtonText = closePswModalButton2.textContent
+const pswHeadingEl = document.querySelector('#feedback-psw-heading')
+const pswDescriptionEl = document.querySelector('#feedback-psw-description')
 
 const version = new URL(location.href).searchParams.get("ext_version") || new URL(location.href).searchParams.get("version")
 
@@ -104,6 +112,8 @@ const startUpServer = () => {
 // Credit to https://stackoverflow.com/a/29972322 for the timer logic
 const holdSendButton = seconds => {
     submitButton.disabled = true
+    closePswModalButton1.disabled = true
+    closePswModalButton2.disabled = true
     let remaining = seconds, expected = Date.now()
     const step = () => {
         var dt = Date.now() - expected
@@ -115,9 +125,13 @@ const holdSendButton = seconds => {
         if (remaining) {
             setTimeout(step, Math.max(0, 1000 - dt))
             submitButton.textContent = i18n.submitButton + " (" + remaining + ")"
+            closePswModalButton2.textContent = closePswButtonText + " (" + remaining + ")"
         } else {
             submitButton.disabled = false
+            closePswModalButton1.disabled = false
+            closePswModalButton2.disabled = false
             submitButton.textContent = i18n.submitButton
+            closePswModalButton2.textContent = closePswButtonText
         }
         remaining--
     }
@@ -125,19 +139,10 @@ const holdSendButton = seconds => {
 }
 
 const setPreSendWarning = (heading, description) => {
-    setStatus("", "warning")
-    const headingEl = document.createElement('p')
-    headingEl.textContent = heading
-    statusEl.appendChild(headingEl)
-    headingEl.insertAdjacentHTML('afterbegin', `<b>${i18n.preSendWarning.warning}</b> `)
-    const descriptionEl = document.createElement('p')
-    descriptionEl.innerHTML = description
-    statusEl.appendChild(descriptionEl)
-    const overrideEl = document.createElement('p')
-    overrideEl.textContent = i18n.preSendWarning.override
-    overrideEl.classList.add('mb-0')
-    statusEl.appendChild(overrideEl)
-    statusEl.scrollIntoView()
+    statusEl.hidden = true
+    $('#feedback-psw-modal').modal('show')
+    pswHeadingEl.textContent = heading
+    pswDescriptionEl.innerHTML = description
     holdSendButton(5)
 }
 
