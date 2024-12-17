@@ -28,36 +28,6 @@ while (true) {
 }
 ```
 
-### Using `addon.tab.displayNoneWhileDisabled` (`dynamicDisable`)
-We use `addon.tab.displayNoneWhileDisabled` to hide an image when the addon gets disabled.  
-We create a button to hide the image when clicked, and the image succesfully gets hidden, even if the addon is enabled.  
-We also set the `display` CSS property of the image to `flex` when visible, even though that is not the default value for images.
-```js
-  /* userscript.js */
-  const img = document.createElement("img");
-  img.classList.add("sa-example-img");
-  addon.tab.displayNoneWhileDisabled(img, { display: "flex" });
-  const btn = document.createElement("btn");
-  btn.onclick = () => {
-    // We want to hide the image
-    // We cannot do `img.style.display = "none"` because we
-    // used displayNoneWhileDisabled with the same element
-    img.classList.add("sa-example-img-hide");
-  };
-```
-
-```css
-/* userstyle.css */
-.sa-example-img {
-  display: flex;
-}
-.sa-example-img-hide {
-  /* We want to hide the image if the button was clicked, 
-  even if the addon is enabled */
-  display: none !important;
-}
-```
-
 ### Reacting to URL dynamically changed
 ```js
 addon.tab.addEventListener("urlChange", function(event) {
@@ -174,6 +144,13 @@ The writing direction for the language of the Scratch website.
           <td><code>[]</code></td>
           <td>An array of Redux events that must be dispatched before resolving the selector.</td>
         </tr>
+        <tr>
+          <td>resizeEvent</td>
+          <td><code>Boolean</code></td>
+          <td>No</td>
+          <td><code>false</code></td>
+          <td>Whether the selector should be resolved on a window resize, in addition to reduxEvents.</td>
+        </tr>
       </table>
     </td>
   </tr>
@@ -205,34 +182,10 @@ Options `condition`, `reduxCondition` and `reduxEvents` should be used as optimi
     <td>Yes</td>
     <td>Element to hide</td>
   </tr>
-  <tr>
-    <td>options</td>
-    <td><code>Object</code></td>
-    <td>No</td>
-    <td>
-      <table>
-        <tr>
-          <th>Property</th>
-          <th>Type</th>
-          <th>Required</th>
-          <th>Default</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td>display</td>
-          <td><code>String</code></td>
-          <td>No</td>
-          <td><code>""</code></td>
-          <td>The <code>display</code> CSS value to use when the addon is enabled.</td>
-        </tr>
-      </table>
-    </td>
-  </tr>
 </table>
 
 Hides the given element with `display: none` when the addon is disabled, until it is reenabled.  
-If the intended `display` CSS property value for the provided element when visible is not the default value for the type of provided element (for example, `block` for `div`s and `inline` for `span`s), you should provide that value inside the options parameter.  
-If you want to manually hide the element in situations where the addon is enabled, you should use a dedicated class name for that, instead of manually setting `el.style.display = "none";`. Use a class name selector in a userstyle to set `display: none !important;` on the element.
+If you want to manually hide the element in situations where the addon is enabled, you should use a dedicated class name for that, instead of manually setting `el.style.display = "none";`. Use a class name selector in a userstyle to set `display: none;` on the element.
 
 ### `addon.tab.copyImage`
 <table>
@@ -267,8 +220,8 @@ If you want to manually hide the element in situations where the addon is enable
 </table>
 
 Copies a PNG image to the clipboard.  
-Only run this in response of the user explicitly pressing Ctrl+C.  
-Internally uses `browser.clipboard.setImageData` in Firefox and `navigator.clipboard.write` in Chrome and Edge.
+Only run this in response of the user explicitly clicking a button or pressing Ctrl+C.
+Internally uses `browser.clipboard.setImageData` in Firefox versions below 127 and `navigator.clipboard.write` everywhere else.
 
 ### `addon.tab.scratchClass`
 <table>
@@ -680,7 +633,11 @@ Similar to `window.prompt`, except it's asynchronous and uses Scratch's styles.
 Adds a context menu item for any of the context menus in the code editor.
 
 ### `addon.tab.createEditorContextMenu`
-**Documentation for this is a WIP. Not all possible types are listed for some settings.**
+
+{{< admonition info >}}
+Documentation for this is a work in progress. Not all possible types are listed for some settings.
+{{< /admonition >}}
+
 <table>
   <tr>
     <th>Parameter</th>
@@ -853,7 +810,11 @@ Adds a context menu item for any of the context menus in the code editor.
 Adds a context menu item for any of the non-Blockly context menus, such as the context menu for the sprites list.
 
 ### `addon.tab.addBlock`
-**Do not use this unless you are adding blocks to the debugger addon.**
+
+{{< admonition warning >}}
+Do not use this unless you are adding blocks to the debugger addon.
+{{< /admonition >}}
+
 <table>
   <tr>
     <th>Parameter</th>
@@ -949,7 +910,10 @@ Adds a new block to the Debugger category in the block palette.
 Removes a block that was previously added to the Debugger category in the block palette.
 
 ### `addon.tab.loadScript`
-**In most cases, you should use the [`userscripts` property of the addon manifest](/docs/reference/addon-manifest/#userscripts-and-userstyles) instead.**
+
+{{< admonition warning >}}
+In most cases, you should use the [`userscripts` property of the addon manifest](/docs/reference/addon-manifest/#userscripts-and-userstyles) instead.
+{{< /admonition >}}
 
 <table>
   <tr>
@@ -974,31 +938,6 @@ Removes a block that was previously added to the Debugger category in the block 
 </table>
 
 Runs the specified script file relative to the extension's root (e.g. `chrome-extension://aeepldbjfoihffgcaejikpoeppffnlbd/`) in a `<script>` tag.
-
-### `addon.tab.loadWorker`
-<table>
-  <tr>
-    <th>Parameter</th>
-    <th>Type</th>
-    <th>Required</th>
-    <th>Description</th>
-  </tr>
-  <tr>
-    <td>path</td>
-    <td><code>String</code></td>
-    <td>Yes</td>
-    <td>The path pointing to the worker.</td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>Return value</td>
-    <td><code>Promise&lt;Worker></code></td>
-  </tr>
-</table>
-
-Loads the specified Web Worker.
 
 ## Events
 ### `urlChange`
