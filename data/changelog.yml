@@ -1765,3 +1765,34 @@
     - "Better forum quoter" and "forum search" addons: fixed support for native 3.0 forum blocks
     - Removed addon "sprite deletion confirmation" (it was added officially by Scratch to the editor)
     - Removed addon "Scratch 3.0 forum blocks" (it was added officially by Scratch to the forums)
+
+- Version: v1.40.0
+  Index: 101
+  Tag: v1.40.0
+  Name: v1.40.0
+  Date: 2024-12-20
+  Status: Released
+  Entry: |
+    - New addon: delete sprites without confirmation
+    - New addon: show project thumbnail while loading
+    - New addon: modify version information on forums
+    - New tab layout for the extension popup
+    - "Customizable editor menu bar" addon: new "hide debug button" setting
+    - "Save blocks as image" addon: new user interface and ability to copy the image to the clipboard
+    - "Sprite pane search" addon: the search bar now takes less space and is located below the sprite list
+    - "Customizable block colors" addon: settings now apply properly in the "Make a Block" popup
+    - "Message count on extension icon" addon: added rounding for big message count numbers
+    - "Debugger" addon: better chart colors and dark mode support
+    - Bug fix: "website dark mode and customizable colors" support for new pages (Community Guidelines, Ideas, etc.)
+    - Bug fix: "website dark mode and customizable colors" support for completely removing borders without affecting UI separators
+    - Bug fix: "save blocks as image" not compatible with "customizable block text style"
+    - Bug fix: "auto-hide block palette" sometimes hides automatically when changing sprites
+    - Bug fix: "copy link to comment button" slowing down the page if there are many comments
+    - Bug fix: "customizable block colors" not changing the color of list items consistently
+    - Bug fix: "Ctrl+Enter to post" submitting the wrong comment if clicked Reply in more than one comment
+    - Bug fix: "editor find bar" assuming the top hit is the first even if it's not
+    - Bug fix: "editor dark mode and customizable colors" cannot change some UI elements that use purple
+    - Bug fix: "editor dark mode and customizable colors" coloring costume editor actions incorrectly after changing zoom
+    - Bug fix: "remix tree button" and "project page download button" disappear after resizing the window
+    - Bug fix: multiple Scratch editor addons now use better icons and colors
+    - Adapt multiple editor addons for upcoming Scratch updates
