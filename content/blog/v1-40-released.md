@@ -15,7 +15,7 @@ Since Scratch now has its own sprite deletion confirmation dialog and the discus
 
 # What's new in v1.40
 
-We've made a few aesthetic improvements to existing addons and one new addon!
+We've made a few improvements to existing addons and there's a new addon or two!
 
 ## 🌻 Project splash screens
 
