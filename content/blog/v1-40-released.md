@@ -1,7 +1,7 @@
 ---
 title: What's new in Scratch Addons v1.40
 description: Introducing splash screens!
-date: null
+date: 2024-12-30 00:00:00 UTC
 author: DNin01
 ---
 
