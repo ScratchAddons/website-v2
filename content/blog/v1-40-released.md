@@ -44,6 +44,7 @@ The [Sprite pane search](https://scratch.mit.edu/scratch-addons-extension/settin
 - The tab bar in the extension's popup has been redesigned and "Addons" is now the first tab.
 - The "Do not disturb" dropdown has been updated with options to enable for 4 hours and until the next day.
 - [Customizable editor menu bar](https://scratch.mit.edu/scratch-addons-extension/settings#addon-custom-menu-bar) is now able to hide Scratch's new Debug button.
+- [Project video recorder](https://scratch.mit.edu/scratch-addons-extension/settings#addon-mediarecorder) now supports saving MP4 recordings on Chrome.
 - [Message count on extension icon](https://scratch.mit.edu/scratch-addons-extension/settings#addon-msg-count-badge) now shows your message count on the extension icon's tooltip. The count on the badge is also truncated (rounded) when the number is too long to fit on the badge.
 - In the past, Scratch Addons always changed "version" in "No Flash version detected" to "versions" in forum post user agent strings to identify Scratch Addons users. Now, this is presented as an addon that can be turned off.
 - [Find bar](https://scratch.mit.edu/scratch-addons-extension/settings#addon-editor-find-bar): Pressing <kbd>Ctrl</kbd>+<kbd>F</kbd> a second time will now show the browser's find bar.
