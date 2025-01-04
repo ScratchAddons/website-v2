@@ -1745,6 +1745,7 @@
       New addon: "delete other costumes or sounds", which adds an option to the right click context menu for costumes and sounds to delete all items except for the selected one. Go to Scratch Addons settings to enable it.
       
       Other new addons added this update are "asset conflict dialog", "customizable code editor grid", "customizable stage monitors", and "remaining reply counter".
+    YouTubeID: CrYn2LWgUcE
 
 - Version: v1.39.1
   Index: 99
@@ -1806,3 +1807,4 @@
       New addon: "delete sprites without confirmation", which removes the new confirmation prompt that asks if you are sure you want to delete a sprite. Go to Scratch Addons settings to enable it.
       
       The "save blocks as image" addon now allows copying the images directly to the clipboard. Also, the "project video recorder" now exports mp4 files if supported by the browser.
+    YouTubeID: bRop52u6LWs
