@@ -20,7 +20,7 @@ In case you need an alternative, here are some choices.
 
 - Create a issue on [the repository](https://github.com/ScratchAddons/ScratchAddons/issues).
 - Create a post on [our Discussions tab](https://github.com/ScratchAddons/ScratchAddons/discussions)
-- Send a message on [our Discord server](https://discord.gg/R5NBqwMjNc)
+- Send a message on [our support Discord server](https://discord.gg/R5NBqwMjNc)
 - Contact one of the contributors on Discord, Twitter, or other methods
 
 It is discouraged to contact one of the contributors through Scratch due to [the policy that forbids advertising extensions/userscripts](https://scratch.mit.edu/discuss/post/2907564/).
