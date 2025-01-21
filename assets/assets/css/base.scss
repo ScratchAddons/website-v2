@@ -276,8 +276,12 @@ body {
 	--navbar-height: 59.5px;
 
 	@media (prefers-contrast: more) {
+		color: black;
 		--header-bg: #{darken($scratch-orange, 30%)};
 		--intro-heading-bg: #{darken($scratch-orange, 30%)};
+		--footer-cnt: black;
+		--footer-cnt-2: black;
+		--secondary-border: black;
 	}
 
 }
@@ -299,6 +303,12 @@ body.dark {
 	--secondary-bg-2: #{$dark-dp-4};
 	--secondary-cnt: white;
 	--secondary-border: #{$dark-dp-16};
+
+	@media (prefers-contrast: more) {
+		--footer-cnt: white;
+		--footer-cnt-2: white;
+		--secondary-border: white;
+	}
 
 }
 
@@ -344,13 +354,9 @@ body.dark {
 
 	textarea, input {
 		background-color: $dark-dp-1;
-		border-color: $dark-dp-16;
-		color: white;
 
 		&:focus, &:active {
 			background-color: $dark-dp-1;
-			border-color: $dark-dp-16;
-			color: white;
 		}
 
 		&::placeholder {
@@ -364,7 +370,11 @@ body.dark {
 	}
 
 	.text-muted {
-		color: $dark-low-emphasis !important
+		color: $dark-low-emphasis !important;
+	
+		@media (prefers-contrast: more) {
+			color: var(--content-cnt) !important
+		}
 	}
 
 	// #dark-toggle {
@@ -434,13 +444,9 @@ body.dark.extension-styled {
 
 	textarea, input {
 		background-color: $dark-dp-1;
-		border-color: black;
-		color: white;
 
 		&:focus, &:active {
 			background-color: $dark-dp-1;
-			border-color: black;
-			color: white;
 		}
 
 		&::placeholder {
@@ -468,11 +474,11 @@ hr {
 	background-color: var(--secondary-bg-2);
 }
 
-.text-body {
+.text-body, .text-muted {
 	color: var(--content-cnt) !important
 }
 
-.border-top {
+.border-top, .card-footer {
 	border-top-color: var(--secondary-border) !important
 }
 
@@ -490,6 +496,17 @@ hr {
 
 .border {
 	border-color: var(--secondary-border) !important
+}
+
+textarea, input {
+	border-color: var(--secondary-border) !important;
+	color: var(--content-cnt);
+
+	&:focus, &:active {
+		border-color: var(--secondary-border) !important;
+		color: var(--content-cnt);
+	}
+	
 }
 
 

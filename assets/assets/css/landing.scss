@@ -171,6 +171,10 @@
 		background: $scratch-orange;
 		color: white;
 		border-radius: 50%;
+
+		@media (prefers-contrast: more) {
+			background: #{darken($scratch-orange, 30%)};
+		}
 	}
 
 	.features-icon .iconify {
