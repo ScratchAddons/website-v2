@@ -1808,3 +1808,27 @@
       
       The "save blocks as image" addon now allows copying the images directly to the clipboard. Also, the "project video recorder" now exports mp4 files if supported by the browser.
     YouTubeID: bRop52u6LWs
+
+- Version: v1.41.0
+  Index: 102
+  Tag: v1.41.0
+  Name: v1.41.0
+  Date: 2025-01-21
+  Status: Released
+  Entry: |
+    - New addon: costume editor keyboard shortcuts
+    - New addon: Scratch 3.0 → 2.0
+    - Changed the font used by Scratch Addons user interfaces
+    - Settings page: new "project player features" category (previously a subcategory)
+    - Bug fix: "jump to custom block definition" makes block get stuck on cursor
+    - Bug fix: "project video recording" not recording audio even when option enabled
+    - Bug fix: "customizable editor menu bar" not hiding the Debug label in the "labels only" mode
+    - Bug fix: "customizable block colors" changing the color of comment blocks in the forums to white
+    - Bug fix: incompatibilities between "replace backpack bar with button" and "customizable code area zoom" autohide
+    - Bug fix: "insert blocks by name" showing a number input at the beginning of pen blocks
+  Highlights:
+    Description: |
+      New addon: "costume editor keyboard shortcuts", which adds keyboard shortcuts to costume editor tools (similar to TurboWarp). Go to Scratch Addons settings to enable it.
+      
+      Another new addon is "Scratch 3.0 → 2.0", which makes Scratch 3.0-styled pages look like Scratch 2.0.
+    YouTubeID: vuL5lV0l3fY
