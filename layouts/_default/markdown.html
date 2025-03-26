@@ -1,6 +1,6 @@
 {{ define "head-extra" -}}
 
-	{{ $style := resources.Get "assets/css/markdown.scss" | resources.ToCSS -}}
+	{{ $style := resources.Get "assets/css/markdown.scss" | css.Sass -}}
 	<link rel="stylesheet" href="{{ $style.Permalink }}" />
 
 {{- end }}

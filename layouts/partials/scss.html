@@ -1,2 +1,2 @@
-{{- $style := resources.Get . | resources.ToCSS -}}
+{{- $style := resources.Get . | css.Sass -}}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />

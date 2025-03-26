@@ -1,6 +1,6 @@
 {{ define "main" }}
 
-{{ $style := resources.Get "assets/css/landing.scss" | resources.ToCSS -}}
+{{ $style := resources.Get "assets/css/landing.scss" | css.Sass -}}
 <link rel="stylesheet" href="{{ $style.Permalink }}" />
 <script>
 window.i18nStrings = {
