@@ -409,12 +409,14 @@ body.dark {
 
 body.extension-styled {
 	@import url('https://cdn.jsdelivr.net/npm/@fontsource/sora/index.min.css');
+	@import url('https://cdn.jsdelivr.net/npm/@fontsource/roboto/index.min.css');
+	
+	
+	font-family: "Roboto", $bs-font-family-sans-serif;
 
-	font-family: "Sora", $bs-font-family-sans-serif;
-	font-size-adjust: 0.47;
-
-	code, kbd, pre, samp {
-		font-size-adjust: 0.5
+	.navbar-brand {
+		font-family: "Sora", $bs-font-family-sans-serif;
+		font-size-adjust: 0.47;
 	}
 
 	> header {
