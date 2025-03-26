@@ -354,9 +354,11 @@ body.dark {
 
 	textarea, input {
 		background-color: $dark-dp-1;
+		color: inherit;
 
 		&:focus, &:active {
 			background-color: $dark-dp-1;
+			color: inherit;
 		}
 
 		&::placeholder {
