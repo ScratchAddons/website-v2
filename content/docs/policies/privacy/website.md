@@ -37,7 +37,7 @@ We might, however, use local storage capabilities to store basic preferences, su
 
 ## Analytics
 
-We use a self-hosted Plausible Analytics instance routed through our analytics subdomain to count website visits, downloads, etc. Plausible works without collecting any personal data or personally identifiable information, and without using cookies. You can see the same data we can see on the [public analytics dashboard](https://analytics.scratchaddons.com).
+We use a self-hosted Plausible Analytics instance routed through our analytics subdomain to count website visits, interactions, etc. Plausible works without collecting any personal data or personally identifiable information, and without using cookies. You can see the same data we can see on the [public analytics dashboard](https://analytics.scratchaddons.com).
 
 ## Feedback
 
@@ -45,8 +45,9 @@ When sending feedback through <https://scratchaddons.com/feedback>, some data in
 
 - Text written in the "identifiers" field, if any.
 - Text written in "feedback" field.
-- The version number for your Scratch Addons instance.
+- The version number of your Scratch Addons instance.
 - Your browser's user agent string (which often includes your browser's and operating system's names and version numbers).
+- Optionally, the list of currently enabled addons of your Scratch Addons instance.
 
 Feedback is sent to a public open source [Glitch.com Node.js server instance](https://glitch.com/edit/#!/scratchaddons-feedback) which then redirects the information to a [Discord](https://discord.com) server. We do not log the IP addresses of the users that send feedback. You can verify this by looking at the Glitch server source code linked above.
 
@@ -55,9 +56,8 @@ Feedback is sent to a public open source [Glitch.com Node.js server instance](ht
 When using our website, third party services might be reached, such as:
 - [Cloudflare](https://www.cloudflare.com/privacypolicy/) for website hosting
 - [GitHub](https://docs.github.com/en/github/site-policy/github-privacy-statement) for website hosting
-- [cdn.jsdelivr.net](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net) for library CDN
-- [Skypack](https://www.skypack.dev/legal/privacy-policy) for library CDN
-- [Google services](https://policies.google.com/privacy) such as YouTube and Google Fonts
+- [jsDelivr CDN](https://www.jsdelivr.com/terms/privacy-policy) for library CDN
+- [Google services](https://policies.google.com/privacy) such as YouTube
 - [Glitch](https://glitch.com/legal/privacy) for sending feedback
 
 ## Links to Other Websites
