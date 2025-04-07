@@ -1832,3 +1832,28 @@
       
       Another new addon is "Scratch 3.0 → 2.0", which makes Scratch 3.0-styled pages look like Scratch 2.0.
     YouTubeID: vuL5lV0l3fY
+
+- Version: v1.42.0
+  Index: 103
+  Tag: v1.42.0
+  Name: v1.42.0
+  Date: 2025-03-29
+  Status: Released
+  Entry: |
+    - New addon: FPS counter
+    - New addon: instant forum read indicators
+    - Settings page: searching for addon setting and preset names is now supported
+    - "Scratch 3.0 → 2.0" addon: now makes studio invites 2.0-styled
+    - "Save blocks as image" addon: improved the design of the popup
+    - Bug fix: "costume editor keyboard shortcuts" triggering while holding the Ctrl key
+    - Bug fix: "Scratch 3.0 → 2.0" replacing the gamepad icon with a full screen icon
+    - Bug fix: "website dark mode and customizable colors" support for new Starter Projects page
+    - Bug fix: "editor dark mode and customizable colors" not changing extension icons in high contrast mode
+    - Bug fix: "show project thumbnail while loading" showing the thumbnail in the editor
+    - Bug fix: "browse followers" button sometimes not shown if "old studio layout" is enabled
+    - Bug fix: "sticky footer"'s "only on infinite scrolling pages" setting not working on the forums
+  Highlights:
+    Description: |
+      New addon: "FPS counter", which shows the project framerate above the stage. Go to Scratch Addons settings to enable it.
+
+      Another new addon is "Instant forum read indicators", which instantly marks topics as read when opening them in a new tab.
