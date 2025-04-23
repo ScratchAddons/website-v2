@@ -375,7 +375,7 @@ Sub-properties:
   - `table`: A list of elements, where the user can add custom elements, remove existing ones and change order of them
   - `select`: See `potential_values`
 - `default` (string, required) The default value for the option. A boolean, string, or number, depending on the specified type.  
-- `desciption` (string, optional) The description for the option, shown as a tooltip.
+- `description` (string, optional) The description for the option, shown as a tooltip.
 - `min`/`max` (number, optional for `positive_integer`, `integer`, and `string` types only) For integers, the minimum/maximum value allowed, and for strings, the minimum/maximum allowed length of the value.
 - `potentialValues` (array of objects, required for `select` type only) Array of objects, with properties `id`, the value received from `addon.settings.get()`, and `name`, the user-visible option text.
 - `allowTransparency` (boolean, required for `color` type only) Whether the user should be allowed to enter transparent colors or not.
