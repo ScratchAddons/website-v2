@@ -490,7 +490,8 @@ Example:
 | - | - |
 | Type | `Boolean` |
 
-Specifies weather to show a preview above the addon's settings.
+Specifies whether to show a preview above the addon's settings.
+
 
 To use this create a Vue component (usually separate JavaScript and HTML files) in [/webpages/settings/components/previews](https://github.com/ScratchAddons/ScratchAddons/tree/master/webpages/settings/components/previews/) named after the addon ID and add it to [/webpages/settings/index.html](https://github.com/ScratchAddons/ScratchAddons/blob/698155353bea43b72aa1d4996faa5f5de2dc48f4/webpages/settings/index.html#L143) and [/webpages/settings/index.js](https://github.com/ScratchAddons/ScratchAddons/blob/698155353bea43b72aa1d4996faa5f5de2dc48f4/webpages/settings/index.js#L41).
 
