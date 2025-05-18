@@ -220,7 +220,8 @@ The version the addon was added. If the value is the same as the current version
 | - | - |
 | Type | `Array` |
 
-An array of addon IDs used to link other related addons. It is not bidirectional by default.
+An array of addon IDs used to link other related addons. The relations are not bidirectional by default.
+
 
 ## `permissions`
 
