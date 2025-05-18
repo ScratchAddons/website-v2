@@ -214,6 +214,14 @@ Whether to add any of these tags will be discussed before merging the addon to t
 
 The version the addon was added. If the value is the same as the current version of the extension, the addon will get the new tag.
 
+## `relatedAddons`
+
+| | |
+| - | - |
+| Type | `Array` |
+
+An array of addon IDs used to link other related addons. It is not bidirectional by default.
+
 ## `permissions`
 
 | | |
@@ -479,21 +487,11 @@ Example:
 
 | | |
 | - | - |
-| Type | `Object` |
+| Type | `Boolean` |
 
-Specifies the type of preview to show above the addon's settings.
+Specifies weather to show a preview above the addon's settings.
 
-Sub-properties:
-- `type` (string, required) Only `editor-dark-mode` is currently supported. To add more, use the `editor-dark-mode` files in the `/webpages/settings/components/previews` folder as an example, then add the components to [/webpages/settings/index.html](https://github.com/ScratchAddons/ScratchAddons/blob/d6f41737c8162e6feeb98f6a9f5b479378e8b813/webpages/settings/index.html#L88) and [/webpages/settings/index.js](https://github.com/ScratchAddons/ScratchAddons/blob/d6f41737c8162e6feeb98f6a9f5b479378e8b813/webpages/settings/index.js#L52).
-
-Example:
-```json
-{
-  "addonPreview": {
-    "type": "editor-dark-mode"
-  }
-}
-```
+To use this create a Vue component (usually separate JavaScript and HTML files) in [/webpages/settings/components/previews](https://github.com/ScratchAddons/ScratchAddons/tree/master/webpages/settings/components/previews/) named after the addon ID and add it to [/webpages/settings/index.html](https://github.com/ScratchAddons/ScratchAddons/blob/698155353bea43b72aa1d4996faa5f5de2dc48f4/webpages/settings/index.html#L143) and [/webpages/settings/index.js](https://github.com/ScratchAddons/ScratchAddons/blob/698155353bea43b72aa1d4996faa5f5de2dc48f4/webpages/settings/index.js#L41).
 
 ## `presetPreview`
 
@@ -506,6 +504,7 @@ Specifies the type of preview to show inside the preset buttons.
 Sub-properties:
 - `type` (string, required) Possible values:
   - `palette` Shows a ribbon of colors.
+  - `stage-monitor-preset`
 - `colors` (array of strings, required for `palette` type only) The hex colors to show in the ribbon. By convention, the array should contain 6 colors, but more or less can be shown if needed.
 
 Example:
@@ -624,14 +623,12 @@ An array of libraries that the addon uses.
 | - | - |
 | Type | `Object` |
 
-When added, creates a new popup tab in the browser popup.
+When added, creates a new popup tab in the browser popup which loads its contents from `/popup/<addonID>/popup.hml` and `/popup/<addonID>/popup.js`.
 
 Sub-properties:
 - `icon` (string, required) The path to the icon that shows in the popup's tab. The root of a relative path is `/popups/<addonId>/`.
 - `name` (string, required) The name that will display in the popup's tab.
 - `fullscreen` (boolean, optional) Whether or not the popup tab should provide the option to open in full screen mode. Defaults to `false`.
-- `html` (string, required) The path to the popup's HTML file. The root of a relative path is `/popups/<addonId>/`.
-- `script` (string, required) The path to the popup's JS file. The root of a relative path is `/popups/<addonId>/`.
 
 Example:
 ```json
@@ -639,9 +636,7 @@ Example:
   "popup": {
     "icon": "../../images/icons/envelope.svg",
     "name": "Messaging",
-    "fullscreen": true,
-    "html": "popup.html",
-    "script": "popup.js"
+    "fullscreen": true
   }
 }
 ```
