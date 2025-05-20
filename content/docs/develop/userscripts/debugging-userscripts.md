@@ -23,6 +23,11 @@ The `debugger;` keyword in JavaScript will freeze the page when ran, if the deve
 
 Enter the addon ID on the "filter" console search bar to only view logs and warnings, as well errors logged with `console.error()`. Keep in mind that this will hide all exceptions, unless you're explicitly logging them in your code.
 
+### Get VS Code autocomplete on Addon API
+Add this snippet before `export async function` to get full autocomplete on the addon object.
+```js
+/** @typedef {import("../../addon-api/content-script/typedef.js").UserscriptUtilities} UserscriptUtilities @param {UserscriptUtilities} */
+```
 
 ## Edge cases
 
