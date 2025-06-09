@@ -90,8 +90,10 @@ const startUpServer = () => {
     lastFeedbackRequestTime = Date.now()
     localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)
     return new Promise(resolve => {
-        fetch("https://scratchaddons-feedback.glitch.me/", {
-            mode: 'no-cors'
+        fetch("https://scratchaddons.npkn.net/feedback/", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: '{"wakeup":true}'
         })
             .then(response => {
                 // 0 shouldn't be included here, but in my local testing it does that. I'm just adding it incase this happens in other places.
@@ -200,8 +202,9 @@ form.addEventListener("submit", async event => {
         try {
             lastFeedbackRequestTime = Date.now()
             localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)
-            const res = await fetch("https://scratchaddons-feedback.glitch.me/send", {
+            const res = await fetch("https://scratchaddons.npkn.net/feedback/", {
                 method: "POST", 
+                headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)
             })
             if (!res.ok) throw "";
