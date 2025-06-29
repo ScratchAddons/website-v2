@@ -58,7 +58,7 @@ When using our website, third party services might be reached, such as:
 - [GitHub](https://docs.github.com/en/github/site-policy/github-privacy-statement) for website hosting
 - [jsDelivr CDN](https://www.jsdelivr.com/terms/privacy-policy) for library CDN
 - [Google services](https://policies.google.com/privacy) such as YouTube
-- [Glitch](https://glitch.com/legal/privacy) for sending feedback
+- [Napkin.io](https://app.termly.io/document/privacy-policy/652a111f-c37d-4094-906f-591414c28205) for sending feedback
 
 ## Links to Other Websites
 
