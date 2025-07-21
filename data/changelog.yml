@@ -1857,3 +1857,12 @@
       New addon: "FPS counter", which shows the project framerate above the stage. Go to Scratch Addons settings to enable it.
 
       Another new addon is "Instant forum read indicators", which instantly marks topics as read when opening them in a new tab.
+
+- Version: v1.42.1
+  Index: 104
+  Tag: v1.42.1
+  Name: v1.42.1
+  Date: 2025-07-22
+  Status: Released
+  Entry: |
+    - Adapt addons to upcoming Scratch project thumbnails changes
