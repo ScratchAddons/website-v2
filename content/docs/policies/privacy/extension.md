@@ -26,7 +26,7 @@ We use your data to provide and improve the service. By using the service, you a
 
 - **We never send Scratch account information or extension settings outside of your browser without your permission.**
 
-  Extension settings only leave your device if you've enabled Chrome/Firefox/Edge Sync or when you share your list of enabled addons upon sending a feedback.
+  Extension settings only leave your device if you've enabled Chrome/Firefox/Edge Sync or when you share your list of enabled addons upon sending feedback.
 
 - **By default, the extension only interacts with the Scratch website and this website.**
 
