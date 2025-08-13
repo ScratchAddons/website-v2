@@ -186,6 +186,9 @@ form.addEventListener("submit", async event => {
 
     usernameField.readOnly = true
     contentField.readOnly = true
+    submitButton.disabled = true
+    closePswModalButton1.disabled = true
+    closePswModalButton2.disabled = true
 
     // document.querySelector("#sending").style.display = "block";
 
@@ -212,6 +215,7 @@ form.addEventListener("submit", async event => {
             setStatus(i18n.statusSuccess, "success")
         } catch(err) {
             setStatus(i18n.statusFailed, "danger")
+            holdSendButton(5)
         }
     }
 
@@ -232,3 +236,4 @@ startUpServer()
 submitButton.type = "submit"
 
 window.addEventListener("load", () => document.querySelector("textarea").focus());
+
