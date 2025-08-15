@@ -8,7 +8,7 @@ aliases:
 no_comments: true
 ---
 
-> Last updated: 26 July 2022
+> Last updated: 17 August 2025
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 
