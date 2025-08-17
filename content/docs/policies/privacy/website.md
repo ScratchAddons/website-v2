@@ -70,4 +70,5 @@ If you have any questions, please contact us through our feedback page at <https
 
 ## Website Privacy Policy Changelog
 
+- **17 August 2025:** move host from Glitch to Napkin, clarify analytics data collection, minor style adjustments ([diff](https://github.com/ScratchAddons/website-v2/pull/326/files))
 - **28 May 2021:** created

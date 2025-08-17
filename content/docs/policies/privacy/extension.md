@@ -92,5 +92,6 @@ If you have any questions, please contact us through our feedback page at <https
 
 ## Extension Privacy Policy Changelog
 
+- **17 August 2025:** add mention of the feedback page, minor style adjustments ([diff](https://github.com/ScratchAddons/website-v2/pull/326/files))
 - **26 July 2022:** reference Microsoft Edge browser ([diff](https://github.com/ScratchAddons/website-v2/commit/610c656bd30fd394bd6dbff98bfad677ce99e7f0))
 - **28 May 2021:** created
