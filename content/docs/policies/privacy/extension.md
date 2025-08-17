@@ -60,7 +60,7 @@ Permanently-stored information might include:
 
 If you enable Chrome Sync, Firefox Sync, Edge Sync, or any other compatible browser data synchronization feature, this information might be sent to that service by your browser.
 
-When sending a feedback on through <https://scratchaddons.com/feedback>, an option is provided to include the list of currently enabled addons of your Scratch Addons instance. This list is attached locally for your convenience and is not sent automatically. You may choose whether to attach this information on your provided feedback. The processing of the feedback data is subject to the [Website Privacy Policy](/docs/privacy/policies/website#feedback).
+When sending feedback through <https://scratchaddons.com/feedback>, an option is provided to include the list of currently enabled addons of your Scratch Addons instance. This list is attached locally for your convenience and is not sent automatically. You may choose whether to attach this information on your provided feedback. The processing of the feedback data is subject to the [Website Privacy Policy](/docs/privacy/policies/website#feedback).
 
 Other than the described information, the extension by itself does not send any of this information outside of your device. 
 
