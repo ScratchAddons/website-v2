@@ -8,7 +8,7 @@ aliases:
 no_comments: true
 ---
 
-> Last updated: 28 May 2021
+> Last updated: 17 August 2025
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons website (<https://scratchaddons.com>) and the choices you have associated with that data.
 
@@ -37,7 +37,7 @@ We might, however, use local storage capabilities to store basic preferences, su
 
 ## Analytics
 
-We use a self-hosted Plausible Analytics instance routed through our analytics subdomain to count website visits, downloads, etc. Plausible works without collecting any personal data or personally identifiable information, and without using cookies. You can see the same data we can see on the [public analytics dashboard](https://analytics.scratchaddons.com).
+We use a self-hosted Plausible Analytics instance routed through our analytics subdomain to count website visits, interactions, etc. Plausible works without collecting any personal data or personally identifiable information, and without using cookies. You can see the same data we can see on the [public analytics dashboard](https://analytics.scratchaddons.com).
 
 ## Feedback
 
@@ -45,20 +45,20 @@ When sending feedback through <https://scratchaddons.com/feedback>, some data in
 
 - Text written in the "identifiers" field, if any.
 - Text written in "feedback" field.
-- The version number for your Scratch Addons instance.
+- The version number of your Scratch Addons instance.
 - Your browser's user agent string (which often includes your browser's and operating system's names and version numbers).
+- Optionally, the list of currently enabled addons of your Scratch Addons instance.
 
-Feedback is sent to a public open source [Glitch.com Node.js server instance](https://glitch.com/edit/#!/scratchaddons-feedback) which then redirects the information to a [Discord](https://discord.com) server. We do not log the IP addresses of the users that send feedback. You can verify this by looking at the Glitch server source code linked above.
+Feedback is sent to a public open source [Napkin Node.js server instance](https://scratchaddons.npkn.net/feedback/) which then redirects the information to a [Discord](https://discord.com) server and an internal GitHub repository. We do not log the IP addresses of the users that send feedback. You can verify this by looking at the Napkin server source code linked above.
 
 ## Third Parties
 
 When using our website, third party services might be reached, such as:
 - [Cloudflare](https://www.cloudflare.com/privacypolicy/) for website hosting
 - [GitHub](https://docs.github.com/en/github/site-policy/github-privacy-statement) for website hosting
-- [cdn.jsdelivr.net](https://www.jsdelivr.com/terms/privacy-policy-jsdelivr-net) for library CDN
-- [Skypack](https://www.skypack.dev/legal/privacy-policy) for library CDN
-- [Google services](https://policies.google.com/privacy) such as YouTube and Google Fonts
-- [Glitch](https://glitch.com/legal/privacy) for sending feedback
+- [jsDelivr CDN](https://www.jsdelivr.com/terms/privacy-policy) for library CDN
+- [Google services](https://policies.google.com/privacy) such as YouTube
+- [Napkin](https://app.termly.io/document/privacy-policy/652a111f-c37d-4094-906f-591414c28205) for sending feedback
 
 ## Links to Other Websites
 
@@ -70,4 +70,5 @@ If you have any questions, please contact us through our feedback page at <https
 
 ## Website Privacy Policy Changelog
 
+- **17 August 2025:** move host from Glitch to Napkin, clarify analytics data collection, minor style adjustments ([diff](https://github.com/ScratchAddons/website-v2/pull/326/files))
 - **28 May 2021:** created

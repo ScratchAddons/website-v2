@@ -8,7 +8,7 @@ aliases:
 no_comments: true
 ---
 
-> Last updated: 26 July 2022
+> Last updated: 17 August 2025
 
 This page informs you of our policies regarding the collection, use, and disclosure of personal data when using the Scratch Addons extension and the choices you have associated with that data.
 
@@ -24,9 +24,9 @@ We use your data to provide and improve the service. By using the service, you a
   
   We don't know how many users have enabled the pause button or turned on light mode.
 
-- **We never send Scratch account information or extension settings outside of your browser.**
+- **We never send Scratch account information or extension settings outside of your browser without your permission.**
 
-  Extension settings only leave your device if you've enabled Chrome/Firefox/Edge Sync.
+  Extension settings only leave your device if you've enabled Chrome/Firefox/Edge Sync or when you share your list of enabled addons upon sending feedback.
 
 - **By default, the extension only interacts with the Scratch website and this website.**
 
@@ -42,7 +42,7 @@ Temporarily-stored information might include:
 
 - Your Scratch account's username and user ID.
 - Values of the `scratchcsrftoken` and `scratchlanguage` cookies.
-- Value of your Scratch authentication token "X-Token".
+- Value of your Scratch authentication token, `X-Token`.
 - Your most recent Scratch messages.
 
 ## Permanently-Stored Information
@@ -58,9 +58,11 @@ Permanently-stored information might include:
 - Whether the Scratch Addons update notification was shown.
 - Whether the extension was muted through the context menu.
 
-The extension by itself does not send any of this information outside of your device. 
+If you enable Chrome Sync, Firefox Sync, Edge Sync, or any other compatible browser data synchronization feature, this information might be sent to that service by your browser.
 
-However, if you enable Chrome Sync, Firefox Sync, Edge Sync, or any other compatible browser data synchronization feature, this information might be sent to that service by your browser.
+When sending feedback through <https://scratchaddons.com/feedback>, an option is provided to include the list of currently enabled addons of your Scratch Addons instance. This list is attached locally for your convenience and is not sent automatically. You may choose whether to attach this information on your provided feedback. The processing of the feedback data is subject to the [Website Privacy Policy](/docs/privacy/policies/website#feedback).
+
+Other than the described information, the extension by itself does not send any of this information outside of your device. 
 
 ## Third Parties
 
@@ -90,5 +92,6 @@ If you have any questions, please contact us through our feedback page at <https
 
 ## Extension Privacy Policy Changelog
 
+- **17 August 2025:** add mention of the feedback page, minor style adjustments ([diff](https://github.com/ScratchAddons/website-v2/pull/326/files))
 - **26 July 2022:** reference Microsoft Edge browser ([diff](https://github.com/ScratchAddons/website-v2/commit/610c656bd30fd394bd6dbff98bfad677ce99e7f0))
 - **28 May 2021:** created
