@@ -32,7 +32,7 @@ New addons should not use an ID that was included in a stable version of the ext
 - `scratchstats`
 - `tutorials-button`
 
-Open the `addons.json` file in the `addons` folder, insert a new addon ID near the bottom of the file but above the `// NEW ADDONS ABOVE THIS ↑↑` line, then create a sub-folder with the same name.
+Open the `addons.json` file in the `addons` folder, insert a new addon ID above the `// NEW ADDONS ABOVE THIS ↑↑` line near the bottom of the file, then create a sub-folder with the same name.
 
 ## The addon manifest
 Each addon has it's own [manifest](/docs/reference/addon-manifest/) that handles how it is displayed on the settings page, any settings the addon may have, which userscripts or userstyles to run and where to run them.
