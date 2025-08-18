@@ -12,7 +12,7 @@ If you plan to submit the addon you are developing as a pull request to our GitH
 {{< /admonition >}}
 
 ## Requirements
-Scratch Addons does not require any software for development except a text editor and a Chromium-based browser (121+), but we also recommend having Git, Firefox (121+) and Visual Studio Code installed.
+Scratch Addons does not require any software for development except a text editor and a Chromium-based browser (121+), but we also recommend having [Git](https://git-scm.com/), [Firefox](https://www.firefox.com/) (121+) and [Visual Studio Code](https://code.visualstudio.com/) installed.
 
 ## Installation
 To install the extension for development, see [Installing from source](/docs/getting-started/installing/#from-source).
@@ -32,7 +32,7 @@ New addons should not use an ID that was included in a stable version of the ext
 - `scratchstats`
 - `tutorials-button`
 
-Open the `addons.json` file in the `addons` folder, insert a new addon ID near the bottom of the file, then create a sub-folder with the same name.
+Open the `addons.json` file in the `addons` folder, insert a new addon ID above the `// NEW ADDONS ABOVE THIS ↑↑` line near the bottom of the file, then create a sub-folder with the same name.
 
 ## The addon manifest
 Each addon has it's own [manifest](/docs/reference/addon-manifest/) that handles how it is displayed on the settings page, any settings the addon may have, which userscripts or userstyles to run and where to run them.
