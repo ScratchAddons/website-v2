@@ -18,7 +18,7 @@ Scratch Addons is available in these stores.
 
 ## About GitHub releases
 
-[The releases page](https://github.com/ScratchAddons/ScratchAddons/releases) contains the code and installation files for all released versions of Scratch Addons, as well as a mirror of the store builds.
+[The releases page](https://github.com/ScratchAddons/ScratchAddons/releases) contains the code for all released versions of Scratch Addons, as well as a mirror of the store builds.
 
 ## From source
 
