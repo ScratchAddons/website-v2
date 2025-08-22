@@ -1866,3 +1866,49 @@
   Status: Released
   Entry: |
     - Adapt addons to upcoming Scratch project thumbnails changes
+
+- Version: v1.43.0
+  Index: 105
+  Tag: v1.43.0
+  Name: v1.43.0
+  Date: 2025-08-22
+  Status: Released
+  Entry: |
+    - New addon: Enhanced clean up tool
+        - Previously part of "Developer tools"
+        - New setting: Find unused variables (previously always on)
+        - Now uses the same grid as "Snap scripts to grid"
+    - Arrow key incrementation: Support more inputs such as color picker inputs and onion skinning settings
+    - Costume editor keyboard shortcuts: Ctrl+left/right to switch costumes (previously a developer tools feature)
+    - Hide delete button: Show while holding shift
+    - Jump to custom block definition, move sprite to front layer: Can be used from the context menu
+    - Sprite folders: "delete all in folder" option
+    - Forum post cooldown display: Added "Retry after countdown" setting
+    - Forum post cooldown display: Improve countdown accuracy
+    - Full areas: Scroll project titles
+    - Scratch 3.0 → 2.0: Added "Separator lines in navigation bar" setting
+    - Scratch 3.0 → 2.0: Remix button is now orange
+    - Shared/edited dates tooltip: Add project creation date and rename to "Additional project dates"
+    - Scratch Messaging: Show number of identical studio activity messages
+    - Scratch Messaging: Remove remixed projects titles for consistency with Scratch.
+    - Settings page: Add related addons feature
+    - Settings page: Import and export settings per addon
+    - Settings page: Add previews to more addons
+    - Settings page: Improve mobile support
+    - Bug fix: Move sprite to front layer incompatible with sprite folders
+    - Bug fix: "Customizable default project" broke after a Scratch update
+    - Bug fix: "Customizable code area" did not use the "Start Zoom" setting when opening the editor
+    - Bug fix: "Asset conflict dialog" prevented creating a "surprise" sound
+    - Bug fix: Customizable block text style's shadow was blurry in Scratch's high contrast color mode
+    - Bug fix: Made middle click popup results nicer with special characters / number-named variables
+    - Bug fix: Project actions row (report, copy link, etc.) can overflow
+    - Bug fix: Popup line wrapped setting names unnecessarily
+    - Bug fix: Permissions page opening twice on Firefox
+    - Bug fix: Don't run most addons on error pages and My Classes
+  Highlights:
+    Description: |
+      The "enhanced clean up tool" addon, previously part of "developer tools", can now be toggled separately in Scratch Addons settings. You can also choose whether to remove unused variables and lists.
+
+      Other new features in this update are new settings for "Scratch 3.0 → 2.0" and "full areas" and improved support for mobile devices.
+    ImagePath: /assets/img/release-highlights/cleanup-plus.png
+    ImageAlt: Screenshot of the code area context menu with the "Clean up Blocks +" option highlighted.
