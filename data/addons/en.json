@@ -223,7 +223,7 @@
 	{
 		"id": "block-count",
 		"name": "Block count",
-		"description": "Shows the total number of blocks in a project in the editor menu bar. Previously part of \"sprite and script count\".",
+		"description": "Shows the total number of blocks in a project in the editor menu bar.",
 		"tags": ["editor", "editorMenuBar"],
 		"credits": [
 			{
@@ -372,11 +372,17 @@
 	{
 		"id": "collapse-footer",
 		"name": "Sticky footer",
-		"description": "Makes the website footer stick out slightly from the bottom of the window and makes it expand when hovering over it, allowing it to be quickly accessed from anywhere on the page. Previously part of \"Infinite scrolling\".",
+		"description": "Makes the website footer stick out slightly from the bottom of the window and makes it expand when hovering over it, allowing it to be quickly accessed from anywhere on the page.",
 		"tags": ["community"],
 		"credits": [
 			{ "name": "Samq64", "link": "https://github.com/Samq64" },
 			{ "name": "ZenithKnight" }
+		],
+		"info": [
+			{
+				"id": "firefoxMobileBug",
+				"text": "On Firefox for Android, this addon may work better if the \"Scroll to hide toolbar\" option in Firefox settings → Customize is turned off."
+			}
 		],
 		"dynamicEnable": true,
 		"dynamicDisable": true,
@@ -799,21 +805,26 @@
 	{
 		"id": "debugger",
 		"name": "Debugger",
-		"description": "Adds a new \"debugger\" window to the editor. Allows for logging into the \"Logs\" tab of the debugger window using the \"log\", \"warn\" and \"error\" blocks. The \"breakpoint\" block will pause the project when executed. All running stacks of blocks can be viewed in the \"Threads\" tab of the debugger window, and when paused the \"Step\" button can be used to execute the next block. A graph of frames per second and number of clones can be viewed in the \"Performance\" tab.",
+		"description": "Adds a new \"debugger\" window to the editor. Allows for logging into the \"Logs\" tab of the debugger window using the \"log\", \"warn\" and \"error\" blocks. The \"breakpoint\" block will pause the project when executed. All running stacks of blocks can be viewed in the \"Threads\" tab of the debugger window, and when paused the \"Step\" button can be used to execute the next block. A graph of frames per second and number of clones can be viewed in the \"Performance\" tab. Allows for timing sections of your code with the \"start timing\" and \"stop timing\" block. Timing results and more are accessible from the \"Timing\" tab.",
 		"tags": ["editor", "codeEditor", "featured"],
 		"credits": [
 			{ "name": "Tacodiva", "link": "https://github.com/Tacodiva" },
 			{ "name": "GarboMuffin" },
 			{ "name": "GrahamSH" },
 			{ "name": "TheColaber" },
-			{ "name": "retronbv" }
+			{ "name": "retronbv" },
+			{
+				"name": "Chrome_Cat",
+				"link": "https://scratch.mit.edu/users/Chrome_Cat/"
+			}
 		],
 		"libraries": ["chartjs", "scratch-gui", "scratch-vm"],
 		"versionAdded": "1.16.0",
 		"latestUpdate": {
-			"version": "1.33.0",
-			"temporaryNotice": "Graph animation is now disabled by default to increase performance. You can re-enable it if you want.",
-			"newSettings": ["fancy_graphs"]
+			"version": "1.44.0",
+			"temporaryNotice": "New timing tab to help you with micro-optimization of your project and the debugger window is now resizable.",
+			"newSettings": ["auto_stop_timing", "show_ratio_time"],
+			"isMajor": true
 		}
 	},
 	{
@@ -1133,13 +1144,8 @@
 		"info": [
 			{
 				"type": "notice",
-				"text": "The \"experimental keys\" include equals, slash, semicolon and more. They may not work on all operating systems or keyboard layouts.",
-				"id": "experimentalKeysWarn"
-			},
-			{
-				"type": "notice",
-				"text": "The \"Shift keys\" include keys which typically require the Shift key and a number key, like hashtag, exclamation mark and more. These keys only work with the \"when () key pressed\" block and do not work on all operating systems or keyboard layouts.",
-				"id": "shiftKeysWarn"
+				"text": "Some of these keys may not work on all operating systems or keyboard layouts.",
+				"id": "OSWarn"
 			}
 		],
 		"dynamicEnable": true,
@@ -2288,16 +2294,13 @@
 				"link": "https://scratch.mit.edu/users/Maximouse/"
 			}
 		],
-		"info": [
-			{
-				"type": "notice",
-				"text": "This addon doesn't work well on mobile devices and in small windows.",
-				"id": "mobile"
-			}
-		],
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"versionAdded": "1.17.0",
+		"latestUpdate": {
+			"version": "1.44.0",
+			"temporaryNotice": "Now supports mobile devices."
+		},
 		"injectAsStyleElt": true,
 		"updateUserstylesOnSettingsChange": true
 	},
@@ -2517,6 +2520,18 @@
 		],
 		"enabledByDefault": false,
 		"versionAdded": "1.4.0"
+	},
+	{
+		"id": "recolor-custom-blocks",
+		"name": "Recolor custom blocks",
+		"description": "Adds an option to choose a custom color when creating a block. This feature works by adding the color code or category name at the beginning of the block's label.",
+		"tags": ["editor", "codeEditor", "featured"],
+		"credits": [
+			{ "name": "FlamedDogo99", "link": "https://github.com/FlamedDogo99" }
+		],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
+		"versionAdded": "1.44.0"
 	},
 	{
 		"id": "redirect-mobile-forums-v2",
