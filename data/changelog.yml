@@ -1911,3 +1911,31 @@
 
       Other new features in this update are new settings for "Scratch 3.0 → 2.0" and "full areas" and improved support for mobile devices.
     YouTubeID: -kAPVFcbcgs
+
+- Version: v1.44.0
+  Index: 106
+  Tag: v1.44.0
+  Name: v1.44.0
+  Date: 2025-10-08
+  Status: Released
+  Entry: |
+    - New addon: Recolor custom blocks
+    - Debugger: New Timing tab and blocks
+    - Debugger: The popup is now resizable
+    - Old studio layout: Now supports mobile devices
+    - Bug fix: Several addons broken after Scratch's Face Sensing update
+    - Bug fix: Frozen stage after switching to the project page with "cat blocks" enabled
+    - Bug fix: Debugger popup not draggable on touch screen devices
+    - Bug fix: Debugger blocks having the custom block color when the editor is first opened
+    - Bug fix: +0 and -0 indistinguishable in debugger's Logs tab
+    - Bug fix: "Sticky footer" not expanding in some cases
+    - Bug fix: "Thumbnail uploader" dropdown not shown when logging in
+    - Bug fix: Backpack button from the "Replace backpack bar with button" addon overlapping with zoom buttons after switching color mode
+    - Bug fix: Welcome page not opening when the extension is installed
+  Highlights:
+    Description: |
+      The new "recolor custom blocks" addon adds an option to choose a custom color when creating a block. Go to Scratch Addons settings to enable it.
+
+      This update also adds timing blocks and line-by-line profiling to the "debugger" addon.
+    ImagePath: /assets/img/release-highlights/recolor-custom-blocks.png
+    ImageAlt: Screenshot of the "recolor custom blocks" addon in action
