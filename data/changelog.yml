@@ -1939,3 +1939,16 @@
       This update also adds timing blocks and line-by-line profiling to the "debugger" addon.
     ImagePath: /assets/img/release-highlights/recolor-custom-blocks.png
     ImageAlt: Screenshot of the "recolor custom blocks" addon in action
+
+- Version: v1.44.1
+  Index: 107
+  Tag: v1.44.1
+  Name: v1.44.1
+  Date: 2025-10-14
+  Status: Released
+  Entry: |
+    - Bug fix: Face sensing elements not styled by "Editor dark mode and customizable colors" addon
+    - Bug fix: Library opening when add button clicked even with "Paint costume by default" addon active
+    - Bug fix: "Sprite pane search" addon not working
+    - Bug fix: "Show project thumbnail while loading" addon error when entering editor directly from My Stuff
+    - Bug fix: "Recolor custom blocks" addon breaks workspace when a special block was present on the workspace
