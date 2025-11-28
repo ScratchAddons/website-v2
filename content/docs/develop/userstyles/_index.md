@@ -97,17 +97,28 @@ These CSS variables are always available for all enabled addons and no manifest 
 If a userstyle needs to choose between one of two values based on a background color (text contrast) or an addon setting, JavaScript isn't necessary. These conditions, among others, can be declared in the addon manifest through [customCssVariables](/docs/reference/addon-manifest/#customcssvariables), and the userstyle can simply reference that CSS variable.
 
 
-## Applying styles only inside the editor
+## Applying styles based on the editor mode
 
-The extension automatically toggles a class name on the `<body>` element when the user enters or exits the project editor.
+The extension automatically toggles a class name on the `<html>` element when the user enters or exits the project editor.
 
 For example, styling `<input>` elements inside and outside the editor differently:
 ```css
-.sa-body-editor input {
+.sa-editor input {
   /* Only applies if `addon.tab.editorMode` is `editor` or `fullscreen` */
 }
 
-body:not(.sa-body-editor) input {
+:root:not(.sa-editor) input {
   /* Only applies if `addon.tab.editorMode` is NOT `editor` nor `fullscreen` */
+}
+```
+
+Similarly, the `.sa-fullscreen` class is added to the `<html>` element when the project is in full screen mode:
+```css
+.sa-fullscreen [class*="green-flag_green-flag_"] {
+  /* Only applies if `addon.tab.editorMode` is `fullscreen` */
+}
+
+:root:not(.sa-fullscreen) [class*="green-flag_green-flag_"] {
+  /* Only applies if `addon.tab.editorMode` is NOT `fullscreen` */
 }
 ```
