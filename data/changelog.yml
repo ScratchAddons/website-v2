@@ -1961,3 +1961,22 @@
   Entry: |
     - Preparation for upcoming Scratch update
     - Bug fix: "Scratch 2.0 → 3.0" displaying links added using the "Customizable navigation bar" addon incorrectly if the name was blank
+
+- Version: v1.44.3
+  Index: 109
+  Tag: v1.44.3
+  Name: v1.44.3
+  Date: 2025-11-21
+  Status: Released
+  Entry: |
+    - "Customizable navigation bar" addon: removed About link for existing users of the feature
+
+- Version: v1.44.4
+  Index: 110
+  Tag: v1.44.4
+  Name: v1.44.4
+  Date: 2025-12-13
+  Status: Released
+  Entry: |
+    - Bug fix: "Cat blocks" breaking the editor
+    - Bug fix: extension not working on Chromium 144+
