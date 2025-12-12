@@ -183,9 +183,9 @@ FeedbackPage:
       Punishment:
         Heading: We can't punish people. We are not the Scratch Team.
         Description: "Scratch Addons is not affiliated with the Scratch website or the organizations that maintain it. We have no control of the content and the moderation on the Scratch website. {{ .Tag1Start }}There are many ways that you can report on the Scratch website.{{ .Tag1End }}"
-      Folders:
-        Heading: The Sprite Folders feature will be fixed soon!
-        Description: We are working on it
+      Catblocks:
+        Heading: To solve the issue, disable the Cat Blocks feature
+        Description: We are working on it. In the meanwhile, go to Scratch Addons settings and search for Cat Blocks, then disable it.
 
 # Strings used for /scratch-messaging-transition
 SMTPage:
