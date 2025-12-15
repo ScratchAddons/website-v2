@@ -51,7 +51,7 @@ jobs:
           PR_NUMBER: ${{ github.event.number }}
 
       - name: Upload for sending
-        uses: actions/upload-artifact@v5
+        uses: actions/upload-artifact@v6
         with:
           name: to-send
           path: |
