@@ -32,21 +32,13 @@ const variations = {
             /\bdelete\s*account\b/,
         ]
     },
-    catblocks: {
+    folders: {
         strings: {
-            ...i18n.preSendWarning.variations.catblocks
+            ...i18n.preSendWarning.variations.folders
         },
         patterns: [
-            /\beditor\b/,
-            /\bproject\b/,
-            /\bprojects\b/,
-            /\bblock\b/,
-            /\bblocks\b/,
-            /\broken\b/,
-            /\bcat\b/,
-            /\bhelp\b/,
-            /\bproblem\b/,
-            /\bbug\b/,
+            /\bfolder\b/,
+            /\bfolders\b/,
         ]
     },
 }
