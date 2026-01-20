@@ -323,7 +323,7 @@ This space will exist in all situations where a project player also exists.
     <td><code>vol-slider</code></td>
     <td>Muted project indicator and volume slider</td>
     <td>0</td>
-    <td>Hidden</td>
+    <td>Hidden (except muted project indicator)</td>
   </tr>
   <tr>
     <td><code>mouse-pos</code></td>
@@ -380,7 +380,88 @@ The order number typically matches the reserved value for `redux.state.scratchGu
   </tr>
 </table>
 
+#### `paintEditorZoomControls`
+Elements added to this space will be positioned before the zoom controls in the paint editor.
+
+![Shared space image](/assets/img/docs/sharedspace-painteditorzoomcontrols.jpg)
+
+<table>
+  <tr>
+    <td>Space parent element</td>
+    <td><code>div[class^="paint-editor_zoom-controls"]</code></td>
+  </tr>
+  <tr>
+    <td>Space starting bound</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td>Space ending bound</td>
+    <td>Zoom controls</td>
+  </tr>
+  <tr>
+    <td><code>scope</code> option used</td>
+    <td>❌</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Addon ID</th>
+    <th>Element</th>
+    <th>Order number</th>
+  </tr>
+  <tr>
+    <td><code>onion-skinning</code></td>
+    <td>Onion skinning options</td>
+    <td>1</td>
+  </tr>
+  <tr>
+    <td><code>paint-snap</code></td>
+    <td>Snapping options</td>
+    <td>2</td>
+  </tr>
+</table>
+
 ### Scratch website spaces
+#### `beforeProjectActionButtons`
+Elements added to this space will be positioned before the project action buttons in project pages.
+
+![Shared space image](/assets/img/docs/sharedspace-beforeprojectactionbuttons.jpg)
+
+**Typical DOM classes for elements added to this space:** `button`, `action-button`
+
+<table>
+  <tr>
+    <td>Space parent element</td>
+    <td><code>.flex-row.action-buttons</code></td>
+  </tr>
+  <tr>
+    <td>Space starting bound</td>
+    <td>None</td>
+  </tr>
+  <tr>
+    <td>Space ending bound</td>
+    <td>"Report" button or "Add to Studio" button</td>
+  </tr>
+  <tr>
+    <td><code>scope</code> option used</td>
+    <td>❌</td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <th>Addon ID</th>
+    <th>Element</th>
+    <th>Order number</th>
+  </tr>
+  <tr>
+    <td><code>animated-thumb</code></td>
+    <td>"Set Thumbnail" button</td>
+    <td>0</td>
+  </tr>
+</table>
+
 #### `afterCopyLinkButton`
 Elements added to this space will be positioned after the "copy link" button in project pages.
 
@@ -415,7 +496,7 @@ Elements added to this space will be positioned after the "copy link" button in 
   </tr>
   <tr>
     <td><code>remix-tree-button</code></td>
-    <td>"Remix tree" button</td>
+    <td>"Remix Tree" button</td>
     <td>0</td>
   </tr>
 </table>
