@@ -116,4 +116,3 @@ If you have any questions about translating, you may choose one of the following
 
 - If you get accepted, you may add yourself (or be added) to [the website's credits page](/credits).
 - Your translations are licensed under the same license as Scratch Addons (GPL v3.0).
-
