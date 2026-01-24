@@ -23,13 +23,13 @@ What’s more, all of the above is toggleable from within the editor itself, mak
 ## Collapsing sprite properties
 Users on small screens rejoice: you're about to get double the sprite grid space!
 
-![image](https://user-images.githubusercontent.com/43426138/210118937-2508e16b-e97e-49f8-a930-52728b2eae98.png)
+![image](/assets/img/blog/v1-30-is-here/sprite-properties.png)
 
 This new addon by [@lisa-wolfgang](https://github.com/lisa-wolfgang) (that’s me!) hides the sprite properties panel by default. The panel can be shown again by clicking a 2.0-like info button on the currently selected sprite, then re-hidden by clicking a new collapse button on the properties panel. A more convenient method is to double-click any sprite tile to toggle the panel, and there’s also a handy option to automatically collapse the panel when the mouse leaves the properties panel and sprite grid area.
 
 ## Always show number pad
 
-![image](https://user-images.githubusercontent.com/43426138/210118972-fa4dd6b2-2fa5-4100-8099-72aaf5890b6b.png)
+![image](/assets/img/blog/v1-30-is-here/number-pad.png)
 
 This neat addon by [@GarboMuffin](https://github.com/GarboMuffin) forces Scratch to always show the touchscreen number pad whenever editing a numeric input. It’s useful for quick number adjustments if your hand is already on the mouse or if you just like typing with an on-screen interface.
 
@@ -47,6 +47,6 @@ Besides these highlights, there are a huge number of other improvements and fixe
 ## A sneak peek...
 We’ve saved the best for last. In the near future, you’ll be able to use the middle-click block dropdown to type complex expressions and get the resulting blocks into your editor. For example, you’ll be able to type “if touching cat then say my variable + 1 for timer seconds” and it will just work!
 
-![image2](https://user-images.githubusercontent.com/43426138/210119516-24158120-df87-4c73-8d42-f6ff1a6671ab.gif)
+![image2](/assets/img/blog/v1-30-is-here/middle-click-popup.gif)
 
 This may seem like wizardry, but it’s all the amazing work of [@Tacodiva](https://github.com/Tacodiva). We’re looking forward to releasing this in v1.31!
