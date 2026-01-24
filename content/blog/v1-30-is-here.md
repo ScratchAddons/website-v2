@@ -3,6 +3,7 @@ title: v1.30 is here!
 description: Happy New Year! It’s been over two months since the last version, but we’ve been working hard on several exciting new features.
 date: 2023-01-06T00:00:00Z
 author: lisa-wolfgang
+cover_image: /assets/img/blog/v1-30-is-here/cover.png
 ---
 
 Happy New Year! It’s 2023, so what better time for the 30th update to Scratch Addons? It’s been over two months since the last version, but we’ve been working hard on several exciting new features.
