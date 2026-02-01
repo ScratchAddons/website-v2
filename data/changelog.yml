@@ -1980,3 +1980,14 @@
   Entry: |
     - Bug fix: "Cat blocks" breaking the editor
     - Bug fix: extension not working on Chromium 144+
+
+- Version: v1.44.5
+  Index: 111
+  Tag: v1.44.5
+  Name: v1.44.5
+  Date: 2026-01-31
+  Status: Released
+  Entry: |
+    - Bug fix: several addons broken after a Scratch update
+    - Bug fix: profile pictures shown above comments on profile pages with "Scratch 2.0 → 3.0" enabled
+    - Bug fix: Scratch Members' profile pictures displayed incorrectly with "Scratch 3.0 → 2.0" enabled
