@@ -66,8 +66,3 @@
 
 <script src="https://cdn.jsdelivr.net/combine/npm/jquery@3.5.1/dist/jquery.slim.min.js,npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js,npm/@iconify/iconify@3.0.1" crossorigin></script>
 <script async src="/assets/js/website-base.js"></script>
-
-{{ if not ( and ( isset .Params "no_analytics" ) ( eq .Params.no_analytics true ) ) }}
-<script async defer data-domain="scratchaddons.com" src="/assets/js/plausible.js"></script>
-<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
-{{ end }}
