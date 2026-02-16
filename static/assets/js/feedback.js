@@ -32,15 +32,6 @@ const variations = {
             /\bdelete\s*account\b/,
         ]
     },
-    folders: {
-        strings: {
-            ...i18n.preSendWarning.variations.folders
-        },
-        patterns: [
-            /\bfolder\b/,
-            /\bfolders\b/,
-        ]
-    },
 }
 
 let lastFeedbackRequestTime = localStorage.getItem("lastFeedbackRequestTime") 
