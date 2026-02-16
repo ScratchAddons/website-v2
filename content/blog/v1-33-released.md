@@ -3,6 +3,7 @@ title: Scratch Addons v1.33 is here!
 description: Badges for project creators in comments, a keyboard shortcut for pausing, and more!
 date: 2023-06-16T00:00:00Z
 author: DNin01
+cover_image: /assets/img/blog/v1-33-released/cover.png
 ---
 
 Welcome back! It's about time for another Scratch Addons update, so let's go over what we have added in version 1.33!

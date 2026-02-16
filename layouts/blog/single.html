@@ -25,9 +25,6 @@
 	</header>
 
 	<div class="container md-content" itemprop="articleBody">
-		{{ if isset $.Params "cover_image" -}}
-			<img src='{{ $.Params.cover_image }}' alt='{{ $.Params.cover_image_alt }}' itemprop="image" class="mb-4">
-		{{- end }}
 		{{ .Content }}
 	</div>
 
