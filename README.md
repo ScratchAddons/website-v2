@@ -10,7 +10,7 @@ Check out [the repo wiki](https://github.com/ScratchAddons/website-v2/wiki) for 
 
 ## Building
 
-1. You will need [Hugo](https://gohugo.io) (extended version). Read [Install Hugo](https://gohugo.io/getting-started/installing/) if you haven't got Hugo installed.
+1. You will need [Hugo](https://gohugo.io), extended version, v0.151.2 or below. Read [Install Hugo](https://gohugo.io/getting-started/installing/) if you haven't got Hugo installed.
 
 2. Serve the website for development (`localhost:1313` by default):
 
