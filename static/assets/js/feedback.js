@@ -81,11 +81,7 @@ const startUpServer = () => {
     lastFeedbackRequestTime = Date.now()
     localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)
     return new Promise(resolve => {
-        fetch("https://scratchaddons.npkn.net/feedback/", {
-            method: "POST",
-            headers: {"Content-Type": "application/json"},
-            body: '{"wakeup":true}'
-        })
+        fetch("https://scratchaddons.org/feedback/")
             .then(response => {
                 // 0 shouldn't be included here, but in my local testing it does that. I'm just adding it incase this happens in other places.
                 if (!(response.status === 200 || response.status === 0)) {
@@ -196,7 +192,7 @@ form.addEventListener("submit", async event => {
         try {
             lastFeedbackRequestTime = Date.now()
             localStorage.setItem("lastFeedbackRequestTime", lastFeedbackRequestTime)
-            const res = await fetch("https://scratchaddons.npkn.net/feedback/", {
+            const res = await fetch("https://scratchaddons.org/feedback/send", {
                 method: "POST", 
                 headers: {"Content-Type": "application/json"},
                 body: JSON.stringify(body)
