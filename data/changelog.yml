@@ -1991,3 +1991,32 @@
     - Bug fix: several addons broken after a Scratch update
     - Bug fix: profile pictures shown above comments on profile pages with "Scratch 2.0 → 3.0" enabled
     - Bug fix: Scratch Members' profile pictures displayed incorrectly with "Scratch 3.0 → 2.0" enabled
+
+- Version: v1.45.0
+  Index: 112
+  Tag: v1.45.0
+  Name: v1.45.0
+  Date: 2026-04-07
+  Status: Released
+  Entry: |
+    - New addon: Improved dragging of costumes and sounds
+    - Confirmations: added "Confirm signing out" setting
+    - Show project thumbnail while loading: added "Darken thumbnail" setting
+    - Scratch 3.0 → 2.0: the 2.0-styled project player is now affected by dark mode
+    - Gamepad support: when using multiple gamepads, the controls for each one can now be saved independently
+    - Disable auto-save: added option to switch to project page without saving changes
+    - Thumbnail uploader: compatibility with upcoming Scratch update
+    - Settings page: added keyboard navigation support
+    - Bug fix: "Sprite pane search" not working after Scratch update
+    - Bug fix: "File drag and drop" failing to import lists
+    - Bug fix: "Show project thumbnail while loading" not working if "Editor dark mode" was also enabled
+    - Bug fix: "Live featured project"'s  "Auto-play projects" setting not available when the Scratch player was selected
+    - Bug fix: pressing Option+X in an input field no longer pauses the project on macOS
+    - Bug fix: follow button and membership badge not displayed correctly with "Profile page banner" enabled
+    - Bug fix: project notes placeholder not centered on Firefox with "Scratch 3.0 → 2.0" enabled
+    - Removed addon "Remix tree button"
+  Highlights:
+    Description: |
+      The new "Improved dragging of costumes and sounds" addon, which is enabled by default, makes the costume and sound lists scroll automatically when reordering items. Check it out in Scratch Addons settings.
+      
+      This update also adds an optional confirmation for signing out of the Scratch website, in the "Confirmations" addon.
