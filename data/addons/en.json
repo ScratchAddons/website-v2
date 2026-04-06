@@ -52,7 +52,7 @@
 		"id": "animated-thumb",
 		"name": "Thumbnail uploader",
 		"description": "Adds a dropdown next to the \"Set Thumbnail\" button on the project page to set the thumbnail of your project to any image (including gifs).",
-		"tags": ["community", "projectPage", "recommended"],
+		"tags": ["editor", "recommended"],
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"libraries": ["scratch-gui"],
@@ -109,6 +109,8 @@
 		"description": "Turns the featured project on any user's profile into a nice-looking banner.",
 		"tags": ["community", "featured", "profiles"],
 		"credits": [{ "name": "Wicycool", "link": "https://wicy.cool/" }],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
 		"versionAdded": "1.5.0"
 	},
 	{
@@ -509,7 +511,7 @@
 		"dynamicDisable": true,
 		"enabledByDefault": false,
 		"versionAdded": "1.4.0",
-		"latestUpdate": { "version": "1.28.0", "newSettings": ["removingprojects"] }
+		"latestUpdate": { "version": "1.45.0", "newSettings": ["signingout"] }
 	},
 	{
 		"id": "copy-message-link",
@@ -865,7 +867,14 @@
 		"name": "Disable auto-save",
 		"description": "Disables the automatic saving of projects while editing.",
 		"tags": ["editor", "editorMenuBar", "danger"],
-		"credits": [{ "name": "RustingRobot" }],
+		"credits": [
+			{ "name": "RustingRobot" },
+			{ "name": "DNin01", "link": "https://github.com/DNin01" },
+			{
+				"name": "Chrome_Cat",
+				"link": "https://scratch.mit.edu/users/Chrome_Cat/"
+			}
+		],
 		"info": [
 			{
 				"type": "warning",
@@ -1437,6 +1446,23 @@
 		"dynamicDisable": true,
 		"enabledByDefault": true,
 		"versionAdded": "1.28.0"
+	},
+	{
+		"id": "fix-costume-drag",
+		"name": "Improved dragging of costumes and sounds",
+		"description": "When dragging a costume or sound, automatically scrolls the list and fixes a Scratch bug where the dragged item isn't placed at the right position after scrolling.",
+		"tags": ["editor", "costumeEditor", "recommended"],
+		"credits": [
+			{
+				"name": "mysinginmonsters",
+				"link": "https://scratch.mit.edu/users/mysinginmonsters/"
+			}
+		],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
+		"enabledByDefault": true,
+		"libraries": ["scratch-gui"],
+		"versionAdded": "1.45.0"
 	},
 	{
 		"id": "fix-editor-comments",
@@ -2453,7 +2479,10 @@
 				"link": "https://scratch.mit.edu/users/Maximouse/"
 			}
 		],
-		"versionAdded": "1.40.0"
+		"dynamicEnable": true,
+		"dynamicDisable": true,
+		"versionAdded": "1.40.0",
+		"latestUpdate": { "version": "1.45.0", "newSettings": ["darken"] }
 	},
 	{
 		"id": "preview-project-description",
@@ -2585,16 +2614,6 @@
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"versionAdded": "1.20.0"
-	},
-	{
-		"id": "remix-tree-button",
-		"name": "Remix tree button",
-		"description": "Brings back the remix tree button to project pages, next to the Copy Link button.",
-		"tags": ["community", "recommended", "projectPage"],
-		"credits": [{ "name": "Ucrash", "link": "https://github.com/gducrash" }],
-		"dynamicEnable": true,
-		"dynamicDisable": true,
-		"versionAdded": "1.2.0"
 	},
 	{
 		"id": "remove-curved-stage-border",
@@ -2971,8 +2990,32 @@
 		"dynamicEnable": true,
 		"dynamicDisable": true,
 		"enabledByDefault": false,
-		"libraries": ["scratch-blocks"],
+		"libraries": ["blockly"],
 		"versionAdded": "1.22.0"
+	},
+	{
+		"id": "totally-normal-modes",
+		"name": "Editor modes",
+		"description": "Adds the 90s, Old timey and Prehistoric modes from April Fools 2022 and the Mystery Mode from 2020.",
+		"tags": ["editor", "easterEgg"],
+		"credits": [
+			{
+				"name": "Maximouse",
+				"link": "https://scratch.mit.edu/users/Maximouse/"
+			}
+		],
+		"info": [
+			{
+				"type": "notice",
+				"id": "performance",
+				"text": "The Prehistoric and Mystery modes may impact performance when the editor is open."
+			}
+		],
+		"dynamicEnable": true,
+		"dynamicDisable": true,
+		"libraries": ["scratch-gui", "scratch-render"],
+		"versionAdded": "1.44.0",
+		"updateUserstylesOnSettingsChange": true
 	},
 	{
 		"id": "transparent-orphans",
