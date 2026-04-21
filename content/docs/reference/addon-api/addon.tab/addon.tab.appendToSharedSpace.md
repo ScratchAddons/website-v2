@@ -156,8 +156,6 @@ This shared space may exist in 5 different situations:
 
 This shared space will not exist while on `fullscreen` mode. See [fullscreenStageHeader](#fullscreenstageheader).
 
-**Typical CSS properties**: `margin-right: 0.2rem` (LTR), `margin-left: 0.2rem` (RTL)
-
 <table>
   <tr>
     <td>Space parent element</td>
@@ -203,7 +201,7 @@ See [stageHeader](#stageheader). Full screen can be triggered both from the proj
 
 ![Shared space image](/assets/img/docs/sharedspace-fullscreenstageheader.jpg)
 
-**Typical CSS properties**: `margin-right: 0.2rem` (LTR), `margin-left: 0.2rem` (RTL)
+**Typical CSS properties**: `margin-right: 0.25rem` (LTR), `margin-left: 0.25rem` (RTL)
 
 <table>
   <tr>
