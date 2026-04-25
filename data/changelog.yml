@@ -2020,3 +2020,23 @@
       The new "Improved dragging of costumes and sounds" addon, which is enabled by default, makes the costume and sound lists scroll automatically when reordering items. Check it out in Scratch Addons settings.
       
       This update also adds an optional confirmation for signing out of the Scratch website, in the "Confirmations" addon.
+
+- Version: v1.45.1
+  Index: 113
+  Tag: v1.45.1
+  Name: v1.45.1
+  Date: 2026-04-26
+  Status: Released
+  Entry: |
+    - Fixed several issues after Scratch update
+        - "Insert blocks by name" and "Hide stage and sprite pane" not working
+        - Some addons were causing variables and broadcast messages to disappear from the block palette and menus
+        - Unable to type a space in the search bar added by "Block dropdown search"
+        - Block labels and heatmap in Debugger's Timing tab not rendering
+        - Progress popup that appears when setting a thumbnail not readable in dark mode
+        - "Customizable block colors" and "Editor dark mode and customizable colors" not updating the colors of block category bubbles and icons
+        - "Thumbnail uploader"'s dropdown and popup not displayed correctly with "Scratch 3.0 → 2.0" enabled
+        - Cannot delete sprites with "Delete sprites without confirmation" and "Display stage on left side" enabled
+        - Issues with the "Duplicate script with Alt key" addon
+    - Bug fix: some "Customizable stage monitors" settings not working
+    - Removed addon "Do not automatically run duplicated blocks": the bug it fixed no longer exists
