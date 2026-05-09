@@ -2040,3 +2040,14 @@
         - Issues with the "Duplicate script with Alt key" addon
     - Bug fix: some "Customizable stage monitors" settings not working
     - Removed addon "Do not automatically run duplicated blocks": the bug it fixed no longer exists
+
+- Version: v1.45.2
+  Index: 114
+  Tag: v1.45.2
+  Name: v1.45.2
+  Date: 2026-04-29
+  Status: Released
+  Entry: |
+    - Bug fix: unable to scroll left and right using arrow keys when editing a long string in a text input with "Customizable block colors" enabled
+    - Bug fix: connection highlights not matching input shape with "Square block inputs"
+    - Bug fix: incorrect font size of focused block inputs with "Customizable block text style"
