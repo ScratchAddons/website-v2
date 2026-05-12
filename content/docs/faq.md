@@ -15,7 +15,7 @@ This page lists frequently asked questions related to the Scratch Addons extensi
 
 ### What is Scratch Addons?
 
-Scratch Addons is an "all-in-one" browser extension for the Scratch website and project editor. It provides features and themes (called addons internally), both for the Scratch website and the project editor. Scratch Addons' mission is to combine all existing Scratch extensions, userscripts and userstyles, developed by several members of the Scratch community, into a single easy-to-access place, while still letting users choose which ones to enable.
+Scratch Addons combines new and existing features and themes for the Scratch website and project editor into one easy-to-access and configurable browser extension. The mission is to provide a centralized, up-to-date platform for community development of new features and themes for Scratch.
 
 ### Who created Scratch Addons?
 
@@ -28,6 +28,10 @@ Scratch Addons includes over 100 addons, which can be enabled or disabled indivi
 ### Is this the same as TurboWarp Addons?
 
 [TurboWarp](https://turbowarp.org/) has some addons from Scratch Addons which can be used on their editor without installing Scratch Addons. However, Scratch Addons also includes addons for the Scratch website and the popup display. Therefore, it is still useful to have Scratch Addons even if you only code using TurboWarp.
+
+### Is Scratch Addons free?
+
+Scratch Addons is completely free to use. It is open source, and built by a community of Scratchers.
 
 ## System requirements
 
@@ -68,15 +72,13 @@ Yes. Scratch Addons should not have any security issues in its most recent versi
 
 ### How can I report a security vulnerability?
 
-If you happen to find a security vulnerability, please contact World_Languages privately by emailing `worldxlanguages (at) gmail.com`. If you don't get a response within 48 hours, please [create an issue](https://github.com/ScratchAddons/ScratchAddons/issues/) mentioning that you had sent an email.
-
-You can either [read our security policy](https://github.com/ScratchAddons/ScratchAddons/security/policy) or [check our advisories that we have published](https://github.com/ScratchAddons/ScratchAddons/security/advisories?state=published).
+Please report security vulnerabilities privately to us. See our [security policy](https://scratchaddons.com/docs/policies/security/) for more information, such as contact details and the historical list of reported vulnerabilities.
 
 ### Will my account be safe when using Scratch Addons?
 
 Yes. Features related to your Scratch account are thoroughly reviewed by Scratch Addons contributors to ensure that they will not harm your Scratch account. Scratch Addons keeps your account credentials secure, and it will not modify or delete your projects or assets without your permission. However, you may use the extension without any account-related features if you so choose.
 
-Addons on Scratch Addons also have been audited by multiple contributors on the repository, so no-one can just slip some malicious code under our eyes.
+Addons on Scratch Addons also have been audited by multiple contributors on the repository, so no one can just slip some malicious code under our eyes.
 
 We never send any confidential or personally identifying information outside of your browser. See [the extension privacy policy](/docs/privacy/policies/extension) for more information.
 
@@ -194,26 +196,6 @@ If you want to suggest an addon for the extension or have some other kind of goo
 ### Where can I discuss Scratch Addons?
 
 You can do it on [our Discussion tab](https://github.com/ScratchAddons/ScratchAddons/discussions) or [our support Discord server](https://discord.gg/R5NBqwMjNc). There, you can ask questions and engage with the Scratch Addons community.
-
-## Technical
-
-### What is an "addon", exactly?
-
-An addon is similar to an extension or a userscript, but they use special APIs provided by the Scratch Addons extension. These APIs allow addons to run scripts on a Scratch page (userscripts), run scripts on the background (persistent scripts), or apply styles to the Scratch website (userstyles).
-
-Userscripts can use the `addon.*` JavaScript APIs, which allow them to obtain Scratch-related information (for example, the currently logged in user) and use extension APIs (like sending notifications).
-
-### If everything is an addon, then what does Scratch Addons do?
-
-By itself, Scratch Addons is just an addon loader. Its main tasks are to:
-
-- Allow users to enable, disable and configure addons.
-- Run addons and provide APIs to them.
-- Provide useful data to addons (for example, the addon.auth API).
-- Pollute prototypes for use by addon userscripts.
-- Provide ways to access and modify Redux state.
-- Avoid addons from interfering with each other.
-- Avoid duplicate work from different addons.
 
 ## Other 
 
