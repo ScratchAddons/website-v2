@@ -1,10 +1,6 @@
 - ID: Extension
   I18nKey: Global.Extension
   Entries:
-    - ID: scratchblocks
-      Type: npm
-      License: Apache-2.0
-      Link: https://www.npmjs.com/package/scratchblocks
     - ID: vue
       Type: npm
       Name: Vue
@@ -61,6 +57,41 @@
       Type: npm
       License: MIT
       Link: https://www.npmjs.com/package/spark-md5
+    - ID: roboto
+      Type: font
+      Name: Roboto
+      License: Apache-2.0
+      Link: https://fonts.google.com/specimen/Roboto
+    - ID: ant-design-icons
+      Type: icons
+      Name: Ant Design Icons
+      License: MIT
+      Link: https://ant.design/components/icon
+    - ID: bootstrap-icons
+      Type: icons
+      Name: Bootstrap Icons
+      License: MIT
+      Link: https://icons.getbootstrap.com/
+    - ID: google-material-icons
+      Type: icons
+      Name: Google Material Icons
+      License: Apache-2.0
+      Link: https://fonts.google.com/icons
+    - ID: heroicons
+      Type: icons
+      Name: heroicons
+      License: MIT
+      Link: https://heroicons.com/
+    - ID: pictogrammers-mdi
+      Type: icons
+      Name: Pictogrammers Material Design Icons
+      License: Apache-2.0
+      Link: https://pictogrammers.com/library/mdi/
+    - ID: unicons
+      Type: icons
+      Name: Unicons
+      License: Apache-2.0
+      Link: https://iconscout.com/unicons
 
 - ID: Website
   I18nKey: Global.Website
