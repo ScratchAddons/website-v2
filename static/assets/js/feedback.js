@@ -198,7 +198,7 @@ form.addEventListener("submit", async event => {
                 body: JSON.stringify(body)
             })
             if (!res.ok) throw "";
-            holdSendButton(10)
+            form.hidden = true
             setStatus(i18n.statusSuccess, "success")
         } catch(err) {
             setStatus(i18n.statusFailed, "danger")
